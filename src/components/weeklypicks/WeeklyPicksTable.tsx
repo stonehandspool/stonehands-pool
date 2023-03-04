@@ -1,0 +1,77 @@
+import './WeeklyPicksTable.css';
+
+import { ResultInfo } from '../../temp/dummyData';
+import { choiceFormat } from '../picksheet/PickSheetForm';
+
+type WeeklyPicksTableProps = {
+    weeklyResults: ResultInfo[];
+    submittedPicks: choiceFormat[];
+}
+
+function WeeklyPicksTable(props: WeeklyPicksTableProps) {
+    const { weeklyResults: results, submittedPicks: picks } = props;
+
+    const atArr = Array(results.length).fill('@');
+    const emptyArr = Array(results.length + 4).fill('');
+
+    return (
+        <table className='weekly-picks-table'>
+            <tbody>
+                <tr className='weekly-picks-table-top'>
+                    <td colSpan={results.length + 4} align={'center'}>Pool members sorted in alphabetical order (Bold = Win)</td>
+                </tr>
+                <tr>
+                    <td className='weekly-picks-table-away'><b>Away</b><br />Score:</td>
+                    {results.map((result, index) => {
+                        return <td key={`away-${index}`}>{result.awayTeam}<br />{result.awayScore}</td>
+                    })}
+                </tr>
+                <tr>
+                    <td></td>
+                    {atArr.map((at, index) => {
+                        return <td key={`at-${index}`}>{at}</td>
+                    })}
+                </tr>
+                <tr>
+                    <td className='weekly-picks-table-home'><b>Home</b><br />Score:</td>
+                    {results.map((result, index) => {
+                        return <td key={`home-${index}`}>{result.homeTeam}<br />{result.homeScore}</td>
+                    })}
+                    <td>T/B</td>
+                    <td>Points</td>
+                    <td>Season</td>
+                </tr>
+                <tr>
+                    {emptyArr.map((empty, index) => {
+                        return <td key={`empty-${index}`}></td>
+                    })}
+                </tr>
+                {picks.map((pickInfo: any, index: number) => {
+                    let points = 0;
+                    return <tr key={`picks-${index}`}>
+                        <td className='weekly-picks-table-name'>{pickInfo.lastName}, {pickInfo.firstName}</td>
+                        {results.map((result, index) => {
+                            const pick = pickInfo[`matchup-${index}`];
+                            const confidence = pickInfo[`matchup-${index}-confidence`];
+                            const winner = result.winner;
+                            const correct = pick === winner;
+                            if (correct) {
+                                points += parseInt(confidence, 10);
+                            }
+                            return <td
+                                key={`${pickInfo.id}-${index}`}
+                                className={correct ? 'weekly-picks-table-correct-choice' : 'weekly-picks-table-incorrect-choice'}
+                            >
+                                {pick}<br />{confidence}
+                            </td>
+                        })}
+                        <td>{pickInfo.tiebreaker}</td>
+                        <td>{points}</td>
+                    </tr>
+                })}
+            </tbody>
+        </table>
+    );
+}
+
+export default WeeklyPicksTable;

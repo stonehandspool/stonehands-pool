@@ -1,0 +1,227 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --nav-color: #242424;
+  --nav-color-highlight: #333333;
+  --nav-text-color: #ffffff;
+  --page-color: #f3f3f3;
+  --highlight: purple;
+  --card-color: white;
+  --sign-up-form-color: white;
+  --confidence-disabled: #d3d3d3;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  color: black;
+  background: var(--page-color);
+}
+
+/* Components */
+
+/* Nav Bar */
+.nav {
+  overflow: hidden;
+  background-color: var(--nav-color);
+}
+
+.nav h1 {
+  color: var(--nav-text-color);
+  float: left;
+  padding: 14px 16px;
+}
+
+.nav a {
+  float: left;
+  font-size: 16px;
+  color: var(--nav-text-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-drop-down {
+  float: left;
+  overflow: hidden;
+}
+
+.nav-drop-down .nav-drop-down-button {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: var(--nav-text-color);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.nav-drop-down-button {
+  height: 52px; /* TODO: Fix this at some point */
+}
+
+.nav a:hover, .nav-drop-down:hover, .nav-drop-down-button {
+  background-color: var(--nav-color-highlight);
+}
+
+.nav-drop-down-content {
+  display: none;
+  position: absolute;
+  background-color: var(--nav-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.nav-drop-down-content a:hover {
+  background-color: var(--nav-color-highlight)
+}
+
+.nav-drop-down:hover .nav-drop-down-content {
+  display: block;
+}
+
+/* Pages */
+.page {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Picksheet */
+.picksheet-login {
+  max-width: 480px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--card-color);
+  text-align: center;
+  border-radius: 6px;
+}
+
+.picksheet-login h1 {
+  padding-bottom: 20px;
+}
+
+.picksheet-login-form input {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 10px 0 20px 0;
+}
+
+.picksheet-login-form button {
+  background-color: aquamarine;
+  color: var(--card-color);
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.confidence-picks {
+  display: grid;
+  grid-template-columns: 550px 550px;
+  gap: 20px 100px;
+}
+
+.matchup-card {
+  place-self: center;
+  width: 100%;
+  height: 60px;
+  background-color: var(--card-color);
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 200px 150px 200px;
+}
+
+.matchup-card > label > input[type=radio] {
+  visibility: hidden;
+}
+
+.matchup-card > .chosen {
+  background-color: aquamarine;
+}
+
+.survivor-picks {
+  display: grid;
+  grid-template-columns: 285px 285px 285px 285px;
+  gap: 20px 20px;
+}
+
+.margin-picks {
+  display: grid;
+  grid-template-columns: 285px 285px 285px 285px;
+  gap: 20px 20px;
+}
+
+.high-five-picks-grid {
+  display: grid;
+  grid-template-columns: 285px 285px 285px 285px;
+  gap: 20px 20px;
+}
+
+.matchup-card-pick-one {
+  place-self: center;
+  width: 100%;
+  height: 60px;
+  background-color: var(--card-color);
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.matchup-card-pick-one > label > input[type=radio] {
+  visibility: hidden;
+}
+
+.matchup-card-pick-one > .chosen {
+  background-color: aquamarine;
+}
+
+/* Sign Up */
+.sign-up-form {
+  background-color: var(--sign-up-form-color);
+  padding: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.sign-up-form input {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 10px 0 20px 0;
+}
+
+.sign-up-form button {
+  background-color: aquamarine;
+  color: var(--card-color);
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.form-error {
+  color: red;
+}
