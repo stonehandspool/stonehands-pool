@@ -5,6 +5,7 @@ function NavBar() {
         <nav className='nav'>
             <h1>Stonehand Pool</h1>
             <Link to='/'>Home</Link>
+            <Link to='/about'>About</Link>
             <Link to='/picksheet'>Picksheet</Link>
             <div className='nav-drop-down'>
                 <button className='nav-drop-down-button'>

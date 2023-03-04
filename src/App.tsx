@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import About from './pages/About';
 import Home from './pages/Home';
 import PickSheet from './pages/PickSheet';
 import PickSheetSuccess from './pages/PickSheetSuccess';
@@ -16,6 +17,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
         <Route path='/picksheet' element={<PickSheet />} />
         <Route path='/picksheet-success' element={<PickSheetSuccess />} />
         <Route path='/sign-up' element={<SignUp />} />
