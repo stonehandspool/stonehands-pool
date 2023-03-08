@@ -2,28 +2,37 @@ import { useState } from 'react';
 import { dummyData, ValidPicks } from '../../temp/dummyData';
 import PickOneTeam from './PickOneTeam';
 
-function MarginPicks() {
+function MarginPicks(props: any) {
+    const { weekInfo } = props;
     const [selectedTeam, setSelectedTeam] = useState<ValidPicks | null>(null);
+
+    const numOptions = Object.keys(weekInfo).length;
 
     const handleSelection = (team: ValidPicks) => {
         setSelectedTeam(team);
     };
 
     return (
-        <div className='margin-picks'>
-            {
-                dummyData.map(({ homeTeam, awayTeam }, index) => (
-                    <PickOneTeam
-                        key={`card-${index}`}
-                        homeTeam={homeTeam}
-                        awayTeam={awayTeam}
-                        matchupNumber={index}
-                        name={'margin-pick'}
-                        selectedTeam={selectedTeam}
-                        handleSelection={handleSelection}
-                    />
-                ))
-            }
+        <div className='container pb-6'>
+            <h3 className='title is-3'>Margin Pick:</h3>
+            <h4 className='subtitle'>Pick which team you think will win by the most! (No repeats)</h4>
+            <div className='columns is-multiline'>
+                {
+                    Object.keys(weekInfo).map((matchup, index) => (
+                        <div className='column is-one-third' key={`margin-container-${index}`}>
+                            <PickOneTeam
+                                key={`card-${index}`}
+                                homeTeam={weekInfo[matchup].home_team}
+                                awayTeam={weekInfo[matchup].away_team}
+                                matchupNumber={index}
+                                name={'margin-pick'}
+                                selectedTeam={selectedTeam}
+                                handleSelection={handleSelection}
+                            />
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     );
 }

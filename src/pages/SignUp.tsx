@@ -85,62 +85,101 @@ function SignUp() {
         }
     };
 
-    return(
-        <div className='page sign-up'>
-            <form className='sign-up-form' onSubmit={handleSubmit}>
-                <label htmlFor='first-name'>First Name:</label>
-                <input 
-                    type='text'
-                    id='first-name'
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                />
+    return (
+        <section className='section'>
+            <div className='columns is-centered'>
+                <div className='column is-one-third'>
+                    <div className='container'>
+                        <form className='box' onSubmit={handleSubmit}>
+                            <h1 className='title has-text-centered'>Sign Up</h1>
+                            <div className='field'>
+                                <label className='label' htmlFor='first-name'>First Name:</label>
+                                <div className='control'>
+                                    <input 
+                                        className='input'
+                                        type='text'
+                                        id='first-name'
+                                        value={firstName}
+                                        onChange={(e) => setFirstName(e.target.value)}
+                                    />
+                                </div>
+                            </div>
 
-                <label htmlFor='last-name'>Last Name:</label>
-                <input 
-                    type='text'
-                    id='last-name'
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                />
+                            <div className='field'>
+                                <label className='label' htmlFor='last-name'>Last Name:</label>
+                                <div className='control'>
+                                    <input 
+                                        className='input'
+                                        type='text'
+                                        id='last-name'
+                                        value={lastName}
+                                        onChange={(e) => setLastName(e.target.value)}
+                                    />
+                                </div>
+                            </div>
 
-                <label htmlFor='email'>Email:</label>
-                <input 
-                    type='text'
-                    id='email'
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
+                            <div className='field'>
+                                <label className='label' htmlFor='email'>Email:</label>
+                                <div className='control'>
+                                    <input
+                                        className='input' 
+                                        type='text'
+                                        id='email'
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                            
+                            <div className='field'>
+                                <label className='label' htmlFor='username'>Username:</label>
+                                <div className='control'>
+                                    <input
+                                        className='input' 
+                                        type='text'
+                                        id='username'
+                                        value={username}
+                                        onChange={(e) => setUsername(e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                            
+                            <div className='field'>
+                                <label className='label' htmlFor='password'>Password:</label>
+                                <div className='control'>
+                                    <input 
+                                        className='input'
+                                        type='password'
+                                        id='password'
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
+                                </div>                        
+                            </div>
+                            
+                            <div className='field'>
+                                <label className='label' htmlFor='confirm-password'>Confirm Password:</label>
+                                <div className='control'>
+                                    <input
+                                        className='input' 
+                                        type='password'
+                                        id='confirm-password'
+                                        value={confirmPassword}
+                                        onChange={(e) => setConfirmPassword(e.target.value)}
+                                    />
+                                </div>
+                            </div>
 
-                <label htmlFor='username'>Username:</label>
-                <input 
-                    type='text'
-                    id='username'
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
+                            <div className='control'>
+                                <button className='button is-primary'>Sign Up</button>
+                            </div>
 
-                <label htmlFor='password'>Password:</label>
-                <input 
-                    type='password'
-                    id='password'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-
-                <label htmlFor='confirm-password'>Confirm Password:</label>
-                <input 
-                    type='password'
-                    id='confirm-password'
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                />
-
-                <button className='sign-up'>Sign Up</button>
-
-                {formError && formError.length > 0 && <p className='form-error'>{formError}</p>}
-            </form>
-        </div>
+                            {formError && formError.length > 0 && <p className='help is-danger'>{formError}</p>}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 }
 

@@ -1,6 +1,6 @@
 import { ResultInfo } from '../../temp/dummyData';
 import { choiceFormat } from '../picksheet/PickSheetForm';
-import * as seasonStandings from '../../../public/data/2022/players.json';
+import * as seasonStandings from '../../../data/2022/players.json';
 
 type TableColumns = {
     position: number;
@@ -53,26 +53,28 @@ function SeasonStandingsTable() {
     const tableKeys: string[] = Object.keys(calculatedPicks[0]);
 
     return (
-        <div className='weekly-standings-table'>
-            <table>
-                <thead>
-                    <tr>
-                        {headers.map(heading => {
-                            return <th key={heading}>{heading}</th>
-                        })}
-                    </tr>
-                </thead>
-                <tbody>
-                        {calculatedPicks.map((row, index) => {
-                            return <tr key={`${index}`}>
-                                {tableKeys.map((key, ind) => {
-                                    return <td key={`${row.position}-${ind}`}>{row[key as keyof TableColumns]}</td>
-                                })}
-                            </tr>
-                        })}
-                </tbody>
-            </table>
-        </div>
+        <section className='section'>
+            <div className='container'>
+                <table className='table is-striped is-hoverable mx-auto'>
+                    <thead>
+                        <tr>
+                            {headers.map(heading => {
+                                return <th key={heading}>{heading}</th>
+                            })}
+                        </tr>
+                    </thead>
+                    <tbody>
+                            {calculatedPicks.map((row, index) => {
+                                return <tr key={`${index}`}>
+                                    {tableKeys.map((key, ind) => {
+                                        return <td key={`${row.position}-${ind}`}>{row[key as keyof TableColumns]}</td>
+                                    })}
+                                </tr>
+                            })}
+                    </tbody>
+                </table>
+            </div>
+        </section>
     );
 }
 

@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { dummyData } from '../../temp/dummyData';
 import ConfidenceDropDown from './ConfidenceDropDown';
 import MatchupCard from './MatchupCard';
 
-function ConfidencePicks() {
+function ConfidencePicks(props: any) {
+    const { weekInfo } = props;
     const [selectedConfidences, setSelectedConfidences] = useState<number[]>([]);
+
+    const numOptions = Object.keys(weekInfo).length;
 
     const onUpdateConfidence = (previousValue: number, newValue: number) => {
         // Remove the previous value if we're changing a drop down
@@ -14,21 +16,31 @@ function ConfidencePicks() {
     };
 
     return(
-        <div className='confidence-picks'>
-            {
-                dummyData.map(({ homeTeam, awayTeam }, index) => (
-                    <div className='confidence-item' key={`confidence-${index}`}>
-                        <MatchupCard key={`card-${index}`} homeTeam={homeTeam} awayTeam={awayTeam} matchupNumber={index} />
-                        <ConfidenceDropDown
-                            key={`dd-${index}`}
-                            numOptions={dummyData.length} 
-                            matchupNumber={index}
-                            selectedNumbers={selectedConfidences}
-                            onUpdateConfidence={onUpdateConfidence}
-                        />
-                    </div>
-                ))
-            }
+        <div className='container pb-6'>
+            <h3 className='title is-3'>Confidence Picks:</h3>
+            <h4 className='subtitle'>Pick which team you think will win and how confident you are! {numOptions} is the most confident while 1 is the least confident</h4>
+            <div className='columns is-multiline'>
+                {
+                    Object.keys(weekInfo).map((matchup, index) => (
+                        <div className='column is-half' key={`confidence-${index}`}>
+                            <div className='columns'>
+                                <div className='column is-four-fifths'>
+                                    <MatchupCard key={`card-${index}`} homeTeam={weekInfo[matchup].home_team} awayTeam={weekInfo[matchup].away_team} matchupNumber={index} />
+                                </div>
+                                <div className='column is-narrow is-vertical-center'>
+                                    <ConfidenceDropDown
+                                        key={`dd-${index}`}
+                                        numOptions={numOptions} 
+                                        matchupNumber={index}
+                                        selectedNumbers={selectedConfidences}
+                                        onUpdateConfidence={onUpdateConfidence}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     );
 };

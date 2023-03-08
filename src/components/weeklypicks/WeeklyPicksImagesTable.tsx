@@ -18,7 +18,7 @@ function WeeklyPicksImagesTable(props: WeeklyPicksImagesTableProps) {
     const emptyArr = Array(results.length + 4).fill('');
 
     return (
-        <table className='weekly-picks-table'>
+        <table className='table is-stripey is-hoverable mx-auto has-text-centered'>
             <tbody>
                 <tr className='weekly-picks-table-top'>
                     <td colSpan={results.length + 4} align={'center'}>Pool members sorted in alphabetical order (Bold = Win)</td>
@@ -52,7 +52,7 @@ function WeeklyPicksImagesTable(props: WeeklyPicksImagesTableProps) {
                 {picks.map((pickInfo: any, index: number) => {
                     let points = 0;
                     return <tr key={`picks-${index}`}>
-                        <td className='weekly-picks-table-name'>{pickInfo.lastName}, {pickInfo.firstName}</td>
+                        <td className='names is-vcentered'>{`${pickInfo.firstName} ${pickInfo.lastName}`}</td>
                         {results.map((result, index) => {
                             const pick = pickInfo[`matchup-${index}`];
                             const confidence = pickInfo[`matchup-${index}-confidence`];
@@ -73,9 +73,9 @@ function WeeklyPicksImagesTable(props: WeeklyPicksImagesTableProps) {
                                 {confidence}
                             </td>
                         })}
-                        <td>{pickInfo.tiebreaker}</td>
-                        <td>{points}</td>
-                        <td>0</td>
+                        <td className='is-vcentered'>{pickInfo.tiebreaker}</td>
+                        <td className='is-vcentered'>{points}</td>
+                        <td className='is-vcentered'>0</td>
                     </tr>
                 })}
             </tbody>
