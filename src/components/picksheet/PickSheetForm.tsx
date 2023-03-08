@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
-import { dummyData, ValidPicks } from '../../temp/dummyData';
+import { CURRENT_WEEK } from '../../constants';
+import * as seasonData from '../../../data/2022/season.json';
 import ConfidencePicks from './ConfidencePicks';
 import HighFivePicks from './HighFivePicks';
 import MarginPick from './MarginPick';
@@ -30,6 +31,8 @@ function shuffle(array: string[]) {
     }
 }
 
+const currentWeekInfo = seasonData.weeks[`week_${CURRENT_WEEK}`];
+
 function PickSheetForm(props: PicksheetFormProps) {
     const { session } = props;
     const navigate = useNavigate();
@@ -55,7 +58,7 @@ function PickSheetForm(props: PicksheetFormProps) {
 
         // Probably a better way to go about this but oh well
         let missingConfidence = false;
-        for (let i = 0; i < dummyData.length; i++) {
+        for (let i = 0; i < Object.keys(currentWeekInfo).length; i++) {
             if (!choices[`matchup-${i}-confidence`]) {
                 setFormError('Please make sure you have chosen a confidence value for every matchup');
                 missingConfidence = true;
@@ -103,22 +106,25 @@ function PickSheetForm(props: PicksheetFormProps) {
     };
 
     return (
-        <div className='picksheet-form-div'>
-            <h1>Picksheet</h1>
-            <form onSubmit={handleSubmit}>
-                <h2>Confidence Picks:</h2>
-                <ConfidencePicks />
-                <h2>Survivor Pick:</h2>
-                <SurvivorPick />
-                <h2>Margin Pick:</h2>
-                <MarginPick />
-                <h2>High Five Picks:</h2>
-                <HighFivePicks />
-                <TieBreaker />
-                <button>Submit Choices</button>
-                {formError && formError.length > 0 && <p className='form-error'>{formError}</p>}
-            </form>
-        </div>
+        <section className='section'>
+            <div className='container'>
+                <h1 className='title is-1'>Week {CURRENT_WEEK} Picksheet</h1>
+                <h2 className='subtitle'>Make sure to fill out every field that you can</h2>
+                <form className='box' onSubmit={handleSubmit}>
+                    <ConfidencePicks weekInfo={currentWeekInfo} />
+                    <SurvivorPick weekInfo={currentWeekInfo} />
+                    <MarginPick weekInfo={currentWeekInfo} />
+                    <HighFivePicks weekInfo={currentWeekInfo} />
+                    <TieBreaker />
+                    <div className='field'>
+                        <div className='control'>
+                            <button className='button is-primary'>Submit Choices</button>
+                        </div>
+                    </div>
+                    {formError && formError.length > 0 && <p className='form-error'>{formError}</p>}
+                </form> 
+            </div>
+        </section>
     );
 }
 

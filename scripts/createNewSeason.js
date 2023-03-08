@@ -17,9 +17,9 @@ if (isNaN(year)) {
 }
 
 // Now check to see if a folder exists for that year, if it doesn't create a folder
-if (!fs.existsSync(path.resolve(`public/data/${year}`))) {
-    console.log(`Making a directory in public/data for the year of ${year}`);
-    fs.mkdirSync(path.resolve(`public/data/${year}`), { recursive: true });
+if (!fs.existsSync(path.resolve(`data/${year}`))) {
+    console.log(`Making a directory in data for the year of ${year}`);
+    fs.mkdirSync(path.resolve(`data/${year}`), { recursive: true });
 } else {
     console.log(`A directory already exists for the year ${year}`);
     process.exit();
@@ -27,9 +27,11 @@ if (!fs.existsSync(path.resolve(`public/data/${year}`))) {
 
 // Now create a team data json file to keep track of them teams for that season
 const teams = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAX', 'KC', 'LAC', 'LAR', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'];
+const displayNames = ['Arizona', 'Atlanta', 'Baltimore', 'Buffalo', 'Carolina', 'Chicago', 'Cinncinati', 'Cleveland', 'Dallas', 'Denver', 'Detroit', 'Green Bay', 'Houston', 'Indianapolis', 'Jacksonville', 'Kansas City', 'LA Chargers', 'LA Rams', 'Las Vegas', 'Miami', 'Minnesota', 'New England', 'New Orleans', 'NY Giants', 'NY Jets', 'Philadelphia', 'Pittsburgh', 'Seattle', 'San Francisco', 'Tampa Bay', 'Tennessee', 'Washington'];
 const teamObj = { teams: {} };
-teams.forEach((team) => {
+teams.forEach((team, index) => {
     teamObj.teams[team] = {
+        "displayName": displayNames[index],
         "wins": 0,
         "losses": 0,
         "ties": 0,
@@ -43,8 +45,8 @@ teams.forEach((team) => {
     };
 });
 const asJson = JSON.stringify(teamObj, null, 2);
-fs.writeFileSync(path.resolve(`public/data/${year}/teams.json`), asJson);
-console.log(`Created a new file at public/data/${year}/teams.json in order to keep track of the teams`);
+fs.writeFileSync(path.resolve(`data/${year}/teams.json`), asJson);
+console.log(`Created a new file at data/${year}/teams.json in order to keep track of the teams`);
 
 // Now create a season data json file to keep track of the scores throughout the season
 const weeks = Array.from({ length: 18 }, (_, i) => i + 1); // Create the 18 weeks
@@ -64,8 +66,8 @@ weeks.forEach((week) => {
     });
 });
 const seasonAsJson = JSON.stringify(seasonObj, null, 2);
-fs.writeFileSync(path.resolve(`public/data/${year}/season.json`), seasonAsJson);
-console.log(`Created a new file at public/data/${year}/season.json in order to keep track of the weekly results`);
+fs.writeFileSync(path.resolve(`data/${year}/season.json`), seasonAsJson);
+console.log(`Created a new file at data/${year}/season.json in order to keep track of the weekly results`);
 
 // TODO: Take the csv export of the users and convert that to a json object to use for the season standings
 const { data, error } = await supabaseClient
@@ -101,8 +103,8 @@ if (data) {
         });
     });
     const playersAsJson = JSON.stringify(playersObj, null, 2);
-    fs.writeFileSync(path.resolve(`public/data/${year}/players.json`), playersAsJson);
-    console.log(`Created a new file at public/data/${year}/players.json in order to keep track of the players results`);
+    fs.writeFileSync(path.resolve(`data/${year}/players.json`), playersAsJson);
+    console.log(`Created a new file at data/${year}/players.json in order to keep track of the players results`);
 } 
 
 process.exit();

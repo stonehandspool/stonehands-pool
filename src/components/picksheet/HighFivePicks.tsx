@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { dummyData, ValidPicks } from '../../temp/dummyData';
 import HighFiveCheckboxes from './HighFiveCheckBoxes';
 
-function HighFivePicks() {
+function HighFivePicks(props: any) {
+    const { weekInfo } = props;
     const [picks, setPicks] = useState<ValidPicks[]>([]);
     const MAX_PICKS = 5;
 
@@ -21,16 +22,18 @@ function HighFivePicks() {
     };
     
     return (
-        <div className='high-five-picks'>
+        <div className='container pb-6'>
+            <h3 className='title is-3'>High Five Picks:</h3>
+            <h4 className='subtitle'>Pick <strong>5</strong> teams you think will win this week, the more you get right the more points you get!</h4>
             <p>You have currently made {picks.length}/{MAX_PICKS} of your picks</p>
-            <div className='high-five-picks-grid'>
+            <div className='columns is-multiline'>
                 {
-                    dummyData.map(({ homeTeam, awayTeam }, index) => (
-                        <div className='confidence-item' key={`confidence-${index}`}>
+                    Object.keys(weekInfo).map((matchup, index) => (
+                        <div className='column is-one-third' key={`margin-container-${index}`}>
                             <HighFiveCheckboxes
                                 key={`card-${index}`}
-                                homeTeam={homeTeam}
-                                awayTeam={awayTeam}
+                                homeTeam={weekInfo[matchup].home_team}
+                                awayTeam={weekInfo[matchup].away_team}
                                 matchupNumber={index}
                                 name={'high-five-picks'}
                                 handleSelection={handleSelection}

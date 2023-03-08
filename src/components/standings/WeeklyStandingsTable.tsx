@@ -85,26 +85,28 @@ function WeeklyStandingsTable(props: WeeklyStandingsTableProps) {
     const tableKeys: string[] = Object.keys(calculatedPicks[0]);
 
     return (
-        <div className='weekly-standings-table'>
-            <table>
-                <thead>
-                    <tr>
-                        {headers.map(heading => {
-                            return <th key={heading}>{heading}</th>
-                        })}
-                    </tr>
-                </thead>
-                <tbody>
-                        {calculatedPicks.map((row, index) => {
-                            return <tr key={`${index}`}>
-                                {tableKeys.map((key, ind) => {
-                                    return <td key={`${row.position}-${ind}`}>{row[key as keyof TableColumns]}</td>
-                                })}
-                            </tr>
-                        })}
-                </tbody>
-            </table>
-        </div>
+        <section className='section'>
+            <div className='container'>
+                <table className='table is-striped is-hoverable mx-auto'>
+                    <thead>
+                        <tr>
+                            {headers.map(heading => {
+                                return <th key={heading}>{heading}</th>
+                            })}
+                        </tr>
+                    </thead>
+                    <tbody>
+                            {calculatedPicks.map((row, index) => {
+                                return <tr key={`${index}`}>
+                                    {tableKeys.map((key, ind) => {
+                                        return <td key={`${row.position}-${ind}`}>{row[key as keyof TableColumns]}</td>
+                                    })}
+                                </tr>
+                            })}
+                    </tbody>
+                </table>
+            </div>
+        </section>
     );
 }
 

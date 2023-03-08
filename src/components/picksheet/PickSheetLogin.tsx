@@ -23,30 +23,49 @@ function PickSheetLogin() {
     };
 
     return(
-        <div className='picksheet-login'>
-            <h1>Sign In</h1>
-            <form className='picksheet-login-form' onSubmit={onHandleSubmit}>
-            <label htmlFor='email'>Email:</label>
-            <input 
-                type='text'
-                id='email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
+        <section className='section'>
+            <div className='columns is-centered'>
+                <div className='column is-one-third'>
+                    <div className='container'>
+                        <form className='box' onSubmit={onHandleSubmit}>
+                            <h1 className='title has-text-centered'>Sign In</h1>
+                            <div className='field'>
+                                <label className='label' htmlFor='email'>Email:</label>
+                                <div className='control'>
+                                    <input
+                                        className='input'
+                                        type='text'
+                                        id='email'
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                </div>
+                            </div>
 
-            <label htmlFor='password'>Password:</label>
-            <input 
-                type='password'
-                id='password'
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
+                            <div className='field'>
+                                <label className='label' htmlFor='password'>Password:</label>
+                                <div className='control'>
+                                    <input
+                                        className='input'
+                                        type='password'
+                                        id='password'
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
+                                </div>
+                            </div>
 
-            <button className='sign-up'>Sign In</button>
-
-            {formError && formError.length > 0 && <p className='form-error'>{formError}</p>}
-        </form>
-        </div>
+                            <div className='field'>
+                                <div className='control'>
+                                    <button className='button is-primary'>Sign In</button>
+                                </div>
+                            </div>
+                            {formError && formError.length > 0 && <p className='form-error'>{formError}</p>}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 }
 

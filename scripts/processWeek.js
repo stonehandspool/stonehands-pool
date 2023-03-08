@@ -18,7 +18,7 @@ if (isNaN(year)) {
 
 // Now get the data from the season results json file
 const weekData = {};
-fs.readFile(path.resolve(`public/data/${year}/season.json`), (err, data) => {
+fs.readFile(path.resolve(`data/${year}/season.json`), (err, data) => {
     if (err) {
         console.log('Error reading the season.json, double check to make sure the file exists');
         process.exit();
