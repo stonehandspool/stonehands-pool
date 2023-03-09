@@ -1,5 +1,3 @@
-import { ResultInfo } from '../../temp/dummyData';
-import { choiceFormat } from '../picksheet/PickSheetForm';
 import * as seasonStandings from '../../../data/2022/players.json';
 
 type TableColumns = {

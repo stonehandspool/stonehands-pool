@@ -100,6 +100,12 @@ if (data) {
             lastWeek: 0,
             currentWeek: 0,
             change: "--",
+            survivorPicks: [],
+            aliveInSurvivor: true,
+            marginPicks: [],
+            marginTotal: 0,
+            highFiveValues: [],
+            highFiveTotal: 0,
         });
     });
     const playersAsJson = JSON.stringify(playersObj, null, 2);

@@ -18,7 +18,7 @@ function WeeklyPicksImagesTable(props: WeeklyPicksImagesTableProps) {
     const emptyArr = Array(results.length + 4).fill('');
 
     return (
-        <table className='table is-stripey is-hoverable mx-auto has-text-centered'>
+        <table className='table is-striped is-hoverable mx-auto has-text-centered'>
             <tbody>
                 <tr className='weekly-picks-table-top'>
                     <td colSpan={results.length + 4} align={'center'}>Pool members sorted in alphabetical order (Bold = Win)</td>

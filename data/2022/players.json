@@ -15,7 +15,22 @@
       "games": 0,
       "lastWeek": 0,
       "currentWeek": 0,
-      "change": "--"
+      "change": "--",
+      "survivorPicks": ["HOU"],
+      "aliveInSurvivor": true,
+      "marginPicks": [
+        { "team": "HOU", "margin": 3 }
+      ],
+      "marginTotal": 3,
+      "highFiveThisWeek": [
+        { "team": "HOU", "won": true },
+        { "team": "HOU", "won": false },
+        { "team": "HOU", "won": true },
+        { "team": "HOU", "won": true },
+        { "team": "HOU", "won": true }
+      ],
+      "highFiveValues": [8],
+      "highFiveTotal": 8
     }
   ]
 }
