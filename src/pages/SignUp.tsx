@@ -15,6 +15,7 @@ function SignUp() {
     const [lastName, setLastName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [username, setUsername] = useState<string>('');
+    const [referral, setReferral] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [confirmPassword, setConfirmPassword] = useState<string>('');
     const [formError, setFormError] = useState<string | null>(null);
@@ -76,7 +77,7 @@ function SignUp() {
 
         const { data: userInfoData, error: userInfoError } = await supabaseClient
             .from(TABLE_NAMES.USER_INFO)
-            .insert({ id, username, first_name: capitalizedFirstName, last_name: capitalizedLastName })
+            .insert({ id, username, first_name: capitalizedFirstName, last_name: capitalizedLastName, referral })
             .select();
 
         if (userInfoData) {
@@ -140,6 +141,20 @@ function SignUp() {
                                         id='username'
                                         value={username}
                                         onChange={(e) => setUsername(e.target.value)}
+                                    />
+                                </div>
+                            </div>
+
+                            <div className='field'>
+                                <label className='label' htmlFor='referral'>Referral:</label>
+                                <div className='control'>
+                                    <input
+                                        className='input' 
+                                        type='text'
+                                        id='username'
+                                        value={referral}
+                                        placeholder='Who told you about this pool?'
+                                        onChange={(e) => setReferral(e.target.value)}
                                     />
                                 </div>
                             </div>

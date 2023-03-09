@@ -17,7 +17,10 @@ function NavBar() {
                         <a className='navbar-link'>Standings</a>
                         <div className='navbar-dropdown'>
                             <Link className='navbar-item' to='/season-standings'>Season</Link>
-                            <Link className='navbar-item' to='weekly-standings'>Weekly</Link>
+                            <Link className='navbar-item' to='/weekly-standings'>Weekly</Link>
+                            <Link className='navbar-item' to='/survivor'>Survivor</Link>
+                            <Link className='navbar-item' to='/margin'>Margin</Link>
+                            <Link className='navbar-item' to='/high-five'>High Five</Link>
                         </div>
                     </div>
                     <div className='navbar-item has-dropdown is-hoverable'>
