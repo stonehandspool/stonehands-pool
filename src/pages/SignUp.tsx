@@ -151,7 +151,7 @@ function SignUp() {
                                     <input
                                         className='input' 
                                         type='text'
-                                        id='username'
+                                        id='referral'
                                         value={referral}
                                         placeholder='Who told you about this pool?'
                                         onChange={(e) => setReferral(e.target.value)}

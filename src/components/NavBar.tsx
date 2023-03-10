@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 function NavBar() {
     return (
         <nav className='navbar is-primary' role='navigation' aria-label='main navigation'>
-            <div className='navbar-brand'>
+            <div className='navbar-brand ml-6'>
                 <a className='navbar-item' href='/'>
-                    <h3 className='title is-3 has-text-weight-bold has-text-white'>Stonehands Pool</h3>
+                    <h3 className='title is-4 has-text-white stonehands-hero'>STONEHANDS</h3>
                 </a>
             </div>
-            <div className='navbar-menu'>
-                <div className='navbar-start'>
+            <div className='navbar-menu mr-6'>
+                <div className='navbar-end'>
                     <Link className='navbar-item' to='/'>Home</Link>
                     <Link className='navbar-item' to='/about'>About</Link>
                     <Link className='navbar-item' to='/picksheet'>Picksheet</Link>
