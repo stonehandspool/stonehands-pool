@@ -1,0 +1,22 @@
+@charset 'utf-8';
+
+// Add fonts here
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Setting colors
+$purple: #54188b;
+
+// Update Bulma's global variables
+$primary: $purple;
+
+// Global CSS
+.is-vertical-center {
+    display: flex !important;
+    align-items: center;
+}
+
+.stonehands-hero {
+    font-family: 'Roboto Slab', serif;
+}
+
+@import 'bulma/bulma.sass';

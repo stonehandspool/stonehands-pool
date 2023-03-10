@@ -91,7 +91,7 @@ function PickSheetForm(props: PicksheetFormProps) {
 
         const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
             .from(TABLE_NAMES.USER_PICKS)
-            .insert({ id, week: 18, submission_data: choices })
+            .insert({ id, week: CURRENT_WEEK, submission_data: choices })
             .select();
 
         if (picksheetSubmissionError) {

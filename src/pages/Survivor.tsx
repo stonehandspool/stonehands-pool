@@ -9,7 +9,7 @@ function Survivor(){
     return(
         <section className='section'>
             <div className='container'>
-                <h1 className='title has-text-centered'>{CURRENT_YEAR} Stonehand Pool</h1>
+                <h1 className='title has-text-centered'>{CURRENT_YEAR} Stonehands Pool</h1>
                 <h2 className='subtitle has-text-centered'>Survivor results as of week {CURRENT_WEEK}</h2>
                 {/* Keeping this table code here for now in case I end up wanting it */}
                 {/* <table className='table is-bordered is-narrow mx-auto has-text-centered'>
