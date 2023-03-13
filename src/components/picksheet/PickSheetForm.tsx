@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
-import { CURRENT_WEEK } from '../../constants';
+import { CURRENT_WEEK, CURRENT_YEAR } from '../../constants';
 import * as seasonData from '../../../data/2022/season.json';
 import ConfidencePicks from './ConfidencePicks';
 import HighFivePicks from './HighFivePicks';
@@ -24,13 +24,6 @@ export type choiceFormat = {
     username: string;
 };
 
-function shuffle(array: string[]) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-}
-
 const currentWeekInfo = seasonData.weeks[`week_${CURRENT_WEEK}`];
 
 function PickSheetForm(props: PicksheetFormProps) {
@@ -49,6 +42,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         const { first_name: firstName, last_name: lastName, username } = session.user.user_metadata;
         const choices: choiceFormat = { id, firstName, lastName, username, 'highFivePicks': [] };
         for (let [key, value] of formData.entries()) {
+            console.log(key, value);
             if (key === 'high-five-picks') {
                 choices['highFivePicks'].push(value as string);
             } else {
@@ -86,15 +80,26 @@ function PickSheetForm(props: PicksheetFormProps) {
             return;
         }
 
+        if (!choices['tiebreaker']) {
+            setFormError('Please make sure you have included a tiebreaker');
+            return;
+        }
+
         setSelections(choices);
         setFormError(null);
 
         const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
             .from(TABLE_NAMES.USER_PICKS)
-            .insert({ id, week: CURRENT_WEEK, submission_data: choices })
+            .insert({
+                user_id: id,
+                week: CURRENT_WEEK,
+                year: CURRENT_YEAR,
+                submission_data: choices
+            })
             .select();
 
         if (picksheetSubmissionError) {
+            console.error(picksheetSubmissionError);
             setFormError('Something went wrong submitting your picksheet, please reach out to Ryan');
             return;
         }
@@ -121,7 +126,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                             <button className='button is-primary'>Submit Choices</button>
                         </div>
                     </div>
-                    {formError && formError.length > 0 && <p className='form-error'>{formError}</p>}
+                    {formError && formError.length > 0 && <p className=''>{formError}</p>}
                 </form> 
             </div>
         </section>

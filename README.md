@@ -16,6 +16,6 @@ TODO:
 - Actually get this online and double check make sure things work
 - Do a dry run to make sure that the process works
 - Get automated emails working
-- Weekly score box
+- Weekly score box (maybe?)
 - Add a Hall of Fame
 - Check the ability to do partial pick sheets and allow for submissions on Thurs and Fri

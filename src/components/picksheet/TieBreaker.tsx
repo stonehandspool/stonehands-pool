@@ -5,7 +5,7 @@ function TieBreaker() {
             <h4 className='subtitle'>Please enter what you think the combined score will be in the Monday night game</h4>
             <div className='field columns'>
                 <div className='control column is-1'>
-                    <input className='input' type='text' id='tiebreaker' placeholder='0' />
+                    <input className='input' type='text' id='tiebreaker' name='tiebreaker' placeholder='0' />
                 </div>
             </div>
         </div>

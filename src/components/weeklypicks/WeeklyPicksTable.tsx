@@ -1,6 +1,6 @@
 import './WeeklyPicksTable.css';
 
-import { ResultInfo } from '../../temp/dummyData';
+import { ResultInfo } from '../../constants';
 import { choiceFormat } from '../picksheet/PickSheetForm';
 
 type WeeklyPicksTableProps = {

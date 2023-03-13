@@ -10,7 +10,6 @@ function NavBar() {
             </div>
             <div className='navbar-menu mr-6'>
                 <div className='navbar-end'>
-                    <Link className='navbar-item' to='/'>Home</Link>
                     <Link className='navbar-item' to='/about'>About</Link>
                     <Link className='navbar-item' to='/picksheet'>Picksheet</Link>
                     <div className='navbar-item has-dropdown is-hoverable'>

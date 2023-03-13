@@ -1,7 +1,7 @@
 import './WeeklyPicksTable.css';
 
 import * as TeamLogos from '../../assets/logos';
-import { ResultInfo } from '../../temp/dummyData';
+import { ResultInfo } from '../../constants';
 import { choiceFormat } from '../picksheet/PickSheetForm';
 
 type WeeklyPicksImagesTableProps = {
