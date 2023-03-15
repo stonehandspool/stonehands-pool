@@ -51,7 +51,7 @@ function About() {
                     </p>
                     <ol>
                         <li>Total wins for the week (for weekly results) and total wins on the season (for season results)</li>
-                        <li>The tiebreaker "total points" in the Monday Night game (or last game of the week)</li>
+                        <li>The second tiebreaker, which is for the weekly standings is the total points in the Monday Night game (or last game of the week)</li>
                         <ol className='is-lower-alpha'>
                             <li>
                                 This will factor in the closest to the total score, we're not doing price is right rules! Someone who guesses 1 point more than the total score will win the

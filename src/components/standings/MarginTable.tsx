@@ -60,10 +60,13 @@ function MarginTable() {
                                         weeksArr.map((week, ind) => {
                                             if (row.marginPicks[ind]) {
                                                 if (row.marginPicks[ind].margin > 0) {
+                                                    //If the margin of victory was over 0, have a green background
                                                     return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.marginPicks[ind].team}<br />+{row.marginPicks[ind].margin}</td>
                                                 } else if (row.marginPicks[ind].margin < 0) {
+                                                    // If the margin of victory was under 0, have a red background
                                                     return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.marginPicks[ind].team}<br />-{row.marginPicks[ind].margin}</td>
                                                 } else {
+                                                    // If the margin of victory was 0 or null (unfinished game) then no background
                                                     return <td key={`${row.name}-${ind}`}>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
                                                 }
                                             } else {

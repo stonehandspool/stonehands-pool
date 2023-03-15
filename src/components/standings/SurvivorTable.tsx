@@ -49,12 +49,16 @@ function SurvivorTable() {
                                     {
                                         weeksArr.map((week, ind) => {
                                             if (ind < row.survivorPicks.length - 1) {
+                                                // If this is a selection from a prior week that was correct
                                                 return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
                                             } else if (ind === row.survivorPicks.length - 1 && row.aliveInSurvivor) {
+                                                // If this was the most recent pick and it was correct
                                                 return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
                                             } else if (ind === row.survivorPicks.length - 1 && !row.aliveInSurvivor) {
+                                                // If this was the most recent pick and it was incorrect
                                                 return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
                                             } else {
+                                                // If this player was eliminated at this point or just a week that hasn't happened yet
                                                 return <td key={`${row.name}-${ind}`}></td>
                                             }
                                         })

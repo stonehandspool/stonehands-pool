@@ -61,7 +61,8 @@ weeks.forEach((week) => {
             "away_team": "",
             "home_score": 0,
             "away_score": 0,
-            "winner": ""
+            "winner": "",
+            "evaluated": false
         };
     });
 });
@@ -120,6 +121,7 @@ if (data) {
             marginTotal: 0,
             highFiveValues: [],
             highFiveTotal: 0,
+            highFiveThisWeek: [],
         });
     });
     const playersAsJson = JSON.stringify(playersObj, null, 2);

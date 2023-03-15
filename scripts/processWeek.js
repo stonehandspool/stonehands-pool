@@ -1,6 +1,6 @@
 import * as path from 'path';
-import { readFile, writeFile } from 'fs/promises';
 import minimist from 'minimist';
+import { readFile, writeFile } from 'fs/promises';
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = 'https://omerwyjzojbjcdtttehi.supabase.co';
@@ -8,7 +8,8 @@ const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
 const args = minimist(process.argv.slice(2));
-const { year, week } = args;
+const { year, week, firstRun } = args;
+const isFirstRun = firstRun === 'true';
 const CURRENT_YEAR = '2023-2024'; // For the database
 
 // First make sure we received a valid year and week
@@ -44,31 +45,30 @@ const { teams } = teamsData;
 const weeklyPicksData = await JSON.parse(
     await readFile(path.resolve(`data/${year}/weeklyPicks.json`))
 );
-const { weeklyPicks } = weeklyPicksData;
 
-// Get the weeks picks from the database
-const { data, error } = await supabaseClient
+if (isFirstRun) {
+    // Get the weeks picks from the database
+    const { data, error } = await supabaseClient
     .from('user_picks')
     .select()
     .eq('week', week)
     .eq('year', CURRENT_YEAR);
 
-if (error) {
-    console.log(error);
-    process.exit();
+    if (error) {
+        console.log(error);
+        process.exit();
+    }
+
+    // Move this data to the weekly picks json file
+    weeklyPicksData[`week_${week}`] = [...data];
+
+    // Now write to the players json file so that it is saved
+    const updatedWeeklyPicks = JSON.stringify(weeklyPicksData, null, 2);
+    await writeFile(path.resolve(`data/${year}/weeklyPicks.json`), updatedWeeklyPicks);
 }
 
-const allSubmissions = data;
-
-// Move this data to the weekly picks json file
-weeklyPicks[`week_${week}`] = [...allSubmissions];
-
-// Now write to the players json file so that it is saved
-const updatedWeeklyPicks = JSON.stringify(weeklyPicks, null, 2);
-await writeFile(path.resolve(`data/${year}/weeklyPicks.json`), updatedWeeklyPicks);
-
 const findSubmission = (submissionId) => {
-    return allSubmissions.find(submission => submission.user_id === submissionId);
+    return weeklyPicksData[`week_${week}`].find(submission => submission.user_id === submissionId);
 };
 
 const findMatchupByTeam = (teamName) => {
@@ -93,46 +93,64 @@ players.forEach(player => {
     let weeklyWins = 0;
     let weeklyLosses = 0;
     let weeklyTies = 0;
-    let weeklyPoints = 0;   
+    let weeklyPoints = 0;
+    let numGamesEvaluated = 0;
+
+    // Reset the current weeks values if this is the first run
+    if (isFirstRun) {
+        player.currentWeekWins = 0;
+        player.currentWeekLosses = 0;
+        player.currentWeekTies = 0;
+        player.currentWeekPoints = 0;
+    }
 
     // First, evaluate all of the confidence pool picks
     for (let i = 0; i < numGamesThisWeek; i++) {
-        const userChoice = picks[`matchup-${i}`];
-        const userConfidence = parseInt(picks[`matchup-${i}-confidence`], 10);
-        const result = weekData[`matchup_${i + 1}`].winner;
-        if (result === userChoice) {
-            weeklyWins++;
-            weeklyPoints += userConfidence;
-        } else if (result === 'Tie') {
-            weeklyTies++;
-            weeklyPoints += (userConfidence / 2);
-        } else {
-            weeklyLosses++;
+        const matchup = weekData[`matchup_${i + 1}`];
+        const { winner, evaluated } = matchup;
+        // If we haven't evaluated this matchup yet and the game is actually finished
+        if (!evaluated && winner !== '') {
+            const userChoice = picks[`matchup-${i}`];
+            const userConfidence = parseInt(picks[`matchup-${i}-confidence`], 10);
+            if (winner === userChoice) {
+                weeklyWins++;
+                weeklyPoints += userConfidence;
+            } else if (winner === 'Tie') {
+                weeklyTies++;
+                weeklyPoints += (userConfidence / 2);
+            } else {
+                weeklyLosses++;
+            }
+            numGamesEvaluated++;
         }
     }
 
     // Update the players information
-    player.currentWeekWins = weeklyWins;
-    player.currentWeekLosses = weeklyLosses;
-    player.currentWeekTies = weeklyTies;
-    player.currentWeekPoints = weeklyPoints;
+    player.currentWeekWins += weeklyWins;
+    player.currentWeekLosses += weeklyLosses;
+    player.currentWeekTies += weeklyTies;
+    player.currentWeekPoints += weeklyPoints;
     player.currentWeekTiebreaker = picks.tiebreaker;
     player.wins += weeklyWins;
     player.losses += weeklyLosses;
     player.ties += weeklyTies;
     player.percent = (player.wins + (player.ties / 2)) / (player.wins + player.losses + player.ties);
     player.points += weeklyPoints;
-    player.weeks++;
-    const totalTbPoints = player.tbAvg * player.weeks;
-    player.tbAvg = (totalTbPoints + parseInt(picks.tiebreaker, 10)) / player.weeks;
-    player.games += numGamesThisWeek
+    if (isFirstRun) {
+        player.weeks++;
+        const totalTbPoints = player.tbAvg * player.weeks;
+        player.tbAvg = (totalTbPoints + parseInt(picks.tiebreaker, 10)) / player.weeks;
+    }
+    player.games += numGamesEvaluated
 
     // Now evaluate the survivor pool pick
     if (player.aliveInSurvivor) {
         const survivorPick = picks['survivor-pick'];
-        player.survivorPicks.push(survivorPick);
+        if (isFirstRun) {
+            player.survivorPicks.push(survivorPick);
+        }
         const survivorMatchup = findMatchupByTeam(survivorPick);
-        if (survivorMatchup.winner !== survivorPick) {
+        if (survivorMatchup.winner !== '' && survivorMatchup.winner !== survivorPick) {
             player.aliveInSurvivor = false;
         }
     }
@@ -140,26 +158,39 @@ players.forEach(player => {
     // Now evaluate the margin pool pick
     const marginPick = picks['margin-pick'];
     const marginMatchup = findMatchupByTeam(marginPick);
-    let margin;
-    if (marginPick === marginMatchup.home_team) {
-        margin = marginMatchup.home_score - marginMatchup.away_score;
-    } else {
-        margin = marginMatchup.away_score - marginMatchup.home_score;
+    if (isFirstRun) {
+        player.marginPicks.push({ team: marginPick, margin: null });
     }
-    player.marginPicks.push({ team: marginPick, margin });
-    player.marginTotal += margin;
+    if (marginMatchup.winner !== '' && !marginMatchup.evaluated) {
+        let margin;
+        if (marginPick === marginMatchup.home_team) {
+            margin = marginMatchup.home_score - marginMatchup.away_score;
+        } else {
+            margin = marginMatchup.away_score - marginMatchup.home_score;
+        }
+        player.marginPicks[player.marginPicks.length - 1].margin = margin;
+        player.marginTotal += margin;
+    }
 
     // Now evluate the high five pool picks
+    if (isFirstRun) {
+        player.highFiveValues.push(0);
+    }
     let numCorrect = 0;
     player.highFiveThisWeek = [];
     for (let i = 0; i < picks.highFivePicks.length; i++) {
         const choice = picks.highFivePicks[i];
         const choiceMatchup = findMatchupByTeam(choice);
-        player.highFiveThisWeek.push({ team: choice, won: choice === choiceMatchup.winner });
-        if (choice === choiceMatchup.winner) {
+        let won = null;
+        if (choiceMatchup.winner !== '') {
+            won = choice === choiceMatchup.winner;
+        }
+        player.highFiveThisWeek.push({ team: choice, won });
+        if (won) {
             numCorrect++;
         }
     }
+
     let weeklyHighFivePoints = 0;
     if (numCorrect === 1) {
         weeklyHighFivePoints = 1;
@@ -172,8 +203,8 @@ players.forEach(player => {
     } else if (numCorrect === 5) {
         weeklyHighFivePoints = 8;
     }
-    player.highFiveValues.push(weeklyHighFivePoints);
-    player.highFiveTotal += weeklyHighFivePoints;
+    player.highFiveValues[player.highFiveValues.length - 1] = weeklyHighFivePoints;
+    player.highFiveTotal = player.highFiveValues.reduce((partialSum, a) => partialSum + a, 0);
 });
 
 // Now calculate the rank of everyone for the weekly standings
@@ -224,63 +255,77 @@ await writeFile(path.resolve(`data/${year}/players.json`), updatedPlayers);
 // Now update the teams json object and write to that file
 for (let i = 0; i < numGamesThisWeek; i++) {
     const matchup = weekData[`matchup_${i + 1}`];
-    const homeTeamInfo = teams[`${matchup.home_team}`];
-    const awayTeamInfo = teams[`${matchup.away_team}`];
+    if (matchup.winner !== '' && !matchup.evaluated) {
+        const homeTeamInfo = teams[`${matchup.home_team}`];
+        const awayTeamInfo = teams[`${matchup.away_team}`];
 
-    if (matchup.winner === matchup.home_team) {
-        homeTeamInfo.wins++;
-        awayTeamInfo.losses++;
-        homeTeamInfo.home_wins++;
-        awayTeamInfo.away_losses++;
-    } else if (matchup.winner === matchup.away_team) {
-        homeTeamInfo.losses++;
-        awayTeamInfo.wins++;
-        homeTeamInfo.home_losses++;
-        awayTeamInfo.away_wins++;
-    } else if (matchup.winner === 'Tie') {
-        homeTeamInfo.ties++;
-        awayTeamInfo.ties++;
+        if (matchup.winner === matchup.home_team) {
+            homeTeamInfo.wins++;
+            awayTeamInfo.losses++;
+            homeTeamInfo.home_wins++;
+            awayTeamInfo.away_losses++;
+        } else if (matchup.winner === matchup.away_team) {
+            homeTeamInfo.losses++;
+            awayTeamInfo.wins++;
+            homeTeamInfo.home_losses++;
+            awayTeamInfo.away_wins++;
+        } else if (matchup.winner === 'Tie') {
+            homeTeamInfo.ties++;
+            awayTeamInfo.ties++;
+        }
+
+        homeTeamInfo.points_for += matchup.home_score;
+        homeTeamInfo.points_against += matchup.away_score;
+        awayTeamInfo.points_for += matchup.away_score;
+        awayTeamInfo.points_against += matchup.home_score;
+
+        // Handle streaks for the two teams
+        const homeSplit = homeTeamInfo.streak.split('');
+        let newHomeStreak;
+        if (matchup.winner === matchup.home_team) {
+            if (homeSplit[0] === 'L') {
+                newHomeStreak = 'W1';
+            } else {
+                newHomeStreak = `W${parseInt(homeSplit[1], 10) + 1}`;
+            }
+        } else if (matchup.winner === matchup.away_team) {
+            if (homeSplit[0] === 'W') {
+                newHomeStreak = 'L1';
+            } else {
+                newHomeStreak = `L${parseInt(homeSplit[1], 10) + 1}`;
+            }
+        } else {
+            if (homeSplit[0] === 'T') {
+                newHomeStreak = `T${parseInt(homeSplit[1], 10) + 1}`;
+            } else {
+                newHomeStreak = 'T1';
+            }
+        }
+        homeTeamInfo.streak = newHomeStreak;
+
+        const awaySplit = awayTeamInfo.streak.split('');
+        let newAwayStreak;
+        if (matchup.winner === matchup.away_team) {
+            if (awaySplit[0] === 'L') {
+                newAwayStreak = 'W1';
+            } else {
+                newAwayStreak = `W${parseInt(awaySplit[1], 10) + 1}`;
+            }
+        } else if (matchup.winner === matchup.home_team) {
+            if (awaySplit[0] === 'W') {
+                newAwayStreak = 'L1';
+            } else {
+                newAwayStreak = `L${parseInt(awaySplit[1], 10) + 1}`;
+            }
+        } else {
+            if (awaySplit[0] === 'T') {
+                newAwayStreak = `T${parseInt(awaySplit[1], 10) + 1}`;
+            } else {
+                newAwayStreak = 'T1';
+            }
+        }
+        awayTeamInfo.streak = newAwayStreak;
     }
-
-    homeTeamInfo.points_for += matchup.home_score;
-    homeTeamInfo.points_against += matchup.away_score;
-    awayTeamInfo.points_for += matchup.away_score;
-    awayTeamInfo.points_against += matchup.home_score;
-
-    // Handle streaks for the two teams
-    const homeSplit = homeTeamInfo.streak.split('');
-    let newHomeStreak;
-    if (matchup.winner === matchup.home_team) {
-        if (homeSplit[0] === 'L') {
-            newHomeStreak = 'W1';
-        } else {
-            newHomeStreak = `W${parseInt(homeSplit[1], 10) + 1}`;
-        }
-    } else {
-        if (homeSplit[0] === 'W') {
-            newHomeStreak = 'L1';
-        } else {
-            newHomeStreak = `L${parseInt(homeSplit[1], 10) + 1}`;
-        }
-    }
-    homeTeamInfo.streak = newHomeStreak;
-
-    const awaySplit = awayTeamInfo.streak.split('');
-    let newAwayStreak;
-    if (matchup.winner === matchup.away_team) {
-        if (awaySplit[0] === 'L') {
-            newAwayStreak = 'W1';
-        } else {
-            newAwayStreak = `W${parseInt(awaySplit[1], 10) + 1}`;
-        }
-    } else {
-        if (awaySplit[0] === 'W') {
-            newAwayStreak = 'L1';
-        } else {
-            newAwayStreak = `L${parseInt(awaySplit[1], 10) + 1}`;
-        }
-    }
-    awayTeamInfo.streak = newAwayStreak;
 }
 
 // Now write to the players json file so that it is saved

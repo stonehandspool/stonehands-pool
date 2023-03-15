@@ -42,7 +42,6 @@ function PickSheetForm(props: PicksheetFormProps) {
         const { first_name: firstName, last_name: lastName, username } = session.user.user_metadata;
         const choices: choiceFormat = { id, firstName, lastName, username, 'highFivePicks': [] };
         for (let [key, value] of formData.entries()) {
-            console.log(key, value);
             if (key === 'high-five-picks') {
                 choices['highFivePicks'].push(value as string);
             } else {
