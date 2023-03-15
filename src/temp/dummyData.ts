@@ -1,21 +1,3 @@
-type ValidPicks = 
-    'BUF' | 'MIA' | 'NE' | 'NYJ' |
-    'BAL' | 'CIN' | 'CLE' | 'PIT' |
-    'HOU' | 'IND' | 'JAX' | 'TEN' |
-    'DEN' | 'KC' | 'LV' | 'LAC' |
-    'DAL' | 'NYG' | 'PHI' | 'WAS' |
-    'CHI' | 'DET' | 'GB' | 'MIN' |
-    'ATL' | 'CAR' | 'NO' | 'TB' |
-    'ARI' | 'LAR' | 'SF' | 'SEA';
-
-type ResultInfo = {
-    homeTeam: ValidPicks;
-    awayTeam: ValidPicks;
-    homeScore: number;
-    awayScore: number;
-    winner: ValidPicks | 'Tie'; // Probably not needed, but just to make my life easier
-}
-
 const dummyData: { homeTeam: ValidPicks, awayTeam: ValidPicks }[] = [
     { homeTeam: 'LV', awayTeam: 'KC' },
     { homeTeam: 'JAX', awayTeam: 'TEN' },
@@ -55,4 +37,3 @@ const week18Results: ResultInfo[] = [
 ];
 
 export { dummyData, week18Results };
-export type { ValidPicks, ResultInfo };

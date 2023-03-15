@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { dummyData, ValidPicks } from '../../temp/dummyData';
+import { ValidPicks } from '../../constants';
 import HighFiveCheckboxes from './HighFiveCheckBoxes';
 
 function HighFivePicks(props: any) {

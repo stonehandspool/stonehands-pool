@@ -41,7 +41,7 @@ teams.forEach((team, index) => {
         "home_losses": 0,
         "away_wins": 0,
         "away_losses": 0,
-        "steak": "W0"
+        "streak": "W0"
     };
 });
 const asJson = JSON.stringify(teamObj, null, 2);
@@ -61,7 +61,8 @@ weeks.forEach((week) => {
             "away_team": "",
             "home_score": 0,
             "away_score": 0,
-            "winner": ""
+            "winner": "",
+            "evaluated": false
         };
     });
 });
@@ -69,7 +70,16 @@ const seasonAsJson = JSON.stringify(seasonObj, null, 2);
 fs.writeFileSync(path.resolve(`data/${year}/season.json`), seasonAsJson);
 console.log(`Created a new file at data/${year}/season.json in order to keep track of the weekly results`);
 
-// TODO: Take the csv export of the users and convert that to a json object to use for the season standings
+// Now create a season data json file to keep track of the scores throughout the season
+const weeklyPicksObject = { weeklyPicks: {} };
+weeks.forEach((week) => {
+    weeklyPicksObject.weeklyPicks[`week_${week}`] = [];
+});
+const weeklyPicksAsJson = JSON.stringify(weeklyPicksObject, null, 2);
+fs.writeFileSync(path.resolve(`data/${year}/weeklyPicks.json`), weeklyPicksAsJson);
+console.log(`Created a new file at data/${year}/weeklyPicks.json in order to keep track of the weekly results`);
+
+// Now create the players json file
 const { data, error } = await supabaseClient
     .from('user_info')
     .select();
@@ -97,20 +107,26 @@ if (data) {
             tbAvg: 0,
             weeks: 0,
             games: 0,
-            lastWeek: 0,
-            currentWeek: 0,
+            lastWeekRank: 0,
+            currentWeekRank: 0,
             change: "--",
+            currentWeekWins: 0,
+            currentWeekLosses: 0,
+            currentWeekTies: 0,
+            currentWeekPoints: 0,
+            currentWeekTiebreaker: 0,
             survivorPicks: [],
             aliveInSurvivor: true,
             marginPicks: [],
             marginTotal: 0,
             highFiveValues: [],
             highFiveTotal: 0,
+            highFiveThisWeek: [],
         });
     });
     const playersAsJson = JSON.stringify(playersObj, null, 2);
     fs.writeFileSync(path.resolve(`data/${year}/players.json`), playersAsJson);
     console.log(`Created a new file at data/${year}/players.json in order to keep track of the players results`);
-} 
+}
 
 process.exit();

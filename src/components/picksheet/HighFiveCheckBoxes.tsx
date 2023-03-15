@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as TeamLogos from '../../assets/logos';
 import * as TeamInfo from '../../../data/2022/teams.json';
-import { ValidPicks } from '../../temp/dummyData';
+import { ValidPicks } from '../../constants';
 
 export interface HighFiveCheckboxProps {
     homeTeam: ValidPicks;

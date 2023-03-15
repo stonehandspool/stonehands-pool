@@ -6,7 +6,7 @@ type TableColumns = {
     wins: number;
     losses: number;
     ties: number;
-    percent: number,
+    percent: string,
     points: number;
     tiebreaker: number;
     lastWeek: number;
@@ -22,15 +22,15 @@ function SeasonStandingsTable() {
     for (let i = 0; i < players.length; i++) {
         const playerInfo = players[i];
         const rowInfo: TableColumns = {
-            position: playerInfo.currentWeek,
+            position: playerInfo.currentWeekRank,
             name: `${playerInfo.firstName} ${playerInfo.lastName}`,
             wins: playerInfo.wins,
             losses: playerInfo.losses,
-            ties: 0,
-            percent: playerInfo.wins / (playerInfo.wins + playerInfo.losses),
-            points: 0,
+            ties: playerInfo.ties,
+            percent: `${(playerInfo.percent * 100).toFixed(1)}%`,
+            points: playerInfo.points,
             tiebreaker: playerInfo.tbAvg,
-            lastWeek: playerInfo.lastWeek,
+            lastWeek: playerInfo.lastWeekRank,
             change: playerInfo.change,
         };
         calculatedPicks.push(rowInfo);
