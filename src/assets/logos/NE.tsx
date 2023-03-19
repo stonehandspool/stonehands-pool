@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function NE(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -40,6 +42,7 @@ function NE(props: IconProps) {
 
 NE.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default NE;

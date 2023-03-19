@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function HOU(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -32,6 +34,7 @@ function HOU(props: IconProps) {
 
 HOU.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default HOU;

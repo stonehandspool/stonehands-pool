@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function KC(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -36,6 +38,7 @@ function KC(props: IconProps) {
 
 KC.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default KC;

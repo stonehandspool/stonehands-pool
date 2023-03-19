@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function TB(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -53,6 +55,7 @@ function TB(props: IconProps) {
 
 TB.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default TB;

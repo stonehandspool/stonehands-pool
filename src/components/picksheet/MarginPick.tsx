@@ -3,10 +3,8 @@ import { ValidPicks } from '../../constants';
 import PickOneTeam from './PickOneTeam';
 
 function MarginPicks(props: any) {
-    const { weekInfo } = props;
+    const { weekInfo, userInfo } = props;
     const [selectedTeam, setSelectedTeam] = useState<ValidPicks | null>(null);
-
-    const numOptions = Object.keys(weekInfo).length;
 
     const handleSelection = (team: ValidPicks) => {
         setSelectedTeam(team);
@@ -28,6 +26,7 @@ function MarginPicks(props: any) {
                                 name={'margin-pick'}
                                 selectedTeam={selectedTeam}
                                 handleSelection={handleSelection}
+                                priorMarginPicks={userInfo.marginPicks}
                             />
                         </div>
                     ))

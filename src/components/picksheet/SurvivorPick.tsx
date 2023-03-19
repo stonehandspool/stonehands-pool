@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PickOneTeam from './PickOneTeam';
 
 function SurvivorPick(props: any) {
-    const { weekInfo } = props;
+    const { weekInfo, userInfo } = props;
     const [selectedTeam, setSelectedTeam] = useState<string | null>(null);
 
     const handleSelection = (team: string) => {
@@ -11,9 +11,11 @@ function SurvivorPick(props: any) {
 
     return (
         <div className='container pb-6'>
-            <h3 className='title is-3'>Survivor Pick:</h3>
-            <h4 className='subtitle'>Pick just <strong>1</strong> team that you are sure will win! If you pick wrong you will be eliminated! (No repeats)</h4>
-            <div className='columns is-multiline'>
+        <h3 className='title is-3'>Survivor Pick:</h3>
+        {   userInfo.aliveInSurvivor &&
+            <>
+                <h4 className='subtitle'>Pick which team you are certain will win! If you pick wrong you will be eliminated! (No repeats)</h4>
+                <div className='columns is-multiline'>
                 {
                     Object.keys(weekInfo).map((matchup, index) => (
                         <div className='column is-one-third' key={`survivor-container-${index}`}>
@@ -25,11 +27,18 @@ function SurvivorPick(props: any) {
                                 name={'survivor-pick'}
                                 selectedTeam={selectedTeam}
                                 handleSelection={handleSelection}
+                                priorSurvivorPicks={userInfo.survivorPicks}
                             />
                         </div>
                     ))
                 }
-            </div>
+                </div>
+            </>
+        }
+        {
+            !userInfo.aliveInSurvivor &&
+            <h4 className='subtitle'>Sorry, you are no longer in the survivor pool, maybe next year!</h4>
+        }
         </div>
     );
 }

@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function IND(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       viewBox="0 0 560 400"
       xmlns="http://www.w3.org/2000/svg"
@@ -28,6 +30,7 @@ function IND(props: IconProps) {
 
 IND.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default IND;

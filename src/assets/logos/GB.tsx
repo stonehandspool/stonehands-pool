@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function GB(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -32,6 +34,7 @@ function GB(props: IconProps) {
 
 GB.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default GB;

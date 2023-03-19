@@ -24,12 +24,13 @@ TODO:
 - Look into getting a personal stats page working (DONE-ish for now, might want to revisit this)
     - Would probably need to download/automate the picks so that they're in an accessible JSON file
     - Performance by team, average tiebreaker, etc.
-- Get the picksheet to factor in if a user has submitted picks already or if they're still in the survivor pool
-    - Also update to disable any picks for the margin pool/survivor pool
+- Get the picksheet to factor in if a user has submitted picks already or if they're still in the survivor pool (DONE -not going to do resubmissions for now)
+    - Also update to disable any picks for the margin pool/survivor pool (DONE)
 - Update the processWeek script to handle a player who didn't submit
 - Add in the ability to sign in and sign out (maybe)
 - Actually get this online and double check make sure things work
 - Weekly score box (maybe?)
+    - Not gonna do this unless people want it
 - Add a Hall of Fame
 - Check the ability to do partial pick sheets and allow for submissions on Thurs and Fri
 - Check to see how implementing a "game not finished" yet cell would look for the survivor table

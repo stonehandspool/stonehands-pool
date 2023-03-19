@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function CLE(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -24,6 +26,7 @@ function CLE(props: IconProps) {
 
 CLE.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default CLE;

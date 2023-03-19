@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function JAX(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -40,6 +42,7 @@ function JAX(props: IconProps) {
 
 JAX.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default JAX;
