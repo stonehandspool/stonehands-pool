@@ -47,7 +47,7 @@ function MarginTable() {
                     <thead>
                         <tr>
                             {headers.map(heading => {
-                                return <th key={heading}>{heading}</th>
+                                return <th key={heading} className='has-text-centered'>{heading}</th>
                             })}
                         </tr>
                     </thead>

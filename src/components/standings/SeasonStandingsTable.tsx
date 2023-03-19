@@ -1,4 +1,5 @@
 import * as seasonStandings from '../../../data/2022/players.json';
+import { useNavigate } from 'react-router-dom';
 
 type TableColumns = {
     position: number;
@@ -11,12 +12,19 @@ type TableColumns = {
     tiebreaker: number;
     lastWeek: number;
     change: string;
+    username: string;
 }
 
 const headers: string[] = ['Position', 'Name', 'Wins', 'Losses', 'Ties', 'Percent', 'Points', 'Tiebreaker Avg', 'Last Week', 'Change'];
 
 function SeasonStandingsTable() {
     const { players } = seasonStandings;
+    const navigate = useNavigate();
+
+    const goToUserStats = (username: string) => {
+        navigate(`/user/${username}`);
+    };
+
     // Calculate the standings
     const calculatedPicks: TableColumns[] = [];
     for (let i = 0; i < players.length; i++) {
@@ -32,6 +40,7 @@ function SeasonStandingsTable() {
             tiebreaker: playerInfo.tbAvg,
             lastWeek: playerInfo.lastWeekRank,
             change: playerInfo.change,
+            username: playerInfo.username,
         };
         calculatedPicks.push(rowInfo);
     }
@@ -65,7 +74,20 @@ function SeasonStandingsTable() {
                             {calculatedPicks.map((row, index) => {
                                 return <tr key={`${index}`}>
                                     {tableKeys.map((key, ind) => {
-                                        return <td key={`${row.position}-${ind}`}>{row[key as keyof TableColumns]}</td>
+                                        if (key !== 'username') {
+                                            if (key === 'name') {
+                                                return <td
+                                                    key={`${row.position}-${ind}`}
+                                                    onClick={() => goToUserStats(row.username)}
+                                                >
+                                                    {row[key as keyof TableColumns]}
+                                                </td>
+                                            } else {
+                                                return <td key={`${row.position}-${ind}`}>{row[key as keyof TableColumns]}</td>
+                                            }
+                                        } else {
+                                            return;
+                                        }
                                     })}
                                 </tr>
                             })}
