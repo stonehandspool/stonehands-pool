@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function NYJ(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -28,6 +30,7 @@ function NYJ(props: IconProps) {
 
 NYJ.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default NYJ;

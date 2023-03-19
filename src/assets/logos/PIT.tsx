@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function PIT(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -42,6 +44,7 @@ function PIT(props: IconProps) {
 
 PIT.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default PIT;

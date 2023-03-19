@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
-import { CURRENT_WEEK, CURRENT_YEAR } from '../../constants';
+import { CURRENT_WEEK, CURRENT_YEAR, UserInfo } from '../../constants';
 import * as seasonData from '../../../data/2022/season.json';
+import * as playerData from '../../../data/2022/players.json';
 import ConfidencePicks from './ConfidencePicks';
 import HighFivePicks from './HighFivePicks';
 import MarginPick from './MarginPick';
@@ -28,10 +29,13 @@ const currentWeekInfo = seasonData.weeks[`week_${CURRENT_WEEK}`];
 
 function PickSheetForm(props: PicksheetFormProps) {
     const { session } = props;
+    const { players } = playerData;
     const navigate = useNavigate();
 
     const [selections, setSelections] = useState({});
     const [formError, setFormError] = useState<string | null>(null);
+
+    const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as UserInfo;
     
     const handleSubmit = async (e: any) => {
         e.preventDefault();
@@ -45,7 +49,7 @@ function PickSheetForm(props: PicksheetFormProps) {
             if (key === 'high-five-picks') {
                 choices['highFivePicks'].push(value as string);
             } else {
-                choices[key as keyof choiceFormat] = value as string | number; // as ValidPicks;
+                choices[key as keyof choiceFormat] = value as string | number;
             }
         }
 
@@ -113,11 +117,11 @@ function PickSheetForm(props: PicksheetFormProps) {
         <section className='section'>
             <div className='container'>
                 <h1 className='title is-1'>Week {CURRENT_WEEK} Picksheet</h1>
-                <h2 className='subtitle'>Make sure to fill out every field that you can</h2>
+                <h2 className='subtitle'>Make sure to fill out every field that you can. If you would like to change your picks you can make a new submission and Ryan will handle it.</h2>
                 <form className='box' onSubmit={handleSubmit}>
                     <ConfidencePicks weekInfo={currentWeekInfo} />
-                    <SurvivorPick weekInfo={currentWeekInfo} />
-                    <MarginPick weekInfo={currentWeekInfo} />
+                    <SurvivorPick weekInfo={currentWeekInfo} userInfo={userInfo} />
+                    <MarginPick weekInfo={currentWeekInfo} userInfo={userInfo} />
                     <HighFivePicks weekInfo={currentWeekInfo} />
                     <TieBreaker />
                     <div className='field'>

@@ -1,13 +1,15 @@
 type IconProps = {
     size?: string | number;
+    opacity?: number;
 }
 
 function BAL(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -51,6 +53,7 @@ function BAL(props: IconProps) {
 
 BAL.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default BAL;

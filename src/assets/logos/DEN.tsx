@@ -1,13 +1,15 @@
 type IconProps = {
   size?: string | number;
+  opacity?: number;
 }
 
 function DEN(props: IconProps) {
-  const { size } = props;
+  const { size, opacity } = props;
   return (
     <svg
       width={size}
       height={size}
+      opacity={opacity}
       preserveAspectRatio="xMidYMid slice"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -44,6 +46,7 @@ function DEN(props: IconProps) {
 
 DEN.defaultProps = {
   size: 40,
+  opacity: 1,
 };
 
 export default DEN;
