@@ -21,7 +21,7 @@ TODO:
 - Update the `processWeek` script to actually process the week (DONE)
     - Do I just pull everything from the DB or download it manually and create a json file?
         - Decided to pull it all on the first run and then reference the json file after
-- Look into getting a personal stats page working
+- Look into getting a personal stats page working (DONE-ish for now, might want to revisit this)
     - Would probably need to download/automate the picks so that they're in an accessible JSON file
     - Performance by team, average tiebreaker, etc.
 - Get the picksheet to factor in if a user has submitted picks already or if they're still in the survivor pool

@@ -4,6 +4,7 @@ import About from './pages/About';
 import HighFive from './pages/HighFive';
 import Home from './pages/Home';
 import Margin from './pages/Margin';
+import PersonalStats from './pages/PersonalStats';
 import PickSheet from './pages/PickSheet';
 import PickSheetSuccess from './pages/PickSheetSuccess';
 import SeasonStandings from './pages/SeasonStandings';
@@ -32,6 +33,7 @@ function App() {
         <Route path='/high-five' element={<HighFive />} />
         <Route path='/weekly-picks' element={<WeeklyPicks />} />
         <Route path='/weekly-picks-images' element={<WeeklyPicksImages />} />
+        <Route path='/user/:username' element={<PersonalStats />} />
       </Routes>
     </BrowserRouter>
   );
