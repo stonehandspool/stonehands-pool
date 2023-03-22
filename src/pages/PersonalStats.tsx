@@ -5,7 +5,7 @@ import * as TeamLogos from '../assets/logos'
 import * as playerData from '../../data/2022/players.json';
 import * as seasonData from '../../data/2022/season.json';
 import * as weeklyPicks from '../../data/2022/weeklyPicks.json';
-import { CURRENT_YEAR, SubmissionData, SubmissionInfo, TEAM_CODES, UserInfo } from '../constants';
+import { CURRENT_YEAR, SubmissionInfo, TEAM_CODES, UserInfo } from '../constants';
 import HighFivePointsTable from '../components/userStats/HighFivePointsTable';
 import UserConfidencePicksTable from '../components/userStats/UserConfidencePicksTable';
 
