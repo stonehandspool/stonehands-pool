@@ -17,11 +17,12 @@ function MarginPicks(props: any) {
             <div className='columns is-multiline'>
                 {
                     Object.keys(weekInfo).map((matchup, index) => (
-                        <div className='column is-one-third' key={`margin-container-${index}`}>
+                        <div className='column is-one-quarter' key={`margin-container-${index}`}>
                             <PickOneTeam
                                 key={`card-${index}`}
                                 homeTeam={weekInfo[matchup].home_team}
                                 awayTeam={weekInfo[matchup].away_team}
+                                gameInfo={weekInfo[matchup].gameInfo}
                                 matchupNumber={index}
                                 name={'margin-pick'}
                                 selectedTeam={selectedTeam}

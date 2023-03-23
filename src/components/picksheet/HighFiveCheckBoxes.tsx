@@ -6,6 +6,7 @@ import { ValidPicks } from '../../constants';
 export interface HighFiveCheckboxProps {
     homeTeam: ValidPicks;
     awayTeam: ValidPicks;
+    gameInfo: string;
     matchupNumber: number;
     name: string;
     handleSelection: Function;
@@ -17,7 +18,7 @@ type TeamLogoKey = keyof typeof TeamLogos;
 const { teams } = TeamInfo;
 
 function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
-    const { homeTeam, awayTeam, matchupNumber, name, handleSelection, maxPicks, picksArray } = props;
+    const { homeTeam, awayTeam, gameInfo, matchupNumber, name, handleSelection, maxPicks, picksArray } = props;
     const [selectedTeam, setSelectedTeam] = useState<ValidPicks | null>(null);
 
     const HomeLogo = TeamLogos[homeTeam as TeamLogoKey];
@@ -45,9 +46,12 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
     };
 
     return (
-        <div className='columns is-vcentered'>
-            <div className='column control is-vertical-center'>
-                {<AwayLogo size={45} />}
+        <div className='box'>
+            <div className='py-0'>
+                <p className='is-size-7 has-text-grey-light'>{gameInfo}</p>
+            </div>
+            <div className='control is-vertical-center'>
+                <AwayLogo size={45} />
                 <label className='checkbox' htmlFor={`${name}-matchup-${matchupNumber}-away-team`}>
                     <input
                         type='checkbox'
@@ -60,13 +64,8 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
                     {` ${awayTeam} (${awayTeamInfo.wins}-${awayTeamInfo.losses}-${awayTeamInfo.ties})`}
                 </label>
             </div>
-
-            <div className='column is-vertical-center is-narrow'>
-                <p>@</p>
-            </div>
-            
-            <div className='column control is-vertical-center'>
-            {<HomeLogo size={45} />}
+            <div className='control is-vertical-center'>
+                <HomeLogo size={45} />
                 <label className='checkbox' htmlFor={`${name}-matchup-${matchupNumber}-home-team`}>
                     <input
                         type='checkbox'

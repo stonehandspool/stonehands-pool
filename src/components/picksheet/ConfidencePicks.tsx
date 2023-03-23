@@ -24,7 +24,10 @@ function ConfidencePicks(props: any) {
                     Object.keys(weekInfo).map((matchup, index) => (
                         <div className='column is-one-third' key={`confidence-${index}`}>
                             <div className='box'>
-                                <div className='columns is-centered'>
+                                <div className='columns is-centered is-multiline'>
+                                    <div className='column is-full py-0 pl-3'>
+                                        <p className='is-size-7 has-text-grey-light'>{weekInfo[matchup].gameInfo}</p>
+                                    </div>
                                     <div className='column is-three-fifths'>
                                         <MatchupCard key={`card-${index}`} homeTeam={weekInfo[matchup].home_team} awayTeam={weekInfo[matchup].away_team} matchupNumber={index} />
                                     </div>

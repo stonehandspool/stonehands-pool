@@ -59,6 +59,7 @@ weeks.forEach((week) => {
         wk[`matchup_${matchup}`] = {
             "home_team": "",
             "away_team": "",
+            "gameInfo": "",
             "home_score": 0,
             "away_score": 0,
             "winner": "",

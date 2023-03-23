@@ -1,5 +1,7 @@
 export const CURRENT_WEEK = 1;
 export const CURRENT_YEAR = '2023-2024';
+export const CURRENT_WEEK_CUTOFF_TIME = 'Sunday, September 11th at 1:00 PM ET';
+export const CURRENT_WEEK_FINAL_GAME = 'DEN @ SEA';
 export const MONDAY_NIGHT_TOTAL = 0;
 export const CURRENT_WEEK_COMPLETE = false;
 export const TEAM_CODES = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAX', 'KC', 'LAC', 'LAR', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'];

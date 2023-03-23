@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
-import { CURRENT_WEEK, CURRENT_YEAR, UserInfo } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_FINAL_GAME, CURRENT_YEAR, UserInfo } from '../../constants';
 import * as seasonData from '../../../data/2022/season.json';
 import * as playerData from '../../../data/2022/players.json';
 import ConfidencePicks from './ConfidencePicks';
@@ -118,12 +118,13 @@ function PickSheetForm(props: PicksheetFormProps) {
             <div className='container'>
                 <h1 className='title is-1'>Week {CURRENT_WEEK} Picksheet</h1>
                 <h2 className='subtitle'>Make sure to fill out every field that you can. If you would like to change your picks you can make a new submission and Ryan will handle it.</h2>
+                <h2 className='subtitle has-text-danger'>Submission cutoff: {CURRENT_WEEK_CUTOFF_TIME}</h2>
                 <form className='box' onSubmit={handleSubmit}>
                     <ConfidencePicks weekInfo={currentWeekInfo} />
                     <SurvivorPick weekInfo={currentWeekInfo} userInfo={userInfo} />
                     <MarginPick weekInfo={currentWeekInfo} userInfo={userInfo} />
                     <HighFivePicks weekInfo={currentWeekInfo} />
-                    <TieBreaker />
+                    <TieBreaker finalGame={CURRENT_WEEK_FINAL_GAME} />
                     <div className='field'>
                         <div className='control'>
                             <button className='button is-primary'>Submit Choices</button>
