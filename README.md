@@ -27,12 +27,14 @@ TODO:
 - Get the picksheet to factor in if a user has submitted picks already or if they're still in the survivor pool (DONE -not going to do resubmissions for now)
     - Also update to disable any picks for the margin pool/survivor pool (DONE)
 - Check the ability to do partial pick sheets and allow for submissions on Thurs and Fri
-- Add a Hall of Fame
 - Update the processWeek script to handle a player who didn't submit
 - Write instructions for what to do to make it all work (e.g. what to do on Monday morning, Tuesday morning, etc.)
 - Actually get this online and double check make sure things work
 - Do a dry run to make sure that the process works
 - Get automated emails working
+
+TODOs for year 2:
+- Add a Hall of Fame
 
 Maybe TODOs:
 - Add in the ability to sign in and sign out (maybe)
