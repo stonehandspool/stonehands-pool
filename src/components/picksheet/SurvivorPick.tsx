@@ -18,11 +18,12 @@ function SurvivorPick(props: any) {
                 <div className='columns is-multiline'>
                 {
                     Object.keys(weekInfo).map((matchup, index) => (
-                        <div className='column is-one-third' key={`survivor-container-${index}`}>
+                        <div className='column is-one-quarter' key={`survivor-container-${index}`}>
                             <PickOneTeam
                                 key={`card-${index}`}
                                 homeTeam={weekInfo[matchup].home_team}
                                 awayTeam={weekInfo[matchup].away_team}
+                                gameInfo={weekInfo[matchup].gameInfo}
                                 matchupNumber={index}
                                 name={'survivor-pick'}
                                 selectedTeam={selectedTeam}

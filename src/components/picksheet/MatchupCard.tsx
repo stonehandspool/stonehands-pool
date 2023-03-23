@@ -29,9 +29,9 @@ function MatchupCard(props: MatchupCardProps) {
     };
 
     return (
-        <div className='columns is-vcentered'>
-            <div className='column control is-vertical-center'>
-                {<AwayLogo size={45} />}
+        <div className='container'>
+            <div className='control is-vertical-center'>
+                <AwayLogo size={45} />
                 <label htmlFor={`matchup-${matchupNumber}-away-team`} className={chosenTeam === awayTeam ? 'chosen' : ''}>
                     <input
                         type='radio'
@@ -44,21 +44,8 @@ function MatchupCard(props: MatchupCardProps) {
                     {` ${awayTeamInfo.displayName} (${awayTeamInfo.wins}-${awayTeamInfo.losses}-${awayTeamInfo.ties})`}
                 </label>
             </div>
-            <div className='column control is-narrow is-vertical-center'>
-                <label htmlFor={`matchup-${matchupNumber}-tie`} className={chosenTeam === 'Tie' ? 'chosen' : ''}>
-                    <input
-                        type='radio'
-                        id={`matchup-${matchupNumber}-tie`}
-                        name={`matchup-${matchupNumber}`}
-                        value='Tie'
-                        checked={chosenTeam === 'Tie'}
-                        onChange={onChoiceChange}
-                    />
-                    Tie
-                </label>
-            </div>
-            <div className='column control is-vertical-center'>
-                {<HomeLogo size={45} />}
+            <div className='control is-vertical-center'>
+                <HomeLogo size={45} />
                 <label htmlFor={`matchup-${matchupNumber}-home-team`} className={chosenTeam === homeTeam ? 'chosen' : ''}>
                     <input
                         type='radio'

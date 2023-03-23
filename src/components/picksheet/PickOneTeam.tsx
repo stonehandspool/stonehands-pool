@@ -5,6 +5,7 @@ import { MarginPick, ValidPicks } from '../../constants';
 export interface PickOneTeamProps {
     homeTeam: ValidPicks;
     awayTeam: ValidPicks;
+    gameInfo: string;
     matchupNumber: number;
     name: string;
     selectedTeam: string | null;
@@ -17,7 +18,7 @@ type TeamLogoKey = keyof typeof TeamLogos;
 const { teams } = TeamInfo;
 
 function PickOneTeam(props: PickOneTeamProps) {
-    const { homeTeam, awayTeam, matchupNumber, name, selectedTeam, handleSelection, priorSurvivorPicks, priorMarginPicks } = props;
+    const { homeTeam, awayTeam, gameInfo, matchupNumber, name, selectedTeam, handleSelection, priorSurvivorPicks, priorMarginPicks } = props;
 
     const HomeLogo = TeamLogos[homeTeam as TeamLogoKey];
     const AwayLogo = TeamLogos[awayTeam as TeamLogoKey];
@@ -56,10 +57,12 @@ function PickOneTeam(props: PickOneTeamProps) {
     const homeDisabled = teamHasBeenChosen(homeTeam);
 
     return (
-        <div className='columns is-vcentered'>
-            <div className='column control is-vertical-center'>
-                {
-                <AwayLogo size={45} opacity={awayDisabled ? 0.4 : 1} />}
+        <div className='box'>
+            <div className='py-0'>
+                <p className='is-size-7 has-text-grey-light'>{gameInfo}</p>
+            </div>
+            <div className='control is-vertical-center'>
+                <AwayLogo size={45} opacity={awayDisabled ? 0.4 : 1} />
                 <label htmlFor={`${name}-matchup-${matchupNumber}-away-team`} className={awayDisabled ? 'has-text-grey-light' : 'has-text-grey-dark'}>
                     <input
                         type='radio'
@@ -73,13 +76,8 @@ function PickOneTeam(props: PickOneTeamProps) {
                     {` ${awayTeam} (${awayTeamInfo.wins}-${awayTeamInfo.losses}-${awayTeamInfo.ties})`}
                 </label>
             </div>
-
-            <div className='column is-vertical-center is-narrow'>
-                <p>@</p>
-            </div>
-            
-            <div className='column control is-vertical-center'>
-                {<HomeLogo size={45} opacity={homeDisabled ? 0.4 : 1} />}
+            <div className='control is-vertical-center'>
+                <HomeLogo size={45} opacity={homeDisabled ? 0.4 : 1} />
                 <label htmlFor={`${name}-matchup-${matchupNumber}-home-team`} className={homeDisabled ? 'has-text-grey-light' : 'has-text-grey-dark'}>
                     <input
                         type='radio'
