@@ -27,7 +27,9 @@ TODO:
 - Get the picksheet to factor in if a user has submitted picks already or if they're still in the survivor pool (DONE -not going to do resubmissions for now)
     - Also update to disable any picks for the margin pool/survivor pool (DONE)
 - Check the ability to do partial pick sheets and allow for submissions on Thurs and Fri
-- Update the processWeek script to handle a player who didn't submit
+    - For now I might just allow you to submit it twice and I can manually handle combining the two
+- Update the processWeek script to handle a player who didn't submit (DONE)
+- Update picksheet to handle the thursday night game(s) having already been played
 - Write instructions for what to do to make it all work (e.g. what to do on Monday morning, Tuesday morning, etc.)
 - Actually get this online and double check make sure things work
 - Do a dry run to make sure that the process works

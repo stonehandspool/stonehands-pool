@@ -61,10 +61,6 @@ if (isFirstRun) {
 
     // Move this data to the weekly picks json file
     weeklyPicksData[`week_${week}`] = [...data];
-
-    // Now write to the players json file so that it is saved
-    const updatedWeeklyPicks = JSON.stringify(weeklyPicksData, null, 2);
-    await writeFile(path.resolve(`data/${year}/weeklyPicks.json`), updatedWeeklyPicks);
 }
 
 const findSubmission = (submissionId) => {
@@ -83,13 +79,68 @@ const findMatchupByTeam = (teamName) => {
     return foundMatchup;
 };
 
+const findBiggestLoser = () => {
+    let biggestLoser;
+    let biggestMargin = 0;
+    Object.keys(weekData).map(key => {
+        const { home_team, away_team, home_score, away_score } = weekData[key];
+        const margin = home_score > away_score ? home_score - away_score : away_score - home_score;
+        if (margin > biggestMargin) {
+            biggestLoser = home_score > away_score ? away_team : home_team;
+            biggestMargin = margin;
+        }
+    });
+
+    return biggestLoser;
+};
+
+const createRandomChoices = (playerId, username, firstName, lastName, aliveInSurvivor) => {
+    const biggestLoser = findBiggestLoser();
+    const randomSubmission = {
+        'submission_id': -1,
+        'created_at': 'N/A',
+        'user_id': playerId,
+        'week': week,
+        'year': CURRENT_YEAR,
+        'submission_data': {
+            'id': playerId,
+            'lastName': lastName,
+            'username': username,
+            'firstName': firstName,
+            'tiebreaker': "0",
+            'highFivePicks': ['N/A', 'N/A', 'N/A', 'N/A', 'N/A'],
+            'margin-pick': biggestLoser,
+        },
+    };
+
+    if (aliveInSurvivor) {
+        randomSubmission.submission_data['survivor-pick'] = '';
+    }
+
+    Object.keys(weekData).map((key, index) => {
+        const matchup = weekData[key];
+        const randomWinner = Math.random() > 0.5 ? matchup.home_team : matchup.away_team;
+        randomSubmission.submission_data[`matchup-${index}`] = randomWinner;
+        randomSubmission.submission_data[`matchup-${index}-confidence`] = index + 1;
+    });
+
+    return randomSubmission;
+};
+
 // Now evaluate all of the responses and update the files
 const numGamesThisWeek = Object.keys(weekData).length;
 players.forEach(player => {
     // The player object is the season-long data for the player which needs to be updated
     // First, get the submission data for that player
+    let picks;
     const playerSubmissionFromDB = findSubmission(player.id);
-    const { submission_data: picks } = playerSubmissionFromDB;
+    if (playerSubmissionFromDB) {
+        picks = playerSubmissionFromDB.submission_data;
+    } else {
+        const randomSubmission = createRandomChoices(player.id, player.username, player.firstName, player.lastName, player.aliveInSurvivor);
+        weeklyPicksData[`week_${week}`].push(randomSubmission);
+        picks = randomSubmission.submission_data;
+    }
     let weeklyWins = 0;
     let weeklyLosses = 0;
     let weeklyTies = 0;
@@ -149,9 +200,14 @@ players.forEach(player => {
         if (isFirstRun) {
             player.survivorPicks.push(survivorPick);
         }
-        const survivorMatchup = findMatchupByTeam(survivorPick);
-        if (survivorMatchup.winner !== '' && survivorMatchup.winner !== survivorPick) {
+        if (survivorPick === '') {
+            // Player missed a week
             player.aliveInSurvivor = false;
+        } else {
+            const survivorMatchup = findMatchupByTeam(survivorPick);
+            if (survivorMatchup.winner !== '' && survivorMatchup.winner !== survivorPick) {
+                player.aliveInSurvivor = false;
+            }
         }
     }
 
@@ -180,10 +236,15 @@ players.forEach(player => {
     player.highFiveThisWeek = [];
     for (let i = 0; i < picks.highFivePicks.length; i++) {
         const choice = picks.highFivePicks[i];
-        const choiceMatchup = findMatchupByTeam(choice);
         let won = null;
-        if (choiceMatchup.winner !== '') {
-            won = choice === choiceMatchup.winner;
+        let choiceMatchup;
+        if (choice === 'N/A') {
+            won = false;
+        } else {
+            choiceMatchup = findMatchupByTeam(choice);
+            if (choiceMatchup.winner !== '') {
+                won = choice === choiceMatchup.winner;
+            }
         }
         player.highFiveThisWeek.push({ team: choice, won });
         if (won) {
@@ -206,6 +267,13 @@ players.forEach(player => {
     player.highFiveValues[player.highFiveValues.length - 1] = weeklyHighFivePoints;
     player.highFiveTotal = player.highFiveValues.reduce((partialSum, a) => partialSum + a, 0);
 });
+
+// Write to the weeklyPicks now in case anyone didn't submit
+if (isFirstRun) {
+    // Now write to the weekly picks json file so that it is saved
+    const updatedWeeklyPicks = JSON.stringify(weeklyPicksData, null, 2);
+    await writeFile(path.resolve(`data/${year}/weeklyPicks.json`), updatedWeeklyPicks);
+}
 
 // Now calculate the rank of everyone for the weekly standings
 // First we need a clone to sort

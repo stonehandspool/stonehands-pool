@@ -55,7 +55,7 @@ function MarginTable() {
                             {playerPicks.map((row, index) => {
                                 return <tr key={`${index}`}>
                                     <td key={`${row.name}-row-${index}`} className='is-vcentered'>{row.name}</td>
-                                    <td key={`${row.name}-total-${index}`} className='is-vcentered'><strong>{row.marginTotal > 0 ? '+' : '-'}{row.marginTotal}</strong></td>
+                                    <td key={`${row.name}-total-${index}`} className='is-vcentered'><strong>{row.marginTotal > 0 ? '+' : ''}{row.marginTotal}</strong></td>
                                     {
                                         weeksArr.map((week, ind) => {
                                             if (row.marginPicks[ind]) {
@@ -64,7 +64,7 @@ function MarginTable() {
                                                     return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.marginPicks[ind].team}<br />+{row.marginPicks[ind].margin}</td>
                                                 } else if (row.marginPicks[ind].margin < 0) {
                                                     // If the margin of victory was under 0, have a red background
-                                                    return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.marginPicks[ind].team}<br />-{row.marginPicks[ind].margin}</td>
+                                                    return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
                                                 } else {
                                                     // If the margin of victory was 0 or null (unfinished game) then no background
                                                     return <td key={`${row.name}-${ind}`}>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
