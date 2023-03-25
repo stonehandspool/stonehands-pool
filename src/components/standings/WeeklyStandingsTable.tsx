@@ -9,7 +9,7 @@ type TableColumns = {
     losses: number;
     ties: number;
     points: number;
-    tiebreaker: string;
+    tiebreaker: number;
     result: string;
 }
 
@@ -44,8 +44,8 @@ function WeeklyStandingsTable() {
         if (row1.wins > row2.wins) return -1;
         if (row1.wins < row2.wins) return 1;
         // Tiebreaker 2 is closest to the total points for the monday night game
-        if (Math.abs(MONDAY_NIGHT_TOTAL - parseInt(row1.tiebreaker, 10)) > Math.abs(MONDAY_NIGHT_TOTAL - parseInt(row1.tiebreaker, 10))) return 1;
-        if (Math.abs(MONDAY_NIGHT_TOTAL - parseInt(row1.tiebreaker, 10)) < Math.abs(MONDAY_NIGHT_TOTAL - parseInt(row1.tiebreaker, 10))) return -1;
+        if (Math.abs(MONDAY_NIGHT_TOTAL - row1.tiebreaker) > Math.abs(MONDAY_NIGHT_TOTAL - row2.tiebreaker)) return 1;
+        if (Math.abs(MONDAY_NIGHT_TOTAL - row1.tiebreaker) < Math.abs(MONDAY_NIGHT_TOTAL - row2.tiebreaker)) return -1;
         
         return 0;
     });
