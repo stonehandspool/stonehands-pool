@@ -30,6 +30,7 @@ TODO:
     - For now I might just allow you to submit it twice and I can manually handle combining the two
 - Update the processWeek script to handle a player who didn't submit (DONE)
 - Update picksheet to handle the thursday night game(s) having already been played
+- Add a consensus report for all of the pools
 - Write instructions for what to do to make it all work (e.g. what to do on Monday morning, Tuesday morning, etc.)
 - Actually get this online and double check make sure things work
 - Do a dry run to make sure that the process works

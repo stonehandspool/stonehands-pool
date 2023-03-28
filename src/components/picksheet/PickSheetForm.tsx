@@ -53,7 +53,6 @@ function PickSheetForm(props: PicksheetFormProps) {
             }
         }
 
-        // Probably a better way to go about this but oh well
         let missingConfidence = false;
         for (let i = 0; i < Object.keys(currentWeekInfo).length; i++) {
             if (!choices[`matchup-${i}-confidence`]) {
@@ -67,8 +66,7 @@ function PickSheetForm(props: PicksheetFormProps) {
             return;
         }
 
-        // TODO: Add check to make sure that if they are eliminated they don't have to pick one
-        if (!choices['survivor-pick']) {
+        if (userInfo.aliveInSurvivor && !choices['survivor-pick']) {
             setFormError('Please make sure you have chosen a survivor pick');
             return;
         }
@@ -118,7 +116,7 @@ function PickSheetForm(props: PicksheetFormProps) {
             <div className='container'>
                 <h1 className='title is-1'>Week {CURRENT_WEEK} Picksheet</h1>
                 <h2 className='subtitle'>Make sure to fill out every field that you can. If you would like to change your picks you can make a new submission and Ryan will handle it.</h2>
-                <h2 className='subtitle has-text-danger'>Submission cutoff: {CURRENT_WEEK_CUTOFF_TIME}</h2>
+                <h2 className='subtitle has-text-danger'>Submission cutoff: {CURRENT_WEEK_CUTOFF_TIME.toLocaleDateString('en-US', { dateStyle: 'full', timeZone: 'America/New_York' })} at {CURRENT_WEEK_CUTOFF_TIME.toLocaleTimeString('en-US', { timeZone: 'America/New_York' })} ET</h2>
                 <form className='box' onSubmit={handleSubmit}>
                     <ConfidencePicks weekInfo={currentWeekInfo} />
                     <SurvivorPick weekInfo={currentWeekInfo} userInfo={userInfo} />

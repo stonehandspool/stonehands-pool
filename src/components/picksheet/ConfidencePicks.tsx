@@ -7,6 +7,12 @@ function ConfidencePicks(props: any) {
     const [selectedConfidences, setSelectedConfidences] = useState<number[]>([]);
 
     const numOptions = Object.keys(weekInfo).length;
+    let numGamesCompleted = 0;
+    Object.keys(weekInfo).map(key => {
+        if (weekInfo[key].winner !== '') {
+            numGamesCompleted++;
+        }
+    });
 
     const onUpdateConfidence = (previousValue: number, newValue: number) => {
         // Remove the previous value if we're changing a drop down
@@ -29,12 +35,20 @@ function ConfidencePicks(props: any) {
                                         <p className='is-size-7 has-text-grey-light'>{weekInfo[matchup].gameInfo}</p>
                                     </div>
                                     <div className='column is-three-fifths'>
-                                        <MatchupCard key={`card-${index}`} homeTeam={weekInfo[matchup].home_team} awayTeam={weekInfo[matchup].away_team} matchupNumber={index} />
+                                        <MatchupCard
+                                            key={`card-${index}`}
+                                            homeTeam={weekInfo[matchup].home_team}
+                                            awayTeam={weekInfo[matchup].away_team}
+                                            matchupNumber={index}
+                                            gameCompleted={weekInfo[matchup].winner !== ''}
+                                        />
                                     </div>
                                     <div className='column is-narrow is-vertical-center'>
                                         <ConfidenceDropDown
                                             key={`dd-${index}`}
-                                            numOptions={numOptions} 
+                                            numOptions={numOptions}
+                                            numGamesCompleted={numGamesCompleted}
+                                            gameCompleted={weekInfo[matchup].winner !== ''}
                                             matchupNumber={index}
                                             selectedNumbers={selectedConfidences}
                                             onUpdateConfidence={onUpdateConfidence}
