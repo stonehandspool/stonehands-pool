@@ -1,16 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type ConfidenceDropDownProps = {
     numOptions: number;
     numGamesCompleted: number;
     matchupNumber: number;
     gameCompleted: boolean;
+    priorConfidence: string;
     selectedNumbers: number[];
     onUpdateConfidence: Function;
 };
 
 function ConfidenceDropDown(props: ConfidenceDropDownProps) {
-    const { numOptions, numGamesCompleted, matchupNumber, gameCompleted, selectedNumbers, onUpdateConfidence } = props;
+    const { numOptions, numGamesCompleted, matchupNumber, gameCompleted, priorConfidence, selectedNumbers, onUpdateConfidence } = props;
 
     const [currentValue, setCurrentValue] = useState<number>(-1);
 
@@ -18,6 +19,15 @@ function ConfidenceDropDown(props: ConfidenceDropDownProps) {
     if (numGamesCompleted > 0) {
         options.splice(0, numGamesCompleted);
     }
+
+    // If the user had previously submitted picks, update the rest of the dropdowns with that value
+    useEffect(() => {
+        if (priorConfidence) {
+            const priorValue = parseInt(priorConfidence, 10);
+            onUpdateConfidence(currentValue, priorValue);
+            setCurrentValue(priorValue);
+        }
+    }, [priorConfidence]);
 
     const onChange = (e: any) => {
         e.preventDefault();

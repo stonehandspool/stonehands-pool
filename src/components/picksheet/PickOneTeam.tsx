@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import * as TeamLogos from '../../assets/logos';
 import * as TeamInfo from '../../../data/2022/teams.json';
 import { MarginPick, ValidPicks } from '../../constants';
@@ -10,21 +11,42 @@ export interface PickOneTeamProps {
     name: string;
     selectedTeam: string | null;
     handleSelection: Function;
+    currentWeekPick: string;
     priorSurvivorPicks?: string[];
     priorMarginPicks?: MarginPick[];
+    allGamesDisabled: boolean;
 };
 
 type TeamLogoKey = keyof typeof TeamLogos;
 const { teams } = TeamInfo;
 
 function PickOneTeam(props: PickOneTeamProps) {
-    const { homeTeam, awayTeam, gameInfo, matchupNumber, name, selectedTeam, handleSelection, priorSurvivorPicks, priorMarginPicks } = props;
+    const {
+        homeTeam,
+        awayTeam,
+        gameInfo,
+        matchupNumber,
+        name,
+        selectedTeam,
+        handleSelection,
+        currentWeekPick,
+        priorSurvivorPicks,
+        priorMarginPicks,
+        allGamesDisabled,
+    } = props;
 
     const HomeLogo = TeamLogos[homeTeam as TeamLogoKey];
     const AwayLogo = TeamLogos[awayTeam as TeamLogoKey];
 
     const homeTeamInfo = teams[homeTeam];
     const awayTeamInfo = teams[awayTeam];
+
+    // If the user had previously submitted, select that radio button
+    useEffect(() => {
+        if (currentWeekPick) {
+            handleSelection(currentWeekPick);
+        }
+    }, [currentWeekPick]);
 
     const onChoiceChange = (e: any) => {
         if (e.target.checked) {
@@ -53,8 +75,8 @@ function PickOneTeam(props: PickOneTeamProps) {
         }
     };
 
-    const awayDisabled = teamHasBeenChosen(awayTeam);
-    const homeDisabled = teamHasBeenChosen(homeTeam);
+    const awayDisabled = allGamesDisabled || teamHasBeenChosen(awayTeam);
+    const homeDisabled = allGamesDisabled || teamHasBeenChosen(homeTeam);
 
     return (
         <div className='box'>
