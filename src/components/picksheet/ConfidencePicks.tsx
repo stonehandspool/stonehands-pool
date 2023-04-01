@@ -3,7 +3,7 @@ import ConfidenceDropDown from './ConfidenceDropDown';
 import MatchupCard from './MatchupCard';
 
 function ConfidencePicks(props: any) {
-    const { weekInfo } = props;
+    const { weekInfo, priorPicks } = props;
     const [selectedConfidences, setSelectedConfidences] = useState<number[]>([]);
 
     const numOptions = Object.keys(weekInfo).length;
@@ -27,8 +27,15 @@ function ConfidencePicks(props: any) {
             <h4 className='subtitle'>Pick which team you think will win and how confident you are! {numOptions} is the most confident while 1 is the least confident</h4>
             <div className='columns is-multiline'>
                 {
-                    Object.keys(weekInfo).map((matchup, index) => (
-                        <div className='column is-one-third' key={`confidence-${index}`}>
+                    Object.keys(weekInfo).map((matchup, index) => {
+                        const priorChoice = Object.keys(priorPicks).length === 0 && priorPicks.constructor === Object
+                            ? null
+                            : priorPicks[`matchup-${index}`];
+                        const priorConfidence = Object.keys(priorPicks).length === 0 && priorPicks.constructor === Object
+                            ? null
+                            : priorPicks[`matchup-${index}-confidence`];
+                        return (
+                            <div className='column is-one-third' key={`confidence-${index}`}>
                             <div className='box'>
                                 <div className='columns is-centered is-multiline'>
                                     <div className='column is-full py-0 pl-3'>
@@ -41,6 +48,7 @@ function ConfidencePicks(props: any) {
                                             awayTeam={weekInfo[matchup].away_team}
                                             matchupNumber={index}
                                             gameCompleted={weekInfo[matchup].winner !== ''}
+                                            priorChoice={priorChoice}
                                         />
                                     </div>
                                     <div className='column is-narrow is-vertical-center'>
@@ -49,6 +57,7 @@ function ConfidencePicks(props: any) {
                                             numOptions={numOptions}
                                             numGamesCompleted={numGamesCompleted}
                                             gameCompleted={weekInfo[matchup].winner !== ''}
+                                            priorConfidence={priorConfidence}
                                             matchupNumber={index}
                                             selectedNumbers={selectedConfidences}
                                             onUpdateConfidence={onUpdateConfidence}
@@ -57,7 +66,8 @@ function ConfidencePicks(props: any) {
                                 </div>
                             </div>
                         </div>
-                    ))
+                        )
+                    })
                 }
             </div>
         </div>

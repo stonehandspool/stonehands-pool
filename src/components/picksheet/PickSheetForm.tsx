@@ -1,5 +1,5 @@
 import { Session } from '@supabase/supabase-js';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
@@ -33,9 +33,34 @@ function PickSheetForm(props: PicksheetFormProps) {
     const navigate = useNavigate();
 
     const [selections, setSelections] = useState({});
+    const [priorPicks, setPriorPicks] = useState(false);
     const [formError, setFormError] = useState<string | null>(null);
 
     const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as UserInfo;
+
+    // Ping the database to see if there are picks from this week for this user
+    useEffect(() => {
+        const fetchPicks = async () => {
+            const { data, error } = await supabaseClient
+                .from('user_picks')
+                .select()
+                .eq('week', CURRENT_WEEK)
+                .eq('year', CURRENT_YEAR)
+                .eq('user_id', userInfo.id);
+
+            if (error) {
+                console.error('An error occurred when getting your prior picks from the database', error);
+            }
+
+            if (data) {
+                const { submission_data: priorPicks } = data[0];
+                setSelections(priorPicks);
+                setPriorPicks(true);
+            }
+        };
+
+        fetchPicks().catch(err => console.error(err));
+    }, []);
     
     const handleSubmit = async (e: any) => {
         e.preventDefault();
@@ -89,27 +114,65 @@ function PickSheetForm(props: PicksheetFormProps) {
         setSelections(choices);
         setFormError(null);
 
-        const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
-            .from(TABLE_NAMES.USER_PICKS)
-            .insert({
-                user_id: id,
-                week: CURRENT_WEEK,
-                year: CURRENT_YEAR,
-                submission_data: choices
-            })
-            .select();
+        if (priorPicks) {
+            const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
+                .from(TABLE_NAMES.USER_PICKS)
+                .update({ submission_data: choices })
+                .eq('week', CURRENT_WEEK)
+                .eq('year', CURRENT_YEAR)
+                .eq('user_id', id)
+                .select();
 
-        if (picksheetSubmissionError) {
-            console.error(picksheetSubmissionError);
-            setFormError('Something went wrong submitting your picksheet, please reach out to Ryan');
-            return;
-        }
+            if (picksheetSubmissionError) {
+                console.error(picksheetSubmissionError);
+                setFormError('Something went wrong updating your picksheet, please reach out to Ryan');
+                return;
+            }
 
-        if (picksheetSubmissionData) {
-            setFormError(null);
-            navigate('/picksheet-success')
+            if (picksheetSubmissionData) {
+                setFormError(null);
+                navigate('/picksheet-success')
+            }
+        } else {
+            const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
+                .from(TABLE_NAMES.USER_PICKS)
+                .insert({
+                    user_id: id,
+                    week: CURRENT_WEEK,
+                    year: CURRENT_YEAR,
+                    submission_data: choices
+                })
+                .select();
+
+            if (picksheetSubmissionError) {
+                console.error(picksheetSubmissionError);
+                setFormError('Something went wrong submitting your picksheet, please reach out to Ryan');
+                return;
+            }
+
+            if (picksheetSubmissionData) {
+                setFormError(null);
+                navigate('/picksheet-success')
+            }
         }
     };
+
+    const survivorField = 'survivor-pick';
+    const priorSurvivorChoice = Object.keys(selections).length === 0
+        ? ''
+        : selections[survivorField as keyof typeof selections];
+    const marginField = 'margin-pick';
+    const priorMarginChoice = Object.keys(selections).length === 0
+        ? ''
+        : selections[marginField as keyof typeof selections];
+    const highFiveField = 'highFivePicks';
+    const priorHighFivePicks = Object.keys(selections).length === 0
+        ? []
+        : selections[highFiveField as keyof typeof selections];
+    const tiebreakerField = 'tiebreaker';
+    const priorTiebreaker = Object.keys(selections).length === 0
+        ? null
+        : selections[tiebreakerField as keyof typeof selections];
 
     return (
         <section className='section'>
@@ -118,17 +181,17 @@ function PickSheetForm(props: PicksheetFormProps) {
                 <h2 className='subtitle'>Make sure to fill out every field that you can. If you would like to change your picks you can make a new submission and Ryan will handle it.</h2>
                 <h2 className='subtitle has-text-danger'>Submission cutoff: {CURRENT_WEEK_CUTOFF_TIME.toLocaleDateString('en-US', { dateStyle: 'full', timeZone: 'America/New_York' })} at {CURRENT_WEEK_CUTOFF_TIME.toLocaleTimeString('en-US', { timeZone: 'America/New_York' })} ET</h2>
                 <form className='box' onSubmit={handleSubmit}>
-                    <ConfidencePicks weekInfo={currentWeekInfo} />
-                    <SurvivorPick weekInfo={currentWeekInfo} userInfo={userInfo} />
-                    <MarginPick weekInfo={currentWeekInfo} userInfo={userInfo} />
-                    <HighFivePicks weekInfo={currentWeekInfo} />
-                    <TieBreaker finalGame={CURRENT_WEEK_FINAL_GAME} />
+                    <ConfidencePicks weekInfo={currentWeekInfo} priorPicks={selections} />
+                    <SurvivorPick weekInfo={currentWeekInfo} userInfo={userInfo} priorPick={priorSurvivorChoice} />
+                    <MarginPick weekInfo={currentWeekInfo} userInfo={userInfo} priorPick={priorMarginChoice} />
+                    <HighFivePicks weekInfo={currentWeekInfo} priorPicks={priorHighFivePicks} />
+                    <TieBreaker finalGame={CURRENT_WEEK_FINAL_GAME} priorTiebreaker={priorTiebreaker} />
                     <div className='field'>
                         <div className='control'>
                             <button className='button is-primary'>Submit Choices</button>
                         </div>
                     </div>
-                    {formError && formError.length > 0 && <p className=''>{formError}</p>}
+                    {formError && formError.length > 0 && <p className='has-text-danger'>{formError}</p>}
                 </form> 
             </div>
         </section>

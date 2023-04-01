@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ValidPicks } from '../../constants';
 import HighFiveCheckboxes from './HighFiveCheckBoxes';
 
 function HighFivePicks(props: any) {
-    const { weekInfo } = props;
+    const { weekInfo, priorPicks } = props;
     const [picks, setPicks] = useState<ValidPicks[]>([]);
     const MAX_PICKS = 5;
 
@@ -35,11 +35,13 @@ function HighFivePicks(props: any) {
                                 homeTeam={weekInfo[matchup].home_team}
                                 awayTeam={weekInfo[matchup].away_team}
                                 gameInfo={weekInfo[matchup].gameInfo}
+                                gameCompleted={weekInfo[matchup].winner !== ''}
                                 matchupNumber={index}
                                 name={'high-five-picks'}
                                 handleSelection={handleSelection}
                                 maxPicks={MAX_PICKS}
                                 picksArray={picks}
+                                currentWeekPicks={priorPicks}
                             />
                         </div>
                     ))
