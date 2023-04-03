@@ -26,11 +26,14 @@ TODO:
     - Performance by team, average tiebreaker, etc.
 - Get the picksheet to factor in if a user has submitted picks already or if they're still in the survivor pool (DONE -not going to do resubmissions for now)
     - Also update to disable any picks for the margin pool/survivor pool (DONE)
-- Check the ability to do partial pick sheets and allow for submissions on Thurs and Fri
+- Check the ability to do partial pick sheets and allow for submissions on Thurs and Fri (SOMEWHAT DONE)
     - For now I might just allow you to submit it twice and I can manually handle combining the two
+    - ^Ended up doing this, you need to make a full submission but you can update it after
 - Update the processWeek script to handle a player who didn't submit (DONE)
-- Update picksheet to handle the thursday night game(s) having already been played
-- Add a consensus report for all of the pools
+- Update picksheet to handle the thursday night game(s) having already been played (DONE)
+- Add a consensus report for all of the pools (DONE)
+- Add in random stats pages
+    - e.g. Best + Worst, Thurs Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)
 - Write instructions for what to do to make it all work (e.g. what to do on Monday morning, Tuesday morning, etc.)
 - Actually get this online and double check make sure things work
 - Do a dry run to make sure that the process works
@@ -40,7 +43,9 @@ TODOs for year 2:
 - Add a Hall of Fame
 
 Maybe TODOs:
+- Add in yearly consensus reports
 - Add in the ability to sign in and sign out (maybe)
+- Add in ability to get team info or matchup info in the picksheet
 - Weekly score box (maybe?)
     - Not gonna do this unless people want it
 - Check to see how implementing a "game not finished" yet cell would look for the survivor table

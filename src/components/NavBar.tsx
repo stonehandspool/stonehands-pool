@@ -27,6 +27,7 @@ function NavBar() {
                         <div className='navbar-dropdown'>
                             <Link className='navbar-item' to='/weekly-picks'>Picks</Link>
                             <Link className='navbar-item' to='/weekly-picks-images'>Picks w/ Images</Link>
+                            <Link className='navbar-item' to='/consensus'>Consensus</Link>
                         </div>
                     </div>
                     <Link className='navbar-item' to='/sign-up'>Sign Up</Link>
