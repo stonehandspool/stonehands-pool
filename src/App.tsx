@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import About from './pages/About';
+import Consensus from './pages/Consensus';
 import HighFive from './pages/HighFive';
 import Home from './pages/Home';
 import Margin from './pages/Margin';
@@ -34,6 +35,7 @@ function App() {
         <Route path='/weekly-picks' element={<WeeklyPicks />} />
         <Route path='/weekly-picks-images' element={<WeeklyPicksImages />} />
         <Route path='/user/:username' element={<PersonalStats />} />
+        <Route path='/consensus' element={<Consensus />} />
       </Routes>
     </BrowserRouter>
   );

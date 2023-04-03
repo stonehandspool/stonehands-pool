@@ -5,29 +5,59 @@
       "username": "rfandl",
       "firstName": "Ryan",
       "lastName": "Fandl",
-      "wins": 0,
+      "wins": 15,
       "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
-      "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "ties": 1,
+      "percent": 0.96875,
+      "points": 135.5,
+      "tbAvg": 69,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 1,
       "currentWeekRank": 1,
       "change": "--",
-      "survivorPicks": [],
+      "survivorPicks": [
+        "TB"
+      ],
       "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveThisWeek": [],
-      "highFiveValues": [],
-      "highFiveTotal": 0,
-      "currentWeekWins": 0,
+      "marginPicks": [
+        {
+          "team": "KC",
+          "margin": 23
+        }
+      ],
+      "marginTotal": 23,
+      "highFiveThisWeek": [
+        {
+          "team": "PHI",
+          "won": true
+        },
+        {
+          "team": "MIA",
+          "won": true
+        },
+        {
+          "team": "BAL",
+          "won": true
+        },
+        {
+          "team": "MIN",
+          "won": true
+        },
+        {
+          "team": "SEA",
+          "won": true
+        }
+      ],
+      "highFiveValues": [
+        8
+      ],
+      "highFiveTotal": 8,
+      "currentWeekWins": 15,
       "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
-      "currentWeekTiebreaker": 0
+      "currentWeekTies": 1,
+      "currentWeekPoints": 135.5,
+      "currentWeekTiebreaker": 69
     }
   ]
 }

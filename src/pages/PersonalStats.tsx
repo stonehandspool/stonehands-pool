@@ -170,7 +170,7 @@ function PersonalStats() {
                             {
                                 userInfo?.survivorPicks.map(pick => {
                                     const Logo = TeamLogos[pick as TeamLogoKey];
-                                    return <div className='column is-narrow'><Logo /></div>
+                                    return <div className='column is-narrow' key={`${pick}-survivor`}><Logo /></div>
                                 })
                             }
                         </div>
@@ -181,7 +181,7 @@ function PersonalStats() {
                             {
                                 unusedSurvivorPicks?.map(pick => {
                                     const Logo = TeamLogos[pick as TeamLogoKey];
-                                    return <div className='column is-narrow'><Logo /></div>
+                                    return <div className='column is-narrow' key={`${pick}-survivor`}><Logo /></div>
                                 })
                             }
                         </div>
@@ -201,7 +201,7 @@ function PersonalStats() {
                             {
                                 userInfo?.marginPicks.map(pick => {
                                     const Logo = TeamLogos[pick.team as TeamLogoKey];
-                                    return <div className='column is-narrow'><Logo /></div>
+                                    return <div className='column is-narrow' key={`${pick.team}-margin`}><Logo /></div>
                                 })
                             }
                         </div>
@@ -212,7 +212,7 @@ function PersonalStats() {
                             {
                                 unusedMarginPicks?.map(pick => {
                                     const Logo = TeamLogos[pick as TeamLogoKey];
-                                    return <div className='column is-narrow'><Logo /></div>
+                                    return <div className='column is-narrow' key={`${pick}-margin`}><Logo /></div>
                                 })
                             }
                         </div>
