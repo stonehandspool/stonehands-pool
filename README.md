@@ -33,8 +33,7 @@ TODO:
 - Update picksheet to handle the thursday night game(s) having already been played (DONE)
 - Add a consensus report for all of the pools (DONE)
 - Add in yearly consensus reports (DONE)
-- Add in random stats pages
-    - e.g. Best + Worst, Thurs Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)
+- Implement a "game not finished" yet cell for the survivor table (DONE)
 - Write instructions for what to do to make it all work (e.g. what to do on Monday morning, Tuesday morning, etc.)
 - Actually get this online and double check make sure things work
 - Do a dry run to make sure that the process works
@@ -44,8 +43,11 @@ TODOs for year 2:
 - Add a Hall of Fame
 
 Maybe TODOs:
-- Add in the ability to sign in and sign out (maybe)
+- Add in the ability to sign in and sign out
 - Add in ability to get team info or matchup info in the picksheet
-- Weekly score box (maybe?)
-    - Not gonna do this unless people want it
-- Check to see how implementing a "game not finished" yet cell would look for the survivor table
+- Add in random stats pages
+    - e.g. Best + Worst, Thurs Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)
+
+Scrapped Ideas:
+- Weekly score box
+    - Not gonna do this unless people who previously did the stablehand pool want it back
