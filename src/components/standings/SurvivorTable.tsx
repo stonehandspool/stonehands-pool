@@ -1,4 +1,6 @@
 import * as seasonStandings from '../../../data/2022/players.json';
+import * as seasonResults from '../../../data/2022/season.json';
+import { CURRENT_WEEK } from '../../constants';
 
 type PlayerInfo = {
     name: string;
@@ -8,6 +10,18 @@ type PlayerInfo = {
 
 const headers: string[] = ['Player', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
 const weeksArr = [...Array(18)];
+
+const weeklyResults = seasonResults.weeks[`week_${CURRENT_WEEK}`];
+const getGameCompleted = (teamName: string) => {
+    let gameCompleted = false;
+    Object.keys(weeklyResults).map(key => {
+        const matchupInfo = weeklyResults[key as keyof typeof weeklyResults];
+        if (matchupInfo.home_team === teamName || matchupInfo.away_team === teamName) {
+            gameCompleted = matchupInfo.evaluated && matchupInfo.winner !== '';
+        }
+    });
+    return gameCompleted;
+};
 
 function SurvivorTable() {
     const { players } = seasonStandings;
@@ -48,12 +62,16 @@ function SurvivorTable() {
                                     <td key={`${row.name}-row-${index}`}>{row.name}</td>
                                     {
                                         weeksArr.map((week, ind) => {
+                                            const gameCompleted = getGameCompleted(row.survivorPicks[ind]);
                                             if (ind < row.survivorPicks.length - 1) {
                                                 // If this is a selection from a prior week that was correct
                                                 return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
-                                            } else if (ind === row.survivorPicks.length - 1 && row.aliveInSurvivor) {
+                                            } else if (ind === row.survivorPicks.length - 1 && row.aliveInSurvivor && gameCompleted) {
                                                 // If this was the most recent pick and it was correct
                                                 return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
+                                            } else if (ind === row.survivorPicks.length - 1 && row.aliveInSurvivor && !gameCompleted) {
+                                                // If this was the most recent pick and the game hasn't finished yet
+                                                return <td key={`${row.name}-${ind}`}>{row.survivorPicks[ind]}</td>
                                             } else if (ind === row.survivorPicks.length - 1 && !row.aliveInSurvivor) {
                                                 // If this was the most recent pick and it was incorrect
                                                 return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
