@@ -32,6 +32,7 @@ TODO:
 - Update the processWeek script to handle a player who didn't submit (DONE)
 - Update picksheet to handle the thursday night game(s) having already been played (DONE)
 - Add a consensus report for all of the pools (DONE)
+- Add in yearly consensus reports (DONE)
 - Add in random stats pages
     - e.g. Best + Worst, Thurs Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)
 - Write instructions for what to do to make it all work (e.g. what to do on Monday morning, Tuesday morning, etc.)
@@ -43,7 +44,6 @@ TODOs for year 2:
 - Add a Hall of Fame
 
 Maybe TODOs:
-- Add in yearly consensus reports
 - Add in the ability to sign in and sign out (maybe)
 - Add in ability to get team info or matchup info in the picksheet
 - Weekly score box (maybe?)
