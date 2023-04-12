@@ -1,6 +1,6 @@
 import * as seasonStandings from '../../../data/2022/players.json';
 
-import { CURRENT_WEEK_COMPLETE, MONDAY_NIGHT_TOTAL } from '../../constants';
+import { PRIOR_WEEK_COMPLETE, MONDAY_NIGHT_TOTAL } from '../../constants';
 
 type TableColumns = {
     position: number;
@@ -53,7 +53,7 @@ function WeeklyStandingsTable() {
     // Now update the position and result for the table
     for (let i = 0; i < calculatedPicks.length; i++) {
         calculatedPicks[i].position = i + 1;
-        if (i === 0 && CURRENT_WEEK_COMPLETE) {
+        if (i === 0 && PRIOR_WEEK_COMPLETE) {
             calculatedPicks[i].result = 'Winner'
         } else {
             calculatedPicks[i].result = '**'

@@ -99,15 +99,15 @@ function ConfidenceYearlyConsensusTable() {
             </thead>
             <tbody>
                 {
-                    yearlyConsensusArr.map(info => {
-                        return <tr>
+                    yearlyConsensusArr.map((info, index) => {
+                        return <tr key={`row-${index}`}>
                             {
                                 Object.keys(info).map((key, index) => {
                                     if (index === 0) {
                                         const Logo = TeamLogos[info.teamName as keyof typeof TeamLogos];
-                                        return <td key={`${info.teamName}`} className='is-vcentered'><Logo size={45} /></td>
+                                        return <td key={`${info.teamName}-yearly`} className='is-vcentered'><Logo size={45} /></td>
                                     } else {
-                                        return <td key={`${info.teamName}-key`} className='is-vcentered'>{info[key as keyof typeof info]}</td>
+                                        return <td key={`${info.teamName}-${key}`} className='is-vcentered'>{info[key as keyof typeof info]}</td>
                                     }
                                 })
                             }

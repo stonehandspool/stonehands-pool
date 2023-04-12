@@ -90,7 +90,7 @@ function ConfidenceWeeklyConsensusTable() {
                     {
                         weeklyConsensusArr.map(info => {
                             const Logo = TeamLogos[info.awayTeam as keyof typeof TeamLogos];
-                            return <td key={`${info.awayTeam}`}><Logo size={45} /></td>
+                            return <td key={`${info.awayTeam}-weekly`}><Logo size={45} /></td>
                         })
                     }
                 </tr>
@@ -98,7 +98,7 @@ function ConfidenceWeeklyConsensusTable() {
                     <td>Times Chosen</td>
                     {
                         weeklyConsensusArr.map(info => (
-                            <td key={`${info.awayTeam}-numPicks`}>{info.awayNumPicks}</td>
+                            <td key={`${info.awayTeam}-weekly-numPicks`}>{info.awayNumPicks}</td>
                         ))
                     }
                 </tr>
@@ -106,7 +106,7 @@ function ConfidenceWeeklyConsensusTable() {
                     <td>Percent</td>
                     {
                         weeklyConsensusArr.map(info => (
-                            <td key={`${info.awayTeam}-percent`}>{info.awayPercent}</td>
+                            <td key={`${info.awayTeam}-weekly-percent`}>{info.awayPercent}</td>
                         ))
                     }
                 </tr>
@@ -114,7 +114,7 @@ function ConfidenceWeeklyConsensusTable() {
                     <td>Points</td>
                     {
                         weeklyConsensusArr.map(info => (
-                            <td key={`${info.awayTeam}-points`}>{info.awayPoints}</td>
+                            <td key={`${info.awayTeam}-weekly-points`}>{info.awayPoints}</td>
                         ))
                     }
                 </tr>
@@ -122,7 +122,7 @@ function ConfidenceWeeklyConsensusTable() {
                     <td>Avg. Points</td>
                     {
                         weeklyConsensusArr.map(info => (
-                            <td key={`${info.awayTeam}-pointsAvg`}>{info.awayPointsAvg}</td>
+                            <td key={`${info.awayTeam}-weekly-pointsAvg`}>{info.awayPointsAvg}</td>
                         ))
                     }
                 </tr>
@@ -131,7 +131,7 @@ function ConfidenceWeeklyConsensusTable() {
                     {
                         weeklyConsensusArr.map(info => {
                             const Logo = TeamLogos[info.homeTeam as keyof typeof TeamLogos];
-                            return <td key={`${info.homeTeam}`}><Logo size={45} /></td>
+                            return <td key={`${info.homeTeam}-weekly`}><Logo size={45} /></td>
                         })
                     }
                 </tr>
@@ -139,7 +139,7 @@ function ConfidenceWeeklyConsensusTable() {
                     <td>Times Chosen</td>
                     {
                         weeklyConsensusArr.map(info => (
-                            <td key={`${info.homeTeam}-numPicks`}>{info.homeNumPicks}</td>
+                            <td key={`${info.homeTeam}-weekly-numPicks`}>{info.homeNumPicks}</td>
                         ))
                     }
                 </tr>
@@ -147,7 +147,7 @@ function ConfidenceWeeklyConsensusTable() {
                     <td>Percent</td>
                     {
                         weeklyConsensusArr.map(info => (
-                            <td key={`${info.homeTeam}-percent`}>{info.homePercent}</td>
+                            <td key={`${info.homeTeam}-weekly-percent`}>{info.homePercent}</td>
                         ))
                     }
                 </tr>
@@ -155,7 +155,7 @@ function ConfidenceWeeklyConsensusTable() {
                     <td>Points</td>
                     {
                         weeklyConsensusArr.map(info => (
-                            <td key={`${info.homeTeam}-points`}>{info.homePoints}</td>
+                            <td key={`${info.homeTeam}-weekly-points`}>{info.homePoints}</td>
                         ))
                     }
                 </tr>
@@ -163,7 +163,7 @@ function ConfidenceWeeklyConsensusTable() {
                     <td>Avg. Points</td>
                     {
                         weeklyConsensusArr.map(info => (
-                            <td key={`${info.homeTeam}-pointsAvg`}>{info.homePointsAvg}</td>
+                            <td key={`${info.homeTeam}-weekly-pointsAvg`}>{info.homePointsAvg}</td>
                         ))
                     }
                 </tr>
