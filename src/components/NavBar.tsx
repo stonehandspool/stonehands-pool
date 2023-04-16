@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { CURRENT_WEEK } from '../constants';
 
 function NavBar() {
     return (
@@ -30,7 +31,7 @@ function NavBar() {
                             <Link className='navbar-item' to='/consensus'>Consensus</Link>
                         </div>
                     </div>
-                    <Link className='navbar-item' to='/sign-up'>Sign Up</Link>
+                    {CURRENT_WEEK <= 1 && <Link className='navbar-item' to='/sign-up'>Sign Up</Link>}
                 </div>
             </div>
         </nav>
