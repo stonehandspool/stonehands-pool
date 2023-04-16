@@ -4,12 +4,23 @@ import { useNavigate } from 'react-router-dom';
 import * as EmailValidator from 'email-validator';
 import { TABLE_NAMES } from '../config/supabaseConfig';
 import supabaseClient from '../config/supabaseClient';
+import { CURRENT_WEEK } from '../constants';
 
 function capitalize(name: string): string {
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 function SignUp() {
+    if (CURRENT_WEEK > 1) {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h1 className='title is-1'>Sorry, the season has started and sign up has been disabled until next year</h1>
+                </div>
+            </section>
+        );
+    }
+
     const navigate = useNavigate();
     const [firstName, setFirstName] = useState<string>('');
     const [lastName, setLastName] = useState<string>('');
