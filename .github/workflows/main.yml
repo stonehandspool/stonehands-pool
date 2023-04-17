@@ -14,5 +14,6 @@ jobs:
         target-server: stonehands.org
         remote-user: stonehan
         private-ssh-key: ${{ secrets.SSH_KEY }}
+        ssh-port: 2222
         destination-path: ~/public_html/
         source-path: ./dist/
