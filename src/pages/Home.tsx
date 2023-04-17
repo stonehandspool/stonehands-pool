@@ -7,7 +7,7 @@ function Home() {
                 <div className='container has-text-centered'>
                     <p className='title'>Welcome to the</p>
                     <h1 className='title is-1 stonehands-hero'>Stonehands Pool</h1>
-                    <p className='subtitle'>Est. 2023</p>
+                    <p className='subtitle'>Est. 2023 (Testing deployment)</p>
                     <button className='button is-rounded is-primary'>
                         <Link className='has-text-white' to='/about'>Learn More</Link>
                     </button>
