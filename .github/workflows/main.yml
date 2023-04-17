@@ -25,5 +25,5 @@ jobs:
         remote-user: stonehan
         private-ssh-key: ${{ secrets.SSH_KEY }}
         ssh-port: 2222
-        destination-path: ~/public_html/
+        destination-path: ~/home4/stonehan/public_html/
         source-path: ./dist/
