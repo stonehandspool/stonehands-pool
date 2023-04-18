@@ -11,6 +11,7 @@ A webapp made by Ryan Fandl to allow for a season-long NFL pool. The front end i
 ### Daily Steps for Pool
 
 #### Tuesday (Last Day of Previous Week/First of New Week)
+- Update the Monday night results in the `data/{year}/season.json` file with scores and winner(s)
 - Run the process week script (firstRun = false) to get the results from Monday night
 - Update the website with the results
 - Send out end of week email announcing the winners and pool updates
@@ -21,7 +22,7 @@ A webapp made by Ryan Fandl to allow for a season-long NFL pool. The front end i
 - Don't forget to make your own picks!
 
 #### Friday
-- Update the Thursday night results in the `data/{year}/season.json` file with scores
+- Update the Thursday night results in the `data/{year}/season.json` file with scores and winner(s)
 -- This will ensure that anyone updating their picksheets can't update any completed games
 
 #### Saturday
@@ -31,7 +32,7 @@ A webapp made by Ryan Fandl to allow for a season-long NFL pool. The front end i
 - Make sure automated reminder email is sent out
 
 #### Monday
-- Update the `data/{year}/season.json` file with all of the scores from Sunday
+- Update the `data/{year}/season.json` file with all of the scores from Sunday and winners
 - Run the `processWeek` script for the first time
 - Update the `data/{year}/season.json` file to mark all completed games as evaluated
 - Send out an update email with potential winners
@@ -52,8 +53,8 @@ sass --no-source-map src/sass/index.scss:src/index.css --load-path=node_modules
 ```
 
 ## Remaining Todo Items
-- Write instructions for what to do to make this all work (e.g. what to do Monday morning, etc.)
-- Get the website online
+- Write instructions for what to do to make this all work (e.g. what to do Monday morning, etc.) (Done!)
+- Get the website online (Done!)
 - Do a dry run
 - Get automated emails working
 - (Year 2) Add a Hall of Fame
@@ -61,6 +62,7 @@ sass --no-source-map src/sass/index.scss:src/index.css --load-path=node_modules
 - (Maybe) Get a modal for team/matchup info on the picksheet
 - (Maybe) Add in a random stats page
 -- Best + Worst, Thurs. Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)
+- (Maybe) Look into the NFL API to further automate the process
 
 ## Scrapped Ideas
 - Weekly Score Box

@@ -1,4 +1,4 @@
-import * as seasonStandings from '../../data/2022/players.json';
+import * as seasonStandings from '../../data/2023/players.json';
 import SurvivorTable from '../components/standings/SurvivorTable';
 import { CURRENT_YEAR, CURRENT_WEEK } from '../constants';
 

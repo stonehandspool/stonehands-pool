@@ -1,4 +1,4 @@
-import * as seasonStandings from '../../../data/2022/players.json';
+import * as seasonStandings from '../../../data/2023/players.json';
 
 import { PRIOR_WEEK_COMPLETE, MONDAY_NIGHT_TOTAL } from '../../constants';
 
