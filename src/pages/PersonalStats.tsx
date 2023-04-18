@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import * as playerData from '../../data/2023/players.json';
-import * as seasonData from '../../data/2023/season.json';
-import * as weeklyPicks from '../../data/2023/weeklyPicks.json';
+import * as playerData from '../../data/2022/players.json';
+import * as seasonData from '../../data/2022/season.json';
+import * as weeklyPicks from '../../data/2022/weeklyPicks.json';
 import { CURRENT_YEAR, SubmissionInfo, TEAM_CODES, UserInfo } from '../constants';
 import UserConfidenceReport from '../components/userStats/UserConfidenceReport';
 import UserSurvivorReport from '../components/userStats/UserSurvivorReport';

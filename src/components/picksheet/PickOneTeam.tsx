@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import * as TeamLogos from '../../assets/logos';
-import * as TeamInfo from '../../../data/2023/teams.json';
+import * as TeamInfo from '../../../data/2022/teams.json';
 import { MarginPick, ValidPicks } from '../../constants';
 
 export interface PickOneTeamProps {
