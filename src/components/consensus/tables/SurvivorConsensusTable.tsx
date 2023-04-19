@@ -1,4 +1,4 @@
-import { CURRENT_WEEK } from '../../../constants';
+import { CURRENT_WEEK, SubmissionInfo } from '../../../constants';
 import * as playerPicks from '../../../../data/2022/weeklyPicks.json';
 import * as seasonData from '../../../../data/2022/season.json';
 import * as TeamLogos from '../../../assets/logos';
@@ -16,7 +16,7 @@ function SurvivorConsensusTable() {
     const weeklyConsensusArr: MatchupConsensusInfo[] = [];
     const allWeeks = seasonData.weeks;
     const weekField = `week_${CURRENT_WEEK}`;
-    const weekPicks = playerPicks[weekField as keyof typeof playerPicks];
+    const weekPicks: SubmissionInfo[] = playerPicks[weekField as keyof typeof playerPicks] as SubmissionInfo[];
     const weekGames = allWeeks[weekField as keyof typeof allWeeks];
     
     // First set up the initial values for the consensus info
