@@ -4,11 +4,11 @@ import * as seasonStandings from '../../../data/2022/players.json';
 import * as allPicks from '../../../data/2022/weeklyPicks.json';
 import * as seasonData from '../../../data/2022/season.json';
 
-import { CURRENT_WEEK } from '../../constants';
+import { CURRENT_WEEK, SubmissionInfo } from '../../constants';
 
 function WeeklyPicksTable() {
     const { players } = seasonStandings;
-    const weeklyPicks = allPicks[`week_${CURRENT_WEEK}`];
+    const weeklyPicks: SubmissionInfo[] = allPicks[`week_${CURRENT_WEEK}`] as SubmissionInfo[];
     const { weeks } = seasonData;
     const currentWeek = weeks[`week_${CURRENT_WEEK}`];
     const numGamesThisWeek = Object.keys(currentWeek).length;

@@ -6,13 +6,13 @@ import * as seasonData from '../../../data/2022/season.json';
 
 import * as TeamLogos from '../../assets/logos';
 
-import { CURRENT_WEEK } from '../../constants';
+import { CURRENT_WEEK, SubmissionInfo } from '../../constants';
 
 type TeamLogoKey = keyof typeof TeamLogos;
 
 function WeeklyPicksImagesTable() {
     const { players } = seasonStandings;
-    const weeklyPicks = allPicks[`week_${CURRENT_WEEK}`];
+    const weeklyPicks: SubmissionInfo[] = allPicks[`week_${CURRENT_WEEK}`] as SubmissionInfo[];
     const { weeks } = seasonData;
     const currentWeek = weeks[`week_${CURRENT_WEEK}`];
     const numGamesThisWeek = Object.keys(currentWeek).length;
