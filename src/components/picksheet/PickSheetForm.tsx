@@ -52,7 +52,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                 console.error('An error occurred when getting your prior picks from the database', error);
             }
 
-            if (data) {
+            if (data && data.length > 0) {
                 const { submission_data: priorPicks } = data[0];
                 setSelections(priorPicks);
                 setPriorPicks(true);
