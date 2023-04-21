@@ -87,14 +87,14 @@ function ConfidenceYearlyConsensusTable() {
         <table className='table is-hoverable has-text-centered'>
             <thead>
                 <tr>
-                    <th>Team</th>
-                    <th><abbr title='Number of Times Picked'></abbr>Num Times Picked</th>
-                    <th><abbr title='Number of Times Opponent was Picked'></abbr>Num Opp. Picked</th>
-                    <th><abbr title='Pick Differential (Num Times Picked - Num Opp. Picked)'></abbr>Diff.</th>
-                    <th>Percent</th>
-                    <th><abbr title='Cumulative Points from all times picked'></abbr>Points For</th>
-                    <th><abbr title='Cumulative Points from all times opponent was picked'></abbr>Points Against</th>
-                    <th><abbr title='Point Differential (Points For - Points Against)'></abbr>Point Diff</th>
+                    <th className='is-vcentered'>Team</th>
+                    <th className='has-text-centered'><abbr title='Number of Times Picked'></abbr># Times <br /> Picked</th>
+                    <th className='has-text-centered'><abbr title='Number of Times Opponent was Picked'></abbr># Times <br /> Opponent Picked</th>
+                    <th className='is-vcentered'><abbr title='Pick Differential (Num Times Picked - Num Opp. Picked)'></abbr>Difference</th>
+                    <th className='is-vcentered'>Percent</th>
+                    <th className='is-vcentered'><abbr title='Cumulative Points from all times picked'></abbr>Points For</th>
+                    <th className='is-vcentered'><abbr title='Cumulative Points from all times opponent was picked'></abbr>Points Against</th>
+                    <th className='has-text-centered'><abbr title='Point Differential (Points For - Points Against)'></abbr>Point <br /> Difference</th>
                 </tr>
             </thead>
             <tbody>

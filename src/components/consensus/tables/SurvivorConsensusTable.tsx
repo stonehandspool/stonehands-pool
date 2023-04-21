@@ -34,6 +34,7 @@ function SurvivorConsensusTable() {
 
     // Now go through every players response and update the consensus info
     const numGames = Object.keys(weekGames).length;
+    let totalPicks = 0;
     weekPicks.forEach(pickInfo => {
         const { submission_data: picks } = pickInfo;
         for (let i = 0; i < numGames; i++) {
@@ -41,28 +42,22 @@ function SurvivorConsensusTable() {
             const userChoice = picks['survivor-pick' as keyof typeof picks] as string;
             if (userChoice && userChoice !== '' && userChoice === consensusInfo.homeTeam) {
                 consensusInfo.homeNumPicks++;
+                totalPicks++;
             } else if (userChoice && userChoice !== '' && userChoice === consensusInfo.awayTeam) {
                 consensusInfo.awayNumPicks++;
+                totalPicks++;
             }
         }
     });
     
     // Now calculate the percent
     weeklyConsensusArr.forEach(consensusInfo => {
-        if (consensusInfo.homeNumPicks > 0 && consensusInfo.awayNumPicks > 0) {
-            const totalPicks = consensusInfo.homeNumPicks + consensusInfo.awayNumPicks;
-            consensusInfo.homePercent = `${((consensusInfo.homeNumPicks / totalPicks) * 100).toFixed(1)}%`;
-            consensusInfo.awayPercent = `${((consensusInfo.awayNumPicks / totalPicks) * 100).toFixed(1)}%`;
-        } else if (consensusInfo.homeNumPicks === 0 && consensusInfo.awayNumPicks > 0) {
-            consensusInfo.homePercent = '0%';
-            consensusInfo.awayPercent = '100%';
-        } else if (consensusInfo.homeNumPicks > 0 && consensusInfo.awayNumPicks === 0) {
-            consensusInfo.homePercent = '100%';
-            consensusInfo.awayPercent = '0%';
-        } else {
-            consensusInfo.homePercent = '0%';
-            consensusInfo.awayPercent = '0%';
-        }
+        consensusInfo.homePercent = consensusInfo.homeNumPicks > 0
+            ? `${((consensusInfo.homeNumPicks / totalPicks) * 100).toFixed(1)}%`
+            : '0%';
+        consensusInfo.awayPercent = consensusInfo.awayNumPicks > 0
+            ? `${((consensusInfo.awayNumPicks / totalPicks) * 100).toFixed(1)}%`
+            : '0%';
     });
 
     return (
@@ -78,7 +73,7 @@ function SurvivorConsensusTable() {
                     }
                 </tr>
                 <tr>
-                    <td>Times Chosen</td>
+                    <td># Times Chosen</td>
                     {
                         weeklyConsensusArr.map(info => (
                             <td key={`${info.awayTeam}-numPicks`}>{info.awayNumPicks}</td>
@@ -86,7 +81,7 @@ function SurvivorConsensusTable() {
                     }
                 </tr>
                 <tr>
-                    <td>Percent</td>
+                    <td>Percent of Pool</td>
                     {
                         weeklyConsensusArr.map(info => (
                             <td key={`${info.awayTeam}-percent`}>{info.awayPercent}</td>
@@ -103,7 +98,7 @@ function SurvivorConsensusTable() {
                     }
                 </tr>
                 <tr>
-                    <td>Times Chosen</td>
+                    <td># Times Chosen</td>
                     {
                         weeklyConsensusArr.map(info => (
                             <td key={`${info.homeTeam}-numPicks`}>{info.homeNumPicks}</td>
@@ -111,7 +106,7 @@ function SurvivorConsensusTable() {
                     }
                 </tr>
                 <tr>
-                    <td>Percent</td>
+                    <td>Percent of Pool</td>
                     {
                         weeklyConsensusArr.map(info => (
                             <td key={`${info.homeTeam}-percent`}>{info.homePercent}</td>

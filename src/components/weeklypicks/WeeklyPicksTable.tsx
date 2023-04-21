@@ -17,11 +17,14 @@ function WeeklyPicksTable() {
     const emptyArr = Array(numGamesThisWeek + 4).fill('');
     const matchupKeys: string[] = Object.keys(currentWeek);
 
+    // Sort everyone alphabetically by last name
+    weeklyPicks.sort((row1, row2) => row1.submission_data.lastName.localeCompare(row2.submission_data.lastName));
+
     return (
         <table className='table is-striped is-hoverable mx-auto has-text-centered'>
             <tbody>
                 <tr className='weekly-picks-table-top'>
-                    <td colSpan={numGamesThisWeek + 4} align={'center'}>Pool members sorted in alphabetical order (Bold = Win)</td>
+                    <td colSpan={numGamesThisWeek + 4} align={'center'}>Pool members sorted by their last name in alphabetical order (<b>Bold = Win</b>)</td>
                 </tr>
                 <tr>
                     <td className='weekly-picks-table-away'><b>Away</b><br />Score:</td>
@@ -42,9 +45,9 @@ function WeeklyPicksTable() {
                         const { home_team, home_score } = currentWeek[key as keyof typeof currentWeek];
                         return <td key={`home-${index}`}>{home_team}<br />{home_score}</td>
                     })}
-                    <td>T/B</td>
-                    <td>Points</td>
-                    <td>Season</td>
+                    <td>Weekly <br />Tiebreaker</td>
+                    <td>Weekly <br />Points</td>
+                    <td>Season <br />Points</td>
                 </tr>
                 <tr>
                     {emptyArr.map((empty, index) => {
@@ -65,7 +68,7 @@ function WeeklyPicksTable() {
                                 key={`${pickInfo.user_id}-${index}`}
                                 className={correct ? 'weekly-picks-table-correct-choice' : 'weekly-picks-table-incorrect-choice'}
                             >
-                                {pick}<br />{confidence}
+                                {pick === undefined ? 'N/A' : pick}<br />{confidence}
                             </td>
                         })}
                         <td className='is-vcentered'>{playerInfo?.currentWeekTiebreaker}</td>

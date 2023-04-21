@@ -34,14 +34,29 @@ function MarginTable() {
 
     // Sort everyone by their margin total
     playerPicks.sort((row1, row2) => {
-        // Sort by the margin total
-        if (row1.marginTotal > row2.marginTotal) return -1;
-        if (row1.marginTotal < row2.marginTotal) return 1;
-        return 0;
+        const lastName1 = row1.name.split(' ').pop() as string;
+        const lastName2 = row2.name.split(' ').pop() as string;
+        return row2.marginTotal - row1.marginTotal || lastName1.localeCompare(lastName2);
     });
     
     return (
         <section className='section'>
+            <div className='container pb-6'>
+                <table className='table is-bordered mx-auto'>
+                    <thead>
+                        <tr>
+                            <th colSpan={3} className='has-text-centered'>Color Codes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className='has-background-success'>Team Won</td>
+                            <td>Team Tied</td>
+                            <td className='has-background-danger'>Team Lost</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div className='container'>
                 <table className='table is-bordered is-hoverable mx-auto has-text-centered'>
                     <thead>

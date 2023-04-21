@@ -1,10 +1,11 @@
 type TieBreakerProps = {
     finalGame: string;
     priorTiebreaker: string | null;
+    lastGameCompleted: boolean;
 }
 
 function TieBreaker(props: TieBreakerProps) {
-    const { finalGame, priorTiebreaker } = props;
+    const { finalGame, priorTiebreaker, lastGameCompleted } = props;
 
     return (
         <div className='container pb-6'>
@@ -19,6 +20,7 @@ function TieBreaker(props: TieBreakerProps) {
                         name='tiebreaker'
                         placeholder='0'
                         defaultValue={priorTiebreaker === null ? '' : priorTiebreaker}
+                        disabled={lastGameCompleted}
                     />
                 </div>
             </div>

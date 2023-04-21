@@ -15,7 +15,7 @@ type TableColumns = {
     username: string;
 }
 
-const headers: string[] = ['Position', 'Name', 'Wins', 'Losses', 'Ties', 'Percent', 'Points', 'Tiebreaker Avg', 'Last Week', 'Change'];
+const headers: string[] = ['Position', 'Name', 'Points', 'Wins', 'Losses', 'Ties', 'Percent', 'Tiebreaker Avg', 'Last Week', 'Change'];
 
 function SeasonStandingsTable() {
     const { players } = seasonStandings;
@@ -32,11 +32,11 @@ function SeasonStandingsTable() {
         const rowInfo: TableColumns = {
             position: playerInfo.currentWeekRank,
             name: `${playerInfo.firstName} ${playerInfo.lastName}`,
+            points: playerInfo.points,
             wins: playerInfo.wins,
             losses: playerInfo.losses,
             ties: playerInfo.ties,
             percent: `${(playerInfo.percent * 100).toFixed(1)}%`,
-            points: playerInfo.points,
             tiebreaker: playerInfo.tbAvg,
             lastWeek: playerInfo.lastWeekRank,
             change: playerInfo.change,
@@ -46,15 +46,7 @@ function SeasonStandingsTable() {
     }
 
     // Sort everyone by points now
-    calculatedPicks.sort((row1, row2) => {
-        // First, sort by the number of points
-        if (row1.points > row2.points) return -1;
-        if (row1.points < row2.points) return 1;
-        // Tiebreaker 1 is highest number of wins
-        if (row1.wins > row2.wins) return -1;
-        if (row1.wins < row2.wins) return 1;
-        return 0;
-    });
+    calculatedPicks.sort((row1, row2) => row2.points - row1.points || row2.wins - row1.wins);
     
     // For looping through the submissions
     const tableKeys: string[] = Object.keys(calculatedPicks[0]);
@@ -79,6 +71,7 @@ function SeasonStandingsTable() {
                                                 return <td
                                                     key={`${row.position}-${ind}`}
                                                     onClick={() => goToUserStats(row.username)}
+                                                    style={{ cursor: 'pointer' }}
                                                 >
                                                     {row[key as keyof TableColumns]}
                                                 </td>
