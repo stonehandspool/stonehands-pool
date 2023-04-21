@@ -24,7 +24,10 @@ function ConfidencePicks(props: any) {
     return(
         <div className='container pb-6'>
             <h3 className='title is-3'>Confidence Picks:</h3>
-            <h4 className='subtitle'>Pick which team you think will win and how confident you are! {numOptions} is the most confident while 1 is the least confident</h4>
+            <h4 className='subtitle'>
+                Pick a winner for every game and assign points based off of how confident you are they will win! {numOptions} is the most confident while 1 is
+                the least confident. If you are right, you will get that many points in the confidence pool.
+            </h4>
             <div className='columns is-multiline'>
                 {
                     Object.keys(weekInfo).map((matchup, index) => {

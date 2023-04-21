@@ -62,14 +62,14 @@ function ConfidenceWeeklyConsensusTable() {
     weeklyConsensusArr.forEach(consensusInfo => {
         // Odds are there will always be at least one person picking a team, but just in case have this check
         if (consensusInfo.homeNumPicks > 0) {
-            consensusInfo.homePointsAvg = consensusInfo.homePoints / consensusInfo.homeNumPicks;
+            consensusInfo.homePointsAvg = Math.trunc(consensusInfo.homePoints / consensusInfo.homeNumPicks * Math.pow(10, 2)) / Math.pow(10, 2);
         } else {
             // If no one picked the home team, set the percents here
             consensusInfo.homePercent = '0%';
             consensusInfo.awayPercent = '100%';
         }
         if (consensusInfo.awayNumPicks > 0) {
-            consensusInfo.awayPointsAvg = consensusInfo.awayPoints / consensusInfo.awayNumPicks;
+            consensusInfo.awayPointsAvg = Math.trunc(consensusInfo.awayPoints / consensusInfo.awayNumPicks * Math.pow(10, 2)) / Math.pow(10, 2);
         } else {
             consensusInfo.homePercent = '100%';
             consensusInfo.awayPercent = '0%';
@@ -95,7 +95,7 @@ function ConfidenceWeeklyConsensusTable() {
                     }
                 </tr>
                 <tr>
-                    <td>Times Chosen</td>
+                    <td># Times Chosen</td>
                     {
                         weeklyConsensusArr.map(info => (
                             <td key={`${info.awayTeam}-weekly-numPicks`}>{info.awayNumPicks}</td>
@@ -136,7 +136,7 @@ function ConfidenceWeeklyConsensusTable() {
                     }
                 </tr>
                 <tr>
-                    <td>Times Chosen</td>
+                    <td># Times Chosen</td>
                     {
                         weeklyConsensusArr.map(info => (
                             <td key={`${info.homeTeam}-weekly-numPicks`}>{info.homeNumPicks}</td>

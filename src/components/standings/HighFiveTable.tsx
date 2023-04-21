@@ -33,14 +33,34 @@ function HighFiveTable() {
 
     // Sort everyone by their point total
     playerPicks.sort((row1, row2) => {
-        // Sort by the point total
-        if (row1.highFiveTotal > row2.highFiveTotal) return -1;
-        if (row1.highFiveTotal < row2.highFiveTotal) return 1;
-        return 0;
+        const lastName1 = row1.name.split(' ').pop() as string;
+        const lastName2 = row2.name.split(' ').pop() as string;
+        return row2.highFiveTotal - row1.highFiveTotal || lastName1.localeCompare(lastName2);
     });
 
     return(
         <section className='section'>
+            <div className='container pb-6'>
+                <table className='table is-bordered mx-auto'>
+                    <thead>
+                        <tr>
+                            <th colSpan={2} className='has-text-centered'>Color Codes</th>
+                            <th colSpan={5} className='has-text-centered'>Scoring</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className='has-background-success'>Team Won</td>
+                            <td className='has-background-danger'>Team Lost or Tied</td>
+                            <td>1 Win = 1 Point</td>
+                            <td>2 Wins = 2 Point</td>
+                            <td>3 Wins = 3 Point</td>
+                            <td>4 Wins = 5 Point</td>
+                            <td>5 Wins = 8 Point</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div className='container'>
                 <table className='table is-narrow is-bordered is-hoverable mx-auto has-text-centered'>
                     <thead>

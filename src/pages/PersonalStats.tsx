@@ -101,8 +101,6 @@ function PersonalStats() {
     if (userInfo) {
         if (userInfo.marginTotal > 0) {
             marginOperator = '+';
-        } else if (userInfo.marginTotal < 0) {
-            marginOperator = '-';
         } else {
             marginOperator = '';
         }

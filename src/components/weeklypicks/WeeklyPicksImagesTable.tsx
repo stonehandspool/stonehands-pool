@@ -21,11 +21,19 @@ function WeeklyPicksImagesTable() {
     const emptyArr = Array(numGamesThisWeek + 4).fill('');
     const matchupKeys: string[] = Object.keys(currentWeek);
 
+    // Sort everyone alphabetically by last name
+    weeklyPicks.sort((row1, row2) => {
+        // First, sort by the number of points
+        if (row1.submission_data.lastName > row2.submission_data.lastName) return 1;
+        if (row1.submission_data.lastName < row2.submission_data.lastName) return -1;
+        return 0;
+    });
+
     return (
         <table className='table is-striped is-hoverable mx-auto has-text-centered'>
             <tbody>
                 <tr className='weekly-picks-table-top'>
-                    <td colSpan={numGamesThisWeek + 4} align={'center'}>Pool members sorted in alphabetical order (Bold = Win)</td>
+                    <td colSpan={numGamesThisWeek + 4} align={'center'}>Pool members sorted by their last name in alphabetical order (<b>Bold = Win</b>)</td>
                 </tr>
                 <tr>
                     <td className='weekly-picks-table-away'><b>Away</b><br />Score:</td>
@@ -46,9 +54,9 @@ function WeeklyPicksImagesTable() {
                         const { home_team, home_score } = currentWeek[key as keyof typeof currentWeek];
                         return <td key={`home-${index}`}>{home_team}<br />{home_score}</td>
                     })}
-                    <td>T/B</td>
-                    <td>Points</td>
-                    <td>Season</td>
+                    <td>Weekly<br />Tiebreaker</td>
+                    <td>Weekly<br />Points</td>
+                    <td>Season<br />Points</td>
                 </tr>
                 <tr>
                     {emptyArr.map((empty, index) => {
@@ -66,7 +74,7 @@ function WeeklyPicksImagesTable() {
                             const confidence = picks[`matchup-${index}-confidence` as keyof typeof picks];
                             const correct = pick === winner;
                             let Logo;
-                            if (pick === 'Tie') {
+                            if (pick === 'Tie' || pick === undefined) {
                                 Logo = TeamLogos.NFL;
                             } else {
                                 Logo = TeamLogos[pick as TeamLogoKey];
@@ -77,7 +85,7 @@ function WeeklyPicksImagesTable() {
                             >
                                 {<Logo />}
                                 <br />
-                                {pick}
+                                {pick === undefined ? 'N/A' : pick}
                                 <br />
                                 {confidence}
                             </td>

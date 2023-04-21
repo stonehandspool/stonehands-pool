@@ -279,20 +279,14 @@ if (isFirstRun) {
 // First we need a clone to sort
 const clonedPlayers = structuredClone(players);
 
-// Now get the total monday night points
-const lastGame = weekData[`matchup_${numGamesThisWeek}`];
-const totalMondayPoints = lastGame.home_score + lastGame.away_score;
-
+// Calculate the season standings
 clonedPlayers.sort((row1, row2) => {
     // First, sort by the number of points
-    if (row1.currentWeekPoints > row2.currentWeekPoints) return -1;
-    if (row1.currentWeekPoints < row2.currentWeekPoints) return 1;
-    // Tiebreaker 1 is closest to the total points for the monday night game
-    if (Math.abs(totalMondayPoints - row1.currentWeekTiebreaker) > Math.abs(totalMondayPoints - row2.currentWeekTiebreaker)) return 1;
-    if (Math.abs(totalMondayPoints - row1.currentWeekTiebreaker) < Math.abs(totalMondayPoints - row2.currentWeekTiebreaker)) return -1;
+    if (row1.points > row2.points) return -1;
+    if (row1.points < row2.points) return 1;
     // Tiebreaker 2 is highest number of wins
-    if (row1.currentWeekWins > row2.currentWeekWins) return -1;
-    if (row1.currentWeekWins < row2.currentWeekWins) return 1;
+    if (row1.wins > row2.wins) return -1;
+    if (row1.wins < row2.wins) return 1;
     return 0;
 });
 

@@ -78,6 +78,19 @@ function PickSheetForm(props: PicksheetFormProps) {
             }
         }
 
+        let missingConfidencePick = false;
+        for (let i = 0; i < Object.keys(currentWeekInfo).length; i++) {
+            if (!choices[`matchup-${i}`]) {
+                setFormError('Please make sure you have chosen a winner for each confidence matchup');
+                missingConfidencePick = true;
+                break;
+            }
+        }
+        
+        if (missingConfidencePick) {
+            return;
+        }
+
         let missingConfidence = false;
         for (let i = 0; i < Object.keys(currentWeekInfo).length; i++) {
             if (!choices[`matchup-${i}-confidence`]) {
@@ -88,6 +101,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         }
         
         if (missingConfidence) {
+            setFormError('Please make sure you have chosen a confidence value for every matchup');
             return;
         }
 
@@ -173,22 +187,24 @@ function PickSheetForm(props: PicksheetFormProps) {
     const priorTiebreaker = Object.keys(selections).length === 0
         ? null
         : selections[tiebreakerField as keyof typeof selections];
+    const numGamesThisWeek = Object.keys(currentWeekInfo).length;
+    const lastGameCompleted = currentWeekInfo[`matchup_${numGamesThisWeek}` as keyof typeof currentWeekInfo].winner !== '';
 
     return (
         <section className='section'>
             <div className='container'>
                 <h1 className='title is-1'>Week {CURRENT_WEEK} Picksheet</h1>
-                <h2 className='subtitle'>Make sure to fill out every field that you can. If you would like to change your picks you can make a new submission and Ryan will handle it.</h2>
+                <h2 className='subtitle'>Make sure to fill out every field that you can. If you would like to change your picks you can at any time prior to the below cutoff and as long as that game hasn't started (i.e. no changing your Thursday pick on Friday).</h2>
                 <h2 className='subtitle has-text-danger'>Submission cutoff: {CURRENT_WEEK_CUTOFF_TIME.toLocaleDateString('en-US', { dateStyle: 'full', timeZone: 'America/New_York' })} at {CURRENT_WEEK_CUTOFF_TIME.toLocaleTimeString('en-US', { timeZone: 'America/New_York' })} ET</h2>
                 <form className='box' onSubmit={handleSubmit}>
                     <ConfidencePicks weekInfo={currentWeekInfo} priorPicks={selections} />
                     <SurvivorPick weekInfo={currentWeekInfo} userInfo={userInfo} priorPick={priorSurvivorChoice} />
                     <MarginPick weekInfo={currentWeekInfo} userInfo={userInfo} priorPick={priorMarginChoice} />
                     <HighFivePicks weekInfo={currentWeekInfo} priorPicks={priorHighFivePicks} />
-                    <TieBreaker finalGame={CURRENT_WEEK_FINAL_GAME} priorTiebreaker={priorTiebreaker} />
+                    <TieBreaker finalGame={CURRENT_WEEK_FINAL_GAME} priorTiebreaker={priorTiebreaker} lastGameCompleted={lastGameCompleted} />
                     <div className='field'>
                         <div className='control'>
-                            <button className='button is-primary'>Submit Choices</button>
+                            <button className='button is-primary' disabled={lastGameCompleted}>Submit Choices</button>
                         </div>
                     </div>
                     {formError && formError.length > 0 && <p className='has-text-danger'>{formError}</p>}

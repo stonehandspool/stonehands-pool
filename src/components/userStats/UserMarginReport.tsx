@@ -11,10 +11,10 @@ function UserMarginReport(props: any) {
             <h4 className='title is-4'>Margin Stats:</h4>
             <div className='columns is-centered'>
                 <div className='column is-narrow mx-6'>
-                    <h5 className='title is-5'>Best Week: Week {bestMarginWeek} (<span className={`${bestMarginWeekColor}`}>{bestMargin && bestMargin.margin > 0 ? `+${bestMargin.margin}` : `-${bestMargin?.margin}`}</span>)</h5>
+                    <h5 className='title is-5'>Best Week: Week {bestMarginWeek} (<span className={`${bestMarginWeekColor}`}>{bestMargin && bestMargin.margin > 0 ? `+${bestMargin.margin}` : `${bestMargin?.margin}`}</span>)</h5>
                 </div>
                 <div className='column is-narrow mx-6'>
-                    <h5 className='title is-5'>Worst Week: Week {worstMarginWeek} (<span className={`${worstMarginWeekColor}`}>{worstMargin && worstMargin.margin > 0 ? `+${worstMargin.margin}` : `-${worstMargin?.margin}`}</span>)</h5>
+                    <h5 className='title is-5'>Worst Week: Week {worstMarginWeek} (<span className={`${worstMarginWeekColor}`}>{worstMargin && worstMargin.margin > 0 ? `+${worstMargin.margin}` : `${worstMargin?.margin}`}</span>)</h5>
                 </div>
             </div>
             <div className='columns is-vcentered'>

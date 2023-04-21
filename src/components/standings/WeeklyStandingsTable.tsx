@@ -13,7 +13,7 @@ type TableColumns = {
     result: string;
 }
 
-const headers: string[] = ['Position', 'Name', 'Wins', 'Losses', 'Ties', 'Points', 'Tiebreaker', 'Result'];
+const headers: string[] = ['Position', 'Name', 'Points', 'Wins', 'Losses', 'Ties', 'Tiebreaker', 'Result'];
 
 function WeeklyStandingsTable() {
     const { players } = seasonStandings;
@@ -25,10 +25,10 @@ function WeeklyStandingsTable() {
         const rowInfo: TableColumns = {
             position: -1,
             name: `${playerInfo.firstName} ${playerInfo.lastName}`,
+            points: playerInfo.currentWeekPoints,
             wins: playerInfo.currentWeekWins,
             losses: playerInfo.currentWeekLosses,
             ties: playerInfo.currentWeekTies,
-            points: playerInfo.currentWeekPoints,
             tiebreaker: playerInfo.currentWeekTiebreaker,
             result: '',
         };
@@ -37,17 +37,9 @@ function WeeklyStandingsTable() {
 
     // Sort everyone by points now
     calculatedPicks.sort((row1, row2) => {
-        // First, sort by the number of points
-        if (row1.points > row2.points) return -1;
-        if (row1.points < row2.points) return 1;
-        // Tiebreaker 1 is highest number of wins
-        if (row1.wins > row2.wins) return -1;
-        if (row1.wins < row2.wins) return 1;
-        // Tiebreaker 2 is closest to the total points for the monday night game
-        if (Math.abs(MONDAY_NIGHT_TOTAL - row1.tiebreaker) > Math.abs(MONDAY_NIGHT_TOTAL - row2.tiebreaker)) return 1;
-        if (Math.abs(MONDAY_NIGHT_TOTAL - row1.tiebreaker) < Math.abs(MONDAY_NIGHT_TOTAL - row2.tiebreaker)) return -1;
-        
-        return 0;
+        const row1Tb = Math.abs(MONDAY_NIGHT_TOTAL - row1.tiebreaker);
+        const row2Tb = Math.abs(MONDAY_NIGHT_TOTAL - row2.tiebreaker);
+        return row2.points - row1.points || row2.wins - row1.wins || row2Tb - row1Tb;
     });
 
     // Now update the position and result for the table

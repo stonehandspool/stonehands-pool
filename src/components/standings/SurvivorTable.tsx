@@ -17,7 +17,7 @@ const getGameCompleted = (teamName: string) => {
     Object.keys(weeklyResults).map(key => {
         const matchupInfo = weeklyResults[key as keyof typeof weeklyResults];
         if (matchupInfo.home_team === teamName || matchupInfo.away_team === teamName) {
-            gameCompleted = matchupInfo.evaluated && matchupInfo.winner !== '';
+            gameCompleted = matchupInfo.winner !== '';
         }
     });
     return gameCompleted;
@@ -37,16 +37,30 @@ function SurvivorTable() {
         playerPicks.push(rowInfo);
     }
 
-    // Sort everyone by how many weeks they've survived
+    // Sort everyone by how many weeks they've survived and alphabetically, survivors first
     playerPicks.sort((row1, row2) => {
-        // Sort by the number of weeks with picks made
-        if (row1.survivorPicks.length > row2.survivorPicks.length) return -1;
-        if (row1.survivorPicks.length < row2.survivorPicks.length) return 1;
-        return 0;
+        const lastName1 = row1.name.split(' ').pop() as string;
+        const lastName2 = row2.name.split(' ').pop() as string;
+        return row2.survivorPicks.length - row1.survivorPicks.length || Number(row2.aliveInSurvivor) - Number(row1.aliveInSurvivor) || lastName1.localeCompare(lastName2);
     });
     
     return(
         <section className='section'>
+            <div className='container pb-6'>
+                <table className='table is-bordered mx-auto'>
+                    <thead>
+                        <tr>
+                            <th colSpan={2} className='has-text-centered'>Color Codes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className='has-background-success'>Team Won</td>
+                            <td className='has-background-danger'>Team Lost or Tied</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div className='container'>
                 <table className='table is-bordered is-hoverable mx-auto'>
                     <thead>
