@@ -9,13 +9,14 @@ export interface MatchupCardProps {
     matchupNumber: number;
     gameCompleted: boolean;
     priorChoice: ValidPicks;
+    onUpdatePick: (value: string, index: number) => void;
 };
 
 type TeamLogoKey = keyof typeof TeamLogos;
 const { teams } = TeamInfo;
 
 function MatchupCard(props: MatchupCardProps) {
-    const { homeTeam, awayTeam, matchupNumber, gameCompleted, priorChoice } = props;
+    const { homeTeam, awayTeam, matchupNumber, gameCompleted, priorChoice, onUpdatePick } = props;
     const [chosenTeam, setChosenTeam] = useState<ValidPicks | null>(null);
 
     const HomeLogo = TeamLogos[homeTeam as TeamLogoKey];
@@ -30,12 +31,14 @@ function MatchupCard(props: MatchupCardProps) {
     useEffect(() => {
         if (priorChoice) {
             setChosenTeam(priorChoice);
+            onUpdatePick(priorChoice, matchupNumber);
         }
     }, [priorChoice]);
 
     const onChoiceChange = (e: any) => {
         if (e.target.checked) {
             setChosenTeam(e.target.value);
+            onUpdatePick(e.target.value, matchupNumber);
         }
     };
 

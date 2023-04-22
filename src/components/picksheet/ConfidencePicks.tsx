@@ -4,15 +4,23 @@ import MatchupCard from './MatchupCard';
 
 function ConfidencePicks(props: any) {
     const { weekInfo, priorPicks } = props;
+    const numOptions = Object.keys(weekInfo).length;
+
+    const [selectedPicks, setSelectedPicks] = useState<string[]>(new Array(numOptions));
     const [selectedConfidences, setSelectedConfidences] = useState<number[]>([]);
 
-    const numOptions = Object.keys(weekInfo).length;
     let numGamesCompleted = 0;
     Object.keys(weekInfo).map(key => {
         if (weekInfo[key].winner !== '') {
             numGamesCompleted++;
         }
     });
+
+    const onUpdatePick = (newValue: string, index: number) => {
+        let pickCopy = [...selectedPicks];
+        pickCopy[index] = newValue;
+        setSelectedPicks(pickCopy);
+    };
 
     const onUpdateConfidence = (previousValue: number, newValue: number) => {
         // Remove the previous value if we're changing a drop down
@@ -52,6 +60,7 @@ function ConfidencePicks(props: any) {
                                             matchupNumber={index}
                                             gameCompleted={weekInfo[matchup].winner !== ''}
                                             priorChoice={priorChoice}
+                                            onUpdatePick={onUpdatePick}
                                         />
                                     </div>
                                     <div className='column is-narrow is-vertical-center'>
@@ -61,6 +70,7 @@ function ConfidencePicks(props: any) {
                                             numGamesCompleted={numGamesCompleted}
                                             gameCompleted={weekInfo[matchup].winner !== ''}
                                             priorConfidence={priorConfidence}
+                                            matchupChoice={selectedPicks[index]}
                                             matchupNumber={index}
                                             selectedNumbers={selectedConfidences}
                                             onUpdateConfidence={onUpdateConfidence}
