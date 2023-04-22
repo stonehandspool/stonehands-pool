@@ -3,15 +3,16 @@ import { useEffect, useState } from 'react';
 type ConfidenceDropDownProps = {
     numOptions: number;
     numGamesCompleted: number;
+    matchupChoice: string | undefined;
     matchupNumber: number;
     gameCompleted: boolean;
     priorConfidence: string;
     selectedNumbers: number[];
-    onUpdateConfidence: Function;
+    onUpdateConfidence: (prevValue: number, newValue: number) => void;
 };
 
 function ConfidenceDropDown(props: ConfidenceDropDownProps) {
-    const { numOptions, numGamesCompleted, matchupNumber, gameCompleted, priorConfidence, selectedNumbers, onUpdateConfidence } = props;
+    const { numOptions, numGamesCompleted, matchupChoice, matchupNumber, gameCompleted, priorConfidence, selectedNumbers, onUpdateConfidence } = props;
 
     const [currentValue, setCurrentValue] = useState<number>(-1);
 
@@ -39,7 +40,13 @@ function ConfidenceDropDown(props: ConfidenceDropDownProps) {
     
     return (
         <div className='select is-small'>
-            <select onChange={onChange} value={currentValue.toString()} name={`matchup-${matchupNumber}-confidence`} required={true} disabled={gameCompleted}>
+            <select
+                onChange={onChange}
+                value={currentValue.toString()}
+                name={`matchup-${matchupNumber}-confidence`}
+                required={true}
+                disabled={gameCompleted || matchupChoice === undefined}
+            >
                 <option value={-1} disabled hidden></option>
                 <option value={''}></option>
                 {
