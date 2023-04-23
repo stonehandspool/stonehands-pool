@@ -11,8 +11,10 @@ function UserSurvivorReport(props: any) {
                 </div>
                 {
                     userInfo?.survivorPicks.map((pick: any) => {
-                        const Logo = TeamLogos[pick as keyof typeof TeamLogos];
-                        return <div className='column is-narrow' key={`${pick}-survivor`}><Logo /></div>
+                        if (pick !== undefined && pick !== '') {
+                            const Logo = TeamLogos[pick as keyof typeof TeamLogos];
+                            return <div className='column is-narrow' key={`${pick}-survivor`}><Logo /></div>    
+                        }
                     })
                 }
             </div>
