@@ -82,6 +82,7 @@ function HighFiveTable() {
                                     <td key={`${row.name}-row-${index}`} className='is-vcentered'>{row.name}</td>
                                     <td key={`${row.name}-total-${index}`} className='is-vcentered'><strong>{row.highFiveTotal}</strong></td>
                                     {
+                                        row.recentPicks.length > 0 &&
                                         row.recentPicks.map((pick, ind) => {
                                             let className;
                                             // Doing explicit checks for true and false because it can be null and we want a white background for that
@@ -91,6 +92,12 @@ function HighFiveTable() {
                                                 className = 'has-background-danger';
                                             }
                                             return <td key={`${row.name}-pick-${ind}`} className={className}>{pick.team}</td>
+                                        })
+                                    }
+                                    {
+                                        row.recentPicks.length === 0 &&
+                                        Array.from({ length: 5 }).map((key, ind) => {
+                                            return <td key={`${row.name}-pick-${ind}`}>{' '}</td>
                                         })
                                     }
                                     {

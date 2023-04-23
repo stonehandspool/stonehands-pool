@@ -1,4 +1,4 @@
-import { CURRENT_WEEK, SubmissionInfo } from '../../constants';
+import { SubmissionInfo } from '../../constants';
 
 type TableProps = {
     confidencePicks: SubmissionInfo[];
