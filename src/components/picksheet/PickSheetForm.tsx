@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
-import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_FINAL_GAME, CURRENT_YEAR, UserInfo } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_FINAL_GAME, CURRENT_YEAR, SEASON_READY, UserInfo } from '../../constants';
 import * as seasonData from '../../../data/2022/season.json';
 import * as playerData from '../../../data/2022/players.json';
 import ConfidencePicks from './ConfidencePicks';
@@ -25,18 +25,41 @@ export type choiceFormat = {
     username: string;
 };
 
-const currentWeekInfo = seasonData.weeks[`week_${CURRENT_WEEK}`];
+const currentWeekInfo = seasonData.weeks[`week_${CURRENT_WEEK}` as keyof typeof seasonData.weeks];
 
 function PickSheetForm(props: PicksheetFormProps) {
     const { session } = props;
     const { players } = playerData;
     const navigate = useNavigate();
 
+    if (!SEASON_READY) {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h3 className='title is-3 has-text-centered'>Sorry, the season hasn't started yet, please wait until the season has been loaded</h3>
+                </div>
+            </section>
+        )
+    }
+
     const [selections, setSelections] = useState({});
     const [priorPicks, setPriorPicks] = useState(false);
     const [formError, setFormError] = useState<string | null>(null);
 
     const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as UserInfo;
+    
+    if (!userInfo) {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h3 className='title is-3 has-text-centered'>
+                        Sorry, it looks like you've signed up but your account hasn't been processed yet. Please reach out to Ryan to get your account
+                        added to the pool.
+                    </h3>
+                </div>
+            </section>
+        )
+    }
 
     // Ping the database to see if there are picks from this week for this user
     useEffect(() => {

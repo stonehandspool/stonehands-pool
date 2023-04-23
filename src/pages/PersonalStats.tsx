@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import * as playerData from '../../data/2022/players.json';
 import * as seasonData from '../../data/2022/season.json';
 import * as weeklyPicks from '../../data/2022/weeklyPicks.json';
-import { CURRENT_YEAR, SubmissionInfo, TEAM_CODES, UserInfo } from '../constants';
+import { CURRENT_YEAR, SEASON_READY, SubmissionInfo, TEAM_CODES, UserInfo } from '../constants';
 import UserConfidenceReport from '../components/userStats/UserConfidenceReport';
 import UserSurvivorReport from '../components/userStats/UserSurvivorReport';
 import UserMarginReport from '../components/userStats/UserMarginReport';
@@ -58,6 +58,15 @@ function getPickStats(userPicks: SubmissionInfo[], weeks: any) {
 }
 
 function PersonalStats() {
+    if (!SEASON_READY) {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h3 className='title is-3 has-text-centered'>Sorry, there is no data to show yet</h3>
+                </div>
+            </section>
+        );
+    }
     const { username } = useParams();
     const [activeChoice, setActiveChoice] = useState(Pools.Confidence);
 
@@ -78,7 +87,7 @@ function PersonalStats() {
     }
     const userPicks: SubmissionInfo[] = [];
     Object.keys(weeklyPicks).map((key, index) => {
-        const week: SubmissionInfo[] = weeklyPicks[`week_${index + 1}` as keyof typeof weeklyPicks] as SubmissionInfo[];
+        const week: SubmissionInfo[] = weeklyPicks.weeklyPicks[`week_${index + 1}` as keyof typeof weeklyPicks.weeklyPicks] as SubmissionInfo[];
         if (week && week.length > 0) {
             const playerPicksThisWeek = week.find(submission => submission.submission_data.username === username);
             if (playerPicksThisWeek) {

@@ -1,4 +1,4 @@
-import { CURRENT_WEEK, SubmissionInfo } from '../../../constants';
+import { CURRENT_WEEK, SEASON_READY, SubmissionInfo } from '../../../constants';
 import * as playerPicks from '../../../../data/2022/weeklyPicks.json';
 import * as seasonData from '../../../../data/2022/season.json';
 import * as TeamLogos from '../../../assets/logos';
@@ -16,6 +16,15 @@ type YearlyConsensusInfo = {
 };
 
 function ConfidenceYearlyConsensusTable() {
+    if (!SEASON_READY) {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h3 className='title is-3 has-text-centered'>Sorry, there is no data to show yet</h3>
+                </div>
+            </section>
+        )
+    }
     const yearlyConsensusArr: YearlyConsensusInfo[] = [];
     const allWeeks = seasonData.weeks;    
     
@@ -36,7 +45,7 @@ function ConfidenceYearlyConsensusTable() {
     // Now loop through every week that has been played so far
     for (let i = 0; i < CURRENT_WEEK; i++) {
         const weekField = `week_${i + 1}`;
-        const weekPicks: SubmissionInfo[] = playerPicks[weekField as keyof typeof playerPicks] as SubmissionInfo[];
+        const weekPicks: SubmissionInfo[] = playerPicks.weeklyPicks[weekField as keyof typeof playerPicks.weeklyPicks] as SubmissionInfo[];
         const weekGames = allWeeks[weekField as keyof typeof allWeeks];
         
         // Now loop through every players response and update the consensus info
