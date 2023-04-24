@@ -92,7 +92,7 @@ function WeeklyPicksImagesTable() {
                                 key={`${pickInfo.user_id}-${index}`}
                                 className={correct ? 'weekly-picks-table-correct-choice' : 'weekly-picks-table-incorrect-choice'}
                             >
-                                {<Logo />}
+                                {<Logo size={35} />}
                                 <br />
                                 {pick === undefined ? 'N/A' : pick}
                                 <br />
