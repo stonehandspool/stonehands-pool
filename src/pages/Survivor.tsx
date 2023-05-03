@@ -1,8 +1,18 @@
-import * as seasonStandings from '../../data/2022/players.json';
+import * as seasonStandings from '../../data/2023/players.json';
 import SurvivorTable from '../components/standings/SurvivorTable';
-import { CURRENT_YEAR, CURRENT_WEEK } from '../constants';
+import { CURRENT_YEAR, CURRENT_WEEK, SEASON_READY } from '../constants';
 
 function Survivor(){
+    if (!SEASON_READY) {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h3 className='title is-3 has-text-centered'>Sorry, the season hasn't started yet, please wait until the season has been loaded</h3>
+                </div>
+            </section>
+        )
+    }
+
     const { players } = seasonStandings;
     const numStarted = players.length;
     const numRemaining = players.filter(player => player.aliveInSurvivor).length;
@@ -11,21 +21,6 @@ function Survivor(){
             <div className='container'>
                 <h1 className='title has-text-centered'>{CURRENT_YEAR} Stonehands Pool</h1>
                 <h2 className='subtitle has-text-centered'>Survivor results as of week {CURRENT_WEEK}</h2>
-                {/* Keeping this table code here for now in case I end up wanting it */}
-                {/* <table className='table is-bordered is-narrow mx-auto has-text-centered'>
-                    <thead>
-                        <tr>
-                            <td>Pool Size</td>
-                            <td>Survivors</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{numStarted}</td>
-                            <td>{numRemaining}</td>
-                        </tr>
-                    </tbody>
-                </table> */}
                 <div className='columns'>
                     <div className='column is-half is-offset-one-quarter'>
                         <div className='columns'>

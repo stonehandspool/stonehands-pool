@@ -1,10 +1,10 @@
-export const SEASON_READY = true;
-export const CURRENT_WEEK = 2;
+export const SEASON_READY = false;
+export const CURRENT_WEEK = 0;
 export const CURRENT_YEAR = '2023-2024';
 export const CURRENT_WEEK_CUTOFF_TIME = new Date('March 26, 2023 13:00:00');
 export const CURRENT_WEEK_FINAL_GAME = 'MIN @ PHI';
 export const MONDAY_NIGHT_TOTAL = 0;
-export const PRIOR_WEEK_COMPLETE = true;
+export const PRIOR_WEEK_COMPLETE = false;
 export const TEAM_CODES = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAX', 'KC', 'LAC', 'LAR', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'];
 
 // Global types

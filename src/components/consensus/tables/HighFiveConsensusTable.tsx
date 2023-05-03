@@ -1,6 +1,6 @@
 import { CURRENT_WEEK, SEASON_READY, SubmissionInfo } from '../../../constants';
-import * as playerPicks from '../../../../data/2022/weeklyPicks.json';
-import * as seasonData from '../../../../data/2022/season.json';
+import * as playerPicks from '../../../../data/2023/weeklyPicks.json';
+import * as seasonData from '../../../../data/2023/season.json';
 import * as TeamLogos from '../../../assets/logos';
 
 type MatchupConsensusInfo = {
