@@ -5,319 +5,649 @@
       "username": "rfandl",
       "firstName": "Ryan",
       "lastName": "Fandl",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
-      "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "wins": 10,
+      "losses": 5,
+      "ties": 1,
+      "percent": 0.65625,
+      "points": 99,
+      "tbAvg": 52,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 2,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
-      "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
+      "currentWeekWins": 10,
+      "currentWeekLosses": 5,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 99,
+      "currentWeekTiebreaker": 52,
+      "survivorPicks": [
+        "BUF"
+      ],
       "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
-      "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "marginPicks": [
+        {
+          "team": "SF",
+          "margin": -9
+        }
+      ],
+      "marginTotal": -9,
+      "highFiveValues": [
+        3
+      ],
+      "highFiveTotal": 3,
+      "highFiveThisWeek": [
+        {
+          "team": "BUF",
+          "won": true
+        },
+        {
+          "team": "PIT",
+          "won": true
+        },
+        {
+          "team": "CLE",
+          "won": true
+        },
+        {
+          "team": "JAX",
+          "won": false
+        },
+        {
+          "team": "NYJ",
+          "won": false
+        }
+      ]
     },
     {
       "id": "d9985b83-08de-4e96-bcbc-e348666a554c",
       "username": "Kfandl",
       "firstName": "Kailey",
       "lastName": "Fandl",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
+      "wins": 7,
+      "losses": 8,
+      "ties": 1,
+      "percent": 0.46875,
+      "points": 64.5,
       "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 9,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
+      "currentWeekWins": 7,
+      "currentWeekLosses": 8,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 64.5,
       "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
-      "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
+      "survivorPicks": [
+        ""
+      ],
+      "aliveInSurvivor": false,
+      "marginPicks": [
+        {
+          "team": "ARI",
+          "margin": -23
+        }
+      ],
+      "marginTotal": -23,
+      "highFiveValues": [
+        0
+      ],
       "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "highFiveThisWeek": [
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        }
+      ]
     },
     {
       "id": "3cd5ef80-6348-407b-bd5c-6477f49c322e",
       "username": "Bcrimmins",
       "firstName": "Bobby",
       "lastName": "Crimmins",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
+      "wins": 8,
+      "losses": 7,
+      "ties": 1,
+      "percent": 0.53125,
+      "points": 69.5,
       "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 7,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
+      "currentWeekWins": 8,
+      "currentWeekLosses": 7,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 69.5,
       "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
-      "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
+      "survivorPicks": [
+        ""
+      ],
+      "aliveInSurvivor": false,
+      "marginPicks": [
+        {
+          "team": "ARI",
+          "margin": -23
+        }
+      ],
+      "marginTotal": -23,
+      "highFiveValues": [
+        0
+      ],
       "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "highFiveThisWeek": [
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        }
+      ]
     },
     {
       "id": "11642444-4a38-42b3-8f2f-01b34bb50aef",
       "username": "hfandl23",
       "firstName": "Heather",
       "lastName": "Fandl",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
+      "wins": 8,
+      "losses": 7,
+      "ties": 1,
+      "percent": 0.53125,
+      "points": 66.5,
       "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 8,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
+      "currentWeekWins": 8,
+      "currentWeekLosses": 7,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 66.5,
       "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
-      "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
+      "survivorPicks": [
+        ""
+      ],
+      "aliveInSurvivor": false,
+      "marginPicks": [
+        {
+          "team": "ARI",
+          "margin": -23
+        }
+      ],
+      "marginTotal": -23,
+      "highFiveValues": [
+        0
+      ],
       "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "highFiveThisWeek": [
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        }
+      ]
     },
     {
       "id": "0fd403ce-2a02-4c1e-8f47-be4facb1b18e",
       "username": "LaurScore25",
       "firstName": "Lauren",
       "lastName": "Almonte",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
+      "wins": 10,
+      "losses": 5,
+      "ties": 1,
+      "percent": 0.65625,
+      "points": 97.5,
       "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 3,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
+      "currentWeekWins": 10,
+      "currentWeekLosses": 5,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 97.5,
       "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
-      "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
+      "survivorPicks": [
+        ""
+      ],
+      "aliveInSurvivor": false,
+      "marginPicks": [
+        {
+          "team": "ARI",
+          "margin": -23
+        }
+      ],
+      "marginTotal": -23,
+      "highFiveValues": [
+        0
+      ],
       "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "highFiveThisWeek": [
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        }
+      ]
     },
     {
       "id": "11c577d3-f0d5-4690-ab51-40aced33087d",
       "username": "aburd55",
       "firstName": "Andrew",
       "lastName": "Burdack",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
-      "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "wins": 7,
+      "losses": 8,
+      "ties": 1,
+      "percent": 0.46875,
+      "points": 84.5,
+      "tbAvg": 32,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 4,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
-      "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
+      "currentWeekWins": 7,
+      "currentWeekLosses": 8,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 84.5,
+      "currentWeekTiebreaker": 32,
+      "survivorPicks": [
+        "TB"
+      ],
       "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
-      "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "marginPicks": [
+        {
+          "team": "CIN",
+          "margin": -3
+        }
+      ],
+      "marginTotal": -3,
+      "highFiveValues": [
+        3
+      ],
+      "highFiveTotal": 3,
+      "highFiveThisWeek": [
+        {
+          "team": "CIN",
+          "won": false
+        },
+        {
+          "team": "MIA",
+          "won": true
+        },
+        {
+          "team": "JAX",
+          "won": false
+        },
+        {
+          "team": "KC",
+          "won": true
+        },
+        {
+          "team": "TB",
+          "won": true
+        }
+      ]
     },
     {
       "id": "02bee9d4-ea65-4930-801b-91eb457b39d1",
       "username": "Mcgovene",
       "firstName": "Neal",
       "lastName": "McGovern",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
-      "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "wins": 13,
+      "losses": 2,
+      "ties": 1,
+      "percent": 0.84375,
+      "points": 121,
+      "tbAvg": 57,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 1,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
-      "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
+      "currentWeekWins": 13,
+      "currentWeekLosses": 2,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 121,
+      "currentWeekTiebreaker": 57,
+      "survivorPicks": [
+        "CHI"
+      ],
       "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
-      "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "marginPicks": [
+        {
+          "team": "KC",
+          "margin": 23
+        }
+      ],
+      "marginTotal": 23,
+      "highFiveValues": [
+        8
+      ],
+      "highFiveTotal": 8,
+      "highFiveThisWeek": [
+        {
+          "team": "BUF",
+          "won": true
+        },
+        {
+          "team": "CHI",
+          "won": true
+        },
+        {
+          "team": "MIA",
+          "won": true
+        },
+        {
+          "team": "TB",
+          "won": true
+        },
+        {
+          "team": "SEA",
+          "won": true
+        }
+      ]
     },
     {
       "id": "1ca93cf7-e957-4cf5-9745-71b1018764fe",
       "username": "gfandl",
       "firstName": "Glen",
       "lastName": "Fandl",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
+      "wins": 5,
+      "losses": 10,
+      "ties": 1,
+      "percent": 0.34375,
+      "points": 24.5,
       "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 11,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
+      "currentWeekWins": 5,
+      "currentWeekLosses": 10,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 24.5,
       "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
-      "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
+      "survivorPicks": [
+        ""
+      ],
+      "aliveInSurvivor": false,
+      "marginPicks": [
+        {
+          "team": "ARI",
+          "margin": -23
+        }
+      ],
+      "marginTotal": -23,
+      "highFiveValues": [
+        0
+      ],
       "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "highFiveThisWeek": [
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        }
+      ]
     },
     {
       "id": "c142e306-509d-4735-a39d-1e29694504cf",
       "username": "linda104",
       "firstName": "Jackie",
       "lastName": "Cook",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
+      "wins": 7,
+      "losses": 8,
+      "ties": 1,
+      "percent": 0.46875,
+      "points": 79.5,
       "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 5,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
+      "currentWeekWins": 7,
+      "currentWeekLosses": 8,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 79.5,
       "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
-      "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
+      "survivorPicks": [
+        ""
+      ],
+      "aliveInSurvivor": false,
+      "marginPicks": [
+        {
+          "team": "ARI",
+          "margin": -23
+        }
+      ],
+      "marginTotal": -23,
+      "highFiveValues": [
+        0
+      ],
       "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "highFiveThisWeek": [
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        },
+        {
+          "team": "N/A",
+          "won": false
+        }
+      ]
     },
     {
       "id": "ff856cea-b8cb-470e-91ec-0fb8149f7fdb",
       "username": "Hostiss",
       "firstName": "Matt",
       "lastName": "Ustas",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
-      "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "wins": 5,
+      "losses": 10,
+      "ties": 1,
+      "percent": 0.34375,
+      "points": 47,
+      "tbAvg": 47,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 10,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
-      "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
-      "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
-      "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "currentWeekWins": 5,
+      "currentWeekLosses": 10,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 47,
+      "currentWeekTiebreaker": 47,
+      "survivorPicks": [
+        "LAR"
+      ],
+      "aliveInSurvivor": false,
+      "marginPicks": [
+        {
+          "team": "BUF",
+          "margin": 21
+        }
+      ],
+      "marginTotal": 21,
+      "highFiveValues": [
+        2
+      ],
+      "highFiveTotal": 2,
+      "highFiveThisWeek": [
+        {
+          "team": "BUF",
+          "won": true
+        },
+        {
+          "team": "DET",
+          "won": false
+        },
+        {
+          "team": "CHI",
+          "won": true
+        },
+        {
+          "team": "CIN",
+          "won": false
+        },
+        {
+          "team": "NE",
+          "won": false
+        }
+      ]
     },
     {
       "id": "1c2c4e7e-c5b8-44a1-bf3a-dbf7449ddb14",
       "username": "Huep",
       "firstName": "Thomas",
       "lastName": "Passano",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "percent": 0,
-      "points": 0,
-      "tbAvg": 0,
-      "weeks": 0,
-      "games": 0,
+      "wins": 9,
+      "losses": 6,
+      "ties": 1,
+      "percent": 0.59375,
+      "points": 76.5,
+      "tbAvg": 3456,
+      "weeks": 1,
+      "games": 16,
       "lastWeekRank": 0,
-      "currentWeekRank": 0,
+      "currentWeekRank": 6,
       "change": "--",
-      "currentWeekWins": 0,
-      "currentWeekLosses": 0,
-      "currentWeekTies": 0,
-      "currentWeekPoints": 0,
-      "currentWeekTiebreaker": 0,
-      "survivorPicks": [],
+      "currentWeekWins": 9,
+      "currentWeekLosses": 6,
+      "currentWeekTies": 1,
+      "currentWeekPoints": 76.5,
+      "currentWeekTiebreaker": 3456,
+      "survivorPicks": [
+        "BUF"
+      ],
       "aliveInSurvivor": true,
-      "marginPicks": [],
-      "marginTotal": 0,
-      "highFiveValues": [],
-      "highFiveTotal": 0,
-      "highFiveThisWeek": []
+      "marginPicks": [
+        {
+          "team": "KC",
+          "margin": 23
+        }
+      ],
+      "marginTotal": 23,
+      "highFiveValues": [
+        3
+      ],
+      "highFiveTotal": 3,
+      "highFiveThisWeek": [
+        {
+          "team": "BUF",
+          "won": true
+        },
+        {
+          "team": "SF",
+          "won": false
+        },
+        {
+          "team": "CIN",
+          "won": false
+        },
+        {
+          "team": "NYG",
+          "won": true
+        },
+        {
+          "team": "KC",
+          "won": true
+        }
+      ]
     }
   ]
 }
