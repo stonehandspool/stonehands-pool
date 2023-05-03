@@ -1,4 +1,4 @@
-export const SEASON_READY = false;
+export const SEASON_READY = true;
 export const CURRENT_WEEK = 1;
 export const CURRENT_YEAR = '2023-2024';
 export const CURRENT_WEEK_CUTOFF_TIME = new Date('March 26, 2023 13:00:00');
