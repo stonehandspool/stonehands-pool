@@ -1,5 +1,5 @@
 import { Session } from '@supabase/supabase-js';
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
@@ -46,6 +46,66 @@ function PickSheetForm(props: PicksheetFormProps) {
     const [priorPicks, setPriorPicks] = useState(false);
     const [formError, setFormError] = useState<string | null>(null);
 
+    //States for the different parts of the form
+
+    // Confidence Pool
+    const numGamesThisWeek = Object.keys(currentWeekInfo).length;
+    const [selectedPicks, setSelectedPicks] = useState<string[]>(new Array(numGamesThisWeek));
+    const [selectedConfidences, setSelectedConfidences] = useState<number[]>(new Array(numGamesThisWeek));
+
+    const onUpdatePick = (newValue: string, index: number) => {
+        let pickCopy = [...selectedPicks];
+        pickCopy[index] = newValue;
+        setSelectedPicks(pickCopy);
+    };
+
+    const onUpdateConfidence = (newValue: number, index: number) => {
+        let confidencesCopy = [...selectedConfidences];
+        confidencesCopy[index] = newValue;
+        setSelectedConfidences(confidencesCopy);
+    };
+
+    // Survivor Pick
+    const [survivorTeam, setSurvivorTeam] = useState<string | null>(null);
+
+    const handleSurvivorSelection = (team: string) => {
+        setSurvivorTeam(team);
+    };
+
+    // Confidence Pick
+    const [marginTeam, setMarginTeam] = useState<string | null>(null);
+
+    const handleMarginSelection = (team: string) => {
+        setMarginTeam(team);
+    };
+
+    // High Five Picks
+    const [highFivePicks, setHighFivePicks] = useState<string[]>([]);
+
+    const handleHighFiveSelection = (type: string, teamA: string, teamB?: string) => {
+        if (type === 'remove') {
+            // Remove the previous value if we're changing a drop down
+            setHighFivePicks(previousPicks => previousPicks.filter(pick => pick !== teamA));
+        } else if (type === 'swap') {
+            // First remove the previous selection
+            setHighFivePicks(previousPicks => previousPicks.filter(pick => pick !== teamA));
+            // Now add the other value
+            setHighFivePicks(previousPicks => [...previousPicks, teamB as string]);
+        } else {
+            setHighFivePicks(previousPicks => [...previousPicks, teamA]);
+        }
+    };
+
+    // Tiebreaker
+    const [tiebreaker, setTiebreaker] = useState<string>('');
+
+    const handleTiebreakerInput = (event: ChangeEvent<HTMLInputElement>) => {
+        const numRegex = /^[0-9\b]+$/;
+        if (event.target.value === '' || numRegex.test(event.target.value)) {
+            setTiebreaker(event.target.value);
+        }
+    }
+
     const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as UserInfo;
     
     if (!userInfo) {
@@ -60,6 +120,25 @@ function PickSheetForm(props: PicksheetFormProps) {
             </section>
         )
     }
+
+    const survivorField = 'survivor-pick';
+    const priorSurvivorChoice = Object.keys(selections).length === 0
+        ? ''
+        : selections[survivorField as keyof typeof selections];
+    const marginField = 'margin-pick';
+    const priorMarginChoice = Object.keys(selections).length === 0
+        ? ''
+        : selections[marginField as keyof typeof selections];
+    const highFiveField = 'highFivePicks';
+    const priorHighFivePicks = Object.keys(selections).length === 0
+        ? []
+        : selections[highFiveField as keyof typeof selections];
+    // const tiebreakerField = 'tiebreaker';
+    // TODO: Set state rather than doing this
+    // const priorTiebreaker = Object.keys(selections).length === 0
+    //     ? null
+    //     : selections[tiebreakerField as keyof typeof selections];
+    const lastGameCompleted = currentWeekInfo[`matchup_${numGamesThisWeek}` as keyof typeof currentWeekInfo].winner !== '';
 
     // Ping the database to see if there are picks from this week for this user
     useEffect(() => {
@@ -88,25 +167,23 @@ function PickSheetForm(props: PicksheetFormProps) {
     const handleSubmit = async (e: any) => {
         e.preventDefault();
 
-        const form = e.target;
-        const formData = new FormData(form);
         const { id } = session.user;
         const { first_name: firstName, last_name: lastName, username } = session.user.user_metadata;
         const choices: choiceFormat = { id, firstName, lastName, username, 'highFivePicks': [] };
-        for (let [key, value] of formData.entries()) {
-            if (key === 'high-five-picks') {
-                choices['highFivePicks'].push(value as string);
-            } else {
-                choices[key as keyof choiceFormat] = value as string | number;
-            }
-        }
 
+        // Set the values via the state of this component rather than using the form
+        // This is done because completed games lock the options and those can't be found by the form data
+
+        // Set the confidence team picks
         let missingConfidencePick = false;
-        for (let i = 0; i < Object.keys(currentWeekInfo).length; i++) {
-            if (!choices[`matchup-${i}`]) {
+        for (let i = 0; i < selectedPicks.length; i++) {
+            const pick = selectedPicks[i];
+            if (pick === undefined) {
                 setFormError('Please make sure you have chosen a winner for each confidence matchup');
                 missingConfidencePick = true;
                 break;
+            } else {
+                choices[`matchup-${i}`] = pick;
             }
         }
         
@@ -114,38 +191,52 @@ function PickSheetForm(props: PicksheetFormProps) {
             return;
         }
 
-        let missingConfidence = false;
-        for (let i = 0; i < Object.keys(currentWeekInfo).length; i++) {
-            if (!choices[`matchup-${i}-confidence`]) {
+        // Set the confidence values
+        let missingConfidenceValue = false;
+        for (let i = 0; i < selectedConfidences.length; i++) {
+            const value = selectedConfidences[i];
+            if (value === undefined) {
                 setFormError('Please make sure you have chosen a confidence value for every matchup');
-                missingConfidence = true;
+                missingConfidenceValue = true;
                 break;
+            } else {
+                choices[`matchup-${i}-confidence`] = value;
             }
         }
         
-        if (missingConfidence) {
-            setFormError('Please make sure you have chosen a confidence value for every matchup');
+        if (missingConfidenceValue) {
             return;
         }
 
-        if (userInfo.aliveInSurvivor && !choices['survivor-pick']) {
+        // Set the survivor pick
+        if (userInfo.aliveInSurvivor && !survivorTeam) {
             setFormError('Please make sure you have chosen a survivor pick');
             return;
+        } else {
+            choices['survivor-pick'] = survivorTeam as string;
         }
 
-        if (!choices['margin-pick']) {
+        // Set the margin pick
+        if (!marginTeam) {
             setFormError('Please make sure you have chosen a margin pick');
             return;
+        } else {
+            choices['margin-pick'] = marginTeam as string;
         }
 
-        if (!choices['highFivePicks'] || choices['highFivePicks'].length !== 5) {
+        // Set the high five picks
+        if (highFivePicks.length !== 5) {
             setFormError('Please make sure you have made all of your high five picks');
             return;
+        } else {
+            choices.highFivePicks = highFivePicks;
         }
 
-        if (!choices['tiebreaker']) {
-            setFormError('Please make sure you have included a tiebreaker');
+        if (tiebreaker.length === 0) {
+            setFormError('Please make sure you have submitted a tiebreaker');
             return;
+        } else {
+            choices.tiebreaker = tiebreaker;
         }
 
         setSelections(choices);
@@ -194,25 +285,6 @@ function PickSheetForm(props: PicksheetFormProps) {
         }
     };
 
-    const survivorField = 'survivor-pick';
-    const priorSurvivorChoice = Object.keys(selections).length === 0
-        ? ''
-        : selections[survivorField as keyof typeof selections];
-    const marginField = 'margin-pick';
-    const priorMarginChoice = Object.keys(selections).length === 0
-        ? ''
-        : selections[marginField as keyof typeof selections];
-    const highFiveField = 'highFivePicks';
-    const priorHighFivePicks = Object.keys(selections).length === 0
-        ? []
-        : selections[highFiveField as keyof typeof selections];
-    const tiebreakerField = 'tiebreaker';
-    const priorTiebreaker = Object.keys(selections).length === 0
-        ? null
-        : selections[tiebreakerField as keyof typeof selections];
-    const numGamesThisWeek = Object.keys(currentWeekInfo).length;
-    const lastGameCompleted = currentWeekInfo[`matchup_${numGamesThisWeek}` as keyof typeof currentWeekInfo].winner !== '';
-
     return (
         <section className='section'>
             <div className='container'>
@@ -220,11 +292,40 @@ function PickSheetForm(props: PicksheetFormProps) {
                 <h2 className='subtitle'>Make sure to fill out every field that you can. If you would like to change your picks you can at any time prior to the below cutoff and as long as that game hasn't started (i.e. no changing your Thursday pick on Friday).</h2>
                 <h2 className='subtitle has-text-danger'>Submission cutoff: {CURRENT_WEEK_CUTOFF_TIME.toLocaleDateString('en-US', { dateStyle: 'full', timeZone: 'America/New_York' })} at {CURRENT_WEEK_CUTOFF_TIME.toLocaleTimeString('en-US', { timeZone: 'America/New_York' })} ET</h2>
                 <form className='box' onSubmit={handleSubmit}>
-                    <ConfidencePicks weekInfo={currentWeekInfo} priorPicks={selections} />
-                    <SurvivorPick weekInfo={currentWeekInfo} userInfo={userInfo} priorPick={priorSurvivorChoice} />
-                    <MarginPick weekInfo={currentWeekInfo} userInfo={userInfo} priorPick={priorMarginChoice} />
-                    <HighFivePicks weekInfo={currentWeekInfo} priorPicks={priorHighFivePicks} />
-                    <TieBreaker finalGame={CURRENT_WEEK_FINAL_GAME} priorTiebreaker={priorTiebreaker} lastGameCompleted={lastGameCompleted} />
+                    <ConfidencePicks
+                        weekInfo={currentWeekInfo}
+                        priorPicks={selections}
+                        selectedPicks={selectedPicks}
+                        onUpdatePick={onUpdatePick}
+                        selectedConfidences={selectedConfidences}
+                        onUpdateConfidence={onUpdateConfidence}
+                    />
+                    <SurvivorPick
+                        weekInfo={currentWeekInfo}
+                        userInfo={userInfo}
+                        priorPick={priorSurvivorChoice}
+                        survivorTeam={survivorTeam}
+                        handleSurvivorSelection={handleSurvivorSelection}
+                    />
+                    <MarginPick
+                        weekInfo={currentWeekInfo}
+                        userInfo={userInfo}
+                        priorPick={priorMarginChoice}
+                        marginTeam={marginTeam}
+                        handleMarginSelection={handleMarginSelection}
+                    />
+                    <HighFivePicks
+                        weekInfo={currentWeekInfo}
+                        priorPicks={priorHighFivePicks}
+                        highFivePicks={highFivePicks}
+                        handleHighFiveSelection={handleHighFiveSelection}
+                    />
+                    <TieBreaker
+                        finalGame={CURRENT_WEEK_FINAL_GAME}
+                        lastGameCompleted={lastGameCompleted}
+                        tiebreaker={tiebreaker}
+                        handleTiebreakerInput={handleTiebreakerInput}
+                    />
                     <div className='field'>
                         <div className='control'>
                             <button className='button is-primary' disabled={lastGameCompleted}>Submit Choices</button>

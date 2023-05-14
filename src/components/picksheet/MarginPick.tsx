@@ -1,18 +1,11 @@
-import { useState } from 'react';
-import { ValidPicks } from '../../constants';
 import PickOneTeam from './PickOneTeam';
 
 function MarginPicks(props: any) {
-    const { weekInfo, userInfo, priorPick } = props;
-    const [selectedTeam, setSelectedTeam] = useState<ValidPicks | null>(null);
+    const { weekInfo, userInfo, priorPick, marginTeam, handleMarginSelection } = props;
 
     const findMatchupByTeam = (team: string) => {
         const matchupId = Object.keys(weekInfo).find((matchup: any) => weekInfo[matchup].home_team === team || weekInfo[matchup].away_team === team);
         return matchupId !== undefined ? weekInfo[matchupId] : null;
-    };
-
-    const handleSelection = (team: ValidPicks) => {
-        setSelectedTeam(team);
     };
 
     // See if the priorPick from this week has already happened (e.g. if their pick was the Thurs game and its now Fri)
@@ -39,8 +32,8 @@ function MarginPicks(props: any) {
                                 gameInfo={weekInfo[matchup].gameInfo}
                                 matchupNumber={index}
                                 name={'margin-pick'}
-                                selectedTeam={selectedTeam}
-                                handleSelection={handleSelection}
+                                selectedTeam={marginTeam}
+                                handleSelection={handleMarginSelection}
                                 currentWeekPick={priorPick}
                                 priorMarginPicks={userInfo.marginPicks}
                                 allGamesDisabled={priorPickGameCompleted}

@@ -1,11 +1,14 @@
+import { ChangeEvent } from 'react';
+
 type TieBreakerProps = {
     finalGame: string;
-    priorTiebreaker: string | null;
     lastGameCompleted: boolean;
+    tiebreaker: string;
+    handleTiebreakerInput: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 function TieBreaker(props: TieBreakerProps) {
-    const { finalGame, priorTiebreaker, lastGameCompleted } = props;
+    const { finalGame, lastGameCompleted, tiebreaker, handleTiebreakerInput } = props;
 
     return (
         <div className='container pb-6'>
@@ -18,9 +21,9 @@ function TieBreaker(props: TieBreakerProps) {
                         type='text'
                         id='tiebreaker'
                         name='tiebreaker'
-                        placeholder='0'
-                        defaultValue={priorTiebreaker === null ? '' : priorTiebreaker}
                         disabled={lastGameCompleted}
+                        value={tiebreaker}
+                        onChange={handleTiebreakerInput}
                     />
                 </div>
             </div>
