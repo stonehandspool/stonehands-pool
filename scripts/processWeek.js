@@ -60,11 +60,11 @@ if (isFirstRun) {
     }
 
     // Move this data to the weekly picks json file
-    weeklyPicksData[`week_${week}`] = [...data];
+    weeklyPicksData.weeklyPicks[`week_${week}`] = [...data];
 }
 
 const findSubmission = (submissionId) => {
-    return weeklyPicksData[`week_${week}`].find(submission => submission.user_id === submissionId);
+    return weeklyPicksData.weeklyPicks[`week_${week}`].find(submission => submission.user_id === submissionId);
 };
 
 const findMatchupByTeam = (teamName) => {
@@ -138,7 +138,7 @@ players.forEach(player => {
         picks = playerSubmissionFromDB.submission_data;
     } else {
         const randomSubmission = createRandomChoices(player.id, player.username, player.firstName, player.lastName, player.aliveInSurvivor);
-        weeklyPicksData[`week_${week}`].push(randomSubmission);
+        weeklyPicksData.weeklyPicks[`week_${week}`].push(randomSubmission);
         picks = randomSubmission.submission_data;
     }
     let weeklyWins = 0;

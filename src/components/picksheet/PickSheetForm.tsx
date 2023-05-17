@@ -3,9 +3,10 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
-import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_FINAL_GAME, CURRENT_YEAR, SEASON_READY, UserInfo } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_FINAL_GAME, CURRENT_YEAR, SEASON_READY, SubmissionInfo, UserInfo } from '../../constants';
 import * as seasonData from '../../../data/2023/season.json';
 import * as playerData from '../../../data/2023/players.json';
+import * as weeklyPicks from '../../../data/2023/weeklyPicks.json';
 import ConfidencePicks from './ConfidencePicks';
 import HighFivePicks from './HighFivePicks';
 import MarginPick from './MarginPick';
@@ -26,6 +27,11 @@ export type choiceFormat = {
 };
 
 const currentWeekInfo = seasonData.weeks[`week_${CURRENT_WEEK}` as keyof typeof seasonData.weeks];
+const currentWeeksPicks = weeklyPicks.weeklyPicks[`week_${CURRENT_WEEK}` as keyof typeof weeklyPicks.weeklyPicks] as SubmissionInfo[];
+
+const findSubmission = (submissionId: string) => {
+    return currentWeeksPicks.find(submission => submission.user_id === submissionId);
+};
 
 function PickSheetForm(props: PicksheetFormProps) {
     const { session } = props;
@@ -162,11 +168,45 @@ function PickSheetForm(props: PicksheetFormProps) {
                 // Set prior tiebreaker
                 setTiebreaker(priorPicks.tiebreaker)
                 setSelections(priorPicks);
+
+                // Update other state
                 setPriorPicks(true);
             }
         };
 
-        fetchPicks().catch(err => console.error(err));
+        // First check the JSON files to hopefully avoid pinging the database
+        const submission = findSubmission(userInfo.id);
+        if (submission) {
+            const { submission_data: priorPicks } = submission;
+            // Set prior picks and confidences
+            const priorConfidencePicks: string[] = [];
+            const priorConfidenceValues: number[] = [];
+            for (let i = 0; i < numGamesThisWeek; i++) {
+                priorConfidencePicks.push(priorPicks[`matchup-${i}` as keyof typeof priorPicks] as string);
+                priorConfidenceValues.push(parseInt(priorPicks[`matchup-${i}-confidence` as keyof typeof priorPicks] as string, 10));
+            }
+            setSelectedPicks(priorConfidencePicks);
+            setSelectedConfidences(priorConfidenceValues);
+
+            // Set prior survivor pick
+            if (userInfo.aliveInSurvivor) {
+                setSurvivorTeam(priorPicks['survivor-pick']);
+            }
+            // Set prior margin pick
+            setMarginTeam(priorPicks['margin-pick']);
+
+            // Set prior high five picks
+            setHighFivePicks(priorPicks.highFivePicks);
+
+            // Set prior tiebreaker
+            setTiebreaker(priorPicks.tiebreaker)
+
+            // Update other state
+            setSelections(priorPicks);
+            setPriorPicks(true);
+        } else {
+            fetchPicks().catch(err => console.error(err));
+        }
     }, []);
     
     const handleSubmit = async (e: any) => {
