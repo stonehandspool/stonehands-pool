@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import * as TeamLogos from '../../assets/logos';
 import * as TeamInfo from '../../../data/2023/teams.json';
 import { MarginPick, ValidPicks } from '../../constants';
@@ -11,7 +10,6 @@ export interface PickOneTeamProps {
     name: string;
     selectedTeam: string | null;
     handleSelection: Function;
-    currentWeekPick: string;
     priorSurvivorPicks?: string[];
     priorMarginPicks?: MarginPick[];
     allGamesDisabled: boolean;
@@ -29,7 +27,6 @@ function PickOneTeam(props: PickOneTeamProps) {
         name,
         selectedTeam,
         handleSelection,
-        currentWeekPick,
         priorSurvivorPicks,
         priorMarginPicks,
         allGamesDisabled,
@@ -40,13 +37,6 @@ function PickOneTeam(props: PickOneTeamProps) {
 
     const homeTeamInfo = teams[homeTeam];
     const awayTeamInfo = teams[awayTeam];
-
-    // If the user had previously submitted, select that radio button
-    useEffect(() => {
-        if (currentWeekPick) {
-            handleSelection(currentWeekPick);
-        }
-    }, [currentWeekPick]);
 
     const onChoiceChange = (e: any) => {
         if (e.target.checked) {

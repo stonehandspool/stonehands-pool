@@ -3,11 +3,21 @@ import ConfidenceDropDown from './ConfidenceDropDown';
 import MatchupCard from './MatchupCard';
 
 function ConfidencePicks(props: any) {
-    const { weekInfo, priorPicks } = props;
+    const { weekInfo, priorPicks, selectedPicks, onUpdatePick, selectedConfidences, onUpdateConfidence } = props;
     const numOptions = Object.keys(weekInfo).length;
 
-    const [selectedPicks, setSelectedPicks] = useState<string[]>(new Array(numOptions));
-    const [selectedConfidences, setSelectedConfidences] = useState<number[]>([]);
+    // TODO: This works but isn't necessarily the right way to do this, use this as a fallback if needed
+    // Also needs a forwardRef in order for it to work
+    // useImperativeHandle(ref, () => {
+    //     return {
+    //         getPicks() {
+    //             return selectedPicks;
+    //         },
+    //         getConfidences() {
+    //             return selectedConfidences;
+    //         },
+    //     };
+    // }, [selectedPicks, selectedConfidences]);
 
     let numGamesCompleted = 0;
     Object.keys(weekInfo).map(key => {
@@ -15,19 +25,6 @@ function ConfidencePicks(props: any) {
             numGamesCompleted++;
         }
     });
-
-    const onUpdatePick = (newValue: string, index: number) => {
-        let pickCopy = [...selectedPicks];
-        pickCopy[index] = newValue;
-        setSelectedPicks(pickCopy);
-    };
-
-    const onUpdateConfidence = (previousValue: number, newValue: number) => {
-        // Remove the previous value if we're changing a drop down
-        setSelectedConfidences(previousSelections => previousSelections.filter(value => value !== previousValue));
-        // Add in the new value from that drop down
-        setSelectedConfidences(previousSelections => [...previousSelections, newValue]);
-    };
 
     return(
         <div className='container pb-6'>

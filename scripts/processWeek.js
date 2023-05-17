@@ -8,8 +8,9 @@ const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
 const args = minimist(process.argv.slice(2));
-const { year, week, firstRun } = args;
+const { year, week, firstRun, submissionsLocked } = args;
 const isFirstRun = firstRun === 'true';
+const isSubmissionsLocked = submissionsLocked === 'true';
 const CURRENT_YEAR = '2023-2024'; // For the database
 
 // First make sure we received a valid year and week
@@ -46,8 +47,10 @@ const weeklyPicksData = await JSON.parse(
     await readFile(path.resolve(`data/${year}/weeklyPicks.json`))
 );
 
-if (isFirstRun) {
+if (!isSubmissionsLocked) {
     // Get the weeks picks from the database
+    // We want to do this every run until submissions are marked as locked to make sure if anyone missed their submission on Thu
+    // We still get the rest of their picks assuming they were able to submit prior to the cutoff
     const { data, error } = await supabaseClient
     .from('user_picks')
     .select()
@@ -60,11 +63,11 @@ if (isFirstRun) {
     }
 
     // Move this data to the weekly picks json file
-    weeklyPicksData[`week_${week}`] = [...data];
+    weeklyPicksData.weeklyPicks[`week_${week}`] = [...data];
 }
 
 const findSubmission = (submissionId) => {
-    return weeklyPicksData[`week_${week}`].find(submission => submission.user_id === submissionId);
+    return weeklyPicksData.weeklyPicks[`week_${week}`].find(submission => submission.user_id === submissionId);
 };
 
 const findMatchupByTeam = (teamName) => {
@@ -132,14 +135,17 @@ const numGamesThisWeek = Object.keys(weekData).length;
 players.forEach(player => {
     // The player object is the season-long data for the player which needs to be updated
     // First, get the submission data for that player
-    let picks;
+    let pickInfo; // To check if this was a DB submission or random submission
+    let submissionInfo; // The actual results
     const playerSubmissionFromDB = findSubmission(player.id);
     if (playerSubmissionFromDB) {
-        picks = playerSubmissionFromDB.submission_data;
+        pickInfo = playerSubmissionFromDB;
+        submissionInfo = playerSubmissionFromDB.submission_data;
     } else {
         const randomSubmission = createRandomChoices(player.id, player.username, player.firstName, player.lastName, player.aliveInSurvivor);
-        weeklyPicksData[`week_${week}`].push(randomSubmission);
-        picks = randomSubmission.submission_data;
+        weeklyPicksData.weeklyPicks[`week_${week}`].push(randomSubmission);
+        pickInfo = randomSubmission
+        submissionInfo = randomSubmission.submission_data;
     }
     let weeklyWins = 0;
     let weeklyLosses = 0;
@@ -161,8 +167,8 @@ players.forEach(player => {
         const { winner, evaluated } = matchup;
         // If we haven't evaluated this matchup yet and the game is actually finished
         if (!evaluated && winner !== '') {
-            const userChoice = picks[`matchup-${i}`];
-            const userConfidence = parseInt(picks[`matchup-${i}-confidence`], 10);
+            const userChoice = submissionInfo[`matchup-${i}`];
+            const userConfidence = parseInt(submissionInfo[`matchup-${i}-confidence`], 10);
             if (winner === userChoice) {
                 weeklyWins++;
                 weeklyPoints += userConfidence;
@@ -181,7 +187,7 @@ players.forEach(player => {
     player.currentWeekLosses += weeklyLosses;
     player.currentWeekTies += weeklyTies;
     player.currentWeekPoints += weeklyPoints;
-    player.currentWeekTiebreaker = parseInt(picks.tiebreaker, 10);
+    player.currentWeekTiebreaker = parseInt(submissionInfo.tiebreaker, 10);
     player.wins += weeklyWins;
     player.losses += weeklyLosses;
     player.ties += weeklyTies;
@@ -190,20 +196,24 @@ players.forEach(player => {
     if (isFirstRun) {
         player.weeks++;
         const totalTbPoints = player.tbAvg * player.weeks;
-        player.tbAvg = (totalTbPoints + parseInt(picks.tiebreaker, 10)) / player.weeks;
+        player.tbAvg = (totalTbPoints + parseInt(submissionInfo.tiebreaker, 10)) / player.weeks;
     }
     player.games += numGamesEvaluated
 
     // Now evaluate the survivor pool pick
     if (player.aliveInSurvivor) {
-        const survivorPick = picks['survivor-pick'];
+        const survivorPick = submissionInfo['survivor-pick'];
         if (isFirstRun) {
             player.survivorPicks.push(survivorPick);
+        } else {
+            // In case they changed their mind after the Thursday night game
+            player.survivorPicks[player.survivorPicks.length - 1] = survivorPick;
         }
-        if (survivorPick === '') {
+
+        if (survivorPick === '' && isSubmissionsLocked) {
             // Player missed a week
             player.aliveInSurvivor = false;
-        } else {
+        } else if (survivorPick !== '') {
             const survivorMatchup = findMatchupByTeam(survivorPick);
             if (survivorMatchup.winner !== '' && survivorMatchup.winner !== survivorPick) {
                 player.aliveInSurvivor = false;
@@ -212,11 +222,22 @@ players.forEach(player => {
     }
 
     // Now evaluate the margin pool pick
-    const marginPick = picks['margin-pick'];
-    const marginMatchup = findMatchupByTeam(marginPick);
+    const marginPick = submissionInfo['margin-pick'];
+    let marginMatchup = findMatchupByTeam(marginPick);
     if (isFirstRun) {
         player.marginPicks.push({ team: marginPick, margin: null });
+    } else {
+        // In case they changed their mind after the Thursday night game
+        player.marginPicks[player.marginPicks.length - 1].team = marginPick;
     }
+
+    if (pickInfo.submission_id === -1) {
+        // If the user never submitted a picksheet, ensure that they get the worst possible pick even if this is the last run
+        const biggestLoser = findBiggestLoser();
+        player.marginPicks[player.marginPicks.length - 1].team = biggestLoser;
+        marginMatchup = findMatchupByTeam(biggestLoser);
+    }
+
     if (marginMatchup.winner !== '' && !marginMatchup.evaluated) {
         let margin;
         if (marginPick === marginMatchup.home_team) {
@@ -234,8 +255,8 @@ players.forEach(player => {
     }
     let numCorrect = 0;
     player.highFiveThisWeek = [];
-    for (let i = 0; i < picks.highFivePicks.length; i++) {
-        const choice = picks.highFivePicks[i];
+    for (let i = 0; i < submissionInfo.highFivePicks.length; i++) {
+        const choice = submissionInfo.highFivePicks[i];
         let won = null;
         let choiceMatchup;
         if (choice === 'N/A') {
@@ -269,7 +290,7 @@ players.forEach(player => {
 });
 
 // Write to the weeklyPicks now in case anyone didn't submit
-if (isFirstRun) {
+if (!isSubmissionsLocked) {
     // Now write to the weekly picks json file so that it is saved
     const updatedWeeklyPicks = JSON.stringify(weeklyPicksData, null, 2);
     await writeFile(path.resolve(`data/${year}/weeklyPicks.json`), updatedWeeklyPicks);

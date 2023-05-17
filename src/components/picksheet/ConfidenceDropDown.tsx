@@ -25,7 +25,7 @@ function ConfidenceDropDown(props: ConfidenceDropDownProps) {
     useEffect(() => {
         if (priorConfidence) {
             const priorValue = parseInt(priorConfidence, 10);
-            onUpdateConfidence(currentValue, priorValue);
+            onUpdateConfidence(priorValue, matchupNumber);
             setCurrentValue(priorValue);
         }
     }, [priorConfidence]);
@@ -34,7 +34,7 @@ function ConfidenceDropDown(props: ConfidenceDropDownProps) {
         e.preventDefault();
 
         const newValue = parseInt(e.target.value, 10);
-        onUpdateConfidence(currentValue, newValue);
+        onUpdateConfidence(newValue, matchupNumber);
         setCurrentValue(newValue);
     };
     
@@ -55,6 +55,7 @@ function ConfidenceDropDown(props: ConfidenceDropDownProps) {
                             key={`matchup-${matchupNumber}-option-${index}`}
                             value={number}
                             hidden={selectedNumbers.includes(number)}
+                            disabled={selectedNumbers.includes(number)}
                         >
                             {number}
                         </option>

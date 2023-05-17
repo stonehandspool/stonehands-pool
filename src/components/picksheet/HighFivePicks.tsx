@@ -1,31 +1,15 @@
-import { useEffect, useState } from 'react';
-import { ValidPicks } from '../../constants';
 import HighFiveCheckboxes from './HighFiveCheckBoxes';
 
-function HighFivePicks(props: any) {
-    const { weekInfo, priorPicks } = props;
-    const [picks, setPicks] = useState<ValidPicks[]>([]);
-    const MAX_PICKS = 5;
+const MAX_PICKS = 5;
 
-    const handleSelection = (type: string, teamA: ValidPicks, teamB?: ValidPicks) => {
-        if (type === 'remove') {
-            // Remove the previous value if we're changing a drop down
-            setPicks(previousPicks => previousPicks.filter(pick => pick !== teamA));
-        } else if (type === 'swap') {
-            // First remove the previous selection
-            setPicks(previousPicks => previousPicks.filter(pick => pick !== teamA));
-            // Now add the other value
-            setPicks(previousPicks => [...previousPicks, teamB as ValidPicks]);
-        } else {
-            setPicks(previousPicks => [...previousPicks, teamA]);
-        }
-    };
+function HighFivePicks(props: any) {
+    const { weekInfo, highFivePicks, handleHighFiveSelection } = props;
     
     return (
         <div className='container pb-6'>
             <h3 className='title is-3'>High Five Picks:</h3>
             <h4 className='subtitle'>Pick <strong>5</strong> teams you think will win this week, the more you get right the more points you get!</h4>
-            <p className='pb-3'>You have currently made <strong>{picks.length}/{MAX_PICKS}</strong> of your picks</p>
+            <p className='pb-3'>You have currently made <strong>{highFivePicks.length}/{MAX_PICKS}</strong> of your picks</p>
             <div className='columns is-multiline'>
                 {
                     Object.keys(weekInfo).map((matchup, index) => (
@@ -38,10 +22,9 @@ function HighFivePicks(props: any) {
                                 gameCompleted={weekInfo[matchup].winner !== ''}
                                 matchupNumber={index}
                                 name={'high-five-picks'}
-                                handleSelection={handleSelection}
+                                handleSelection={handleHighFiveSelection}
                                 maxPicks={MAX_PICKS}
-                                picksArray={picks}
-                                currentWeekPicks={priorPicks}
+                                picksArray={highFivePicks}
                             />
                         </div>
                     ))

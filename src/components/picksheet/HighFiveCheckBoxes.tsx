@@ -13,14 +13,13 @@ export interface HighFiveCheckboxProps {
     handleSelection: Function;
     maxPicks: number;
     picksArray: ValidPicks[];
-    currentWeekPicks: ValidPicks[];
 };
 
 type TeamLogoKey = keyof typeof TeamLogos;
 const { teams } = TeamInfo;
 
 function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
-    const { homeTeam, awayTeam, gameInfo, gameCompleted, matchupNumber, name, handleSelection, maxPicks, picksArray, currentWeekPicks } = props;
+    const { homeTeam, awayTeam, gameInfo, gameCompleted, matchupNumber, name, handleSelection, maxPicks, picksArray } = props;
     const [selectedTeam, setSelectedTeam] = useState<ValidPicks | null>(null);
     const [currentWeekPickSet, setCurrentWeekPickSet] = useState(false);
 
@@ -31,17 +30,17 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
     const awayTeamInfo = teams[awayTeam];
 
     useEffect(() => {
-        if (currentWeekPicks.length > 0 && !currentWeekPickSet) {
-            if (currentWeekPicks.includes(homeTeam)) {
+        if (picksArray.length > 0 && !currentWeekPickSet) {
+            if (picksArray.includes(homeTeam)) {
                 handleSelection('add', homeTeam);
                 setSelectedTeam(homeTeam)
-            } else if (currentWeekPicks.includes(awayTeam)) {
+            } else if (picksArray.includes(awayTeam)) {
                 handleSelection('add', awayTeam);
                 setSelectedTeam(awayTeam);
             }
             setCurrentWeekPickSet(true);
         }
-    }, [currentWeekPicks]);
+    }, [picksArray]);
 
     const onChoiceChange = (e: any) => {
         const team = e.target.value as ValidPicks;

@@ -1,21 +1,15 @@
-import { useState } from 'react';
 import PickOneTeam from './PickOneTeam';
 
 function SurvivorPick(props: any) {
-    const { weekInfo, userInfo, priorPick } = props;
-    const [selectedTeam, setSelectedTeam] = useState<string | null>(null);
+    const { weekInfo, userInfo, survivorTeam, handleSurvivorSelection } = props;
 
     const findMatchupByTeam = (team: string) => {
         const matchupId = Object.keys(weekInfo).find((matchup: any) => weekInfo[matchup].home_team === team || weekInfo[matchup].away_team === team);
         return matchupId !== undefined ? weekInfo[matchupId] : null;
     };
 
-    const handleSelection = (team: string) => {
-        setSelectedTeam(team);
-    };
-
     // See if the priorPick from this week has already happened (e.g. if their pick was the Thurs game and its now Fri)
-    const priorPickMatchupInfo = findMatchupByTeam(priorPick);
+    const priorPickMatchupInfo = findMatchupByTeam(survivorTeam);
     const priorPickGameCompleted = priorPickMatchupInfo && priorPickMatchupInfo.winner !== '' ? true : false;
 
     return (
@@ -39,9 +33,8 @@ function SurvivorPick(props: any) {
                                 gameInfo={weekInfo[matchup].gameInfo}
                                 matchupNumber={index}
                                 name={'survivor-pick'}
-                                selectedTeam={selectedTeam}
-                                handleSelection={handleSelection}
-                                currentWeekPick={priorPick}
+                                selectedTeam={survivorTeam}
+                                handleSelection={handleSurvivorSelection}
                                 priorSurvivorPicks={userInfo.survivorPicks}
                                 allGamesDisabled={priorPickGameCompleted}
                             />
