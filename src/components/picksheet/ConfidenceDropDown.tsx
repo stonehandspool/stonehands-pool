@@ -55,6 +55,7 @@ function ConfidenceDropDown(props: ConfidenceDropDownProps) {
                             key={`matchup-${matchupNumber}-option-${index}`}
                             value={number}
                             hidden={selectedNumbers.includes(number)}
+                            disabled={selectedNumbers.includes(number)}
                         >
                             {number}
                         </option>
