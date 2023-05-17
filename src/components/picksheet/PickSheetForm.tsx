@@ -50,6 +50,7 @@ function PickSheetForm(props: PicksheetFormProps) {
 
     // Confidence Pool
     const numGamesThisWeek = Object.keys(currentWeekInfo).length;
+    const lastGameCompleted = currentWeekInfo[`matchup_${numGamesThisWeek}` as keyof typeof currentWeekInfo].winner !== '';
     const [selectedPicks, setSelectedPicks] = useState<string[]>(new Array(numGamesThisWeek));
     const [selectedConfidences, setSelectedConfidences] = useState<number[]>(new Array(numGamesThisWeek));
 
@@ -121,25 +122,6 @@ function PickSheetForm(props: PicksheetFormProps) {
         )
     }
 
-    const survivorField = 'survivor-pick';
-    const priorSurvivorChoice = Object.keys(selections).length === 0
-        ? ''
-        : selections[survivorField as keyof typeof selections];
-    const marginField = 'margin-pick';
-    const priorMarginChoice = Object.keys(selections).length === 0
-        ? ''
-        : selections[marginField as keyof typeof selections];
-    const highFiveField = 'highFivePicks';
-    const priorHighFivePicks = Object.keys(selections).length === 0
-        ? []
-        : selections[highFiveField as keyof typeof selections];
-    // const tiebreakerField = 'tiebreaker';
-    // TODO: Set state rather than doing this
-    // const priorTiebreaker = Object.keys(selections).length === 0
-    //     ? null
-    //     : selections[tiebreakerField as keyof typeof selections];
-    const lastGameCompleted = currentWeekInfo[`matchup_${numGamesThisWeek}` as keyof typeof currentWeekInfo].winner !== '';
-
     // Ping the database to see if there are picks from this week for this user
     useEffect(() => {
         const fetchPicks = async () => {
@@ -156,6 +138,29 @@ function PickSheetForm(props: PicksheetFormProps) {
 
             if (data && data.length > 0) {
                 const { submission_data: priorPicks } = data[0];
+
+                // Set prior picks and confidences
+                const priorConfidencePicks = [];
+                const priorConfidenceValues = [];
+                for (let i = 0; i < numGamesThisWeek; i++) {
+                    priorConfidencePicks.push(priorPicks[`matchup-${i}`]);
+                    priorConfidenceValues.push(priorPicks[`matchup-${i}-confidence`]);
+                }
+                setSelectedPicks(priorConfidencePicks);
+                setSelectedConfidences(priorConfidenceValues);
+
+                // Set prior survivor pick
+                if (userInfo.aliveInSurvivor) {
+                    setSurvivorTeam(priorPicks['survivor-pick']);
+                }
+                // Set prior margin pick
+                setMarginTeam(priorPicks['margin-pick']);
+
+                // Set prior high five picks
+                setHighFivePicks(priorPicks.highFivePicks);
+
+                // Set prior tiebreaker
+                setTiebreaker(priorPicks.tiebreaker)
                 setSelections(priorPicks);
                 setPriorPicks(true);
             }
@@ -166,6 +171,15 @@ function PickSheetForm(props: PicksheetFormProps) {
     
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+
+        console.log(selectedPicks)
+        console.log(selectedConfidences)
+        console.log(survivorTeam);
+        console.log(marginTeam);
+        console.log(highFivePicks);
+        console.log(tiebreaker);
+
+        return;
 
         const { id } = session.user;
         const { first_name: firstName, last_name: lastName, username } = session.user.user_metadata;
@@ -303,20 +317,17 @@ function PickSheetForm(props: PicksheetFormProps) {
                     <SurvivorPick
                         weekInfo={currentWeekInfo}
                         userInfo={userInfo}
-                        priorPick={priorSurvivorChoice}
                         survivorTeam={survivorTeam}
                         handleSurvivorSelection={handleSurvivorSelection}
                     />
                     <MarginPick
                         weekInfo={currentWeekInfo}
                         userInfo={userInfo}
-                        priorPick={priorMarginChoice}
                         marginTeam={marginTeam}
                         handleMarginSelection={handleMarginSelection}
                     />
                     <HighFivePicks
                         weekInfo={currentWeekInfo}
-                        priorPicks={priorHighFivePicks}
                         highFivePicks={highFivePicks}
                         handleHighFiveSelection={handleHighFiveSelection}
                     />

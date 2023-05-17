@@ -1,7 +1,7 @@
 import PickOneTeam from './PickOneTeam';
 
 function MarginPicks(props: any) {
-    const { weekInfo, userInfo, priorPick, marginTeam, handleMarginSelection } = props;
+    const { weekInfo, userInfo, marginTeam, handleMarginSelection } = props;
 
     const findMatchupByTeam = (team: string) => {
         const matchupId = Object.keys(weekInfo).find((matchup: any) => weekInfo[matchup].home_team === team || weekInfo[matchup].away_team === team);
@@ -9,7 +9,7 @@ function MarginPicks(props: any) {
     };
 
     // See if the priorPick from this week has already happened (e.g. if their pick was the Thurs game and its now Fri)
-    const priorPickMatchupInfo = findMatchupByTeam(priorPick);
+    const priorPickMatchupInfo = findMatchupByTeam(marginTeam);
     const priorPickGameCompleted = priorPickMatchupInfo && priorPickMatchupInfo.winner !== '' ? true : false;    
 
     return (
@@ -34,7 +34,6 @@ function MarginPicks(props: any) {
                                 name={'margin-pick'}
                                 selectedTeam={marginTeam}
                                 handleSelection={handleMarginSelection}
-                                currentWeekPick={priorPick}
                                 priorMarginPicks={userInfo.marginPicks}
                                 allGamesDisabled={priorPickGameCompleted}
                             />

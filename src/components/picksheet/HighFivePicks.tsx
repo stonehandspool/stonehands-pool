@@ -3,7 +3,7 @@ import HighFiveCheckboxes from './HighFiveCheckBoxes';
 const MAX_PICKS = 5;
 
 function HighFivePicks(props: any) {
-    const { weekInfo, priorPicks, highFivePicks, handleHighFiveSelection } = props;
+    const { weekInfo, highFivePicks, handleHighFiveSelection } = props;
     
     return (
         <div className='container pb-6'>
@@ -25,7 +25,6 @@ function HighFivePicks(props: any) {
                                 handleSelection={handleHighFiveSelection}
                                 maxPicks={MAX_PICKS}
                                 picksArray={highFivePicks}
-                                currentWeekPicks={priorPicks}
                             />
                         </div>
                     ))
