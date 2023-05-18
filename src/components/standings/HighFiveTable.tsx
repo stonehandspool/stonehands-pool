@@ -102,7 +102,7 @@ function HighFiveTable() {
                                     }
                                     {
                                         weeksArr.map((week, ind) => {
-                                            if (row.weeklyPoints[ind]) {
+                                            if (row.weeklyPoints[ind] || row.weeklyPoints[ind] === 0) {
                                                 return <td key={`${row.name}-${ind}`}>{row.weeklyPoints[ind]}</td>
                                             } else {
                                                 return <td key={`${row.name}-${ind}`}></td>
