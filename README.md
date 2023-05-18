@@ -39,13 +39,13 @@ A webapp made by Ryan Fandl to allow for a season-long NFL pool. The front end i
 
 
 ### Processing a week
-Run this script on Monday morning (after all Sunday games have been completed)
+Run this script on Friday morning (after all Thursday night games have been completed)
 ```sh
-node scripts/processWeek.js --year {year} --week {week} --firstRun true
+node scripts/processWeek.js --year {year} --week {week} --firstRun true --submissionsLocked false
 ```
-Run this script after the Monday night game(s) to complete the week
+Run this script after all of the Sunday games and then also after the Monday game(s) to update and/or finish the week
 ```sh
-node scripts/processWeek.js --year {year} --week {week} --firstRun false
+node scripts/processWeek.js --year {year} --week {week} --firstRun false --submissionsLocked true
 ```
 ### Updating the Sass/CSS
 ```sh
