@@ -212,6 +212,14 @@ function PickSheetForm(props: PicksheetFormProps) {
     const handleSubmit = async (e: any) => {
         e.preventDefault();
 
+        const { data, error } = await supabaseClient
+            .functions
+            .invoke('send-email', {
+                body: {
+                    name: 'Ryan',
+                },
+            })
+
         console.log(selectedPicks)
         console.log(selectedConfidences)
         console.log(survivorTeam);
