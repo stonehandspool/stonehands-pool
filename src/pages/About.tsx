@@ -1,204 +1,380 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CURRENT_YEAR } from '../constants';
+import MatchupCard from '../components/picksheet/MatchupCard';
+import ConfidenceDropDown from '../components/picksheet/ConfidenceDropDown';
+import PickOneTeam from '../components/picksheet/PickOneTeam';
+import HighFiveCheckboxes from '../components/picksheet/HighFiveCheckBoxes';
 
 function About() {
+    // Just dummy objects to allow the examples to somewhat work
+    const [selectedPick, setSelectedPick] = useState<string>('');
+    const [marginTeam, setMarginTeam] = useState<string>('');
+    const onUpdatePick = () => {};
+    const onUpdateConfidence = () => {};
+    const handleMarginSelection = (team: string) => {
+        setMarginTeam(team);
+    };
+    const handleHighFiveSelection = () => {};
+
     return (
         <section className='section'>
             <div className='container'>
                 <h1 className='title has-text-centered'>The {CURRENT_YEAR} Stonehands Pool</h1>
                 <h2 className='subtitle has-text-centered'>About, How to Play, and more!</h2>
-                <h3 className='title is-3'>About</h3>
-                <p className='mb-5'>
-                    If you were wondering where the name for this pool came from, it's a combination of the two things that inspired it! The first
-                    inspiration for the pool was the Stablehand Pool. This was a pool run by a friend of my grandpa, which I participated in for as
-                    long as I can remember. I drew a lot of inspiration from this pool while creating Stonehands, for anyone familiar with the
-                    Stablehand pool you'll be very familiar with the format. The second inspiration for this pool was Stonehill, the college I attended.
-                    Almost all of the fantasy leagues I'm part of are primarily made up of my friends from Stonehill, and I've always wanted another
-                    place for fantasy sports outside of our normal leagues. With that in mind, Stonehands comes from the combination of the Stablehand Pool and
-                    Stonehill, Stablehand x Stonehill = Stonehands.
-                </p>
-                <p className='mb-5'>
-                    This pool is intended to be played by any friends and family who are interested! You don't need to have gone to Stonehill or have played in the
-                    Stablehand Pool in the past. Feel free to invite any of your friends or family to this pool as well, the more the merrier!
-                </p>
-                <h3 className='title is-3'>Referrals</h3>
-                <p className='mb-5'>
-                    You'll notice on our <Link to='/sign-up'>Sign Up</Link> page that it asks for a referral. You're more than welcome to put me (Ryan) if you'd like.
-                    This is simply so that I can know who invited who as the pool hopefully grows larger and larger.
-                </p>
-                <h3 className='title is-3'>How to Play</h3>
-                <div className='content'>
-                    <p>
-                        This pool currently contains 4 pools, if you have any ideas about more pool options feel free to reach out to Ryan with any suggestions. The current
-                        pools you can find on this website are:
-                    </p>
-                    <ul>
-                        <li>The Confidence Pool</li>
-                        <li>The Survivor Pool</li>
-                        <li>The Margin Pool</li>
-                        <li>The High Five Pool</li>
-                    </ul>
+                <br /> <br />
+                <h3 className='title is-3 has-text-centered'>About</h3>
+                <div className='columns is-centered'>
+                    <div className='column is-two-thirds'>
+                        <p className='mb-2'>
+                            If you were wondering where the name for this pool came from, it's a combination of the two things that inspired it! The first
+                            inspiration for the pool was the Stablehand Pool while the other inspiration was Stonehill College.  
+                        </p>
+                        <p className='mb-2'>
+                            The Stablehand pool was a pool run by a friend of my grandpa, which I participated in for as
+                            long as I can remember. I drew a lot of inspiration from this pool while creating Stonehands. For anyone who previously participated
+                            in the Stablehand pool you'll find a lot of similarities here in the Stonehands pool.
+                            The second inspiration for this pool, Stonehill College, was the college I attended.
+                            Almost all of the fantasy leagues I'm part of are primarily made up of my friends from Stonehill, and I've always wanted another
+                            place for fantasy sports outside of our normal leagues. 
+                        </p>
+                        <p className='mb-2'>
+                            With that in mind, Stonehands comes from the combination of the Stablehand Pool and
+                            Stonehill, Stablehand x Stonehill = Stonehands!
+                        </p>
+                        <p className='mb-5'>
+                            This pool is intended to be played by any friends and family who are interested! You don't need to have gone to Stonehill or have played in the
+                            Stablehand Pool in the past. Feel free to invite any of your friends or family to this pool as well, the more the merrier!
+                        </p>
+                    </div>
                 </div>
-                <p className='mb-5'>
-                    You can read more about each pool below. The most important thing to know is that every pool is played straight up, we don't play the spread.
-                </p>
-                <h4 className='title is-4'>The Confidence Pool</h4>
-                <div className='content'>
-                    <p className='mb-5'>
-                        Each week you will choose who you think will win in every game while assigning confidence points with 1 being the least confident and 16 being the most confident.
-                        If you choose a team correctly you are awarded that many points. If a week has less than 16 games being played then the maximum confidence will be however many
-                        games are played that week. The tiebreakers for this pool are as follows:
-                    </p>
-                    <ol>
-                        <li>Total wins for the week (for weekly results) and total wins on the season (for season results)</li>
-                        <li>The second tiebreaker, which is for the weekly standings is the total points in the Monday Night game (or last game of the week)</li>
-                        <ol className='is-lower-alpha'>
-                            <li>
-                                This will factor in the closest to the total score, we're not doing price is right rules! Someone who guesses 1 point more than the total score will win the
-                                tiebreaker over someone who guessed 2 points below the total score.
-                            </li>
-                        </ol>
-                    </ol>
+                <h3 className='title is-3 has-text-centered'>Referrals</h3>
+                <div className='columns is-centered'>
+                    <div className='column is-two-thirds'>
+                        <p className='mb-5'>
+                            You'll notice on our <Link to='/sign-up'>Sign Up</Link> page that it asks for a referral. You're more than welcome to put me (Ryan) if you'd like.
+                            However, if someone else invited you this pool I ask that you put their name in this field. This is simply so that I can know who invited who
+                            as the pool hopefully grows larger and larger.
+                        </p>
+                    </div>
                 </div>
-                <h4 className='title is-4'>The Survivor Pool</h4>
-                <p className='mb-5'>
-                    This pool will run for as long as there are people still alive in it. Each week, everyone will pick one team that they think will win with <strong>no </strong>
-                    repeats allowed. If you get a pick wrong, you will be eliminated from the pool until next season, so choose carefully! Once there is only one player remaining,
-                    they will win the whole pot allocated for this pool. If there is more than one person left after week 18, the remaining players will split the pot. If it comes
-                    down to two players remaining <strong>before </strong> week 18 and they would both like to split the pot, they can contact me and that can be arranged. If you forget
-                    to submit a picksheet and you are still alive in the survivor pool, you will not be awarded a random choice and will be eliminated from this pool.
-                </p>
-                <h4 className='title is-4'>The Margin Pool</h4>
-                <p className='mb-5'>
-                    This pool will run for the duration of the season. Each week, you will pick who you think will win by the most but with the restriction of <strong>no </strong>
-                    duplicates throughout the season. If the team you pick wins, you get their winning margin added to your score but if you lose, the amount they lost by will be
-                    subtracted from your score. The player at the end of the season with the highest cumulative score will win the pot! If there happens to be a tie, the pot will be split.
-                    If you forget to submit a picksheet you will be given the team that lost by the most even if it is a team you have chosen before.
-                </p>
-                <h4 className='title is-4'>The High Five Pool</h4>
-                <div className='content'>
-                    <p className='mb-5'>
-                        This pool will also run for the duration of the season, so there is always a chance to come back! Each week, you will choose five teams that you think will win.
-                        There are no restriction for who you can pick week-by-week, so feel free to pick the same five teams each week if you're feeling bold enough. The scoring will
-                        work as follows:
-                    </p>
-                    <ul>
-                        <li>One Win = 1 Point</li>
-                        <li>Two Wins = 2 Points</li>
-                        <li>Three Wins = 3 Points</li>
-                        <li>Four Wins = 5 Points</li>
-                        <li>Five Wins = 8 Points</li>
-                    </ul>
-                    <p>
-                        Kudos to those of you who noticed that this uses the fibonacci sequence for scoring! The player with the most points at the end of the season will win with
-                        any ties resulting in the pot being split. If you forget to submit a picksheet you will not receive any points in this pool for that week.
-                    </p>
-                </div>
-                <h3 className='title is-3'>Picksheets</h3>
-                <p className='mb-5'>
-                    Picksheets are due prior to kickoff of the first game of the week, an email will be sent out the day of as a reminder. If there is a Thursday night game at
-                    8:00pm EST then any picksheets submitted aferwards will not be allowed to choose that game. Partial picksheets are not allowed but you can update any prior
-                    submission so feel free to make a submission on Thursday and then change your picks any time prior to Sunday kickoffs, the picksheet will repopulate with
-                    any previous picks you made. Anyone who fails to submit a picksheet prior to the 1:00 EST kickoffs on Sunday will be unable to make a submission and they will
-                    be given random picks for the confidence pool, no pick for the survivor and high five pools, and the worst pick for the margin pool. 
-                </p>
-                <h3 className='title is-3'>Payouts</h3>
-                <div className='container mb-5'>
-                    <p className='has-text-danger'>The pool will always pay out 100% of the collected buy ins. The site upkeep will be handled by Ryan.</p>
-                    <p className='has-text-danger'>Tentative Pay Structure for the Pool, this is subject to changing prior to the season starting</p>
-                    <br />
-                    <h5 className='title is-5'><b>Cost for Season:</b> $100</h5>
-                    <p><b>Payout Breakdown:</b></p>
-                    <p>This is to show that for every person joining the pool, what amount of their money is going towards the pot in a specific pool</p>
-                    <table className='table'>
-                        <thead>
-                            <tr>
-                                <th>Pool</th>
-                                <th>Confidence</th>
-                                <th>Survivor</th>
-                                <th>Margin</th>
-                                <th>High-Five</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>$ out of buy in</td>
-                                <td>$60</td>
-                                <td>$15</td>
-                                <td>$15</td>
-                                <td>$10</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p><b>Payout Structure:</b></p>
-                    <p>This is to show where the full pot is getting paid out to</p>
-                    <table className='table'>
-                        <thead>
-                            <tr>
-                                <th>Pool</th>
-                                <th>Confidence</th>
-                                <th>Survivor</th>
-                                <th>Margin</th>
-                                <th>High-Five</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Overall Winner (%)</td>
-                                <td>60%*</td>
-                                <td>100%</td>
-                                <td>100%</td>
-                                <td>100%</td>
-                            </tr>
-                            <tr>
-                                <td>Weekly Winners</td>
-                                <td>40%*</td>
-                                <td>N/A</td>
-                                <td>N/A</td>
-                                <td>N/A</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>* The confidence pool will payout more than one person per week while the rest of the pools are winner take all</p>
-                    <br />
 
-                    <h5 className='title is-5'>Example Season Payout Structure</h5>
-                    <p><b>Total Pool Members: </b> 100</p>
-                    <p><b>Total Pot: </b> $10,000</p>
-                    <p><b>Total Confidence Pot: </b> $6,000</p>
-                    <p><b>Total Survivor Pot:</b> $1,500</p>
-                    <p><b>Total Margin Pot: </b> $1,500</p>
-                    <p><b>Total High-Five Pot: </b> $1,000</p>
-                    <br />
-                    <p><b>Confidence Pool Season Winners:</b></p>
-                    <div className='columns'>
-                        <div className='column is-narrow'>
-                            <p><b>Season Total Pot: </b>$3,600</p>
-                            <br />
-                            <p><b>1<sup>st</sup>: </b>$720 (20%)</p>
-                            <p><b>2<sup>nd</sup>: </b>$612 (17%)</p>
-                            <p><b>3<sup>rd</sup>: </b>$504 (14%)</p>
-                            <p><b>4<sup>th</sup>: </b>$432 (12%)</p>
-                            <p><b>5<sup>th</sup>: </b>$360 (10%)</p>
-                            <p><b>6<sup>th</sup>: </b>$288 (8%)</p>
-                            <p><b>7<sup>th</sup>: </b>$198 (5.5%)</p>
-                            <p><b>8<sup>th</sup>: </b>$180 (5%)</p>
-                            <p><b>9<sup>th</sup>: </b>$162 (4.5%)</p>
-                            <p><b>10<sup>th</sup>: </b>$144 (4%)</p>
+                <h3 className='title is-3 has-text-centered'>How to Play</h3>
+                <div className='columns is-centered'>
+                    <div className='column is-two-thirds'>
+                        <p>
+                            This site currently contains 4 pools, if you have any ideas about more pool options feel free to reach out to Ryan with any suggestions. Here
+                            are the basic instructions for each pool:
+                        </p>
+                    </div>
+                </div>
+                <div className='columns mb-5'>
+                    <div className='column'>
+                        <h4 className='title is-4 has-text-centered'>The Confidence Pool</h4>
+                        <div className='content'>
+                            <ul>
+                                <li>Each week you pick a winner for every game</li>
+                                <li>You assign points based off of how confident you are</li>
+                                <li>16 points if for most confident, 1 point is for least confident</li>
+                                <li>You may only use each confidence point once per week</li>
+                                <li>If you get a game right, you are awarded that many points</li>
+                                <li>There are no restrictions on which teams you can pick</li>
+                                <li>The person with the highest confidence total at the end of the season wins!</li>
+                                <li><b>If you forget to submit a picksheet, you will be assigned a random winner and confidence point value for every matchup</b></li>
+                            </ul>
                         </div>
-                        <div className='column is-narrow'>
-                            <p><b>Weekly Total Pot: </b>$2,400</p>
-                            <p><b>Weekly Pot: </b>$133.33</p>
-                            <p><b>1<sup>st</sup>: </b>$26.99 (20%)</p>
-                            <p><b>2<sup>nd</sup>: </b>$22.61 (17%)</p>
-                            <p><b>3<sup>rd</sup>: </b>$18.62 (14%)</p>
-                            <p><b>4<sup>th</sup>: </b>$15.96 (12%)</p>
-                            <p><b>5<sup>th</sup>: </b>$13.30 (10%)</p>
-                            <p><b>6<sup>th</sup>: </b>$10.64 (8%)</p>
-                            <p><b>7<sup>th</sup>: </b>$7.31 (5.5%)</p>
-                            <p><b>8<sup>th</sup>: </b>$6.65 (5%)</p>
-                            <p><b>9<sup>th</sup>: </b>$5.98 (4.5%)</p>
-                            <p><b>10<sup>th</sup>: </b>$5.32 (4%)</p>
+                    </div>
+                    <div className='column'>
+                        <h4 className='title is-4 has-text-centered'>The Survivor Pool</h4>
+                        <div className='content'>
+                            <ul>
+                                <li>Each week you pick <b>one</b> team you think will win</li>
+                                <li>If you pick correctly you survive</li>
+                                <li>If you pick wrong you are eliminated from the survivor pool</li>
+                                <li>You <b>cannot</b> use a team multiple times, each team may only be used once!</li>
+                                <li>The last player alive wins!</li>
+                                <li><b>If you forget to submit a picksheet, you will be eliminated from the survivor pool</b></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='column'>
+                        <h4 className='title is-4 has-text-centered'>The Margin Pool</h4>
+                        <div className='content'>
+                            <ul>
+                                <li>Each week you pick <b>one</b> team you think will win by the most</li>
+                                <li>If you pick correctly you are awarded their margin of victory to your margin total</li>
+                                <li>If you pick wrong you lose their margin of defeat from your margin total</li>
+                                <li>You <b>cannot</b> use a team multiple times, each team may only be used once!</li>
+                                <li>The top 5 players at the end of the season will win!</li>
+                                <li><b>If you forget to submit a picksheet, you will have the largest margin of defeat taken from your margin total</b></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='column'>
+                        <h4 className='title is-4 has-text-centered'>The High Five Pool</h4>
+                        <div className='content'>
+                            <ul>
+                                <li>Each week you will pick <b>5</b> teams to win</li>
+                                <li>You are awarded points based off of how many games you pick correctly:
+                                    <ul>
+                                        <li>One Win = 1 Point</li>
+                                        <li>Two Wins = 2 Points</li>
+                                        <li>Three Wins = 3 Points</li>
+                                        <li>Four Wins = 5 Points</li>
+                                        <li>Five Wins = 8 Points</li>
+                                    </ul>
+                                </li>
+                                <li>There are no restrictions on which teams you can pick</li>
+                                <li>The top 5 players at the end of the season will win!</li>
+                                <li><b>If you forget to submit a picksheet, you will be awarded 0 points in the high five pool for that week</b></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 className='title is-3 has-text-centered'>Examples</h3>
+                <div className='columns is-centered'>
+                    <div className='column is-two-thirds'>
+                        <p className='has-text-centered mb-5'>
+                            You'll have to wait until you are signed up and the pool is ready for submissions in order to see the full picksheet, but
+                            here are some examples so you have an idea of what to expect for each pool
+                        </p>
+                        <h4 className='title is-4 has-text-centered'>The Confidence Pool</h4>
+                        <p className='has-text-centered mb-5'>Below is an example of what making a pick for the Confidence Pool will look like</p>
+                        <div className='columns is-centered'>
+                            <div className='column is-two-fifths'>
+                                <div className='box'>
+                                    <div className='columns is-centered is-multiline'>
+                                        <div className='column is-full py-0 pl-3'>
+                                            <p className='is-size-7 has-text-grey-light'>THU, SEP 7th - 8:20 PM ET - Kansas City, MO</p>
+                                        </div>
+                                        <div className='column'>
+                                            <MatchupCard
+                                                key={`card-0`}
+                                                homeTeam='KC'
+                                                awayTeam='DET'
+                                                matchupNumber={0}
+                                                gameCompleted={false}
+                                                priorChoice={null}
+                                                onUpdatePick={onUpdatePick}
+                                            />
+                                        </div>
+                                        <div className='column is-narrow is-vertical-center'>
+                                            <ConfidenceDropDown
+                                                key={`dd-0`}
+                                                numOptions={16}
+                                                numGamesCompleted={0}
+                                                gameCompleted={false}
+                                                priorConfidence=''
+                                                matchupChoice={selectedPick}
+                                                matchupNumber={0}
+                                                selectedNumbers={[]}
+                                                onUpdateConfidence={onUpdateConfidence}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='content'>
+                            <p>
+                                <b>*This is not a fully functional tile*</b> You will see a tile for each matchup in a given week, so if there are 14 games for a week
+                                you will need to fill out 14 tiles for the confidence pool. You will be required to choose a winner <b>and</b> a confidence value for
+                                each tile in the picksheet.
+                            </p>
+                        </div>
+                        <h4 className='title is-4 has-text-centered'>The Survivor and Margin Pools</h4>
+                        <p className='has-text-centered mb-5'>The survivor and margin pools will look identical on the picksheet, below is an example of what you can expect</p>
+                        <div className='columns is-centered'>
+                            <div className='column is-two-fifths'>
+                                <PickOneTeam
+                                    key='margin-survivor-example'
+                                    homeTeam='KC'
+                                    awayTeam='DET'
+                                    gameInfo='THU, SEP 7th - 8:20 PM ET - Kansas City, MO'
+                                    matchupNumber={0}
+                                    name={'margin-pick'}
+                                    selectedTeam={marginTeam}
+                                    handleSelection={handleMarginSelection}
+                                    priorMarginPicks={null}
+                                    allGamesDisabled={false}
+                                />
+                            </div>
+                        </div>
+                        <div className='content'>
+                            <p>
+                                The survivor and margin tiles are essentially the same as the confidence pool tiles, however, they're just missing the confidence drop down.
+                                There will still be a tile for each matchup in a given week, but you'll only be able to choose one team per week. The two pools are independent
+                                of each other so you will have to make a survivor <b>and</b> margin pick each week as long as you are still alive in the survivor pool.
+                            </p>
+                        </div>
+                        <h4 className='title is-4 has-text-centered'>The High Five Pool</h4>
+                        <p className='has-text-centered mb-5'>The high five pool will look very similar to the survivor and margin pools, below is an example of what you can expect</p>
+                        <div className='columns is-centered'>
+                            <div className='column is-two-fifths'>
+                                <HighFiveCheckboxes
+                                    key='high-five-0'
+                                    homeTeam='KC'
+                                    awayTeam='DET'
+                                    gameInfo='THU, SEP 7th - 8:20 PM ET - Kansas City, MO'
+                                    gameCompleted={false}
+                                    matchupNumber={0}
+                                    name={'high-five-picks'}
+                                    handleSelection={handleHighFiveSelection}
+                                    maxPicks={5}
+                                    picksArray={[]}
+                                />
+                            </div>
+                        </div>
+                        <div className='content'>
+                            <p>
+                                The high five tiles are essentially the same as the rest of the tiles with the only difference being that you'll have to choose only <b>5</b> winners
+                                in this pool each week. Once you have chosen 5, you will need to deselect an option in order to choose a different winner. The pool will not allow you
+                                to choose and less or more than 5 winners.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 className='title is-3 has-text-centered'>Tiebreakers</h3>
+                <div className='columns is-centered'>
+                    <div className='column is-two-thirds'>
+                        <p className='has-text-centered'>
+                            Here are the specific tiebreaker rules for each pool
+                        </p>
+                    </div>
+                </div>
+                <div className='columns mb-5'>
+                    <div className='column'>
+                        <h4 className='title is-4 has-text-centered'>The Confidence Pool</h4>
+                        <div className='content'>
+                            <h6 className='title is-6'>Weekly</h6>
+                            <ul>
+                                <li>Each week you will submit a tiebreaker value</li>
+                                <li>You will need to guess the total score of the final game of the week</li>
+                                <li>If you tie someone in confidence points but guess a closer total score you will get ranked above them</li>
+                                <li>The second tiebreaker is the number of games guessed correctly (if two players have the same score and tiebreaker guess)</li>
+                            </ul>
+                            <h6 className='title is-6'>Season</h6>
+                            <ul>
+                                <li>At the end of the season, the person with the highest total confidence points wins</li>
+                                <li>If there is a tie, the only tiebreaker will be whoever has the most games guessed correctly</li>
+                                <li>If at the end there are two players with the same score and number of games guessed correctly, they will split the pot</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='column'>
+                        <h4 className='title is-4 has-text-centered'>The Survivor Pool</h4>
+                        <div className='content'>
+                            <ul>
+                                <li>The only way for there to be in a tie in this pool is if there are only two players left going into a week and they <b>both</b> agree to split the pool</li>
+                                <li>If all remaining players get eliminated in a given week with no winner, all of those remaining players will continue on another week</li>
+                                <li>If multiple people make it through week 18, all remaining players will split the pot</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='column'>
+                        <h4 className='title is-4 has-text-centered'>The Margin Pool</h4>
+                        <div className='content'>
+                            <ul>
+                                <li>If there is a tie at the end of the season the only tiebreaker is number of games chosen correctly</li>
+                                <li>If multiple people end up with the same margin total and same number of game chosen correctly, they will split the pot</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='column'>
+                        <h4 className='title is-4 has-text-centered'>The High Five Pool</h4>
+                        <div className='content'>
+                            <ul>
+                                <li>If there is a tie at the end of the season the only tiebreaker is number of games chosen correctly</li>
+                                <li>If multiple people end up with the same high five total and same number of game chosen correctly, they will split the pot</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h3 className='title is-3 has-text-centered'>Picksheets</h3>
+                <div className='columns is-centered mb-5'>
+                    <div className='column is-two-thirds'>
+                        <div className='content'>
+                            <ul>
+                                <li>Picksheets are due prior to kickoff of the first game of the week, an email will be sent out every Thursday as a reminder</li>
+                                <li>You may not submit a partial picksheet, you must make a selection for every pool</li>
+                                <li>Picksheets may be updated up until 1 P.M. EST every Sunday unless otherwise notified
+                                    <ul>
+                                        <li>For example, you can submit a picksheet on Thursday and then make a change on Friday to all games except for the Thursday games</li>
+                                    </ul>
+                                </li>
+                                <li>You will not be able to select a winner for any matchup that has begun or has completed</li>
+                                <li>If anyone fails to submit a picksheet prior to the 1 P.M. EST cutoff, they will be given the penalties listed above, please remember to make your picks!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h3 className='title is-3 has-text-centered'>Payouts</h3>
+                <div className='columns is-centered'>
+                    <div className='column is-two-thirds'>
+                        <p><b>The pool will always pay out 100% of the collected buy ins. The site upkeep will be handled by Ryan.</b></p>
+                        <h5 className='title is-5'><b>Expected Buy In: </b> $100</h5>
+                        <p className='has-text-danger'>
+                            Below is a tentative pay structure for the pool, this is subject to change but will be finalized before the season starts.
+                            This structure is designed to try and provide as many ways for players to win at least some money back so that there's always
+                            a motivation to keep playing
+                        </p>
+                        <br />
+                        <h5 className='title is-5'>Example Season Payout Structure w/ 100 members</h5>
+                        <p><b>Total Pool Members: </b> 100</p>
+                        <p><b>Total Pot: </b> $10,000</p>
+                        <p><b>Total Confidence Pot: </b> $7,750</p>
+                        <p className='ml-5'><b>Total Confidence Pot (Weekly): </b>$5,000</p>
+                        <p className='ml-5'><b>Total Confidence Pot (End of Year): </b>$2,750</p>
+                        <p><b>Total Survivor Pot:</b> $750</p>
+                        <p><b>Total Margin Pot: </b> $750</p>
+                        <p><b>Total High-Five Pot: </b> $750</p>
+                        <br />
+                        <p><b>Note: </b> The confidence pool pays out weekly and at the end of the year while the others are winner takes all</p>
+                        <br />
+                        <p><b>Confidence Pool Season Winners:</b></p>
+                        <div className='columns'>
+                            <div className='column is-narrow'>
+                                <p><b>End of Season Payouts:</b></p>
+                                <p><b>Season Total Pot: </b>$2,750</p>
+                                <br />
+                                <p><b>1<sup>st</sup>: </b>$550 (20%)</p>
+                                <p><b>2<sup>nd</sup>: </b>$467.50 (17%)</p>
+                                <p><b>3<sup>rd</sup>: </b>$385 (14%)</p>
+                                <p><b>4<sup>th</sup>: </b>$330 (12%)</p>
+                                <p><b>5<sup>th</sup>: </b>$275 (10%)</p>
+                                <p><b>6<sup>th</sup>: </b>$220 (8%)</p>
+                                <p><b>7<sup>th</sup>: </b>$151.25 (5.5%)</p>
+                                <p><b>8<sup>th</sup>: </b>$137.50 (5%)</p>
+                                <p><b>9<sup>th</sup>: </b>$123.75 (4.5%)</p>
+                                <p><b>10<sup>th</sup>: </b>$110 (4%)</p>
+                            </div>
+                            <div className='column is-narrow'>
+                                <p><b>Weekly Payouts:</b></p>
+                                <p><b>Weekly Total Pot: </b>$5,000</p>
+                                <p><b>Weekly Pot: </b>$294.11</p>
+                                <p><b>1<sup>st</sup>: </b>$58.82 (20%)</p>
+                                <p><b>2<sup>nd</sup>: </b>$50 (17%)</p>
+                                <p><b>3<sup>rd</sup>: </b>$41.17 (14%)</p>
+                                <p><b>4<sup>th</sup>: </b>$35.29 (12%)</p>
+                                <p><b>5<sup>th</sup>: </b>$29.41 (10%)</p>
+                                <p><b>6<sup>th</sup>: </b>$23.53 (8%)</p>
+                                <p><b>7<sup>th</sup>: </b>$16.17 (5.5%)</p>
+                                <p><b>8<sup>th</sup>: </b>$14.71 (5%)</p>
+                                <p><b>9<sup>th</sup>: </b>$13.23 (4.5%)</p>
+                                <p><b>10<sup>th</sup>: </b>$11.76 (4%)</p>
+                            </div>
+                            <div className='column is-narrow'>
+                                <p><b>Margin and High Five Payouts:</b></p>
+                                <p><b>Season Pots: </b>$750 (Each)</p>
+                                <br />
+                                <p><b>1<sup>st</sup>: </b>$285 (38%)</p>
+                                <p><b>2<sup>nd</sup>: </b>$187.50 (25%)</p>
+                                <p><b>3<sup>rd</sup>: </b>$112.50 (15%)</p>
+                                <p><b>4<sup>th</sup>: </b>$90 (12%)</p>
+                                <p><b>5<sup>th</sup>: </b>$75 (10%)</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -6,19 +6,6 @@ function ConfidencePicks(props: any) {
     const { weekInfo, priorPicks, selectedPicks, onUpdatePick, selectedConfidences, onUpdateConfidence } = props;
     const numOptions = Object.keys(weekInfo).length;
 
-    // TODO: This works but isn't necessarily the right way to do this, use this as a fallback if needed
-    // Also needs a forwardRef in order for it to work
-    // useImperativeHandle(ref, () => {
-    //     return {
-    //         getPicks() {
-    //             return selectedPicks;
-    //         },
-    //         getConfidences() {
-    //             return selectedConfidences;
-    //         },
-    //     };
-    // }, [selectedPicks, selectedConfidences]);
-
     let numGamesCompleted = 0;
     Object.keys(weekInfo).map(key => {
         if (weekInfo[key].winner !== '') {
