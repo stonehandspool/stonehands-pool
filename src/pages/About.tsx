@@ -196,7 +196,7 @@ function About() {
                                     name={'margin-pick'}
                                     selectedTeam={marginTeam}
                                     handleSelection={handleMarginSelection}
-                                    priorMarginPicks={null}
+                                    priorMarginPicks={undefined}
                                     allGamesDisabled={false}
                                 />
                             </div>

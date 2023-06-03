@@ -8,7 +8,7 @@ export interface MatchupCardProps {
     awayTeam: ValidPicks;
     matchupNumber: number;
     gameCompleted: boolean;
-    priorChoice: ValidPicks;
+    priorChoice: ValidPicks | null;
     onUpdatePick: (value: string, index: number) => void;
 };
 
