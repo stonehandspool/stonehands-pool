@@ -52,11 +52,15 @@ node scripts/processWeek.js --year {year} --week {week} --firstRun false --submi
 sass --no-source-map src/sass/index.scss:src/index.css --load-path=node_modules
 ```
 
+## Getting the NFL Schedule
+Use sportradar trial API and then run script to conver it to the format we need
+
 ## Remaining Todo Items
 - Write instructions for what to do to make this all work (e.g. what to do Monday morning, etc.) (Done!)
 - Get the website online (Done!)
-- Do a dry run
+- Do a dry run (Done 3x)
 - Get automated emails working
+- Double check partial week standings
 - (Year 2) Add a Hall of Fame
 - (Maybe) Add in the ability to sign in/out
 - (Maybe) Get a modal for team/matchup info on the picksheet

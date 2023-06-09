@@ -49,29 +49,6 @@ fs.writeFileSync(path.resolve(`data/${year}/teams.json`), asJson);
 console.log(`Created a new file at data/${year}/teams.json in order to keep track of the teams`);
 
 // Now create a season data json file to keep track of the scores throughout the season
-const weeks = Array.from({ length: 18 }, (_, i) => i + 1); // Create the 18 weeks
-const matchups = Array.from({ length: 16 }, (_, i) => i + 1); // A max of 16 games each week
-const seasonObj = { weeks: {} };
-weeks.forEach((week) => {
-    seasonObj.weeks[`week_${week}`] = {};
-    matchups.forEach((matchup) => {
-        const wk = seasonObj.weeks[`week_${week}`];
-        wk[`matchup_${matchup}`] = {
-            "home_team": "",
-            "away_team": "",
-            "gameInfo": "",
-            "home_score": 0,
-            "away_score": 0,
-            "winner": "",
-            "evaluated": false
-        };
-    });
-});
-const seasonAsJson = JSON.stringify(seasonObj, null, 2);
-fs.writeFileSync(path.resolve(`data/${year}/season.json`), seasonAsJson);
-console.log(`Created a new file at data/${year}/season.json in order to keep track of the weekly results`);
-
-// Now create a season data json file to keep track of the scores throughout the season
 const weeklyPicksObject = { weeklyPicks: {} };
 weeks.forEach((week) => {
     weeklyPicksObject.weeklyPicks[`week_${week}`] = [];
