@@ -9,6 +9,17 @@
   font-family: "Roboto Slab", serif;
 }
 
+@media print {
+  .section {
+    padding: 0px !important;
+  }
+  .column {
+    padding: 0px !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .pagination-previous,

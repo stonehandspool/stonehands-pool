@@ -14,7 +14,7 @@ function NavBar() {
     };
 
     return (
-        <nav className='navbar is-primary is-fixed-top' role='navigation' aria-label='main navigation'>
+        <nav className='navbar is-primary is-fixed-top no-print' role='navigation' aria-label='main navigation'>
             <div className='navbar-brand ml-6'>
                 <a className='navbar-item' href='/'>
                     <h3 className='title is-4 has-text-white stonehands-hero'>STONEHANDS</h3>
