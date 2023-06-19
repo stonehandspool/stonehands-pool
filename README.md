@@ -56,17 +56,17 @@ sass --no-source-map src/sass/index.scss:src/index.css --load-path=node_modules
 Use sportradar trial API and then run script to conver it to the format we need
 
 ## Remaining Todo Items
-- Write instructions for what to do to make this all work (e.g. what to do Monday morning, etc.) (Done!)
-- Get the website online (Done!)
-- Do a dry run (Done 3x)
-- Get automated emails working
-- Double check partial week standings
-- (Year 2) Add a Hall of Fame
-- (Maybe) Add in the ability to sign in/out
-- (Maybe) Get a modal for team/matchup info on the picksheet
-- (Maybe) Add in a random stats page
--- Best + Worst, Thurs. Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)
-- (Maybe) Look into the NFL API to further automate the process
+- [x] Write instructions for what to do to make this all work (e.g. what to do Monday morning, etc.)
+- [x] Get the website online
+- [x] Do a dry run
+- [] ~~Get automated emails working~~
+- [x] Instead, get a printable version of the picks to show up after submission
+- [] Double check partial week standings
+- [] (Year 2) Add a Hall of Fame
+- [] ~~Add in the ability to sign in/out~~ No point in implementing this
+- [] (Maybe) Get a modal for team/matchup info on the picksheet
+- [] (Maybe) Add in a random stats page (e.g. Best + Worst, Thurs. Night Record, Monday Night Record, Pool Performance by Week (w/ Averages))
+- [] (Maybe) Look into the NFL API to further automate the process
 
 ## Scrapped Ideas
 - Weekly Score Box
