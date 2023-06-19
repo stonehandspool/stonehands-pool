@@ -212,15 +212,6 @@ function PickSheetForm(props: PicksheetFormProps) {
     const handleSubmit = async (e: any) => {
         e.preventDefault();
 
-        console.log(selectedPicks)
-        console.log(selectedConfidences)
-        console.log(survivorTeam);
-        console.log(marginTeam);
-        console.log(highFivePicks);
-        console.log(tiebreaker);
-
-        return;
-
         const { id } = session.user;
         const { first_name: firstName, last_name: lastName, username } = session.user.user_metadata;
         const choices: choiceFormat = { id, firstName, lastName, username, 'highFivePicks': [] };
@@ -313,7 +304,7 @@ function PickSheetForm(props: PicksheetFormProps) {
 
             if (picksheetSubmissionData) {
                 setFormError(null);
-                navigate('/picksheet-success')
+                navigate('/picksheet-success', { state: choices });
             }
         } else {
             const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
