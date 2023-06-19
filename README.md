@@ -59,14 +59,14 @@ Use sportradar trial API and then run script to conver it to the format we need
 - [x] Write instructions for what to do to make this all work (e.g. what to do Monday morning, etc.)
 - [x] Get the website online
 - [x] Do a dry run
-- [] ~~Get automated emails working~~
+- [ ] ~~Get automated emails working~~
 - [x] Instead, get a printable version of the picks to show up after submission
-- [] Double check partial week standings
-- [] (Year 2) Add a Hall of Fame
-- [] ~~Add in the ability to sign in/out~~ No point in implementing this
-- [] (Maybe) Get a modal for team/matchup info on the picksheet
-- [] (Maybe) Add in a random stats page (e.g. Best + Worst, Thurs. Night Record, Monday Night Record, Pool Performance by Week (w/ Averages))
-- [] (Maybe) Look into the NFL API to further automate the process
+- [ ] Double check partial week standings
+- [ ] Add a Hall of Fame (Probably after year 1 is done)
+- [ ] ~~Add in the ability to sign in/out~~ **No point in implementing this**
+- [ ] Get a modal for team/matchup info on the picksheet (Maybe)
+- [ ] Add in a random stats page (e.g. Best + Worst, Thurs. Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)) (Maybe)
+- [ ] Look into the NFL API to further automate the process (Maybe)
 
 ## Scrapped Ideas
 - Weekly Score Box
