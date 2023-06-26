@@ -1,4 +1,5 @@
 import * as seasonStandings from '../../../data/2023/players.json';
+import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME } from '../../constants';
 
 type MarginPick = {
     team: string;
@@ -38,6 +39,11 @@ function MarginTable() {
         const lastName2 = row2.name.split(' ').pop() as string;
         return row2.marginTotal - row1.marginTotal || lastName1.localeCompare(lastName2);
     });
+
+    // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
+    // can't see what people have chosen prior to the cutoff happening
+    const currentTime = new Date();
+    const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
     
     return (
         <section className='section'>
@@ -58,7 +64,7 @@ function MarginTable() {
                 </table>
             </div>
             <div className='container'>
-                <table className='table is-bordered is-hoverable mx-auto has-text-centered'>
+                <table className='table is-bordered is-striped is-hoverable mx-auto has-text-centered'>
                     <thead>
                         <tr>
                             {headers.map(heading => {
@@ -73,7 +79,9 @@ function MarginTable() {
                                     <td key={`${row.name}-total-${index}`} className='is-vcentered'><strong>{row.marginTotal > 0 ? '+' : ''}{row.marginTotal}</strong></td>
                                     {
                                         weeksArr.map((week, ind) => {
-                                            if (row.marginPicks[ind]) {
+                                            if (ind === row.marginPicks.length - 1 && !showAllPicks) {
+                                                return <td key={`${row.name}-hidden`}></td>
+                                            } else if (row.marginPicks[ind]) {
                                                 if (row.marginPicks[ind].margin > 0) {
                                                     //If the margin of victory was over 0, have a green background
                                                     return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.marginPicks[ind].team}<br />+{row.marginPicks[ind].margin}</td>

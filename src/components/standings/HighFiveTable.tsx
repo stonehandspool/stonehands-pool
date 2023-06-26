@@ -1,4 +1,5 @@
 import * as seasonStandings from '../../../data/2023/players.json';
+import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME } from '../../constants';
 
 type HighFivePick = {
     team: string;
@@ -24,7 +25,7 @@ function HighFiveTable() {
         const playerInfo = players[i];
         const rowInfo: PlayerInfo = {
             name: `${playerInfo.firstName} ${playerInfo.lastName}`,
-            recentPicks: playerInfo.highFiveThisWeek,
+            recentPicks: playerInfo.highFiveThisWeek as HighFivePick[],
             weeklyPoints: playerInfo.highFiveValues,
             highFiveTotal: playerInfo.highFiveTotal,
         };
@@ -37,6 +38,11 @@ function HighFiveTable() {
         const lastName2 = row2.name.split(' ').pop() as string;
         return row2.highFiveTotal - row1.highFiveTotal || lastName1.localeCompare(lastName2);
     });
+
+    // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
+    // can't see what people have chosen prior to the cutoff happening
+    const currentTime = new Date();
+    const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
 
     return(
         <section className='section'>
@@ -62,7 +68,7 @@ function HighFiveTable() {
                 </table>
             </div>
             <div className='container'>
-                <table className='table is-narrow is-bordered is-hoverable mx-auto has-text-centered'>
+                <table className='table is-narrow is-bordered is-striped is-hoverable mx-auto has-text-centered'>
                     <thead>
                         <tr>
                             <td></td>
@@ -82,7 +88,7 @@ function HighFiveTable() {
                                     <td key={`${row.name}-row-${index}`} className='is-vcentered'>{row.name}</td>
                                     <td key={`${row.name}-total-${index}`} className='is-vcentered'><strong>{row.highFiveTotal}</strong></td>
                                     {
-                                        row.recentPicks.length > 0 &&
+                                        (row.recentPicks.length > 0) &&
                                         row.recentPicks.map((pick, ind) => {
                                             let className;
                                             // Doing explicit checks for true and false because it can be null and we want a white background for that
@@ -91,7 +97,13 @@ function HighFiveTable() {
                                             } else if (pick.won === false) {
                                                 className = 'has-background-danger';
                                             }
-                                            return <td key={`${row.name}-pick-${ind}`} className={className}>{pick.team}</td>
+                                            if (showAllPicks) {
+                                                return <td key={`${row.name}-pick-${ind}`} className={className}>{pick.team}</td>
+                                            } else if (!showAllPicks && className !== undefined && pick.team !== 'N/A') {
+                                                return <td key={`${row.name}-pick-${ind}`} className={className}>{pick.team}</td>
+                                            } else {
+                                                return <td key={`${row.name}-pick-${ind}`}>{' '}</td>
+                                            }
                                         })
                                     }
                                     {
@@ -102,7 +114,9 @@ function HighFiveTable() {
                                     }
                                     {
                                         weeksArr.map((week, ind) => {
-                                            if (row.weeklyPoints[ind] || row.weeklyPoints[ind] === 0) {
+                                            if (ind === row.weeklyPoints.length - 1 && !showAllPicks) {
+                                                return <td key={`${row.name}-hidden`}></td>
+                                            } else if (row.weeklyPoints[ind] || row.weeklyPoints[ind] === 0) {
                                                 return <td key={`${row.name}-${ind}`}>{row.weeklyPoints[ind]}</td>
                                             } else {
                                                 return <td key={`${row.name}-${ind}`}></td>

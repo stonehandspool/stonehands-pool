@@ -1,6 +1,6 @@
 import * as seasonStandings from '../../../data/2023/players.json';
 import * as seasonResults from '../../../data/2023/season.json';
-import { CURRENT_WEEK } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME } from '../../constants';
 
 type PlayerInfo = {
     name: string;
@@ -37,6 +37,11 @@ function SurvivorTable() {
         playerPicks.push(rowInfo);
     }
 
+    // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
+    // can't see what people have chosen prior to the cutoff happening
+    const currentTime = new Date();
+    const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+
     // Sort everyone by how many weeks they've survived and alphabetically, survivors first
     playerPicks.sort((row1, row2) => {
         const lastName1 = row1.name.split(' ').pop() as string;
@@ -62,7 +67,7 @@ function SurvivorTable() {
                 </table>
             </div>
             <div className='container'>
-                <table className='table is-bordered is-hoverable mx-auto'>
+                <table className='table is-bordered is-striped is-hoverable mx-auto'>
                     <thead>
                         <tr>
                             {headers.map(heading => {
@@ -83,7 +88,7 @@ function SurvivorTable() {
                                             } else if (ind === row.survivorPicks.length - 1 && row.aliveInSurvivor && gameCompleted) {
                                                 // If this was the most recent pick and it was correct
                                                 return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
-                                            } else if (ind === row.survivorPicks.length - 1 && row.aliveInSurvivor && !gameCompleted) {
+                                            } else if (showAllPicks && ind === row.survivorPicks.length - 1 && row.aliveInSurvivor && !gameCompleted) {
                                                 // If this was the most recent pick and the game hasn't finished yet
                                                 return <td key={`${row.name}-${ind}`}>{row.survivorPicks[ind]}</td>
                                             } else if (ind === row.survivorPicks.length - 1 && !row.aliveInSurvivor) {

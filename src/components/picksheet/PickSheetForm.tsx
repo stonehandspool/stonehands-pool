@@ -48,6 +48,18 @@ function PickSheetForm(props: PicksheetFormProps) {
         )
     }
 
+    // TODO: Put this back in once we are ready for the real deal
+    // const currentTime = new Date();
+    // if (currentTime > CURRENT_WEEK_CUTOFF_TIME) {
+    //     return (
+    //         <section className='section'>
+    //             <div className='container'>
+    //                 <h3 className='title is-3 has-text-centered'>Sorry, the cutoff for this week has passed. You can no longer make a submission</h3>
+    //             </div>
+    //         </section>
+    //     )
+    // }
+
     const [selections, setSelections] = useState({});
     const [priorPicks, setPriorPicks] = useState(false);
     const [formError, setFormError] = useState<string | null>(null);
@@ -113,7 +125,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         }
     }
 
-    const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as UserInfo;
+    const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as unknown as UserInfo;
     
     if (!userInfo) {
         return (
@@ -211,6 +223,18 @@ function PickSheetForm(props: PicksheetFormProps) {
     
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+
+        // TODO: Put this back in once we are ready for the real deal
+        // const currentTime = new Date();
+        // if (currentTime > CURRENT_WEEK_CUTOFF_TIME) {
+        //     return (
+        //         <section className='section'>
+        //             <div className='container'>
+        //                 <h3 className='title is-3 has-text-centered'>Sorry, the cutoff for this week has passed. You can no longer make a submission</h3>
+        //             </div>
+        //         </section>
+        //     )
+        // }
 
         const { id } = session.user;
         const { first_name: firstName, last_name: lastName, username } = session.user.user_metadata;
@@ -325,7 +349,7 @@ function PickSheetForm(props: PicksheetFormProps) {
 
             if (picksheetSubmissionData) {
                 setFormError(null);
-                navigate('/picksheet-success')
+                navigate('/picksheet-success', { state: choices });
             }
         }
     };

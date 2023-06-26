@@ -22,8 +22,8 @@ function MatchupCard(props: MatchupCardProps) {
     const HomeLogo = TeamLogos[homeTeam as TeamLogoKey];
     const AwayLogo = TeamLogos[awayTeam as TeamLogoKey];
 
-    const homeTeamInfo = teams[homeTeam];
-    const awayTeamInfo = teams[awayTeam];
+    const homeTeamInfo = teams[homeTeam as keyof typeof teams];
+    const awayTeamInfo = teams[awayTeam as keyof typeof teams];
 
     const textColor = gameCompleted ? 'has-text-grey-light' : 'has-text-grey-dark';
 

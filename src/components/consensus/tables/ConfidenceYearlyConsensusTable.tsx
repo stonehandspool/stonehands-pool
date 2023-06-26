@@ -1,4 +1,4 @@
-import { CURRENT_WEEK, SEASON_READY, SubmissionInfo } from '../../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_STATUS, SEASON_READY, SubmissionInfo } from '../../../constants';
 import * as playerPicks from '../../../../data/2023/weeklyPicks.json';
 import * as seasonData from '../../../../data/2023/season.json';
 import * as TeamLogos from '../../../assets/logos';
@@ -16,7 +16,12 @@ type YearlyConsensusInfo = {
 };
 
 function ConfidenceYearlyConsensusTable() {
-    if (!SEASON_READY) {
+    // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
+    // can't see what people have chosen prior to the cutoff happening
+    const currentTime = new Date();
+    const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+    
+    if (!SEASON_READY || (CURRENT_WEEK === 1 && !showCurrentWeek)) {
         return (
             <section className='section'>
                 <div className='container'>

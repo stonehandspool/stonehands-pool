@@ -3,7 +3,7 @@ type IconProps = {
   opacity?: number;
 }
 
-function LAR(props: IconProps) {
+function LA(props: IconProps) {
   const { size, opacity } = props;
   return (
     <svg
@@ -40,9 +40,9 @@ function LAR(props: IconProps) {
   );
 };
 
-LAR.defaultProps = {
+LA.defaultProps = {
   size: 40,
   opacity: 1,
 };
 
-export default LAR;
+export default LA;
