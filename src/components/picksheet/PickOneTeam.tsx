@@ -6,13 +6,14 @@ export interface PickOneTeamProps {
     homeTeam: ValidPicks;
     awayTeam: ValidPicks;
     gameInfo: string;
+    gameCompleted: boolean;
     matchupNumber: number;
     name: string;
     selectedTeam: string | null;
     handleSelection: Function;
     priorSurvivorPicks?: string[];
     priorMarginPicks?: MarginPick[];
-    allGamesDisabled: boolean;
+    priorPickGameCompleted: boolean;
 };
 
 type TeamLogoKey = keyof typeof TeamLogos;
@@ -23,13 +24,14 @@ function PickOneTeam(props: PickOneTeamProps) {
         homeTeam,
         awayTeam,
         gameInfo,
+        gameCompleted,
         matchupNumber,
         name,
         selectedTeam,
         handleSelection,
         priorSurvivorPicks,
         priorMarginPicks,
-        allGamesDisabled,
+        priorPickGameCompleted,
     } = props;
 
     const HomeLogo = TeamLogos[homeTeam as TeamLogoKey];
@@ -48,15 +50,26 @@ function PickOneTeam(props: PickOneTeamProps) {
     const teamHasBeenChosen = (team: string) => {
         if (priorSurvivorPicks && priorSurvivorPicks.length > 0) {
             const chosen = priorSurvivorPicks.find(pick => pick === team);
+            const chosenIndex = priorSurvivorPicks.findIndex(pick => pick === team);
             if (chosen) {
-                return true;
+                // If this was the most recent pick (i.e. a Sunday game after processWeek has ran on Fri) then don't disable it yet
+                if (chosenIndex === priorSurvivorPicks.length - 1 && !priorPickGameCompleted) {
+                    return false;
+                } else {
+                    return true;
+                }
             } else {
                 return false;
             }
         } else if (priorMarginPicks && priorMarginPicks.length > 0) {
             const chosen = priorMarginPicks.find(pick => pick.team === team);
+            const chosenIndex = priorMarginPicks.findIndex(pick => pick.team === team);
             if (chosen) {
-                return true;
+                if (chosenIndex === priorMarginPicks.length - 1 && !priorPickGameCompleted) {
+                    return false;
+                } else {
+                    return true;
+                }
             } else {
                 return false;
             }
@@ -65,8 +78,8 @@ function PickOneTeam(props: PickOneTeamProps) {
         }
     };
 
-    const awayDisabled = allGamesDisabled || teamHasBeenChosen(awayTeam);
-    const homeDisabled = allGamesDisabled || teamHasBeenChosen(homeTeam);
+    const awayDisabled = gameCompleted || priorPickGameCompleted || teamHasBeenChosen(awayTeam);
+    const homeDisabled = gameCompleted || priorPickGameCompleted || teamHasBeenChosen(homeTeam);
 
     return (
         <div className='box'>

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 type ConfidenceDropDownProps = {
     numOptions: number;
-    numGamesCompleted: number;
     matchupChoice: string | undefined;
     matchupNumber: number;
     gameCompleted: boolean;
@@ -12,14 +11,11 @@ type ConfidenceDropDownProps = {
 };
 
 function ConfidenceDropDown(props: ConfidenceDropDownProps) {
-    const { numOptions, numGamesCompleted, matchupChoice, matchupNumber, gameCompleted, priorConfidence, selectedNumbers, onUpdateConfidence } = props;
+    const { numOptions, matchupChoice, matchupNumber, gameCompleted, priorConfidence, selectedNumbers, onUpdateConfidence } = props;
 
     const [currentValue, setCurrentValue] = useState<number>(-1);
 
     const options: number[] = Array.from({ length: numOptions }, (_, i) => i + 1);
-    if (numGamesCompleted > 0) {
-        options.splice(0, numGamesCompleted);
-    }
 
     // If the user had previously submitted picks, update the rest of the dropdowns with that value
     useEffect(() => {

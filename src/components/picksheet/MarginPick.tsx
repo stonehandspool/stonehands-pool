@@ -30,12 +30,13 @@ function MarginPicks(props: any) {
                                 homeTeam={weekInfo[matchup].home_team}
                                 awayTeam={weekInfo[matchup].away_team}
                                 gameInfo={weekInfo[matchup].gameInfo}
+                                gameCompleted={weekInfo[matchup].winner !== ''}
                                 matchupNumber={index}
                                 name={'margin-pick'}
                                 selectedTeam={marginTeam}
                                 handleSelection={handleMarginSelection}
                                 priorMarginPicks={userInfo.marginPicks}
-                                allGamesDisabled={priorPickGameCompleted}
+                                priorPickGameCompleted={priorPickGameCompleted}
                             />
                         </div>
                     ))

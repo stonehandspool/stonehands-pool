@@ -6,13 +6,6 @@ function ConfidencePicks(props: any) {
     const { weekInfo, priorPicks, selectedPicks, onUpdatePick, selectedConfidences, onUpdateConfidence } = props;
     const numOptions = Object.keys(weekInfo).length;
 
-    let numGamesCompleted = 0;
-    Object.keys(weekInfo).map(key => {
-        if (weekInfo[key].winner !== '') {
-            numGamesCompleted++;
-        }
-    });
-
     return(
         <div className='container pb-6'>
             <h3 className='title is-3'>Confidence Picks:</h3>
@@ -51,7 +44,6 @@ function ConfidencePicks(props: any) {
                                         <ConfidenceDropDown
                                             key={`dd-${index}`}
                                             numOptions={numOptions}
-                                            numGamesCompleted={numGamesCompleted}
                                             gameCompleted={weekInfo[matchup].winner !== ''}
                                             priorConfidence={priorConfidence}
                                             matchupChoice={selectedPicks[index]}

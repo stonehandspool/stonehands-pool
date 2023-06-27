@@ -20,6 +20,7 @@ function ConfidenceYearlyConsensusTable() {
     // can't see what people have chosen prior to the cutoff happening
     const currentTime = new Date();
     const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+    const weekToShow = CURRENT_WEEK === 1 ? CURRENT_WEEK : showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
     
     if (!SEASON_READY || (CURRENT_WEEK === 1 && !showCurrentWeek)) {
         return (
@@ -48,7 +49,7 @@ function ConfidenceYearlyConsensusTable() {
     });
 
     // Now loop through every week that has been played so far
-    for (let i = 0; i < CURRENT_WEEK; i++) {
+    for (let i = 0; i < weekToShow; i++) {
         const weekField = `week_${i + 1}`;
         const weekPicks: SubmissionInfo[] = playerPicks.weeklyPicks[weekField as keyof typeof playerPicks.weeklyPicks] as SubmissionInfo[];
         const weekGames = allWeeks[weekField as keyof typeof allWeeks];
