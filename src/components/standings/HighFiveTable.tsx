@@ -1,5 +1,5 @@
 import * as seasonStandings from '../../../data/2023/players.json';
-import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME } from '../../constants';
+import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK } from '../../constants';
 
 type HighFivePick = {
     team: string;
@@ -42,7 +42,8 @@ function HighFiveTable() {
     // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
     // can't see what people have chosen prior to the cutoff happening
     const currentTime = new Date();
-    const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+    const isBrandNewWeek = CURRENT_WEEK_STATUS === 'START';
+    const showAllPicks = CURRENT_WEEK_STATUS !== 'IN_PROGRESS' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
 
     return(
         <section className='section'>
@@ -97,9 +98,11 @@ function HighFiveTable() {
                                             } else if (pick.won === false) {
                                                 className = 'has-background-danger';
                                             }
-                                            if (showAllPicks) {
+                                            if (showAllPicks || isBrandNewWeek) {
+                                                // If we're at a brand new week show prior weeks picks or show current picks once week is locked
                                                 return <td key={`${row.name}-pick-${ind}`} className={className}>{pick.team}</td>
                                             } else if (!showAllPicks && className !== undefined && pick.team !== 'N/A') {
+                                                // If we're in progress in a week and a pick has completed then we can show it
                                                 return <td key={`${row.name}-pick-${ind}`} className={className}>{pick.team}</td>
                                             } else {
                                                 return <td key={`${row.name}-pick-${ind}`}>{' '}</td>
@@ -114,7 +117,8 @@ function HighFiveTable() {
                                     }
                                     {
                                         weeksArr.map((week, ind) => {
-                                            if (ind === row.weeklyPoints.length - 1 && !showAllPicks) {
+                                            const isCurrentWeek = ind === CURRENT_WEEK - 1;
+                                            if (isCurrentWeek && !showAllPicks) {
                                                 return <td key={`${row.name}-hidden`}></td>
                                             } else if (row.weeklyPoints[ind] || row.weeklyPoints[ind] === 0) {
                                                 return <td key={`${row.name}-${ind}`}>{row.weeklyPoints[ind]}</td>

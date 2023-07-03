@@ -1,5 +1,5 @@
 import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_STATUS, SEASON_READY, SubmissionInfo } from '../../../constants';
-import * as playerPicks from '../../../../data/2023/weeklyPicks.json';
+import * as playerData from '../../../../data/2023/players.json';
 import * as seasonData from '../../../../data/2023/season.json';
 import * as TeamLogos from '../../../assets/logos';
 
@@ -31,7 +31,7 @@ function MarginConsensusTable() {
     const weeklyConsensusArr: MatchupConsensusInfo[] = [];
     const allWeeks = seasonData.weeks;
     const weekField = `week_${weekToShow}`;
-    const weekPicks: SubmissionInfo[] = playerPicks.weeklyPicks[weekField as keyof typeof playerPicks.weeklyPicks] as SubmissionInfo[];
+    const { players } = playerData;
     const weekGames = allWeeks[weekField as keyof typeof allWeeks];
     
     // First set up the initial values for the consensus info
@@ -48,20 +48,17 @@ function MarginConsensusTable() {
     });
 
     // Now go through every players response and update the consensus info
-    const numGames = Object.keys(weekGames).length;
     let totalPicks = 0;
-    weekPicks.forEach(pickInfo => {
-        const { submission_data: picks } = pickInfo;
-        for (let i = 0; i < numGames; i++) {
-            const consensusInfo = weeklyConsensusArr[i];
-            const userChoice = picks['margin-pick' as keyof typeof picks] as string;
-            if (userChoice !== '' && userChoice === consensusInfo.homeTeam) {
-                consensusInfo.homeNumPicks++;
-                totalPicks++;
-            } else if (userChoice !== '' && userChoice === consensusInfo.awayTeam) {
-                consensusInfo.awayNumPicks++;
-                totalPicks++;
+    players.forEach(player => {
+        const { team } = player.marginPicks[weekToShow - 1];
+        const matchup = weeklyConsensusArr.find(matchupInfo => matchupInfo.homeTeam === team || matchupInfo.awayTeam === team);
+        if (matchup && team !== '') {
+            if (team === matchup.homeTeam) {
+                matchup.homeNumPicks++;
+            } else {
+                matchup.awayNumPicks++;
             }
+            totalPicks++;
         }
     });
     

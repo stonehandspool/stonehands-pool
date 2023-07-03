@@ -19,7 +19,7 @@ function WeeklyStandingsTable() {
     const { players } = seasonStandings;
 
     // If the current week is currently marked as START we don't want to show anything yet, so show the prior weeks data
-    const weekToShow = CURRENT_WEEK_STATUS === 'START' && CURRENT_WEEK > 1 ? CURRENT_WEEK - 1 : CURRENT_WEEK;
+    const weekToShow = CURRENT_WEEK_STATUS === 'START' && CURRENT_WEEK > 1 ? CURRENT_WEEK - 2 : CURRENT_WEEK - 1;
 
     // Calculate the standings
     const calculatedPicks: TableColumns[] = [];
@@ -48,7 +48,7 @@ function WeeklyStandingsTable() {
     // Now update the position and result for the table
     for (let i = 0; i < calculatedPicks.length; i++) {
         calculatedPicks[i].position = i + 1;
-        if (i === 0 && CURRENT_WEEK_STATUS === 'COMPLETE') {
+        if (i === 0 && CURRENT_WEEK_STATUS !== 'IN_PROGRESS') {
             calculatedPicks[i].result = 'Winner'
         } else {
             calculatedPicks[i].result = '**'
