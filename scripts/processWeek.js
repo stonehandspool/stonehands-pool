@@ -202,10 +202,12 @@ players.forEach(player => {
     player.ties += weeklyTies;
     player.percent = (player.wins + (player.ties / 2)) / (player.wins + player.losses + player.ties);
     player.points += weeklyPoints;
-    if (isFirstRun) {
-        const totalTbPoints = player.tbAvg * player.weeks;
-        player.tbAvg = (totalTbPoints + parseInt(submissionInfo.tiebreaker, 10)) / player.weeks;
+    // Calculate the tbAvg
+    let totalTiebreaker = 0;
+    for (let i = 0; i < player.tiebreakerByWeek.length - 1; i++) {
+        totalTiebreaker += player.tiebreakerByWeek[i];
     }
+    player.tbAvg = totalTiebreaker / player.tiebreakerByWeek.length;
 
     // Now evaluate the survivor pool pick
     if (player.aliveInSurvivor) {

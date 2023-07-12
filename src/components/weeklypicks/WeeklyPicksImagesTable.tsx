@@ -23,7 +23,7 @@ function WeeklyPicksImagesTable() {
     const { players } = seasonStandings;
     const weeklyPicks: SubmissionInfo[] = allPicks.weeklyPicks[`week_${CURRENT_WEEK}` as keyof typeof allPicks.weeklyPicks] as SubmissionInfo[];
     const { weeks } = seasonData;
-    const currentWeek = weeks[`week_${CURRENT_WEEK}`];
+    const currentWeek = weeks[`week_${CURRENT_WEEK}` as keyof typeof weeks];
     const numGamesThisWeek = Object.keys(currentWeek).length;
 
     const atArr = Array(numGamesThisWeek).fill('@');

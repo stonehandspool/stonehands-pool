@@ -163,7 +163,6 @@ function About() {
                                             <ConfidenceDropDown
                                                 key={`dd-0`}
                                                 numOptions={16}
-                                                numGamesCompleted={0}
                                                 gameCompleted={false}
                                                 priorConfidence=''
                                                 matchupChoice={selectedPick}
@@ -197,7 +196,8 @@ function About() {
                                     selectedTeam={marginTeam}
                                     handleSelection={handleMarginSelection}
                                     priorMarginPicks={undefined}
-                                    allGamesDisabled={false}
+                                    gameCompleted={false}
+                                    priorPickGameCompleted={false}
                                 />
                             </div>
                         </div>
