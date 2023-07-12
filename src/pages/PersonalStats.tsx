@@ -57,6 +57,19 @@ function getPickStats(userPicks: SubmissionInfo[], weeks: any) {
     return teamArray;
 }
 
+function getEnding(place: number) {
+    const lastDigit = +place.toString().slice(-1);
+    if (lastDigit === 1) {
+        return 'st';
+    } else if (lastDigit === 2) {
+        return 'nd';
+    } else if (lastDigit === 3) {
+        return 'rd';
+    } else {
+        return 'th';
+    }
+}
+
 function PersonalStats() {
     if (!SEASON_READY) {
         return (
@@ -168,7 +181,7 @@ function PersonalStats() {
                         <div className='level-item has-text-centered'>
                             <div>
                                 <p className='heading'>Season Rank</p>
-                                <p className='title'>{userInfo.currentWeekRank}</p>
+                                <p className='title'>{userInfo.currentWeekRank}<sup>{getEnding(userInfo.currentWeekRank)}</sup></p>
                             </div>
                         </div>
                         <div className='level-item has-text-centered'>

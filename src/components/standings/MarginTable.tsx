@@ -81,6 +81,12 @@ function MarginTable() {
                 <table className='table is-bordered is-striped is-hoverable mx-auto has-text-centered'>
                     <thead>
                         <tr>
+                            <td></td>
+                            <td></td>
+                            <th className='has-text-centered' colSpan={18}>Week</th>
+                            <td></td>
+                        </tr>
+                        <tr>
                             {headers.map(heading => {
                                 return <th key={heading} className='has-text-centered'>{heading}</th>
                             })}
