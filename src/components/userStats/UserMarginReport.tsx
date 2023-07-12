@@ -1,7 +1,7 @@
 import * as TeamLogos from '../../assets/logos'
 
 function UserMarginReport(props: any) {
-    const { bestMarginWeek, bestMargin, worstMarginWeek, worstMargin, userInfo, unusedMarginPicks } = props;
+    const { bestMarginWeek, bestMargin, worstMarginWeek, worstMargin, userInfo, unusedMarginPicks, weekToShow } = props;
 
     const bestMarginWeekColor = bestMargin.margin > 0 ? 'has-text-success' : bestMargin.margin < 0 ? 'has-text-danger' : '';
     const worstMarginWeekColor = worstMargin.margin > 0 ? 'has-text-success' : worstMargin.margin < 0 ? 'has-text-danger' : '';
@@ -22,9 +22,11 @@ function UserMarginReport(props: any) {
                     <h5 className='title is-5'>Teams Used:</h5>
                 </div>
                 {
-                    userInfo?.marginPicks.map((pick: any) => {
-                        const Logo = TeamLogos[pick.team as keyof typeof TeamLogos];
-                        return <div className='column is-narrow' key={`${pick.team}-margin`}><Logo /></div>
+                    userInfo?.marginPicks.map((pick: any, index: number) => {
+                        if (index < weekToShow) {
+                            const Logo = TeamLogos[pick.team as keyof typeof TeamLogos];
+                            return <div className='column is-narrow' key={`${pick.team}-margin`}><Logo /></div>
+                        }
                     })
                 }
             </div>

@@ -48,6 +48,18 @@ function PickSheetForm(props: PicksheetFormProps) {
         )
     }
 
+    // TODO: Put this back in once we are ready for the real deal
+    // const currentTime = new Date();
+    // if (currentTime > CURRENT_WEEK_CUTOFF_TIME) {
+    //     return (
+    //         <section className='section'>
+    //             <div className='container'>
+    //                 <h3 className='title is-3 has-text-centered'>Sorry, the cutoff for this week has passed. You can no longer make a submission</h3>
+    //             </div>
+    //         </section>
+    //     )
+    // }
+
     const [selections, setSelections] = useState({});
     const [priorPicks, setPriorPicks] = useState(false);
     const [formError, setFormError] = useState<string | null>(null);
@@ -98,7 +110,7 @@ function PickSheetForm(props: PicksheetFormProps) {
             setHighFivePicks(previousPicks => previousPicks.filter(pick => pick !== teamA));
             // Now add the other value
             setHighFivePicks(previousPicks => [...previousPicks, teamB as string]);
-        } else {
+        } else if (!highFivePicks.includes(teamA)) {
             setHighFivePicks(previousPicks => [...previousPicks, teamA]);
         }
     };
@@ -113,7 +125,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         }
     }
 
-    const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as UserInfo;
+    const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as unknown as UserInfo;
     
     if (!userInfo) {
         return (
@@ -130,7 +142,7 @@ function PickSheetForm(props: PicksheetFormProps) {
 
     // Ping the database to see if there are picks from this week for this user
     useEffect(() => {
-        const fetchPicks = async () => {
+        const fetchPicks = async (callback: () => void) => {
             const { data, error } = await supabaseClient
                 .from('user_picks')
                 .select()
@@ -171,46 +183,64 @@ function PickSheetForm(props: PicksheetFormProps) {
 
                 // Update other state
                 setPriorPicks(true);
+            } else {
+                callback();
             }
         };
 
-        // First check the JSON files to hopefully avoid pinging the database
-        const submission = findSubmission(userInfo.id);
-        if (submission) {
-            const { submission_data: priorPicks } = submission;
-            // Set prior picks and confidences
-            const priorConfidencePicks: string[] = [];
-            const priorConfidenceValues: number[] = [];
-            for (let i = 0; i < numGamesThisWeek; i++) {
-                priorConfidencePicks.push(priorPicks[`matchup-${i}` as keyof typeof priorPicks] as string);
-                priorConfidenceValues.push(parseInt(priorPicks[`matchup-${i}-confidence` as keyof typeof priorPicks] as string, 10));
-            }
-            setSelectedPicks(priorConfidencePicks);
-            setSelectedConfidences(priorConfidenceValues);
+        // Backup in case the database search doesn't return anything
+        // This will really only happen if a user forgot to submit prior to Thu and has a forced Thu pick
+        const searchJSON = () => {
+            const submission = findSubmission(userInfo.id);
+            if (submission) {
+                const { submission_data: priorPicks } = submission;
+                // Set prior picks and confidences
+                const priorConfidencePicks: string[] = [];
+                const priorConfidenceValues: number[] = [];
+                for (let i = 0; i < numGamesThisWeek; i++) {
+                    priorConfidencePicks.push(priorPicks[`matchup-${i}` as keyof typeof priorPicks] as string);
+                    priorConfidenceValues.push(parseInt(priorPicks[`matchup-${i}-confidence` as keyof typeof priorPicks] as string, 10));
+                }
+                setSelectedPicks(priorConfidencePicks);
+                setSelectedConfidences(priorConfidenceValues);
+    
+                // Set prior survivor pick
+                if (userInfo.aliveInSurvivor) {
+                    setSurvivorTeam(priorPicks['survivor-pick']);
+                }
+                // Set prior margin pick
+                setMarginTeam(priorPicks['margin-pick']);
+    
+                // Set prior high five picks
+                setHighFivePicks(priorPicks.highFivePicks);
+    
+                // Set prior tiebreaker
+                setTiebreaker(priorPicks.tiebreaker)
+    
+                // Update other state
+                setSelections(priorPicks);
+                setPriorPicks(true);
+            } 
+        };
 
-            // Set prior survivor pick
-            if (userInfo.aliveInSurvivor) {
-                setSurvivorTeam(priorPicks['survivor-pick']);
-            }
-            // Set prior margin pick
-            setMarginTeam(priorPicks['margin-pick']);
-
-            // Set prior high five picks
-            setHighFivePicks(priorPicks.highFivePicks);
-
-            // Set prior tiebreaker
-            setTiebreaker(priorPicks.tiebreaker)
-
-            // Update other state
-            setSelections(priorPicks);
-            setPriorPicks(true);
-        } else {
-            fetchPicks().catch(err => console.error(err));
-        }
+        // First, check the database since that is the most up-to-date version most of the time
+        fetchPicks(searchJSON).catch(err => console.error(err));
     }, []);
     
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+
+        // TODO: Put this back in once we are ready for the real deal
+        // const currentTime = new Date();
+        // if (currentTime > CURRENT_WEEK_CUTOFF_TIME) {
+        //     return (
+        //         <section className='section'>
+        //             <div className='container'>
+        //                 <h3 className='title is-3 has-text-centered'>Sorry, the cutoff for this week has passed. You can no longer make a submission</h3>
+        //             </div>
+        //         </section>
+        //     )
+        // }
 
         const { id } = session.user;
         const { first_name: firstName, last_name: lastName, username } = session.user.user_metadata;
@@ -325,7 +355,7 @@ function PickSheetForm(props: PicksheetFormProps) {
 
             if (picksheetSubmissionData) {
                 setFormError(null);
-                navigate('/picksheet-success')
+                navigate('/picksheet-success', { state: choices });
             }
         }
     };

@@ -2,6 +2,7 @@ import { SubmissionInfo } from '../../constants';
 
 type TableProps = {
     confidencePicks: SubmissionInfo[];
+    pointsByWeek: number[];
 };
 
 const gameArr = Array.from({ length: 16 }, (_, i) => i + 1);
@@ -9,9 +10,10 @@ const headers: string[] = ['Week'];
 for (let i = 0; i < gameArr.length; i++) {
     headers.push(`Game ${gameArr[i]}`);
 }
+headers.push('Points')
 
 function UserConfidencePicksTable(props: TableProps) {
-    const { confidencePicks } = props;
+    const { confidencePicks, pointsByWeek } = props;
     return(
         <table className='table is-bordered is-hoverable'>
             <thead>
@@ -38,6 +40,7 @@ function UserConfidencePicksTable(props: TableProps) {
                                     }
                                 })
                             }
+                            <td className='has-text-centered is-vcentered'><b>{pointsByWeek[index]}</b></td>
                         </tr>
                     })
                 }

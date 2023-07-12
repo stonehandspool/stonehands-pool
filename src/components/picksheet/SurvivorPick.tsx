@@ -31,12 +31,13 @@ function SurvivorPick(props: any) {
                                 homeTeam={weekInfo[matchup].home_team}
                                 awayTeam={weekInfo[matchup].away_team}
                                 gameInfo={weekInfo[matchup].gameInfo}
+                                gameCompleted={weekInfo[matchup].winner !== ''}
                                 matchupNumber={index}
                                 name={'survivor-pick'}
                                 selectedTeam={survivorTeam}
                                 handleSelection={handleSurvivorSelection}
                                 priorSurvivorPicks={userInfo.survivorPicks}
-                                allGamesDisabled={priorPickGameCompleted}
+                                priorPickGameCompleted={priorPickGameCompleted}
                             />
                         </div>
                     ))

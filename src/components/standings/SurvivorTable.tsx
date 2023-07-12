@@ -1,6 +1,6 @@
 import * as seasonStandings from '../../../data/2023/players.json';
 import * as seasonResults from '../../../data/2023/season.json';
-import { CURRENT_WEEK } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME } from '../../constants';
 
 type PlayerInfo = {
     name: string;
@@ -11,7 +11,7 @@ type PlayerInfo = {
 const headers: string[] = ['Player', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
 const weeksArr = [...Array(18)];
 
-const weeklyResults = seasonResults.weeks[`week_${CURRENT_WEEK}`];
+const weeklyResults = seasonResults.weeks[`week_${CURRENT_WEEK}` as keyof typeof seasonResults.weeks];
 const getGameCompleted = (teamName: string) => {
     let gameCompleted = false;
     Object.keys(weeklyResults).map(key => {
@@ -36,6 +36,11 @@ function SurvivorTable() {
         };
         playerPicks.push(rowInfo);
     }
+
+    // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
+    // can't see what people have chosen prior to the cutoff happening
+    const currentTime = new Date();
+    const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
 
     // Sort everyone by how many weeks they've survived and alphabetically, survivors first
     playerPicks.sort((row1, row2) => {
@@ -62,7 +67,7 @@ function SurvivorTable() {
                 </table>
             </div>
             <div className='container'>
-                <table className='table is-bordered is-hoverable mx-auto'>
+                <table className='table is-bordered is-striped is-hoverable mx-auto'>
                     <thead>
                         <tr>
                             {headers.map(heading => {
@@ -77,21 +82,49 @@ function SurvivorTable() {
                                     {
                                         weeksArr.map((week, ind) => {
                                             const gameCompleted = getGameCompleted(row.survivorPicks[ind]);
-                                            if (ind < row.survivorPicks.length - 1) {
-                                                // If this is a selection from a prior week that was correct
-                                                return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
-                                            } else if (ind === row.survivorPicks.length - 1 && row.aliveInSurvivor && gameCompleted) {
-                                                // If this was the most recent pick and it was correct
-                                                return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
-                                            } else if (ind === row.survivorPicks.length - 1 && row.aliveInSurvivor && !gameCompleted) {
-                                                // If this was the most recent pick and the game hasn't finished yet
-                                                return <td key={`${row.name}-${ind}`}>{row.survivorPicks[ind]}</td>
-                                            } else if (ind === row.survivorPicks.length - 1 && !row.aliveInSurvivor) {
-                                                // If this was the most recent pick and it was incorrect
-                                                return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
+                                            const isCurrentWeek = ind === CURRENT_WEEK - 1;
+                                            const pickWasMade = ind < row.survivorPicks.length - 1;
+                                            const isMostRecentPick = ind === row.survivorPicks.length - 1;
+                                            if (isCurrentWeek) {
+                                                if (showAllPicks) {
+                                                    if (row.aliveInSurvivor && gameCompleted) {
+                                                        // If the user is still alive and the game is completed show as correct
+                                                        return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
+                                                    } else if (!row.aliveInSurvivor && gameCompleted) {
+                                                        // If the user is no longer alive and the game is completed show as incorrect
+                                                        return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
+                                                    } else if (!gameCompleted) {
+                                                        // If the submissions have locked but this game hasn't been played yet
+                                                        return <td key={`${row.name}-${ind}`}>{row.survivorPicks[ind]}</td>
+                                                    }
+                                                } else {
+                                                    if (gameCompleted) {
+                                                        if (row.aliveInSurvivor) {
+                                                            // If the week hasn't technically locked but the user picked correctly prior to cutoff
+                                                            return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
+                                                        } else {
+                                                            // If the week hasn't technically locked but the user picked incorrectly prior to cutoff
+                                                            return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
+                                                        }
+                                                    } else {
+                                                        // If the game hasn't completed yet and the week hasn't locked, show nothing
+                                                        return <td key={`${row.name}-${ind}`}></td>
+                                                    }
+                                                }
                                             } else {
-                                                // If this player was eliminated at this point or just a week that hasn't happened yet
-                                                return <td key={`${row.name}-${ind}`}></td>
+                                                if (isMostRecentPick && row.aliveInSurvivor) {
+                                                    // If this was the most recent pick the user has made and it's from a prior week and they're still alive
+                                                    return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
+                                                } else if (isMostRecentPick && !row.aliveInSurvivor) {
+                                                    // If this was the most recent pick the user has made and it's from a prior week and they're out
+                                                    return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
+                                                } else if (pickWasMade) {
+                                                    // If this was a pick from a prior week that they got correct
+                                                    return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
+                                                } else {
+                                                    // Else, the user has been eliminated at this point so fill with nothing
+                                                    return <td key={`${row.name}-${ind}`}></td>
+                                                }
                                             }
                                         })
                                     }

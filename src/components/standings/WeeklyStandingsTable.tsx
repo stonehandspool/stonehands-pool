@@ -1,6 +1,6 @@
 import * as seasonStandings from '../../../data/2023/players.json';
 
-import { PRIOR_WEEK_COMPLETE, MONDAY_NIGHT_TOTAL } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MONDAY_NIGHT_TOTAL } from '../../constants';
 
 type TableColumns = {
     position: number;
@@ -18,6 +18,9 @@ const headers: string[] = ['Position', 'Name', 'Points', 'Wins', 'Losses', 'Ties
 function WeeklyStandingsTable() {
     const { players } = seasonStandings;
 
+    // If the current week is currently marked as START we don't want to show anything yet, so show the prior weeks data
+    const weekToShow = CURRENT_WEEK_STATUS === 'START' && CURRENT_WEEK > 1 ? CURRENT_WEEK - 2 : CURRENT_WEEK - 1;
+
     // Calculate the standings
     const calculatedPicks: TableColumns[] = [];
     for (let i = 0; i < players.length; i++) {
@@ -25,11 +28,11 @@ function WeeklyStandingsTable() {
         const rowInfo: TableColumns = {
             position: -1,
             name: `${playerInfo.firstName} ${playerInfo.lastName}`,
-            points: playerInfo.currentWeekPoints,
-            wins: playerInfo.currentWeekWins,
-            losses: playerInfo.currentWeekLosses,
-            ties: playerInfo.currentWeekTies,
-            tiebreaker: playerInfo.currentWeekTiebreaker,
+            points: CURRENT_WEEK > 1 ? playerInfo.pointsByWeek[weekToShow] : playerInfo.currentWeekPoints,
+            wins: CURRENT_WEEK > 1 ? playerInfo.winsByWeek[weekToShow] : playerInfo.currentWeekWins,
+            losses: CURRENT_WEEK > 1 ? playerInfo.lossesByWeek[weekToShow] : playerInfo.currentWeekLosses,
+            ties: CURRENT_WEEK > 1 ? playerInfo.tiesByWeek[weekToShow] : playerInfo.currentWeekTies,
+            tiebreaker: CURRENT_WEEK > 1 ? playerInfo.tiebreakerByWeek[weekToShow] : playerInfo.currentWeekTiebreaker,
             result: '',
         };
         calculatedPicks.push(rowInfo);
@@ -45,7 +48,7 @@ function WeeklyStandingsTable() {
     // Now update the position and result for the table
     for (let i = 0; i < calculatedPicks.length; i++) {
         calculatedPicks[i].position = i + 1;
-        if (i === 0 && PRIOR_WEEK_COMPLETE) {
+        if (i === 0 && CURRENT_WEEK_STATUS !== 'IN_PROGRESS') {
             calculatedPicks[i].result = 'Winner'
         } else {
             calculatedPicks[i].result = '**'

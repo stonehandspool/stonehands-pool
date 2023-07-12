@@ -26,7 +26,7 @@ if (!fs.existsSync(path.resolve(`data/${year}`))) {
 }
 
 // Now create a team data json file to keep track of them teams for that season
-const teams = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAX', 'KC', 'LAC', 'LAR', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'];
+const teams = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAC', 'KC', 'LAC', 'LA', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'];
 const displayNames = ['Arizona', 'Atlanta', 'Baltimore', 'Buffalo', 'Carolina', 'Chicago', 'Cinncinati', 'Cleveland', 'Dallas', 'Denver', 'Detroit', 'Green Bay', 'Houston', 'Indianapolis', 'Jacksonville', 'Kansas City', 'LA Chargers', 'LA Rams', 'Las Vegas', 'Miami', 'Minnesota', 'New England', 'New Orleans', 'NY Giants', 'NY Jets', 'Philadelphia', 'Pittsburgh', 'Seattle', 'San Francisco', 'Tampa Bay', 'Tennessee', 'Washington'];
 const teamObj = { teams: {} };
 teams.forEach((team, index) => {
@@ -49,6 +49,7 @@ fs.writeFileSync(path.resolve(`data/${year}/teams.json`), asJson);
 console.log(`Created a new file at data/${year}/teams.json in order to keep track of the teams`);
 
 // Now create a season data json file to keep track of the scores throughout the season
+const weeks = Array.from({ length: 18 }, (_, i) => i + 1); // Create the 18 weeks
 const weeklyPicksObject = { weeklyPicks: {} };
 weeks.forEach((week) => {
     weeklyPicksObject.weeklyPicks[`week_${week}`] = [];
@@ -78,15 +79,19 @@ if (data) {
             firstName,
             lastName,
             wins: 0,
+            winsByWeek: [],
             losses: 0,
+            lossesByWeek: [],
             ties: 0,
+            tiesByWeek: [],
             percent: 0,
             points: 0,
+            pointsByWeek: [],
             tbAvg: 0,
-            weeks: 0,
-            games: 0,
+            tiebreakerByWeek: [],
             lastWeekRank: 0,
             currentWeekRank: 0,
+            rankByWeek: [],
             change: "--",
             currentWeekWins: 0,
             currentWeekLosses: 0,

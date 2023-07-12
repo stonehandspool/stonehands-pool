@@ -15,7 +15,7 @@ A webapp made by Ryan Fandl to allow for a season-long NFL pool. The front end i
 - Run the process week script (firstRun = false) to get the results from Monday night
 - Update the website with the results
 - Send out end of week email announcing the winners and pool updates
-- Update the `CURRENT_WEEK` (increment by 1), `CURRENT_WEEK_CUTOFF_TIME` (new Sunday date/time), `CURRENT_WEEK_FINAL_GAME` (Mon night game matchup), `MONDAY_NIGHT_TOTAL` (total of night befores game), and `PRIOR_WEEK_COMPLETE` (turn to true) values in the `constants.ts` file
+- Update the `CURRENT_WEEK` (increment by 1), `CURRENT_WEEK_CUTOFF_TIME` (new Sunday date/time), `CURRENT_WEEK_FINAL_GAME` (Mon night game matchup), `MONDAY_NIGHT_TOTAL` (total of night befores game), and `CURRENT_WEEK_STATUS` values in the `constants.ts` file
 
 #### Thursday
 - Make sure automated reminder email is sent out
@@ -43,6 +43,7 @@ Run this script on Friday morning (after all Thursday night games have been comp
 ```sh
 node scripts/processWeek.js --year {year} --week {week} --firstRun true --submissionsLocked false
 ```
+*Note:* This script should be run once on Sunday after the cutoff with `submissionsLocked` as `false` in order to pull the most up-to-date submissions
 Run this script after all of the Sunday games and then also after the Monday game(s) to update and/or finish the week
 ```sh
 node scripts/processWeek.js --year {year} --week {week} --firstRun false --submissionsLocked true

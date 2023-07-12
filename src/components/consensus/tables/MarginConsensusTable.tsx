@@ -1,5 +1,5 @@
-import { CURRENT_WEEK, SEASON_READY, SubmissionInfo } from '../../../constants';
-import * as playerPicks from '../../../../data/2023/weeklyPicks.json';
+import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_STATUS, SEASON_READY, SubmissionInfo } from '../../../constants';
+import * as playerData from '../../../../data/2023/players.json';
 import * as seasonData from '../../../../data/2023/season.json';
 import * as TeamLogos from '../../../assets/logos';
 
@@ -13,7 +13,13 @@ type MatchupConsensusInfo = {
 };
 
 function MarginConsensusTable() {
-    if (!SEASON_READY) {
+    // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
+    // can't see what people have chosen prior to the cutoff happening
+    const currentTime = new Date();
+    const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+    const weekToShow = showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
+    
+    if (!SEASON_READY || (CURRENT_WEEK === 1 && !showCurrentWeek)) {
         return (
             <section className='section'>
                 <div className='container'>
@@ -24,8 +30,8 @@ function MarginConsensusTable() {
     }
     const weeklyConsensusArr: MatchupConsensusInfo[] = [];
     const allWeeks = seasonData.weeks;
-    const weekField = `week_${CURRENT_WEEK}`;
-    const weekPicks: SubmissionInfo[] = playerPicks.weeklyPicks[weekField as keyof typeof playerPicks.weeklyPicks] as SubmissionInfo[];
+    const weekField = `week_${weekToShow}`;
+    const { players } = playerData;
     const weekGames = allWeeks[weekField as keyof typeof allWeeks];
     
     // First set up the initial values for the consensus info
@@ -42,20 +48,17 @@ function MarginConsensusTable() {
     });
 
     // Now go through every players response and update the consensus info
-    const numGames = Object.keys(weekGames).length;
     let totalPicks = 0;
-    weekPicks.forEach(pickInfo => {
-        const { submission_data: picks } = pickInfo;
-        for (let i = 0; i < numGames; i++) {
-            const consensusInfo = weeklyConsensusArr[i];
-            const userChoice = picks['margin-pick' as keyof typeof picks] as string;
-            if (userChoice !== '' && userChoice === consensusInfo.homeTeam) {
-                consensusInfo.homeNumPicks++;
-                totalPicks++;
-            } else if (userChoice !== '' && userChoice === consensusInfo.awayTeam) {
-                consensusInfo.awayNumPicks++;
-                totalPicks++;
+    players.forEach(player => {
+        const { team } = player.marginPicks[weekToShow - 1];
+        const matchup = weeklyConsensusArr.find(matchupInfo => matchupInfo.homeTeam === team || matchupInfo.awayTeam === team);
+        if (matchup && team !== '') {
+            if (team === matchup.homeTeam) {
+                matchup.homeNumPicks++;
+            } else {
+                matchup.awayNumPicks++;
             }
+            totalPicks++;
         }
     });
     

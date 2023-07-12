@@ -1,8 +1,11 @@
 import * as seasonStandings from '../../../data/2023/players.json';
+import * as seasonResults from '../../../data/2023/season.json';
+
+import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK } from '../../constants';
 
 type MarginPick = {
     team: string;
-    margin: number;
+    margin: number | null;
 };
 
 type PlayerInfo = {
@@ -15,6 +18,18 @@ type PlayerInfo = {
 const headers: string[] = ['Player', 'Total', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', 'Wins'];
 const weeksArr = [...Array(18)];
 
+const weeklyResults = seasonResults.weeks[`week_${CURRENT_WEEK}` as keyof typeof seasonResults.weeks];
+const getGameCompleted = (teamName: string) => {
+    let gameCompleted = false;
+    Object.keys(weeklyResults).map(key => {
+        const matchupInfo = weeklyResults[key as keyof typeof weeklyResults];
+        if (matchupInfo.home_team === teamName || matchupInfo.away_team === teamName) {
+            gameCompleted = matchupInfo.winner !== '';
+        }
+    });
+    return gameCompleted;
+};
+
 function MarginTable() {
     const { players } = seasonStandings;
 
@@ -22,7 +37,7 @@ function MarginTable() {
     const playerPicks: PlayerInfo[] = [];
     for (let i = 0; i < players.length; i++) {
         const playerInfo = players[i];
-        const numWins = playerInfo.marginPicks.filter((pick: MarginPick) => pick.margin > 0).length;
+        const numWins = playerInfo.marginPicks.filter((pick: MarginPick) => pick.margin !== null && pick.margin > 0).length;
         const rowInfo: PlayerInfo = {
             name: `${playerInfo.firstName} ${playerInfo.lastName}`,
             marginPicks: playerInfo.marginPicks,
@@ -38,6 +53,11 @@ function MarginTable() {
         const lastName2 = row2.name.split(' ').pop() as string;
         return row2.marginTotal - row1.marginTotal || lastName1.localeCompare(lastName2);
     });
+
+    // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
+    // can't see what people have chosen prior to the cutoff happening
+    const currentTime = new Date();
+    const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
     
     return (
         <section className='section'>
@@ -58,7 +78,7 @@ function MarginTable() {
                 </table>
             </div>
             <div className='container'>
-                <table className='table is-bordered is-hoverable mx-auto has-text-centered'>
+                <table className='table is-bordered is-striped is-hoverable mx-auto has-text-centered'>
                     <thead>
                         <tr>
                             {headers.map(heading => {
@@ -73,11 +93,27 @@ function MarginTable() {
                                     <td key={`${row.name}-total-${index}`} className='is-vcentered'><strong>{row.marginTotal > 0 ? '+' : ''}{row.marginTotal}</strong></td>
                                     {
                                         weeksArr.map((week, ind) => {
-                                            if (row.marginPicks[ind]) {
-                                                if (row.marginPicks[ind].margin > 0) {
+                                            const gameCompleted = getGameCompleted(row.marginPicks[ind]?.team);
+                                            const isCurrentWeek = ind === CURRENT_WEEK - 1;
+                                            if (isCurrentWeek && !showAllPicks) {
+                                                return <td key={`${row.name}-hidden`}></td>
+                                            } else if (isCurrentWeek && !showAllPicks && gameCompleted) {
+                                                // If we don't want to show everything but a user has picked a game that has completed already
+                                                if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number > 0) {
                                                     //If the margin of victory was over 0, have a green background
                                                     return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.marginPicks[ind].team}<br />+{row.marginPicks[ind].margin}</td>
-                                                } else if (row.marginPicks[ind].margin < 0) {
+                                                } else if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number < 0) {
+                                                    // If the margin of victory was under 0, have a red background
+                                                    return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
+                                                } else {
+                                                    // If the margin of victory was 0 or null (unfinished game) then no background
+                                                    return <td key={`${row.name}-${ind}`}>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
+                                                }
+                                            } else if (row.marginPicks[ind]) {
+                                                if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number > 0) {
+                                                    //If the margin of victory was over 0, have a green background
+                                                    return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.marginPicks[ind].team}<br />+{row.marginPicks[ind].margin}</td>
+                                                } else if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number < 0) {
                                                     // If the margin of victory was under 0, have a red background
                                                     return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
                                                 } else {

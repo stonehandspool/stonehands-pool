@@ -10,14 +10,13 @@ function SeasonStandings() {
         setNotificationVisible(false);
     };
 
-    // TODO: remove the notification after week 2 or 3
     return (
         <section className='section'>
             <div className='container'>
                 <h1 className='title has-text-centered'>{CURRENT_YEAR} Stonehands Pool</h1>
                 <h2 className='subtitle has-text-centered'>Season standings as of week {CURRENT_WEEK}</h2>
                 {
-                    notificationVisible &&
+                    (notificationVisible && CURRENT_WEEK <= 2) &&
                     <div className='columns is-centered'>
                         <div className='column is-half'>
                             <div className='notification is-info is-narrow'>

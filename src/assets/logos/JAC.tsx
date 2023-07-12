@@ -3,7 +3,7 @@ type IconProps = {
   opacity?: number;
 }
 
-function JAX(props: IconProps) {
+function JAC(props: IconProps) {
   const { size, opacity } = props;
   return (
     <svg
@@ -40,9 +40,9 @@ function JAX(props: IconProps) {
   );
 };
 
-JAX.defaultProps = {
+JAC.defaultProps = {
   size: 40,
   opacity: 1,
 };
 
-export default JAX;
+export default JAC;

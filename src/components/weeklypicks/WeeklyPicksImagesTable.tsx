@@ -6,7 +6,7 @@ import * as seasonData from '../../../data/2023/season.json';
 
 import * as TeamLogos from '../../assets/logos';
 
-import { CURRENT_WEEK, SEASON_READY, SubmissionInfo } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_STATUS, SEASON_READY, SubmissionInfo } from '../../constants';
 
 type TeamLogoKey = keyof typeof TeamLogos;
 
@@ -23,7 +23,7 @@ function WeeklyPicksImagesTable() {
     const { players } = seasonStandings;
     const weeklyPicks: SubmissionInfo[] = allPicks.weeklyPicks[`week_${CURRENT_WEEK}` as keyof typeof allPicks.weeklyPicks] as SubmissionInfo[];
     const { weeks } = seasonData;
-    const currentWeek = weeks[`week_${CURRENT_WEEK}`];
+    const currentWeek = weeks[`week_${CURRENT_WEEK}` as keyof typeof weeks];
     const numGamesThisWeek = Object.keys(currentWeek).length;
 
     const atArr = Array(numGamesThisWeek).fill('@');
@@ -37,6 +37,11 @@ function WeeklyPicksImagesTable() {
         if (row1.submission_data.lastName < row2.submission_data.lastName) return -1;
         return 0;
     });
+
+    // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
+    // can't see what people have chosen prior to the cutoff happening
+    const currentTime = new Date();
+    const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
 
     return (
         <table className='table is-striped is-hoverable mx-auto has-text-centered'>
@@ -78,7 +83,7 @@ function WeeklyPicksImagesTable() {
                     return <tr key={`picks-${index}`}>
                         <td className='names is-vcentered'>{`${picks.firstName} ${picks.lastName}`}</td>
                         {matchupKeys.map((key, index) => {
-                            const { winner } = currentWeek[key as keyof typeof currentWeek];
+                            const { winner, evaluated } = currentWeek[key as keyof typeof currentWeek];
                             const pick = picks[`matchup-${index}` as keyof typeof picks];
                             const confidence = picks[`matchup-${index}-confidence` as keyof typeof picks];
                             const correct = pick === winner;
@@ -88,7 +93,8 @@ function WeeklyPicksImagesTable() {
                             } else {
                                 Logo = TeamLogos[pick as TeamLogoKey];
                             }
-                            return <td
+                            if ((!showAllPicks && evaluated) || showAllPicks) {
+                                return <td
                                 key={`${pickInfo.user_id}-${index}`}
                                 className={correct ? 'weekly-picks-table-correct-choice' : 'weekly-picks-table-incorrect-choice'}
                             >
@@ -98,6 +104,10 @@ function WeeklyPicksImagesTable() {
                                 <br />
                                 {confidence}
                             </td>
+                            } else {
+                                return <td key={`${pickInfo.user_id}-${index}`}></td>
+                            }
+                            
                         })}
                         <td className='is-vcentered'>{playerInfo?.currentWeekTiebreaker}</td>
                         <td className='is-vcentered'>{playerInfo?.currentWeekPoints}</td>

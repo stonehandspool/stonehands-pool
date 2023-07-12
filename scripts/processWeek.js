@@ -151,7 +151,6 @@ players.forEach(player => {
     let weeklyLosses = 0;
     let weeklyTies = 0;
     let weeklyPoints = 0;
-    let numGamesEvaluated = 0;
 
     // Reset the current weeks values if this is the first run
     if (isFirstRun) {
@@ -159,6 +158,12 @@ players.forEach(player => {
         player.currentWeekLosses = 0;
         player.currentWeekTies = 0;
         player.currentWeekPoints = 0;
+        player.winsByWeek.push(0);
+        player.lossesByWeek.push(0);
+        player.tiesByWeek.push(0);
+        player.pointsByWeek.push(0);
+        player.tiebreakerByWeek.push(0);
+        player.rankByWeek.push(0);
     }
 
     // First, evaluate all of the confidence pool picks
@@ -178,27 +183,31 @@ players.forEach(player => {
             } else {
                 weeklyLosses++;
             }
-            numGamesEvaluated++;
         }
     }
 
     // Update the players information
     player.currentWeekWins += weeklyWins;
+    player.winsByWeek[player.winsByWeek.length - 1] = player.currentWeekWins;
     player.currentWeekLosses += weeklyLosses;
+    player.lossesByWeek[player.lossesByWeek.length - 1] = player.currentWeekLosses;
     player.currentWeekTies += weeklyTies;
+    player.tiesByWeek[player.tiesByWeek.length - 1] = player.currentWeekTies;
     player.currentWeekPoints += weeklyPoints;
+    player.pointsByWeek[player.pointsByWeek.length - 1] = player.currentWeekPoints;
     player.currentWeekTiebreaker = parseInt(submissionInfo.tiebreaker, 10);
+    player.tiebreakerByWeek[player.tiebreakerByWeek.length - 1] = player.currentWeekTiebreaker;
     player.wins += weeklyWins;
     player.losses += weeklyLosses;
     player.ties += weeklyTies;
     player.percent = (player.wins + (player.ties / 2)) / (player.wins + player.losses + player.ties);
     player.points += weeklyPoints;
-    if (isFirstRun) {
-        player.weeks++;
-        const totalTbPoints = player.tbAvg * player.weeks;
-        player.tbAvg = (totalTbPoints + parseInt(submissionInfo.tiebreaker, 10)) / player.weeks;
+    // Calculate the tbAvg
+    let totalTiebreaker = 0;
+    for (let i = 0; i < player.tiebreakerByWeek.length - 1; i++) {
+        totalTiebreaker += player.tiebreakerByWeek[i];
     }
-    player.games += numGamesEvaluated
+    player.tbAvg = totalTiebreaker / player.tiebreakerByWeek.length;
 
     // Now evaluate the survivor pool pick
     if (player.aliveInSurvivor) {
@@ -315,12 +324,14 @@ clonedPlayers.sort((row1, row2) => {
 if (week === 1) {
     players.forEach(player => {
         player.currentWeekRank = clonedPlayers.findIndex(clone => clone.id === player.id) + 1;
+        player.rankByWeek[player.rankByWeek.length - 1] = player.currentWeekRank;
     });
 } else {
     players.forEach(player => {
         const pastWeek = player.currentWeekRank;
         player.lastWeekRank = pastWeek;
         player.currentWeekRank = clonedPlayers.findIndex(cloned => cloned.id === player.id) + 1;
+        player.rankByWeek[player.rankByWeek.length - 1] = player.currentWeekRank;
         // Now calculate the different
         if (player.lastWeekRank > player.currentWeekRank) {
             player.change = `+${player.lastWeekRank - player.currentWeekRank}`;

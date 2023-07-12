@@ -9,7 +9,7 @@ function PickSheetSuccess() {
 
     const { weeks } = seasonData;
     const { teams } = teamData;
-    const currentWeek = weeks[`week_${CURRENT_WEEK}`];
+    const currentWeek = weeks[`week_${CURRENT_WEEK}` as keyof typeof weeks];
     const numGamesThisWeek = Object.keys(currentWeek).length;
     const numGamesArr = [...Array(numGamesThisWeek).keys()];
 
