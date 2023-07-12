@@ -70,6 +70,10 @@ function SurvivorTable() {
                 <table className='table is-bordered is-striped is-hoverable mx-auto'>
                     <thead>
                         <tr>
+                            <td></td>
+                            <th className='has-text-centered' colSpan={18}>Week</th>
+                        </tr>
+                        <tr>
                             {headers.map(heading => {
                                 return <th key={heading} className='has-text-centered'>{heading}</th>
                             })}

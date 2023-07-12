@@ -15,8 +15,6 @@ type TableColumns = {
     username: string;
 }
 
-const headers: string[] = ['Position', 'Name', 'Points', 'Wins', 'Losses', 'Ties', 'Percent', 'Tiebreaker Avg', 'Last Week', 'Change'];
-
 function SeasonStandingsTable() {
     const { players } = seasonStandings;
     const navigate = useNavigate();
@@ -57,9 +55,16 @@ function SeasonStandingsTable() {
                 <table className='table is-striped is-hoverable mx-auto'>
                     <thead>
                         <tr>
-                            {headers.map(heading => {
-                                return <th key={heading}>{heading}</th>
-                            })}
+                            <th className='is-vcentered'>Position</th>
+                            <th className='is-vcentered'>Name</th>
+                            <th className='is-vcentered'>Points</th>
+                            <th className='is-vcentered'>Wins</th>
+                            <th className='is-vcentered'>Losses</th>
+                            <th className='is-vcentered'>Ties</th>
+                            <th className='is-vcentered'>Percent</th>
+                            <th className='is-vcentered'>Tiebreaker <br /> Average</th>
+                            <th className='is-vcentered'>Last <br /> Week</th>
+                            <th className='is-vcentered'>Change</th>
                         </tr>
                     </thead>
                     <tbody>
