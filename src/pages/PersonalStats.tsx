@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import * as playerData from '../../data/2023/players.json';
 import * as seasonData from '../../data/2023/season.json';
 import * as weeklyPicks from '../../data/2023/weeklyPicks.json';
-import { CURRENT_YEAR, SEASON_READY, SubmissionInfo, TEAM_CODES, UserInfo } from '../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_STATUS, CURRENT_YEAR, SEASON_READY, SubmissionInfo, TEAM_CODES, UserInfo } from '../constants';
 import UserConfidenceReport from '../components/userStats/UserConfidenceReport';
 import UserSurvivorReport from '../components/userStats/UserSurvivorReport';
 import UserMarginReport from '../components/userStats/UserMarginReport';
@@ -76,7 +76,7 @@ function PersonalStats() {
 
     const { players } = playerData;
     const { weeks } = seasonData;
-    const userInfo: UserInfo = players.find(player => player.username === username) as UserInfo;
+    const userInfo: UserInfo = players.find(player => player.username === username) as unknown as UserInfo;
 
     if (!userInfo) {
         return (
@@ -85,17 +85,23 @@ function PersonalStats() {
             </div>
         );
     }
+
+    const currentTime = new Date();
+    const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+    const weekToShow = CURRENT_WEEK === 1 ? CURRENT_WEEK : showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
+
     const userPicks: SubmissionInfo[] = [];
     Object.keys(weeklyPicks).map((key, index) => {
         const week: SubmissionInfo[] = weeklyPicks.weeklyPicks[`week_${index + 1}` as keyof typeof weeklyPicks.weeklyPicks] as SubmissionInfo[];
-        if (week && week.length > 0) {
+        if (week && week.length > 0 && index < weekToShow) {
             const playerPicksThisWeek = week.find(submission => submission.submission_data.username === username);
             if (playerPicksThisWeek) {
                 userPicks.push(playerPicksThisWeek);
             }
         }
     });
-
+    
+    const { pointsByWeek } = userInfo;
     const teamsByPicks = getPickStats(userPicks, weeks);
 
     let marginOperator;
@@ -120,9 +126,21 @@ function PersonalStats() {
         unusedSurvivorPicks = TEAM_CODES.filter(code => {
             return !userInfo.survivorPicks.includes(code);
         });
+
+        // If we don't want to show all of their picks, move the most recent one back into the unused pool and re-alphabetize
+        if (weekToShow < CURRENT_WEEK) {
+            unusedSurvivorPicks.push(userInfo.survivorPicks[userInfo.survivorPicks.length - 1]);
+            unusedSurvivorPicks.sort();
+        }
+
         unusedMarginPicks = TEAM_CODES.filter(code => {
             return !userInfo.marginPicks.some(pick => pick.team === code);
         });
+
+        if (weekToShow < CURRENT_WEEK) {
+            unusedMarginPicks.push(userInfo.marginPicks[userInfo.marginPicks.length - 1].team);
+            unusedMarginPicks.sort();
+        }
     
         bestMargin = userInfo.marginPicks.reduce((prev, current) => {
             return prev.margin > current.margin ? prev : current;
@@ -131,7 +149,7 @@ function PersonalStats() {
         bestMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === team) + 1;
         
         worstMargin = userInfo.marginPicks.reduce((prev, current) => {
-            return prev.margin > current.margin ? current : prev;
+            return prev.margin > current.margin && current.margin !== null ? current : prev;
         });
         const { team: worst, margin: worstVal } = worstMargin;
         worstMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === worst) + 1;
@@ -199,10 +217,10 @@ function PersonalStats() {
                         </ul>
                     </div>
                     <div className='container'>
-                        {activeChoice === Pools.Confidence && <UserConfidenceReport userPicks={userPicks} teamsByPicks={teamsByPicks} />}
-                        {activeChoice === Pools.Survivor && <UserSurvivorReport userInfo={userInfo} unusedSurvivorPicks={unusedSurvivorPicks} />}
-                        {activeChoice === Pools.Margin && <UserMarginReport userInfo={userInfo} unusedMarginPicks={unusedMarginPicks} bestMarginWeek={bestMarginWeek} bestMargin={bestMargin} worstMarginWeek={worstMarginWeek} worstMargin={worstMargin} />}
-                        {activeChoice === Pools.HighFive && <UserHighFiveReport userInfo={userInfo} />}
+                        {activeChoice === Pools.Confidence && <UserConfidenceReport userPicks={userPicks} teamsByPicks={teamsByPicks} pointsByWeek={pointsByWeek} />}
+                        {activeChoice === Pools.Survivor && <UserSurvivorReport userInfo={userInfo} unusedSurvivorPicks={unusedSurvivorPicks} weekToShow={weekToShow} />}
+                        {activeChoice === Pools.Margin && <UserMarginReport userInfo={userInfo} unusedMarginPicks={unusedMarginPicks} bestMarginWeek={bestMarginWeek} bestMargin={bestMargin} worstMarginWeek={worstMarginWeek} worstMargin={worstMargin} weekToShow={weekToShow} />}
+                        {activeChoice === Pools.HighFive && <UserHighFiveReport userInfo={userInfo} weekToShow={weekToShow} />}
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ export const CURRENT_YEAR = '2023-2024';
 // This is a date in a valid `Date` format which should be taken from the season schedule each week
 // This is used to check if a user can still submit their picksheet, it should generally be the first Sunday game each week
 // Unless there is a few Saturday games later in the season
-export const CURRENT_WEEK_CUTOFF_TIME = new Date('July 3, 2023 18:00:00');
+export const CURRENT_WEEK_CUTOFF_TIME = new Date('July 12, 2023 18:00:00');
 // This is whatever the last scheduled game is in a given week
 // This is used to tell the users what game they should be predicting the total final score of for a week
 export const CURRENT_WEEK_FINAL_GAME = 'CLE @ PIT';
@@ -37,7 +37,7 @@ export const MONDAY_NIGHT_TOTAL = 0;
 //              - The weekly standings should signify the current weeks winner
 //          - The picksheet should still be unavailable
 type WeekStatus = 'START' | 'IN_PROGRESS' | 'COMPLETE';
-export const CURRENT_WEEK_STATUS: WeekStatus = 'START';
+export const CURRENT_WEEK_STATUS: WeekStatus = 'IN_PROGRESS';
 // These are the team codes used throughout the codebase and should only be changed if a new team joins the league or a team relocates
 export const TEAM_CODES = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAC', 'KC', 'LAC', 'LA', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'];
 
@@ -76,15 +76,19 @@ type UserInfo = {
     firstName: string;
     lastName: string;
     wins: number;
+    winsByWeek: number[];
     losses: number;
+    lossesByWeek: number[];
     ties: number;
+    tiesByWeek: number[];
     percent: number;
     points: number;
+    pointsByWeek: number[];
     tbAvg: number;
-    weeks: number;
-    games: number;
+    tiebreakerByWeek: number[];
     lastWeekRank: number;
     currentWeekRank: number;
+    rankByWeek: number[];
     change: string;
     survivorPicks: string[];
     aliveInSurvivor: boolean;

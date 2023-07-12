@@ -263,15 +263,15 @@
     "MIN": {
       "displayName": "Minnesota",
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 45,
-      "points_against": 17,
+      "points_for": 75,
+      "points_against": 54,
       "home_wins": 1,
       "home_losses": 0,
       "away_wins": 0,
-      "away_losses": 0,
-      "streak": "W1"
+      "away_losses": 1,
+      "streak": "L1"
     },
     "NE": {
       "displayName": "New England",
@@ -327,16 +327,16 @@
     },
     "PHI": {
       "displayName": "Philadelphia",
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0,
-      "points_for": 28,
-      "points_against": 14,
-      "home_wins": 0,
+      "points_for": 65,
+      "points_against": 44,
+      "home_wins": 1,
       "home_losses": 0,
       "away_wins": 1,
       "away_losses": 0,
-      "streak": "W1"
+      "streak": "W2"
     },
     "PIT": {
       "displayName": "Pittsburgh",
