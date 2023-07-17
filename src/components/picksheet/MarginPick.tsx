@@ -16,8 +16,8 @@ function MarginPicks(props: any) {
         <div className='container pb-6'>
             <h3 className='title is-3'>Margin Pick:</h3>
             <h4 className='subtitle'>
-                Pick one team each week that you think will win by the most. If you are right, you are awarded that teams winning margin to your margin pool
-                score. If they lose, that teams losing margin is subtracted from your margin pool score. You can only choose each team once in the margin pool,
+                Pick one team each week that you think will win by the most. If you are right, that teams winning margin is added to your margin pool score.
+                If you are wrong, that teams losing margin is subtracted from your margin pool score. You can only choose each team <b>once</b> in the margin pool,
                 so choose carefully! You cannot be eliminated from this pool.
             </h4>
             {priorPickGameCompleted && <h6 className='subtitle is-6 has-text-danger'>Your choice from this week has already played their game. you can no longer change your pick</h6>}
