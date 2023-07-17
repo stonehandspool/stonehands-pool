@@ -37,7 +37,7 @@ export const MONDAY_NIGHT_TOTAL = 0;
 //              - The weekly standings should signify the current weeks winner
 //          - The picksheet should still be unavailable
 type WeekStatus = 'START' | 'IN_PROGRESS' | 'COMPLETE';
-export const CURRENT_WEEK_STATUS: WeekStatus = 'IN_PROGRESS';
+export const CURRENT_WEEK_STATUS: WeekStatus = 'COMPLETE';
 // These are the team codes used throughout the codebase and should only be changed if a new team joins the league or a team relocates
 export const TEAM_CODES = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAC', 'KC', 'LAC', 'LA', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'];
 
