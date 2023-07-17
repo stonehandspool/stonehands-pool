@@ -18,8 +18,8 @@ function SurvivorPick(props: any) {
         {   userInfo.aliveInSurvivor &&
             <>
                 <h4 className='subtitle'>
-                    Pick one team each week that you are certain will win. If you are right, you continue on to the next week but can no longer choose that team again
-                    for the survivor pool. If you are wrong you are eliminated from the survivor pool, so be careful!
+                    Pick one team each week that you are certain will win. You can only pick each team <b>once</b>. If you are right
+                    you will continue on to the next week, if you are wrong you are eliminated from the survivor pool, so be careful!
                 </h4>
                 {priorPickGameCompleted && <h6 className='subtitle is-6 has-text-danger'>Your choice from this week has already played their game. you can no longer change your pick</h6>}
                 <div className='columns is-multiline'>
