@@ -61,7 +61,7 @@ Use sportradar trial API and then run script to conver it to the format we need
 - [x] Get the website online
 - [x] Do a dry run
 - [x] Get a printable version of the picks to show up after submission
-- [ ] Double check partial week standings
+- [x] Double check partial week standings
 - [ ] Add a Hall of Fame (Probably after year 1 is done)
 - [ ] Get a modal for team/matchup info on the picksheet (Maybe)
 - [ ] Add in a random stats page (e.g. Best + Worst, Thurs. Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)) (Maybe)
