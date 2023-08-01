@@ -1,6 +1,6 @@
 import * as TeamLogos from '../../assets/logos';
 import * as TeamInfo from '../../../data/2023/teams.json';
-import { MarginPick, ValidPicks } from '../../constants';
+import { CURRENT_WEEK, MarginPick, ValidPicks } from '../../constants';
 
 export interface PickOneTeamProps {
     homeTeam: ValidPicks;
@@ -53,7 +53,7 @@ function PickOneTeam(props: PickOneTeamProps) {
             const chosenIndex = priorSurvivorPicks.findIndex(pick => pick === team);
             if (chosen) {
                 // If this was the most recent pick (i.e. a Sunday game after processWeek has ran on Fri) then don't disable it yet
-                if (chosenIndex === priorSurvivorPicks.length - 1 && !priorPickGameCompleted) {
+                if (chosenIndex === priorSurvivorPicks.length - 1 && (priorSurvivorPicks.length === CURRENT_WEEK && !priorPickGameCompleted)) {
                     return false;
                 } else {
                     return true;
@@ -65,7 +65,7 @@ function PickOneTeam(props: PickOneTeamProps) {
             const chosen = priorMarginPicks.find(pick => pick.team === team);
             const chosenIndex = priorMarginPicks.findIndex(pick => pick.team === team);
             if (chosen) {
-                if (chosenIndex === priorMarginPicks.length - 1 && !priorPickGameCompleted) {
+                if (chosenIndex === priorMarginPicks.length - 1 && (priorMarginPicks.length === CURRENT_WEEK && !priorPickGameCompleted)) {
                     return false;
                 } else {
                     return true;

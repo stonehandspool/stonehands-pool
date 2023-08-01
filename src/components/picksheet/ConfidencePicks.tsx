@@ -10,8 +10,8 @@ function ConfidencePicks(props: any) {
         <div className='container pb-6'>
             <h3 className='title is-3'>Confidence Picks:</h3>
             <h4 className='subtitle'>
-                Pick a winner for every game and assign points based off of how confident you are they will win! {numOptions} is the most confident while 1 is
-                the least confident. If you are right, you will get that many points in the confidence pool.
+                Pick a winner for every game and assign points based off how confident you are they will win! {numOptions} is the <b>most</b> confident while 1 is
+                the <b>least</b> confident. If you are right, you will get that many points in the confidence pool. <b>{numOptions} = best, 1 = worst!</b>
             </h4>
             <div className='columns is-multiline'>
                 {

@@ -12,6 +12,7 @@ function SurvivorReport() {
         <div className='section'>
             <div className='container pb-6'>
                 <h1 className='title'>Week {weekToShow} Consensus Report</h1>
+                <h2 className='subtitle'>How many people picked each team in the survivor pool this week</h2>
                 <SurvivorConsensusTable />              
             </div>
         </div>

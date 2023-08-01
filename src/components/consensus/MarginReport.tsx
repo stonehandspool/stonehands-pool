@@ -12,6 +12,7 @@ function MarginReport() {
         <div className='section'>
             <div className='container'>
                 <h1 className='title'>Week {weekToShow} Consensus Report</h1>
+                <h2 className='subtitle'>How many people picked each team in the margin pool this week</h2>
                 <MarginConsensusTable />
             </div>
         </div>

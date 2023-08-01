@@ -15,6 +15,9 @@ import Survivor from './pages/Survivor';
 import WeeklyPicks from './pages/WeeklyPicks';
 import WeeklyPicksImages from './pages/WeeklyPicksImages';
 import WeeklyStandings from './pages/WeeklyStandings';
+import PageNotFound from './pages/PageNotFound';
+import PasswordResetRequest from './pages/PasswordResetRequest';
+import PasswordReset from './pages/PasswordReset';
 
 function App() {
   return (
@@ -36,6 +39,10 @@ function App() {
         <Route path='/weekly-picks-images' element={<WeeklyPicksImages />} />
         <Route path='/user/:username' element={<PersonalStats />} />
         <Route path='/consensus' element={<Consensus />} />
+        <Route path='/password-reset-request' element={<PasswordResetRequest />} />
+        <Route path='/password-reset' element={<PasswordReset />} />
+        <Route path='/404' element={<PageNotFound />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
