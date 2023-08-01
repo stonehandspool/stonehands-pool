@@ -11,15 +11,15 @@ function capitalize(name: string): string {
 }
 
 function SignUp() {
-    if (CURRENT_WEEK > 1) {
-        return (
-            <section className='section'>
-                <div className='container'>
-                    <h1 className='title is-1'>Sorry, the season has started and sign up has been disabled until next year</h1>
-                </div>
-            </section>
-        );
-    }
+    // if (CURRENT_WEEK > 1) {
+    //     return (
+    //         <section className='section'>
+    //             <div className='container'>
+    //                 <h1 className='title is-1 has-text-centered'>Sorry, the season has started and sign up has been disabled until next year</h1>
+    //             </div>
+    //         </section>
+    //     );
+    // }
 
     const navigate = useNavigate();
     const [firstName, setFirstName] = useState<string>('');

@@ -364,7 +364,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         <section className='section'>
             <div className='container'>
                 <h1 className='title is-1'>Week {CURRENT_WEEK} Picksheet</h1>
-                <h2 className='subtitle'>Make sure to fill out every field that you can. If you would like to change your picks you can at any time prior to the below cutoff and as long as that game hasn't started (i.e. no changing your Thursday pick on Friday).</h2>
+                <h2 className='subtitle'>Make sure to fill out every field below. If you would like to change your picks you can at any time prior to the below cutoff and as long as that game hasn't started (i.e. no changing your Thursday pick on Friday).</h2>
                 <h2 className='subtitle has-text-danger'>Submission cutoff: {CURRENT_WEEK_CUTOFF_TIME.toLocaleDateString('en-US', { dateStyle: 'full', timeZone: 'America/New_York' })} at {CURRENT_WEEK_CUTOFF_TIME.toLocaleTimeString('en-US', { timeZone: 'America/New_York' })} ET</h2>
                 <form className='box' onSubmit={handleSubmit}>
                     <ConfidencePicks

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function SignUpSuccess() {
     const navigate = useNavigate();
-    const [timer, setTimer] = useState<number>(10);
+    const [timer, setTimer] = useState<number>(15);
     
     useEffect(() => {
         if (timer > 0) {
@@ -20,7 +20,8 @@ function SignUpSuccess() {
             <div className='container'>
                 <div className='notification is-success'>
                     <h1 className='title is-1'>Success!</h1>
-                    <p>Please remember your username and password for when you submit your pick sheets! Good luck!</p>
+                    <p><b>Please remember your username and password for when you submit your pick sheets! Good luck!</b></p>
+                    <p>Please dont forget to check your email for an activation link, you will need to activate your account in order to participate in the pool.</p>
                     <p>This page will automatically redirect you to the home page in {timer} seconds</p>
                 </div>
             </div>

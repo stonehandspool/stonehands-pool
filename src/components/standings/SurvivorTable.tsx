@@ -81,51 +81,65 @@ function SurvivorTable() {
                     </thead>
                     <tbody>
                             {playerPicks.map((row, index) => {
+                                console.log(row.name);
                                 return <tr key={`${index}`}>
                                     <td key={`${row.name}-row-${index}`}>{row.name}</td>
                                     {
                                         weeksArr.map((week, ind) => {
                                             const gameCompleted = getGameCompleted(row.survivorPicks[ind]);
                                             const isCurrentWeek = ind === CURRENT_WEEK - 1;
+                                            const weekMissed = row.survivorPicks[ind] === '';
                                             const pickWasMade = ind < row.survivorPicks.length - 1;
                                             const isMostRecentPick = ind === row.survivorPicks.length - 1;
                                             if (isCurrentWeek) {
                                                 if (showAllPicks) {
                                                     if (row.aliveInSurvivor && gameCompleted) {
+                                                        console.log('A');
                                                         // If the user is still alive and the game is completed show as correct
                                                         return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
                                                     } else if (!row.aliveInSurvivor && gameCompleted) {
+                                                        console.log('B');
                                                         // If the user is no longer alive and the game is completed show as incorrect
                                                         return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
                                                     } else if (!gameCompleted) {
+                                                        console.log('C');
                                                         // If the submissions have locked but this game hasn't been played yet
                                                         return <td key={`${row.name}-${ind}`}>{row.survivorPicks[ind]}</td>
                                                     }
                                                 } else {
                                                     if (gameCompleted) {
                                                         if (row.aliveInSurvivor) {
+                                                            console.log('D');
                                                             // If the week hasn't technically locked but the user picked correctly prior to cutoff
                                                             return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
                                                         } else {
+                                                            console.log('E');
                                                             // If the week hasn't technically locked but the user picked incorrectly prior to cutoff
                                                             return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
                                                         }
                                                     } else {
+                                                        console.log('F');
                                                         // If the game hasn't completed yet and the week hasn't locked, show nothing
                                                         return <td key={`${row.name}-${ind}`}></td>
                                                     }
                                                 }
                                             } else {
                                                 if (isMostRecentPick && row.aliveInSurvivor) {
+                                                    console.log('G');
                                                     // If this was the most recent pick the user has made and it's from a prior week and they're still alive
                                                     return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
                                                 } else if (isMostRecentPick && !row.aliveInSurvivor) {
+                                                    console.log('H');
                                                     // If this was the most recent pick the user has made and it's from a prior week and they're out
                                                     return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
+                                                } else if (weekMissed) {
+                                                    return <td key={`${row.name}-${ind}`} className='has-background-danger'></td>
                                                 } else if (pickWasMade) {
+                                                    console.log('I');
                                                     // If this was a pick from a prior week that they got correct
                                                     return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
                                                 } else {
+                                                    console.log('J');
                                                     // Else, the user has been eliminated at this point so fill with nothing
                                                     return <td key={`${row.name}-${ind}`}></td>
                                                 }
