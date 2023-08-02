@@ -6,6 +6,10 @@ import ConfidenceDropDown from '../components/picksheet/ConfidenceDropDown';
 import PickOneTeam from '../components/picksheet/PickOneTeam';
 import HighFiveCheckboxes from '../components/picksheet/HighFiveCheckBoxes';
 
+const toMoney = (value: number) => {
+    return value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol' })
+}
+
 function About() {
     // Just dummy objects to allow the examples to somewhat work
     const [selectedPick, setSelectedPick] = useState<string>('');
@@ -16,6 +20,47 @@ function About() {
         setMarginTeam(team);
     };
     const handleHighFiveSelection = () => {};
+
+    const numPlayers = 50; // TOOD: Update this once everything is locked in
+    const buyIn = 120;
+    const totalPool = numPlayers * buyIn;
+    // Confidence
+    const totalConf = totalPool * .7;
+    // Confidence EOY
+    const finalConf = totalConf * .3;
+    const final1 = finalConf * .2;
+    const final2 = finalConf * .17;
+    const final3 = finalConf * .14;
+    const final4 = finalConf * .12;
+    const final5 = finalConf * .1;
+    const final6 = finalConf * .08;
+    const final7 = finalConf * .055;
+    const final8 = finalConf * .05;
+    const final9 = finalConf * .045;
+    const final10 = finalConf * .04;
+    // Confidence Weekly
+    const weeklyConf = totalConf * .7;
+    const weeklyPot = weeklyConf / 18;
+    const weekly1 = weeklyPot * .2;
+    const weekly2 = weeklyPot * .17;
+    const weekly3 = weeklyPot * .14;
+    const weekly4 = weeklyPot * .12;
+    const weekly5 = weeklyPot * .1;
+    const weekly6 = weeklyPot * .08;
+    const weekly7 = weeklyPot * .055;
+    const weekly8 = weeklyPot * .05;
+    const weekly9 = weeklyPot * .045;
+    const weekly10 = weeklyPot * .04;
+
+    // Others
+    const totalSurv = totalPool * .1;
+    const totalMarg = totalPool * .1;
+    const totalHF = totalPool * .1;
+    const other1 = totalMarg * .38;
+    const other2 = totalMarg * .25;
+    const other3 = totalMarg * .15;
+    const other4 = totalMarg * .12;
+    const other5 = totalMarg * .1;
 
     return (
         <section className='section'>
@@ -310,70 +355,83 @@ function About() {
                         </div>
                     </div>
                 </div>
+                
+    {/*
+    const numPlayers = 50; // TOOD: Update this once everything is locked in
+    const buyIn = 120;
+    const totalPool = numPlayers * buyIn;
+    const totalConf = totalPool * .75;
+    const finalConf = totalConf * .3;
+    const weeklyConf = totalConf * .7;
+    const totalSurv = totalPool * .1;
+    const totalMarg = totalPool * .1;
+    const totalHF = totalConf * .05;*/}
+
                 <h3 className='title is-3 has-text-centered'>Payouts</h3>
                 <div className='columns is-centered'>
                     <div className='column is-two-thirds'>
                         <p><b>The pool will always pay out 100% of the collected buy ins. The site upkeep will be handled by Ryan.</b></p>
-                        <h5 className='title is-5'><b>Expected Buy In: </b> $100</h5>
+                        <h5 className='title is-5'><b>Expected Buy In: </b> ${buyIn}</h5>
                         <p className='has-text-danger'>
                             Below is a tentative pay structure for the pool, this is subject to change but will be finalized before the season starts.
                             This structure is designed to try and provide as many ways for players to win at least some money back so that there's always
-                            a motivation to keep playing
+                            a motivation to keep playing.
                         </p>
                         <br />
-                        <h5 className='title is-5'>Example Season Payout Structure w/ 100 members</h5>
-                        <p><b>Total Pool Members: </b> 100</p>
-                        <p><b>Total Pot: </b> $10,000</p>
-                        <p><b>Total Confidence Pot: </b> $7,750</p>
-                        <p className='ml-5'><b>Total Confidence Pot (Weekly): </b>$5,000</p>
-                        <p className='ml-5'><b>Total Confidence Pot (End of Year): </b>$2,750</p>
-                        <p><b>Total Survivor Pot:</b> $750</p>
-                        <p><b>Total Margin Pot: </b> $750</p>
-                        <p><b>Total High-Five Pot: </b> $750</p>
+                        <h5 className='title is-5'>Example Season Payout Structure w/ {numPlayers} members</h5>
+                        <p><b>Total Pool Members: </b> {numPlayers}</p>
+                        <p><b>Total Pot: </b> {toMoney(totalPool)}</p>
+                        <p><b>Total Confidence Pot: </b> {toMoney(totalConf)}</p>
+                        <p className='ml-5'><b>Total Confidence Pot (Weekly): </b>{toMoney(finalConf)}</p>
+                        <p className='ml-5'><b>Total Confidence Pot (End of Year): </b>{toMoney(weeklyConf)}</p>
+                        <p><b>Total Survivor Pot:</b> {toMoney(totalSurv)}</p>
+                        <p><b>Total Margin Pot: </b> {toMoney(totalMarg)}</p>
+                        <p><b>Total High-Five Pot: </b> {toMoney(totalHF)}</p>
                         <br />
-                        <p><b>Note: </b> The confidence pool pays out weekly and at the end of the year while the others are winner takes all</p>
+                        <p><b>Note: </b> The top 10 in the confidence pool each week earn money as well as the top 10 at the end of the year.
+                            The margin and high five pools pay out the top 5 for both pools while the survivor pool is winner takes all.</p>
                         <br />
                         <p><b>Confidence Pool Season Winners:</b></p>
                         <div className='columns'>
                             <div className='column is-narrow'>
                                 <p><b>End of Season Payouts:</b></p>
-                                <p><b>Season Total Pot: </b>$2,750</p>
+                                <p><b>Season Total Pot: </b>{toMoney(finalConf)}</p>
                                 <br />
-                                <p><b>1<sup>st</sup>: </b>$550 (20%)</p>
-                                <p><b>2<sup>nd</sup>: </b>$467.50 (17%)</p>
-                                <p><b>3<sup>rd</sup>: </b>$385 (14%)</p>
-                                <p><b>4<sup>th</sup>: </b>$330 (12%)</p>
-                                <p><b>5<sup>th</sup>: </b>$275 (10%)</p>
-                                <p><b>6<sup>th</sup>: </b>$220 (8%)</p>
-                                <p><b>7<sup>th</sup>: </b>$151.25 (5.5%)</p>
-                                <p><b>8<sup>th</sup>: </b>$137.50 (5%)</p>
-                                <p><b>9<sup>th</sup>: </b>$123.75 (4.5%)</p>
-                                <p><b>10<sup>th</sup>: </b>$110 (4%)</p>
+                                <p><b>1<sup>st</sup>: </b>{toMoney(final1)} (20%)</p>
+                                <p><b>2<sup>nd</sup>: </b>{toMoney(final2)} (17%)</p>
+                                <p><b>3<sup>rd</sup>: </b>{toMoney(final3)} (14%)</p>
+                                <p><b>4<sup>th</sup>: </b>{toMoney(final4)} (12%)</p>
+                                <p><b>5<sup>th</sup>: </b>{toMoney(final5)} (10%)</p>
+                                <p><b>6<sup>th</sup>: </b>{toMoney(final6)} (8%)</p>
+                                <p><b>7<sup>th</sup>: </b>{toMoney(final7)} (5.5%)</p>
+                                <p><b>8<sup>th</sup>: </b>{toMoney(final8)} (5%)</p>
+                                <p><b>9<sup>th</sup>: </b>{toMoney(final9)} (4.5%)</p>
+                                <p><b>10<sup>th</sup>: </b>{toMoney(final10)} (4%)</p>
                             </div>
                             <div className='column is-narrow'>
                                 <p><b>Weekly Payouts:</b></p>
-                                <p><b>Weekly Total Pot: </b>$5,000</p>
-                                <p><b>Weekly Pot: </b>$294.11</p>
-                                <p><b>1<sup>st</sup>: </b>$58.82 (20%)</p>
-                                <p><b>2<sup>nd</sup>: </b>$50 (17%)</p>
-                                <p><b>3<sup>rd</sup>: </b>$41.17 (14%)</p>
-                                <p><b>4<sup>th</sup>: </b>$35.29 (12%)</p>
-                                <p><b>5<sup>th</sup>: </b>$29.41 (10%)</p>
-                                <p><b>6<sup>th</sup>: </b>$23.53 (8%)</p>
-                                <p><b>7<sup>th</sup>: </b>$16.17 (5.5%)</p>
-                                <p><b>8<sup>th</sup>: </b>$14.71 (5%)</p>
-                                <p><b>9<sup>th</sup>: </b>$13.23 (4.5%)</p>
-                                <p><b>10<sup>th</sup>: </b>$11.76 (4%)</p>
+                                <p><b>Weekly Total Pot: </b>{toMoney(weeklyConf)}</p>
+                                <p><b>Weekly Pot: </b>{toMoney(weeklyPot)}</p>
+                                <p><b>1<sup>st</sup>: </b>{toMoney(weekly1)} (20%)</p>
+                                <p><b>2<sup>nd</sup>: </b>{toMoney(weekly2)} (17%)</p>
+                                <p><b>3<sup>rd</sup>: </b>{toMoney(weekly3)} (14%)</p>
+                                <p><b>4<sup>th</sup>: </b>{toMoney(weekly4)} (12%)</p>
+                                <p><b>5<sup>th</sup>: </b>{toMoney(weekly5)} (10%)</p>
+                                <p><b>6<sup>th</sup>: </b>{toMoney(weekly6)} (8%)</p>
+                                <p><b>7<sup>th</sup>: </b>{toMoney(weekly7)} (5.5%)</p>
+                                <p><b>8<sup>th</sup>: </b>{toMoney(weekly8)} (5%)</p>
+                                <p><b>9<sup>th</sup>: </b>{toMoney(weekly9)} (4.5%)</p>
+                                <p><b>10<sup>th</sup>: </b>{toMoney(weekly10)} (4%)</p>
                             </div>
                             <div className='column is-narrow'>
                                 <p><b>Margin and High Five Payouts:</b></p>
-                                <p><b>Season Pots: </b>$750 (Each)</p>
+                                <p><b>Season Pots: </b>{toMoney(totalMarg)} (Each)</p>
                                 <br />
-                                <p><b>1<sup>st</sup>: </b>$285 (38%)</p>
-                                <p><b>2<sup>nd</sup>: </b>$187.50 (25%)</p>
-                                <p><b>3<sup>rd</sup>: </b>$112.50 (15%)</p>
-                                <p><b>4<sup>th</sup>: </b>$90 (12%)</p>
-                                <p><b>5<sup>th</sup>: </b>$75 (10%)</p>
+                                <p><b>1<sup>st</sup>: </b>{toMoney(other1)} (38%)</p>
+                                <p><b>2<sup>nd</sup>: </b>{toMoney(other2)} (25%)</p>
+                                <p><b>3<sup>rd</sup>: </b>{toMoney(other3)} (15%)</p>
+                                <p><b>4<sup>th</sup>: </b>{toMoney(other4)} (12%)</p>
+                                <p><b>5<sup>th</sup>: </b>{toMoney(other5)} (10%)</p>
                             </div>
                         </div>
                     </div>
