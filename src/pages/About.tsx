@@ -99,7 +99,7 @@ function About() {
                     <div className='column is-two-thirds'>
                         <p className='mb-5'>
                             You'll notice on our <Link to='/sign-up'>Sign Up</Link> page that it asks for a referral. You're more than welcome to put me (Ryan) if you'd like.
-                            However, if someone else invited you this Pool I ask that you put their name in this field. This is simply so that I know who invited who
+                            However, if someone else invited you to this Pool I ask that you put their name in this field. This is simply so that I know who invited who
                             as the Pool hopefully grows larger and larger.
                         </p>
                     </div>
