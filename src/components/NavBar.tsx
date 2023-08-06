@@ -53,7 +53,9 @@ function NavBar() {
                             <Link className='navbar-item' to='/consensus' onClick={onBurgerClick}>Consensus</Link>
                         </div>
                     </div>
-                    {CURRENT_WEEK <= 1 && <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link>}
+                    <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link>
+                    {/* TODO: Re-introduce this logic */}
+                    {/* {CURRENT_WEEK <= 1 && <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link>} */}
                 </div>
             </div>
         </nav>
