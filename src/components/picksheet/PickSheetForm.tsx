@@ -148,7 +148,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         rankByWeek: [],
         change: '',
         survivorPicks: [],
-        aliveInSurvivor: false,
+        aliveInSurvivor: true,
         marginPicks: [],
         marginTotal: 0,
         highFiveThisWeek: [],
