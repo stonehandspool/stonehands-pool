@@ -280,8 +280,13 @@ function PickSheetForm(props: PicksheetFormProps) {
         //     )
         // }
 
-        const { id } = session.user;
-        const { first_name: firstName, last_name: lastName, username } = session.user.user_metadata;
+        // TODO: rever this back
+        const id = '';
+        const firstName = '';
+        const lastName = '';
+        const username = '';
+        // const { id } = session.user;
+        // const { first_name: firstName, last_name: lastName, username } = session.user.user_metadata;
         const choices: choiceFormat = { id, firstName, lastName, username, 'highFivePicks': [] };
 
         // Set the values via the state of this component rather than using the form
