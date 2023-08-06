@@ -22,7 +22,7 @@ function About() {
     const handleHighFiveSelection = () => {};
 
     const numPlayers = 50; // TOOD: Update this once everything is locked in
-    const buyIn = 120;
+    const buyIn = 100;
     const totalPool = numPlayers * buyIn;
     // Confidence
     const totalConf = totalPool * .7;
@@ -72,24 +72,25 @@ function About() {
                 <div className='columns is-centered'>
                     <div className='column is-two-thirds'>
                         <p className='mb-2'>
-                            If you were wondering where the name for this pool came from, it's a combination of the two things that inspired it! The first
-                            inspiration for the pool was the Stablehand Pool while the other inspiration was Stonehill College.  
+                            If you were wondering where the name for this Pool came from, it's a combination of the two things that inspired it: the
+                            Stablehand Pool and Stonehill College.
                         </p>
                         <p className='mb-2'>
-                            The Stablehand pool was a pool run by a friend of my grandpa, which I participated in for as
-                            long as I can remember. I drew a lot of inspiration from this pool while creating Stonehands. For anyone who previously participated
-                            in the Stablehand pool you'll find a lot of similarities here in the Stonehands pool.
-                            The second inspiration for this pool, Stonehill College, was the college I attended.
+                            The Stablehand Pool was run by my grandpa's friend, which I participated in for as
+                            long as I can remember. I drew a lot of inspiration from it while creating Stonehands. For anyone who previously participated
+                            in the Stablehand Pool you'll find a lot of similarities here in the Stonehands Pool.
+                        </p>
+                        <p className='mb-2'>
+                            The second inspiration for this Pool is Stonehill College which was where I went to college.
                             Almost all of the fantasy leagues I'm part of are primarily made up of my friends from Stonehill, and I've always wanted another
                             place for fantasy sports outside of our normal leagues. 
                         </p>
                         <p className='mb-2'>
-                            With that in mind, Stonehands comes from the combination of the Stablehand Pool and
-                            Stonehill, Stablehand x Stonehill = Stonehands!
+                            <b>Stablehand x Stonehill = Stonehands!</b>
                         </p>
                         <p className='mb-5'>
-                            This pool is intended to be played by any friends and family who are interested! You don't need to have gone to Stonehill or have played in the
-                            Stablehand Pool in the past. Feel free to invite any of your friends or family to this pool as well, the more the merrier!
+                            This Pool is intended to be played by any family and friends who are interested! You don't need to have gone to Stonehill or have played in the
+                            Stablehand Pool in the past. Feel free to invite any and everyone to this Pool as well, the more the merrier!
                         </p>
                     </div>
                 </div>
@@ -98,8 +99,8 @@ function About() {
                     <div className='column is-two-thirds'>
                         <p className='mb-5'>
                             You'll notice on our <Link to='/sign-up'>Sign Up</Link> page that it asks for a referral. You're more than welcome to put me (Ryan) if you'd like.
-                            However, if someone else invited you this pool I ask that you put their name in this field. This is simply so that I can know who invited who
-                            as the pool hopefully grows larger and larger.
+                            However, if someone else invited you this Pool I ask that you put their name in this field. This is simply so that I know who invited who
+                            as the Pool hopefully grows larger and larger.
                         </p>
                     </div>
                 </div>
@@ -108,8 +109,8 @@ function About() {
                 <div className='columns is-centered'>
                     <div className='column is-two-thirds'>
                         <p>
-                            This site currently contains 4 pools, if you have any ideas about more pool options feel free to reach out to Ryan with any suggestions. Here
-                            are the basic instructions for each pool:
+                            This site currently contains four Pools, if you have any ideas about more Pool options feel free to reach out to Ryan with any suggestions. Here
+                            are the basic instructions for each Pool:
                         </p>
                     </div>
                 </div>
@@ -120,11 +121,11 @@ function About() {
                             <ul>
                                 <li>Each week you pick a winner for every game</li>
                                 <li>You assign points based off of how confident you are</li>
-                                <li>16 points if for most confident, 1 point is for least confident</li>
+                                <li><b>16 points is for most confident, 1 point is for least confident</b></li>
                                 <li>You may only use each confidence point once per week</li>
-                                <li>If you get a game right, you are awarded that many points</li>
+                                <li>If you get a game right, you are awarded that many points (1-16)</li>
                                 <li>There are no restrictions on which teams you can pick</li>
-                                <li>The person with the highest confidence total at the end of the season wins!</li>
+                                <li>The person with the highest confidence point total at the end of the season wins!</li>
                                 <li><b>If you forget to submit a picksheet, you will be assigned a random winner and confidence point value for every matchup</b></li>
                             </ul>
                         </div>
@@ -134,11 +135,11 @@ function About() {
                         <div className='content'>
                             <ul>
                                 <li>Each week you pick <b>one</b> team you think will win</li>
-                                <li>If you pick correctly you survive</li>
-                                <li>If you pick wrong you are eliminated from the survivor pool</li>
                                 <li>You <b>cannot</b> use a team multiple times, each team may only be used once!</li>
+                                <li>If you pick correctly you survive</li>
+                                <li>If you pick wrong, you are eliminated from the Survivor Pool</li>
                                 <li>The last player alive wins!</li>
-                                <li><b>If you forget to submit a picksheet, you will be eliminated from the survivor pool</b></li>
+                                <li><b>If you forget to submit a picksheet, you will be eliminated from the Survivor Pool</b></li>
                             </ul>
                         </div>
                     </div>
@@ -147,11 +148,11 @@ function About() {
                         <div className='content'>
                             <ul>
                                 <li>Each week you pick <b>one</b> team you think will win by the most</li>
+                                <li>You <b>cannot</b> use a team multiple times, each team may only be used once!</li>
                                 <li>If you pick correctly you are awarded their margin of victory to your margin total</li>
                                 <li>If you pick wrong you lose their margin of defeat from your margin total</li>
-                                <li>You <b>cannot</b> use a team multiple times, each team may only be used once!</li>
                                 <li>The top 5 players at the end of the season will win!</li>
-                                <li><b>If you forget to submit a picksheet, you will have the largest margin of defeat taken from your margin total</b></li>
+                                <li><b>If you forget to submit a picksheet, you will receive the largest margin of defeat taken from your margin total for that week</b></li>
                             </ul>
                         </div>
                     </div>
@@ -171,7 +172,7 @@ function About() {
                                 </li>
                                 <li>There are no restrictions on which teams you can pick</li>
                                 <li>The top 5 players at the end of the season will win!</li>
-                                <li><b>If you forget to submit a picksheet, you will be awarded 0 points in the high five pool for that week</b></li>
+                                <li><b>If you forget to submit a picksheet, you will be awarded 0 points in the High Five Pool for that week</b></li>
                             </ul>
                         </div>
                     </div>
@@ -181,8 +182,8 @@ function About() {
                 <div className='columns is-centered'>
                     <div className='column is-two-thirds'>
                         <p className='has-text-centered mb-5'>
-                            You'll have to wait until you are signed up and the pool is ready for submissions in order to see the full picksheet, but
-                            here are some examples so you have an idea of what to expect for each pool
+                            You'll have to wait until you are signed up and the Pool is ready for submissions in order to see the full picksheet, but
+                            here are some examples so you have an idea of what to expect for each Pool
                         </p>
                         <h4 className='title is-4 has-text-centered'>The Confidence Pool</h4>
                         <p className='has-text-centered mb-5'>Below is an example of what making a pick for the Confidence Pool will look like</p>
@@ -223,12 +224,12 @@ function About() {
                         <div className='content'>
                             <p>
                                 <b>*This is not a fully functional tile*</b> You will see a tile for each matchup in a given week, so if there are 14 games for a week
-                                you will need to fill out 14 tiles for the confidence pool. You will be required to choose a winner <b>and</b> a confidence value for
+                                you will need to fill out 14 tiles for the Confidence Pool. You will be required to choose a winner <b>and</b> a confidence value for
                                 each tile in the picksheet.
                             </p>
                         </div>
                         <h4 className='title is-4 has-text-centered'>The Survivor and Margin Pools</h4>
-                        <p className='has-text-centered mb-5'>The survivor and margin pools will look identical on the picksheet, below is an example of what you can expect</p>
+                        <p className='has-text-centered mb-5'>The Survivor and Margin Pools will look identical on the picksheet, below is an example of what you can expect</p>
                         <div className='columns is-centered'>
                             <div className='column is-two-fifths'>
                                 <PickOneTeam
@@ -248,13 +249,13 @@ function About() {
                         </div>
                         <div className='content'>
                             <p>
-                                The survivor and margin tiles are essentially the same as the confidence pool tiles, however, they're just missing the confidence drop down.
-                                There will still be a tile for each matchup in a given week, but you'll only be able to choose one team per week. The two pools are independent
-                                of each other so you will have to make a survivor <b>and</b> margin pick each week as long as you are still alive in the survivor pool.
+                                The Survivor and Margin tiles are the same as the Confidence Pool tiles, minus confidence value drop down.
+                                There will be one tile for each matchup in a given week, but you will only be able to choose <b>one</b> team per week. The two Pools are independent
+                                of each other so you will have to make a survivor <b>and</b> margin pick each week as long as you are still alive in the Survivor Pool.
                             </p>
                         </div>
                         <h4 className='title is-4 has-text-centered'>The High Five Pool</h4>
-                        <p className='has-text-centered mb-5'>The high five pool will look very similar to the survivor and margin pools, below is an example of what you can expect</p>
+                        <p className='has-text-centered mb-5'>The High Five Pool will look very similar to the Survivor and Margin Pools, below is an example of what you can expect</p>
                         <div className='columns is-centered'>
                             <div className='column is-two-fifths'>
                                 <HighFiveCheckboxes
@@ -274,8 +275,8 @@ function About() {
                         <div className='content'>
                             <p>
                                 The high five tiles are essentially the same as the rest of the tiles with the only difference being that you'll have to choose only <b>5</b> winners
-                                in this pool each week. Once you have chosen 5, you will need to deselect an option in order to choose a different winner. The pool will not allow you
-                                to choose and less or more than 5 winners.
+                                in this Pool each week. You <b>must</b> choose <b>exactly 5</b> teams each week in this Pool. If you have already picked 5 teams and change your mind
+                                then you must un-check one of your selected teams.
                             </p>
                         </div>
                     </div>
@@ -285,7 +286,7 @@ function About() {
                 <div className='columns is-centered'>
                     <div className='column is-two-thirds'>
                         <p className='has-text-centered'>
-                            Here are the specific tiebreaker rules for each pool
+                            Here are the specific tiebreaker rules for each Pool
                         </p>
                     </div>
                 </div>
@@ -312,7 +313,7 @@ function About() {
                         <h4 className='title is-4 has-text-centered'>The Survivor Pool</h4>
                         <div className='content'>
                             <ul>
-                                <li>The only way for there to be in a tie in this pool is if there are only two players left going into a week and they <b>both</b> agree to split the pool</li>
+                                <li>The only way for there to be in a tie in this Pool is if there are only two players left going into a week and they <b>both</b> agree to split the Pool</li>
                                 <li>If all remaining players get eliminated in a given week with no winner, all of those remaining players will continue on another week</li>
                                 <li>If multiple people make it through week 18, all remaining players will split the pot</li>
                             </ul>
@@ -343,7 +344,7 @@ function About() {
                         <div className='content'>
                             <ul>
                                 <li>Picksheets are due prior to kickoff of the first game of the week, an email will be sent out every Thursday as a reminder</li>
-                                <li>You may not submit a partial picksheet, you must make a selection for every pool</li>
+                                <li>You may not submit a partial picksheet, you must make a selection for every Pool</li>
                                 <li>Picksheets may be updated up until 1 P.M. EST every Sunday unless otherwise notified
                                     <ul>
                                         <li>For example, you can submit a picksheet on Thursday and then make a change on Friday to all games except for the Thursday games</li>
@@ -355,25 +356,14 @@ function About() {
                         </div>
                     </div>
                 </div>
-                
-    {/*
-    const numPlayers = 50; // TOOD: Update this once everything is locked in
-    const buyIn = 120;
-    const totalPool = numPlayers * buyIn;
-    const totalConf = totalPool * .75;
-    const finalConf = totalConf * .3;
-    const weeklyConf = totalConf * .7;
-    const totalSurv = totalPool * .1;
-    const totalMarg = totalPool * .1;
-    const totalHF = totalConf * .05;*/}
 
                 <h3 className='title is-3 has-text-centered'>Payouts</h3>
                 <div className='columns is-centered'>
                     <div className='column is-two-thirds'>
-                        <p><b>The pool will always pay out 100% of the collected buy ins. The site upkeep will be handled by Ryan.</b></p>
+                        <p className='mb-5'><b>The Pool will always pay out 100% of the collected buy ins. The site upkeep will be handled by Ryan.</b></p>
                         <h5 className='title is-5'><b>Expected Buy In: </b> ${buyIn}</h5>
                         <p className='has-text-danger'>
-                            Below is a tentative pay structure for the pool, this is subject to change but will be finalized before the season starts.
+                            Below is a tentative pay structure for the Pool, this is subject to change but will be finalized before the season starts.
                             This structure is designed to try and provide as many ways for players to win at least some money back so that there's always
                             a motivation to keep playing.
                         </p>
@@ -388,8 +378,8 @@ function About() {
                         <p><b>Total Margin Pot: </b> {toMoney(totalMarg)}</p>
                         <p><b>Total High-Five Pot: </b> {toMoney(totalHF)}</p>
                         <br />
-                        <p><b>Note: </b> The top 10 in the confidence pool each week earn money as well as the top 10 at the end of the year.
-                            The margin and high five pools pay out the top 5 for both pools while the survivor pool is winner takes all.</p>
+                        <p><b>Note: </b> The top 10 in the confidence Pool each week earn money as well as the top 10 at the end of the year.
+                            The Margin and High Five Pools pay out the top 5 for both Pools while the Survivor Pool is winner takes all.</p>
                         <br />
                         <p><b>Confidence Pool Season Winners:</b></p>
                         <div className='columns'>

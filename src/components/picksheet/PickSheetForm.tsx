@@ -14,7 +14,7 @@ import SurvivorPick from './SurvivorPick';
 import TieBreaker from './TieBreaker';
 
 type PicksheetFormProps = {
-    session: Session;
+    session: Session | null; // TODO: remove the null
 };
 
 export type choiceFormat = {
@@ -38,15 +38,16 @@ function PickSheetForm(props: PicksheetFormProps) {
     const { players } = playerData;
     const navigate = useNavigate();
 
-    if (!SEASON_READY) {
-        return (
-            <section className='section'>
-                <div className='container'>
-                    <h3 className='title is-3 has-text-centered'>Sorry, the season hasn't started yet, please wait until the season has been loaded</h3>
-                </div>
-            </section>
-        )
-    }
+    // TODO: Put this back in once we are ready for the real deal
+    // if (!SEASON_READY) {
+    //     return (
+    //         <section className='section'>
+    //             <div className='container'>
+    //                 <h3 className='title is-3 has-text-centered'>Sorry, the season hasn't started yet, please wait until the season has been loaded</h3>
+    //             </div>
+    //         </section>
+    //     )
+    // }
 
     // TODO: Put this back in once we are ready for the real deal
     // const currentTime = new Date();
@@ -125,110 +126,147 @@ function PickSheetForm(props: PicksheetFormProps) {
         }
     }
 
-    const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as unknown as UserInfo;
+    // TODO: Remove this when ready
+    const userInfo: UserInfo = {
+        id: '',
+        username: '',
+        firstName: '',
+        lastName: '',
+        wins: 0,
+        winsByWeek: [],
+        losses: 0,
+        lossesByWeek: [],
+        ties: 0,
+        tiesByWeek: [],
+        percent: 0,
+        points: 0,
+        pointsByWeek: [],
+        tbAvg: 0,
+        tiebreakerByWeek: [],
+        lastWeekRank: 0,
+        currentWeekRank: 0,
+        rankByWeek: [],
+        change: '',
+        survivorPicks: [],
+        aliveInSurvivor: false,
+        marginPicks: [],
+        marginTotal: 0,
+        highFiveThisWeek: [],
+        highFiveValues: [],
+        highFiveTotal: 0,
+        currentWeekWins: 0,
+        currentWeekLosses: 0,
+        currentWeekTies: 0,
+        currentWeekPoints: 0,
+        currentWeekTiebreaker: 0
+    };
+    // TODO: Put this back in once we are ready for the real deal
+    // const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as unknown as UserInfo;
     
-    if (!userInfo) {
-        return (
-            <section className='section'>
-                <div className='container'>
-                    <h3 className='title is-3 has-text-centered'>
-                        Sorry, it looks like you've signed up but your account hasn't been processed yet. Please reach out to Ryan to get your account
-                        added to the pool.
-                    </h3>
-                </div>
-            </section>
-        )
-    }
+    // if (!userInfo) {
+    //     return (
+    //         <section className='section'>
+    //             <div className='container'>
+    //                 <h3 className='title is-3 has-text-centered'>
+    //                     Sorry, it looks like you've signed up but your account hasn't been processed yet. Please reach out to Ryan to get your account
+    //                     added to the pool.
+    //                 </h3>
+    //             </div>
+    //         </section>
+    //     )
+    // }
 
+    // TODO: Put this back in once we are ready for the real deal
     // Ping the database to see if there are picks from this week for this user
-    useEffect(() => {
-        const fetchPicks = async (callback: () => void) => {
-            const { data, error } = await supabaseClient
-                .from('user_picks')
-                .select()
-                .eq('week', CURRENT_WEEK)
-                .eq('year', CURRENT_YEAR)
-                .eq('user_id', userInfo.id);
+    // useEffect(() => {
+    //     const fetchPicks = async (callback: () => void) => {
+    //         const { data, error } = await supabaseClient
+    //             .from('user_picks')
+    //             .select()
+    //             .eq('week', CURRENT_WEEK)
+    //             .eq('year', CURRENT_YEAR)
+    //             .eq('user_id', userInfo.id);
 
-            if (error) {
-                console.error('An error occurred when getting your prior picks from the database', error);
-            }
+    //         if (error) {
+    //             console.error('An error occurred when getting your prior picks from the database', error);
+    //         }
 
-            if (data && data.length > 0) {
-                const { submission_data: priorPicks } = data[0];
+    //         if (data && data.length > 0) {
+    //             const { submission_data: priorPicks } = data[0];
 
-                // Set prior picks and confidences
-                const priorConfidencePicks = [];
-                const priorConfidenceValues = [];
-                for (let i = 0; i < numGamesThisWeek; i++) {
-                    priorConfidencePicks.push(priorPicks[`matchup-${i}`]);
-                    priorConfidenceValues.push(priorPicks[`matchup-${i}-confidence`]);
-                }
-                setSelectedPicks(priorConfidencePicks);
-                setSelectedConfidences(priorConfidenceValues);
+    //             // Set prior picks and confidences
+    //             const priorConfidencePicks = [];
+    //             const priorConfidenceValues = [];
+    //             for (let i = 0; i < numGamesThisWeek; i++) {
+    //                 priorConfidencePicks.push(priorPicks[`matchup-${i}`]);
+    //                 priorConfidenceValues.push(priorPicks[`matchup-${i}-confidence`]);
+    //             }
+    //             setSelectedPicks(priorConfidencePicks);
+    //             setSelectedConfidences(priorConfidenceValues);
 
-                // Set prior survivor pick
-                if (userInfo.aliveInSurvivor) {
-                    setSurvivorTeam(priorPicks['survivor-pick']);
-                }
-                // Set prior margin pick
-                setMarginTeam(priorPicks['margin-pick']);
+    //             // Set prior survivor pick
+    //             if (userInfo.aliveInSurvivor) {
+    //                 setSurvivorTeam(priorPicks['survivor-pick']);
+    //             }
+    //             // Set prior margin pick
+    //             setMarginTeam(priorPicks['margin-pick']);
 
-                // Set prior high five picks
-                setHighFivePicks(priorPicks.highFivePicks);
+    //             // Set prior high five picks
+    //             setHighFivePicks(priorPicks.highFivePicks);
 
-                // Set prior tiebreaker
-                setTiebreaker(priorPicks.tiebreaker)
-                setSelections(priorPicks);
+    //             // Set prior tiebreaker
+    //             setTiebreaker(priorPicks.tiebreaker)
+    //             setSelections(priorPicks);
 
-                // Update other state
-                setPriorPicks(true);
-            } else {
-                callback();
-            }
-        };
+    //             // Update other state
+    //             setPriorPicks(true);
+    //         } else {
+    //             callback();
+    //         }
+    //     };
 
-        // Backup in case the database search doesn't return anything
-        // This will really only happen if a user forgot to submit prior to Thu and has a forced Thu pick
-        const searchJSON = () => {
-            const submission = findSubmission(userInfo.id);
-            if (submission) {
-                const { submission_data: priorPicks } = submission;
-                // Set prior picks and confidences
-                const priorConfidencePicks: string[] = [];
-                const priorConfidenceValues: number[] = [];
-                for (let i = 0; i < numGamesThisWeek; i++) {
-                    priorConfidencePicks.push(priorPicks[`matchup-${i}` as keyof typeof priorPicks] as string);
-                    priorConfidenceValues.push(parseInt(priorPicks[`matchup-${i}-confidence` as keyof typeof priorPicks] as string, 10));
-                }
-                setSelectedPicks(priorConfidencePicks);
-                setSelectedConfidences(priorConfidenceValues);
+    //     // Backup in case the database search doesn't return anything
+    //     // This will really only happen if a user forgot to submit prior to Thu and has a forced Thu pick
+    //     const searchJSON = () => {
+    //         const submission = findSubmission(userInfo.id);
+    //         if (submission) {
+    //             const { submission_data: priorPicks } = submission;
+    //             // Set prior picks and confidences
+    //             const priorConfidencePicks: string[] = [];
+    //             const priorConfidenceValues: number[] = [];
+    //             for (let i = 0; i < numGamesThisWeek; i++) {
+    //                 priorConfidencePicks.push(priorPicks[`matchup-${i}` as keyof typeof priorPicks] as string);
+    //                 priorConfidenceValues.push(parseInt(priorPicks[`matchup-${i}-confidence` as keyof typeof priorPicks] as string, 10));
+    //             }
+    //             setSelectedPicks(priorConfidencePicks);
+    //             setSelectedConfidences(priorConfidenceValues);
     
-                // Set prior survivor pick
-                if (userInfo.aliveInSurvivor) {
-                    setSurvivorTeam(priorPicks['survivor-pick']);
-                }
-                // Set prior margin pick
-                setMarginTeam(priorPicks['margin-pick']);
+    //             // Set prior survivor pick
+    //             if (userInfo.aliveInSurvivor) {
+    //                 setSurvivorTeam(priorPicks['survivor-pick']);
+    //             }
+    //             // Set prior margin pick
+    //             setMarginTeam(priorPicks['margin-pick']);
     
-                // Set prior high five picks
-                setHighFivePicks(priorPicks.highFivePicks);
+    //             // Set prior high five picks
+    //             setHighFivePicks(priorPicks.highFivePicks);
     
-                // Set prior tiebreaker
-                setTiebreaker(priorPicks.tiebreaker)
+    //             // Set prior tiebreaker
+    //             setTiebreaker(priorPicks.tiebreaker)
     
-                // Update other state
-                setSelections(priorPicks);
-                setPriorPicks(true);
-            } 
-        };
+    //             // Update other state
+    //             setSelections(priorPicks);
+    //             setPriorPicks(true);
+    //         } 
+    //     };
 
-        // First, check the database since that is the most up-to-date version most of the time
-        fetchPicks(searchJSON).catch(err => console.error(err));
-    }, []);
+    //     // First, check the database since that is the most up-to-date version most of the time
+    //     fetchPicks(searchJSON).catch(err => console.error(err));
+    // }, []);
     
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+        return; // TODO: Remove this
 
         // TODO: Put this back in once we are ready for the real deal
         // const currentTime = new Date();
@@ -366,6 +404,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                 <h1 className='title is-1'>Week {CURRENT_WEEK} Picksheet</h1>
                 <h2 className='subtitle'>Make sure to fill out every field below. If you would like to change your picks you can at any time prior to the below cutoff and as long as that game hasn't started (i.e. no changing your Thursday pick on Friday).</h2>
                 <h2 className='subtitle has-text-danger'>Submission cutoff: {CURRENT_WEEK_CUTOFF_TIME.toLocaleDateString('en-US', { dateStyle: 'full', timeZone: 'America/New_York' })} at {CURRENT_WEEK_CUTOFF_TIME.toLocaleTimeString('en-US', { timeZone: 'America/New_York' })} ET</h2>
+                <h3 className='has-text-danger'>This is an example pick sheet with fake data, feel free to test everything out! The real picksheet will be uploaded once we are closer to the start of the season</h3>
                 <form className='box' onSubmit={handleSubmit}>
                     <ConfidencePicks
                         weekInfo={currentWeekInfo}

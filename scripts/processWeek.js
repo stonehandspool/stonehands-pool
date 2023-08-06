@@ -333,7 +333,9 @@ if (week === 1) {
         player.currentWeekRank = clonedPlayers.findIndex(cloned => cloned.id === player.id) + 1;
         player.rankByWeek[player.rankByWeek.length - 1] = player.currentWeekRank;
         // Now calculate the different
-        if (player.lastWeekRank > player.currentWeekRank) {
+        if (player.lastWeekRank === player.currentWeekRank) {
+            player.change = '--';
+        } else if (player.lastWeekRank > player.currentWeekRank) {
             player.change = `+${player.lastWeekRank - player.currentWeekRank}`;
         } else {
             player.change = `-${player.currentWeekRank - player.lastWeekRank}`;

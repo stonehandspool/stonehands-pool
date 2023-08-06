@@ -11,6 +11,7 @@ function capitalize(name: string): string {
 }
 
 function SignUp() {
+    // TODO: Put this back in
     // if (CURRENT_WEEK > 1) {
     //     return (
     //         <section className='section'>
