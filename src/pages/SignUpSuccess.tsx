@@ -21,7 +21,7 @@ function SignUpSuccess() {
                 <div className='notification is-success'>
                     <h1 className='title is-1'>Success!</h1>
                     <p><b>Please remember your username and password for when you submit your pick sheets! Good luck!</b></p>
-                    <p>Please dont forget to check your email for an activation link, you will need to activate your account in order to participate in the pool.</p>
+                    <p><b>Please dont forget to check your email for an activation link, you will need to activate your account in order to participate in the pool. The email may be sent to your junk/spam folder.</b></p>
                     <p>This page will automatically redirect you to the home page in {timer} seconds</p>
                 </div>
             </div>
