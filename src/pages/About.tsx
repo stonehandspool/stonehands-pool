@@ -365,7 +365,7 @@ function About() {
                         <p className='has-text-danger'>
                             Below is a tentative pay structure for the Pool, this is subject to change but will be finalized before the season starts.
                             This structure is designed to try and provide as many ways for players to win at least some money back so that there's always
-                            a motivation to keep playing.
+                            a motivation to keep playing. We are tentatively planning to accept payment via Venmo or Zelle.
                         </p>
                         <br />
                         <h5 className='title is-5'>Example Season Payout Structure w/ {numPlayers} members</h5>
