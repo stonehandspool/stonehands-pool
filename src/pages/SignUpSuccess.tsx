@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function SignUpSuccess() {
     const navigate = useNavigate();
-    const [timer, setTimer] = useState<number>(15);
+    const [timer, setTimer] = useState<number>(20);
     
     useEffect(() => {
         if (timer > 0) {
