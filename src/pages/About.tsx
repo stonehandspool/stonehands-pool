@@ -361,14 +361,19 @@ function About() {
                 <div className='columns is-centered'>
                     <div className='column is-two-thirds'>
                         <p className='mb-5'><b>The Pool will always pay out 100% of the collected buy ins. The site upkeep will be handled by Ryan.</b></p>
-                        <h5 className='title is-5'><b>Expected Buy In: </b> ${buyIn}</h5>
-                        <p className='has-text-danger'>
-                            Below is a tentative pay structure for the Pool, this is subject to change but will be finalized before the season starts.
+                        <h5 className='title is-5'><b>Buy In: </b> ${buyIn}</h5>
+                        <h5 className='title is-5'><b>Payment Options</b></h5>
+                        <p><b>Venmo:</b> @Glen-Fandl | Last Four Digits (if needed): 7863</p>
+                        <p><b>Zelle:</b> gmf2715@outlook.com</p>
+                        <p className='has-text-danger'>In the payment description please use the format: '2023 Stablehands Pool Payment for: "name(s)"' </p>
+                        <br />
+                        <p>
+                            Below is the finalized pay structure for the Pool, this page will update once the final number of players is set.
                             This structure is designed to try and provide as many ways for players to win at least some money back so that there's always
-                            a motivation to keep playing. We are tentatively planning to accept payment via Venmo or Zelle.
+                            a motivation to keep playing. <b>All</b> payouts will be made at the end of the regular season.
                         </p>
                         <br />
-                        <h5 className='title is-5'>Example Season Payout Structure w/ {numPlayers} members</h5>
+                        <h5 className='title is-5'>Season Payout Structure w/ {numPlayers} members</h5>
                         <p><b>Total Pool Members: </b> {numPlayers}</p>
                         <p><b>Total Pot: </b> {toMoney(totalPool)}</p>
                         <p><b>Total Confidence Pot: </b> {toMoney(totalConf)}</p>
@@ -424,6 +429,34 @@ function About() {
                                 <p><b>5<sup>th</sup>: </b>{toMoney(other5)} (10%)</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <h3 className='title is-3 has-text-centered'>FAQs</h3>
+                <div className='columns is-centered'>
+                    <div className='column is-two-thirds'>
+                        <h5 className='title is-5'>How do I sign in?</h5>
+                        <p className='mb-5'>
+                            The website is intentionally designed so that you don't need to be signed in to view anything except for the picksheet.
+                            The website will *magically* remember who you are every time you visit assuming you are on the same device and browser.
+                            If you somehow get signed out or try to make your picks from a new device (i.e. not your usual phone or laptop), you will
+                            be asked to sign back in when you go to make your picks.
+                        </p>
+
+                        <h5 className='title is-5'>How do I pay?</h5>
+                        <p className='mb-5'>
+                            You can view the specific details in the above "Payouts" section, but we currently only accept payment via Venmo or Zelle.
+                        </p>
+                        <h5 className='title is-5'>When should I pay by?</h5>
+                        <p className='mb-5'>
+                            I ask that everyone pays prior to the start of the season. If payments aren't received by the start of week 3 of the season then I will reach
+                            out to you. If payment is not received by the start of week 5, then you will be disqualified from the pool.
+                        </p>
+                        <h5 className='title is-5'>When will I receive my winnings?</h5>
+                        <p className='mb-5'>
+                            Winnings from <b>all</b> pools will be paid out at the end of the regular season, no exceptions. Even though the survivor pool will
+                            most likely end earlier than that, the winner(s) will have to wait until the end of the regular season.
+                        </p>
                     </div>
                 </div>
             </div>
