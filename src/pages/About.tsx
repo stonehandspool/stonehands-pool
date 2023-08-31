@@ -365,7 +365,7 @@ function About() {
                         <h5 className='title is-5'><b>Payment Options</b></h5>
                         <p><b>Venmo:</b> @Glen-Fandl | Last Four Digits (if needed): 7863</p>
                         <p><b>Zelle:</b> gmf2715@outlook.com</p>
-                        <p className='has-text-danger'>In the payment description please use the format: '2023 Stablehands Pool Payment for: "name(s)"' </p>
+                        <p className='has-text-danger'>In the payment description please use the format: '2023 Stonehands Payment for: "name(s)"' </p>
                         <br />
                         <p>
                             Below is the finalized pay structure for the Pool, this page will update once the final number of players is set.
