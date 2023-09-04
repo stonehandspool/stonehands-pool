@@ -5,27 +5,23 @@ import PickSheetLogin from '../components/picksheet/PickSheetLogin';
 import supabaseClient from '../config/supabaseClient';
 
 function PickSheet() {
-    return (
-        <PickSheetForm session={null} />
+    const [session, setSession] = useState<Session | null>(null);
+
+    useEffect(() => {
+        supabaseClient.auth.getSession().then(({ data: { session } }) => {
+            setSession(session);
+        });
+
+        supabaseClient.auth.onAuthStateChange((_event, session) => {
+            setSession(session);
+        });
+    }, []);
+
+    return(
+        <>
+            {!session ? <PickSheetLogin /> : <PickSheetForm session={session} />}
+        </>
     );
-    // TODO: Put this back in once we're ready for the real deal
-    // const [session, setSession] = useState<Session | null>(null);
-
-    // useEffect(() => {
-    //     supabaseClient.auth.getSession().then(({ data: { session } }) => {
-    //         setSession(session);
-    //     });
-
-    //     supabaseClient.auth.onAuthStateChange((_event, session) => {
-    //         setSession(session);
-    //     });
-    // }, []);
-
-    // return(
-    //     <>
-    //         {!session ? <PickSheetLogin /> : <PickSheetForm session={session} />}
-    //     </>
-    // );
 }
 
 export default PickSheet;

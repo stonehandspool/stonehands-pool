@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CURRENT_YEAR } from '../constants';
 import MatchupCard from '../components/picksheet/MatchupCard';
 import ConfidenceDropDown from '../components/picksheet/ConfidenceDropDown';
 import PickOneTeam from '../components/picksheet/PickOneTeam';
 import HighFiveCheckboxes from '../components/picksheet/HighFiveCheckBoxes';
+import supabaseClient from '../config/supabaseClient';
+import { TABLE_NAMES } from '../config/supabaseConfig';
 
 const toMoney = (value: number) => {
     return value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol' })
@@ -21,7 +23,23 @@ function About() {
     };
     const handleHighFiveSelection = () => {};
 
-    const numPlayers = 50; // TOOD: Update this once everything is locked in
+    // TODO: Just use a const value once the sign ups are locked
+    const [numJoined, setNumJoined] = useState(-1);
+    useEffect(() => {
+        const fetchNumJoined = async () => {
+          const { data, error } = await supabaseClient
+            .from(TABLE_NAMES.USER_INFO)
+            .select('*', { count: 'exact' });
+          
+          if (data) {
+            setNumJoined(data.length);
+          }
+        };
+    
+        fetchNumJoined();
+      }, []);
+
+    const numPlayers = numJoined >= 0 ? numJoined : 50; // If something goes wrong then default to 50
     const buyIn = 100;
     const totalPool = numPlayers * buyIn;
     // Confidence
@@ -365,7 +383,7 @@ function About() {
                         <h5 className='title is-5'><b>Payment Options</b></h5>
                         <p><b>Venmo:</b> @Glen-Fandl | Last Four Digits (if needed): 7863</p>
                         <p><b>Zelle:</b> gmf2715@outlook.com</p>
-                        <p className='has-text-danger'>In the payment description please use the format: '2023 Stablehands Pool Payment for: "name(s)"' </p>
+                        <p className='has-text-danger'>In the payment description please use the format: '2023 Stonehands Payment for: "name(s)"' </p>
                         <br />
                         <p>
                             Below is the finalized pay structure for the Pool, this page will update once the final number of players is set.
@@ -449,8 +467,8 @@ function About() {
                         </p>
                         <h5 className='title is-5'>When should I pay by?</h5>
                         <p className='mb-5'>
-                            I ask that everyone pays prior to the start of the season. If payments aren't received by the start of week 3 of the season then I will reach
-                            out to you. If payment is not received by the start of week 5, then you will be disqualified from the pool.
+                            <b>I ask that everyone pays prior to the start of the season.</b> If payments aren't received by the start of <b>week 3</b> of the season then I will reach
+                            out to you. If payment is not received by the start of <b>week 4</b>, then you will be disqualified from the pool.
                         </p>
                         <h5 className='title is-5'>When will I receive my winnings?</h5>
                         <p className='mb-5'>
