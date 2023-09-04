@@ -20,14 +20,12 @@ function PasswordResetRequest() {
             .resetPasswordForEmail(email, { redirectTo: 'https://stonehands.org/password-reset' })
 
         if (data) {
-            console.log(data);
             setFormSuccess('Success! Please check your email for a password reset link.');
             setFormError(null);
             return;
         }
 
         if (error) {
-            console.log(error);
             setFormError('Sorry, an error occurred when trying to reset your password, please reach out to Ryan.');
             return;
         }

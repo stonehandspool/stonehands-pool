@@ -30,12 +30,12 @@ function WeeklyPicksImagesTable() {
     const emptyArr = Array(numGamesThisWeek + 4).fill('');
     const matchupKeys: string[] = Object.keys(currentWeek);
 
-    // Sort everyone alphabetically by last name
+    // Sort everyone alphabetically by name
+    // TODO: Check to make sure this works!!
     weeklyPicks.sort((row1, row2) => {
-        // First, sort by the number of points
-        if (row1.submission_data.lastName > row2.submission_data.lastName) return 1;
-        if (row1.submission_data.lastName < row2.submission_data.lastName) return -1;
-        return 0;
+        const { firstName: firstName1, lastName: lastName1 } = row1.submission_data;
+        const { firstName: firstName2, lastName: lastName2 } = row2.submission_data;
+        return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
     });
 
     // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players

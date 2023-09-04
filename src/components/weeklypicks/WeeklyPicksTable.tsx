@@ -26,8 +26,13 @@ function WeeklyPicksTable() {
     const emptyArr = Array(numGamesThisWeek + 4).fill('');
     const matchupKeys: string[] = Object.keys(currentWeek);
 
-    // Sort everyone alphabetically by last name
-    weeklyPicks.sort((row1, row2) => row1.submission_data.lastName.localeCompare(row2.submission_data.lastName));
+    // Sort everyone alphabetically by name
+    // TODO: Check to make sure this works!!
+    weeklyPicks.sort((row1, row2) => {
+        const { firstName: firstName1, lastName: lastName1 } = row1.submission_data;
+        const { firstName: firstName2, lastName: lastName2 } = row2.submission_data;
+        return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
+    });
 
     // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
     // can't see what people have chosen prior to the cutoff happening

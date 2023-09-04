@@ -39,7 +39,7 @@ function MarginTable() {
         const playerInfo = players[i];
         const numWins = playerInfo.marginPicks.filter((pick: MarginPick) => pick.margin !== null && pick.margin > 0).length;
         const rowInfo: PlayerInfo = {
-            name: `${playerInfo.firstName} ${playerInfo.lastName}`,
+            name: `${playerInfo.firstName.trim()} ${playerInfo.lastName.trim()}`,
             marginPicks: playerInfo.marginPicks,
             marginTotal: playerInfo.marginTotal,
             numWins,
@@ -49,9 +49,11 @@ function MarginTable() {
 
     // Sort everyone by their margin total
     playerPicks.sort((row1, row2) => {
+        const firstName1 = row1.name.split(' ')[0] as string;
         const lastName1 = row1.name.split(' ').pop() as string;
+        const firstName2 = row2.name.split(' ')[0] as string;
         const lastName2 = row2.name.split(' ').pop() as string;
-        return row2.marginTotal - row1.marginTotal || lastName1.localeCompare(lastName2);
+        return row2.marginTotal - row1.marginTotal || lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
     });
 
     // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players

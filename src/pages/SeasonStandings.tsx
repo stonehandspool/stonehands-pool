@@ -15,7 +15,8 @@ function SeasonStandings() {
             <div className='container'>
                 <h1 className='title has-text-centered'>{CURRENT_YEAR} Stonehands Pool</h1>
                 <h2 className='subtitle has-text-centered'>Season standings as of week {CURRENT_WEEK}</h2>
-                {
+                {/* TODO: Add this back in once the week has been processed */}
+                {/* {
                     (notificationVisible && CURRENT_WEEK <= 2) &&
                     <div className='columns is-centered'>
                         <div className='column is-half'>
@@ -25,7 +26,7 @@ function SeasonStandings() {
                             </div>
                         </div>
                     </div>
-                }
+                } */}
                 <SeasonStandingsTable />
             </div>
         </section>

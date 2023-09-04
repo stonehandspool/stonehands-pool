@@ -27,7 +27,7 @@ function WeeklyStandingsTable() {
         const playerInfo = players[i];
         const rowInfo: TableColumns = {
             position: -1,
-            name: `${playerInfo.firstName} ${playerInfo.lastName}`,
+            name: `${playerInfo.firstName.trim()} ${playerInfo.lastName.trim()}`,
             points: CURRENT_WEEK > 1 ? playerInfo.pointsByWeek[weekToShow] : playerInfo.currentWeekPoints,
             wins: CURRENT_WEEK > 1 ? playerInfo.winsByWeek[weekToShow] : playerInfo.currentWeekWins,
             losses: CURRENT_WEEK > 1 ? playerInfo.lossesByWeek[weekToShow] : playerInfo.currentWeekLosses,

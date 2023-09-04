@@ -1,27 +1,28 @@
-import { useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import supabaseClient from './config/supabaseClient';
 
 import NavBar from './components/NavBar';
-import About from './pages/About';
-import Consensus from './pages/Consensus';
-import HighFive from './pages/HighFive';
-import Home from './pages/Home';
-import Margin from './pages/Margin';
-import PersonalStats from './pages/PersonalStats';
-import PickSheet from './pages/PickSheet';
-import PickSheetSuccess from './pages/PickSheetSuccess';
-import SeasonStandings from './pages/SeasonStandings';
-import SignUp from './pages/SignUp';
-import SignUpSuccess from './pages/SignUpSuccess';
-import Survivor from './pages/Survivor';
-import WeeklyPicks from './pages/WeeklyPicks';
-import WeeklyPicksImages from './pages/WeeklyPicksImages';
-import WeeklyStandings from './pages/WeeklyStandings';
-import PageNotFound from './pages/PageNotFound';
-import PasswordResetRequest from './pages/PasswordResetRequest';
-import PasswordReset from './pages/PasswordReset';
+const About = lazy(() => import('./pages/About'));
+const Consensus = lazy(() => import('./pages/Consensus'));
+const HighFive = lazy(() => import('./pages/HighFive'));
+const Home = lazy(() => import('./pages/Home'));
+const Margin = lazy(() => import('./pages/Margin'));
+const PersonalStats = lazy(() => import('./pages/PersonalStats'));
+const PickSheet = lazy(() => import('./pages/PickSheet'));
+const PickSheetSuccess = lazy(() => import('./pages/PickSheetSuccess'));
+const SeasonStandings = lazy(() => import('./pages/SeasonStandings'));
+const SignUp = lazy(() => import('./pages/SignUp'));
+const SignUpSuccess = lazy(() => import('./pages/SignUpSuccess'));
+const Survivor = lazy(() => import('./pages/Survivor'));
+const WeeklyPicks = lazy(() => import('./pages/WeeklyPicks'));
+const WeeklyPicksImages = lazy(() => import('./pages/WeeklyPicksImages'));
+const WeeklyStandings = lazy(() => import('./pages/WeeklyStandings'));
+const PageNotFound = lazy(() => import('./pages/PageNotFound'));
+const PasswordResetRequest = lazy(() => import('./pages/PasswordResetRequest'));
+const PasswordReset = lazy(() => import('./pages/PasswordReset'));
+
 import { TABLE_NAMES } from './config/supabaseConfig';
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      {/* TODO: Remove this on Thursday */}
       {
         (notificationVisible && numJoined > 0) &&
         <div className='columns is-centered mt-6'>
@@ -63,27 +65,29 @@ function App() {
           </div>
         </div>
       }
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/picksheet' element={<PickSheet />} />
-        <Route path='/picksheet-success' element={<PickSheetSuccess />} />
-        <Route path='/sign-up' element={<SignUp />} />
-        <Route path='/sign-up-success' element={<SignUpSuccess />} />
-        <Route path='/season-standings' element={<SeasonStandings />} />
-        <Route path='/weekly-standings' element={<WeeklyStandings />} />
-        <Route path='/survivor' element={<Survivor />} />
-        <Route path='/margin' element={<Margin />} />
-        <Route path='/high-five' element={<HighFive />} />
-        <Route path='/weekly-picks' element={<WeeklyPicks />} />
-        <Route path='/weekly-picks-images' element={<WeeklyPicksImages />} />
-        <Route path='/user/:username' element={<PersonalStats />} />
-        <Route path='/consensus' element={<Consensus />} />
-        <Route path='/password-reset-request' element={<PasswordResetRequest />} />
-        <Route path='/password-reset' element={<PasswordReset />} />
-        <Route path='/404' element={<PageNotFound />} />
-        <Route path='*' element={<PageNotFound />} />
-      </Routes>
+      <Suspense fallback={<></>}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/picksheet' element={<PickSheet />} />
+          <Route path='/picksheet-success' element={<PickSheetSuccess />} />
+          <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/sign-up-success' element={<SignUpSuccess />} />
+          <Route path='/season-standings' element={<SeasonStandings />} />
+          <Route path='/weekly-standings' element={<WeeklyStandings />} />
+          <Route path='/survivor' element={<Survivor />} />
+          <Route path='/margin' element={<Margin />} />
+          <Route path='/high-five' element={<HighFive />} />
+          <Route path='/weekly-picks' element={<WeeklyPicks />} />
+          <Route path='/weekly-picks-images' element={<WeeklyPicksImages />} />
+          <Route path='/user/:username' element={<PersonalStats />} />
+          <Route path='/consensus' element={<Consensus />} />
+          <Route path='/password-reset-request' element={<PasswordResetRequest />} />
+          <Route path='/password-reset' element={<PasswordReset />} />
+          <Route path='/404' element={<PageNotFound />} />
+          <Route path='*' element={<PageNotFound />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
