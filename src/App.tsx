@@ -40,7 +40,7 @@ function App() {
     };
 
     fetchNumJoined();
-  }, [])
+  }, []);
 
   const removeNotification = () => {
     setNotificationVisible(false);
