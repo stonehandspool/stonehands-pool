@@ -24,7 +24,7 @@ function HighFiveTable() {
     for (let i = 0; i < players.length; i++) {
         const playerInfo = players[i];
         const rowInfo: PlayerInfo = {
-            name: `${playerInfo.firstName} ${playerInfo.lastName}`,
+            name: `${playerInfo.firstName.trim()} ${playerInfo.lastName.trim()}`,
             recentPicks: playerInfo.highFiveThisWeek as HighFivePick[],
             weeklyPoints: playerInfo.highFiveValues,
             highFiveTotal: playerInfo.highFiveTotal,
@@ -34,9 +34,11 @@ function HighFiveTable() {
 
     // Sort everyone by their point total
     playerPicks.sort((row1, row2) => {
+        const firstName1 = row1.name.split(' ')[0] as string;
         const lastName1 = row1.name.split(' ').pop() as string;
+        const firstName2 = row2.name.split(' ')[0] as string;
         const lastName2 = row2.name.split(' ').pop() as string;
-        return row2.highFiveTotal - row1.highFiveTotal || lastName1.localeCompare(lastName2);
+        return row2.highFiveTotal - row1.highFiveTotal || lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
     });
 
     // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
