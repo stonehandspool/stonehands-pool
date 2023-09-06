@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import * as EmailValidator from 'email-validator';
 import supabaseClient from '../config/supabaseClient';
 
 function PasswordReset() {
@@ -27,7 +26,9 @@ function PasswordReset() {
         }
         
         if (error) {
-            setFormError('An error occurred when signing you up, please reach out to Ryan');
+            // TODO: Remove this
+            console.log(error);
+            setFormError('An error occurred when changing your password, please reach out to Ryan');
             return;
         }
     };

@@ -131,8 +131,8 @@ function PickSheetForm(props: PicksheetFormProps) {
             <section className='section'>
                 <div className='container'>
                     <h3 className='title is-3 has-text-centered'>
-                        Sorry, it looks like you've signed up but your account hasn't been processed yet. Please reach out to Ryan to get your account
-                        added to the pool.
+                        Thank you for signing up for the pool! Ryan needs to do something on his end to activate your account. It should
+                        be activated shortly!
                     </h3>
                 </div>
             </section>
