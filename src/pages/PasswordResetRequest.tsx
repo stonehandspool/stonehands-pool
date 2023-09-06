@@ -17,7 +17,7 @@ function PasswordResetRequest() {
 
         const { data, error } = await supabaseClient
             .auth
-            .resetPasswordForEmail(email, { redirectTo: 'https://stonehands.org/password-reset' })
+            .resetPasswordForEmail(email); // , { redirectTo: 'https://stonehands.org/password-reset' })
 
         if (data) {
             setFormSuccess('Success! Please check your email for a password reset link.');
@@ -38,7 +38,10 @@ function PasswordResetRequest() {
                     <div className='container'>
                         <form className='box' onSubmit={handleSubmit}>
                             <h1 className='title has-text-centered'>Password Reset</h1>
-                            <h2 className='subtitle has-text-centered'>If you forgot your email, please email Ryan at <a href='mailto:ryan@stonehands.org'>ryan@stonehands.org</a></h2>
+                            <h2 className='subtitle has-text-centered'>
+                                If you forgot your email please submit your email below. If that does not work,
+                                please email Ryan at <a href='mailto:ryan@stonehands.org'>ryan@stonehands.org</a>
+                            </h2>
 
                             <div className='field'>
                                 <label className='label' htmlFor='email'>Email:</label>
