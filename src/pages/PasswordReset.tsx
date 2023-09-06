@@ -26,8 +26,6 @@ function PasswordReset() {
         }
         
         if (error) {
-            // TODO: Remove this
-            console.log(error);
             setFormError('An error occurred when changing your password, please reach out to Ryan');
             return;
         }
