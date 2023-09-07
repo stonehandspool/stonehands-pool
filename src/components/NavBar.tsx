@@ -53,8 +53,7 @@ function NavBar() {
                             <Link className='navbar-item' to='/consensus' onClick={onBurgerClick}>Consensus</Link>
                         </div>
                     </div>
-                    {/* TODO: Disable this on Thursday morning */}
-                    <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link>
+                    {/* <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link> */}
                 </div>
             </div>
         </nav>

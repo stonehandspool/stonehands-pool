@@ -1,12 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CURRENT_YEAR } from '../constants';
 import MatchupCard from '../components/picksheet/MatchupCard';
 import ConfidenceDropDown from '../components/picksheet/ConfidenceDropDown';
 import PickOneTeam from '../components/picksheet/PickOneTeam';
 import HighFiveCheckboxes from '../components/picksheet/HighFiveCheckBoxes';
-import supabaseClient from '../config/supabaseClient';
-import { TABLE_NAMES } from '../config/supabaseConfig';
 
 const toMoney = (value: number) => {
     return value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol' })
@@ -23,23 +21,7 @@ function About() {
     };
     const handleHighFiveSelection = () => {};
 
-    // TODO: Just use a const value once the sign ups are locked
-    const [numJoined, setNumJoined] = useState(-1);
-    useEffect(() => {
-        const fetchNumJoined = async () => {
-          const { data, error } = await supabaseClient
-            .from(TABLE_NAMES.USER_INFO)
-            .select('*', { count: 'exact' });
-          
-          if (data) {
-            setNumJoined(data.length);
-          }
-        };
-    
-        fetchNumJoined();
-      }, []);
-
-    const numPlayers = numJoined >= 0 ? numJoined : 50; // If something goes wrong then default to 50
+    const numPlayers = 80;
     const buyIn = 100;
     const totalPool = numPlayers * buyIn;
     // Confidence

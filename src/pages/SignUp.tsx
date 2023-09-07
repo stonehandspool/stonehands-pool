@@ -11,7 +11,6 @@ function capitalize(name: string): string {
 }
 
 function SignUp() {
-    // TODO: Toggle this
     if (SIGN_UPS_DISABLED) {
         return (
             <section className='section'>
