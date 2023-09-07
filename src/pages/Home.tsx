@@ -1,6 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import supabaseClient from '../config/supabaseClient';
+import { useEffect } from 'react';
 
 function Home() {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      supabaseClient.auth.onAuthStateChange(async (event, session) => {
+        if (event === 'PASSWORD_RECOVERY') {
+          navigate('/password-reset');
+        }
+      });
+    }, []);
+
     return (
         <section className='hero has-background-white is-fullheight-with-navbar'>
             <div className='hero-body'>
