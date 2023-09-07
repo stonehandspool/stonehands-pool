@@ -23,48 +23,10 @@ const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 const PasswordResetRequest = lazy(() => import('./pages/PasswordResetRequest'));
 const PasswordReset = lazy(() => import('./pages/PasswordReset'));
 
-import { TABLE_NAMES } from './config/supabaseConfig';
-
 function App() {
-  const [notificationVisible, setNotificationVisible] = useState(true);
-  const [numJoined, setNumJoined] = useState(-1);
-
-  useEffect(() => {
-    const fetchNumJoined = async () => {
-      const { data, error } = await supabaseClient
-        .from(TABLE_NAMES.USER_INFO)
-        .select('*', { count: 'exact' });
-      
-      if (data) {
-        setNumJoined(data.length);
-      }
-    };
-
-    fetchNumJoined();
-  }, []);
-
-  const removeNotification = () => {
-    setNotificationVisible(false);
-  };
-
   return (
     <BrowserRouter>
       <NavBar />
-      {/* TODO: Remove this on Thursday */}
-      {
-        (notificationVisible && numJoined > 0) &&
-        <div className='columns is-centered mt-6'>
-          <div className='column is-half'>
-            <div className='notification is-info'>
-              <button className='delete' onClick={removeNotification}></button>
-              This is a friendly reminder that the last day for signing up is <b>Wednesday September 6<sup>th</sup></b>!
-              Picksheets will become available on <b>Monday September 4<sup>th</sup></b> for those who are already signed up.
-              The pool currently has <b>{numJoined}</b> members! If you haven't joined yet then sign up now and watch this counter
-              go up! Don't forget to validate your email once you sign up.
-            </div>
-          </div>
-        </div>
-      }
       <Suspense fallback={<></>}>
         <Routes>
           <Route path='/' element={<Home />} />
