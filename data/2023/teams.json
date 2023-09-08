@@ -132,16 +132,16 @@
     },
     "DET": {
       "displayName": "Detroit",
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "points_for": 0,
-      "points_against": 0,
+      "points_for": 21,
+      "points_against": 20,
       "home_wins": 0,
       "home_losses": 0,
-      "away_wins": 0,
+      "away_wins": 1,
       "away_losses": 0,
-      "streak": "W0"
+      "streak": "W1"
     },
     "GB": {
       "displayName": "Green Bay",
@@ -198,15 +198,15 @@
     "KC": {
       "displayName": "Kansas City",
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 0,
-      "points_against": 0,
+      "points_for": 20,
+      "points_against": 21,
       "home_wins": 0,
-      "home_losses": 0,
+      "home_losses": 1,
       "away_wins": 0,
       "away_losses": 0,
-      "streak": "W0"
+      "streak": "L1"
     },
     "LAC": {
       "displayName": "LA Chargers",

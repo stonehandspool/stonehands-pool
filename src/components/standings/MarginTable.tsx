@@ -37,7 +37,13 @@ function MarginTable() {
     const playerPicks: PlayerInfo[] = [];
     for (let i = 0; i < players.length; i++) {
         const playerInfo = players[i];
-        const numWins = playerInfo.marginPicks.filter((pick: MarginPick) => pick.margin !== null && pick.margin > 0).length;
+        let numWins = 0;
+        for (let i = 0; i < playerInfo.marginPicks.length; i++) {
+            const { margin } = playerInfo.marginPicks[i];
+            if (margin !== null && margin > 0) {
+                numWins++;
+            }
+        }
         const rowInfo: PlayerInfo = {
             name: `${playerInfo.firstName.trim()} ${playerInfo.lastName.trim()}`,
             marginPicks: playerInfo.marginPicks,
@@ -103,7 +109,7 @@ function MarginTable() {
                                         weeksArr.map((week, ind) => {
                                             const gameCompleted = getGameCompleted(row.marginPicks[ind]?.team);
                                             const isCurrentWeek = ind === CURRENT_WEEK - 1;
-                                            if (isCurrentWeek && !showAllPicks) {
+                                            if (isCurrentWeek && !showAllPicks && !gameCompleted) {
                                                 return <td key={`${row.name}-hidden`}></td>
                                             } else if (isCurrentWeek && !showAllPicks && gameCompleted) {
                                                 // If we don't want to show everything but a user has picked a game that has completed already
