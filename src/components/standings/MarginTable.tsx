@@ -37,7 +37,13 @@ function MarginTable() {
     const playerPicks: PlayerInfo[] = [];
     for (let i = 0; i < players.length; i++) {
         const playerInfo = players[i];
-        const numWins = playerInfo.marginPicks.filter((pick: MarginPick) => pick.margin !== null && pick.margin > 0).length;
+        let numWins = 0;
+        for (let i = 0; i < playerInfo.marginPicks.length; i++) {
+            const { margin } = playerInfo.marginPicks[i];
+            if (margin !== null && margin > 0) {
+                numWins++;
+            }
+        }
         const rowInfo: PlayerInfo = {
             name: `${playerInfo.firstName.trim()} ${playerInfo.lastName.trim()}`,
             marginPicks: playerInfo.marginPicks,
