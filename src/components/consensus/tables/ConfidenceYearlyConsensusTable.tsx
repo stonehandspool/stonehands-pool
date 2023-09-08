@@ -26,7 +26,7 @@ function ConfidenceYearlyConsensusTable() {
         return (
             <section className='section'>
                 <div className='container'>
-                    <h3 className='title is-3 has-text-centered'>Sorry, there is no data to show yet</h3>
+                    <h3 className='title is-3 has-text-centered'>Sorry, there is no data to show yet This will update after the 1pm cutoff.</h3>
                 </div>
             </section>
         )

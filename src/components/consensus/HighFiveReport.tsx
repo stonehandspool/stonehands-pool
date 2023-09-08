@@ -6,7 +6,7 @@ function HighFiveReport() {
     // can't see what people have chosen prior to the cutoff happening
     const currentTime = new Date();
     const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
-    const weekToShow = showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
+    const weekToShow = CURRENT_WEEK === 1 ? CURRENT_WEEK : showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
     
     return (
         <div className='section'>

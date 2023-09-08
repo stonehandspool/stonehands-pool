@@ -103,7 +103,7 @@ function MarginTable() {
                                         weeksArr.map((week, ind) => {
                                             const gameCompleted = getGameCompleted(row.marginPicks[ind]?.team);
                                             const isCurrentWeek = ind === CURRENT_WEEK - 1;
-                                            if (isCurrentWeek && !showAllPicks) {
+                                            if (isCurrentWeek && !showAllPicks && !gameCompleted) {
                                                 return <td key={`${row.name}-hidden`}></td>
                                             } else if (isCurrentWeek && !showAllPicks && gameCompleted) {
                                                 // If we don't want to show everything but a user has picked a game that has completed already
