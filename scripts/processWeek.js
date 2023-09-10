@@ -111,8 +111,8 @@ const createRandomChoices = (playerId, username, firstName, lastName, aliveInSur
             'username': username,
             'firstName': firstName,
             'tiebreaker': "0",
-            'highFivePicks': ['N/A', 'N/A', 'N/A', 'N/A', 'N/A'],
-            'margin-pick': biggestLoser,
+            'highFivePicks': isSubmissionsLocked ? ['N/A', 'N/A', 'N/A', 'N/A', 'N/A'] : [],
+            'margin-pick': isSubmissionsLocked ? biggestLoser : '',
         },
     };
 

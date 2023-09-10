@@ -192,7 +192,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         const searchJSON = () => {
             const submission = findSubmission(userInfo.id);
             if (submission) {
-                const { submission_data: priorPicks } = submission;
+                const { submission_data: priorPicks, submission_id } = submission;
                 // Set prior picks and confidences
                 const priorConfidencePicks: string[] = [];
                 const priorConfidenceValues: number[] = [];
@@ -218,7 +218,11 @@ function PickSheetForm(props: PicksheetFormProps) {
     
                 // Update other state
                 setSelections(priorPicks);
-                setPriorPicks(true);
+                // There won't be a submission to update in the database if it was auto-generated
+                // So we want to make sure on a submit that a new entry is made
+                if (submission_id !== -1) {
+                    setPriorPicks(true);
+                }
             } 
         };
 
