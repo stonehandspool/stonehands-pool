@@ -100,6 +100,9 @@ function SurvivorTable() {
                                                     } else if (!row.aliveInSurvivor && gameCompleted) {
                                                         // If the user is no longer alive and the game is completed show as incorrect
                                                         return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
+                                                    } else if (!row.aliveInSurvivor) {
+                                                        // If the user is no longer alive and they forgot to make a pick
+                                                        return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.survivorPicks[ind]}</td>
                                                     } else if (!gameCompleted) {
                                                         // If the submissions have locked but this game hasn't been played yet
                                                         return <td key={`${row.name}-${ind}`}>{row.survivorPicks[ind]}</td>

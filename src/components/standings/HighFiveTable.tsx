@@ -45,7 +45,8 @@ function HighFiveTable() {
     // can't see what people have chosen prior to the cutoff happening
     const currentTime = new Date();
     const isBrandNewWeek = CURRENT_WEEK_STATUS === 'START';
-    const showAllPicks = CURRENT_WEEK_STATUS !== 'IN_PROGRESS' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+    const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+    console.log(showAllPicks);
 
     return(
         <section className='section'>
