@@ -204,7 +204,7 @@ players.forEach(player => {
     player.points += weeklyPoints;
     // Calculate the tbAvg
     let totalTiebreaker = 0;
-    for (let i = 0; i < player.tiebreakerByWeek.length - 1; i++) {
+    for (let i = 0; i <= player.tiebreakerByWeek.length - 1; i++) {
         totalTiebreaker += player.tiebreakerByWeek[i];
     }
     player.tbAvg = totalTiebreaker / player.tiebreakerByWeek.length;
@@ -231,7 +231,7 @@ players.forEach(player => {
     }
 
     // Now evaluate the margin pool pick
-    const marginPick = submissionInfo['margin-pick'];
+    let marginPick = submissionInfo['margin-pick'];
     let marginMatchup = findMatchupByTeam(marginPick);
     if (isFirstRun) {
         player.marginPicks.push({ team: marginPick, margin: null });
@@ -244,10 +244,11 @@ players.forEach(player => {
         // If the user never submitted a picksheet, ensure that they get the worst possible pick even if this is the last run
         const biggestLoser = findBiggestLoser();
         player.marginPicks[player.marginPicks.length - 1].team = biggestLoser;
+        marginPick = { team: biggestLoser, margin: 0 };
         marginMatchup = findMatchupByTeam(biggestLoser);
     }
 
-    // TODO: Fix the logic here
+    // TODO: Check this logic the next time anyone forgets
     if (marginMatchup.winner !== '' && !marginMatchup.evaluated) {
         let margin;
         if (marginPick === marginMatchup.home_team) {
