@@ -247,6 +247,7 @@ players.forEach(player => {
         marginMatchup = findMatchupByTeam(biggestLoser);
     }
 
+    // TODO: Fix the logic here
     if (marginMatchup.winner !== '' && !marginMatchup.evaluated) {
         let margin;
         if (marginPick === marginMatchup.home_team) {
