@@ -31,7 +31,6 @@ function WeeklyPicksImagesTable() {
     const matchupKeys: string[] = Object.keys(currentWeek);
 
     // Sort everyone alphabetically by name
-    // TODO: Check to make sure this works!!
     weeklyPicks.sort((row1, row2) => {
         const { firstName: firstName1, lastName: lastName1 } = row1.submission_data;
         const { firstName: firstName2, lastName: lastName2 } = row2.submission_data;
