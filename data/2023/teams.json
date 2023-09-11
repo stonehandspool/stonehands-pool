@@ -106,16 +106,16 @@
     },
     "DAL": {
       "displayName": "Dallas",
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "points_for": 0,
+      "points_for": 40,
       "points_against": 0,
       "home_wins": 0,
       "home_losses": 0,
-      "away_wins": 0,
+      "away_wins": 1,
       "away_losses": 0,
-      "streak": "W0"
+      "streak": "W1"
     },
     "DEN": {
       "displayName": "Denver",
@@ -302,15 +302,15 @@
     "NYG": {
       "displayName": "NY Giants",
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
       "points_for": 0,
-      "points_against": 0,
+      "points_against": 40,
       "home_wins": 0,
-      "home_losses": 0,
+      "home_losses": 1,
       "away_wins": 0,
       "away_losses": 0,
-      "streak": "W0"
+      "streak": "L1"
     },
     "NYJ": {
       "displayName": "NY Jets",
