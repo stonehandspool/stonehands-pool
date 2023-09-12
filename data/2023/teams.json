@@ -42,15 +42,15 @@
     "BUF": {
       "displayName": "Buffalo",
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 0,
-      "points_against": 0,
+      "points_for": 16,
+      "points_against": 22,
       "home_wins": 0,
       "home_losses": 0,
       "away_wins": 0,
-      "away_losses": 0,
-      "streak": "W0"
+      "away_losses": 1,
+      "streak": "L1"
     },
     "CAR": {
       "displayName": "Carolina",
@@ -314,16 +314,16 @@
     },
     "NYJ": {
       "displayName": "NY Jets",
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "points_for": 0,
-      "points_against": 0,
-      "home_wins": 0,
+      "points_for": 22,
+      "points_against": 16,
+      "home_wins": 1,
       "home_losses": 0,
       "away_wins": 0,
       "away_losses": 0,
-      "streak": "W0"
+      "streak": "W1"
     },
     "PHI": {
       "displayName": "Philadelphia",
