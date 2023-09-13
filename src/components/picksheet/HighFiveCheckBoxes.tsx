@@ -7,6 +7,7 @@ export interface HighFiveCheckboxProps {
     homeTeam: ValidPicks;
     awayTeam: ValidPicks;
     gameInfo: string;
+    gameStarted: boolean;
     gameCompleted: boolean;
     matchupNumber: number;
     name: string;
@@ -19,7 +20,7 @@ type TeamLogoKey = keyof typeof TeamLogos;
 const { teams } = TeamInfo;
 
 function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
-    const { homeTeam, awayTeam, gameInfo, gameCompleted, matchupNumber, name, handleSelection, maxPicks, picksArray } = props;
+    const { homeTeam, awayTeam, gameInfo, gameStarted, gameCompleted, matchupNumber, name, handleSelection, maxPicks, picksArray } = props;
     const [selectedTeam, setSelectedTeam] = useState<ValidPicks | null>(null);
     const [currentWeekPickSet, setCurrentWeekPickSet] = useState(false);
 
@@ -60,7 +61,8 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
         setSelectedTeam(team);
     };
 
-    const textColor = gameCompleted ? 'has-text-grey-light' : 'has-text-grey-dark';
+    const shouldDisable = gameStarted || gameCompleted;
+    const textColor = shouldDisable ? 'has-text-grey-light' : 'has-text-grey-dark';
 
     return (
         <div className='box'>
@@ -68,7 +70,7 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
                 <p className='is-size-7 has-text-grey-light'>{gameInfo}</p>
             </div>
             <div className='control is-vertical-center'>
-                <AwayLogo size={45} opacity={gameCompleted ? 0.4 : 1} />
+                <AwayLogo size={45} opacity={shouldDisable ? 0.4 : 1} />
                 <label className={`checkbox ${textColor}`} htmlFor={`${name}-matchup-${matchupNumber}-away-team`}>
                     <input
                         type='checkbox'
@@ -77,13 +79,13 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
                         value={awayTeam}
                         checked={selectedTeam === awayTeam}
                         onChange={onChoiceChange}
-                        disabled={gameCompleted}
+                        disabled={shouldDisable}
                     />
                     {` ${awayTeam} (${awayTeamInfo.wins}-${awayTeamInfo.losses}-${awayTeamInfo.ties})`}
                 </label>
             </div>
             <div className='control is-vertical-center'>
-                <HomeLogo size={45} opacity={gameCompleted ? 0.4 : 1} />
+                <HomeLogo size={45} opacity={shouldDisable ? 0.4 : 1} />
                 <label className={`checkbox ${textColor}`} htmlFor={`${name}-matchup-${matchupNumber}-home-team`}>
                     <input
                         type='checkbox'
@@ -92,7 +94,7 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
                         value={homeTeam}
                         checked={selectedTeam === homeTeam}
                         onChange={onChoiceChange}
-                        disabled={gameCompleted}
+                        disabled={shouldDisable}
                     />
                     {` ${homeTeam} (${homeTeamInfo.wins}-${homeTeamInfo.losses}-${homeTeamInfo.ties})`}
                 </label>

@@ -1,10 +1,10 @@
-import { useState } from 'react';
 import ConfidenceDropDown from './ConfidenceDropDown';
 import MatchupCard from './MatchupCard';
 
 function ConfidencePicks(props: any) {
     const { weekInfo, priorPicks, selectedPicks, onUpdatePick, selectedConfidences, onUpdateConfidence } = props;
     const numOptions = Object.keys(weekInfo).length;
+    const currentTime = new Date();
 
     return(
         <div className='container pb-6'>
@@ -35,6 +35,7 @@ function ConfidencePicks(props: any) {
                                             homeTeam={weekInfo[matchup].home_team}
                                             awayTeam={weekInfo[matchup].away_team}
                                             matchupNumber={index}
+                                            gameStarted={currentTime > new Date(weekInfo[matchup].time)}
                                             gameCompleted={weekInfo[matchup].winner !== ''}
                                             priorChoice={priorChoice}
                                             onUpdatePick={onUpdatePick}
@@ -44,6 +45,7 @@ function ConfidencePicks(props: any) {
                                         <ConfidenceDropDown
                                             key={`dd-${index}`}
                                             numOptions={numOptions}
+                                            gameStarted={currentTime > new Date(weekInfo[matchup].time)}
                                             gameCompleted={weekInfo[matchup].winner !== ''}
                                             priorConfidence={priorConfidence}
                                             matchupChoice={selectedPicks[index]}

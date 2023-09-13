@@ -6,6 +6,7 @@ export interface PickOneTeamProps {
     homeTeam: ValidPicks;
     awayTeam: ValidPicks;
     gameInfo: string;
+    gameStarted: boolean;
     gameCompleted: boolean;
     matchupNumber: number;
     name: string;
@@ -24,6 +25,7 @@ function PickOneTeam(props: PickOneTeamProps) {
         homeTeam,
         awayTeam,
         gameInfo,
+        gameStarted,
         gameCompleted,
         matchupNumber,
         name,
@@ -78,8 +80,9 @@ function PickOneTeam(props: PickOneTeamProps) {
         }
     };
 
-    const awayDisabled = gameCompleted || priorPickGameCompleted || teamHasBeenChosen(awayTeam);
-    const homeDisabled = gameCompleted || priorPickGameCompleted || teamHasBeenChosen(homeTeam);
+    const shouldDisable = gameStarted || gameCompleted;
+    const awayDisabled = shouldDisable || priorPickGameCompleted || teamHasBeenChosen(awayTeam);
+    const homeDisabled = shouldDisable || priorPickGameCompleted || teamHasBeenChosen(homeTeam);
 
     return (
         <div className='box'>
