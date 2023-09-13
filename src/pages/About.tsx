@@ -200,6 +200,7 @@ function About() {
                                                 homeTeam='KC'
                                                 awayTeam='DET'
                                                 matchupNumber={0}
+                                                gameStarted={false}
                                                 gameCompleted={false}
                                                 priorChoice={null}
                                                 onUpdatePick={onUpdatePick}
@@ -209,6 +210,7 @@ function About() {
                                             <ConfidenceDropDown
                                                 key={`dd-0`}
                                                 numOptions={16}
+                                                gameStarted={false}
                                                 gameCompleted={false}
                                                 priorConfidence=''
                                                 matchupChoice={selectedPick}
@@ -242,6 +244,7 @@ function About() {
                                     selectedTeam={marginTeam}
                                     handleSelection={handleMarginSelection}
                                     priorMarginPicks={undefined}
+                                    gameStarted={false}
                                     gameCompleted={false}
                                     priorPickGameCompleted={false}
                                 />
@@ -263,6 +266,7 @@ function About() {
                                     homeTeam='KC'
                                     awayTeam='DET'
                                     gameInfo='THU, SEP 7th - 8:20 PM ET - Kansas City, MO'
+                                    gameStarted={false}
                                     gameCompleted={false}
                                     matchupNumber={0}
                                     name={'high-five-picks'}
