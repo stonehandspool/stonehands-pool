@@ -11,6 +11,7 @@ function SurvivorPick(props: any) {
     // See if the priorPick from this week has already happened (e.g. if their pick was the Thurs game and its now Fri)
     const priorPickMatchupInfo = findMatchupByTeam(survivorTeam);
     const priorPickGameCompleted = priorPickMatchupInfo && priorPickMatchupInfo.winner !== '' ? true : false;
+    const currentTime = new Date();
 
     return (
         <div className='container pb-6'>
@@ -31,6 +32,7 @@ function SurvivorPick(props: any) {
                                 homeTeam={weekInfo[matchup].home_team}
                                 awayTeam={weekInfo[matchup].away_team}
                                 gameInfo={weekInfo[matchup].gameInfo}
+                                gameStarted={currentTime > new Date(weekInfo[matchup].time)}
                                 gameCompleted={weekInfo[matchup].winner !== ''}
                                 matchupNumber={index}
                                 name={'survivor-pick'}

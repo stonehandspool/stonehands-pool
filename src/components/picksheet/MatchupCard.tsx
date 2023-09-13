@@ -7,6 +7,7 @@ export interface MatchupCardProps {
     homeTeam: ValidPicks;
     awayTeam: ValidPicks;
     matchupNumber: number;
+    gameStarted: boolean;
     gameCompleted: boolean;
     priorChoice: ValidPicks | null;
     onUpdatePick: (value: string, index: number) => void;
@@ -16,7 +17,7 @@ type TeamLogoKey = keyof typeof TeamLogos;
 const { teams } = TeamInfo;
 
 function MatchupCard(props: MatchupCardProps) {
-    const { homeTeam, awayTeam, matchupNumber, gameCompleted, priorChoice, onUpdatePick } = props;
+    const { homeTeam, awayTeam, matchupNumber, gameStarted, gameCompleted, priorChoice, onUpdatePick } = props;
     const [chosenTeam, setChosenTeam] = useState<ValidPicks | null>(null);
 
     const HomeLogo = TeamLogos[homeTeam as TeamLogoKey];
@@ -25,7 +26,8 @@ function MatchupCard(props: MatchupCardProps) {
     const homeTeamInfo = teams[homeTeam as keyof typeof teams];
     const awayTeamInfo = teams[awayTeam as keyof typeof teams];
 
-    const textColor = gameCompleted ? 'has-text-grey-light' : 'has-text-grey-dark';
+    const shouldDisable = gameStarted || gameCompleted;
+    const textColor = shouldDisable ? 'has-text-grey-light' : 'has-text-grey-dark';
 
     // If the user had previously submitted, select that radio button
     useEffect(() => {
@@ -45,7 +47,7 @@ function MatchupCard(props: MatchupCardProps) {
     return (
         <div className='container'>
             <div className='control is-vertical-center'>
-                <AwayLogo size={45} opacity={gameCompleted ? 0.4 : 1} />
+                <AwayLogo size={45} opacity={shouldDisable ? 0.4 : 1} />
                 <label htmlFor={`matchup-${matchupNumber}-away-team`} className={textColor}>
                     <input
                         type='radio'
@@ -54,13 +56,13 @@ function MatchupCard(props: MatchupCardProps) {
                         value={awayTeam}
                         checked={chosenTeam === awayTeam}
                         onChange={onChoiceChange}
-                        disabled={gameCompleted}
+                        disabled={shouldDisable}
                     />
                     {` ${awayTeamInfo.displayName} (${awayTeamInfo.wins}-${awayTeamInfo.losses}-${awayTeamInfo.ties})`}
                 </label>
             </div>
             <div className='control is-vertical-center'>
-                <HomeLogo size={45} opacity={gameCompleted ? 0.4 : 1} />
+                <HomeLogo size={45} opacity={shouldDisable ? 0.4 : 1} />
                 <label htmlFor={`matchup-${matchupNumber}-home-team`} className={textColor}>
                     <input
                         type='radio'
@@ -69,7 +71,7 @@ function MatchupCard(props: MatchupCardProps) {
                         value={homeTeam}
                         checked={chosenTeam === homeTeam}
                         onChange={onChoiceChange}
-                        disabled={gameCompleted}
+                        disabled={shouldDisable}
                     />
                     {` ${homeTeamInfo.displayName} (${homeTeamInfo.wins}-${homeTeamInfo.losses}-${homeTeamInfo.ties})`}
                 </label>

@@ -4,6 +4,8 @@ const MAX_PICKS = 5;
 
 function HighFivePicks(props: any) {
     const { weekInfo, highFivePicks, handleHighFiveSelection } = props;
+
+    const currentTime = new Date();
     
     return (
         <div className='container pb-6'>
@@ -19,6 +21,7 @@ function HighFivePicks(props: any) {
                                 homeTeam={weekInfo[matchup].home_team}
                                 awayTeam={weekInfo[matchup].away_team}
                                 gameInfo={weekInfo[matchup].gameInfo}
+                                gameStarted={currentTime > new Date(weekInfo[matchup].time)}
                                 gameCompleted={weekInfo[matchup].winner !== ''}
                                 matchupNumber={index}
                                 name={'high-five-picks'}
