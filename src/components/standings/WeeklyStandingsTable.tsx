@@ -39,11 +39,10 @@ function WeeklyStandingsTable() {
     }
 
     // Sort everyone by points now
-    // TODO: Swap row2Tb and row1Tb for week 2
     calculatedPicks.sort((row1, row2) => {
         const row1Tb = Math.abs(MONDAY_NIGHT_TOTAL - row1.tiebreaker);
         const row2Tb = Math.abs(MONDAY_NIGHT_TOTAL - row2.tiebreaker);
-        return row2.points - row1.points || row2.wins - row1.wins || row2Tb - row1Tb;
+        return row2.points - row1.points || row2.wins - row1.wins || row1Tb - row2Tb;
     });
 
     // Now update the position and result for the table
