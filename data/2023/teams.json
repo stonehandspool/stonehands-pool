@@ -55,15 +55,15 @@
     "CAR": {
       "displayName": "Carolina",
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "points_for": 10,
-      "points_against": 24,
+      "points_for": 27,
+      "points_against": 44,
       "home_wins": 0,
-      "home_losses": 0,
+      "home_losses": 1,
       "away_wins": 0,
       "away_losses": 1,
-      "streak": "L1"
+      "streak": "L2"
     },
     "CHI": {
       "displayName": "Chicago",
@@ -94,15 +94,15 @@
     "CLE": {
       "displayName": "Cleveland",
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 24,
-      "points_against": 3,
+      "points_for": 46,
+      "points_against": 29,
       "home_wins": 1,
       "home_losses": 0,
       "away_wins": 0,
-      "away_losses": 0,
-      "streak": "W1"
+      "away_losses": 1,
+      "streak": "L1"
     },
     "DAL": {
       "displayName": "Dallas",
@@ -288,16 +288,16 @@
     },
     "NO": {
       "displayName": "New Orleans",
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0,
-      "points_for": 16,
-      "points_against": 15,
+      "points_for": 36,
+      "points_against": 32,
       "home_wins": 1,
       "home_losses": 0,
-      "away_wins": 0,
+      "away_wins": 1,
       "away_losses": 0,
-      "streak": "W1"
+      "streak": "W2"
     },
     "NYG": {
       "displayName": "NY Giants",
@@ -340,16 +340,16 @@
     },
     "PIT": {
       "displayName": "Pittsburgh",
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "points_for": 7,
-      "points_against": 30,
-      "home_wins": 0,
+      "points_for": 33,
+      "points_against": 52,
+      "home_wins": 1,
       "home_losses": 1,
       "away_wins": 0,
       "away_losses": 0,
-      "streak": "L1"
+      "streak": "W1"
     },
     "SEA": {
       "displayName": "Seattle",
