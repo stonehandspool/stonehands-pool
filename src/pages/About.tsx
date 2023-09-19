@@ -372,7 +372,7 @@ function About() {
                         <p className='has-text-danger'>In the payment description please use the format: '2023 Stonehands Payment for: "name(s)"' </p>
                         <br />
                         <p>
-                            Below is the finalized pay structure for the Pool, this page will update once the final number of players is set.
+                            Below is the finalized pay structure for the Pool, the final number of members in the pool is {numPlayers}.
                             This structure is designed to try and provide as many ways for players to win at least some money back so that there's always
                             a motivation to keep playing. <b>All</b> payouts will be made at the end of the regular season.
                         </p>
@@ -381,8 +381,8 @@ function About() {
                         <p><b>Total Pool Members: </b> {numPlayers}</p>
                         <p><b>Total Pot: </b> {toMoney(totalPool)}</p>
                         <p><b>Total Confidence Pot: </b> {toMoney(totalConf)}</p>
-                        <p className='ml-5'><b>Total Confidence Pot (Weekly): </b>{toMoney(finalConf)}</p>
-                        <p className='ml-5'><b>Total Confidence Pot (End of Year): </b>{toMoney(weeklyConf)}</p>
+                        <p className='ml-5'><b>Total Confidence Pot (Weekly): </b>{toMoney(weeklyConf)}</p>
+                        <p className='ml-5'><b>Total Confidence Pot (End of Year): </b>{toMoney(finalConf)}</p>
                         <p><b>Total Survivor Pot:</b> {toMoney(totalSurv)}</p>
                         <p><b>Total Margin Pot: </b> {toMoney(totalMarg)}</p>
                         <p><b>Total High-Five Pot: </b> {toMoney(totalHF)}</p>
@@ -453,8 +453,8 @@ function About() {
                         </p>
                         <h5 className='title is-5'>When should I pay by?</h5>
                         <p className='mb-5'>
-                            <b>I ask that everyone pays prior to the start of the season.</b> If payments aren't received by the start of <b>week 3</b> of the season then I will reach
-                            out to you. If payment is not received by the start of <b>week 4</b>, then you will be disqualified from the pool.
+                            <b>I ask that everyone pays prior to the start of the season.</b> If payments aren't received by the start of <b>week 2</b> of the season then I will reach
+                            out to you. If payment is not received by the start of <b>week 3</b>, then you will be disqualified (and potentially banned) from the pool.
                         </p>
                         <h5 className='title is-5'>When will I receive my winnings?</h5>
                         <p className='mb-5'>
