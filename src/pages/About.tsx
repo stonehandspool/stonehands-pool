@@ -21,7 +21,7 @@ function About() {
     };
     const handleHighFiveSelection = () => {};
 
-    const numPlayers = 80;
+    const numPlayers = 78;
     const buyIn = 100;
     const totalPool = numPlayers * buyIn;
     // Confidence
