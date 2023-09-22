@@ -35,7 +35,7 @@ function SeasonStandingsTable() {
             losses: playerInfo.losses,
             ties: playerInfo.ties,
             percent: `${(playerInfo.percent * 100).toFixed(1)}%`,
-            tiebreaker: playerInfo.tbAvg,
+            tiebreaker: +playerInfo.tbAvg.toFixed(1),
             lastWeek: playerInfo.lastWeekRank,
             change: playerInfo.change,
             username: playerInfo.username,
