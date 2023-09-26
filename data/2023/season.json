@@ -410,8 +410,8 @@
         "away_team": "BUF",
         "time": "2023-09-24T17:00:00.000Z",
         "gameInfo": "Sun, Sep 24, 1:00 PM ET - Landover, MD",
-        "home_score": 37,
-        "away_score": 3,
+        "home_score": 3,
+        "away_score": 37,
         "winner": "BUF",
         "evaluated": true
       },
@@ -473,7 +473,7 @@
         "home_score": 11,
         "away_score": 25,
         "winner": "PHI",
-        "evaluated": false
+        "evaluated": true
       },
       "matchup_16": {
         "home_team": "CIN",
@@ -483,7 +483,7 @@
         "home_score": 19,
         "away_score": 16,
         "winner": "CIN",
-        "evaluated": false
+        "evaluated": true
       }
     },
     "week_4": {
