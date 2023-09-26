@@ -80,16 +80,16 @@
     },
     "CIN": {
       "displayName": "Cincinnati",
-      "wins": 0,
+      "wins": 1,
       "losses": 2,
       "ties": 0,
-      "points_for": 27,
-      "points_against": 51,
-      "home_wins": 0,
+      "points_for": 46,
+      "points_against": 67,
+      "home_wins": 1,
       "home_losses": 1,
       "away_wins": 0,
       "away_losses": 1,
-      "streak": "L2"
+      "streak": "W1"
     },
     "CLE": {
       "displayName": "Cleveland",
@@ -224,15 +224,15 @@
     "LA": {
       "displayName": "LA Rams",
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "points_for": 53,
-      "points_against": 43,
+      "points_for": 69,
+      "points_against": 62,
       "home_wins": 0,
       "home_losses": 1,
       "away_wins": 1,
-      "away_losses": 0,
-      "streak": "L1"
+      "away_losses": 1,
+      "streak": "L2"
     },
     "LV": {
       "displayName": "Las Vegas",
@@ -327,16 +327,16 @@
     },
     "PHI": {
       "displayName": "Philadelphia",
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0,
-      "points_for": 59,
-      "points_against": 48,
+      "points_for": 84,
+      "points_against": 59,
       "home_wins": 1,
       "home_losses": 0,
-      "away_wins": 1,
+      "away_wins": 2,
       "away_losses": 0,
-      "streak": "W2"
+      "streak": "W3"
     },
     "PIT": {
       "displayName": "Pittsburgh",
@@ -380,15 +380,15 @@
     "TB": {
       "displayName": "Tampa Bay",
       "wins": 2,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 47,
-      "points_against": 34,
+      "points_for": 58,
+      "points_against": 59,
       "home_wins": 1,
-      "home_losses": 0,
+      "home_losses": 1,
       "away_wins": 1,
       "away_losses": 0,
-      "streak": "W2"
+      "streak": "L1"
     },
     "TEN": {
       "displayName": "Tennessee",
