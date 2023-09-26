@@ -133,6 +133,8 @@ function SurvivorTable() {
                                                 } else if (pickWasMade) {
                                                     // If this was a pick from a prior week that they got correct
                                                     return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.survivorPicks[ind]}</td>
+                                                } else if (ind < CURRENT_WEEK - 1 && !row.aliveInSurvivor) {
+                                                    return <td key={`${row.name}-${ind}`} className='has-background-danger'></td>
                                                 } else {
                                                     // Else, the user has been eliminated at this point so fill with nothing
                                                     return <td key={`${row.name}-${ind}`}></td>

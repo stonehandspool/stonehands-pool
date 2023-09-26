@@ -3,7 +3,7 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
-import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_FINAL_GAME, CURRENT_YEAR, SEASON_READY, SubmissionInfo, UserInfo } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_FINAL_GAME, CURRENT_WEEK_STATUS, CURRENT_YEAR, SEASON_READY, SubmissionInfo, UserInfo } from '../../constants';
 import * as seasonData from '../../../data/2023/season.json';
 import * as playerData from '../../../data/2023/players.json';
 import * as weeklyPicks from '../../../data/2023/weeklyPicks.json';
@@ -43,6 +43,16 @@ function PickSheetForm(props: PicksheetFormProps) {
             <section className='section'>
                 <div className='container'>
                     <h3 className='title is-3 has-text-centered'>Sorry, the season hasn't started yet, please wait until the season has been loaded</h3>
+                </div>
+            </section>
+        )
+    }
+
+    if (CURRENT_WEEK_STATUS === 'COMPLETE') {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h3 className='title is-3 has-text-centered'>The prior week has completed and the new picksheet hasn't been uploaded yet. An email will be sent once it becomes available</h3>
                 </div>
             </section>
         )
