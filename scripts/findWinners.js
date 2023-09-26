@@ -36,7 +36,14 @@ const weeklyPicksData = await JSON.parse(
 const weeklyPicks = weeklyPicksData.weeklyPicks[`week_${week}`];
 
 const numGamesInWeek = Object.keys(weekData).length;
-const lastGame = weekData[`matchup_${numGamesInWeek}`];
+// Find any remaining games
+const matchupsRemaining = [];
+for (let i = 1; i <= numGamesInWeek; i++) {
+    const matchupInfo = weekData[`matchup_${i}`];
+    if (!matchupInfo.evaluated) {
+        matchupsRemaining.push({ matchupId: `matchup-${i - 1}`, ...matchupInfo });
+    }
+}
 
 // Build up current standings with all needed info
 const currentStandings = [];
@@ -50,9 +57,14 @@ for (let i = 0; i < players.length; i++) {
         losses: playerInfo.currentWeekLosses,
         points: playerInfo.currentWeekPoints,
         tiebreaker: playerInfo.currentWeekTiebreaker,
-        lastGameWinner: playerPicks.submission_data[`matchup-${numGamesInWeek - 1}`],
-        lastGameConfidence: playerPicks.submission_data[`matchup-${numGamesInWeek - 1}-confidence`],
+        // lastGameWinner: playerPicks.submission_data[`matchup-${numGamesInWeek - 1}`],
+        // lastGameConfidence: playerPicks.submission_data[`matchup-${numGamesInWeek - 1}-confidence`],
     };
+    for (let i = 0; i < matchupsRemaining.length; i++) {
+        const { matchupId } = matchupsRemaining[i];
+        neededInfo[`matchup${i}pick`] = playerPicks.submission_data[`${matchupId}`];
+        neededInfo[`matchup${i}confidence`] = playerPicks.submission_data[`${matchupId}-confidence`];
+    }
     currentStandings.push(neededInfo);
 }
 
@@ -68,16 +80,16 @@ const maxTiebreaker = Math.max(...currentStandings.map(picks => picks.tiebreaker
 console.log(maxTiebreaker);
 const potentialWinners = [];
 
-// First, start with the away team
-let winningTeam = lastGame.away_team;
-for (let i = 0; i < maxTiebreaker; i++) {
-    const currentTiebreakerStandings = [];
-    for (let j = 0; j < currentStandings.length; j++) {
-        const copy = JSON.parse(JSON.stringify(currentStandings[j]));
-        if (copy.lastGameWinner === winningTeam) {
-            copy.wins++;
-            
-        }
+// Now calculate the different scenarios
+const options = ['home_team', 'away_team'];
+if (matchupsRemaining.length === 1) {
+
+} else if (matchupsRemaining.length === 2) {
+    for (let i = 0; i < options.length; i++) {
+        const top10 = [];
+        
     }
+} else {
+    console.log('More games left than this script can handle!');
 }
 
