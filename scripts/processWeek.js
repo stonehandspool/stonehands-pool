@@ -240,7 +240,7 @@ players.forEach(player => {
         player.marginPicks[player.marginPicks.length - 1].team = marginPick;
     }
 
-    if (pickInfo.submission_id === -1) {
+    if (pickInfo.submission_id === -1 && !isFirstRun) {
         // If the user never submitted a picksheet, ensure that they get the worst possible pick even if this is the last run
         const biggestLoser = findBiggestLoser();
         player.marginPicks[player.marginPicks.length - 1].team = biggestLoser;
@@ -249,7 +249,7 @@ players.forEach(player => {
     }
 
     // TODO: Check this logic the next time anyone forgets
-    if (marginMatchup.winner !== '' && !marginMatchup.evaluated) {
+    if (marginMatchup && marginMatchup.winner !== '' && !marginMatchup.evaluated) {
         let margin;
         if (marginPick === marginMatchup.home_team) {
             margin = marginMatchup.home_score - marginMatchup.away_score;
