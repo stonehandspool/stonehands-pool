@@ -1,5 +1,5 @@
 import WeeklyStandingsTable from '../components/standings/WeeklyStandingsTable';
-import { CURRENT_WEEK, CURRENT_WEEK_STATUS, CURRENT_YEAR } from '../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_FINAL_GAME, CURRENT_WEEK_STATUS, CURRENT_YEAR, MONDAY_NIGHT_TOTAL } from '../constants';
 
 function WeeklyStandings() {
     // If the current week is currently marked as START we don't want to show anything yet, so show the prior weeks data
@@ -16,6 +16,12 @@ function WeeklyStandings() {
                         This page will show the prior weeks standings until the first game of week {CURRENT_WEEK} finishes
                         and the website is updated.
                     </h2>
+                }
+                {
+                    (CURRENT_WEEK_STATUS === 'COMPLETE') &&
+                    <h4 className='subtitle is-5 has-text-centered'>
+                        The tiebreaker game for this week was <b>{CURRENT_WEEK_FINAL_GAME}</b> and the total score was <b>{MONDAY_NIGHT_TOTAL}</b>.
+                    </h4>
                 }
                 <WeeklyStandingsTable />
             </div>
