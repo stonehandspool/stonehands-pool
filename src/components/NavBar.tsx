@@ -53,6 +53,12 @@ function NavBar() {
                             <Link className='navbar-item' to='/consensus' onClick={onBurgerClick}>Consensus</Link>
                         </div>
                     </div>
+                    <div className='navbar-item has-dropdown is-hoverable' key={`${location}-dd-3`}>
+                        <a className='navbar-link'>March Madness</a>
+                        <div className='navbar-dropdown'>
+                            <Link className='navbar-item' to='/march-madness/picksheet' onClick={onBurgerClick}>Picksheet</Link>
+                        </div>
+                    </div>
                     {/* <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link> */}
                 </div>
             </div>
