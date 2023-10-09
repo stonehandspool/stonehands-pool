@@ -59,7 +59,7 @@ function getPickStats(userPicks: SubmissionInfo[], weeks: any) {
 
 function getEnding(place: number) {
     const lastDigit = +place.toString().slice(-1);
-    if (lastDigit === 1) {
+    if (lastDigit === 1 && place != 11) {
         return 'st';
     } else if (lastDigit === 2) {
         return 'nd';
@@ -104,7 +104,7 @@ function PersonalStats() {
     const weekToShow = CURRENT_WEEK === 1 ? CURRENT_WEEK : showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
 
     const userPicks: SubmissionInfo[] = [];
-    Object.keys(weeklyPicks).map((key, index) => {
+    Object.keys(weeklyPicks.weeklyPicks).map((key, index) => {
         const week: SubmissionInfo[] = weeklyPicks.weeklyPicks[`week_${index + 1}` as keyof typeof weeklyPicks.weeklyPicks] as SubmissionInfo[];
         if (week && week.length > 0 && index < weekToShow) {
             const playerPicksThisWeek = week.find(submission => submission.submission_data.username === username);
