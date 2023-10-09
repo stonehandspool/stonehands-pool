@@ -57,8 +57,6 @@ for (let i = 0; i < players.length; i++) {
         losses: playerInfo.currentWeekLosses,
         points: playerInfo.currentWeekPoints,
         tiebreaker: playerInfo.currentWeekTiebreaker,
-        // lastGameWinner: playerPicks.submission_data[`matchup-${numGamesInWeek - 1}`],
-        // lastGameConfidence: playerPicks.submission_data[`matchup-${numGamesInWeek - 1}-confidence`],
     };
     for (let i = 0; i < matchupsRemaining.length; i++) {
         const { matchupId } = matchupsRemaining[i];
@@ -75,19 +73,66 @@ currentStandings.sort((row1, row2) => {
     return row2.points - row1.points || row2.wins - row1.wins; // || row1Tb - row2Tb;
 });
 
-// Now, calculate all of the potential outcomes (up to the maximum tiebreaker guessed this week)
-const maxTiebreaker = Math.max(...currentStandings.map(picks => picks.tiebreaker));
-console.log(maxTiebreaker);
-const potentialWinners = [];
-
 // Now calculate the different scenarios
-const options = ['home_team', 'away_team'];
 if (matchupsRemaining.length === 1) {
-
+    const possibleWinners = [matchupsRemaining[0].home_team, matchupsRemaining[0].away_team];
+    for (let i = 0; i < possibleWinners.length; i++) {
+        const team = possibleWinners[i];
+        const possibleStandings = [];
+        for (let i = 0; i < currentStandings.length; i++) {
+            const copy = {...currentStandings[i]};
+            if (copy.matchup0pick === team) {
+                copy.wins++;
+                copy.points += copy.matchup0confidence;
+            } else {
+                copy.losses++;
+            }
+            possibleStandings.push(copy);
+        }
+        possibleStandings.sort((row1, row2) => {
+            return row2.points - row1.points || row2.wins - row1.wins;
+        });
+        console.log(`Standings if ${team} wins:`)
+        for (let i = 0; i < 15; i++) {
+            const info = possibleStandings[i];
+            console.log(`${i + 1}. ${info.name} | ${info.points} points | ${info.wins} wins | ${info.losses} losses | tiebreaker: ${info.tiebreaker}`);
+        }
+        console.log('');
+    }
 } else if (matchupsRemaining.length === 2) {
-    for (let i = 0; i < options.length; i++) {
-        const top10 = [];
-        
+    const possibleWinners1 = [matchupsRemaining[0].home_team, matchupsRemaining[0].away_team];
+    const possibleWinners2 = [matchupsRemaining[0].home_team, matchupsRemaining[0].away_team];
+    for (let i = 0; i < possibleWinners1.length; i++) {
+        for (let j = 0; j < possibleWinners2.length; j++) {
+            const teamA = possibleWinners1[i];
+            const teamB = possibleWinners2[j];
+            const possibleStandings = [];
+            for (let k = 0; k < currentStandings.length; k++) {
+                const copy = {...currentStandings[i]};
+                if (copy.matchup0pick === teamA) {
+                    copy.wins++;
+                    copy.points += copy.matchup0confidence;
+                } else {
+                    copy.losses++;
+                }
+                if (copy.matchup1pick === teamB) {
+                    copy.wins++;
+                    copy.points += copy.matchup1confidence;
+                } else {
+                    copy.losses++;
+                }
+                possibleStandings.push(copy);
+            }
+            possibleStandings.sort((row1, row2) => {
+                return row2.points - row1.points || row2.wins - row1.wins;
+            });
+            console.log(`Standings if ${teamA} and ${teamB} wins:`)
+            for (let i = 0; i < 15; i++) {
+                const info = possibleStandings[i];
+                console.log(`${i + 1}. ${info.name} | ${info.points} points | ${info.wins} wins | ${info.losses} losses | tiebreaker: ${info.tiebreaker}`);
+            }
+            console.log('');
+        }
     }
 } else {
     console.log('More games left than this script can handle!');
