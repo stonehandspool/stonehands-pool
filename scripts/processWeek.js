@@ -244,7 +244,7 @@ players.forEach(player => {
         // If the user never submitted a picksheet, ensure that they get the worst possible pick even if this is the last run
         const biggestLoser = findBiggestLoser();
         player.marginPicks[player.marginPicks.length - 1].team = biggestLoser;
-        marginPick = { team: biggestLoser, margin: 0 };
+        marginPick = biggestLoser;
         marginMatchup = findMatchupByTeam(biggestLoser);
     }
 
@@ -330,8 +330,7 @@ if (week === 1) {
     });
 } else {
     players.forEach(player => {
-        const pastWeek = player.currentWeekRank;
-        player.lastWeekRank = pastWeek;
+        player.lastWeekRank = player.rankByWeek.length - 2;
         player.currentWeekRank = clonedPlayers.findIndex(cloned => cloned.id === player.id) + 1;
         player.rankByWeek[player.rankByWeek.length - 1] = player.currentWeekRank;
         // Now calculate the different
