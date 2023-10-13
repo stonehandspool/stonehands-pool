@@ -1,7 +1,7 @@
+import { useLayoutEffect, useRef, useState } from 'react';
 import { Session } from '@supabase/supabase-js';
 import MatchupCard, { MatchupCardProps } from './MatchupCard';
 import matchups from '../../../data/2024/marchmadness/matchups.json';
-import { useState } from 'react';
 
 type PicksheetFormProps = {
     session: Session;
@@ -15,6 +15,15 @@ type UserPicks = {
 }
 
 function PickSheetForm(props: PicksheetFormProps) {
+    // Create a ref to get the height of the matchup cards
+    const cardRef = useRef<HTMLDivElement>(null);
+    const [cardHeight, setCardHeight] = useState<number>(0);
+
+    useLayoutEffect(() => {
+        const cardHeight = cardRef.current?.clientHeight || 0;
+        setCardHeight(cardHeight);
+    }, []);
+    
     // Create an array of only the information we need for the pick information
     const initialPicks: UserPicks[] = [];
     for (let i = 1; i <= 63; i++) {
@@ -59,7 +68,11 @@ function PickSheetForm(props: PicksheetFormProps) {
                             <h4 className='title is-4 has-text-centered'>Round of 64</h4>
                             {
                                 roundOf64.map((matchup, index) => {
-                                    return(<MatchupCard key={`round-of-64-${index}`} {...matchup as unknown as MatchupCardProps} />);
+                                    if (index === 0) {
+                                        return(<MatchupCard ref={cardRef} key={`round-of-64-${index}`} {...matchup as unknown as MatchupCardProps} />);
+                                    } else {
+                                        return(<MatchupCard key={`round-of-64-${index}`} {...matchup as unknown as MatchupCardProps} />);
+                                    }
                                 })
                             }
                         </div>
@@ -67,7 +80,29 @@ function PickSheetForm(props: PicksheetFormProps) {
                             <h4 className='title is-4 has-text-centered'>Round of 32</h4>
                             {
                                 roundOf32.map((matchup, index) => {
-                                    return(<MatchupCard key={`round-of-32-${index}`} {...matchup as unknown as MatchupCardProps} />);
+                                    if (index === 0) {
+                                        return (
+                                            <>
+                                                <div style={{ height: cardHeight / 2, marginBottom: '1.5rem' }} key='round-of-32-top-spacer' />
+                                                <MatchupCard key={`round-of-32-${index}`} {...matchup as unknown as MatchupCardProps} />
+                                            </>
+                                        );
+                                    } else if (index === roundOf32.length - 1) {
+                                        return (
+                                            <>
+                                                <div style={{ height: cardHeight, marginBottom: '1.5rem' }} key={`round-of-32-space-${index}`} />
+                                                <MatchupCard key={`round-of-32-${index}`} {...matchup as unknown as MatchupCardProps} />
+                                                <div style={{ height: cardHeight / 2 }} key='round-of-32-bottom-spacer' />
+                                            </>
+                                        );
+                                    } else {
+                                        return(
+                                            <>
+                                                <div style={{ height: cardHeight, marginBottom: '1.5rem' }} key={`round-of-32-space-${index}`} />
+                                                <MatchupCard key={`round-of-32-${index}`} {...matchup as unknown as MatchupCardProps} />
+                                            </>
+                                        );
+                                    }
                                 })
                             }
                         </div>
@@ -75,7 +110,29 @@ function PickSheetForm(props: PicksheetFormProps) {
                             <h4 className='title is-4 has-text-centered'>Sweet Sixteen</h4>
                             {
                                 sweetSixteen.map((matchup, index) => {
-                                    return(<MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />);
+                                    if (index === 0) {
+                                        return (
+                                            <>
+                                                <div style={{ height: cardHeight + cardHeight / 2 + cardHeight / 4, marginBottom: '1.5rem' }} key='sweet-16-top-spacer' />
+                                                <MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />
+                                            </>
+                                        );
+                                    } else if (index === roundOf32.length - 1) {
+                                        return (
+                                            <>
+                                                <div style={{ height: cardHeight * 4, marginBottom: '1.5rem' }} key={`sweet-16-space-${index}`} />
+                                                <MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />
+                                                <div style={{ height: cardHeight / 2 }} key='sweet-16-bottom-spacer' />
+                                            </>
+                                        );
+                                    } else {
+                                        return(
+                                            <>
+                                                <div style={{ height: cardHeight * 3 + cardHeight / 4, marginBottom: '1.5rem' }} key={`sweet-16-space-${index}`} />
+                                                <MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />
+                                            </>
+                                        );
+                                    }
                                 })
                             }
                         </div>

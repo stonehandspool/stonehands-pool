@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 
 type TeamInfo = {
     seed: number | null;
@@ -16,7 +16,7 @@ export type MatchupCardProps = {
     nextMatchup: string;
 };
 
-function MatchupCard(props: MatchupCardProps) {
+const MatchupCard = forwardRef<HTMLDivElement, MatchupCardProps>((props: MatchupCardProps, ref) => {
     const { topTeam, bottomTeam } = props;
     const [selectedTeam, setSelectedTeam] = useState<TeamInfo | null>(null);
 
@@ -30,7 +30,7 @@ function MatchupCard(props: MatchupCardProps) {
     }
 
     return (
-        <div className='box'>
+        <div className='box' ref={ref}>
             <div className='field is-clickable' onClick={() => onClick('top')}>
                 <div className='columns'>
                     <div className='column is-1'>
@@ -61,6 +61,6 @@ function MatchupCard(props: MatchupCardProps) {
             </div>
         </div>
     )
-}
+});
 
 export default MatchupCard;
