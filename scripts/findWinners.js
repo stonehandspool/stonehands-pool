@@ -101,14 +101,14 @@ if (matchupsRemaining.length === 1) {
     }
 } else if (matchupsRemaining.length === 2) {
     const possibleWinners1 = [matchupsRemaining[0].home_team, matchupsRemaining[0].away_team];
-    const possibleWinners2 = [matchupsRemaining[0].home_team, matchupsRemaining[0].away_team];
+    const possibleWinners2 = [matchupsRemaining[1].home_team, matchupsRemaining[1].away_team];
     for (let i = 0; i < possibleWinners1.length; i++) {
         for (let j = 0; j < possibleWinners2.length; j++) {
             const teamA = possibleWinners1[i];
             const teamB = possibleWinners2[j];
             const possibleStandings = [];
             for (let k = 0; k < currentStandings.length; k++) {
-                const copy = {...currentStandings[i]};
+                const copy = {...currentStandings[k]};
                 if (copy.matchup0pick === teamA) {
                     copy.wins++;
                     copy.points += copy.matchup0confidence;
@@ -127,9 +127,9 @@ if (matchupsRemaining.length === 1) {
                 return row2.points - row1.points || row2.wins - row1.wins;
             });
             console.log(`Standings if ${teamA} and ${teamB} wins:`)
-            for (let i = 0; i < 15; i++) {
-                const info = possibleStandings[i];
-                console.log(`${i + 1}. ${info.name} | ${info.points} points | ${info.wins} wins | ${info.losses} losses | tiebreaker: ${info.tiebreaker}`);
+            for (let k = 0; k < 15; k++) {
+                const info = possibleStandings[k];
+                console.log(`${k + 1}. ${info.name} | ${info.points} points | ${info.wins} wins | ${info.losses} losses | tiebreaker: ${info.tiebreaker}`);
             }
             console.log('');
         }
