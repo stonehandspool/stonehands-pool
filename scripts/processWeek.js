@@ -330,7 +330,7 @@ if (week === 1) {
     });
 } else {
     players.forEach(player => {
-        player.lastWeekRank = player.rankByWeek.length - 2;
+        player.lastWeekRank = player.rankByWeek[player.rankByWeek.length - 2];
         player.currentWeekRank = clonedPlayers.findIndex(cloned => cloned.id === player.id) + 1;
         player.rankByWeek[player.rankByWeek.length - 1] = player.currentWeekRank;
         // Now calculate the different
