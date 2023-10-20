@@ -13,7 +13,7 @@ type PlayerInfo = {
     highFiveTotal: number;
 };
 
-const headers: string[] = ['Player', 'Total', 'Pick 1', 'Pick 2', 'Pick 3', 'Pick 4', 'Pick 5', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
+const headers: string[] = ['Rank', 'Player', 'Total', 'Pick 1', 'Pick 2', 'Pick 3', 'Pick 4', 'Pick 5', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
 const weeksArr = [...Array(18)];
 
 function HighFiveTable() {
@@ -76,18 +76,20 @@ function HighFiveTable() {
                         <tr>
                             <td></td>
                             <td></td>
+                            <td></td>
                             <th colSpan={5} align='center'>Past Week Choices</th>
                             <th colSpan={18} align='center'>Points by Week</th>
                         </tr>
                         <tr>
                             {headers.map(heading => {
-                                return <th key={heading}>{heading}</th>
+                                return <th key={heading} className='has-text-centered'>{heading}</th>
                             })}
                         </tr>
                     </thead>
                     <tbody>
                             {playerPicks.map((row, index) => {
                                 return <tr key={`${index}`}>
+                                    <td key={`${row.name}-rank-${index}`} className='is-vcentered'>{index + 1}</td>
                                     <td key={`${row.name}-row-${index}`} className='is-vcentered'>{row.name}</td>
                                     <td key={`${row.name}-total-${index}`} className='is-vcentered'><strong>{row.highFiveTotal}</strong></td>
                                     {
