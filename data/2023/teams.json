@@ -3,15 +3,15 @@
     "ARI": {
       "displayName": "Arizona",
       "wins": 1,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "points_for": 117,
-      "points_against": 162,
+      "points_for": 127,
+      "points_against": 182,
       "home_wins": 1,
       "home_losses": 2,
       "away_wins": 0,
-      "away_losses": 3,
-      "streak": "L3"
+      "away_losses": 4,
+      "streak": "L4"
     },
     "ATL": {
       "displayName": "Atlanta",
@@ -119,16 +119,16 @@
     },
     "DEN": {
       "displayName": "Denver",
-      "wins": 1,
+      "wins": 2,
       "losses": 5,
       "ties": 0,
-      "points_for": 129,
-      "points_against": 200,
-      "home_wins": 0,
+      "points_for": 148,
+      "points_against": 217,
+      "home_wins": 1,
       "home_losses": 3,
       "away_wins": 1,
       "away_losses": 2,
-      "streak": "L2"
+      "streak": "W1"
     },
     "DET": {
       "displayName": "Detroit",
@@ -146,15 +146,15 @@
     "GB": {
       "displayName": "Green Bay",
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "points_for": 113,
-      "points_against": 113,
+      "points_for": 130,
+      "points_against": 132,
       "home_wins": 1,
       "home_losses": 1,
       "away_wins": 1,
-      "away_losses": 2,
-      "streak": "L2"
+      "away_losses": 3,
+      "streak": "L3"
     },
     "HOU": {
       "displayName": "Houston",
@@ -197,42 +197,42 @@
     },
     "KC": {
       "displayName": "Kansas City",
-      "wins": 5,
+      "wins": 6,
       "losses": 1,
       "ties": 0,
-      "points_for": 147,
-      "points_against": 88,
-      "home_wins": 2,
+      "points_for": 178,
+      "points_against": 105,
+      "home_wins": 3,
       "home_losses": 1,
       "away_wins": 3,
       "away_losses": 0,
-      "streak": "W5"
+      "streak": "W6"
     },
     "LAC": {
       "displayName": "LA Chargers",
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "points_for": 127,
-      "points_against": 124,
+      "points_for": 144,
+      "points_against": 155,
       "home_wins": 1,
       "home_losses": 2,
       "away_wins": 1,
-      "away_losses": 1,
-      "streak": "L1"
+      "away_losses": 2,
+      "streak": "L2"
     },
     "LA": {
       "displayName": "LA Rams",
       "wins": 3,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "points_for": 138,
-      "points_against": 117,
+      "points_for": 155,
+      "points_against": 141,
       "home_wins": 1,
-      "home_losses": 2,
+      "home_losses": 3,
       "away_wins": 2,
       "away_losses": 1,
-      "streak": "W1"
+      "streak": "L1"
     },
     "LV": {
       "displayName": "Las Vegas",
@@ -250,15 +250,15 @@
     "MIA": {
       "displayName": "Miami",
       "wins": 5,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "points_for": 223,
-      "points_against": 156,
+      "points_for": 240,
+      "points_against": 187,
       "home_wins": 3,
       "home_losses": 0,
       "away_wins": 2,
-      "away_losses": 1,
-      "streak": "W2"
+      "away_losses": 2,
+      "streak": "L1"
     },
     "MIN": {
       "displayName": "Minnesota",
@@ -327,42 +327,42 @@
     },
     "PHI": {
       "displayName": "Philadelphia",
-      "wins": 5,
+      "wins": 6,
       "losses": 1,
       "ties": 0,
-      "points_for": 155,
-      "points_against": 124,
-      "home_wins": 2,
+      "points_for": 186,
+      "points_against": 141,
+      "home_wins": 3,
       "home_losses": 0,
       "away_wins": 3,
       "away_losses": 1,
-      "streak": "L1"
+      "streak": "W1"
     },
     "PIT": {
       "displayName": "Pittsburgh",
-      "wins": 3,
+      "wins": 4,
       "losses": 2,
       "ties": 0,
-      "points_for": 79,
-      "points_against": 110,
+      "points_for": 103,
+      "points_against": 127,
       "home_wins": 2,
-      "home_losses": 1,
-      "away_wins": 1,
-      "away_losses": 1,
-      "streak": "W1"
-    },
-    "SEA": {
-      "displayName": "Seattle",
-      "wins": 3,
-      "losses": 2,
-      "ties": 0,
-      "points_for": 124,
-      "points_against": 108,
-      "home_wins": 1,
       "home_losses": 1,
       "away_wins": 2,
       "away_losses": 1,
-      "streak": "L1"
+      "streak": "W2"
+    },
+    "SEA": {
+      "displayName": "Seattle",
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 144,
+      "points_against": 118,
+      "home_wins": 2,
+      "home_losses": 1,
+      "away_wins": 2,
+      "away_losses": 1,
+      "streak": "W1"
     },
     "SF": {
       "displayName": "San Francisco",
