@@ -15,7 +15,7 @@ type PlayerInfo = {
     numWins: number;
 };
 
-const headers: string[] = ['Player', 'Total', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', 'Wins'];
+const headers: string[] = ['Rank', 'Player', 'Total', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', 'Wins'];
 const weeksArr = [...Array(18)];
 
 const weeklyResults = seasonResults.weeks[`week_${CURRENT_WEEK}` as keyof typeof seasonResults.weeks];
@@ -91,6 +91,7 @@ function MarginTable() {
                         <tr>
                             <td></td>
                             <td></td>
+                            <td></td>
                             <th className='has-text-centered' colSpan={18}>Week</th>
                             <td></td>
                         </tr>
@@ -103,6 +104,7 @@ function MarginTable() {
                     <tbody>
                             {playerPicks.map((row, index) => {
                                 return <tr key={`${index}`}>
+                                    <td key={`${row.name}-rank-${index}`} className='is-vcentered'>{index + 1}</td>
                                     <td key={`${row.name}-row-${index}`} className='is-vcentered'>{row.name}</td>
                                     <td key={`${row.name}-total-${index}`} className='is-vcentered'><strong>{row.marginTotal > 0 ? '+' : ''}{row.marginTotal}</strong></td>
                                     {

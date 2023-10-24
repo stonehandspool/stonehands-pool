@@ -88,7 +88,7 @@ function UserConfidenceReport(props: any) {
                             <progress className={`progress ${getProgressBarColor((wins + (ties / 2)) / (wins + ties + losses))}`} value={wins + (ties / 2)} max={wins + ties + losses}>{percentage}</progress>
                         </div>
                         <div className='column is-1'>
-                            <h6 className='title is-6'>{percentage}%</h6>
+                            <h6 className='title is-6'>{Math.round(percentage * 100) / 100}%</h6>
                         </div>
                         <div className='column is-1'>
                             <h6 className='title is-6 has-text-centered'>{wins}-{losses}-{ties}</h6>
