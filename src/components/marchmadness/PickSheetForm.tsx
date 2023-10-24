@@ -64,8 +64,27 @@ function PickSheetForm(props: PicksheetFormProps) {
                 </div>
             </section>
             <div className='columns'>
+                <div className='column'>
+                    <h4 className='title is-4 has-text-centered'>Round of 64</h4>
+                </div>
+                <div className='column'>
+                    <h4 className='title is-4 has-text-centered'>Round of 32</h4>
+                </div>
+                <div className='column'>
+                    <h4 className='title is-4 has-text-centered'>Sweet Sixteen</h4>
+                </div>
+                <div className='column'>
+                    <h4 className='title is-4 has-text-centered'>Elite Eight</h4>
+                </div>
+                <div className='column'>
+                    <h4 className='title is-4 has-text-centered'>Final Four</h4>
+                </div>
+                <div className='column'>
+                    <h4 className='title is-4 has-text-centered'>Finals</h4>
+                </div>
+            </div>
+            <div className='columns'>
                         <div className='column'>
-                            <h4 className='title is-4 has-text-centered'>Round of 64</h4>
                             {
                                 roundOf64.map((matchup, index) => {
                                     if (index === 0) {
@@ -76,9 +95,15 @@ function PickSheetForm(props: PicksheetFormProps) {
                                 })
                             }
                         </div>
-                        <div className='column'>
-                            <h4 className='title is-4 has-text-centered'>Round of 32</h4>
+                        <div className='column is-justify-content-space-around'>
                             {
+                                roundOf32.map((matchup, index) => {
+                                    return (
+                                        <MatchupCard key={`round-of-32-${index}`} {...matchup as unknown as MatchupCardProps} />
+                                    );
+                                })
+                            }
+                            {/* {
                                 roundOf32.map((matchup, index) => {
                                     if (index === 0) {
                                         return (
@@ -104,23 +129,22 @@ function PickSheetForm(props: PicksheetFormProps) {
                                         );
                                     }
                                 })
-                            }
+                            } */}
                         </div>
                         <div className='column'>
-                            <h4 className='title is-4 has-text-centered'>Sweet Sixteen</h4>
                             {
                                 sweetSixteen.map((matchup, index) => {
                                     if (index === 0) {
                                         return (
                                             <>
-                                                <div style={{ height: cardHeight + cardHeight / 2 + cardHeight / 4, marginBottom: '1.5rem' }} key='sweet-16-top-spacer' />
+                                                <div style={{ height: cardHeight * 2 - cardHeight / 4, marginBottom: '1.5rem' }} key='sweet-16-top-spacer' />
                                                 <MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />
                                             </>
                                         );
                                     } else if (index === roundOf32.length - 1) {
                                         return (
                                             <>
-                                                <div style={{ height: cardHeight * 4, marginBottom: '1.5rem' }} key={`sweet-16-space-${index}`} />
+                                                <div style={{ height: cardHeight * 4 + cardHeight / 4, marginBottom: '1.5rem' }} key={`sweet-16-space-${index}`} />
                                                 <MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />
                                                 <div style={{ height: cardHeight / 2 }} key='sweet-16-bottom-spacer' />
                                             </>
@@ -128,7 +152,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                                     } else {
                                         return(
                                             <>
-                                                <div style={{ height: cardHeight * 3 + cardHeight / 4, marginBottom: '1.5rem' }} key={`sweet-16-space-${index}`} />
+                                                <div style={{ height: cardHeight * 3 + cardHeight / 2, marginBottom: '1.5rem' }} key={`sweet-16-space-${index}`} />
                                                 <MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />
                                             </>
                                         );
@@ -137,7 +161,6 @@ function PickSheetForm(props: PicksheetFormProps) {
                             }
                         </div>
                         <div className='column'>
-                            <h4 className='title is-4 has-text-centered'>Elite Eight</h4>
                             {
                                 eliteEight.map((matchup, index) => {
                                     return(<MatchupCard key={`elite-eight-${index}`} {...matchup as unknown as MatchupCardProps} />);
@@ -145,7 +168,6 @@ function PickSheetForm(props: PicksheetFormProps) {
                             }
                         </div>
                         <div className='column'>
-                            <h4 className='title is-4 has-text-centered'>Final Four</h4>
                             {
                                 finalFour.map((matchup, index) => {
                                     return(<MatchupCard key={`final-four-${index}`} {...matchup as unknown as MatchupCardProps} />);
@@ -153,7 +175,6 @@ function PickSheetForm(props: PicksheetFormProps) {
                             }
                         </div>
                         <div className='column'>
-                            <h4 className='title is-4 has-text-centered'>Finals</h4>
                             <MatchupCard {...matchups[matchups.length - 1] as unknown as MatchupCardProps} />
                         </div>
                     </div>
