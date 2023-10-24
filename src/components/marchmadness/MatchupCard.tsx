@@ -40,7 +40,7 @@ const MatchupCard = forwardRef<HTMLDivElement, MatchupCardProps>((props: Matchup
                         <span
                             className={selectedTeam?.name === topTeam.name ? 'has-text-weight-bold' : 'has-text-weight-normal'}
                         >
-                            {topTeam.name} ({topTeam.record})
+                            {topTeam.name !== null ? topTeam.name : 'TBD'} {topTeam.record !== null ? `(${topTeam.record})` : ''}
                         </span>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const MatchupCard = forwardRef<HTMLDivElement, MatchupCardProps>((props: Matchup
                         <span
                             className={selectedTeam?.name === bottomTeam.name ? 'has-text-weight-bold' : 'has-text-weight-normal'}
                         >
-                            {bottomTeam.name} ({bottomTeam.record})
+                            {bottomTeam.name !== null ? bottomTeam.name : 'TBD'} {bottomTeam.record !== null ? `(${bottomTeam.record})`: ''}
                         </span>
                     </div>
                 </div>

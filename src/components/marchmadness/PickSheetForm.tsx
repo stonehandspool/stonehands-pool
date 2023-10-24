@@ -95,7 +95,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                                 })
                             }
                         </div>
-                        <div className='column is-justify-content-space-around'>
+                        <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
                             {
                                 roundOf32.map((matchup, index) => {
                                     return (
@@ -103,78 +103,31 @@ function PickSheetForm(props: PicksheetFormProps) {
                                     );
                                 })
                             }
-                            {/* {
-                                roundOf32.map((matchup, index) => {
-                                    if (index === 0) {
-                                        return (
-                                            <>
-                                                <div style={{ height: cardHeight / 2, marginBottom: '1.5rem' }} key='round-of-32-top-spacer' />
-                                                <MatchupCard key={`round-of-32-${index}`} {...matchup as unknown as MatchupCardProps} />
-                                            </>
-                                        );
-                                    } else if (index === roundOf32.length - 1) {
-                                        return (
-                                            <>
-                                                <div style={{ height: cardHeight, marginBottom: '1.5rem' }} key={`round-of-32-space-${index}`} />
-                                                <MatchupCard key={`round-of-32-${index}`} {...matchup as unknown as MatchupCardProps} />
-                                                <div style={{ height: cardHeight / 2 }} key='round-of-32-bottom-spacer' />
-                                            </>
-                                        );
-                                    } else {
-                                        return(
-                                            <>
-                                                <div style={{ height: cardHeight, marginBottom: '1.5rem' }} key={`round-of-32-space-${index}`} />
-                                                <MatchupCard key={`round-of-32-${index}`} {...matchup as unknown as MatchupCardProps} />
-                                            </>
-                                        );
-                                    }
-                                })
-                            } */}
                         </div>
-                        <div className='column'>
+                        <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
                             {
                                 sweetSixteen.map((matchup, index) => {
-                                    if (index === 0) {
-                                        return (
-                                            <>
-                                                <div style={{ height: cardHeight * 2 - cardHeight / 4, marginBottom: '1.5rem' }} key='sweet-16-top-spacer' />
-                                                <MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />
-                                            </>
-                                        );
-                                    } else if (index === roundOf32.length - 1) {
-                                        return (
-                                            <>
-                                                <div style={{ height: cardHeight * 4 + cardHeight / 4, marginBottom: '1.5rem' }} key={`sweet-16-space-${index}`} />
-                                                <MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />
-                                                <div style={{ height: cardHeight / 2 }} key='sweet-16-bottom-spacer' />
-                                            </>
-                                        );
-                                    } else {
-                                        return(
-                                            <>
-                                                <div style={{ height: cardHeight * 3 + cardHeight / 2, marginBottom: '1.5rem' }} key={`sweet-16-space-${index}`} />
-                                                <MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />
-                                            </>
-                                        );
-                                    }
+                                    return (
+                                        <MatchupCard key={`sweet-sixteen-${index}`} {...matchup as unknown as MatchupCardProps} />
+                                    )
                                 })
                             }
                         </div>
-                        <div className='column'>
+                        <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
                             {
                                 eliteEight.map((matchup, index) => {
                                     return(<MatchupCard key={`elite-eight-${index}`} {...matchup as unknown as MatchupCardProps} />);
                                 })
                             }
                         </div>
-                        <div className='column'>
+                        <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
                             {
                                 finalFour.map((matchup, index) => {
                                     return(<MatchupCard key={`final-four-${index}`} {...matchup as unknown as MatchupCardProps} />);
                                 })
                             }
                         </div>
-                        <div className='column'>
+                        <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
                             <MatchupCard {...matchups[matchups.length - 1] as unknown as MatchupCardProps} />
                         </div>
                     </div>
