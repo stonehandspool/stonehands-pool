@@ -158,4 +158,21 @@ type SubmissionInfo = {
     submission_data: SubmissionData;
 };
 
-export type { ValidPicks, ResultInfo, UserInfo, MarginPick, HighFivePick, SubmissionInfo, SubmissionData };
+// March Madness specific types
+type MarchMadnessTeamInfo = {
+    seed: number | null;
+    name: string | null;
+    record: string | null;
+}
+
+type MarchMadnessMatchupInfo = {
+    id: string;
+    topTeam: MarchMadnessTeamInfo;
+    bottomTeam: MarchMadnessTeamInfo;
+    topScore: number | null;
+    bottomScore: number | null;
+    winner: 'top' | 'bottom' | null;
+    nextMatchup: string | null;
+};
+
+export type { ValidPicks, ResultInfo, UserInfo, MarginPick, HighFivePick, SubmissionInfo, SubmissionData, MarchMadnessTeamInfo, MarchMadnessMatchupInfo };

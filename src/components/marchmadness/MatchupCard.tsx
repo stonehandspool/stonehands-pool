@@ -1,66 +1,72 @@
-import { forwardRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { MarchMadnessMatchupInfo } from '../../constants';
 
-type TeamInfo = {
-    seed: number | null;
-    name: string | null;
-    record: string | null;
+type MatchupCardProps = {
+    matchupInfo: MarchMadnessMatchupInfo;
+    onClick: (matchupInfo: MarchMadnessMatchupInfo) => void;
 }
 
-export type MatchupCardProps = {
-    id: string;
-    topTeam: TeamInfo;
-    bottomTeam: TeamInfo;
-    topScore: number | null;
-    bottomScore: number | null;
-    winner: 'top' | 'bottom' | null;
-    nextMatchup: string;
-};
+function MatchupCard(props: MatchupCardProps) {
+    const { matchupInfo, onClick } = props;
+    const { topTeam, bottomTeam } = matchupInfo;
+    const [selectedTeam, setSelectedTeam] = useState<MarchMadnessMatchupInfo>(matchupInfo);
 
-const MatchupCard = forwardRef<HTMLDivElement, MatchupCardProps>((props: MatchupCardProps, ref) => {
-    const { topTeam, bottomTeam } = props;
-    const [selectedTeam, setSelectedTeam] = useState<TeamInfo | null>(null);
+    // This is so that when the picksheets state is updated the child gets those changes so prior picks can be passed through
+    useEffect(() => {
+        setSelectedTeam(matchupInfo);
+    }, [matchupInfo]);
 
-    const onClick = (direction: 'top' | 'bottom') => {
-        console.log('hey', direction);
-        if (direction === 'bottom') {
-            setSelectedTeam(bottomTeam);
-        } else {
-            setSelectedTeam(topTeam);
-        }
+    const chooseTeam = (direction: 'top' | 'bottom') => {
+        const matchupCopy = JSON.parse(JSON.stringify(selectedTeam));
+        matchupCopy.winner = direction;
+        setSelectedTeam(matchupCopy);
+        onClick(matchupCopy);
     }
 
     return (
-        <div className='box' ref={ref}>
-            <div className='field is-clickable' onClick={() => onClick('top')}>
+        <div className='box march-madness'>
+            <div className='field is-clickable' onClick={() => chooseTeam('top')}>
                 <div className='columns'>
                     <div className='column is-1'>
                         <span className='has-text-weight-bold is-size-7'>{topTeam.seed}</span>
                     </div>
                     <div className='column pl-2'>
                         <span
-                            className={selectedTeam?.name === topTeam.name ? 'has-text-weight-bold' : 'has-text-weight-normal'}
+                            className={selectedTeam.winner === 'top' ? 'has-text-weight-bold' : 'has-text-weight-normal'}
                         >
                             {topTeam.name !== null ? topTeam.name : 'TBD'} {topTeam.record !== null ? `(${topTeam.record})` : ''}
                         </span>
                     </div>
                 </div>
             </div>
-            <div className='field is-clickable' onClick={() => onClick('bottom')}>
+            <div className='field is-clickable' onClick={() => chooseTeam('bottom')}>
                 <div className='columns'>
                     <div className='column is-1'>
                         <span className='has-text-weight-bold is-size-7'>{bottomTeam.seed}</span>
                     </div>
                     <div className='column pl-2'>
                         <span
-                            className={selectedTeam?.name === bottomTeam.name ? 'has-text-weight-bold' : 'has-text-weight-normal'}
+                            className={selectedTeam.winner === 'bottom' ? 'has-text-weight-bold' : 'has-text-weight-normal'}
                         >
                             {bottomTeam.name !== null ? bottomTeam.name : 'TBD'} {bottomTeam.record !== null ? `(${bottomTeam.record})`: ''}
                         </span>
                     </div>
                 </div>
             </div>
+            {/* <div style={{
+                position: 'relative',
+                borderColor: 'black',
+                borderWidth: '2px',
+                display: 'block',
+                width: '10px',
+                right: '-11px',
+                borderRightStyle: 'solid',
+                borderTopStyle: 'solid',
+                height: '100%',
+                top: '50%',
+                }} /> */}
         </div>
     )
-});
+}
 
 export default MatchupCard;

@@ -19,6 +19,41 @@ $primary: $purple;
     font-family: 'Roboto Slab', serif;
 }
 
+// March Madness specific styling
+.march-madness:after {
+  content: '';
+  border-color: black;
+  border-width: 2px;
+  position: absolute;
+  display: block;
+  width: 10px;
+  right: -11px;
+}
+
+.march-madness:nth-of-type(odd):after {
+  border-right-style: solid;
+  border-top-style: solid;
+  height: 100%;
+  top: 50%;
+}
+
+.march-madness:nth-of-type(even):after {
+  border-right-style: solid;
+  border-bottom-style: solid;
+  height: 100%;
+  top: -50%;
+}
+
+.march-madness:before {
+  content: '';
+  border-top: 2px solid black;
+  position: absolute;
+  height: 2px;
+  width: 10px;
+  left: -10px;
+  top: 50%;
+}
+
 // To make sure printing the users picks all prints to one page
 @media print {
     .section {
