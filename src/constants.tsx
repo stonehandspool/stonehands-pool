@@ -15,7 +15,7 @@ export const CURRENT_YEAR = '2023-2024';
 export const CURRENT_WEEK_CUTOFF_TIME = new Date('2023-11-05T18:00:00.000Z');
 // This is whatever the last scheduled game is in a given week
 // This is used to tell the users what game they should be predicting the total final score of for a week
-export const CURRENT_WEEK_FINAL_GAME = 'TEN @ PIT';
+export const CURRENT_WEEK_FINAL_GAME = 'LAC @ NYJ';
 // This should be updated every Tuesday morning with the total score of the game above
 // This is used to determine the tiebreaker for the weekly standings
 export const MONDAY_NIGHT_TOTAL = 0;
