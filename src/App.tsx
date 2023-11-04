@@ -20,6 +20,7 @@ const WeeklyStandings = lazy(() => import('./pages/WeeklyStandings'));
 const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 const PasswordResetRequest = lazy(() => import('./pages/PasswordResetRequest'));
 const PasswordReset = lazy(() => import('./pages/PasswordReset'));
+const StandingsByWeek = lazy(() => import('./pages/StandingsByWeek'));
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path='/consensus' element={<Consensus />} />
           <Route path='/password-reset-request' element={<PasswordResetRequest />} />
           <Route path='/password-reset' element={<PasswordReset />} />
+          <Route path='/standings-by-week' element={<StandingsByWeek />} />
           <Route path='/404' element={<PageNotFound />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>

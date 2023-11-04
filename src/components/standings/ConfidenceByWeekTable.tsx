@@ -1,6 +1,7 @@
-import * as seasonStandings from '../../../data/2023/players.json';
+import * as playerInfo from '../../../data/2023/players.json';
+import * as seasonInfo from '../../../data/2023/season.json'
 
-import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MONDAY_NIGHT_TOTAL } from '../../constants';
+import { CURRENT_WEEK } from '../../constants';
 
 type TableColumns = {
     position: number;
@@ -21,10 +22,18 @@ const headers: string[] = ['Position', 'Name', 'Points', 'Wins', 'Losses', 'Ties
 
 function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
     const { week } = props;
-    const { players } = seasonStandings;
+    const { players } = playerInfo;
+    const { weeks } = seasonInfo;
 
-    // If the current week is currently marked as START we don't want to show anything yet, so show the prior weeks data
-    const weekToShow = CURRENT_WEEK_STATUS === 'START' && CURRENT_WEEK > 1 ? CURRENT_WEEK - 2 : CURRENT_WEEK - 1;
+    // If we somehow get here, just don't return anything because that would break this
+    if (week > CURRENT_WEEK) {
+        return <></>;
+    }
+
+    const weekGames = weeks[`week_${week}` as keyof typeof weeks];
+    const numGames = Object.keys(weekGames).length;
+    const lastMatchup = weekGames[`matchup_${numGames}` as keyof typeof weekGames];
+    const mondayTotal = lastMatchup.away_score + lastMatchup.home_score;
 
     // Calculate the standings
     const calculatedPicks: TableColumns[] = [];
@@ -33,11 +42,11 @@ function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
         const rowInfo: TableColumns = {
             position: -1,
             name: `${playerInfo.firstName.trim()} ${playerInfo.lastName.trim()}`,
-            points: CURRENT_WEEK > 1 ? playerInfo.pointsByWeek[weekToShow] : playerInfo.currentWeekPoints,
-            wins: CURRENT_WEEK > 1 ? playerInfo.winsByWeek[weekToShow] : playerInfo.currentWeekWins,
-            losses: CURRENT_WEEK > 1 ? playerInfo.lossesByWeek[weekToShow] : playerInfo.currentWeekLosses,
-            ties: CURRENT_WEEK > 1 ? playerInfo.tiesByWeek[weekToShow] : playerInfo.currentWeekTies,
-            tiebreaker: CURRENT_WEEK > 1 ? playerInfo.tiebreakerByWeek[weekToShow] : playerInfo.currentWeekTiebreaker,
+            points: playerInfo.pointsByWeek[week - 1],
+            wins: playerInfo.winsByWeek[week - 1],
+            losses: playerInfo.lossesByWeek[week - 1],
+            ties: playerInfo.tiesByWeek[week - 1],
+            tiebreaker: playerInfo.tiebreakerByWeek[week - 1],
             result: '',
         };
         calculatedPicks.push(rowInfo);
@@ -45,15 +54,15 @@ function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
 
     // Sort everyone by points now
     calculatedPicks.sort((row1, row2) => {
-        const row1Tb = Math.abs(MONDAY_NIGHT_TOTAL - row1.tiebreaker);
-        const row2Tb = Math.abs(MONDAY_NIGHT_TOTAL - row2.tiebreaker);
+        const row1Tb = Math.abs(mondayTotal - row1.tiebreaker);
+        const row2Tb = Math.abs(mondayTotal - row2.tiebreaker);
         return row2.points - row1.points || row2.wins - row1.wins || row1Tb - row2Tb;
     });
 
     // Now update the position and result for the table
     for (let i = 0; i < calculatedPicks.length; i++) {
         calculatedPicks[i].position = i + 1;
-        if (i === 0 && CURRENT_WEEK_STATUS !== 'IN_PROGRESS') {
+        if (i === 0 && week < CURRENT_WEEK) {
             calculatedPicks[i].result = 'Winner'
         } else {
             calculatedPicks[i].result = '**'
