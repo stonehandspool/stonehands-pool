@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { MarchMadnessMatchupInfo } from '../../constants';
 
 type MatchupCardProps = {
@@ -9,17 +9,12 @@ type MatchupCardProps = {
 function MatchupCard(props: MatchupCardProps) {
     const { matchupInfo, onClick } = props;
     const { topTeam, bottomTeam } = matchupInfo;
-    const [selectedTeam, setSelectedTeam] = useState<MarchMadnessMatchupInfo>(matchupInfo);
-
-    // This is so that when the picksheets state is updated the child gets those changes so prior picks can be passed through
-    useEffect(() => {
-        setSelectedTeam(matchupInfo);
-    }, [matchupInfo]);
+    const [selectedTeam, setSelectedTeam] = useState<'top' | 'bottom' | null>(null);
 
     const chooseTeam = (direction: 'top' | 'bottom') => {
-        const matchupCopy = JSON.parse(JSON.stringify(selectedTeam));
+        const matchupCopy = JSON.parse(JSON.stringify(matchupInfo));
         matchupCopy.winner = direction;
-        setSelectedTeam(matchupCopy);
+        setSelectedTeam(direction);
         onClick(matchupCopy);
     }
 
@@ -32,7 +27,7 @@ function MatchupCard(props: MatchupCardProps) {
                     </div>
                     <div className='column pl-2'>
                         <span
-                            className={selectedTeam.winner === 'top' ? 'has-text-weight-bold' : 'has-text-weight-normal'}
+                            className={selectedTeam === 'top' ? 'has-text-weight-bold' : 'has-text-weight-normal'}
                         >
                             {topTeam.name !== null ? topTeam.name : 'TBD'} {topTeam.record !== null ? `(${topTeam.record})` : ''}
                         </span>
@@ -46,7 +41,7 @@ function MatchupCard(props: MatchupCardProps) {
                     </div>
                     <div className='column pl-2'>
                         <span
-                            className={selectedTeam.winner === 'bottom' ? 'has-text-weight-bold' : 'has-text-weight-normal'}
+                            className={selectedTeam === 'bottom' ? 'has-text-weight-bold' : 'has-text-weight-normal'}
                         >
                             {bottomTeam.name !== null ? bottomTeam.name : 'TBD'} {bottomTeam.record !== null ? `(${bottomTeam.record})`: ''}
                         </span>

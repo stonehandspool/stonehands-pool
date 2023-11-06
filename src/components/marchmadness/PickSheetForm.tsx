@@ -8,6 +8,12 @@ type PicksheetFormProps = {
     session: Session;
 };
 
+const resetValue: MarchMadnessTeamInfo = {
+    seed: null,
+    name: null,
+    record: null,
+};
+
 const tempDate = new Date('03/01/2024');
 
 function PickSheetForm(props: PicksheetFormProps) {
@@ -18,19 +24,34 @@ function PickSheetForm(props: PicksheetFormProps) {
     }
     const [userPicks, setUserPicks] = useState<MarchMadnessMatchupInfo[]>(initialPicks);
 
+    const clearGamesAfter = (picksCopy: MarchMadnessMatchupInfo[], prevMatchupNum: number, matchupId: number) => {
+        // First get the nextMatchup
+        const { nextMatchup } = picksCopy[matchupId];
+        const nextIndex = picksCopy.findIndex((matchups: MarchMadnessMatchupInfo) => matchups.id === nextMatchup);
+        const { id } = picksCopy[nextIndex];
+        const idNum = parseInt(id.split('-').pop() as string, 10);
+        if (idNum % 2 === 1) {
+            console.log('next matchup is top?', idNum, prevMatchupNum, nextIndex)
+        } else {
+            console.log('next matchup is bottom?', idNum, prevMatchupNum, nextIndex);
+        }
+    };
+
     const handleClick = (matchupInfo: MarchMadnessMatchupInfo) => {
         const { id, topTeam, bottomTeam, winner, nextMatchup } = matchupInfo;
         const idNum = parseInt(id.split('-').pop() as string, 10);
-        const picksCopy = JSON.parse(JSON.stringify(userPicks));
+        const picksCopy = JSON.parse(JSON.stringify(userPicks)) as MarchMadnessMatchupInfo[];
         if (idNum % 2 === 1) {
             // If it is an odd number, that means it is the top matchup so the next matchup needs to get its `topTeam` prop changed
             const nextIndex = picksCopy.findIndex((matchups: MarchMadnessMatchupInfo) => matchups.id === nextMatchup);
             picksCopy[nextIndex].topTeam = winner === 'top' ? topTeam : bottomTeam;
+            clearGamesAfter(picksCopy, idNum, nextIndex);
             setUserPicks(picksCopy);
         } else {
             // If it is an even number, that means it is the top matchup so the next matchup needs to get its `bottomTeam` prop changed
             const nextIndex = picksCopy.findIndex((matchups: MarchMadnessMatchupInfo) => matchups.id === nextMatchup);
             picksCopy[nextIndex].bottomTeam = winner === 'top' ? topTeam : bottomTeam;
+            clearGamesAfter(picksCopy, idNum, nextIndex);
             setUserPicks(picksCopy);
         }
     };
