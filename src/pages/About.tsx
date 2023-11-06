@@ -302,8 +302,8 @@ function About() {
                             <ul>
                                 <li>Each week you will submit a tiebreaker value</li>
                                 <li>You will need to guess the total score of the final game of the week</li>
-                                <li>If you tie someone in confidence points but guess a closer total score you will get ranked above them</li>
-                                <li>The second tiebreaker is the number of games guessed correctly (if two players have the same score and tiebreaker guess)</li>
+                                <li>The first tiebreaker is how many games you picked correctly that week. If you have the same points but more games guessed correctly you will be above in the standings</li>
+                                <li>The second tiebreaker is your tiebreaker value. If you and someone have the same points and games guessed correctly, whoever has the closest tiebreaker value to the Monday night score will win</li>
                             </ul>
                             <h6 className='title is-6'>Season</h6>
                             <ul>

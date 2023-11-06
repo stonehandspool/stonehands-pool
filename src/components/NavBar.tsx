@@ -46,11 +46,12 @@ function NavBar() {
                         </div>
                     </div>
                     <div className='navbar-item has-dropdown is-hoverable' key={`${location}-dd-2`}>
-                        <a className='navbar-link'>Picks</a>
-                        <div className='navbar-dropdown'>
+                        <a className='navbar-link'>More</a>
+                        <div className='navbar-dropdown is-right'>
                             <Link className='navbar-item' to='/weekly-picks' onClick={onBurgerClick}>Picks</Link>
                             <Link className='navbar-item' to='/weekly-picks-images' onClick={onBurgerClick}>Picks w/ Images</Link>
                             <Link className='navbar-item' to='/consensus' onClick={onBurgerClick}>Consensus</Link>
+                            <Link className='navbar-item' to='/standings-by-week' onClick={onBurgerClick}>Standings By Week</Link>
                         </div>
                     </div>
                     <div className='navbar-item has-dropdown is-hoverable' key={`${location}-dd-3`}>
