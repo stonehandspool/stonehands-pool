@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MarchMadnessMatchupInfo } from '../../constants';
 
 type MatchupCardProps = {
@@ -10,6 +10,16 @@ function MatchupCard(props: MatchupCardProps) {
     const { matchupInfo, onClick } = props;
     const { topTeam, bottomTeam } = matchupInfo;
     const [selectedTeam, setSelectedTeam] = useState<'top' | 'bottom' | null>(null);
+
+    useEffect(() => {
+        // If a user changes an earlier pick, we want to make sure that we de-select our current selection
+        // If it has been cleared (so that TBD is no longer bolded)
+        if (matchupInfo.topTeam.name === null && selectedTeam === 'top') {
+            setSelectedTeam(null);
+        } else if (matchupInfo.bottomTeam.name === null && selectedTeam === 'bottom') {
+            setSelectedTeam(null);
+        }
+    }, [matchupInfo]);
 
     const chooseTeam = (direction: 'top' | 'bottom') => {
         const matchupCopy = JSON.parse(JSON.stringify(matchupInfo));

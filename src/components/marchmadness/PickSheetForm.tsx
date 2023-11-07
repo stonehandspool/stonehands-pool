@@ -24,16 +24,22 @@ function PickSheetForm(props: PicksheetFormProps) {
     }
     const [userPicks, setUserPicks] = useState<MarchMadnessMatchupInfo[]>(initialPicks);
 
-    const clearGamesAfter = (picksCopy: MarchMadnessMatchupInfo[], prevMatchupNum: number, matchupId: number) => {
-        // First get the nextMatchup
-        const { nextMatchup } = picksCopy[matchupId];
-        const nextIndex = picksCopy.findIndex((matchups: MarchMadnessMatchupInfo) => matchups.id === nextMatchup);
-        const { id } = picksCopy[nextIndex];
-        const idNum = parseInt(id.split('-').pop() as string, 10);
-        if (idNum % 2 === 1) {
-            console.log('next matchup is top?', idNum, prevMatchupNum, nextIndex)
-        } else {
-            console.log('next matchup is bottom?', idNum, prevMatchupNum, nextIndex);
+    const clearGamesAfter = (picksCopy: MarchMadnessMatchupInfo[], startingIndex: number, teamToClear: string) => {
+        // I was gonna do this recursively but that was too much work. Just loop through the array starting
+        // at the next matchup and remove any instances of the team we switched away from
+        for (let i = startingIndex; i < picksCopy.length; i++) {
+            const { topTeam, bottomTeam, winner } = picksCopy[i];
+            if (topTeam.name === teamToClear) {
+                picksCopy[i].topTeam = resetValue;
+                if (winner === 'top') {
+                    picksCopy[i].winner = null;
+                }
+            } else if (bottomTeam.name === teamToClear) {
+                picksCopy[i].bottomTeam = resetValue;
+                if (winner === 'bottom') {
+                    picksCopy[i].winner = null;
+                }
+            }
         }
     };
 
@@ -45,13 +51,17 @@ function PickSheetForm(props: PicksheetFormProps) {
             // If it is an odd number, that means it is the top matchup so the next matchup needs to get its `topTeam` prop changed
             const nextIndex = picksCopy.findIndex((matchups: MarchMadnessMatchupInfo) => matchups.id === nextMatchup);
             picksCopy[nextIndex].topTeam = winner === 'top' ? topTeam : bottomTeam;
-            clearGamesAfter(picksCopy, idNum, nextIndex);
+            picksCopy[nextIndex].winner = null; // Reset this so that the newly selected team isn't marked as a winner
+            const teamToClear: string = winner === 'top' ? bottomTeam.name as string : topTeam.name as string;
+            clearGamesAfter(picksCopy, nextIndex, teamToClear);
             setUserPicks(picksCopy);
         } else {
             // If it is an even number, that means it is the top matchup so the next matchup needs to get its `bottomTeam` prop changed
             const nextIndex = picksCopy.findIndex((matchups: MarchMadnessMatchupInfo) => matchups.id === nextMatchup);
             picksCopy[nextIndex].bottomTeam = winner === 'top' ? topTeam : bottomTeam;
-            clearGamesAfter(picksCopy, idNum, nextIndex);
+            picksCopy[nextIndex].winner = null; // Reset this so that the newly selected team isn't marked as a winner
+            const teamToClear: string = winner === 'top' ? bottomTeam.name as string : topTeam.name as string;
+            clearGamesAfter(picksCopy, nextIndex, teamToClear);
             setUserPicks(picksCopy);
         }
     };
