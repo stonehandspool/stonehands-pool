@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { useEffect, useState } from 'react';
 import { MarchMadnessMatchupInfo } from '../../constants';
 
@@ -10,13 +11,14 @@ function MatchupCard(props: MatchupCardProps) {
     const { matchupInfo, onClick } = props;
     const { topTeam, bottomTeam } = matchupInfo;
     const [selectedTeam, setSelectedTeam] = useState<'top' | 'bottom' | null>(null);
+    const [currentMatchupInfo, setCurrentMatchupInfo] = useState<MarchMadnessMatchupInfo | null>(null);
 
     useEffect(() => {
         // If a user changes an earlier pick, we want to make sure that we de-select our current selection
         // If it has been cleared (so that TBD is no longer bolded)
-        if (matchupInfo.topTeam.name === null && selectedTeam === 'top') {
-            setSelectedTeam(null);
-        } else if (matchupInfo.bottomTeam.name === null && selectedTeam === 'bottom') {
+        if (!_.isEqual(currentMatchupInfo, matchupInfo)) {
+            // If the new matchup info is different then update our saved state of that and reset selection
+            setCurrentMatchupInfo(matchupInfo);
             setSelectedTeam(null);
         }
     }, [matchupInfo]);
@@ -29,8 +31,8 @@ function MatchupCard(props: MatchupCardProps) {
     }
 
     return (
-        <div className='box march-madness'>
-            <div className='field is-clickable' onClick={() => chooseTeam('top')}>
+        <div className='box march-madness p-3 mb-3'>
+            <div className='field is-clickable mb-0' onClick={() => chooseTeam('top')}>
                 <div className='columns'>
                     <div className='column is-1'>
                         <span className='has-text-weight-bold is-size-7'>{topTeam.seed}</span>
@@ -44,7 +46,7 @@ function MatchupCard(props: MatchupCardProps) {
                     </div>
                 </div>
             </div>
-            <div className='field is-clickable' onClick={() => chooseTeam('bottom')}>
+            <div className='field is-clickable mb-0' onClick={() => chooseTeam('bottom')}>
                 <div className='columns'>
                     <div className='column is-1'>
                         <span className='has-text-weight-bold is-size-7'>{bottomTeam.seed}</span>
@@ -58,18 +60,19 @@ function MatchupCard(props: MatchupCardProps) {
                     </div>
                 </div>
             </div>
-            {/* <div style={{
-                position: 'relative',
+            <div style={{
+                content: '',
+                position: 'absolute',
                 borderColor: 'black',
                 borderWidth: '2px',
                 display: 'block',
-                width: '10px',
-                right: '-11px',
+                width: '0.75rem',
+                height: '50%',
                 borderRightStyle: 'solid',
                 borderTopStyle: 'solid',
-                height: '100%',
                 top: '50%',
-                }} /> */}
+                right: '-10px',
+                }} />
         </div>
     )
 }

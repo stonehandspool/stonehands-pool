@@ -96,7 +96,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                 </div>
             </div>
             <div className='columns px-6'>
-                <div className='column'>
+                <div className='column' style={{ borderRight: '1px dashed #d6d6d6' }}>
                     {
                         Array.from(Array(32).keys()).map((index) => {
                             return (
@@ -105,7 +105,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                         })
                     }
                 </div>
-                <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
+                <div className='column is-flex is-flex-direction-column is-justify-content-space-around' style={{ borderRight: '1px dashed #d6d6d6' }}>
                     {
                         Array.from(Array(16).keys()).map((index) => {
                             return (
@@ -114,7 +114,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                         })
                     }
                 </div>
-                <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
+                <div className='column is-flex is-flex-direction-column is-justify-content-space-around' style={{ borderRight: '1px dashed #d6d6d6' }}>
                     {
                         Array.from(Array(8).keys()).map((index) => {
                             return (
@@ -123,7 +123,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                         })
                     }
                 </div>
-                <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
+                <div className='column is-flex is-flex-direction-column is-justify-content-space-around' style={{ borderRight: '1px dashed #d6d6d6' }}>
                     {
                         Array.from(Array(4).keys()).map((index) => {
                             return (
@@ -132,7 +132,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                         })
                     }
                 </div>
-                <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
+                <div className='column is-flex is-flex-direction-column is-justify-content-space-around' style={{ borderRight: '1px dashed #d6d6d6' }}>
                     {
                         Array.from(Array(2).keys()).map((index) => {
                             return (
