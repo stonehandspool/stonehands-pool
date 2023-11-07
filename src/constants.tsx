@@ -18,7 +18,7 @@ export const CURRENT_WEEK_CUTOFF_TIME = new Date('2023-11-05T18:00:00.000Z');
 export const CURRENT_WEEK_FINAL_GAME = 'LAC @ NYJ';
 // This should be updated every Tuesday morning with the total score of the game above
 // This is used to determine the tiebreaker for the weekly standings
-export const MONDAY_NIGHT_TOTAL = 0;
+export const MONDAY_NIGHT_TOTAL = 33;
 // This is to mark the different states that a week can be in
 // START: This means that this is a new week and no games have been played yet
 //          - Wednesday & Thursday
@@ -39,7 +39,7 @@ export const MONDAY_NIGHT_TOTAL = 0;
 //              - The weekly standings should signify the current weeks winner
 //          - The picksheet should still be unavailable
 type WeekStatus = 'START' | 'IN_PROGRESS' | 'COMPLETE';
-export const CURRENT_WEEK_STATUS: WeekStatus = 'IN_PROGRESS';
+export const CURRENT_WEEK_STATUS: WeekStatus = 'COMPLETE';
 // These are the team codes used throughout the codebase and should only be changed if a new team joins the league or a team relocates
 export const TEAM_CODES = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAC', 'KC', 'LAC', 'LA', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'];
 
