@@ -1,7 +1,7 @@
 import * as playerInfo from '../../../data/2023/players.json';
 import * as seasonInfo from '../../../data/2023/season.json'
 
-import { CURRENT_WEEK } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_STATUS } from '../../constants';
 
 type TableColumns = {
     position: number;
@@ -63,9 +63,11 @@ function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
     for (let i = 0; i < calculatedPicks.length; i++) {
         calculatedPicks[i].position = i + 1;
         if (i === 0 && week < CURRENT_WEEK) {
-            calculatedPicks[i].result = 'Winner'
+            calculatedPicks[i].result = 'Winner';
+        } else if (i === 0 && week === CURRENT_WEEK && CURRENT_WEEK_STATUS === 'COMPLETE') {
+            calculatedPicks[i].result = 'Winner';
         } else {
-            calculatedPicks[i].result = '**'
+            calculatedPicks[i].result = '**';
         }
     }
     
