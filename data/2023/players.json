@@ -21,7 +21,7 @@
         11,
         8
       ],
-      "losses": 83,
+      "losses": 84,
       "lossesByWeek": [
         8,
         5,
@@ -35,7 +35,7 @@
         8,
         4,
         5,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -53,7 +53,7 @@
         0,
         0
       ],
-      "percent": 0.5677083333333334,
+      "percent": 0.5647668393782384,
       "points": 967,
       "pointsByWeek": [
         79,
@@ -105,7 +105,7 @@
       ],
       "change": "+2",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 58,
       "currentWeekTiebreaker": 34,
@@ -203,7 +203,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -228,7 +228,7 @@
         11,
         9
       ],
-      "losses": 72,
+      "losses": 73,
       "lossesByWeek": [
         7,
         7,
@@ -242,7 +242,7 @@
         7,
         4,
         5,
-        3
+        4
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -260,7 +260,7 @@
         0,
         0
       ],
-      "percent": 0.625,
+      "percent": 0.6217616580310881,
       "points": 1039,
       "pointsByWeek": [
         78,
@@ -312,7 +312,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 9,
-      "currentWeekLosses": 3,
+      "currentWeekLosses": 4,
       "currentWeekTies": 0,
       "currentWeekPoints": 61,
       "currentWeekTiebreaker": 40,
@@ -373,10 +373,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 204,
+      "marginTotal": 201,
       "highFiveValues": [
         3,
         8,
@@ -412,7 +412,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -437,7 +437,7 @@
         12,
         10
       ],
-      "losses": 71,
+      "losses": 72,
       "lossesByWeek": [
         8,
         8,
@@ -451,7 +451,7 @@
         5,
         4,
         4,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -469,7 +469,7 @@
         0,
         0
       ],
-      "percent": 0.6302083333333334,
+      "percent": 0.6269430051813472,
       "points": 971,
       "pointsByWeek": [
         60,
@@ -521,7 +521,7 @@
       ],
       "change": "+6",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 62,
       "currentWeekTiebreaker": 32,
@@ -613,7 +613,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -630,7 +630,7 @@
       "username": "aburd55",
       "firstName": "Andrew",
       "lastName": "Burdack",
-      "wins": 113,
+      "wins": 114,
       "winsByWeek": [
         10,
         10,
@@ -644,7 +644,7 @@
         6,
         10,
         10,
-        7
+        8
       ],
       "losses": 79,
       "lossesByWeek": [
@@ -678,8 +678,8 @@
         0,
         0
       ],
-      "percent": 0.5885416666666666,
-      "points": 940,
+      "percent": 0.5906735751295337,
+      "points": 942,
       "pointsByWeek": [
         74,
         74,
@@ -693,7 +693,7 @@
         48,
         77,
         96,
-        61
+        63
       ],
       "tbAvg": 39,
       "tiebreakerByWeek": [
@@ -729,10 +729,10 @@
         65
       ],
       "change": "+3",
-      "currentWeekWins": 7,
+      "currentWeekWins": 8,
       "currentWeekLosses": 5,
       "currentWeekTies": 0,
-      "currentWeekPoints": 61,
+      "currentWeekPoints": 63,
       "currentWeekTiebreaker": 32,
       "survivorPicks": [
         "LV",
@@ -857,7 +857,7 @@
         9,
         7
       ],
-      "losses": 90,
+      "losses": 91,
       "lossesByWeek": [
         9,
         8,
@@ -871,7 +871,7 @@
         10,
         5,
         7,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -889,7 +889,7 @@
         0,
         0
       ],
-      "percent": 0.53125,
+      "percent": 0.5284974093264249,
       "points": 890,
       "pointsByWeek": [
         66,
@@ -941,7 +941,7 @@
       ],
       "change": "--",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 51,
       "currentWeekTiebreaker": 45,
@@ -1049,7 +1049,7 @@
       "username": "gfandl",
       "firstName": "Glen",
       "lastName": "Fandl",
-      "wins": 114,
+      "wins": 115,
       "winsByWeek": [
         9,
         10,
@@ -1063,7 +1063,7 @@
         9,
         9,
         11,
-        8
+        9
       ],
       "losses": 78,
       "lossesByWeek": [
@@ -1097,8 +1097,8 @@
         0,
         0
       ],
-      "percent": 0.59375,
-      "points": 997,
+      "percent": 0.5958549222797928,
+      "points": 1000,
       "pointsByWeek": [
         72,
         99,
@@ -1112,7 +1112,7 @@
         71,
         72,
         104,
-        62
+        65
       ],
       "tbAvg": 44.30769230769231,
       "tiebreakerByWeek": [
@@ -1131,7 +1131,7 @@
         45
       ],
       "lastWeekRank": 44,
-      "currentWeekRank": 41,
+      "currentWeekRank": 39,
       "rankByWeek": [
         46,
         38,
@@ -1145,13 +1145,13 @@
         46,
         46,
         44,
-        41
+        39
       ],
-      "change": "+3",
-      "currentWeekWins": 8,
+      "change": "+5",
+      "currentWeekWins": 9,
       "currentWeekLosses": 4,
       "currentWeekTies": 0,
-      "currentWeekPoints": 62,
+      "currentWeekPoints": 65,
       "currentWeekTiebreaker": 45,
       "survivorPicks": [
         "SEA"
@@ -1272,7 +1272,7 @@
         11,
         11
       ],
-      "losses": 78,
+      "losses": 79,
       "lossesByWeek": [
         8,
         7,
@@ -1286,7 +1286,7 @@
         6,
         6,
         5,
-        1
+        2
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -1304,7 +1304,7 @@
         0,
         0
       ],
-      "percent": 0.59375,
+      "percent": 0.5906735751295337,
       "points": 1008,
       "pointsByWeek": [
         79,
@@ -1356,7 +1356,7 @@
       ],
       "change": "+10",
       "currentWeekWins": 11,
-      "currentWeekLosses": 1,
+      "currentWeekLosses": 2,
       "currentWeekTies": 0,
       "currentWeekPoints": 73,
       "currentWeekTiebreaker": 37,
@@ -1446,7 +1446,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "ATL",
@@ -1479,7 +1479,7 @@
         13,
         10
       ],
-      "losses": 73,
+      "losses": 74,
       "lossesByWeek": [
         8,
         5,
@@ -1493,7 +1493,7 @@
         7,
         5,
         3,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -1511,7 +1511,7 @@
         0,
         0
       ],
-      "percent": 0.6197916666666666,
+      "percent": 0.616580310880829,
       "points": 1032,
       "pointsByWeek": [
         78,
@@ -1563,7 +1563,7 @@
       ],
       "change": "+8",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 70,
       "currentWeekTiebreaker": 42,
@@ -1658,7 +1658,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "DET",
@@ -1687,7 +1687,7 @@
         13,
         10
       ],
-      "losses": 65,
+      "losses": 66,
       "lossesByWeek": [
         8,
         6,
@@ -1701,7 +1701,7 @@
         5,
         4,
         3,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -1719,7 +1719,7 @@
         0,
         0
       ],
-      "percent": 0.6614583333333334,
+      "percent": 0.6580310880829016,
       "points": 1055,
       "pointsByWeek": [
         69,
@@ -1771,7 +1771,7 @@
       ],
       "change": "--",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 63,
       "currentWeekTiebreaker": 32,
@@ -1836,10 +1836,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 170,
+      "marginTotal": 167,
       "highFiveValues": [
         3,
         5,
@@ -1863,7 +1863,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "MIA",
@@ -1900,7 +1900,7 @@
         10,
         7
       ],
-      "losses": 80,
+      "losses": 81,
       "lossesByWeek": [
         9,
         8,
@@ -1914,7 +1914,7 @@
         5,
         5,
         6,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -1932,7 +1932,7 @@
         0,
         0
       ],
-      "percent": 0.5833333333333334,
+      "percent": 0.5803108808290155,
       "points": 971,
       "pointsByWeek": [
         61,
@@ -1984,7 +1984,7 @@
       ],
       "change": "+2",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 56,
       "currentWeekTiebreaker": 24,
@@ -2082,7 +2082,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -2107,7 +2107,7 @@
         12,
         10
       ],
-      "losses": 71,
+      "losses": 72,
       "lossesByWeek": [
         9,
         7,
@@ -2121,7 +2121,7 @@
         5,
         6,
         4,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -2139,7 +2139,7 @@
         0,
         0
       ],
-      "percent": 0.6302083333333334,
+      "percent": 0.6269430051813472,
       "points": 1030,
       "pointsByWeek": [
         75,
@@ -2191,7 +2191,7 @@
       ],
       "change": "+2",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 62,
       "currentWeekTiebreaker": 35,
@@ -2287,7 +2287,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -2316,7 +2316,7 @@
         9,
         6
       ],
-      "losses": 81,
+      "losses": 82,
       "lossesByWeek": [
         6,
         8,
@@ -2330,7 +2330,7 @@
         7,
         6,
         7,
-        6
+        7
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -2348,7 +2348,7 @@
         0,
         0
       ],
-      "percent": 0.578125,
+      "percent": 0.5751295336787565,
       "points": 973,
       "pointsByWeek": [
         86,
@@ -2400,7 +2400,7 @@
       ],
       "change": "-3",
       "currentWeekWins": 6,
-      "currentWeekLosses": 6,
+      "currentWeekLosses": 7,
       "currentWeekTies": 0,
       "currentWeekPoints": 48,
       "currentWeekTiebreaker": 44,
@@ -2492,7 +2492,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "PIT",
@@ -2525,7 +2525,7 @@
         8,
         8
       ],
-      "losses": 85,
+      "losses": 86,
       "lossesByWeek": [
         8,
         6,
@@ -2539,7 +2539,7 @@
         7,
         6,
         8,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -2557,7 +2557,7 @@
         0,
         0
       ],
-      "percent": 0.5572916666666666,
+      "percent": 0.5544041450777202,
       "points": 862,
       "pointsByWeek": [
         83,
@@ -2609,7 +2609,7 @@
       ],
       "change": "--",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 52,
       "currentWeekTiebreaker": 45,
@@ -2669,10 +2669,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 93,
+      "marginTotal": 90,
       "highFiveValues": [
         3,
         5,
@@ -2708,7 +2708,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -2733,7 +2733,7 @@
         11,
         7
       ],
-      "losses": 76,
+      "losses": 77,
       "lossesByWeek": [
         7,
         5,
@@ -2747,7 +2747,7 @@
         5,
         5,
         5,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -2765,7 +2765,7 @@
         0,
         0
       ],
-      "percent": 0.6041666666666666,
+      "percent": 0.6010362694300518,
       "points": 947,
       "pointsByWeek": [
         66,
@@ -2817,7 +2817,7 @@
       ],
       "change": "--",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 50,
       "currentWeekTiebreaker": 48,
@@ -2911,7 +2911,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "MIA",
@@ -2940,7 +2940,7 @@
         13,
         8
       ],
-      "losses": 71,
+      "losses": 72,
       "lossesByWeek": [
         8,
         6,
@@ -2954,7 +2954,7 @@
         7,
         3,
         3,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -2972,7 +2972,7 @@
         0,
         0
       ],
-      "percent": 0.6302083333333334,
+      "percent": 0.6269430051813472,
       "points": 1025,
       "pointsByWeek": [
         73,
@@ -3024,7 +3024,7 @@
       ],
       "change": "-4",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 53,
       "currentWeekTiebreaker": 41,
@@ -3110,7 +3110,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "PIT",
@@ -3147,7 +3147,7 @@
         14,
         6
       ],
-      "losses": 61,
+      "losses": 62,
       "lossesByWeek": [
         7,
         5,
@@ -3161,7 +3161,7 @@
         5,
         1,
         2,
-        6
+        7
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -3179,7 +3179,7 @@
         0,
         0
       ],
-      "percent": 0.6822916666666666,
+      "percent": 0.6787564766839378,
       "points": 1067,
       "pointsByWeek": [
         61,
@@ -3231,7 +3231,7 @@
       ],
       "change": "-2",
       "currentWeekWins": 6,
-      "currentWeekLosses": 6,
+      "currentWeekLosses": 7,
       "currentWeekTies": 0,
       "currentWeekPoints": 51,
       "currentWeekTiebreaker": 38,
@@ -3296,10 +3296,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 79,
+      "marginTotal": 76,
       "highFiveValues": [
         2,
         3,
@@ -3327,7 +3327,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -3360,7 +3360,7 @@
         11,
         9
       ],
-      "losses": 71,
+      "losses": 72,
       "lossesByWeek": [
         8,
         4,
@@ -3374,7 +3374,7 @@
         5,
         4,
         5,
-        3
+        4
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -3392,7 +3392,7 @@
         0,
         0
       ],
-      "percent": 0.6302083333333334,
+      "percent": 0.6269430051813472,
       "points": 1003,
       "pointsByWeek": [
         67,
@@ -3444,7 +3444,7 @@
       ],
       "change": "--",
       "currentWeekWins": 9,
-      "currentWeekLosses": 3,
+      "currentWeekLosses": 4,
       "currentWeekTies": 0,
       "currentWeekPoints": 63,
       "currentWeekTiebreaker": 55,
@@ -3569,7 +3569,7 @@
         10,
         6
       ],
-      "losses": 84,
+      "losses": 85,
       "lossesByWeek": [
         8,
         7,
@@ -3583,7 +3583,7 @@
         8,
         6,
         6,
-        6
+        7
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -3601,7 +3601,7 @@
         0,
         0
       ],
-      "percent": 0.5625,
+      "percent": 0.5595854922279793,
       "points": 992,
       "pointsByWeek": [
         67,
@@ -3653,7 +3653,7 @@
       ],
       "change": "-6",
       "currentWeekWins": 6,
-      "currentWeekLosses": 6,
+      "currentWeekLosses": 7,
       "currentWeekTies": 0,
       "currentWeekPoints": 50,
       "currentWeekTiebreaker": 37,
@@ -3752,7 +3752,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "PIT",
@@ -3785,7 +3785,7 @@
         11,
         9
       ],
-      "losses": 72,
+      "losses": 73,
       "lossesByWeek": [
         5,
         8,
@@ -3799,7 +3799,7 @@
         8,
         6,
         5,
-        3
+        4
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -3817,7 +3817,7 @@
         0,
         0
       ],
-      "percent": 0.625,
+      "percent": 0.6217616580310881,
       "points": 990,
       "pointsByWeek": [
         93,
@@ -3869,7 +3869,7 @@
       ],
       "change": "+6",
       "currentWeekWins": 9,
-      "currentWeekLosses": 3,
+      "currentWeekLosses": 4,
       "currentWeekTies": 0,
       "currentWeekPoints": 69,
       "currentWeekTiebreaker": 41,
@@ -3969,7 +3969,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -3994,7 +3994,7 @@
         13,
         9
       ],
-      "losses": 73,
+      "losses": 74,
       "lossesByWeek": [
         7,
         5,
@@ -4008,7 +4008,7 @@
         11,
         5,
         3,
-        3
+        4
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -4026,7 +4026,7 @@
         0,
         0
       ],
-      "percent": 0.6197916666666666,
+      "percent": 0.616580310880829,
       "points": 1046,
       "pointsByWeek": [
         76,
@@ -4078,7 +4078,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 9,
-      "currentWeekLosses": 3,
+      "currentWeekLosses": 4,
       "currentWeekTies": 0,
       "currentWeekPoints": 64,
       "currentWeekTiebreaker": 33,
@@ -4148,10 +4148,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 101,
+      "marginTotal": 98,
       "highFiveValues": [
         3,
         8,
@@ -4183,7 +4183,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "ATL",
@@ -4212,7 +4212,7 @@
         11,
         8
       ],
-      "losses": 81,
+      "losses": 82,
       "lossesByWeek": [
         9,
         5,
@@ -4226,7 +4226,7 @@
         5,
         5,
         5,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -4244,7 +4244,7 @@
         0,
         0
       ],
-      "percent": 0.578125,
+      "percent": 0.5751295336787565,
       "points": 907,
       "pointsByWeek": [
         70,
@@ -4296,7 +4296,7 @@
       ],
       "change": "--",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 52,
       "currentWeekTiebreaker": 34,
@@ -4386,7 +4386,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "DAL",
@@ -4419,7 +4419,7 @@
         10,
         9
       ],
-      "losses": 78,
+      "losses": 79,
       "lossesByWeek": [
         6,
         7,
@@ -4433,7 +4433,7 @@
         6,
         6,
         6,
-        3
+        4
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -4451,7 +4451,7 @@
         0,
         0
       ],
-      "percent": 0.59375,
+      "percent": 0.5906735751295337,
       "points": 971,
       "pointsByWeek": [
         84,
@@ -4503,7 +4503,7 @@
       ],
       "change": "--",
       "currentWeekWins": 9,
-      "currentWeekLosses": 3,
+      "currentWeekLosses": 4,
       "currentWeekTies": 0,
       "currentWeekPoints": 52,
       "currentWeekTiebreaker": 34,
@@ -4587,7 +4587,7 @@
       "highFiveThisWeek": [
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -4628,7 +4628,7 @@
         13,
         8
       ],
-      "losses": 75,
+      "losses": 76,
       "lossesByWeek": [
         8,
         3,
@@ -4642,7 +4642,7 @@
         6,
         5,
         3,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -4660,7 +4660,7 @@
         0,
         0
       ],
-      "percent": 0.609375,
+      "percent": 0.6062176165803109,
       "points": 1010,
       "pointsByWeek": [
         63,
@@ -4712,7 +4712,7 @@
       ],
       "change": "-3",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 56,
       "currentWeekTiebreaker": 47,
@@ -4810,7 +4810,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -4835,7 +4835,7 @@
         9,
         10
       ],
-      "losses": 81,
+      "losses": 82,
       "lossesByWeek": [
         6,
         9,
@@ -4849,7 +4849,7 @@
         3,
         5,
         7,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -4867,7 +4867,7 @@
         0,
         0
       ],
-      "percent": 0.578125,
+      "percent": 0.5751295336787565,
       "points": 1014,
       "pointsByWeek": [
         90,
@@ -4919,7 +4919,7 @@
       ],
       "change": "+3",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 66,
       "currentWeekTiebreaker": 49,
@@ -4988,10 +4988,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 84,
+      "marginTotal": 81,
       "highFiveValues": [
         5,
         3,
@@ -5019,7 +5019,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "DET",
@@ -5052,7 +5052,7 @@
         9,
         8
       ],
-      "losses": 70,
+      "losses": 71,
       "lossesByWeek": [
         7,
         4,
@@ -5066,7 +5066,7 @@
         7,
         3,
         7,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -5084,7 +5084,7 @@
         0,
         0
       ],
-      "percent": 0.6354166666666666,
+      "percent": 0.6321243523316062,
       "points": 1006,
       "pointsByWeek": [
         72,
@@ -5136,7 +5136,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 59,
       "currentWeekTiebreaker": 23,
@@ -5261,7 +5261,7 @@
         10,
         6
       ],
-      "losses": 88,
+      "losses": 89,
       "lossesByWeek": [
         5,
         6,
@@ -5275,7 +5275,7 @@
         9,
         8,
         6,
-        6
+        7
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -5293,7 +5293,7 @@
         0,
         0
       ],
-      "percent": 0.5416666666666666,
+      "percent": 0.538860103626943,
       "points": 916,
       "pointsByWeek": [
         87,
@@ -5345,7 +5345,7 @@
       ],
       "change": "--",
       "currentWeekWins": 6,
-      "currentWeekLosses": 6,
+      "currentWeekLosses": 7,
       "currentWeekTies": 0,
       "currentWeekPoints": 40,
       "currentWeekTiebreaker": 0,
@@ -5448,7 +5448,7 @@
         11,
         8
       ],
-      "losses": 75,
+      "losses": 76,
       "lossesByWeek": [
         7,
         5,
@@ -5462,7 +5462,7 @@
         7,
         3,
         5,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -5480,7 +5480,7 @@
         0,
         0
       ],
-      "percent": 0.609375,
+      "percent": 0.6062176165803109,
       "points": 1010,
       "pointsByWeek": [
         86,
@@ -5532,7 +5532,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 62,
       "currentWeekTiebreaker": 31,
@@ -5593,10 +5593,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 81,
+      "marginTotal": 78,
       "highFiveValues": [
         5,
         8,
@@ -5657,7 +5657,7 @@
         12,
         6
       ],
-      "losses": 83,
+      "losses": 84,
       "lossesByWeek": [
         9,
         6,
@@ -5671,7 +5671,7 @@
         6,
         5,
         4,
-        6
+        7
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -5689,7 +5689,7 @@
         0,
         0
       ],
-      "percent": 0.5677083333333334,
+      "percent": 0.5647668393782384,
       "points": 953,
       "pointsByWeek": [
         75,
@@ -5741,7 +5741,7 @@
       ],
       "change": "-4",
       "currentWeekWins": 6,
-      "currentWeekLosses": 6,
+      "currentWeekLosses": 7,
       "currentWeekTies": 0,
       "currentWeekPoints": 40,
       "currentWeekTiebreaker": 45,
@@ -5870,7 +5870,7 @@
         8,
         6
       ],
-      "losses": 80,
+      "losses": 81,
       "lossesByWeek": [
         9,
         5,
@@ -5884,7 +5884,7 @@
         7,
         4,
         8,
-        6
+        7
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -5902,7 +5902,7 @@
         0,
         0
       ],
-      "percent": 0.5833333333333334,
+      "percent": 0.5803108808290155,
       "points": 987,
       "pointsByWeek": [
         67,
@@ -5954,7 +5954,7 @@
       ],
       "change": "-4",
       "currentWeekWins": 6,
-      "currentWeekLosses": 6,
+      "currentWeekLosses": 7,
       "currentWeekTies": 0,
       "currentWeekPoints": 49,
       "currentWeekTiebreaker": 38,
@@ -6013,10 +6013,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 110,
+      "marginTotal": 107,
       "highFiveValues": [
         3,
         5,
@@ -6044,7 +6044,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "DAL",
@@ -6077,7 +6077,7 @@
         13,
         9
       ],
-      "losses": 64,
+      "losses": 65,
       "lossesByWeek": [
         8,
         6,
@@ -6091,7 +6091,7 @@
         7,
         4,
         3,
-        3
+        4
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -6109,7 +6109,7 @@
         0,
         0
       ],
-      "percent": 0.6666666666666666,
+      "percent": 0.6632124352331606,
       "points": 1078,
       "pointsByWeek": [
         74,
@@ -6161,7 +6161,7 @@
       ],
       "change": "--",
       "currentWeekWins": 9,
-      "currentWeekLosses": 3,
+      "currentWeekLosses": 4,
       "currentWeekTies": 0,
       "currentWeekPoints": 57,
       "currentWeekTiebreaker": 38,
@@ -6264,7 +6264,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "PIT",
@@ -6293,7 +6293,7 @@
         10,
         7
       ],
-      "losses": 75,
+      "losses": 76,
       "lossesByWeek": [
         8,
         6,
@@ -6307,7 +6307,7 @@
         7,
         5,
         6,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -6325,7 +6325,7 @@
         0,
         0
       ],
-      "percent": 0.609375,
+      "percent": 0.6062176165803109,
       "points": 1032,
       "pointsByWeek": [
         75,
@@ -6377,7 +6377,7 @@
       ],
       "change": "-2",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 55,
       "currentWeekTiebreaker": 32,
@@ -6472,7 +6472,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "LAC",
@@ -6501,7 +6501,7 @@
         10,
         8
       ],
-      "losses": 63,
+      "losses": 64,
       "lossesByWeek": [
         5,
         7,
@@ -6515,7 +6515,7 @@
         5,
         4,
         6,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -6533,7 +6533,7 @@
         0,
         0
       ],
-      "percent": 0.671875,
+      "percent": 0.6683937823834197,
       "points": 1084,
       "pointsByWeek": [
         88,
@@ -6585,7 +6585,7 @@
       ],
       "change": "--",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 54,
       "currentWeekTiebreaker": 39,
@@ -6646,10 +6646,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 153,
+      "marginTotal": 150,
       "highFiveValues": [
         5,
         8,
@@ -6673,7 +6673,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "MIA",
@@ -6710,7 +6710,7 @@
         9,
         8
       ],
-      "losses": 73,
+      "losses": 74,
       "lossesByWeek": [
         6,
         6,
@@ -6724,7 +6724,7 @@
         7,
         6,
         7,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -6742,7 +6742,7 @@
         0,
         0
       ],
-      "percent": 0.6197916666666666,
+      "percent": 0.616580310880829,
       "points": 1021,
       "pointsByWeek": [
         86,
@@ -6794,7 +6794,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 59,
       "currentWeekTiebreaker": 34,
@@ -6889,7 +6889,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "DAL",
@@ -6926,7 +6926,7 @@
         12,
         8
       ],
-      "losses": 74,
+      "losses": 75,
       "lossesByWeek": [
         9,
         6,
@@ -6940,7 +6940,7 @@
         7,
         5,
         4,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -6958,7 +6958,7 @@
         0,
         0
       ],
-      "percent": 0.6145833333333334,
+      "percent": 0.6113989637305699,
       "points": 967,
       "pointsByWeek": [
         64,
@@ -7010,7 +7010,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 52,
       "currentWeekTiebreaker": 47,
@@ -7110,7 +7110,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -7135,7 +7135,7 @@
         12,
         5
       ],
-      "losses": 83,
+      "losses": 84,
       "lossesByWeek": [
         8,
         6,
@@ -7149,7 +7149,7 @@
         5,
         3,
         4,
-        7
+        8
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -7167,7 +7167,7 @@
         0,
         0
       ],
-      "percent": 0.5677083333333334,
+      "percent": 0.5647668393782384,
       "points": 931,
       "pointsByWeek": [
         70,
@@ -7219,7 +7219,7 @@
       ],
       "change": "-3",
       "currentWeekWins": 5,
-      "currentWeekLosses": 7,
+      "currentWeekLosses": 8,
       "currentWeekTies": 0,
       "currentWeekPoints": 42,
       "currentWeekTiebreaker": 32,
@@ -7344,7 +7344,7 @@
         8,
         8
       ],
-      "losses": 87,
+      "losses": 88,
       "lossesByWeek": [
         6,
         7,
@@ -7358,7 +7358,7 @@
         9,
         8,
         8,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -7376,7 +7376,7 @@
         0,
         0
       ],
-      "percent": 0.546875,
+      "percent": 0.5440414507772021,
       "points": 883,
       "pointsByWeek": [
         91,
@@ -7428,7 +7428,7 @@
       ],
       "change": "--",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 50,
       "currentWeekTiebreaker": 41,
@@ -7528,7 +7528,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "MIA",
@@ -7557,7 +7557,7 @@
         10,
         8
       ],
-      "losses": 72,
+      "losses": 73,
       "lossesByWeek": [
         6,
         5,
@@ -7571,7 +7571,7 @@
         6,
         6,
         6,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -7589,7 +7589,7 @@
         0,
         0
       ],
-      "percent": 0.625,
+      "percent": 0.6217616580310881,
       "points": 1028,
       "pointsByWeek": [
         89,
@@ -7641,7 +7641,7 @@
       ],
       "change": "+2",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 62,
       "currentWeekTiebreaker": 41,
@@ -7769,7 +7769,7 @@
         12,
         8
       ],
-      "losses": 77,
+      "losses": 78,
       "lossesByWeek": [
         7,
         6,
@@ -7783,7 +7783,7 @@
         7,
         4,
         4,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -7801,7 +7801,7 @@
         0,
         0
       ],
-      "percent": 0.5989583333333334,
+      "percent": 0.5958549222797928,
       "points": 938,
       "pointsByWeek": [
         74,
@@ -7853,7 +7853,7 @@
       ],
       "change": "+1",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 57,
       "currentWeekTiebreaker": 28,
@@ -7945,7 +7945,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "PHI",
@@ -7978,7 +7978,7 @@
         13,
         8
       ],
-      "losses": 63,
+      "losses": 64,
       "lossesByWeek": [
         7,
         5,
@@ -7992,7 +7992,7 @@
         4,
         6,
         3,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -8010,7 +8010,7 @@
         0,
         0
       ],
-      "percent": 0.671875,
+      "percent": 0.6683937823834197,
       "points": 1057,
       "pointsByWeek": [
         75,
@@ -8062,7 +8062,7 @@
       ],
       "change": "-3",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 52,
       "currentWeekTiebreaker": 31,
@@ -8156,7 +8156,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "LAC",
@@ -8185,7 +8185,7 @@
         11,
         7
       ],
-      "losses": 79,
+      "losses": 80,
       "lossesByWeek": [
         7,
         5,
@@ -8199,7 +8199,7 @@
         7,
         5,
         5,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -8217,7 +8217,7 @@
         0,
         0
       ],
-      "percent": 0.5885416666666666,
+      "percent": 0.5854922279792746,
       "points": 979,
       "pointsByWeek": [
         86,
@@ -8269,7 +8269,7 @@
       ],
       "change": "+1",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 57,
       "currentWeekTiebreaker": 46,
@@ -8397,7 +8397,7 @@
         8,
         7
       ],
-      "losses": 86,
+      "losses": 87,
       "lossesByWeek": [
         5,
         7,
@@ -8411,7 +8411,7 @@
         9,
         2,
         8,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -8429,7 +8429,7 @@
         0,
         0
       ],
-      "percent": 0.5520833333333334,
+      "percent": 0.5492227979274611,
       "points": 896,
       "pointsByWeek": [
         83,
@@ -8481,7 +8481,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 45,
       "currentWeekTiebreaker": 39,
@@ -8542,10 +8542,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 76,
+      "marginTotal": 73,
       "highFiveValues": [
         2,
         5,
@@ -8573,7 +8573,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "SF",
@@ -8606,7 +8606,7 @@
         13,
         7
       ],
-      "losses": 81,
+      "losses": 82,
       "lossesByWeek": [
         9,
         6,
@@ -8620,7 +8620,7 @@
         6,
         6,
         3,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -8638,7 +8638,7 @@
         0,
         0
       ],
-      "percent": 0.578125,
+      "percent": 0.5751295336787565,
       "points": 931,
       "pointsByWeek": [
         55,
@@ -8690,7 +8690,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 49,
       "currentWeekTiebreaker": 420,
@@ -8749,10 +8749,10 @@
         },
         {
           "team": "CIN",
-          "margin": null
+          "margin": 3
         }
       ],
-      "marginTotal": -135,
+      "marginTotal": -132,
       "highFiveValues": [
         3,
         5,
@@ -8766,9 +8766,9 @@
         3,
         3,
         1,
-        1
+        2
       ],
-      "highFiveTotal": 37,
+      "highFiveTotal": 38,
       "highFiveThisWeek": [
         {
           "team": "ARI",
@@ -8780,7 +8780,7 @@
         },
         {
           "team": "CIN",
-          "won": null
+          "won": true
         },
         {
           "team": "NYJ",
@@ -8813,7 +8813,7 @@
         9,
         5
       ],
-      "losses": 81,
+      "losses": 82,
       "lossesByWeek": [
         7,
         5,
@@ -8827,7 +8827,7 @@
         7,
         4,
         7,
-        7
+        8
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -8845,7 +8845,7 @@
         0,
         0
       ],
-      "percent": 0.578125,
+      "percent": 0.5751295336787565,
       "points": 950,
       "pointsByWeek": [
         76,
@@ -8897,7 +8897,7 @@
       ],
       "change": "-8",
       "currentWeekWins": 5,
-      "currentWeekLosses": 7,
+      "currentWeekLosses": 8,
       "currentWeekTies": 0,
       "currentWeekPoints": 32,
       "currentWeekTiebreaker": 57,
@@ -8997,7 +8997,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -9026,7 +9026,7 @@
         8,
         9
       ],
-      "losses": 78,
+      "losses": 79,
       "lossesByWeek": [
         5,
         5,
@@ -9040,7 +9040,7 @@
         4,
         4,
         8,
-        3
+        4
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -9058,7 +9058,7 @@
         0,
         0
       ],
-      "percent": 0.59375,
+      "percent": 0.5906735751295337,
       "points": 908,
       "pointsByWeek": [
         82,
@@ -9110,7 +9110,7 @@
       ],
       "change": "+3",
       "currentWeekWins": 9,
-      "currentWeekLosses": 3,
+      "currentWeekLosses": 4,
       "currentWeekTies": 0,
       "currentWeekPoints": 63,
       "currentWeekTiebreaker": 52,
@@ -9238,7 +9238,7 @@
         11,
         8
       ],
-      "losses": 72,
+      "losses": 73,
       "lossesByWeek": [
         7,
         7,
@@ -9252,7 +9252,7 @@
         7,
         3,
         5,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -9270,7 +9270,7 @@
         0,
         0
       ],
-      "percent": 0.625,
+      "percent": 0.6217616580310881,
       "points": 997,
       "pointsByWeek": [
         72,
@@ -9304,7 +9304,7 @@
         42
       ],
       "lastWeekRank": 32,
-      "currentWeekRank": 39,
+      "currentWeekRank": 40,
       "rankByWeek": [
         48,
         52,
@@ -9318,11 +9318,11 @@
         37,
         29,
         32,
-        39
+        40
       ],
-      "change": "-7",
+      "change": "-8",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 48,
       "currentWeekTiebreaker": 42,
@@ -9388,10 +9388,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 76,
+      "marginTotal": 73,
       "highFiveValues": [
         5,
         8,
@@ -9427,7 +9427,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -9452,7 +9452,7 @@
         12,
         10
       ],
-      "losses": 72,
+      "losses": 73,
       "lossesByWeek": [
         6,
         6,
@@ -9466,7 +9466,7 @@
         6,
         5,
         4,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -9484,7 +9484,7 @@
         0,
         0
       ],
-      "percent": 0.625,
+      "percent": 0.6217616580310881,
       "points": 1014,
       "pointsByWeek": [
         84,
@@ -9536,7 +9536,7 @@
       ],
       "change": "+9",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 74,
       "currentWeekTiebreaker": 28,
@@ -9659,7 +9659,7 @@
         9,
         10
       ],
-      "losses": 63,
+      "losses": 64,
       "lossesByWeek": [
         8,
         6,
@@ -9673,7 +9673,7 @@
         8,
         2,
         7,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -9691,7 +9691,7 @@
         0,
         0
       ],
-      "percent": 0.671875,
+      "percent": 0.6683937823834197,
       "points": 1073,
       "pointsByWeek": [
         67,
@@ -9743,7 +9743,7 @@
       ],
       "change": "+1",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 60,
       "currentWeekTiebreaker": 45,
@@ -9804,10 +9804,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 21,
+      "marginTotal": 18,
       "highFiveValues": [
         3,
         3,
@@ -9868,7 +9868,7 @@
         9,
         7
       ],
-      "losses": 74,
+      "losses": 75,
       "lossesByWeek": [
         5,
         8,
@@ -9882,7 +9882,7 @@
         5,
         6,
         7,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -9900,7 +9900,7 @@
         0,
         0
       ],
-      "percent": 0.6145833333333334,
+      "percent": 0.6113989637305699,
       "points": 1061,
       "pointsByWeek": [
         102,
@@ -9952,7 +9952,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 54,
       "currentWeekTiebreaker": 45,
@@ -10013,10 +10013,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 96,
+      "marginTotal": 93,
       "highFiveValues": [
         5,
         3,
@@ -10048,7 +10048,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "TB",
@@ -10077,7 +10077,7 @@
         10,
         8
       ],
-      "losses": 77,
+      "losses": 78,
       "lossesByWeek": [
         7,
         6,
@@ -10091,7 +10091,7 @@
         7,
         5,
         6,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -10109,7 +10109,7 @@
         0,
         0
       ],
-      "percent": 0.5989583333333334,
+      "percent": 0.5958549222797928,
       "points": 986,
       "pointsByWeek": [
         91,
@@ -10161,7 +10161,7 @@
       ],
       "change": "+2",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 62,
       "currentWeekTiebreaker": 42,
@@ -10221,10 +10221,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 43,
+      "marginTotal": 40,
       "highFiveValues": [
         3,
         5,
@@ -10256,7 +10256,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "HOU",
@@ -10285,7 +10285,7 @@
         9,
         7
       ],
-      "losses": 74,
+      "losses": 75,
       "lossesByWeek": [
         7,
         6,
@@ -10299,7 +10299,7 @@
         5,
         5,
         7,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -10317,7 +10317,7 @@
         0,
         0
       ],
-      "percent": 0.6145833333333334,
+      "percent": 0.6113989637305699,
       "points": 960,
       "pointsByWeek": [
         66,
@@ -10369,7 +10369,7 @@
       ],
       "change": "+4",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 58,
       "currentWeekTiebreaker": 42,
@@ -10468,7 +10468,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -10493,7 +10493,7 @@
         12,
         8
       ],
-      "losses": 72,
+      "losses": 73,
       "lossesByWeek": [
         8,
         7,
@@ -10507,7 +10507,7 @@
         5,
         7,
         4,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -10525,7 +10525,7 @@
         0,
         0
       ],
-      "percent": 0.625,
+      "percent": 0.6217616580310881,
       "points": 994,
       "pointsByWeek": [
         70,
@@ -10577,7 +10577,7 @@
       ],
       "change": "+4",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 65,
       "currentWeekTiebreaker": 41,
@@ -10701,7 +10701,7 @@
         12,
         10
       ],
-      "losses": 71,
+      "losses": 72,
       "lossesByWeek": [
         7,
         6,
@@ -10715,7 +10715,7 @@
         8,
         4,
         4,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -10733,7 +10733,7 @@
         0,
         0
       ],
-      "percent": 0.6302083333333334,
+      "percent": 0.6269430051813472,
       "points": 1046,
       "pointsByWeek": [
         89,
@@ -10785,7 +10785,7 @@
       ],
       "change": "+7",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 75,
       "currentWeekTiebreaker": 41,
@@ -10849,10 +10849,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 72,
+      "marginTotal": 69,
       "highFiveValues": [
         5,
         5,
@@ -10913,7 +10913,7 @@
         11,
         6
       ],
-      "losses": 77,
+      "losses": 78,
       "lossesByWeek": [
         7,
         7,
@@ -10927,7 +10927,7 @@
         6,
         6,
         5,
-        6
+        7
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -10945,7 +10945,7 @@
         0,
         0
       ],
-      "percent": 0.5989583333333334,
+      "percent": 0.5958549222797928,
       "points": 903,
       "pointsByWeek": [
         55,
@@ -10997,7 +10997,7 @@
       ],
       "change": "-5",
       "currentWeekWins": 6,
-      "currentWeekLosses": 6,
+      "currentWeekLosses": 7,
       "currentWeekTies": 0,
       "currentWeekPoints": 27,
       "currentWeekTiebreaker": 34,
@@ -11120,7 +11120,7 @@
         11,
         9
       ],
-      "losses": 76,
+      "losses": 77,
       "lossesByWeek": [
         10,
         5,
@@ -11134,7 +11134,7 @@
         7,
         5,
         5,
-        3
+        4
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -11152,7 +11152,7 @@
         0,
         0
       ],
-      "percent": 0.6041666666666666,
+      "percent": 0.6010362694300518,
       "points": 1020,
       "pointsByWeek": [
         69,
@@ -11204,7 +11204,7 @@
       ],
       "change": "+2",
       "currentWeekWins": 9,
-      "currentWeekLosses": 3,
+      "currentWeekLosses": 4,
       "currentWeekTies": 0,
       "currentWeekPoints": 67,
       "currentWeekTiebreaker": 41,
@@ -11292,7 +11292,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "LAC",
@@ -11329,7 +11329,7 @@
         11,
         7
       ],
-      "losses": 83,
+      "losses": 84,
       "lossesByWeek": [
         7,
         11,
@@ -11343,7 +11343,7 @@
         7,
         6,
         5,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -11361,7 +11361,7 @@
         0,
         0
       ],
-      "percent": 0.5677083333333334,
+      "percent": 0.5647668393782384,
       "points": 921,
       "pointsByWeek": [
         67,
@@ -11413,7 +11413,7 @@
       ],
       "change": "+3",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 60,
       "currentWeekTiebreaker": 42,
@@ -11516,7 +11516,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -11541,7 +11541,7 @@
         12,
         7
       ],
-      "losses": 67,
+      "losses": 68,
       "lossesByWeek": [
         7,
         6,
@@ -11555,7 +11555,7 @@
         4,
         6,
         4,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -11573,7 +11573,7 @@
         0,
         0
       ],
-      "percent": 0.6510416666666666,
+      "percent": 0.6476683937823834,
       "points": 1021,
       "pointsByWeek": [
         74,
@@ -11625,7 +11625,7 @@
       ],
       "change": "-4",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 50,
       "currentWeekTiebreaker": 43,
@@ -11684,10 +11684,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 133,
+      "marginTotal": 130,
       "highFiveValues": [
         3,
         5,
@@ -11711,7 +11711,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "DAL",
@@ -11748,7 +11748,7 @@
         10,
         10
       ],
-      "losses": 72,
+      "losses": 73,
       "lossesByWeek": [
         8,
         5,
@@ -11762,7 +11762,7 @@
         6,
         5,
         6,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -11780,7 +11780,7 @@
         0,
         0
       ],
-      "percent": 0.625,
+      "percent": 0.6217616580310881,
       "points": 1010,
       "pointsByWeek": [
         63,
@@ -11832,7 +11832,7 @@
       ],
       "change": "+4",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 63,
       "currentWeekTiebreaker": 32,
@@ -11916,7 +11916,7 @@
       "highFiveThisWeek": [
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -11957,7 +11957,7 @@
         13,
         8
       ],
-      "losses": 69,
+      "losses": 70,
       "lossesByWeek": [
         9,
         5,
@@ -11971,7 +11971,7 @@
         6,
         4,
         3,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -11989,7 +11989,7 @@
         0,
         0
       ],
-      "percent": 0.640625,
+      "percent": 0.6373056994818653,
       "points": 1066,
       "pointsByWeek": [
         78,
@@ -12041,7 +12041,7 @@
       ],
       "change": "--",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 56,
       "currentWeekTiebreaker": 41,
@@ -12145,7 +12145,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -12170,7 +12170,7 @@
         10,
         8
       ],
-      "losses": 80,
+      "losses": 81,
       "lossesByWeek": [
         8,
         7,
@@ -12184,7 +12184,7 @@
         7,
         5,
         6,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -12202,7 +12202,7 @@
         0,
         0
       ],
-      "percent": 0.5833333333333334,
+      "percent": 0.5803108808290155,
       "points": 971,
       "pointsByWeek": [
         63,
@@ -12254,7 +12254,7 @@
       ],
       "change": "-3",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 51,
       "currentWeekTiebreaker": 38,
@@ -12357,7 +12357,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -12386,7 +12386,7 @@
         12,
         7
       ],
-      "losses": 80,
+      "losses": 81,
       "lossesByWeek": [
         9,
         5,
@@ -12400,7 +12400,7 @@
         7,
         4,
         4,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -12418,7 +12418,7 @@
         0,
         0
       ],
-      "percent": 0.5833333333333334,
+      "percent": 0.5803108808290155,
       "points": 984,
       "pointsByWeek": [
         60,
@@ -12470,7 +12470,7 @@
       ],
       "change": "-8",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 44,
       "currentWeekTiebreaker": 47,
@@ -12574,7 +12574,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "DET",
@@ -12603,7 +12603,7 @@
         10,
         8
       ],
-      "losses": 77,
+      "losses": 78,
       "lossesByWeek": [
         4,
         7,
@@ -12617,7 +12617,7 @@
         7,
         6,
         6,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -12635,7 +12635,7 @@
         0,
         0
       ],
-      "percent": 0.5989583333333334,
+      "percent": 0.5958549222797928,
       "points": 1004,
       "pointsByWeek": [
         102,
@@ -12687,7 +12687,7 @@
       ],
       "change": "+4",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 65,
       "currentWeekTiebreaker": 38,
@@ -12747,10 +12747,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 104,
+      "marginTotal": 101,
       "highFiveValues": [
         3,
         3,
@@ -12782,7 +12782,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -12811,7 +12811,7 @@
         12,
         8
       ],
-      "losses": 76,
+      "losses": 77,
       "lossesByWeek": [
         8,
         5,
@@ -12825,7 +12825,7 @@
         6,
         7,
         4,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -12843,7 +12843,7 @@
         0,
         0
       ],
-      "percent": 0.6041666666666666,
+      "percent": 0.6010362694300518,
       "points": 1070,
       "pointsByWeek": [
         89,
@@ -12895,7 +12895,7 @@
       ],
       "change": "+5",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 67,
       "currentWeekTiebreaker": 41,
@@ -13020,7 +13020,7 @@
         10,
         8
       ],
-      "losses": 76,
+      "losses": 77,
       "lossesByWeek": [
         8,
         8,
@@ -13034,7 +13034,7 @@
         5,
         3,
         6,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -13052,7 +13052,7 @@
         0,
         0
       ],
-      "percent": 0.6041666666666666,
+      "percent": 0.6010362694300518,
       "points": 991,
       "pointsByWeek": [
         77,
@@ -13104,7 +13104,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 54,
       "currentWeekTiebreaker": 49,
@@ -13165,10 +13165,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 83,
+      "marginTotal": 80,
       "highFiveValues": [
         3,
         5,
@@ -13196,7 +13196,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -13229,7 +13229,7 @@
         11,
         10
       ],
-      "losses": 69,
+      "losses": 70,
       "lossesByWeek": [
         6,
         5,
@@ -13243,7 +13243,7 @@
         6,
         5,
         5,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -13261,7 +13261,7 @@
         0,
         0
       ],
-      "percent": 0.640625,
+      "percent": 0.6373056994818653,
       "points": 1048,
       "pointsByWeek": [
         103,
@@ -13313,7 +13313,7 @@
       ],
       "change": "+1",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 62,
       "currentWeekTiebreaker": 42,
@@ -13381,10 +13381,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 93,
+      "marginTotal": 90,
       "highFiveValues": [
         5,
         8,
@@ -13416,7 +13416,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "PIT",
@@ -13445,7 +13445,7 @@
         8,
         7
       ],
-      "losses": 84,
+      "losses": 85,
       "lossesByWeek": [
         10,
         7,
@@ -13459,7 +13459,7 @@
         7,
         4,
         8,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -13477,7 +13477,7 @@
         0,
         0
       ],
-      "percent": 0.5625,
+      "percent": 0.5595854922279793,
       "points": 944,
       "pointsByWeek": [
         67,
@@ -13529,7 +13529,7 @@
       ],
       "change": "--",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 52,
       "currentWeekTiebreaker": 31,
@@ -13588,10 +13588,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 65,
+      "marginTotal": 62,
       "highFiveValues": [
         5,
         3,
@@ -13627,7 +13627,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -13652,7 +13652,7 @@
         12,
         6
       ],
-      "losses": 80,
+      "losses": 81,
       "lossesByWeek": [
         8,
         9,
@@ -13666,7 +13666,7 @@
         5,
         6,
         4,
-        6
+        7
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -13684,7 +13684,7 @@
         0,
         0
       ],
-      "percent": 0.5833333333333334,
+      "percent": 0.5803108808290155,
       "points": 910,
       "pointsByWeek": [
         66,
@@ -13736,7 +13736,7 @@
       ],
       "change": "--",
       "currentWeekWins": 6,
-      "currentWeekLosses": 6,
+      "currentWeekLosses": 7,
       "currentWeekTies": 0,
       "currentWeekPoints": 49,
       "currentWeekTiebreaker": 31,
@@ -13859,7 +13859,7 @@
         8,
         5
       ],
-      "losses": 75,
+      "losses": 76,
       "lossesByWeek": [
         7,
         5,
@@ -13873,7 +13873,7 @@
         6,
         7,
         8,
-        7
+        8
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -13891,7 +13891,7 @@
         0,
         0
       ],
-      "percent": 0.609375,
+      "percent": 0.6062176165803109,
       "points": 997,
       "pointsByWeek": [
         81,
@@ -13925,7 +13925,7 @@
         35
       ],
       "lastWeekRank": 26,
-      "currentWeekRank": 40,
+      "currentWeekRank": 41,
       "rankByWeek": [
         27,
         17,
@@ -13939,11 +13939,11 @@
         8,
         14,
         26,
-        40
+        41
       ],
-      "change": "-14",
+      "change": "-15",
       "currentWeekWins": 5,
-      "currentWeekLosses": 7,
+      "currentWeekLosses": 8,
       "currentWeekTies": 0,
       "currentWeekPoints": 31,
       "currentWeekTiebreaker": 35,
@@ -14002,10 +14002,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 39,
+      "marginTotal": 36,
       "highFiveValues": [
         5,
         5,
@@ -14041,7 +14041,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -14066,7 +14066,7 @@
         10,
         7
       ],
-      "losses": 70,
+      "losses": 71,
       "lossesByWeek": [
         4,
         4,
@@ -14080,7 +14080,7 @@
         5,
         5,
         6,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -14098,7 +14098,7 @@
         0,
         0
       ],
-      "percent": 0.6354166666666666,
+      "percent": 0.6321243523316062,
       "points": 1063,
       "pointsByWeek": [
         98,
@@ -14150,7 +14150,7 @@
       ],
       "change": "-2",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 51,
       "currentWeekTiebreaker": 41,
@@ -14275,7 +14275,7 @@
         12,
         8
       ],
-      "losses": 72,
+      "losses": 73,
       "lossesByWeek": [
         7,
         6,
@@ -14289,7 +14289,7 @@
         8,
         7,
         4,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -14307,7 +14307,7 @@
         0,
         0
       ],
-      "percent": 0.625,
+      "percent": 0.6217616580310881,
       "points": 1058,
       "pointsByWeek": [
         83,
@@ -14359,7 +14359,7 @@
       ],
       "change": "--",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 57,
       "currentWeekTiebreaker": 41,
@@ -14420,10 +14420,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 176,
+      "marginTotal": 173,
       "highFiveValues": [
         3,
         5,
@@ -14459,7 +14459,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -14484,7 +14484,7 @@
         8,
         7
       ],
-      "losses": 81,
+      "losses": 82,
       "lossesByWeek": [
         8,
         5,
@@ -14498,7 +14498,7 @@
         5,
         4,
         8,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -14516,7 +14516,7 @@
         0,
         0
       ],
-      "percent": 0.578125,
+      "percent": 0.5751295336787565,
       "points": 957,
       "pointsByWeek": [
         62,
@@ -14568,7 +14568,7 @@
       ],
       "change": "+2",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 54,
       "currentWeekTiebreaker": 61,
@@ -14664,7 +14664,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -14693,7 +14693,7 @@
         10,
         9
       ],
-      "losses": 73,
+      "losses": 74,
       "lossesByWeek": [
         7,
         7,
@@ -14707,7 +14707,7 @@
         6,
         5,
         6,
-        3
+        4
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -14725,7 +14725,7 @@
         0,
         0
       ],
-      "percent": 0.6197916666666666,
+      "percent": 0.616580310880829,
       "points": 1041,
       "pointsByWeek": [
         85,
@@ -14777,7 +14777,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 9,
-      "currentWeekLosses": 3,
+      "currentWeekLosses": 4,
       "currentWeekTies": 0,
       "currentWeekPoints": 60,
       "currentWeekTiebreaker": 42,
@@ -14900,7 +14900,7 @@
         11,
         7
       ],
-      "losses": 81,
+      "losses": 82,
       "lossesByWeek": [
         6,
         9,
@@ -14914,7 +14914,7 @@
         5,
         7,
         5,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -14932,7 +14932,7 @@
         0,
         0
       ],
-      "percent": 0.578125,
+      "percent": 0.5751295336787565,
       "points": 956,
       "pointsByWeek": [
         76,
@@ -14984,7 +14984,7 @@
       ],
       "change": "--",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 51,
       "currentWeekTiebreaker": 35,
@@ -15068,7 +15068,7 @@
       "highFiveThisWeek": [
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "MIA",
@@ -15109,7 +15109,7 @@
         13,
         10
       ],
-      "losses": 72,
+      "losses": 73,
       "lossesByWeek": [
         9,
         5,
@@ -15123,7 +15123,7 @@
         7,
         7,
         3,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -15141,7 +15141,7 @@
         0,
         0
       ],
-      "percent": 0.625,
+      "percent": 0.6217616580310881,
       "points": 1021,
       "pointsByWeek": [
         71,
@@ -15193,7 +15193,7 @@
       ],
       "change": "+2",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 60,
       "currentWeekTiebreaker": 45,
@@ -15258,10 +15258,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 175,
+      "marginTotal": 172,
       "highFiveValues": [
         2,
         8,
@@ -15293,7 +15293,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "DAL",
@@ -15322,7 +15322,7 @@
         12,
         7
       ],
-      "losses": 76,
+      "losses": 77,
       "lossesByWeek": [
         9,
         5,
@@ -15336,7 +15336,7 @@
         7,
         6,
         4,
-        5
+        6
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -15354,7 +15354,7 @@
         0,
         0
       ],
-      "percent": 0.6041666666666666,
+      "percent": 0.6010362694300518,
       "points": 976,
       "pointsByWeek": [
         58,
@@ -15406,7 +15406,7 @@
       ],
       "change": "-3",
       "currentWeekWins": 7,
-      "currentWeekLosses": 5,
+      "currentWeekLosses": 6,
       "currentWeekTies": 0,
       "currentWeekPoints": 48,
       "currentWeekTiebreaker": 38,
@@ -15531,7 +15531,7 @@
         14,
         10
       ],
-      "losses": 63,
+      "losses": 64,
       "lossesByWeek": [
         8,
         5,
@@ -15545,7 +15545,7 @@
         6,
         4,
         2,
-        2
+        3
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -15563,7 +15563,7 @@
         0,
         0
       ],
-      "percent": 0.671875,
+      "percent": 0.6683937823834197,
       "points": 1059,
       "pointsByWeek": [
         66,
@@ -15615,7 +15615,7 @@
       ],
       "change": "+2",
       "currentWeekWins": 10,
-      "currentWeekLosses": 2,
+      "currentWeekLosses": 3,
       "currentWeekTies": 0,
       "currentWeekPoints": 62,
       "currentWeekTiebreaker": 42,
@@ -15683,10 +15683,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 96,
+      "marginTotal": 93,
       "highFiveValues": [
         3,
         8,
@@ -15718,7 +15718,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "KC",
@@ -15747,7 +15747,7 @@
         6,
         8
       ],
-      "losses": 76,
+      "losses": 77,
       "lossesByWeek": [
         6,
         8,
@@ -15761,7 +15761,7 @@
         10,
         3,
         10,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -15779,7 +15779,7 @@
         0,
         0
       ],
-      "percent": 0.6041666666666666,
+      "percent": 0.6010362694300518,
       "points": 1028,
       "pointsByWeek": [
         84,
@@ -15831,7 +15831,7 @@
       ],
       "change": "-4",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 54,
       "currentWeekTiebreaker": 41,
@@ -15892,10 +15892,10 @@
         },
         {
           "team": "JAC",
-          "margin": null
+          "margin": -3
         }
       ],
-      "marginTotal": 183,
+      "marginTotal": 180,
       "highFiveValues": [
         3,
         8,
@@ -15923,7 +15923,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         },
         {
           "team": "TB",
@@ -15956,7 +15956,7 @@
         9,
         9
       ],
-      "losses": 70,
+      "losses": 71,
       "lossesByWeek": [
         9,
         5,
@@ -15970,7 +15970,7 @@
         7,
         6,
         7,
-        3
+        4
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -15988,7 +15988,7 @@
         0,
         0
       ],
-      "percent": 0.6354166666666666,
+      "percent": 0.6321243523316062,
       "points": 1047,
       "pointsByWeek": [
         66,
@@ -16040,7 +16040,7 @@
       ],
       "change": "-1",
       "currentWeekWins": 9,
-      "currentWeekLosses": 3,
+      "currentWeekLosses": 4,
       "currentWeekTies": 0,
       "currentWeekPoints": 56,
       "currentWeekTiebreaker": 37,
@@ -16148,7 +16148,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     },
@@ -16173,7 +16173,7 @@
         11,
         8
       ],
-      "losses": 67,
+      "losses": 68,
       "lossesByWeek": [
         8,
         4,
@@ -16187,7 +16187,7 @@
         7,
         5,
         5,
-        4
+        5
       ],
       "ties": 0,
       "tiesByWeek": [
@@ -16205,7 +16205,7 @@
         0,
         0
       ],
-      "percent": 0.6510416666666666,
+      "percent": 0.6476683937823834,
       "points": 1046,
       "pointsByWeek": [
         90,
@@ -16257,7 +16257,7 @@
       ],
       "change": "--",
       "currentWeekWins": 8,
-      "currentWeekLosses": 4,
+      "currentWeekLosses": 5,
       "currentWeekTies": 0,
       "currentWeekPoints": 62,
       "currentWeekTiebreaker": 48,
@@ -16357,7 +16357,7 @@
         },
         {
           "team": "JAC",
-          "won": null
+          "won": false
         }
       ]
     }
