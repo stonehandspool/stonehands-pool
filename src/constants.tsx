@@ -36,7 +36,7 @@ export const MONDAY_NIGHT_TOTAL = 0;
 // COMPLETE: This means that ALL of the games in a given week have been completed and the scores have all been entered into the site
 //          - Tuesday & Wednesday (until switch to new week and switch to START)
 //          - The weekly standings and picks should show all available up to date data with no restrictions
-//              - The weekly standings should signify the current weeks winner
+//              - The weekly standings should signify the current weeks winner HI!
 //          - The picksheet should still be unavailable
 type WeekStatus = 'START' | 'IN_PROGRESS' | 'COMPLETE';
 export const CURRENT_WEEK_STATUS: WeekStatus = 'START';
