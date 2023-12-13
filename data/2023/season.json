@@ -2120,6 +2120,36 @@
         "evaluated": false
       },
       "matchup_2": {
+        "home_team": "CIN",
+        "away_team": "MIN",
+        "time": "2023-12-16T18:00:00.000Z",
+        "gameInfo": "Sat, Dec 16, 1:00 PM ET - Cincinnati, OH",
+        "home_score": 0,
+        "away_score": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      "matchup_3": {
+        "home_team": "IND",
+        "away_team": "PIT",
+        "time": "2023-12-16T21:30:00.000Z",
+        "gameInfo": "Sat, Dec 16, 4:30 PM ET - Indianapolis, IN",
+        "home_score": 0,
+        "away_score": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      "matchup_4": {
+        "home_team": "DET",
+        "away_team": "DEN",
+        "time": "2023-12-17T01:15:00.000Z",
+        "gameInfo": "Sat, Dec 16, 8:15 PM ET - Detroit, MI",
+        "home_score": 0,
+        "away_score": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      "matchup_5": {
         "home_team": "GB",
         "away_team": "TB",
         "time": "2023-12-17T18:00:00.000Z",
@@ -2129,7 +2159,7 @@
         "winner": "",
         "evaluated": false
       },
-      "matchup_3": {
+      "matchup_6": {
         "home_team": "CAR",
         "away_team": "ATL",
         "time": "2023-12-17T18:00:00.000Z",
@@ -2139,7 +2169,7 @@
         "winner": "",
         "evaluated": false
       },
-      "matchup_4": {
+      "matchup_7": {
         "home_team": "NO",
         "away_team": "NYG",
         "time": "2023-12-17T18:00:00.000Z",
@@ -2149,41 +2179,11 @@
         "winner": "",
         "evaluated": false
       },
-      "matchup_5": {
-        "home_team": "CIN",
-        "away_team": "MIN",
-        "time": "2023-12-17T18:00:00.000Z",
-        "gameInfo": "Sun, Dec 17, 1:00 PM ET - Cincinnati, OH",
-        "home_score": 0,
-        "away_score": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      "matchup_6": {
-        "home_team": "IND",
-        "away_team": "PIT",
-        "time": "2023-12-17T18:00:00.000Z",
-        "gameInfo": "Sun, Dec 17, 1:00 PM ET - Indianapolis, IN",
-        "home_score": 0,
-        "away_score": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      "matchup_7": {
+      "matchup_8": {
         "home_team": "TEN",
         "away_team": "HOU",
         "time": "2023-12-17T18:00:00.000Z",
         "gameInfo": "Sun, Dec 17, 1:00 PM ET - Nashville, TN",
-        "home_score": 0,
-        "away_score": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      "matchup_8": {
-        "home_team": "DET",
-        "away_team": "DEN",
-        "time": "2023-12-17T18:00:00.000Z",
-        "gameInfo": "Sun, Dec 17, 1:00 PM ET - Detroit, MI",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
@@ -2210,6 +2210,16 @@
         "evaluated": false
       },
       "matchup_11": {
+        "home_team": "NE",
+        "away_team": "KC",
+        "time": "2023-12-17T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 17, 1:00 PM ET - Foxborough, MA",
+        "home_score": 0,
+        "away_score": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      "matchup_12": {
         "home_team": "LA",
         "away_team": "WAS",
         "time": "2023-12-17T21:05:00.000Z",
@@ -2219,21 +2229,11 @@
         "winner": "",
         "evaluated": false
       },
-      "matchup_12": {
+      "matchup_13": {
         "home_team": "ARI",
         "away_team": "SF",
         "time": "2023-12-17T21:05:00.000Z",
         "gameInfo": "Sun, Dec 17, 4:05 PM ET - Glendale, AZ",
-        "home_score": 0,
-        "away_score": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      "matchup_13": {
-        "home_team": "SEA",
-        "away_team": "PHI",
-        "time": "2023-12-17T21:25:00.000Z",
-        "gameInfo": "Sun, Dec 17, 4:25 PM ET - Seattle, WA",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
@@ -2260,10 +2260,10 @@
         "evaluated": false
       },
       "matchup_16": {
-        "home_team": "NE",
-        "away_team": "KC",
+        "home_team": "SEA",
+        "away_team": "PHI",
         "time": "2023-12-19T01:15:00.000Z",
-        "gameInfo": "Mon, Dec 18, 8:15 PM ET - Foxborough, MA",
+        "gameInfo": "Mon, Dec 18, 8:15 PM ET - Seattle, WA",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
