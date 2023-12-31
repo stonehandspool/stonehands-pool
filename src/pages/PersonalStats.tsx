@@ -22,13 +22,22 @@ type TeamInfo = {
     wins: number;
     losses: number;
     ties: number;
+    timesCorrect: number;
+    timesIncorrect: number;
 };
 
 function getPickStats(userPicks: SubmissionInfo[], weeks: any) {
     // Init an array of the teams to keep track
     const teamArray: TeamInfo[] = [];
     TEAM_CODES.map(teamCode => {
-        teamArray.push({ team: teamCode, wins: 0, losses: 0, ties: 0 });
+        teamArray.push({
+            team: teamCode,
+            wins: 0,
+            losses: 0,
+            ties: 0,
+            timesCorrect: 0,
+            timesIncorrect: 0,
+        });
     });
 
     // The user picks unfortunately go from matchup-0 to matchup-15 while the weekly data goes
@@ -38,18 +47,18 @@ function getPickStats(userPicks: SubmissionInfo[], weeks: any) {
         const weeklyMatchups = weeks[`week_${index + 1}` as keyof typeof weeks];
         Object.keys(weeklyMatchups).map((matchup, ind) => {
             const userPick = picks[`matchup-${ind}` as keyof typeof picks];
-            const { home_team, away_team } = weeklyMatchups[matchup];
-            if (userPick === 'Tie') {
-                const homeTeam = teamArray.find(team => team.team === home_team);
-                const awayTeam = teamArray.find(team => team.team === away_team);
-                homeTeam && homeTeam.ties++;
-                awayTeam && awayTeam.ties++;
+            const { home_team, away_team, winner } = weeklyMatchups[matchup];
+            const pickedLoser = userPick === home_team ? away_team : home_team;
+            const userWinner = teamArray.find(team => team.team === userPick);
+            const userLoser = teamArray.find(team => team.team === pickedLoser);
+            userWinner && userWinner.wins++;
+            userLoser && userLoser.losses++;
+            if (userPick === winner) {
+                userWinner && userWinner.timesCorrect++;
+                userLoser && userLoser.timesCorrect++;
             } else {
-                const pickedLoser = userPick === home_team ? away_team : home_team;
-                const userWinner = teamArray.find(team => team.team === userPick);
-                const userLoser = teamArray.find(team => team.team === pickedLoser);
-                userWinner && userWinner.wins++;
-                userLoser && userLoser.losses++;    
+                userWinner && userWinner.timesIncorrect++;
+                userLoser && userLoser.timesIncorrect++;
             }
         });
     });

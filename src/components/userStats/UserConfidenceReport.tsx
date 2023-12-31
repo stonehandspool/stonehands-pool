@@ -3,7 +3,7 @@ import * as teamData from '../../../data/2023/teams.json';
 import UserConfidencePicksTable from './UserConfidencePicksTable';
 
 function getProgressBarColor(percent: number) {
-    if (percent > .8) {
+    if (percent >= .8) {
         return 'is-success';
     } else if (percent > 0.4) {
         return 'is-warning';
@@ -35,53 +35,22 @@ function UserConfidenceReport(props: any) {
                     <h6 className='title is-6 has-text-centered'>Actual Record</h6>
                 </div>
                 <div className='column is-1'>
+                    <h6 className='title is-6 has-text-centered'>Times Correct</h6>
+                </div>
+                <div className='column is-1'>
+                    <h6 className='title is-6 has-text-centered'>Times Incorrect</h6>
+                </div>
+                <div className='column is-1'>
                     <h6 className='title is-6 has-text-centered'>Accuracy</h6>
                 </div>
             </div>
             {
                 teamsByPicks.map((key: any, index: number) => {
-                    const { team, wins, ties, losses} = teamsByPicks[index];
+                    const { team, wins, ties, losses, timesCorrect, timesIncorrect } = teamsByPicks[index];
                     const { wins: teamWins, ties: teamTies, losses: teamLosses } = teams[team as keyof typeof teams];
                     const Logo = TeamLogos[team as keyof typeof TeamLogos];
                     const percentage = ((wins + (ties / 2)) / (wins + ties + losses)) * 100;
-                    let accuracy;
-                    if (wins === teamWins && losses === teamLosses && ties === teamTies) {
-                        accuracy = 100;
-                    } else {
-                        let winAccuracy;
-                        let lossAccuracy;
-                        let tieAccuracy;
-
-                        if (teamWins === 0 && wins === 0){
-                            winAccuracy = 100;
-                        } else if (teamWins === 0 && wins !== 0 || teamWins !== 0 && wins === 0) {
-                            winAccuracy = 0;
-                        } else {
-                            winAccuracy = 100 - Math.abs((((wins - teamWins) / teamWins) * 100));
-                        }
-
-                        if (teamLosses === 0 && losses === 0) {
-                            lossAccuracy = 100;
-                        } else if (teamLosses === 0 && losses !== 0 || teamLosses !== 0 && losses === 0) {
-                            lossAccuracy = 0;
-                        } else {
-                            lossAccuracy = 100 - Math.abs((((losses - teamLosses) / teamLosses) * 100));
-                        }
-
-                        if (teamTies === 0 && ties === 0) {
-                            tieAccuracy = 100;
-                        } else if (teamTies === 0 && ties !== 0 || teamTies !== 0 && ties === 0) {
-                            tieAccuracy = 0;
-                        } else {
-                            tieAccuracy = 100 - Math.abs((((ties - teamTies) / teamTies) * 100));
-                        }
-
-                        if (teamTies === 0) {
-                            accuracy = ((winAccuracy + lossAccuracy) / 2).toFixed(2);
-                        } else {
-                            accuracy = ((winAccuracy + lossAccuracy + tieAccuracy) / 3).toFixed(2);
-                        }
-                    }
+                    const accuracy = timesCorrect / (timesCorrect + timesIncorrect) * 100;
                     return <div className='columns is-vcentered' key={`${key.team}`}>
                         <div className='column is-1 has-text-centered'><Logo /></div>
                         <div className='column is-half'>
@@ -97,7 +66,13 @@ function UserConfidenceReport(props: any) {
                             <h6 className='title is-6 has-text-centered'>{teamWins}-{teamLosses}-{teamTies}</h6>
                         </div>
                         <div className='column is-1'>
-                            <h6 className='title is-6 has-text-centered'>{accuracy}%</h6>
+                            <h6 className='title is-6 has-text-centered'>{timesCorrect}</h6>
+                        </div>
+                        <div className='column is-1'>
+                            <h6 className='title is-6 has-text-centered'>{timesIncorrect}</h6>
+                        </div>
+                        <div className='column is-1'>
+                            <h6 className='title is-6 has-text-centered'>{+accuracy.toFixed(2)}%</h6>
                         </div>
                     </div>
                 })
