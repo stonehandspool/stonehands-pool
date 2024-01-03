@@ -1,23 +1,32 @@
 import * as path from 'path';
+import minimist from 'minimist';
 import { readFile } from 'fs/promises';
+
+const args = minimist(process.argv.slice(2));
+const { year } = args;
+
+if (isNaN(year)) {
+    console.log('Please submit a valid year');
+    process.exit();
+}
 
 const TEAM_CODES = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAC', 'KC', 'LAC', 'LA', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'];
 
 // Get the data from the players json file
 const playerData = await JSON.parse(
-    await readFile(path.resolve(`data/2023/players.json`))
+    await readFile(path.resolve(`data/${year}/players.json`))
 );
 const { players } = playerData;
 
 // Get the data from the season json file
 const seasonData = await JSON.parse(
-    await readFile(path.resolve(`data/2023/season.json`))
+    await readFile(path.resolve(`data/${year}/season.json`))
 );
 const { weeks } = seasonData;
 
 // Get the data from the weekly picks json file
 const pickData = await JSON.parse(
-    await readFile(path.resolve(`data/2023/weeklyPicks.json`))
+    await readFile(path.resolve(`data/${year}/weeklyPicks.json`))
 );
 const { weeklyPicks } = pickData;
 
@@ -83,10 +92,18 @@ eagerPeople.forEach((personInfo) => {
 
 eagerPeople.sort((a, b) => a.average - b.average);
 
-console.log(eagerPeople[eagerPeople.length - 1]);
+console.log();
+console.log('Most Eager People');
+for (let i = 0; i < 6; i++) {
+    // Going to do the first 6 people because most likely I'll always be in the top 5
+    const personInfo = eagerPeople[i];
+    console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.average}`);
+}
 
 console.log();
-console.log('Eager People')
-eagerPeople.forEach((personInfo, index) => {
-    console.log(`${index + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.average}`);
-})
+console.log('Least Eager People');
+for (let i = eagerPeople.length - 5; i < eagerPeople.length; i++) {
+    // Going to do the first 6 people because most likely I'll always be in the top 5
+    const personInfo = eagerPeople[i];
+    console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.average}`);
+}
