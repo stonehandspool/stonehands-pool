@@ -2591,21 +2591,31 @@
         "home_score": 10,
         "away_score": 33,
         "winner": "GB",
-        "evaluated": false
+        "evaluated": true
       }
     },
     "week_18": {
       "matchup_1": {
-        "home_team": "NO",
-        "away_team": "ATL",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - New Orleans, LA",
+        "home_team": "BAL",
+        "away_team": "PIT",
+        "time": "2024-01-06T21:30:00.000Z",
+        "gameInfo": "Sat, Jan 6, 4:30 PM ET - Baltimore, MD",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
         "evaluated": false
       },
       "matchup_2": {
+        "home_team": "IND",
+        "away_team": "HOU",
+        "time": "2024-01-07T00:15:00.000Z",
+        "gameInfo": "Sat, Jan 6, 8:15 PM ET - Indianapolis, IN",
+        "home_score": 0,
+        "away_score": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      "matchup_3": {
         "home_team": "TEN",
         "away_team": "JAC",
         "time": "2024-01-07T18:00:00.000Z",
@@ -2615,7 +2625,7 @@
         "winner": "",
         "evaluated": false
       },
-      "matchup_3": {
+      "matchup_4": {
         "home_team": "DET",
         "away_team": "MIN",
         "time": "2024-01-07T18:00:00.000Z",
@@ -2625,37 +2635,17 @@
         "winner": "",
         "evaluated": false
       },
-      "matchup_4": {
-        "home_team": "ARI",
-        "away_team": "SEA",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Glendale, AZ",
-        "home_score": 0,
-        "away_score": 0,
-        "winner": "",
-        "evaluated": false
-      },
       "matchup_5": {
-        "home_team": "GB",
-        "away_team": "CHI",
+        "home_team": "NO",
+        "away_team": "ATL",
         "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Green Bay, WI",
+        "gameInfo": "Sun, Jan 7, 1:00 PM ET - New Orleans, LA",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
         "evaluated": false
       },
       "matchup_6": {
-        "home_team": "NYG",
-        "away_team": "PHI",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - East Rutherford, NJ",
-        "home_score": 0,
-        "away_score": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      "matchup_7": {
         "home_team": "NE",
         "away_team": "NYJ",
         "time": "2024-01-07T18:00:00.000Z",
@@ -2665,27 +2655,7 @@
         "winner": "",
         "evaluated": false
       },
-      "matchup_8": {
-        "home_team": "IND",
-        "away_team": "HOU",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Indianapolis, IN",
-        "home_score": 0,
-        "away_score": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      "matchup_9": {
-        "home_team": "SF",
-        "away_team": "LA",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Santa Clara, CA",
-        "home_score": 0,
-        "away_score": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      "matchup_10": {
+      "matchup_7": {
         "home_team": "CAR",
         "away_team": "TB",
         "time": "2024-01-07T18:00:00.000Z",
@@ -2695,61 +2665,91 @@
         "winner": "",
         "evaluated": false
       },
+      "matchup_8": {
+        "home_team": "CIN",
+        "away_team": "CLE",
+        "time": "2024-01-07T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Cincinnati, OH",
+        "home_score": 0,
+        "away_score": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      "matchup_9": {
+        "home_team": "GB",
+        "away_team": "CHI",
+        "time": "2024-01-07T21:25:00.000Z",
+        "gameInfo": "Sun, Jan 7, 4:25 PM ET - Green Bay, WI",
+        "home_score": 0,
+        "away_score": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      "matchup_10": {
+        "home_team": "WAS",
+        "away_team": "DAL",
+        "time": "2024-01-07T21:25:00.000Z",
+        "gameInfo": "Sun, Jan 7, 4:25 PM ET - Landover, MD",
+        "home_score": 0,
+        "away_score": 0,
+        "winner": "",
+        "evaluated": false
+      },
       "matchup_11": {
         "home_team": "LV",
         "away_team": "DEN",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Las Vegas, NV",
+        "time": "2024-01-07T21:25:00.000Z",
+        "gameInfo": "Sun, Jan 7, 4:25 PM ET - Las Vegas, NV",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
         "evaluated": false
       },
       "matchup_12": {
-        "home_team": "LAC",
-        "away_team": "KC",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Inglewood, CA",
+        "home_team": "NYG",
+        "away_team": "PHI",
+        "time": "2024-01-07T21:25:00.000Z",
+        "gameInfo": "Sun, Jan 7, 4:25 PM ET - East Rutherford, NJ",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
         "evaluated": false
       },
       "matchup_13": {
-        "home_team": "MIA",
-        "away_team": "BUF",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Miami Gardens, FL",
+        "home_team": "ARI",
+        "away_team": "SEA",
+        "time": "2024-01-07T21:25:00.000Z",
+        "gameInfo": "Sun, Jan 7, 4:25 PM ET - Glendale, AZ",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
         "evaluated": false
       },
       "matchup_14": {
-        "home_team": "WAS",
-        "away_team": "DAL",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Landover, MD",
+        "home_team": "SF",
+        "away_team": "LA",
+        "time": "2024-01-07T21:25:00.000Z",
+        "gameInfo": "Sun, Jan 7, 4:25 PM ET - Santa Clara, CA",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
         "evaluated": false
       },
       "matchup_15": {
-        "home_team": "BAL",
-        "away_team": "PIT",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Baltimore, MD",
+        "home_team": "LAC",
+        "away_team": "KC",
+        "time": "2024-01-07T21:25:00.000Z",
+        "gameInfo": "Sun, Jan 7, 4:25 PM ET - Inglewood, CA",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
         "evaluated": false
       },
       "matchup_16": {
-        "home_team": "CIN",
-        "away_team": "CLE",
-        "time": "2024-01-07T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 7, 1:00 PM ET - Cincinnati, OH",
+        "home_team": "MIA",
+        "away_team": "BUF",
+        "time": "2024-01-08T00:20:00.000Z",
+        "gameInfo": "Sun, Jan 7, 8:20 PM ET - Miami Gardens, FL",
         "home_score": 0,
         "away_score": 0,
         "winner": "",
