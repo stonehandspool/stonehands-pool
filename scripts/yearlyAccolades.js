@@ -65,8 +65,11 @@ forgetfulPeople.sort((a, b) => b.timesForgotten - a.timesForgotten);
 console.log('The most forgetful people');
 forgetfulPeople.forEach((person, index) => {
     if (person.timesForgotten > 0) {
-        forgetfulPeopleDataToExport.data.push(person);
         console.log(`${index + 1}. ${person.firstName} ${person.lastName} - ${person.timesForgotten}`);
+    }
+    if (index < 5) {
+        // Only get the top 5 most forgetful people
+        forgetfulPeopleDataToExport.data.push(person);
     }
 });
 
@@ -117,7 +120,7 @@ console.log('Most Eager People');
 for (let i = 0; i < 6; i++) {
     // Going to do the first 6 people because most likely I'll always be in the top 5
     const personInfo = eagerPeople[i];
-    if (personInfo.firstName !== 'Ryan' && personInfo.lastName !== 'Fandl') {
+    if (personInfo.firstName !== 'Ryan') { // TODO: Change this to my userId to be safe
         eagerPeopleDataToExport.data.push(personInfo);
     }
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.average}`);
@@ -335,7 +338,7 @@ mondayRecords.sort((row1, row2) => row2.timesCorrect - row1.timesCorrect);
 
 const mondayWinsDataToExport = {
     id: 'mondayWins',
-    title: 'Top 5 Thursday (Wins)',
+    title: 'Top 5 Monday (Wins)',
     description: 'These are the 5 people who got the most games right on Monday night',
     data: [],
 };
@@ -423,12 +426,12 @@ for (const weekKey in weeklyPicks) {
             if (gameChoice === homeTeam) {
                 const playerFound = loneWolfCheck.homeTeamPicks.find(person => person.userId === userId);
                 if (!playerFound) {
-                    loneWolfCheck.homeTeamPicks.push({ userId, firstName, lastName, team: homeTeam, pickedRight, weekKey, gameKey });
+                    loneWolfCheck.homeTeamPicks.push({ userId, firstName, lastName, team: homeTeam, losingTeam: awayTeam, pickedRight, weekKey, gameKey });
                 }
             } else if (gameChoice === awayTeam) {
                 const playerFound = loneWolfCheck.awayTeamPicks.find(person => person.userId === userId);
                 if (!playerFound) {
-                    loneWolfCheck.awayTeamPicks.push({ userId, firstName, lastName, team: awayTeam, pickedRight, weekKey, gameKey });
+                    loneWolfCheck.awayTeamPicks.push({ userId, firstName, lastName, team: awayTeam, losingTeam: homeTeam, pickedRight, weekKey, gameKey });
                 }
             }
         });
@@ -437,8 +440,10 @@ for (const weekKey in weeklyPicks) {
             const person = loneWolfCheck.homeTeamPicks[0];
             loneWolves.push(person);
             if (person.pickedRight) {
+                person.description = `They were the only person to correctly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekKey.split('_').pop()}`;
                 loneWolfDataToExport.data.push(person);
             } else {
+                person.description = `They were the only person to incorrectly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekKey.split('_').pop()}`;
                 loneLoserDataToExport.data.push(person);
             }
             console.log('Lone Wolf found!')
@@ -447,8 +452,10 @@ for (const weekKey in weeklyPicks) {
             const person = loneWolfCheck.awayTeamPicks[0];
             loneWolves.push(person);
             if (person.pickedRight) {
+                person.description = `They were the only person to correctly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekKey.split('_').pop()}`;
                 loneWolfDataToExport.data.push(person);
             } else {
+                person.description = `They were the only person to incorrectly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekKey.split('_').pop()}`;
                 loneLoserDataToExport.data.push(person);
             }
             console.log('Lone Wolf found!')
@@ -650,6 +657,9 @@ alwaysPickedFor.forEach((info, index) => {
     }
     console.log(`${index + 1}. ${firstName} ${lastName} always picked ${team} (${wins}-${losses})`);
 });
+
+// Now sort in order of who was picked the most
+teamsAlwaysCount.sort((a, b) => b.count - a.count);
 teamsAlwaysPickedDataToExport.data = teamsAlwaysCount;
 
 console.log()
@@ -678,6 +688,9 @@ alwaysPickedAgainst.forEach((info, index) => {
     }
     console.log(`${index + 1}. ${firstName} ${lastName} always picked against ${team} (${wins}-${losses})`);
 });
+
+// Now sort in order of who was picked the most
+teamsNeverCount.sort((a, b) => b.count - a.count);
 teamsNeverPickedDataToExport.data = teamsNeverCount;
 
 yearlyAccolades.push(teamsAlwaysPickedDataToExport, teamsNeverPickedDataToExport);
