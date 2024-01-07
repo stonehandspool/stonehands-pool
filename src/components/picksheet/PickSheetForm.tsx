@@ -27,7 +27,7 @@ export type choiceFormat = {
 };
 
 const currentWeekInfo = seasonData.weeks[`week_${CURRENT_WEEK}` as keyof typeof seasonData.weeks];
-const currentWeeksPicks = weeklyPicks.weeklyPicks[`week_${CURRENT_WEEK}` as keyof typeof weeklyPicks.weeklyPicks] as SubmissionInfo[];
+const currentWeeksPicks = weeklyPicks.weeklyPicks[`week_${CURRENT_WEEK}` as keyof typeof weeklyPicks.weeklyPicks] as unknown as SubmissionInfo[];
 
 const findSubmission = (submissionId: string) => {
     return currentWeeksPicks.find(submission => submission.user_id === submissionId);
