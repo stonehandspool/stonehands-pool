@@ -114,7 +114,7 @@ function PersonalStats() {
 
     const userPicks: SubmissionInfo[] = [];
     Object.keys(weeklyPicks.weeklyPicks).map((key, index) => {
-        const week: SubmissionInfo[] = weeklyPicks.weeklyPicks[`week_${index + 1}` as keyof typeof weeklyPicks.weeklyPicks] as SubmissionInfo[];
+        const week: SubmissionInfo[] = weeklyPicks.weeklyPicks[`week_${index + 1}` as keyof typeof weeklyPicks.weeklyPicks] as unknown as SubmissionInfo[];
         if (week && week.length > 0 && index < weekToShow) {
             const playerPicksThisWeek = week.find(submission => submission.submission_data.username === username);
             if (playerPicksThisWeek) {
