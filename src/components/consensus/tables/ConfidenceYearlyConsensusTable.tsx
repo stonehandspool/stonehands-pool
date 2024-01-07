@@ -51,7 +51,7 @@ function ConfidenceYearlyConsensusTable() {
     // Now loop through every week that has been played so far
     for (let i = 0; i < weekToShow; i++) {
         const weekField = `week_${i + 1}`;
-        const weekPicks: SubmissionInfo[] = playerPicks.weeklyPicks[weekField as keyof typeof playerPicks.weeklyPicks] as SubmissionInfo[];
+        const weekPicks: SubmissionInfo[] = playerPicks.weeklyPicks[weekField as keyof typeof playerPicks.weeklyPicks] as unknown as SubmissionInfo[];
         const weekGames = allWeeks[weekField as keyof typeof allWeeks];
         
         // Now loop through every players response and update the consensus info
