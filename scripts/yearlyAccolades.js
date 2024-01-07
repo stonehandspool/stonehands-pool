@@ -1,4 +1,5 @@
 import * as path from 'path';
+import * as fs from 'node:fs';
 import minimist from 'minimist';
 import { readFile } from 'fs/promises';
 
@@ -10,6 +11,7 @@ if (isNaN(year)) {
     process.exit();
 }
 
+const yearlyAccolades = [];
 const TEAM_CODES = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAC', 'KC', 'LAC', 'LA', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'];
 
 // Get the data from the players json file
@@ -49,15 +51,26 @@ for (const weekKey in weeklyPicks) {
     });
 }
 
+const forgetfulPeopleDataToExport = {
+    id: 'forgetfulPeople',
+    title: 'Most Forgetful People',
+    description: 'These are the people who forgot to submit their picksheet the most times throughout the season',
+    data: [],
+};
+
 // Now sort in order of who was the most forgetful
 forgetfulPeople.sort((a, b) => b.timesForgotten - a.timesForgotten);
 
 // Now print it out (we want to add it to a json file eventually)
+console.log('The most forgetful people');
 forgetfulPeople.forEach((person, index) => {
     if (person.timesForgotten > 0) {
+        forgetfulPeopleDataToExport.data.push(person);
         console.log(`${index + 1}. ${person.firstName} ${person.lastName} - ${person.timesForgotten}`);
     }
 });
+
+yearlyAccolades.push(forgetfulPeopleDataToExport);
 
 // Now, get who was the most eager player (i.e. who submitted their picksheet the earliest each week)
 const eagerPeople = [];
@@ -85,6 +98,13 @@ for (const weekKey in weeklyPicks) {
     });
 }
 
+const eagerPeopleDataToExport = {
+    id: 'eagerPeople',
+    title: 'Most Eager People',
+    description: 'These are the people who on average got their picksheet in the earliest in the week',
+    data: [],
+};
+
 // Now get the averages
 eagerPeople.forEach((personInfo) => {
     personInfo.average = personInfo.places.reduce((a, b) => a + b) / personInfo.places.length
@@ -97,16 +117,28 @@ console.log('Most Eager People');
 for (let i = 0; i < 6; i++) {
     // Going to do the first 6 people because most likely I'll always be in the top 5
     const personInfo = eagerPeople[i];
+    if (personInfo.firstName !== 'Ryan' && personInfo.lastName !== 'Fandl') {
+        eagerPeopleDataToExport.data.push(personInfo);
+    }
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.average}`);
 }
+
+const leastEagerPeopleDataToExport = {
+    id: 'leastEagerPeople',
+    title: 'Least Eager People',
+    description: 'These are the people who on average got their picksheet in the latest in the week',
+    data: [],
+};
 
 console.log();
 console.log('Least Eager People');
 for (let i = eagerPeople.length - 5; i < eagerPeople.length; i++) {
-    // Going to do the first 6 people because most likely I'll always be in the top 5
     const personInfo = eagerPeople[i];
+    leastEagerPeopleDataToExport.data.push(personInfo);
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.average}`);
 }
+
+yearlyAccolades.push(eagerPeopleDataToExport, leastEagerPeopleDataToExport);
 
 // Now get the best records on Thursday games
 const thursdayRecords = [];
@@ -160,42 +192,76 @@ thursdayRecords.forEach(person => {
 // Now sort by points
 thursdayRecords.sort((row1, row2) => row2.totalPoints - row1.totalPoints);
 
+const thursdayPointsDataToExport = {
+    id: 'thursdayPoints',
+    title: 'Top 5 Thursday (Points)',
+    description: 'These are the 5 people who earned the most points on Thursday night games',
+    data: [],
+};
+
 console.log();
 console.log('Thursday Records by Points');
 for (let i = 0; i < 5; i++) {
     const personInfo = thursdayRecords[i];
+    thursdayPointsDataToExport.data.push(personInfo);
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.timesCorrect} - ${personInfo.timesIncorrect} - ${personInfo.totalPoints} - ${personInfo.pointsRisked} - ${personInfo.efficiency}`);
 }
 
 // Now sort by wins
 thursdayRecords.sort((row1, row2) => row2.timesCorrect - row1.timesCorrect);
 
+const thursdayWinsDataToExport = {
+    id: 'thursdayWins',
+    title: 'Top 5 Thursday (Wins)',
+    description: 'These are the 5 people who got the most games right on Thursday night',
+    data: [],
+};
+
 console.log();
 console.log('Thursday Records by Wins');
 for (let i = 0; i < 5; i++) {
     const personInfo = thursdayRecords[i];
+    thursdayWinsDataToExport.data.push(personInfo);
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.timesCorrect} - ${personInfo.timesIncorrect} - ${personInfo.totalPoints} - ${personInfo.pointsRisked} - ${personInfo.efficiency}`);
 }
 
 // Now sort by points risked
 thursdayRecords.sort((row1, row2) => row2.pointsRisked - row1.pointsRisked);
 
+const thursdayPointsRiskedDataToExport = {
+    id: 'thursdayPointsRisked',
+    title: 'Top 5 Thursday (Points Risked)',
+    description: 'These are the 5 people who risked the most points on Thursday night games',
+    data: [],
+};
+
 console.log();
 console.log('Thursday Records by Points Risked');
 for (let i = 0; i < 5; i++) {
     const personInfo = thursdayRecords[i];
+    thursdayPointsRiskedDataToExport.data.push(personInfo);
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.timesCorrect} - ${personInfo.timesIncorrect} - ${personInfo.totalPoints} - ${personInfo.pointsRisked} - ${personInfo.efficiency}`);
 }
 
 // Now sort by efficiency
 thursdayRecords.sort((row1, row2) => row2.efficiency - row1.efficiency);
 
+const thursdayEfficiencyDataToExport = {
+    id: 'thursdayEfficiency',
+    title: 'Top 5 Thursday (Efficiency)',
+    description: 'These are the 5 people who were the most efficient with their points assigned on Thursday night',
+    data: [],
+};
+
 console.log();
 console.log('Thursday Records by Efficiency');
 for (let i = 0; i < 5; i++) {
     const personInfo = thursdayRecords[i];
+    thursdayEfficiencyDataToExport.data.push(personInfo);
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.timesCorrect} - ${personInfo.timesIncorrect} - ${personInfo.totalPoints} - ${personInfo.pointsRisked} - ${personInfo.efficiency}`);
 }
+
+yearlyAccolades.push(thursdayPointsDataToExport, thursdayWinsDataToExport, thursdayPointsRiskedDataToExport, thursdayEfficiencyDataToExport);
 
 // Now get the best records on Monday games
 const mondayRecords = [];
@@ -249,44 +315,92 @@ mondayRecords.forEach(person => {
 // Now sort by points
 mondayRecords.sort((row1, row2) => row2.totalPoints - row1.totalPoints);
 
+const mondayPointsDataToExport = {
+    id: 'mondayPoints',
+    title: 'Top 5 Monday (Points)',
+    description: 'These are the 5 people who earned the most points on Monday night games',
+    data: [],
+};
+
 console.log();
 console.log('Monday Records by Points');
 for (let i = 0; i < 5; i++) {
     const personInfo = mondayRecords[i];
+    mondayPointsDataToExport.data.push(personInfo);
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.timesCorrect} - ${personInfo.timesIncorrect} - ${personInfo.totalPoints} - ${personInfo.pointsRisked} - ${personInfo.efficiency}`);
 }
 
 // Now sort by wins
 mondayRecords.sort((row1, row2) => row2.timesCorrect - row1.timesCorrect);
 
+const mondayWinsDataToExport = {
+    id: 'mondayWins',
+    title: 'Top 5 Thursday (Wins)',
+    description: 'These are the 5 people who got the most games right on Monday night',
+    data: [],
+};
+
 console.log();
 console.log('Monday Records by Wins');
 for (let i = 0; i < 5; i++) {
     const personInfo = mondayRecords[i];
+    mondayWinsDataToExport.data.push(personInfo);
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.timesCorrect} - ${personInfo.timesIncorrect} - ${personInfo.totalPoints} - ${personInfo.pointsRisked} - ${personInfo.efficiency}`);
 }
 
 // Now sort by points risked
 mondayRecords.sort((row1, row2) => row2.pointsRisked - row1.pointsRisked);
 
+const mondayPointsRiskedDataToExport = {
+    id: 'mondayPointsRisked',
+    title: 'Top 5 Monday (Points Risked)',
+    description: 'These are the 5 people who risked the most points on Monday night games',
+    data: [],
+};
+
 console.log();
 console.log('Monday Records by Points Risked');
 for (let i = 0; i < 5; i++) {
     const personInfo = mondayRecords[i];
+    mondayPointsRiskedDataToExport.data.push(personInfo);
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.timesCorrect} - ${personInfo.timesIncorrect} - ${personInfo.totalPoints} - ${personInfo.pointsRisked} - ${personInfo.efficiency}`);
 }
 
 // Now sort by efficiency
 mondayRecords.sort((row1, row2) => row2.efficiency - row1.efficiency);
 
+const mondayEfficiencyDataToExport = {
+    id: 'mondayEfficiency',
+    title: 'Top 5 Monday (Efficiency)',
+    description: 'These are the 5 people who were the most efficient with their points assigned on Monday night',
+    data: [],
+};
+
 console.log();
 console.log('Thursday Records by Efficiency');
 for (let i = 0; i < 5; i++) {
     const personInfo = mondayRecords[i];
+    mondayEfficiencyDataToExport.data.push(personInfo);
     console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.timesCorrect} - ${personInfo.timesIncorrect} - ${personInfo.totalPoints} - ${personInfo.pointsRisked} - ${personInfo.efficiency}`);
 }
 
+yearlyAccolades.push(mondayPointsDataToExport, mondayWinsDataToExport, mondayPointsRiskedDataToExport, mondayEfficiencyDataToExport);
+
 // Now find any "lone wolf" scenarios
+const loneWolfDataToExport = {
+    id: 'loneWolf',
+    title: 'Lone Wolf Award',
+    description: 'These are the people who were able to be the only person to pick a team correctly in a matchup',
+    data: [],
+};
+
+const loneLoserDataToExport = {
+    id: 'loneLoser',
+    title: 'Lone Loser Award',
+    description: 'These are the people who unfortunately were the only ones to pick a matchup incorrectly during the season',
+    data: [],
+};
+
 const loneWolves = [];
 console.log();
 for (const weekKey in weeklyPicks) {
@@ -322,36 +436,66 @@ for (const weekKey in weeklyPicks) {
         if (loneWolfCheck.homeTeamPicks.length === 1) {
             const person = loneWolfCheck.homeTeamPicks[0];
             loneWolves.push(person);
+            if (person.pickedRight) {
+                loneWolfDataToExport.data.push(person);
+            } else {
+                loneLoserDataToExport.data.push(person);
+            }
             console.log('Lone Wolf found!')
             console.log(`${person.firstName} ${person.lastName} picked ${person.team} in ${person.weekKey} and they were ${person.pickedRight ? 'right' : 'wrong'}`);
         } else if (loneWolfCheck.awayTeamPicks.length === 1) {
             const person = loneWolfCheck.awayTeamPicks[0];
             loneWolves.push(person);
+            if (person.pickedRight) {
+                loneWolfDataToExport.data.push(person);
+            } else {
+                loneLoserDataToExport.data.push(person);
+            }
             console.log('Lone Wolf found!')
             console.log(`${person.firstName} ${person.lastName} picked ${person.team} in ${person.weekKey} and they were ${person.pickedRight ? 'right' : 'wrong'}`);
         }
     }
 }
 
+yearlyAccolades.push(loneWolfDataToExport, loneLoserDataToExport);
+
 // Now find the top 5 point getters on the season
 console.log();
 players.sort((row1, row2) => row2.points - row1.points);
 
+const mostPointsDataToExport = {
+    id: 'mostPoints',
+    title: 'Top 5 Overall (Points)',
+    description: 'These are the 5 people who earned the most points throughout the season',
+    data: [],
+};
+
 console.log('Top 5 Points on the season');
 for (let i = 0; i < 5; i++) {
     const player = players[i];
+    mostPointsDataToExport.data.push(player);
     console.log(`${i + 1}. ${player.firstName} ${player.lastName} - ${player.points}`);
 }
 
-// Now find the top 5 pick percentage on the season
+// Now find the top 5 wins on the season
 console.log();
-players.sort((row1, row2) => row2.percent - row1.percent);
+players.sort((row1, row2) => row2.wins - row1.wins);
 
-console.log('Top 5 Pick Percentage on the season');
+const mostWinsDataToExport = {
+    id: 'mostWins',
+    title: 'Top 5 Overall (Wins)',
+    description: 'These are the 5 people who picked the most games correctly throughout the season',
+    data: [],
+};
+
+console.log('Top 5 Wins on the season');
 for (let i = 0; i < 5; i++) {
     const player = players[i];
-    console.log(`${i + 1}. ${player.firstName} ${player.lastName} - ${player.percent}`);
+    mostWinsDataToExport.data.push(player);
+    console.log(`${i + 1}. ${player.firstName} ${player.lastName} - ${player.wins}`);
 }
+
+yearlyAccolades.push(mostPointsDataToExport, mostWinsDataToExport);
 
 // Now get the top and lowest 5 points in a week
 const allWeeklyResults = [];
@@ -373,21 +517,39 @@ players.forEach(player => {
 
 allWeeklyResults.sort((row1, row2) => row2.points - row1.points);
 
+const mostPointsInWeekDataToExport = {
+    id: 'mostWinsInWeek',
+    title: 'Top 5 Points in a Week',
+    description: 'These are the 5 people who got the most points in a single week',
+    data: [],
+};
+
 console.log();
-console.log('Top 10 Points in a week');
-for (let i = 0; i < 10; i++) {
+console.log('Top 5 Points in a week');
+for (let i = 0; i < 5; i++) {
     const result = allWeeklyResults[i];
+    mostPointsInWeekDataToExport.data.push(result);
     console.log(`${i + 1}. ${result.firstName} ${result.lastName} - ${result.week} - ${result.points}`);
 }
 
 allWeeklyResults.sort((row1, row2) => row1.points - row2.points);
 
+const leastPointsInWeekDataToExport = {
+    id: 'leastPointsInWeek',
+    title: 'Bottom 5 Points in a week',
+    description: 'These are the 5 people who got the lowest points in a single week',
+    data: [],
+};
+
 console.log();
-console.log('Lowest 10 Points in a week');
-for (let i = 0; i < 10; i++) {
+console.log('Lowest 5 Points in a week');
+for (let i = 0; i < 5; i++) {
     const result = allWeeklyResults[i];
+    leastPointsInWeekDataToExport.data.push(result);
     console.log(`${i + 1}. ${result.firstName} ${result.lastName} - ${result.week} - ${result.points}`);
 }
+
+yearlyAccolades.push(mostPointsInWeekDataToExport, leastPointsInWeekDataToExport);
 
 // Now get anyone who always picked a team to win or lose every week
 const pickingStats = [];
@@ -467,6 +629,13 @@ pickingStats.forEach(stats => {
     });
 });
 
+const teamsAlwaysPickedDataToExport = {
+    id: 'teamsAlwaysPicked',
+    title: 'Fan Favorite Teams',
+    description: 'These are the teams that had at least one person pick them to win every single week',
+    data: [],
+};
+
 console.log()
 console.log('People who always picked a team to win')
 const teamsAlwaysCount = [];
@@ -474,17 +643,26 @@ alwaysPickedFor.forEach((info, index) => {
     const { firstName, lastName, team, wins, losses } = info;
     const teamFound = teamsAlwaysCount.find(teamInfo => teamInfo.name === team);
     if (!teamFound) {
-        teamsAlwaysCount.push({ name: team, count: 1 });
+        teamsAlwaysCount.push({ name: team, count: 1, pickedBy: [`${firstName} ${lastName}`] });
     } else {
         teamFound.count++;
+        teamFound.pickedBy.push(`${firstName} ${lastName}`);
     }
     console.log(`${index + 1}. ${firstName} ${lastName} always picked ${team} (${wins}-${losses})`);
 });
+teamsAlwaysPickedDataToExport.data = teamsAlwaysCount;
 
 console.log()
 teamsAlwaysCount.forEach(team => {
     console.log(`${team.name} - ${team.count}`);
 });
+
+const teamsNeverPickedDataToExport = {
+    id: 'teamsNeverPicked',
+    title: 'Highly Hated Teams',
+    description: 'These are the teams that had at least one person never pick them to win every single week',
+    data: [],
+};
 
 console.log()
 console.log('People who always picked a team to lose');
@@ -493,18 +671,23 @@ alwaysPickedAgainst.forEach((info, index) => {
     const { firstName, lastName, team, wins, losses } = info;
     const teamFound = teamsNeverCount.find(teamInfo => teamInfo.name === team);
     if (!teamFound) {
-        teamsNeverCount.push({ name: team, count: 1 });
+        teamsNeverCount.push({ name: team, count: 1, pickedBy: [`${firstName} ${lastName}`] });
     } else {
         teamFound.count++;
+        teamFound.pickedBy.push(`${firstName} ${lastName}`);
     }
     console.log(`${index + 1}. ${firstName} ${lastName} always picked against ${team} (${wins}-${losses})`);
 });
+teamsNeverPickedDataToExport.data = teamsNeverCount;
+
+yearlyAccolades.push(teamsAlwaysPickedDataToExport, teamsNeverPickedDataToExport);
 
 console.log()
 teamsNeverCount.forEach(team => {
     console.log(`${team.name} - ${team.count}`);
 });
 
+// TODO: If anyone ever actually does this then add it, but I don't think it'll happen
 console.log()
 console.log('People who picked every game right for a team')
 perfectTeams.forEach((info, index) => {
@@ -518,3 +701,7 @@ reallyWrongTeams.forEach((info, index) => {
     const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
     console.log(`${index + 1}. ${firstName} ${lastName} was always wrong with ${team} (${timesCorrect}-${timesIncorrect})`);
 });
+
+const accoladesAsJson = JSON.stringify(yearlyAccolades, null, 2);
+fs.writeFileSync(path.resolve(`data/${year}/accolades.json`), accoladesAsJson);
+console.log(`Created a new file at data/${year}/accolades.json`);
