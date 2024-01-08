@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-import { CURRENT_WEEK } from '../constants';
 import { useState } from 'react';
 
 function NavBar() {
@@ -52,6 +51,7 @@ function NavBar() {
                             <Link className='navbar-item' to='/weekly-picks-images' onClick={onBurgerClick}>Picks w/ Images</Link>
                             <Link className='navbar-item' to='/consensus' onClick={onBurgerClick}>Consensus</Link>
                             <Link className='navbar-item' to='/standings-by-week' onClick={onBurgerClick}>Standings By Week</Link>
+                            <Link className='navbar-item' to='/yearly-awards' onClick={onBurgerClick}>Yearly Awards</Link>
                         </div>
                     </div>
                     {/* <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link> */}

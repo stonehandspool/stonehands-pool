@@ -70,9 +70,9 @@ function getEnding(place: number) {
     const lastDigit = +place.toString().slice(-1);
     if (lastDigit === 1 && place != 11) {
         return 'st';
-    } else if (lastDigit === 2) {
+    } else if (lastDigit === 2 && place != 12) {
         return 'nd';
-    } else if (lastDigit === 3) {
+    } else if (lastDigit === 3 && place != 13) {
         return 'rd';
     } else {
         return 'th';
@@ -122,7 +122,7 @@ function PersonalStats() {
             }
         }
     });
-    
+
     const { pointsByWeek } = userInfo;
     const teamsByPicks = getPickStats(userPicks, weeks);
 
@@ -144,7 +144,7 @@ function PersonalStats() {
 
         survivorColor = userInfo.aliveInSurvivor ? 'has-text-success' : 'has-text-danger';
         marginColor = userInfo.marginTotal > 0 ? 'has-text-success' : 'has-text-danger';
-    
+
         unusedSurvivorPicks = TEAM_CODES.filter(code => {
             return !userInfo.survivorPicks.includes(code);
         });
@@ -163,21 +163,21 @@ function PersonalStats() {
             unusedMarginPicks.push(userInfo.marginPicks[userInfo.marginPicks.length - 1].team);
             unusedMarginPicks.sort();
         }
-    
+
         bestMargin = userInfo.marginPicks.reduce((prev, current) => {
             return prev.margin > current.margin ? prev : current;
         });
         const { team, margin } = bestMargin;
         bestMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === team) + 1;
-        
+
         worstMargin = userInfo.marginPicks.reduce((prev, current) => {
             return prev.margin > current.margin && current.margin !== null ? current : prev;
         });
         const { team: worst, margin: worstVal } = worstMargin;
         worstMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === worst) + 1;
     }
-    
-    return(
+
+    return (
         <section className='section'>
             <div className='container'>
                 <div className='mb-5'>
