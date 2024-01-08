@@ -14,12 +14,12 @@ function About() {
     // Just dummy objects to allow the examples to somewhat work
     const [selectedPick, setSelectedPick] = useState<string>('');
     const [marginTeam, setMarginTeam] = useState<string>('');
-    const onUpdatePick = () => {};
-    const onUpdateConfidence = () => {};
+    const onUpdatePick = () => { };
+    const onUpdateConfidence = () => { };
     const handleMarginSelection = (team: string) => {
         setMarginTeam(team);
     };
-    const handleHighFiveSelection = () => {};
+    const handleHighFiveSelection = () => { };
 
     const numPlayers = 78;
     const buyIn = 100;
@@ -83,7 +83,7 @@ function About() {
                         <p className='mb-2'>
                             The second inspiration for this Pool is Stonehill College which was where I went to college.
                             Almost all of the fantasy leagues I'm part of are primarily made up of my friends from Stonehill, and I've always wanted another
-                            place for fantasy sports outside of our normal leagues. 
+                            place for fantasy sports outside of our normal leagues.
                         </p>
                         <p className='mb-2'>
                             <b>Stablehand x Stonehill = Stonehands!</b>
@@ -337,6 +337,7 @@ function About() {
                         <div className='content'>
                             <ul>
                                 <li>If there is a tie at the end of the season the only tiebreaker is number of games chosen correctly</li>
+                                {/* TODO: Update this to include perfect weeks followed by 5-point weeks */}
                                 <li>If multiple people end up with the same high five total and same number of game chosen correctly, they will split the pot</li>
                             </ul>
                         </div>
