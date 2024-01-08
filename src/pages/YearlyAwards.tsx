@@ -42,6 +42,14 @@ function YearlyAwards() {
     const leastEagerPeople = accolades.find(accolade => accolade.id === 'leastEagerPeople') as AccoladeInfo;
     const leastPointsInWeek = accolades.find(accolade => accolade.id === 'leastPointsInWeek') as AccoladeInfo;
     const loneLoser = accolades.find(accolade => accolade.id === 'loneLoser') as AccoladeInfo;
+    const survivor = accolades.find(accolade => accolade.id === 'survivor') as AccoladeInfo;
+    const marginPoints = accolades.find(accolade => accolade.id === 'marginPoints') as AccoladeInfo;
+    const marginWins = accolades.find(accolade => accolade.id === 'marginWins') as AccoladeInfo;
+    const highFivePoints = accolades.find(accolade => accolade.id === 'highFivePoints') as AccoladeInfo;
+    const highFiveWins = accolades.find(accolade => accolade.id === 'highFiveWins') as AccoladeInfo;
+    const teamsBestPicked = accolades.find(accolade => accolade.id === 'teamsBestPicked') as AccoladeInfo;
+    const teamsWorstPicked = accolades.find(accolade => accolade.id === 'teamsWorstPicked') as AccoladeInfo;
+    const secretMango = accolades.find(accolade => accolade.id === 'secretMango') as AccoladeInfo;
     console.log(accolades);
     return (
         <section className='section'>
@@ -345,6 +353,135 @@ function YearlyAwards() {
                         </table>
                     </div>
                 </div>
+                <h3 className='title is-1 has-text-centered'>Survivor Awards</h3>
+                <h2 className='title has-text-centered'>{survivor.title}</h2>
+                <h3 className='subtitle has-text-centered'>{survivor.description}</h3>
+                <table className='table is-striped is-hoverable mx-auto'>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Weeks Survived</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            survivor.data.map((info, index) => {
+                                return <tr key={`${info.name}-survivor`}>
+                                    <td>{info.name}</td>
+                                    <td>{info.weeksSurvived}</td>
+                                    <td>{info.year}</td>
+                                </tr>
+                            })
+                        }
+                    </tbody>
+                </table>
+                <h3 className='title is-1 has-text-centered'>Margin Awards</h3>
+                <div className='columns'>
+                    <div className='column'>
+                        <h2 className='title has-text-centered'>{marginPoints.title}</h2>
+                        <h3 className='subtitle has-text-centered'>{marginPoints.description}</h3>
+                        <table className='table is-striped is-hoverable mx-auto'>
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Name</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    marginPoints.data.map((info, index) => {
+                                        return <tr key={`${info.id}-marginPoints`}>
+                                            <td>{index + 1}</td>
+                                            <td>{`${info.firstName} ${info.lastName}`}</td>
+                                            <td><b>{info.marginTotal}</b></td>
+                                        </tr>
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className='column'>
+                        <h2 className='title has-text-centered'>{marginWins.title}</h2>
+                        <h3 className='subtitle has-text-centered'>{marginWins.description}</h3>
+                        <table className='table is-striped is-hoverable mx-auto'>
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Name</th>
+                                    <th>Wins</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    marginWins.data.map((info, index) => {
+                                        return <tr key={`${info.firstName}-${info.lastName}-marginWins`}>
+                                            <td>{index + 1}</td>
+                                            <td>{`${info.firstName} ${info.lastName}`}</td>
+                                            <td><b>{info.totalWins}</b></td>
+                                            <td>{info.marginTotal}</td>
+                                        </tr>
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h3 className='title is-1 has-text-centered'>High Five Awards</h3>
+                <div className='columns'>
+                    <div className='column'>
+                        <h2 className='title has-text-centered'>{highFivePoints.title}</h2>
+                        <h3 className='subtitle has-text-centered'>{highFivePoints.description}</h3>
+                        <table className='table is-striped is-hoverable mx-auto'>
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Name</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    highFivePoints.data.map((info, index) => {
+                                        return <tr key={`${info.id}-highFivePoints`}>
+                                            <td>{index + 1}</td>
+                                            <td>{`${info.firstName} ${info.lastName}`}</td>
+                                            <td><b>{info.highFiveTotal}</b></td>
+                                        </tr>
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className='column'>
+                        <h2 className='title has-text-centered'>{highFiveWins.title}</h2>
+                        <h3 className='subtitle has-text-centered'>{highFiveWins.description}</h3>
+                        <table className='table is-striped is-hoverable mx-auto'>
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Name</th>
+                                    <th>Wins</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    highFiveWins.data.map((info, index) => {
+                                        return <tr key={`${info.firstName}-${info.lastName}-highFiveWins`}>
+                                            <td>{index + 1}</td>
+                                            <td>{`${info.firstName} ${info.lastName}`}</td>
+                                            <td><b>{info.totalWins}</b></td>
+                                            <td>{info.highFiveTotal}</td>
+                                        </tr>
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <h3 className='title is-1 has-text-centered'>Random Awards</h3>
                 <div className='columns'>
                     <div className='column'>
@@ -450,11 +587,59 @@ function YearlyAwards() {
                         </table>
                     </div>
                 </div>
+                <div className='columns'>
+                    <div className='column'>
+                        <h2 className='title has-text-centered'>{teamsBestPicked.title}</h2>
+                        <h3 className='subtitle has-text-centered'>{teamsBestPicked.description}</h3>
+                        <table className='table is-striped is-hoverable mx-auto'>
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Name</th>
+                                    <th>Teams</th>
+                                    <th>Record (W-L)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    teamsBestPicked.data.map((info, index) => {
+                                        return <tr key={`${info.firstName}-${info.lastName}-teamsBestPicked`}>
+                                            <td>{index + 1}</td>
+                                            <td>{`${info.firstName} ${info.lastName}`}</td>
+                                            <td><b>{info.team}</b></td>
+                                            <td>({info.timesCorrect}-{info.timesIncorrect})</td>
+                                        </tr>
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className='column'>
+                        <h2 className='title has-text-centered'>{secretMango.title}</h2>
+                        <h3 className='subtitle has-text-centered'>{secretMango.description}</h3>
+                        <table className='table is-striped is-hoverable mx-auto'>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Week</th>
+                                    <th>Year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    secretMango.data.map((info, index) => {
+                                        return <tr key={`${info.name}-secretMango`}>
+                                            <td>{`${info.name}`}</td>
+                                            <td><b>{info.week}</b></td>
+                                            <td>{info.year}</td>
+                                        </tr>
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <h3 className='title is-1 has-text-centered'>Lowlights from 2023</h3>
-                {/* const forgetfulPeople = accolades.find(accolade => accolade.id === 'forgetfulPeople') as AccoladeInfo;
-    const leastEagerPeople = accolades.find(accolade => accolade.id === 'leastEagerPeople') as AccoladeInfo;
-    const leastPointsInWeek = accolades.find(accolade => accolade.id === 'leastPointsInWeek') as AccoladeInfo;
-    const loneLoser = accolades.find(accolade => accolade.id === 'loneLoser') as AccoladeInfo; */}
                 <div className='columns'>
                     <div className='column'>
                         <h2 className='title has-text-centered'>{forgetfulPeople.title}</h2>
@@ -470,7 +655,7 @@ function YearlyAwards() {
                             <tbody>
                                 {
                                     forgetfulPeople.data.map((info, index) => {
-                                        return <tr key={`${info.name}-forgetfulPeople`}>
+                                        return <tr key={`${info.userId}-forgetfulPeople`}>
                                             <td>{index + 1}</td>
                                             <td>{`${info.firstName} ${info.lastName}`}</td>
                                             <td><b>{info.timesForgotten}</b></td>
@@ -546,7 +731,7 @@ function YearlyAwards() {
                             <tbody>
                                 {
                                     leastPointsInWeek.data.map((info, index) => {
-                                        return <tr key={`${info.userId}-leastPointsInWeek`}>
+                                        return <tr key={`${info.id}-leastPointsInWeek`}>
                                             <td>{index + 1}</td>
                                             <td>{`${info.firstName} ${info.lastName}`}</td>
                                             <td><b>{info.points}</b></td>
@@ -559,6 +744,30 @@ function YearlyAwards() {
                         </table>
                     </div>
                 </div>
+                <h2 className='title has-text-centered'>{teamsWorstPicked.title}</h2>
+                <h3 className='subtitle has-text-centered'>{teamsWorstPicked.description}</h3>
+                <table className='table is-striped is-hoverable mx-auto'>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Teams</th>
+                            <th>Record (W-L)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            teamsWorstPicked.data.map((info, index) => {
+                                return <tr key={`${info.firstName}-${info.lastName}-teamsWorstPicked`}>
+                                    <td>{index + 1}</td>
+                                    <td>{`${info.firstName} ${info.lastName}`}</td>
+                                    <td><b>{info.team}</b></td>
+                                    <td>({info.timesCorrect}-{info.timesIncorrect})</td>
+                                </tr>
+                            })
+                        }
+                    </tbody>
+                </table>
             </div>
         </section>
     );

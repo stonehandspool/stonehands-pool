@@ -738,6 +738,139 @@ for (let i = 0; i < 5; i++) {
 
 yearlyAccolades.push(teamsBestPickedDataToExport, teamsWorstPickedDataToExport);
 
+// Next, add in the secret mango award
+const secretMangoDataToExport = {
+    id: 'secretMango',
+    title: 'The "Secret Mango" Award',
+    description: 'This is given to those who discover the hidden "Secret Mango" award on the website',
+    data: [
+        {
+            name: 'Kailey Fandl',
+            week: 9,
+            year: 2023
+        },
+    ],
+};
+
+yearlyAccolades.push(secretMangoDataToExport);
+
+// Survivor Pool Stuff
+const survivorDataToExport = {
+    id: 'survivor',
+    title: 'Survivor Pool Winners',
+    description: 'The winners of the Survivor Pool throughout the years',
+    data: [
+        {
+            name: 'Brandon Horn',
+            weeksSurvived: 11,
+            year: 2023
+        },
+    ],
+};
+
+yearlyAccolades.push(survivorDataToExport);
+
+// Margin Pool Stuff
+const marginPointsDataToExport = {
+    id: 'marginPoints',
+    title: 'Top 5 Margin (Points)',
+    description: 'These are the 5 people who earned the most points in the Margin Pool',
+    data: [],
+};
+
+players.sort((a, b) => b.marginTotal - a.marginTotal);
+
+console.log();
+console.log('Top 5 Margin Points')
+for (let i = 0; i < 5; i++) {
+    const info = players[i];
+    const { firstName, lastName, marginTotal } = info;
+    marginPointsDataToExport.data.push(info);
+    console.log(`${i + 1}. ${firstName} ${lastName} - ${marginTotal}`);
+}
+
+const marginWins = [];
+const marginWinsDataToExport = {
+    id: 'marginWins',
+    title: 'Top 5 Margin (Wins)',
+    description: 'These are the 5 people who earned the most wins in the Margin Pool',
+    data: [],
+};
+players.forEach(player => {
+    const { firstName, lastName, marginTotal, marginPicks } = player;
+    const totalWins = marginPicks.reduce((n, val) => n + (val.margin > 0 ? 1 : 0), 0);
+    marginWins.push({ firstName, lastName, marginTotal, totalWins });
+});
+
+marginWins.sort((a, b) => b.totalWins - a.totalWins);
+console.log();
+console.log('Top 5 Margin Wins');
+for (let i = 0; i < 5; i++) {
+    const info = marginWins[i];
+    const { firstName, lastName, totalWins } = info;
+    marginWinsDataToExport.data.push(info);
+    console.log(`${i + 1}. ${firstName} ${lastName} - ${totalWins}`);
+}
+
+yearlyAccolades.push(marginPointsDataToExport, marginWinsDataToExport);
+
+// High Five Stuff
+const highFivePointsDataToExport = {
+    id: 'highFivePoints',
+    title: 'Top 5 High Five (Points)',
+    description: 'These are the 5 people who earned the most points in the High Five Pool',
+    data: [],
+};
+
+players.sort((a, b) => b.highFiveTotal - a.highFiveTotal);
+
+console.log();
+console.log('Top 5 High Five Points')
+for (let i = 0; i < 5; i++) {
+    const info = players[i];
+    const { firstName, lastName, highFiveTotal } = info;
+    highFivePointsDataToExport.data.push(info);
+    console.log(`${i + 1}. ${firstName} ${lastName} - ${highFiveTotal}`);
+}
+
+const highFiveWins = [];
+const highFiveWinsDataToExport = {
+    id: 'highFiveWins',
+    title: 'Top 5 High Five (Wins)',
+    description: 'These are the 5 people who earned the most wins in the High Five Pool',
+    data: [],
+};
+players.forEach(player => {
+    const { firstName, lastName, highFiveTotal, highFiveValues } = player;
+    const totalWins = highFiveValues.reduce((n, val) => {
+        if (val === 1) {
+            return n + 1;
+        } else if (val === 2) {
+            return n + 2;
+        } else if (val === 3) {
+            return n + 3;
+        } else if (val === 5) {
+            return n + 4;
+        } else if (val === 8) {
+            return n + 5;
+        }
+        return n;
+    }, 0);
+    highFiveWins.push({ firstName, lastName, highFiveTotal, totalWins });
+});
+
+highFiveWins.sort((a, b) => b.totalWins - a.totalWins);
+console.log();
+console.log('Top 5 High Fives Wins');
+for (let i = 0; i < 5; i++) {
+    const info = highFiveWins[i];
+    const { firstName, lastName, totalWins } = info;
+    highFiveWinsDataToExport.data.push(info);
+    console.log(`${i + 1}. ${firstName} ${lastName} - ${totalWins}`);
+}
+
+yearlyAccolades.push(highFivePointsDataToExport, highFiveWinsDataToExport);
+
 // TODO: If anyone ever actually does this then add it, but I don't think it'll happen
 console.log()
 console.log('People who picked every game right for a team')
