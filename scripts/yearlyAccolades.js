@@ -618,12 +618,14 @@ const alwaysPickedFor = [];
 const alwaysPickedAgainst = [];
 const perfectTeams = [];
 const reallyWrongTeams = [];
-const totalGamesPlayed = 16; // TODO: turn this to 17 once the week is over!
+const forBestAndWorstPicking = [];
+const totalGamesPlayed = 17;
 
 pickingStats.forEach(stats => {
     const { userId, firstName, lastName, teamArray } = stats;
     teamArray.forEach(teamInfo => {
         const { team, wins, losses, timesCorrect, timesIncorrect } = teamInfo;
+        forBestAndWorstPicking.push({ userId, firstName, lastName, team, timesCorrect, timesIncorrect });
         if (wins === totalGamesPlayed) {
             alwaysPickedFor.push({ userId, firstName, lastName, team, wins, losses, year });
         } else if (losses === totalGamesPlayed) {
@@ -699,6 +701,42 @@ console.log()
 teamsNeverCount.forEach(team => {
     console.log(`${team.name} - ${team.count}`);
 });
+
+// Now find the top 5 most accurate picking for a specific team by a person
+const teamsBestPickedDataToExport = {
+    id: 'teamsBestPicked',
+    title: 'Best Job Picking',
+    description: 'These 5 people were the best at picking a specific teams win/loss week by week',
+    data: [],
+};
+forBestAndWorstPicking.sort((a, b) => b.timesCorrect - a.timesCorrect);
+console.log();
+console.log('Best at Picking a Team')
+for (let i = 0; i < 5; i++) {
+    const info = forBestAndWorstPicking[i];
+    const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
+    teamsBestPickedDataToExport.data.push(info);
+    console.log(`${i + 1}. ${firstName} ${lastName} was best with ${team} (${timesCorrect}-${timesIncorrect})`);
+}
+
+// Now find the top 5 least accurate picking for a specific team by a person
+const teamsWorstPickedDataToExport = {
+    id: 'teamsWorstPicked',
+    title: 'Worst Job Picking',
+    description: 'These 5 people were the worst at picking a specific teams win/loss week by week',
+    data: [],
+};
+forBestAndWorstPicking.sort((a, b) => b.timesIncorrect - a.timesIncorrect);
+console.log();
+console.log('Worst at Picking a Team')
+for (let i = 0; i < 5; i++) {
+    const info = forBestAndWorstPicking[i];
+    const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
+    teamsWorstPickedDataToExport.data.push(info);
+    console.log(`${i + 1}. ${firstName} ${lastName} was worst with ${team} (${timesCorrect}-${timesIncorrect})`);
+}
+
+yearlyAccolades.push(teamsBestPickedDataToExport, teamsWorstPickedDataToExport);
 
 // TODO: If anyone ever actually does this then add it, but I don't think it'll happen
 console.log()
