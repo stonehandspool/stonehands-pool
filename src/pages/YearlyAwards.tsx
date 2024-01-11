@@ -21,8 +21,6 @@ function getEnding(place: number) {
     }
 }
 
-// TODO: Add in the secret mango award!!
-
 function YearlyAwards() {
     const mostPoints = accolades.find(accolade => accolade.id === 'mostPoints') as AccoladeInfo;
     const mostWins = accolades.find(accolade => accolade.id === 'mostWins') as AccoladeInfo;

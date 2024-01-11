@@ -10301,3 +10301,125 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: hsl(0, 0%, 98%);
   padding: 3rem 1.5rem 6rem;
 }
+
+@media screen {
+  /*
+     * Fix borders
+     */
+  .table.has-sticky-column,
+  .table.has-sticky-footer,
+  .table.has-sticky-header {
+    border-collapse: separate;
+  }
+  .table.has-sticky-column tbody td,
+  .table.has-sticky-column tbody th,
+  .table.has-sticky-column thead td,
+  .table.has-sticky-column thead th,
+  .table.has-sticky-footer tbody td,
+  .table.has-sticky-footer tbody th,
+  .table.has-sticky-footer thead td,
+  .table.has-sticky-footer thead th,
+  .table.has-sticky-header tbody td,
+  .table.has-sticky-header tbody th,
+  .table.has-sticky-header thead td,
+  .table.has-sticky-header thead th {
+    border-top-width: 0;
+  }
+  .table.has-sticky-column.is-bordered,
+  .table.has-sticky-footer.is-bordered,
+  .table.has-sticky-header.is-bordered {
+    border: 1px solid hsl(0, 0%, 86%);
+  }
+  .table.has-sticky-column.is-bordered td,
+  .table.has-sticky-column.is-bordered th,
+  .table.has-sticky-footer.is-bordered td,
+  .table.has-sticky-footer.is-bordered th,
+  .table.has-sticky-header.is-bordered td,
+  .table.has-sticky-header.is-bordered th {
+    border-left-width: 0;
+  }
+  .table.has-sticky-column.is-bordered td:last-child,
+  .table.has-sticky-column.is-bordered th:last-child,
+  .table.has-sticky-footer.is-bordered td:last-child,
+  .table.has-sticky-footer.is-bordered th:last-child,
+  .table.has-sticky-header.is-bordered td:last-child,
+  .table.has-sticky-header.is-bordered th:last-child {
+    border-right-width: 0;
+  }
+  .table.has-sticky-column.is-bordered tbody tr:last-child td,
+  .table.has-sticky-column.is-bordered tbody tr:last-child th,
+  .table.has-sticky-column.is-bordered tfoot tr:last-child td,
+  .table.has-sticky-column.is-bordered tfoot tr:last-child th,
+  .table.has-sticky-footer.is-bordered tbody tr:last-child td,
+  .table.has-sticky-footer.is-bordered tbody tr:last-child th,
+  .table.has-sticky-footer.is-bordered tfoot tr:last-child td,
+  .table.has-sticky-footer.is-bordered tfoot tr:last-child th,
+  .table.has-sticky-header.is-bordered tbody tr:last-child td,
+  .table.has-sticky-header.is-bordered tbody tr:last-child th,
+  .table.has-sticky-header.is-bordered tfoot tr:last-child td,
+  .table.has-sticky-header.is-bordered tfoot tr:last-child th {
+    border-bottom-width: 0;
+  }
+  /*
+     * Sticky Header
+     */
+  .table.has-sticky-header thead th {
+    background-color: hsl(0, 0%, 100%);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+  .has-navbar-fixed-top * .table.has-sticky-header thead th,
+  .has-navbar-fixed-top .table.has-sticky-header thead th {
+    top: 3.25rem;
+  }
+  .has-navbar-fixed-top * .modal .table.has-sticky-header thead th,
+  .has-navbar-fixed-top .modal .table.has-sticky-header thead th {
+    top: 0;
+  }
+  /*
+     * Sticky Footer
+    */
+  .table.has-sticky-footer tfoot th {
+    background-color: hsl(0, 0%, 100%);
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+  }
+  .has-navbar-fixed-bottom * .table.has-sticky-footer tfoot th,
+  .has-navbar-fixed-bottom .table.has-sticky-footer tfoot th {
+    bottom: 3.25rem;
+  }
+  .has-navbar-fixed-bottom * .modal .table.has-sticky-footer tfoot th,
+  .has-navbar-fixed-bottom .modal .table.has-sticky-footer tfoot th {
+    bottom: 0;
+  }
+  /*
+     * Sticky Column
+     */
+  .table.has-sticky-column tfoot th:first-child,
+  .table.has-sticky-column thead th:first-child {
+    background-color: hsl(0, 0%, 100%);
+    position: sticky;
+    left: 0;
+    z-index: 6;
+  }
+  .table.has-sticky-column tbody th:first-child {
+    background-color: hsl(0, 0%, 100%);
+    position: sticky;
+    left: 0;
+    z-index: 5;
+  }
+  .table.has-sticky-column tbody tr.is-selected th:first-child {
+    background-color: #54188b;
+  }
+  .table.has-sticky-column.is-hoverable tbody tr:not(.is-selected):hover th:first-child {
+    background-color: hsl(0, 0%, 98%);
+  }
+  .table.has-sticky-column.is-striped tbody tr:not(.is-selected):nth-child(even) th:first-child {
+    background-color: hsl(0, 0%, 98%);
+  }
+  .table.has-sticky-column.is-striped.is-hoverable tbody tr:not(.is-selected):nth-child(even):hover th:first-child {
+    background-color: hsl(0, 0%, 96%);
+  }
+}
