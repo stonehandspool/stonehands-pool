@@ -15,13 +15,16 @@ function Payouts() {
         }
     };
 
+    let totalPaidOut = 0;
+    payouts.forEach(person => totalPaidOut += person.totalEarned);
+
     return (
         <section className='section'>
             <div className='container'>
                 <h1 className='title has-text-centered'>{CURRENT_YEAR} Stonehands Pool</h1>
                 <h2 className='subtitle has-text-centered'>The Yearly Payouts owed to everyone after the 2023 Season</h2>
-                <div className='table-container'>
-                    <table className='table is-bordered is-striped is-hoverable'>
+                <div className='table-container' style={{ overflowY: 'auto', maxHeight: '75vh' }}>
+                    <table className='table is-bordered is-striped is-hoverable is-narrow has-sticky-column'>
                         <thead>
                             <tr>
                                 <td></td>
@@ -39,8 +42,13 @@ function Payouts() {
                             {
                                 payouts.map(info => {
                                     return (
-                                        <tr key={`${info.id}-row`} id={`${info.id}`} onClick={() => onClick(info.id)} className={selectedRow === info.id ? 'is-selected' : ''}>
-                                            <td key={`${info.id}-name`}>{`${info.firstName} ${info.lastName}`}</td>
+                                        <tr
+                                            key={`${info.id}-row`}
+                                            id={`${info.id}`}
+                                            onClick={() => onClick(info.id)}
+                                            className={selectedRow === info.id ? 'is-selected' : ''}
+                                        >
+                                            <th key={`${info.id}-name`} style={{ whiteSpace: 'nowrap' }}>{`${info.firstName} ${info.lastName}`}</th>
                                             {
                                                 info.weeklyPayouts.map((payout, index) => {
                                                     if (payout === 0) {
@@ -59,6 +67,10 @@ function Payouts() {
                                     )
                                 })
                             }
+                            <tr>
+                                <td colSpan={headers.length - 1}></td>
+                                <td>${totalPaidOut.toFixed(2)}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
