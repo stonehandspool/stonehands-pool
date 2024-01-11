@@ -19,10 +19,10 @@ function NavBar() {
                     <h3 className='title is-4 has-text-white stonehands-hero'>STONEHANDS</h3>
                 </a>
                 <a
-                    role='button' 
+                    role='button'
                     className={`navbar-burger ${burgerState ? 'is-active' : ''}`}
-                    aria-label='menu' 
-                    aria-expanded='false' 
+                    aria-label='menu'
+                    aria-expanded='false'
                     onClick={onBurgerClick}
                 >
                     <span aria-hidden='true'></span>
@@ -52,6 +52,7 @@ function NavBar() {
                             <Link className='navbar-item' to='/consensus' onClick={onBurgerClick}>Consensus</Link>
                             <Link className='navbar-item' to='/standings-by-week' onClick={onBurgerClick}>Standings By Week</Link>
                             <Link className='navbar-item' to='/yearly-awards' onClick={onBurgerClick}>Yearly Awards</Link>
+                            <Link className='navbar-item' to='/payouts' onClick={onBurgerClick}>2023 Payouts</Link>
                         </div>
                     </div>
                     {/* <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link> */}
