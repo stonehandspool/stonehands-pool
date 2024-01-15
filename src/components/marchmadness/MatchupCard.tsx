@@ -19,13 +19,20 @@ function MatchupCard(props: MatchupCardProps) {
         if (!_.isEqual(currentMatchupInfo, matchupInfo)) {
             // If the new matchup info is different then update our saved state of that and reset selection
             setCurrentMatchupInfo(matchupInfo);
-            setSelectedTeam(null);
+            if (selectedTeam !== matchupInfo.winner) {
+                // Only reset the selected the prior losing team has changed
+                setSelectedTeam(null);
+            }
         }
     }, [matchupInfo]);
 
     const chooseTeam = (direction: 'top' | 'bottom') => {
-        const matchupCopy = JSON.parse(JSON.stringify(matchupInfo));
+        if ((direction === 'top' && matchupInfo.topTeam.name === null) || (direction === 'bottom' && matchupInfo.bottomTeam.name === null)) {
+            return;
+        }
+        const matchupCopy = _.cloneDeep(matchupInfo);
         matchupCopy.winner = direction;
+        setCurrentMatchupInfo(matchupCopy);
         setSelectedTeam(direction);
         onClick(matchupCopy);
     }
@@ -55,24 +62,11 @@ function MatchupCard(props: MatchupCardProps) {
                         <span
                             className={selectedTeam === 'bottom' ? 'has-text-weight-bold' : 'has-text-weight-normal'}
                         >
-                            {bottomTeam.name !== null ? bottomTeam.name : 'TBD'} {bottomTeam.record !== null ? `(${bottomTeam.record})`: ''}
+                            {bottomTeam.name !== null ? bottomTeam.name : 'TBD'} {bottomTeam.record !== null ? `(${bottomTeam.record})` : ''}
                         </span>
                     </div>
                 </div>
             </div>
-            <div style={{
-                content: '',
-                position: 'absolute',
-                borderColor: 'black',
-                borderWidth: '2px',
-                display: 'block',
-                width: '0.75rem',
-                height: '50%',
-                borderRightStyle: 'solid',
-                borderTopStyle: 'solid',
-                top: '50%',
-                right: '-10px',
-                }} />
         </div>
     )
 }
