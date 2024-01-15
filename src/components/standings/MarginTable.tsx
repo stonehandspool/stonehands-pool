@@ -66,7 +66,7 @@ function MarginTable() {
     // can't see what people have chosen prior to the cutoff happening
     const currentTime = new Date();
     const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
-    
+
     return (
         <section className='section'>
             <div className='container pb-6'>
@@ -102,48 +102,48 @@ function MarginTable() {
                         </tr>
                     </thead>
                     <tbody>
-                            {playerPicks.map((row, index) => {
-                                return <tr key={`${index}`}>
-                                    <td key={`${row.name}-rank-${index}`} className='is-vcentered'>{index + 1}</td>
-                                    <td key={`${row.name}-row-${index}`} className='is-vcentered'>{row.name}</td>
-                                    <td key={`${row.name}-total-${index}`} className='is-vcentered'><strong>{row.marginTotal > 0 ? '+' : ''}{row.marginTotal}</strong></td>
-                                    {
-                                        weeksArr.map((week, ind) => {
-                                            const gameCompleted = getGameCompleted(row.marginPicks[ind]?.team);
-                                            const isCurrentWeek = ind === CURRENT_WEEK - 1;
-                                            if (isCurrentWeek && !showAllPicks && !gameCompleted) {
-                                                return <td key={`${row.name}-hidden`}></td>
-                                            } else if (isCurrentWeek && !showAllPicks && gameCompleted) {
-                                                // If we don't want to show everything but a user has picked a game that has completed already
-                                                if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number > 0) {
-                                                    //If the margin of victory was over 0, have a green background
-                                                    return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.marginPicks[ind].team}<br />+{row.marginPicks[ind].margin}</td>
-                                                } else if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number < 0) {
-                                                    // If the margin of victory was under 0, have a red background
-                                                    return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
-                                                } else {
-                                                    // If the margin of victory was 0 or null (unfinished game) then no background
-                                                    return <td key={`${row.name}-${ind}`}>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
-                                                }
-                                            } else if (row.marginPicks[ind]) {
-                                                if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number > 0) {
-                                                    //If the margin of victory was over 0, have a green background
-                                                    return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.marginPicks[ind].team}<br />+{row.marginPicks[ind].margin}</td>
-                                                } else if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number < 0) {
-                                                    // If the margin of victory was under 0, have a red background
-                                                    return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
-                                                } else {
-                                                    // If the margin of victory was 0 or null (unfinished game) then no background
-                                                    return <td key={`${row.name}-${ind}`}>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
-                                                }
+                        {playerPicks.map((row, index) => {
+                            return <tr key={`${index}`}>
+                                <td key={`${row.name}-rank-${index}`} className='is-vcentered'>{index + 1}</td>
+                                <td key={`${row.name}-row-${index}`} className='is-vcentered'>{row.name}</td>
+                                <td key={`${row.name}-total-${index}`} className='is-vcentered'><strong>{row.marginTotal > 0 ? '+' : ''}{row.marginTotal}</strong></td>
+                                {
+                                    weeksArr.map((week, ind) => {
+                                        const gameCompleted = getGameCompleted(row.marginPicks[ind]?.team);
+                                        const isCurrentWeek = ind === CURRENT_WEEK - 1;
+                                        if (isCurrentWeek && !showAllPicks && !gameCompleted) {
+                                            return <td key={`${row.name}-hidden`}></td>
+                                        } else if (isCurrentWeek && !showAllPicks && gameCompleted) {
+                                            // If we don't want to show everything but a user has picked a game that has completed already
+                                            if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number > 0) {
+                                                //If the margin of victory was over 0, have a green background
+                                                return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.marginPicks[ind].team}<br />+{row.marginPicks[ind].margin}</td>
+                                            } else if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number < 0) {
+                                                // If the margin of victory was under 0, have a red background
+                                                return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
                                             } else {
-                                                return <td key={`${row.name}-${ind}`}></td>
+                                                // If the margin of victory was 0 or null (unfinished game) then no background
+                                                return <td key={`${row.name}-${ind}`}>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
                                             }
-                                        })
-                                    }
-                                    <td key={`${row.name}-wins-${index}`} className='is-vcentered'>{row.numWins}</td>
-                                </tr>
-                            })}
+                                        } else if (row.marginPicks[ind]) {
+                                            if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number > 0) {
+                                                //If the margin of victory was over 0, have a green background
+                                                return <td key={`${row.name}-${ind}`} className='has-background-success'>{row.marginPicks[ind].team}<br />+{row.marginPicks[ind].margin}</td>
+                                            } else if (row.marginPicks[ind].margin !== null && row.marginPicks[ind].margin as number < 0) {
+                                                // If the margin of victory was under 0, have a red background
+                                                return <td key={`${row.name}-${ind}`} className='has-background-danger'>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
+                                            } else {
+                                                // If the margin of victory was 0 or null (unfinished game) then no background
+                                                return <td key={`${row.name}-${ind}`}>{row.marginPicks[ind].team}<br />{row.marginPicks[ind].margin}</td>
+                                            }
+                                        } else {
+                                            return <td key={`${row.name}-${ind}`}></td>
+                                        }
+                                    })
+                                }
+                                <td key={`${row.name}-wins-${index}`} className='is-vcentered'>{row.numWins}</td>
+                            </tr>
+                        })}
                     </tbody>
                 </table>
             </div>

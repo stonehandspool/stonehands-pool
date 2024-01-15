@@ -12,6 +12,7 @@
     "process-week": "node scripts/processWeek.js"
   },
   "dependencies": {
+    "@cityssm/bulma-sticky-table": "^2.1.0",
     "@supabase/supabase-js": "^2.2.3",
     "bulma": "^0.9.4",
     "email-validator": "^2.0.4",

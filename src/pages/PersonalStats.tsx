@@ -22,13 +22,22 @@ type TeamInfo = {
     wins: number;
     losses: number;
     ties: number;
+    timesCorrect: number;
+    timesIncorrect: number;
 };
 
 function getPickStats(userPicks: SubmissionInfo[], weeks: any) {
     // Init an array of the teams to keep track
     const teamArray: TeamInfo[] = [];
     TEAM_CODES.map(teamCode => {
-        teamArray.push({ team: teamCode, wins: 0, losses: 0, ties: 0 });
+        teamArray.push({
+            team: teamCode,
+            wins: 0,
+            losses: 0,
+            ties: 0,
+            timesCorrect: 0,
+            timesIncorrect: 0,
+        });
     });
 
     // The user picks unfortunately go from matchup-0 to matchup-15 while the weekly data goes
@@ -38,18 +47,18 @@ function getPickStats(userPicks: SubmissionInfo[], weeks: any) {
         const weeklyMatchups = weeks[`week_${index + 1}` as keyof typeof weeks];
         Object.keys(weeklyMatchups).map((matchup, ind) => {
             const userPick = picks[`matchup-${ind}` as keyof typeof picks];
-            const { home_team, away_team } = weeklyMatchups[matchup];
-            if (userPick === 'Tie') {
-                const homeTeam = teamArray.find(team => team.team === home_team);
-                const awayTeam = teamArray.find(team => team.team === away_team);
-                homeTeam && homeTeam.ties++;
-                awayTeam && awayTeam.ties++;
+            const { home_team, away_team, winner } = weeklyMatchups[matchup];
+            const pickedLoser = userPick === home_team ? away_team : home_team;
+            const userWinner = teamArray.find(team => team.team === userPick);
+            const userLoser = teamArray.find(team => team.team === pickedLoser);
+            userWinner && userWinner.wins++;
+            userLoser && userLoser.losses++;
+            if (userPick === winner) {
+                userWinner && userWinner.timesCorrect++;
+                userLoser && userLoser.timesCorrect++;
             } else {
-                const pickedLoser = userPick === home_team ? away_team : home_team;
-                const userWinner = teamArray.find(team => team.team === userPick);
-                const userLoser = teamArray.find(team => team.team === pickedLoser);
-                userWinner && userWinner.wins++;
-                userLoser && userLoser.losses++;    
+                userWinner && userWinner.timesIncorrect++;
+                userLoser && userLoser.timesIncorrect++;
             }
         });
     });
@@ -61,9 +70,9 @@ function getEnding(place: number) {
     const lastDigit = +place.toString().slice(-1);
     if (lastDigit === 1 && place != 11) {
         return 'st';
-    } else if (lastDigit === 2) {
+    } else if (lastDigit === 2 && place != 12) {
         return 'nd';
-    } else if (lastDigit === 3) {
+    } else if (lastDigit === 3 && place != 13) {
         return 'rd';
     } else {
         return 'th';
@@ -105,7 +114,7 @@ function PersonalStats() {
 
     const userPicks: SubmissionInfo[] = [];
     Object.keys(weeklyPicks.weeklyPicks).map((key, index) => {
-        const week: SubmissionInfo[] = weeklyPicks.weeklyPicks[`week_${index + 1}` as keyof typeof weeklyPicks.weeklyPicks] as SubmissionInfo[];
+        const week: SubmissionInfo[] = weeklyPicks.weeklyPicks[`week_${index + 1}` as keyof typeof weeklyPicks.weeklyPicks] as unknown as SubmissionInfo[];
         if (week && week.length > 0 && index < weekToShow) {
             const playerPicksThisWeek = week.find(submission => submission.submission_data.username === username);
             if (playerPicksThisWeek) {
@@ -113,7 +122,7 @@ function PersonalStats() {
             }
         }
     });
-    
+
     const { pointsByWeek } = userInfo;
     const teamsByPicks = getPickStats(userPicks, weeks);
 
@@ -135,7 +144,7 @@ function PersonalStats() {
 
         survivorColor = userInfo.aliveInSurvivor ? 'has-text-success' : 'has-text-danger';
         marginColor = userInfo.marginTotal > 0 ? 'has-text-success' : 'has-text-danger';
-    
+
         unusedSurvivorPicks = TEAM_CODES.filter(code => {
             return !userInfo.survivorPicks.includes(code);
         });
@@ -154,21 +163,21 @@ function PersonalStats() {
             unusedMarginPicks.push(userInfo.marginPicks[userInfo.marginPicks.length - 1].team);
             unusedMarginPicks.sort();
         }
-    
+
         bestMargin = userInfo.marginPicks.reduce((prev, current) => {
             return prev.margin > current.margin ? prev : current;
         });
         const { team, margin } = bestMargin;
         bestMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === team) + 1;
-        
+
         worstMargin = userInfo.marginPicks.reduce((prev, current) => {
             return prev.margin > current.margin && current.margin !== null ? current : prev;
         });
         const { team: worst, margin: worstVal } = worstMargin;
         worstMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === worst) + 1;
     }
-    
-    return(
+
+    return (
         <section className='section'>
             <div className='container'>
                 <div className='mb-5'>

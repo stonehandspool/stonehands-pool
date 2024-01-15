@@ -36,7 +36,7 @@ function ConfidenceWeeklyConsensusTable() {
     const weeklyConsensusArr: MatchupConsensusInfo[] = [];
     const allWeeks = seasonData.weeks;
     const weekField = `week_${weekToShow}`;
-    const weekPicks: SubmissionInfo[] = playerPicks.weeklyPicks[weekField as keyof typeof playerPicks.weeklyPicks] as SubmissionInfo[];
+    const weekPicks: SubmissionInfo[] = playerPicks.weeklyPicks[weekField as keyof typeof playerPicks.weeklyPicks] as unknown as SubmissionInfo[];
     const weekGames = allWeeks[weekField as keyof typeof allWeeks];
     
     // First set up the initial values for the consensus info
