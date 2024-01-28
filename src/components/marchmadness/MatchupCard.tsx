@@ -19,9 +19,12 @@ function MatchupCard(props: MatchupCardProps) {
         if (!_.isEqual(currentMatchupInfo, matchupInfo)) {
             // If the new matchup info is different then update our saved state of that and reset selection
             setCurrentMatchupInfo(matchupInfo);
-            if (selectedTeam !== matchupInfo.winner) {
+            if (selectedTeam !== null && selectedTeam !== matchupInfo.winner) {
                 // Only reset the selected the prior losing team has changed
                 setSelectedTeam(null);
+            } else if (selectedTeam === null) {
+                // If getting data from prior picks, bold the previously chosen winners
+                setSelectedTeam(matchupInfo.winner);
             }
         }
     }, [matchupInfo]);

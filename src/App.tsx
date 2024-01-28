@@ -22,6 +22,7 @@ const PasswordResetRequest = lazy(() => import('./pages/PasswordResetRequest'));
 const PasswordReset = lazy(() => import('./pages/PasswordReset'));
 const StandingsByWeek = lazy(() => import('./pages/StandingsByWeek'));
 const MarchMadnessPicksheet = lazy(() => import('./pages/MarchMadnessPicksheet'));
+const MarchMadnessPicksheetSuccess = lazy(() => import('./pages/MarchMadnessPicksheetSuccess'));
 const YearlyAwards = lazy(() => import('./pages/YearlyAwards'));
 const Payouts = lazy(() => import('./pages/Payouts'));
 
@@ -50,6 +51,7 @@ function App() {
           <Route path='/password-reset' element={<PasswordReset />} />
           <Route path='/standings-by-week' element={<StandingsByWeek />} />
           <Route path='/march-madness/picksheet' element={<MarchMadnessPicksheet />} />
+          <Route path='/march-madness/picksheet-success' element={<MarchMadnessPicksheetSuccess />} />
           <Route path='/yearly-awards' element={<YearlyAwards />} />
           <Route path='/payouts' element={<Payouts />} />
           <Route path='/404' element={<PageNotFound />} />
