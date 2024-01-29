@@ -2,8 +2,11 @@ import _ from 'lodash';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { Session } from '@supabase/supabase-js';
 import MatchupCard from './MatchupCard';
-import { MarchMadnessMatchupInfo, MarchMadnessTeamInfo } from '../../constants';
+import { MarchMadnessMatchupInfo, MarchMadnessTeamInfo, MARCH_MADNESS_CUTOFF, MARCH_MADNESS_STATE } from '../../constants';
 import matchups from '../../../data/2024/marchmadness/matchups.json';
+import { useNavigate } from 'react-router-dom';
+import supabaseClient from '../../config/supabaseClient';
+import { TABLE_NAMES } from '../../config/supabaseConfig';
 
 type PicksheetFormProps = {
     session: Session;
@@ -18,6 +21,45 @@ const resetValue: MarchMadnessTeamInfo = {
 const tempDate = new Date('03/01/2024');
 
 function PickSheetForm(props: PicksheetFormProps) {
+    const { session } = props;
+    const navigate = useNavigate();
+    const [submissionMade, setSubmissionMade] = useState<boolean>(false);
+    const [priorPicks, setPriorPicks] = useState<boolean>(false);
+    const [timesUpdated, setTimesUpdated] = useState<number>(0);
+    const { user } = session;
+    const { id } = user;
+
+    if (MARCH_MADNESS_STATE === 'INACTIVE') {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h3 className='title is-3 has-text-centered'>Sorry, the March Madness Bracket hasn't been loaded yet, it will be available as soon as possible</h3>
+                </div>
+            </section>
+        )
+    }
+
+    if (MARCH_MADNESS_STATE === 'ACTIVE') {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h3 className='title is-3 has-text-centered'>Sorry, the tournament has begun and picksheets are no longer available. Please join us next year!</h3>
+                </div>
+            </section>
+        )
+    }
+
+    const currentTime = new Date();
+    if (currentTime > MARCH_MADNESS_CUTOFF) {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h3 className='title is-3 has-text-centered'>Sorry, the cutoff for submitting picksheets has occurred. You can no longer make a submission</h3>
+                </div>
+            </section>
+        )
+    }
+
     // Create an array of only the information we need for the pick information
     const initialPicks: MarchMadnessMatchupInfo[] = [];
     for (let i = 0; i < matchups.length; i++) {
@@ -81,6 +123,9 @@ function PickSheetForm(props: PicksheetFormProps) {
             const teamToClear: string = winner === 'top' ? bottomTeam.name as string : topTeam.name as string;
             clearGamesAfter(picksCopy, nextIndex, teamToClear);
             setUserPicks(picksCopy);
+        } else {
+            // To handle picking the finals game so that their chosen winner is saved
+            setUserPicks(picksCopy);
         }
     };
 
@@ -91,18 +136,90 @@ function PickSheetForm(props: PicksheetFormProps) {
             const { topTeam, bottomTeam, winner } = pickInfo;
             if (topTeam.name === null || bottomTeam.name === null || winner === null) {
                 allPicksMade = false;
-                console.log(`Pick not made at index ${i}`);
                 break;
             }
         }
-        console.log(allPicksMade, tiebreaker);
-        console.log(userPicks)
         if (allPicksMade && tiebreaker !== '') {
             setAllPicksFilled(true);
         } else if (!allPicksMade && allPicksFilled) {
             setAllPicksFilled(false);
         }
     }, [userPicks, tiebreaker]);
+
+    // Ping the database to see if a prior submission was made
+    useEffect(() => {
+        const fetchPicks = async (callback?: () => void) => {
+            const { data, error } = await supabaseClient
+                .from(TABLE_NAMES.MARCH_MADNESS_PICKS)
+                .select()
+                .eq('user_id', id);
+
+            if (error) {
+                console.error('An error occurred when getting your prior picks from the database', error);
+            }
+
+            if (data && data.length > 0) {
+                const { submission_data: priorPicks, tiebreaker, times_updated: priorTimesUpdated } = data[0];
+
+                setUserPicks(priorPicks);
+                setTiebreaker(tiebreaker);
+                setTimesUpdated(priorTimesUpdated);
+                setPriorPicks(true);
+            } else {
+                callback && callback();
+            }
+        };
+
+        // First, check the database since that is the most up-to-date version most of the time
+        fetchPicks().catch(err => console.error(err));
+    }, []);
+
+    const onClick = async () => {
+        // To stop duplicate responses from getting submitted
+        if (submissionMade) {
+            return;
+        }
+        setSubmissionMade(true);
+
+        if (priorPicks) {
+            const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
+                .from(TABLE_NAMES.MARCH_MADNESS_PICKS)
+                .update({
+                    submission_data: userPicks,
+                    tiebreaker,
+                    times_updated: timesUpdated + 1,
+                })
+                .eq('user_id', id)
+                .select();
+
+            if (picksheetSubmissionError) {
+                console.error(picksheetSubmissionError);
+                return;
+            }
+
+            if (picksheetSubmissionData) {
+                navigate('/march-madness/picksheet-success', { state: userPicks });
+            }
+        } else {
+            const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
+                .from(TABLE_NAMES.MARCH_MADNESS_PICKS)
+                .insert({
+                    user_id: id,
+                    submission_data: userPicks,
+                    tiebreaker,
+                })
+                .select();
+
+            if (picksheetSubmissionError) {
+                console.error(picksheetSubmissionError);
+                return;
+            }
+
+            if (picksheetSubmissionData) {
+                navigate('/march-madness/picksheet-success', { state: userPicks });
+            }
+        }
+    };
 
     return (
         <section className='section px-0'>
@@ -201,7 +318,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                             />
                         </div>
                     </div>
-                    <button className='button is-primary' disabled={!allPicksFilled}>Submit Choices</button>
+                    <button className='button is-primary' disabled={!allPicksFilled} onClick={onClick}>Submit Choices</button>
                 </div>
             </section>
         </section>
