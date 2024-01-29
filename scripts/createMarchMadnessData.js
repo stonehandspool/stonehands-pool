@@ -34,6 +34,7 @@ for (let i = 1; i <= 32; i++) {
         topScore: 0,
         bottomScore: 0,
         winner: null,
+        evaluated: false,
         nextMatchup: `matchup-${i + increment}`,
     });
     if (i % 2 === 1) {
