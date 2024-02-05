@@ -1,14 +1,26 @@
 import * as fs from 'node:fs';
 import * as path from 'path';
+import minimist from 'minimist';
 
-const args = process.argv;
-const year = args[args.length - 1];
+const args = minimist(process.argv.slice(2));
+const { year } = args;
 
-// First, validate that we received a valid year
 if (isNaN(year)) {
-    console.log('Please make sure that the first param is a valid year');
-    console.log(`Expected a year but got: ${year}`);
+    console.log('Please submit a valid year');
     process.exit();
+}
+
+function getRound(i) {
+    if (i < 49) {
+        return 2;
+    } else if (i < 57) {
+        return 3;
+    } else if (i < 61) {
+        return 4;
+    } else if (i < 63) {
+        return 5;
+    }
+    return 6;
 }
 
 const matchups = [];
@@ -35,8 +47,10 @@ for (let i = 1; i <= 32; i++) {
         bottomScore: 0,
         winner: null,
         evaluated: false,
+        round: 1,
         nextMatchup: `matchup-${i + increment}`,
     });
+
     if (i % 2 === 1) {
         increment--;
     }
@@ -65,6 +79,7 @@ for (let i = 33; i <=63; i++) {
         topScore: 0,
         bottomScore: 0,
         winner: null,
+        round: getRound(i),
         nextMatchup: i === 63 ? null : `matchup-${i + increment}`,
     });
     if (i % 2 === 1) {

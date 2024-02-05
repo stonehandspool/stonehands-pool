@@ -59,6 +59,7 @@ function NavBar() {
                         <a className='navbar-link'>March Madness</a>
                         <div className='navbar-dropdown'>
                             <Link className='navbar-item' to='/march-madness/picksheet' onClick={onBurgerClick}>Picksheet</Link>
+                            <Link className='navbar-item' to='/march-madness/standings' onClick={onBurgerClick}>Standings</Link>
                         </div>
                     </div>
                     {/* <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link> */}

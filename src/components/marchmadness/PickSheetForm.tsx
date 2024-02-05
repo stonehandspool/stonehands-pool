@@ -1,10 +1,10 @@
 import _ from 'lodash';
+import { useNavigate } from 'react-router-dom';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { Session } from '@supabase/supabase-js';
 import MatchupCard from './MatchupCard';
-import { MarchMadnessMatchupInfo, MarchMadnessTeamInfo, MARCH_MADNESS_CUTOFF, MARCH_MADNESS_STATE } from '../../constants';
+import { MarchMadnessMatchupInfo, MarchMadnessTeamInfo, MARCH_MADNESS_CUTOFF, MARCH_MADNESS_STATE, ROUND_VALUES } from '../../constants';
 import matchups from '../../../data/2024/marchmadness/matchups.json';
-import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
 
@@ -27,7 +27,8 @@ function PickSheetForm(props: PicksheetFormProps) {
     const [priorPicks, setPriorPicks] = useState<boolean>(false);
     const [timesUpdated, setTimesUpdated] = useState<number>(0);
     const { user } = session;
-    const { id } = user;
+    const { id, user_metadata: userInfo } = user;
+    const { first_name: firstName, last_name: lastName, username } = userInfo;
 
     if (MARCH_MADNESS_STATE === 'INACTIVE') {
         return (
@@ -159,7 +160,8 @@ function PickSheetForm(props: PicksheetFormProps) {
             }
 
             if (data && data.length > 0) {
-                const { submission_data: priorPicks, tiebreaker, times_updated: priorTimesUpdated } = data[0];
+                const { submission_data: submissionData, tiebreaker, times_updated: priorTimesUpdated } = data[0];
+                const { userPicks: priorPicks } = submissionData;
 
                 setUserPicks(priorPicks);
                 setTiebreaker(tiebreaker);
@@ -181,11 +183,31 @@ function PickSheetForm(props: PicksheetFormProps) {
         }
         setSubmissionMade(true);
 
+        let maxPoints = 0;
+        userPicks.forEach((pickInfo) => {
+            const { topTeam, bottomTeam, winner, round } = pickInfo;
+            const winnerSeed: number = (winner === 'top' ? topTeam.seed : bottomTeam.seed) as number;
+            maxPoints += ROUND_VALUES[round - 1] * winnerSeed;
+        });
+
+        const submission_data = {
+            firstName,
+            lastName,
+            username,
+            userPicks,
+            points: 0,
+            numCorrect: 0,
+            numIncorrect: 0,
+            pointsByRound: [0, 0, 0, 0, 0, 0],
+            currentMaxPoints: maxPoints,
+            startingMaxPoints: maxPoints,
+        };
+
         if (priorPicks) {
             const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
                 .from(TABLE_NAMES.MARCH_MADNESS_PICKS)
                 .update({
-                    submission_data: userPicks,
+                    submission_data,
                     tiebreaker,
                     times_updated: timesUpdated + 1,
                 })
@@ -205,7 +227,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                 .from(TABLE_NAMES.MARCH_MADNESS_PICKS)
                 .insert({
                     user_id: id,
-                    submission_data: userPicks,
+                    submission_data,
                     tiebreaker,
                 })
                 .select();
@@ -252,53 +274,53 @@ function PickSheetForm(props: PicksheetFormProps) {
                     </div>
                 </div>
                 <div className='columns px-6'>
-                    <div className='column' style={{ borderRight: '1px dashed #d6d6d6' }}>
+                    <div className='column'>
                         {
                             Array.from(Array(32).keys()).map((index) => {
                                 return (
-                                    <MatchupCard key={`round-of-64-${index}`} matchupInfo={userPicks[index]} onClick={handleClick} />
-                                )
-                            })
-                        }
-                    </div>
-                    <div className='column is-flex is-flex-direction-column is-justify-content-space-around' style={{ borderRight: '1px dashed #d6d6d6' }}>
-                        {
-                            Array.from(Array(16).keys()).map((index) => {
-                                return (
-                                    <MatchupCard key={`round-of-64-${index}`} matchupInfo={userPicks[32 + index]} onClick={handleClick} />
-                                )
-                            })
-                        }
-                    </div>
-                    <div className='column is-flex is-flex-direction-column is-justify-content-space-around' style={{ borderRight: '1px dashed #d6d6d6' }}>
-                        {
-                            Array.from(Array(8).keys()).map((index) => {
-                                return (
-                                    <MatchupCard key={`round-of-64-${index}`} matchupInfo={userPicks[48 + index]} onClick={handleClick} />
-                                )
-                            })
-                        }
-                    </div>
-                    <div className='column is-flex is-flex-direction-column is-justify-content-space-around' style={{ borderRight: '1px dashed #d6d6d6' }}>
-                        {
-                            Array.from(Array(4).keys()).map((index) => {
-                                return (
-                                    <MatchupCard key={`round-of-64-${index}`} matchupInfo={userPicks[56 + index]} onClick={handleClick} />
-                                )
-                            })
-                        }
-                    </div>
-                    <div className='column is-flex is-flex-direction-column is-justify-content-space-around' style={{ borderRight: '1px dashed #d6d6d6' }}>
-                        {
-                            Array.from(Array(2).keys()).map((index) => {
-                                return (
-                                    <MatchupCard key={`round-of-64-${index}`} matchupInfo={userPicks[60 + index]} onClick={handleClick} />
+                                    <MatchupCard key={`round-of-64-${index}`} customClass='first-col' matchupInfo={userPicks[index]} onClick={handleClick} />
                                 )
                             })
                         }
                     </div>
                     <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
-                        <MatchupCard matchupInfo={userPicks[userPicks.length - 1]} onClick={handleClick} />
+                        {
+                            Array.from(Array(16).keys()).map((index) => {
+                                return (
+                                    <MatchupCard key={`round-of-64-${index}`} customClass='col-2' matchupInfo={userPicks[32 + index]} onClick={handleClick} />
+                                )
+                            })
+                        }
+                    </div>
+                    <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
+                        {
+                            Array.from(Array(8).keys()).map((index) => {
+                                return (
+                                    <MatchupCard key={`round-of-64-${index}`} customClass='col-3' matchupInfo={userPicks[48 + index]} onClick={handleClick} />
+                                )
+                            })
+                        }
+                    </div>
+                    <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
+                        {
+                            Array.from(Array(4).keys()).map((index) => {
+                                return (
+                                    <MatchupCard key={`round-of-64-${index}`} customClass='col-4' matchupInfo={userPicks[56 + index]} onClick={handleClick} />
+                                )
+                            })
+                        }
+                    </div>
+                    <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
+                        {
+                            Array.from(Array(2).keys()).map((index) => {
+                                return (
+                                    <MatchupCard key={`round-of-64-${index}`} customClass='col-5' matchupInfo={userPicks[60 + index]} onClick={handleClick} />
+                                )
+                            })
+                        }
+                    </div>
+                    <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
+                        <MatchupCard customClass='last-col' matchupInfo={userPicks[userPicks.length - 1]} onClick={handleClick} />
                     </div>
                 </div>
             </section>

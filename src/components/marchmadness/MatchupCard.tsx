@@ -4,11 +4,12 @@ import { MarchMadnessMatchupInfo } from '../../constants';
 
 type MatchupCardProps = {
     matchupInfo: MarchMadnessMatchupInfo;
+    customClass?: string;
     onClick: (matchupInfo: MarchMadnessMatchupInfo) => void;
 }
 
 function MatchupCard(props: MatchupCardProps) {
-    const { matchupInfo, onClick } = props;
+    const { matchupInfo, customClass = '', onClick } = props;
     const { topTeam, bottomTeam } = matchupInfo;
     const [selectedTeam, setSelectedTeam] = useState<'top' | 'bottom' | null>(null);
     const [currentMatchupInfo, setCurrentMatchupInfo] = useState<MarchMadnessMatchupInfo | null>(null);
@@ -41,7 +42,7 @@ function MatchupCard(props: MatchupCardProps) {
     }
 
     return (
-        <div className='box march-madness p-3 mb-3'>
+        <div className={`box march-madness ${customClass} p-3 mb-3`}>
             <div className='field is-clickable mb-0' onClick={() => chooseTeam('top')}>
                 <div className='columns'>
                     <div className='column is-1'>
