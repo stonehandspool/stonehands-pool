@@ -254,6 +254,9 @@ function PickSheetForm(props: PicksheetFormProps) {
             </section>
             <section className='section px-0 pt-0'>
                 <div className='columns px-6'>
+                    <div className='column is-narrow is-flex is-flex-direction-column is-justify-content-space-around'>
+                        <p style={{ visibility: 'hidden', writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>A</b></p>
+                    </div>
                     <div className='column'>
                         <h4 className='title is-4 has-text-centered'>Round of 64</h4>
                     </div>
@@ -274,6 +277,12 @@ function PickSheetForm(props: PicksheetFormProps) {
                     </div>
                 </div>
                 <div className='columns px-6'>
+                    <div className='column is-narrow is-flex is-flex-direction-column is-justify-content-space-around'>
+                        <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>WEST</b></p>
+                        <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>EAST</b></p>
+                        <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>SOUTH</b></p>
+                        <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>MIDWEST</b></p>
+                    </div>
                     <div className='column'>
                         {
                             Array.from(Array(32).keys()).map((index) => {

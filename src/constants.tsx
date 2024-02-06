@@ -176,12 +176,26 @@ type MarchMadnessMatchupInfo = {
     nextMatchup: string | null;
 };
 
-export type { ValidPicks, ResultInfo, UserInfo, MarginPick, HighFivePick, SubmissionInfo, SubmissionData, MarchMadnessTeamInfo, MarchMadnessMatchupInfo };
+type MarchMadnessPlayerInfo = {
+    firstName: string;
+    lastName: string;
+    userId: string;
+    username: string;
+    timesUpdated: number;
+    tiebreaker: number;
+    points: number;
+    numCorrect: number;
+    numIncorrect: number;
+    pointsByRound: number[];
+    currentMaxPoints: number;
+    startingMaxPoints: number;
+    userPicks: MarchMadnessMatchupInfo[],
+};
 
-
+export type { ValidPicks, ResultInfo, UserInfo, MarginPick, HighFivePick, SubmissionInfo, SubmissionData, MarchMadnessTeamInfo, MarchMadnessMatchupInfo, MarchMadnessPlayerInfo };
 
 // March Madness specific constants
 type MarchMadnessStates = 'INACTIVE' | 'READY_FOR_PICKS' | 'ACTIVE';
 export const MARCH_MADNESS_STATE: MarchMadnessStates = 'READY_FOR_PICKS';
 export const MARCH_MADNESS_CUTOFF = new Date('2024-03-21T18:00:00.000Z'); // TODO: Get correct time
-export const ROUND_VALUES = [1, 2, 4, 8, 16, 32]
+export const ROUND_VALUES = [1, 2, 4, 8, 16, 32];

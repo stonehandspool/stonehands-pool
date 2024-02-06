@@ -79,6 +79,7 @@ for (let i = 33; i <=63; i++) {
         topScore: 0,
         bottomScore: 0,
         winner: null,
+        evaluated: false,
         round: getRound(i),
         nextMatchup: i === 63 ? null : `matchup-${i + increment}`,
     });
