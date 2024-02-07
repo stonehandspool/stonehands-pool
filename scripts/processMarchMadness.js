@@ -43,7 +43,7 @@ bracketData.forEach((matchInfo, index) => {
 
         // Next, move the winning team to the next matchup
         const idNum = parseInt(id.split('-').pop(), 10);
-        const nextIndex = picksCopy.findIndex((matchups) => matchups.id === nextMatchup);
+        const nextIndex = bracketData.findIndex((matchups) => matchups.id === nextMatchup);
         if (idNum % 2 === 1 && idNum !== 63) {
             // If it is an odd number, that means it is the top matchup so the next matchup needs to get its `topTeam` prop changed
             bracketData[nextIndex].topTeam = winner === 'top' ? topTeam : bottomTeam;

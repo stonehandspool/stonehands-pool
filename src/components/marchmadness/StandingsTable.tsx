@@ -44,7 +44,7 @@ function StandingsTable() {
 
     // Now update everyones position value
     calculatedPicks.forEach((person, index) => person.position = index + 1);
-    
+
     return (
         <section className='section'>
             <div className='container'>
@@ -73,30 +73,30 @@ function StandingsTable() {
                         </tr>
                     </thead>
                     <tbody>
-                            {calculatedPicks.map((row, index) => {
-                                return <tr key={`${index}`}>
-                                    <td>{row.position}</td>
-                                    <td>{row.name}</td>
-                                    <td><b>{row.points}</b></td>
-                                    <td>{row.maxPoints}</td>
-                                    <td>{row.wins}</td>
-                                    <td>{row.losses}</td>
-                                    {
-                                        row.pointsByRound.map((val, index) => {
-                                            return <td key={`${row.username}-${index}`}>{val}</td>
-                                        })
-                                    }
-                                    <td>{row.tiebreaker}</td>
-                                    <td>
-                                        <button
-                                            className='button is-small is-primary'
-                                            onClick={() => goToUserStats(row.username)}
-                                        >
-                                            Click Here
-                                        </button>
-                                    </td>
-                                </tr>
-                            })}
+                        {calculatedPicks.map((row, index) => {
+                            return <tr key={`${index}`}>
+                                <td>{row.position}</td>
+                                <td>{row.name}</td>
+                                <td><b>{row.points}</b></td>
+                                <td>{row.maxPoints}</td>
+                                <td>{row.wins}</td>
+                                <td>{row.losses}</td>
+                                {
+                                    row.pointsByRound.map((val, index) => {
+                                        return <td key={`${row.username}-${index}`}>{val}</td>
+                                    })
+                                }
+                                <td>{row.tiebreaker}</td>
+                                <td>
+                                    <button
+                                        className='button is-small is-primary'
+                                        onClick={() => goToUserStats(row.username)}
+                                    >
+                                        Click Here
+                                    </button>
+                                </td>
+                            </tr>
+                        })}
                     </tbody>
                 </table>
             </div>

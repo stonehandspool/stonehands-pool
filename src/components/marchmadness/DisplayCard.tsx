@@ -1,33 +1,41 @@
-import _ from 'lodash';
-import { useEffect, useState } from 'react';
 import { MarchMadnessMatchupInfo } from '../../constants';
 
 type DisplayCardProps = {
     matchupInfo: MarchMadnessMatchupInfo;
     customClass?: string;
+    topTeamAlive: boolean;
+    bottomTeamAlive: boolean;
+    upToDateMatchupInfo: MarchMadnessMatchupInfo;
 }
 
 function DisplayCard(props: DisplayCardProps) {
-    const { matchupInfo, customClass = '' } = props;
-    const { topTeam, bottomTeam } = matchupInfo;
-    const [selectedTeam, setSelectedTeam] = useState<'top' | 'bottom' | null>(null);
-    const [currentMatchupInfo, setCurrentMatchupInfo] = useState<MarchMadnessMatchupInfo | null>(null);
+    const { matchupInfo, customClass = '', topTeamAlive, bottomTeamAlive, upToDateMatchupInfo } = props;
+    const { topTeam, bottomTeam, winner } = matchupInfo;
+    const { winner: actualWinner, topScore, bottomScore } = upToDateMatchupInfo;
 
-    useEffect(() => {
-        // If a user changes an earlier pick, we want to make sure that we de-select our current selection
-        // If it has been cleared (so that TBD is no longer bolded)
-        if (!_.isEqual(currentMatchupInfo, matchupInfo)) {
-            // If the new matchup info is different then update our saved state of that and reset selection
-            setCurrentMatchupInfo(matchupInfo);
-            if (selectedTeam !== null && selectedTeam !== matchupInfo.winner) {
-                // Only reset the selected the prior losing team has changed
-                setSelectedTeam(null);
-            } else if (selectedTeam === null) {
-                // If getting data from prior picks, bold the previously chosen winners
-                setSelectedTeam(matchupInfo.winner);
-            }
+    let topTeamColor;
+    let bottomTeamColor;
+    if (actualWinner === null && topTeamAlive && bottomTeamAlive) {
+        // If the match hasn't happened yet and both teams are still alive
+        topTeamColor = 'has-text-black';
+        bottomTeamColor = 'has-text-black';
+    } else if (actualWinner === null) {
+        // If the match hasn't happened yet but one (or more) of the teams have been eliminated
+        topTeamColor = topTeamAlive ? 'has-text-black' : 'has-text-danger';
+        bottomTeamColor = bottomTeamAlive ? 'has-text-black' : 'has-text-danger';
+    } else if (actualWinner !== null) {
+        // If the match has been completed, mark your choice as either red/green and other team stays black
+        if (winner === 'top') {
+            topTeamColor = actualWinner === 'top' ? 'has-text-success' : 'has-text-danger';
+            bottomTeamColor = 'has-text-black';
+        } else {
+            topTeamColor = 'has-text-black';
+            bottomTeamColor = actualWinner === 'bottom' ? 'has-text-success' : 'has-text-danger';
         }
-    }, [matchupInfo]);
+    }
+
+    const topTeamWeight = winner === 'top' ? 'has-text-weight-bold' : 'has-text-weight-normal';
+    const bottomTeamWeight = winner === 'bottom' ? 'has-text-weight-bold' : 'has-text-weight-normal';
 
     return (
         <div className={`box march-madness ${customClass} p-3 mb-3`}>
@@ -37,12 +45,20 @@ function DisplayCard(props: DisplayCardProps) {
                         <span className='has-text-weight-bold is-size-7'>{topTeam.seed}</span>
                     </div>
                     <div className='column pl-2'>
-                        <span
-                            className={selectedTeam === 'top' ? 'has-text-weight-bold' : 'has-text-weight-normal'}
-                        >
-                            {topTeam.name !== null ? topTeam.name : 'TBD'} {topTeam.record !== null ? `(${topTeam.record})` : ''}
+                        <span className={`${topTeamWeight} ${topTeamColor}`}>
+                            {topTeamAlive && <>{topTeam.name} {`(${topTeam.record})`}</>}
+                            {(!topTeamAlive && topTeamColor === 'has-text-danger') && <s>{topTeam.name} {`(${topTeam.record})`}</s>}
+                            {(!topTeamAlive && topTeamColor === 'has-text-black') && <>{topTeam.name} {`(${topTeam.record})`}</>}
                         </span>
                     </div>
+                    {
+                        actualWinner !== null && (
+                            <div className='column is-narrow is-align-self-flex-end'>
+                                {actualWinner === 'top' && <span><b>{topScore}</b></span>}
+                                {actualWinner === 'bottom' && <span>{topScore}</span>}
+                            </div>
+                        )
+                    }
                 </div>
             </div>
             <div className='field mb-0'>
@@ -51,12 +67,20 @@ function DisplayCard(props: DisplayCardProps) {
                         <span className='has-text-weight-bold is-size-7'>{bottomTeam.seed}</span>
                     </div>
                     <div className='column pl-2'>
-                        <span
-                            className={selectedTeam === 'bottom' ? 'has-text-weight-bold' : 'has-text-weight-normal'}
-                        >
-                            {bottomTeam.name !== null ? bottomTeam.name : 'TBD'} {bottomTeam.record !== null ? `(${bottomTeam.record})` : ''}
+                        <span className={`${bottomTeamWeight} ${bottomTeamColor}`}>
+                            {bottomTeamAlive && <>{bottomTeam.name} {`(${bottomTeam.record})`}</>}
+                            {(!bottomTeamAlive && bottomTeamColor === 'has-text-danger') && <s>{bottomTeam.name} {`(${bottomTeam.record})`}</s>}
+                            {(!bottomTeamAlive && bottomTeamColor === 'has-text-black') && <>{bottomTeam.name} {`(${bottomTeam.record})`}</>}
                         </span>
                     </div>
+                    {
+                        actualWinner !== null && (
+                            <div className='column is-narrow is-align-self-flex-end'>
+                                {actualWinner === 'bottom' && <span><b>{bottomScore}</b></span>}
+                                {actualWinner === 'top' && <span>{bottomScore}</span>}
+                            </div>
+                        )
+                    }
                 </div>
             </div>
         </div>

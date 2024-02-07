@@ -1,13 +1,14 @@
 import { useParams } from "react-router-dom";
 import DisplayCard from '../components/marchmadness/DisplayCard';
-import { CURRENT_YEAR, MarchMadnessPlayerInfo } from '../constants';
+import { CURRENT_YEAR, MarchMadnessMatchupInfo, MarchMadnessPlayerInfo } from '../constants';
 import playerPicks from '../../data/2024/marchmadness/playerPicks.json';
+import teamData from '../../data/2024/marchmadness/teams.json';
+import bracketData from '../../data/2024/marchmadness/matchups.json';
 
 function UserBracket() {
     const { username } = useParams();
 
     const playerInfo = playerPicks.find((pickInfo) => pickInfo.username === username) as unknown as MarchMadnessPlayerInfo;
-    console.log('hi', playerInfo);
 
     if (!playerInfo) {
         return (
@@ -16,6 +17,14 @@ function UserBracket() {
     }
 
     const { userPicks } = playerInfo;
+
+    const teamAlive = (teamName: string) => {
+        return teamData.find(team => team.name === teamName)!.alive;
+    };
+
+    const getUpToDateMatchupInfo = (matchupId: string) => {
+        return bracketData.find(matchup => matchup.id === matchupId)! as MarchMadnessMatchupInfo;
+    };
 
     return (
         <section className='section px-0'>
@@ -59,8 +68,16 @@ function UserBracket() {
                     <div className='column'>
                         {
                             Array.from(Array(32).keys()).map((index) => {
+                                const matchupInfo = userPicks[index];
                                 return (
-                                    <DisplayCard key={`round-of-64-${index}`} customClass='first-col' matchupInfo={userPicks[index]} />
+                                    <DisplayCard
+                                        key={`round-of-64-${index}`}
+                                        customClass='first-col'
+                                        matchupInfo={matchupInfo}
+                                        topTeamAlive={teamAlive(matchupInfo.topTeam.name!)}
+                                        bottomTeamAlive={teamAlive(matchupInfo.bottomTeam.name!)}
+                                        upToDateMatchupInfo={getUpToDateMatchupInfo(matchupInfo.id)}
+                                    />
                                 )
                             })
                         }
@@ -68,8 +85,16 @@ function UserBracket() {
                     <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
                         {
                             Array.from(Array(16).keys()).map((index) => {
+                                const matchupInfo = userPicks[32 + index];
                                 return (
-                                    <DisplayCard key={`round-of-64-${index}`} customClass='col-2' matchupInfo={userPicks[32 + index]} />
+                                    <DisplayCard
+                                        key={`round-of-64-${index}`}
+                                        customClass='col-2'
+                                        matchupInfo={matchupInfo}
+                                        topTeamAlive={teamAlive(matchupInfo.topTeam.name!)}
+                                        bottomTeamAlive={teamAlive(matchupInfo.bottomTeam.name!)}
+                                        upToDateMatchupInfo={getUpToDateMatchupInfo(matchupInfo.id)}
+                                    />
                                 )
                             })
                         }
@@ -77,8 +102,16 @@ function UserBracket() {
                     <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
                         {
                             Array.from(Array(8).keys()).map((index) => {
+                                const matchupInfo = userPicks[48 + index];
                                 return (
-                                    <DisplayCard key={`round-of-64-${index}`} customClass='col-3' matchupInfo={userPicks[48 + index]} />
+                                    <DisplayCard
+                                        key={`round-of-64-${index}`}
+                                        customClass='col-3'
+                                        matchupInfo={matchupInfo}
+                                        topTeamAlive={teamAlive(matchupInfo.topTeam.name!)}
+                                        bottomTeamAlive={teamAlive(matchupInfo.bottomTeam.name!)}
+                                        upToDateMatchupInfo={getUpToDateMatchupInfo(matchupInfo.id)}
+                                    />
                                 )
                             })
                         }
@@ -86,8 +119,16 @@ function UserBracket() {
                     <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
                         {
                             Array.from(Array(4).keys()).map((index) => {
+                                const matchupInfo = userPicks[56 + index];
                                 return (
-                                    <DisplayCard key={`round-of-64-${index}`} customClass='col-4' matchupInfo={userPicks[56 + index]} />
+                                    <DisplayCard
+                                        key={`round-of-64-${index}`}
+                                        customClass='col-4'
+                                        matchupInfo={matchupInfo}
+                                        topTeamAlive={teamAlive(matchupInfo.topTeam.name!)}
+                                        bottomTeamAlive={teamAlive(matchupInfo.bottomTeam.name!)}
+                                        upToDateMatchupInfo={getUpToDateMatchupInfo(matchupInfo.id)}
+                                    />
                                 )
                             })
                         }
@@ -95,14 +136,28 @@ function UserBracket() {
                     <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
                         {
                             Array.from(Array(2).keys()).map((index) => {
+                                const matchupInfo = userPicks[60 + index];
                                 return (
-                                    <DisplayCard key={`round-of-64-${index}`} customClass='col-5' matchupInfo={userPicks[60 + index]} />
+                                    <DisplayCard
+                                        key={`round-of-64-${index}`}
+                                        customClass='col-5'
+                                        matchupInfo={matchupInfo}
+                                        topTeamAlive={teamAlive(matchupInfo.topTeam.name!)}
+                                        bottomTeamAlive={teamAlive(matchupInfo.bottomTeam.name!)}
+                                        upToDateMatchupInfo={getUpToDateMatchupInfo(matchupInfo.id)}
+                                    />
                                 )
                             })
                         }
                     </div>
                     <div className='column is-flex is-flex-direction-column is-justify-content-space-around'>
-                        <DisplayCard customClass='last-col' matchupInfo={userPicks[userPicks.length - 1]} />
+                        <DisplayCard
+                            customClass='last-col'
+                            matchupInfo={userPicks[userPicks.length - 1]}
+                            topTeamAlive={teamAlive(userPicks[userPicks.length - 1].topTeam.name!)}
+                            bottomTeamAlive={teamAlive(userPicks[userPicks.length - 1].bottomTeam.name!)}
+                            upToDateMatchupInfo={getUpToDateMatchupInfo(userPicks[userPicks.length - 1].id)}
+                        />
                     </div>
                 </div>
             </section>

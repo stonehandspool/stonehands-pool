@@ -64,7 +64,7 @@ function PickSheetForm(props: PicksheetFormProps) {
     // Create an array of only the information we need for the pick information
     const initialPicks: MarchMadnessMatchupInfo[] = [];
     for (let i = 0; i < matchups.length; i++) {
-        initialPicks.push(matchups[i]);
+        initialPicks.push(matchups[i] as MarchMadnessMatchupInfo);
     }
     const [userPicks, setUserPicks] = useState<MarchMadnessMatchupInfo[]>(initialPicks);
     const [allPicksFilled, setAllPicksFilled] = useState<boolean>(false);
