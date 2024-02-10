@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import { MARCH_MADNESS_STATE, SIGN_UPS_DISABLED } from '../constants';
 
 function NavBar() {
     const [burgerState, setBurgerState] = useState(false);
@@ -55,15 +56,17 @@ function NavBar() {
                             <Link className='navbar-item' to='/payouts' onClick={onBurgerClick}>2023 Payouts</Link>
                         </div>
                     </div>
-                    <div className='navbar-item has-dropdown is-hoverable' key={`${location}-dd-3`}>
-                        <a className='navbar-link'>March Madness</a>
-                        <div className='navbar-dropdown'>
-                            <Link className='navbar-item' to='/march-madness/about' onClick={onBurgerClick}>About</Link>
-                            <Link className='navbar-item' to='/march-madness/picksheet' onClick={onBurgerClick}>Picksheet</Link>
-                            <Link className='navbar-item' to='/march-madness/standings' onClick={onBurgerClick}>Standings</Link>
+                    {MARCH_MADNESS_STATE !== 'INACTIVE' && (
+                        <div className='navbar-item has-dropdown is-hoverable' key={`${location}-dd-3`}>
+                            <a className='navbar-link'>March Madness</a>
+                            <div className='navbar-dropdown'>
+                                <Link className='navbar-item' to='/march-madness/about' onClick={onBurgerClick}>About</Link>
+                                <Link className='navbar-item' to='/march-madness/picksheet' onClick={onBurgerClick}>Picksheet</Link>
+                                <Link className='navbar-item' to='/march-madness/standings' onClick={onBurgerClick}>Standings</Link>
+                            </div>
                         </div>
-                    </div>
-                    {/* <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link> */}
+                    )}
+                    {!SIGN_UPS_DISABLED && <Link className='navbar-item' to='/sign-up' onClick={onBurgerClick}>Sign Up</Link>}
                 </div>
             </div>
         </nav>

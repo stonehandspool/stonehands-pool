@@ -15,8 +15,8 @@ function MarchMadnessAbout() {
 
     // Final Payouts
     const totalFinal = totalPool - totalRounds;
-    const final1 = totalFinal * .3;
-    const final2 = totalFinal * .2;
+    const final1 = totalFinal * .25;
+    const final2 = totalFinal * .18;
     const final3 = totalFinal * .12;
     const final4 = totalFinal * .1;
     const final5 = totalFinal * .08;
@@ -25,6 +25,11 @@ function MarchMadnessAbout() {
     const final8 = totalFinal * .04;
     const final9 = totalFinal * .03;
     const final10 = totalFinal * .02;
+    const final11 = totalFinal * .02;
+    const final12 = totalFinal * .02;
+    const final13 = totalFinal * .01;
+    const final14 = totalFinal * .01;
+    const final15 = totalFinal * .01;
 
     return (
         <section className='section'>
@@ -57,20 +62,18 @@ function MarchMadnessAbout() {
                 <h3 className='title is-3 has-text-centered'>Scoring</h3>
                 <div className='columns is-centered'>
                     <div className='column is-two-thirds'>
-                        <p className='mb-4'>
-                            Scoring works as followed for the March Madness Pool:
-                            <ul className='mt-2'>
-                                <li><b>Round of 64:</b> Team Seed * 1</li>
-                                <li><b>Round of 32:</b> Team Seed * 2</li>
-                                <li><b>Sweet 16:</b> Team Seed * 4</li>
-                                <li><b>Elite 8:</b> Team Seed * 8</li>
-                                <li><b>Final 4:</b> Team Seed * 16</li>
-                                <li><b>Finals:</b> Team Seed * 32</li>
-                            </ul>
-                        </p>
+                        <p className='mb-4'>Scoring works as followed for the March Madness Pool:</p>
+                        <ul className='mt-2'>
+                            <li><b>Round of 64:</b> Team Seed * 1</li>
+                            <li><b>Round of 32:</b> Team Seed * 2</li>
+                            <li><b>Sweet 16:</b> Team Seed * 4</li>
+                            <li><b>Elite 8:</b> Team Seed * 8</li>
+                            <li><b>Final 4:</b> Team Seed * 16</li>
+                            <li><b>Finals:</b> Team Seed * 32</li>
+                        </ul>
                         <p>
-                            As an example if you pick a 14 seed to go to the Final 4 and they do you will be awarded 14 points for their win in the Round of 64, 28 points
-                            for their win in the Round of 32, 56 points for their win in the Sweet 16, and 112 points for their win in the Elite 8. This is done to encourage more
+                            As an example if you pick a 14 seed to go to the Final 4 and they do you will be awarded 14 points for their win in the Round of 64, an additional 28 points
+                            for their win in the Round of 32, 56 points for their win in the Sweet 16, and 112 points more for their win in the Elite 8. This is done to encourage more
                             ambitious picks and to reward those who make those picks! The standings will be determined by whoever has the most cumulative points based off of the
                             games they pick correctly.
                         </p>
@@ -84,6 +87,9 @@ function MarchMadnessAbout() {
                             <p>Here are the following tiebreakers for the pool for if/when two players have the same number of points:</p>
                             <ol>
                                 <li>The first tiebreaker will be given to the player who guessed the closest <b>total</b> score of the final game</li>
+                                <ul>
+                                    <li>You <b>can</b> guess over the total, this is not Price Is Right rules, someone 1 point above the total would win the tiebreaker over someone who guessed 2 points under</li>
+                                </ul>
                                 <li>The second tiebreaker will be the number of games guessed correctly</li>
                                 <li>If somehow those two tiebreakers don't choose a winner, the payout will be split evenly between the two players</li>
                             </ol>
@@ -132,8 +138,8 @@ function MarchMadnessAbout() {
                             <div className='column is-narrow'>
                                 <p><b>Final Standings Payouts:</b></p>
                                 <br />
-                                <p><b>1<sup>st</sup>: </b>{toMoney(final1)} (30%)</p>
-                                <p><b>2<sup>nd</sup>: </b>{toMoney(final2)} (20%)</p>
+                                <p><b>1<sup>st</sup>: </b>{toMoney(final1)} (25%)</p>
+                                <p><b>2<sup>nd</sup>: </b>{toMoney(final2)} (18%)</p>
                                 <p><b>3<sup>rd</sup>: </b>{toMoney(final3)} (12%)</p>
                                 <p><b>4<sup>th</sup>: </b>{toMoney(final4)} (10%)</p>
                                 <p><b>5<sup>th</sup>: </b>{toMoney(final5)} (8%)</p>
@@ -142,6 +148,11 @@ function MarchMadnessAbout() {
                                 <p><b>8<sup>th</sup>: </b>{toMoney(final8)} (4%)</p>
                                 <p><b>9<sup>th</sup>: </b>{toMoney(final9)} (3%)</p>
                                 <p><b>10<sup>th</sup>: </b>{toMoney(final10)} (2%)</p>
+                                <p><b>11<sup>th</sup>: </b>{toMoney(final11)} (2%)</p>
+                                <p><b>12<sup>th</sup>: </b>{toMoney(final12)} (2%)</p>
+                                <p><b>13<sup>th</sup>: </b>{toMoney(final13)} (1%)</p>
+                                <p><b>14<sup>th</sup>: </b>{toMoney(final14)} (1%)</p>
+                                <p><b>15<sup>th</sup>: </b>{toMoney(final15)} (1%)</p>
                             </div>
                             <div className='column is-narrow'>
                                 <p><b>Per Round Payouts:</b></p>

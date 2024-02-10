@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
+import ScrollToTop from './components/ScrollToTop';
 const About = lazy(() => import('./pages/About'));
 const Consensus = lazy(() => import('./pages/Consensus'));
 const HighFive = lazy(() => import('./pages/HighFive'));
@@ -32,6 +33,7 @@ const Payouts = lazy(() => import('./pages/Payouts'));
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <NavBar />
       <Suspense fallback={<></>}>
         <Routes>

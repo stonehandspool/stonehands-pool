@@ -12,8 +12,10 @@ function UserBracket() {
 
     if (!playerInfo) {
         return (
-            <h1>Something went wrong!</h1>
-        )
+            <div className='section'>
+                <h1 className='title has-text-warning'>Oops! We were unable to find info for that player, did you type in the correct username?</h1>
+            </div>
+        );
     }
 
     const { userPicks } = playerInfo;

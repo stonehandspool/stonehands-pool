@@ -48,7 +48,7 @@ function StandingsTable() {
     return (
         <section className='section'>
             <div className='container'>
-                <table className='table is-narrow is-bordered is-striped is-hoverable mx-auto'>
+                <table className='table is-narrow is-striped is-hoverable mx-auto'>
                     <thead>
                         <tr>
                             <th colSpan={6}></th>
