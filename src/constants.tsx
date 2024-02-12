@@ -2,13 +2,13 @@
 // This is used to check for each of the standings and stats pages to see if it should check for data, if false it will not display anything
 export const SEASON_READY = true;
 // This should be toggled once sign ups are disabled
-export const SIGN_UPS_DISABLED = true;
+export const SIGN_UPS_DISABLED = false;
 // This should be updated on Wednesday of every week when the next weeks picksheet becomes available
 // This is used to keep track of the current NFL regular season week and is used to get data from the json files
 export const CURRENT_WEEK: number = 18;
 // This should match whatever the current NFL season that is active and should only update once a year
 // This is used for any of the stats/standings pages for the text up top
-export const CURRENT_YEAR = '2023-2024';
+export const CURRENT_YEAR = '2024';
 // This is a date in a valid `Date` format which should be taken from the season schedule each week
 // This is used to check if a user can still submit their picksheet, it should generally be the first Sunday game each week
 // Unless there is a few Saturday games later in the season
@@ -158,4 +158,44 @@ type SubmissionInfo = {
     submission_data: SubmissionData;
 };
 
-export type { ValidPicks, ResultInfo, UserInfo, MarginPick, HighFivePick, SubmissionInfo, SubmissionData };
+// March Madness specific types
+type MarchMadnessTeamInfo = {
+    seed: number | null;
+    name: string | null;
+    record: string | null;
+}
+
+type MarchMadnessMatchupInfo = {
+    id: string;
+    topTeam: MarchMadnessTeamInfo;
+    bottomTeam: MarchMadnessTeamInfo;
+    topScore: number | null;
+    bottomScore: number | null;
+    winner: 'top' | 'bottom' | null;
+    round: number;
+    nextMatchup: string | null;
+};
+
+type MarchMadnessPlayerInfo = {
+    firstName: string;
+    lastName: string;
+    userId: string;
+    username: string;
+    timesUpdated: number;
+    tiebreaker: number;
+    points: number;
+    numCorrect: number;
+    numIncorrect: number;
+    pointsByRound: number[];
+    currentMaxPoints: number;
+    startingMaxPoints: number;
+    userPicks: MarchMadnessMatchupInfo[],
+};
+
+export type { ValidPicks, ResultInfo, UserInfo, MarginPick, HighFivePick, SubmissionInfo, SubmissionData, MarchMadnessTeamInfo, MarchMadnessMatchupInfo, MarchMadnessPlayerInfo };
+
+// March Madness specific constants
+type MarchMadnessStates = 'INACTIVE' | 'READY_FOR_PICKS' | 'ACTIVE';
+export const MARCH_MADNESS_STATE: MarchMadnessStates = 'READY_FOR_PICKS';
+export const MARCH_MADNESS_CUTOFF = new Date('2024-03-21T18:00:00.000Z'); // TODO: Get correct time
+export const ROUND_VALUES = [1, 2, 4, 8, 16, 32];

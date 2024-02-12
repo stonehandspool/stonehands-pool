@@ -9,6 +9,105 @@
   font-family: "Roboto Slab", serif;
 }
 
+.march-madness {
+  position: relative;
+}
+
+.march-madness:not(.last-col):after {
+  content: "";
+  border-color: black;
+  border-width: 2px;
+  position: absolute;
+  display: block;
+  width: 0.75em;
+  right: -0.75em;
+}
+
+/* First col */
+.march-madness:nth-of-type(odd):after {
+  border-right-style: solid;
+  border-top-style: solid;
+  height: 100%;
+  top: 50%;
+}
+
+.march-madness:nth-of-type(even):after {
+  border-right-style: solid;
+  border-bottom-style: solid;
+  height: 100%;
+  top: -50%;
+}
+
+/* 2nd col */
+.march-madness.col-2:nth-of-type(odd):after {
+  border-right-style: solid;
+  border-top-style: solid;
+  height: 120%;
+  top: 50%;
+}
+
+.march-madness.col-2:nth-of-type(even):after {
+  border-right-style: solid;
+  border-bottom-style: solid;
+  height: 120%;
+  top: -70%;
+}
+
+/* 3rd col */
+.march-madness.col-3:nth-of-type(odd):after {
+  border-right-style: solid;
+  border-top-style: solid;
+  height: 240%;
+  top: 50%;
+}
+
+.march-madness.col-3:nth-of-type(even):after {
+  border-right-style: solid;
+  border-bottom-style: solid;
+  height: 240%;
+  top: -190%;
+}
+
+/* 4th col */
+.march-madness.col-4:nth-of-type(odd):after {
+  border-right-style: solid;
+  border-top-style: solid;
+  height: 470%;
+  top: 50%;
+}
+
+.march-madness.col-4:nth-of-type(even):after {
+  border-right-style: solid;
+  border-bottom-style: solid;
+  height: 470%;
+  top: -420%;
+}
+
+/* 5th col */
+.march-madness.col-5:nth-of-type(odd):after {
+  border-right-style: solid;
+  border-top-style: solid;
+  height: 920%;
+  top: 50%;
+}
+
+.march-madness.col-5:nth-of-type(even):after {
+  border-right-style: solid;
+  border-bottom-style: solid;
+  height: 920%;
+  top: -870%;
+}
+
+.march-madness:not(.first-col):before {
+  content: "";
+  border-top: 2px solid black;
+  position: absolute;
+  height: 2px;
+  width: 0.75em;
+  left: -0.75em;
+  top: 50%;
+}
+
 @media print {
   .section {
     padding: 0px !important;
@@ -235,7 +334,8 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
   padding: 0;
 }
 
-/* Bulma Base */ /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+/* Bulma Base */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
 p,
@@ -1493,8 +1593,8 @@ a.box:active {
 }
 .button.is-loading::after {
   position: absolute;
-  left: calc(50% - (1em * 0.5));
-  top: calc(50% - (1em * 0.5));
+  left: calc(50% - 1em * 0.5);
+  top: calc(50% - 1em * 0.5);
   position: absolute !important;
 }
 .button.is-static {

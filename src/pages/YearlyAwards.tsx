@@ -48,7 +48,7 @@ function YearlyAwards() {
     const teamsBestPicked = accolades.find(accolade => accolade.id === 'teamsBestPicked') as AccoladeInfo;
     const teamsWorstPicked = accolades.find(accolade => accolade.id === 'teamsWorstPicked') as AccoladeInfo;
     const secretMango = accolades.find(accolade => accolade.id === 'secretMango') as AccoladeInfo;
-    console.log(accolades);
+
     return (
         <section className='section'>
             <div className='container'>

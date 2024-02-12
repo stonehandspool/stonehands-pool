@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
+import ScrollToTop from './components/ScrollToTop';
 const About = lazy(() => import('./pages/About'));
 const Consensus = lazy(() => import('./pages/Consensus'));
 const HighFive = lazy(() => import('./pages/HighFive'));
@@ -21,12 +22,18 @@ const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 const PasswordResetRequest = lazy(() => import('./pages/PasswordResetRequest'));
 const PasswordReset = lazy(() => import('./pages/PasswordReset'));
 const StandingsByWeek = lazy(() => import('./pages/StandingsByWeek'));
+const MarchMadnessAbout = lazy(() => import('./pages/MarchMadnessAbout'));
+const MarchMadnessPicksheet = lazy(() => import('./pages/MarchMadnessPicksheet'));
+const MarchMadnessPicksheetSuccess = lazy(() => import('./pages/MarchMadnessPicksheetSuccess'));
+const MarchMadnessStandings = lazy(() => import('./pages/MarchMadnessStandings'));
+const UserBracket = lazy(() => import('./pages/UserBracket'));
 const YearlyAwards = lazy(() => import('./pages/YearlyAwards'));
 const Payouts = lazy(() => import('./pages/Payouts'));
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <NavBar />
       <Suspense fallback={<></>}>
         <Routes>
@@ -48,6 +55,11 @@ function App() {
           <Route path='/password-reset-request' element={<PasswordResetRequest />} />
           <Route path='/password-reset' element={<PasswordReset />} />
           <Route path='/standings-by-week' element={<StandingsByWeek />} />
+          <Route path='/march-madness/about' element={<MarchMadnessAbout />} />
+          <Route path='/march-madness/picksheet' element={<MarchMadnessPicksheet />} />
+          <Route path='/march-madness/picksheet-success' element={<MarchMadnessPicksheetSuccess />} />
+          <Route path='/march-madness/standings' element={<MarchMadnessStandings />} />
+          <Route path='/march-madness/bracket/:username' element={<UserBracket />} />
           <Route path='/yearly-awards' element={<YearlyAwards />} />
           <Route path='/payouts' element={<Payouts />} />
           <Route path='/404' element={<PageNotFound />} />

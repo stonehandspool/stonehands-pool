@@ -83,8 +83,8 @@ function SignUp() {
         }
 
         const { id } = data.user as User;
-        const capitalizedFirstName = capitalize(firstName);
-        const capitalizedLastName = capitalize(lastName);
+        const capitalizedFirstName = capitalize(firstName).trim();
+        const capitalizedLastName = capitalize(lastName).trim();
 
         const { data: userInfoData, error: userInfoError } = await supabaseClient
             .from(TABLE_NAMES.USER_INFO)
