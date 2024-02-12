@@ -247,8 +247,8 @@ function PickSheetForm(props: PicksheetFormProps) {
         <section className='section px-0'>
             <section className='section px-0'>
                 <div className='container'>
-                    <h1 className='title is-1'>March Madness 2024 Picksheet</h1>
-                    <h2 className='subtitle'>Make sure to fill out every match below. If you would like to change your picks you can at any time prior to the below. Once the first game of the tournament has started you will be unable to change your picks</h2>
+                    <h1 className='title is-1'>2024 March Madness Picksheet</h1>
+                    <h2 className='subtitle'>Make sure to fill out every match below. If you would like to change your picks you can at any time prior to the below cutoff. Once the first game of the tournament has started you will be unable to change your picks</h2>
                     <h2 className='subtitle has-text-danger'>Submission cutoff: {tempDate.toLocaleDateString('en-US', { dateStyle: 'full', timeZone: 'America/New_York' })} at {tempDate.toLocaleTimeString('en-US', { timeZone: 'America/New_York' })} ET</h2>
                 </div>
             </section>
