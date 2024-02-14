@@ -41,8 +41,9 @@ function MarchMadnessAbout() {
                 <div className='columns is-centered'>
                     <div className='column is-two-thirds'>
                         <p className='mb-2'>
-                            Welcome, and thanks for thinking about the Stonehands March Madness Brack Pool! If you are considering joining, then please make sure you sign
-                            up for the site (don't forget to confirm your email address after signing up!). Once you have signed up feel free to fill out a bracket!
+                            Welcome, and thanks for thinking about the Stonehands March Madness Bracket Pool! If you participated in the 2023-2024 NFL Pools, then you
+                            will not need to sign up and are welcome to fill out a bracket. However, if you are new to the Stonehands Pool and you are considering joining, then please make sure you sign
+                            up for the site on the <a href='/sign-up'>sign up page</a> (don't forget to confirm your email address after signing up!). Once you have signed up feel free to fill out a bracket!
                         </p>
                         <p className='mb-2'>
                             The buy-in for the March Madness Pool will be $25 with the top 15 players winning (you can see the values further down). There will also be 6 extra
