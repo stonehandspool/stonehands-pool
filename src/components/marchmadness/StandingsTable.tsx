@@ -1,5 +1,9 @@
+import { useEffect, useState } from 'react';
 import playerPicks from '../../../data/2024/marchmadness/playerPicks.json';
 import { useNavigate } from 'react-router-dom';
+import supabaseClient from '../../config/supabaseClient';
+import { TABLE_NAMES } from '../../config/supabaseConfig';
+import { MARCH_MADNESS_STATE } from '../../constants';
 
 type TableColumns = {
     position: number;
@@ -15,35 +19,68 @@ type TableColumns = {
 
 function StandingsTable() {
     const navigate = useNavigate();
+    const [allPicks, setAllPicks] = useState<any[]>([]);
+    const [calculatedPicks, setCalculatedPicks] = useState<TableColumns[]>([]);
+
+    useEffect(() => {
+        const fetchPicks = async () => {
+            const { data } = await supabaseClient
+                .from(TABLE_NAMES.MARCH_MADNESS_PICKS)
+                .select();
+
+            if (data && data.length > 0) {
+                setAllPicks(data);
+            }
+        };
+
+        if (MARCH_MADNESS_STATE !== 'ACTIVE') {
+            fetchPicks();
+        } else {
+            setAllPicks(playerPicks);
+        }
+    }, []);
+
+    useEffect(() => {
+        // Calculate the standings
+        const tempPicks: TableColumns[] = [];
+        for (let i = 0; i < allPicks.length; i++) {
+            const playerInfo = allPicks[i];
+            const { firstName, lastName, username, points, pointsByRound, numCorrect, numIncorrect, currentMaxPoints } = playerInfo.submission_data ?? playerInfo;
+            const { tiebreaker } = playerInfo;
+            const rowInfo: TableColumns = {
+                position: 0,
+                name: `${firstName} ${lastName}`,
+                wins: numCorrect,
+                losses: numIncorrect,
+                points,
+                maxPoints: MARCH_MADNESS_STATE !== 'ACTIVE' ? '?' : currentMaxPoints,
+                pointsByRound,
+                tiebreaker: MARCH_MADNESS_STATE !== 'ACTIVE' ? '?' : tiebreaker,
+                username,
+            };
+            tempPicks.push(rowInfo);
+        }
+
+        // Sort everyone by points now
+        tempPicks.sort((row1, row2) => row2.points - row1.points || row2.wins - row1.wins);
+
+        // Now update everyones position value
+        tempPicks.forEach((person, index) => person.position = index + 1);
+        setCalculatedPicks(tempPicks);
+    }, [allPicks]);
 
     const goToUserStats = (username: string) => {
+        if (MARCH_MADNESS_STATE !== 'ACTIVE') {
+            return;
+        }
         navigate(`/march-madness/bracket/${username}`);
     };
 
-    // Calculate the standings
-    const calculatedPicks: TableColumns[] = [];
-    for (let i = 0; i < playerPicks.length; i++) {
-        const playerInfo = playerPicks[i];
-        const { firstName, lastName, username, points, pointsByRound, numCorrect, numIncorrect, currentMaxPoints, tiebreaker } = playerInfo;
-        const rowInfo: TableColumns = {
-            position: 0,
-            name: `${firstName} ${lastName}`,
-            wins: numCorrect,
-            losses: numIncorrect,
-            points,
-            maxPoints: currentMaxPoints,
-            pointsByRound,
-            tiebreaker,
-            username,
-        };
-        calculatedPicks.push(rowInfo);
+    if (calculatedPicks.length === 0) {
+        return (
+            <></>
+        );
     }
-
-    // Sort everyone by points now
-    calculatedPicks.sort((row1, row2) => row2.points - row1.points || row2.wins - row1.wins);
-
-    // Now update everyones position value
-    calculatedPicks.forEach((person, index) => person.position = index + 1);
 
     return (
         <section className='section'>
@@ -92,7 +129,7 @@ function StandingsTable() {
                                         className='button is-small is-primary'
                                         onClick={() => goToUserStats(row.username)}
                                     >
-                                        Click Here
+                                        {MARCH_MADNESS_STATE === 'ACTIVE' ? 'Click Here' : 'TBD'}
                                     </button>
                                 </td>
                             </tr>
