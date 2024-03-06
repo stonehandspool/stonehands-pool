@@ -136,3 +136,18 @@ $primary: $purple;
 
 @import 'bulma/bulma.sass';
 @import '@cityssm/bulma-sticky-table/sticky-table';
+
+@include mobile {
+  .navbar-item {
+    &.has-dropdown {
+      .navbar-dropdown {
+        display: none;
+      }
+      &.is-active {
+        .navbar-dropdown {
+          display: block;
+        }
+      }
+    }
+  }
+}
