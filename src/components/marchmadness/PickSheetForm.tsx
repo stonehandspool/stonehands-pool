@@ -258,7 +258,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                 <div className='container'>
                     <h1 className='title is-1'>2024 March Madness Picksheet</h1>
                     <h2 className='subtitle'>Make sure to fill out every match below. If you would like to change your picks you can at any time prior to the below cutoff. Once the first game of the tournament has started you will be unable to change your picks</h2>
-                    <h2 className='subtitle'><b>It is highly recommended you fill out your bracket on a computer/laptop! This page has not been optimized for mobile.</b></h2>
+                    {isMobile && <h2 className='subtitle'><b>It is highly recommended you fill out your bracket on a computer/laptop! This page has not been optimized for mobile.</b></h2>}
                     <h2 className='subtitle has-text-danger'>Submission cutoff: {tempDate.toLocaleDateString('en-US', { dateStyle: 'full', timeZone: 'America/New_York' })} at {tempDate.toLocaleTimeString('en-US', { timeZone: 'America/New_York' })} ET</h2>
                 </div>
             </section>
