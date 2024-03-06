@@ -2,15 +2,51 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { MARCH_MADNESS_STATE, SIGN_UPS_DISABLED } from '../constants';
 
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return { width, height };
+}
+
 function NavBar() {
     const [burgerState, setBurgerState] = useState(false);
+    const [standingsState, setStandingsState] = useState(false);
+    const [moreState, setMoreState] = useState(false);
+    const [mmState, setMMState] = useState(false);
+
+    // This is a lazy implementation that will not look for resizing, just on initial load
+    const [windowDimensions, setWindowDimensions] = useState<{ width: number, height: number }>(getWindowDimensions());
+    const isMobile = windowDimensions.width <= 768;
+
     // Using a key for the dropdowns in the navbar will make sure that they close every time you click a link in them
     // This will change the key prop for the div causing a re-render which will ensure the dropdowns always close when
     // you click a link in them
     const { key: location } = useLocation();
 
+    const onLinkClick = (loc: string) => {
+        onBurgerClick();
+        if (loc === 'standings') {
+            onStandingsClick();
+        } else if (loc === 'more') {
+            onMoreClick();
+        } else if (loc === 'mm') {
+            onMMClick();
+        }
+    };
+
     const onBurgerClick = () => {
         setBurgerState(!burgerState);
+    };
+
+    const onStandingsClick = () => {
+        setStandingsState(!standingsState);
+    };
+
+    const onMoreClick = () => {
+        setMoreState(!moreState);
+    };
+
+    const onMMClick = () => {
+        setMMState(!mmState);
     };
 
     return (
@@ -35,34 +71,46 @@ function NavBar() {
                 <div className='navbar-end'>
                     <Link className='navbar-item' to='/about' onClick={onBurgerClick}>About</Link>
                     <Link className='navbar-item' to='/picksheet' onClick={onBurgerClick}>Picksheet</Link>
-                    <div className='navbar-item has-dropdown is-hoverable' key={`${location}-dd-1`}>
+                    <div
+                        className={`navbar-item has-dropdown is-hoverable ${standingsState && isMobile ? 'is-active' : ''}`}
+                        key={`${location}-dd-1`}
+                        onClick={onStandingsClick}
+                    >
                         <a className='navbar-link'>Standings</a>
                         <div className='navbar-dropdown'>
-                            <Link className='navbar-item' to='/season-standings' onClick={onBurgerClick}>Season</Link>
-                            <Link className='navbar-item' to='/weekly-standings' onClick={onBurgerClick}>Weekly</Link>
-                            <Link className='navbar-item' to='/survivor' onClick={onBurgerClick}>Survivor</Link>
-                            <Link className='navbar-item' to='/margin' onClick={onBurgerClick}>Margin</Link>
-                            <Link className='navbar-item' to='/high-five' onClick={onBurgerClick}>High Five</Link>
+                            <Link className='navbar-item' to='/season-standings' onClick={() => onLinkClick('standings')}>Season</Link>
+                            <Link className='navbar-item' to='/weekly-standings' onClick={() => onLinkClick('standings')}>Weekly</Link>
+                            <Link className='navbar-item' to='/survivor' onClick={() => onLinkClick('standings')}>Survivor</Link>
+                            <Link className='navbar-item' to='/margin' onClick={() => onLinkClick('standings')}>Margin</Link>
+                            <Link className='navbar-item' to='/high-five' onClick={() => onLinkClick('standings')}>High Five</Link>
                         </div>
                     </div>
-                    <div className='navbar-item has-dropdown is-hoverable' key={`${location}-dd-2`}>
+                    <div
+                        className={`navbar-item has-dropdown is-hoverable ${moreState && isMobile ? 'is-active' : ''}`}
+                        key={`${location}-dd-2`}
+                        onClick={onMoreClick}
+                    >
                         <a className='navbar-link'>More</a>
                         <div className='navbar-dropdown is-right'>
-                            <Link className='navbar-item' to='/weekly-picks' onClick={onBurgerClick}>Picks</Link>
-                            <Link className='navbar-item' to='/weekly-picks-images' onClick={onBurgerClick}>Picks w/ Images</Link>
-                            <Link className='navbar-item' to='/consensus' onClick={onBurgerClick}>Consensus</Link>
-                            <Link className='navbar-item' to='/standings-by-week' onClick={onBurgerClick}>Standings By Week</Link>
-                            <Link className='navbar-item' to='/yearly-awards' onClick={onBurgerClick}>Yearly Awards</Link>
-                            <Link className='navbar-item' to='/payouts' onClick={onBurgerClick}>2023 Payouts</Link>
+                            <Link className='navbar-item' to='/weekly-picks' onClick={() => onLinkClick('more')}>Picks</Link>
+                            <Link className='navbar-item' to='/weekly-picks-images' onClick={() => onLinkClick('standings')}>Picks w/ Images</Link>
+                            <Link className='navbar-item' to='/consensus' onClick={() => onLinkClick('more')}>Consensus</Link>
+                            <Link className='navbar-item' to='/standings-by-week' onClick={() => onLinkClick('more')}>Standings By Week</Link>
+                            <Link className='navbar-item' to='/yearly-awards' onClick={() => onLinkClick('more')}>Yearly Awards</Link>
+                            <Link className='navbar-item' to='/payouts' onClick={() => onLinkClick('more')}>2023 Payouts</Link>
                         </div>
                     </div>
                     {MARCH_MADNESS_STATE !== 'INACTIVE' && (
-                        <div className='navbar-item has-dropdown is-hoverable' key={`${location}-dd-3`}>
+                        <div
+                            className={`navbar-item has-dropdown is-hoverable ${mmState && isMobile ? 'is-active' : ''}`}
+                            key={`${location}-dd-3`}
+                            onClick={onMMClick}
+                        >
                             <a className='navbar-link'>March Madness</a>
                             <div className='navbar-dropdown'>
-                                <Link className='navbar-item' to='/march-madness/about' onClick={onBurgerClick}>About</Link>
-                                <Link className='navbar-item' to='/march-madness/picksheet' onClick={onBurgerClick}>Picksheet</Link>
-                                <Link className='navbar-item' to='/march-madness/standings' onClick={onBurgerClick}>Standings</Link>
+                                <Link className='navbar-item' to='/march-madness/about' onClick={() => onLinkClick('mm')}>About</Link>
+                                <Link className='navbar-item' to='/march-madness/picksheet' onClick={() => onLinkClick('mm')}>Picksheet</Link>
+                                <Link className='navbar-item' to='/march-madness/standings' onClick={() => onLinkClick('mm')}>Standings</Link>
                             </div>
                         </div>
                     )}

@@ -20,6 +20,11 @@ const resetValue: MarchMadnessTeamInfo = {
 
 const tempDate = new Date('03/01/2024');
 
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return { width, height };
+}
+
 function PickSheetForm(props: PicksheetFormProps) {
     const { session } = props;
     const navigate = useNavigate();
@@ -29,6 +34,10 @@ function PickSheetForm(props: PicksheetFormProps) {
     const { user } = session;
     const { id, user_metadata: userInfo } = user;
     const { first_name: firstName, last_name: lastName, username } = userInfo;
+
+    // This is a lazy implementation that will not look for resizing, just on initial load
+    const [windowDimensions, setWindowDimensions] = useState<{ width: number, height: number }>(getWindowDimensions());
+    const isMobile = windowDimensions.width <= 768;
 
     if (MARCH_MADNESS_STATE === 'INACTIVE') {
         return (
@@ -249,11 +258,12 @@ function PickSheetForm(props: PicksheetFormProps) {
                 <div className='container'>
                     <h1 className='title is-1'>2024 March Madness Picksheet</h1>
                     <h2 className='subtitle'>Make sure to fill out every match below. If you would like to change your picks you can at any time prior to the below cutoff. Once the first game of the tournament has started you will be unable to change your picks</h2>
+                    {isMobile && <h2 className='subtitle'><b>It is highly recommended you fill out your bracket on a computer/laptop! This page has not been optimized for mobile.</b></h2>}
                     <h2 className='subtitle has-text-danger'>Submission cutoff: {tempDate.toLocaleDateString('en-US', { dateStyle: 'full', timeZone: 'America/New_York' })} at {tempDate.toLocaleTimeString('en-US', { timeZone: 'America/New_York' })} ET</h2>
                 </div>
             </section>
             <section className='section px-0 pt-0'>
-                <div className='columns px-6'>
+                {!isMobile && <div className='columns is-mobile px-6'>
                     <div className='column is-narrow is-flex is-flex-direction-column is-justify-content-space-around'>
                         <p style={{ visibility: 'hidden', writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>A</b></p>
                     </div>
@@ -275,8 +285,8 @@ function PickSheetForm(props: PicksheetFormProps) {
                     <div className='column'>
                         <h4 className='title is-4 has-text-centered'>Finals</h4>
                     </div>
-                </div>
-                <div className='columns px-6'>
+                </div>}
+                <div className='columns is-mobile px-6'>
                     <div className='column is-narrow is-flex is-flex-direction-column is-justify-content-space-around'>
                         <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>WEST</b></p>
                         <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>EAST</b></p>
