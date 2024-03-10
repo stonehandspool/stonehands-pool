@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 
 import NavBar from './components/NavBar';
 import ScrollToTop from './components/ScrollToTop';
@@ -66,6 +67,7 @@ function App() {
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </Suspense>
+      <Analytics />
     </BrowserRouter>
   );
 }
