@@ -186,8 +186,8 @@ function MarchMadnessAbout() {
                         </p>
                         <h5 className='title is-5'>When should I pay by?</h5>
                         <p className='mb-5'>
-                            <b>I ask that everyone pays prior to the start of the tournament.</b> If payments aren't received by the start of the <b>round of 32 (2nd round)</b> then I will reach
-                            out to you. If payment is not received by the start of the <b>sweet sixteen (3rd round)</b>, then you will be disqualified (and put on double secret probation) from the pool.
+                            <b>I ask that everyone pays prior to the start of the tournament.</b> If payments aren't received by the start of the <b>round of 64 (1st round)</b> then I will reach
+                            out to you. If payment is not received by the start of the <b>round of 32 (2nd round)</b>, then you will be disqualified (and put on double secret probation) from the pool.
                         </p>
                         <h5 className='title is-5'>When will I receive my winnings?</h5>
                         <p className='mb-5'>
