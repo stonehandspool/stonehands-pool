@@ -62,7 +62,13 @@ function StandingsTable() {
         }
 
         // Sort everyone by points now
-        tempPicks.sort((row1, row2) => row2.points - row1.points || row2.wins - row1.wins);
+        tempPicks.sort((row1, row2) => {
+            const firstName1 = row1.name.split(' ')[0] as string;
+            const lastName1 = row1.name.split(' ').pop() as string;
+            const firstName2 = row2.name.split(' ')[0] as string;
+            const lastName2 = row2.name.split(' ').pop() as string;
+            return row2.points - row1.points || row2.wins - row1.wins || lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
+        });
 
         // Now update everyones position value
         tempPicks.forEach((person, index) => person.position = index + 1);
