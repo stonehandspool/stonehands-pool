@@ -17,7 +17,7 @@ function MarchMadnessPicksheetSuccess() {
                     <p className='has-text-centered no-print'>
                         You picked <b>{winner}</b> to win the tournament! Good luck and thank you for playing!
                     </p>
-                    <p>
+                    <p className='has-text-centered no-print'>
                         Feel free to look at the standings page to make sure your name shows up there.
                     </p>
                 </div>
