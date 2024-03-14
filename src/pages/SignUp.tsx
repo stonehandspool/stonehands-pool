@@ -59,11 +59,14 @@ function SignUp() {
             .from(TABLE_NAMES.USER_INFO)
             .select('username')
             .eq('username', username);
-    
+
         if (usernameCheckData?.length !== 0) {
             setFormError('Sorry, that username is taken, please try a different one');
             return;
         }
+
+        const capitalizedFirstName = capitalize(firstName).trim();
+        const capitalizedLastName = capitalize(lastName).trim();
 
         const { data, error } = await supabaseClient.auth.signUp({
             email,
@@ -71,8 +74,8 @@ function SignUp() {
             options: {
                 data: {
                     username,
-                    first_name: firstName,
-                    last_name: lastName,
+                    first_name: capitalizedFirstName,
+                    last_name: capitalizedLastName,
                 },
             },
         });
@@ -83,8 +86,6 @@ function SignUp() {
         }
 
         const { id } = data.user as User;
-        const capitalizedFirstName = capitalize(firstName).trim();
-        const capitalizedLastName = capitalize(lastName).trim();
 
         const { data: userInfoData, error: userInfoError } = await supabaseClient
             .from(TABLE_NAMES.USER_INFO)
@@ -107,7 +108,7 @@ function SignUp() {
                             <div className='field'>
                                 <label className='label' htmlFor='first-name'>First Name:</label>
                                 <div className='control'>
-                                    <input 
+                                    <input
                                         className='input'
                                         type='text'
                                         id='first-name'
@@ -120,7 +121,7 @@ function SignUp() {
                             <div className='field'>
                                 <label className='label' htmlFor='last-name'>Last Name:</label>
                                 <div className='control'>
-                                    <input 
+                                    <input
                                         className='input'
                                         type='text'
                                         id='last-name'
@@ -134,7 +135,7 @@ function SignUp() {
                                 <label className='label' htmlFor='email'>Email:</label>
                                 <div className='control'>
                                     <input
-                                        className='input' 
+                                        className='input'
                                         type='text'
                                         id='email'
                                         value={email}
@@ -142,12 +143,12 @@ function SignUp() {
                                     />
                                 </div>
                             </div>
-                            
+
                             <div className='field'>
                                 <label className='label' htmlFor='username'>Username:</label>
                                 <div className='control'>
                                     <input
-                                        className='input' 
+                                        className='input'
                                         type='text'
                                         id='username'
                                         value={username}
@@ -160,7 +161,7 @@ function SignUp() {
                                 <label className='label' htmlFor='referral'>Referral:</label>
                                 <div className='control'>
                                     <input
-                                        className='input' 
+                                        className='input'
                                         type='text'
                                         id='referral'
                                         value={referral}
@@ -169,25 +170,25 @@ function SignUp() {
                                     />
                                 </div>
                             </div>
-                            
+
                             <div className='field'>
                                 <label className='label' htmlFor='password'>Password:</label>
                                 <div className='control'>
-                                    <input 
+                                    <input
                                         className='input'
                                         type='password'
                                         id='password'
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                     />
-                                </div>                        
+                                </div>
                             </div>
-                            
+
                             <div className='field'>
                                 <label className='label' htmlFor='confirm-password'>Confirm Password:</label>
                                 <div className='control'>
                                     <input
-                                        className='input' 
+                                        className='input'
                                         type='password'
                                         id='confirm-password'
                                         value={confirmPassword}
