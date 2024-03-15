@@ -175,11 +175,12 @@ function PickSheetForm(props: PicksheetFormProps) {
 
             if (data && data.length > 0) {
                 const { submission_data: submissionData, tiebreaker, times_updated: priorTimesUpdated } = data[0];
-                const { userPicks: priorPicks } = submissionData;
+                const { userPicks: priorPicks, bracketTitle: previousTitle } = submissionData;
 
                 setUserPicks(priorPicks);
                 setTiebreaker(tiebreaker);
                 setTimesUpdated(priorTimesUpdated);
+                setBracketTitle(previousTitle);
                 setPriorPicks(true);
             } else {
                 callback && callback();
