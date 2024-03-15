@@ -33,7 +33,8 @@ function UserBracket() {
             <section className='section px-0'>
                 <div className='container'>
                     <h1 className='title has-text-centered'>{CURRENT_YEAR} Stonehands Pool</h1>
-                    <h2 className='subtitle has-text-centered'>March Madness Bracket for <b>{playerInfo?.firstName} {playerInfo?.lastName}</b></h2>
+                    {(playerInfo.bracketTitle === undefined || playerInfo.bracketTitle.length === 0) && <h2 className='subtitle has-text-centered'>March Madness Bracket for <b>{playerInfo?.firstName} {playerInfo?.lastName}</b></h2>}
+                    {(playerInfo.bracketTitle && playerInfo.bracketTitle.length > 0) && <h2 className='subtitle has-text-centered'>{playerInfo.bracketTitle} ({playerInfo?.firstName} {playerInfo?.lastName}'s bracket)</h2>}
                 </div>
             </section>
             <section className='section px-0 pt-0'>

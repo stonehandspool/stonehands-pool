@@ -78,12 +78,17 @@ function PickSheetForm(props: PicksheetFormProps) {
     const [userPicks, setUserPicks] = useState<MarchMadnessMatchupInfo[]>(initialPicks);
     const [allPicksFilled, setAllPicksFilled] = useState<boolean>(false);
     const [tiebreaker, setTiebreaker] = useState<string>('');
+    const [bracketTitle, setBracketTitle] = useState<string>('');
 
     const handleTiebreakerInput = (event: ChangeEvent<HTMLInputElement>) => {
         const numRegex = /^[0-9\b]+$/;
         if (event.target.value === '' || numRegex.test(event.target.value)) {
             setTiebreaker(event.target.value);
         }
+    }
+
+    const handleBracketTitleInput = (event: ChangeEvent<HTMLInputElement>) => {
+        setBracketTitle(event.target.value);
     }
 
     const clearGamesAfter = (picksCopy: MarchMadnessMatchupInfo[], startingIndex: number, teamToClear: string) => {
@@ -204,6 +209,7 @@ function PickSheetForm(props: PicksheetFormProps) {
             lastName,
             username,
             userPicks,
+            bracketTitle,
             points: 0,
             numCorrect: 0,
             numIncorrect: 0,
@@ -357,6 +363,24 @@ function PickSheetForm(props: PicksheetFormProps) {
                                 value={tiebreaker}
                                 onChange={handleTiebreakerInput}
                             />
+                        </div>
+                    </div>
+                </div>
+                <div className='container mt-6'>
+                    <h3 className='title is-3'>Title:</h3>
+                    <h4 className='subtitle'>(Optional) If you'd like to give your bracket a fun name/title, feel free to put it here</h4>
+                    <div className='columns'>
+                        <div className='column is-4'>
+                            <input
+                                className='input'
+                                type='text'
+                                id='bracketTitle'
+                                name='bracketTitle'
+                                value={bracketTitle}
+                                onChange={handleBracketTitleInput}
+                                maxLength={60}
+                            />
+                            <span>({60 - bracketTitle.length} Characters remaining)</span>
                         </div>
                     </div>
                     <button className='button is-primary' disabled={!allPicksFilled} onClick={onClick}>Submit Choices</button>

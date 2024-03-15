@@ -10,14 +10,14 @@ function MarchMadnessPicksheetSuccess() {
         <section className='section'>
             <div className='columns is-centered'>
                 <div className='column is-three-quarters'>
-                    <h1 className='title has-text-centered no-print'>Success!</h1>
-                    <p className='has-text-centered no-print'>
-                        Thank you for your submission, it has been sent the database for safe keeping!
+                    <h1 className='title has-text-centered has-text-success'>Success!</h1>
+                    <br />
+                    <p className='has-text-centered subtitle'>Your Champion:</p>
+                    <p className='has-text-centered title is-1'>{winner}</p>
+                    <p className='has-text-centered'>
+                        Thank you for your submission, it has been sent the database for safe keeping! Good luck and thank you for playing!
                     </p>
-                    <p className='has-text-centered no-print'>
-                        You picked <b>{winner}</b> to win the tournament! Good luck and thank you for playing!
-                    </p>
-                    <p className='has-text-centered no-print'>
+                    <p className='has-text-centered'>
                         Feel free to look at the standings page to make sure your name shows up there.
                     </p>
                 </div>
