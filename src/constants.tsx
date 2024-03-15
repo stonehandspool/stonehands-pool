@@ -181,6 +181,7 @@ type MarchMadnessPlayerInfo = {
     lastName: string;
     userId: string;
     username: string;
+    bracketTitle: string;
     timesUpdated: number;
     tiebreaker: number;
     points: number;
