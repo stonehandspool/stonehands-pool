@@ -11,7 +11,7 @@ function MarchMadnessAbout() {
     const totalPool = numPlayers * buyIn;
 
     const roundAmount = 50;
-    const totalRounds = 50 * 6;
+    const totalRounds = 50 * 5;
 
     // Final Payouts
     const totalFinal = totalPool - totalRounds;
@@ -124,7 +124,9 @@ function MarchMadnessAbout() {
                         <p>
                             Below is the <b>tentative</b> pay structure for the Pool, it will be finalized once all submissions are received.
                             This structure is designed to try and provide as many ways for players to win at least some money back so that there's always
-                            a motivation to keep playing. <b>All</b> payouts will be made at the end of the tournament.
+                            a motivation to keep playing. The "Per Round" payout will be given to whichever player gains the most points in that round. If
+                            there is a tie in that round then the money will be split between the winners.
+                            <b>All</b> payouts will be made at the end of the tournament.
                         </p>
                         <br />
                         <h5 className='title is-5'>Season Payout Structure w/ {numPlayers} members</h5>
@@ -163,7 +165,6 @@ function MarchMadnessAbout() {
                                 <p><b>3<sup>rd</sup> Round: </b>{toMoney(roundAmount)}</p>
                                 <p><b>4<sup>th</sup> Round: </b>{toMoney(roundAmount)}</p>
                                 <p><b>5<sup>th</sup> Round: </b>{toMoney(roundAmount)}</p>
-                                <p><b>6<sup>th</sup> Round: </b>{toMoney(roundAmount)}</p>
                             </div>
                         </div>
                     </div>
