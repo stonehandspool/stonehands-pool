@@ -1,6 +1,6 @@
-import * as fs from 'node:fs';
 import * as path from 'path';
 import minimist from 'minimist';
+import { readFile, writeFile } from 'fs/promises';
 
 const args = minimist(process.argv.slice(2));
 const { year } = args;
@@ -9,6 +9,11 @@ if (isNaN(year)) {
     console.log('Please submit a valid year');
     process.exit();
 }
+
+// Get the teams and their records
+const teamData = await JSON.parse(
+    await readFile(path.resolve(`data/${year}/marchmadness/teams.json`))
+);
 
 function getRound(i) {
     if (i < 49) {
@@ -24,24 +29,25 @@ function getRound(i) {
 }
 
 const matchups = [];
-const seedingOrder = [1, 16, 8, 9, 5, 12, 4, 13, 6, 11, 3, 14, 7, 10, 2, 15];
 
 let increment = 32;
-let teamIndex = 1;
+let teamIndex = 0;
 let seedingIndex = 0;
 // Fill in the first round
 for (let i = 1; i <= 32; i++) {
+    const topTeamData = teamData[teamIndex];
+    const bottomTeamData = teamData[teamIndex + 1];
     matchups.push({
         id: `matchup-${i}`,
         topTeam: {
-            seed: seedingOrder[seedingIndex],
-            name: `Team${teamIndex}`,
-            record: '0-0',
+            seed: topTeamData.seed,
+            name: topTeamData.name,
+            record: topTeamData.record,
         },
         bottomTeam: {
-            seed: seedingOrder[seedingIndex + 1],
-            name: `Team${teamIndex + 1}`,
-            record: '0-0',
+            seed: bottomTeamData.seed,
+            name: bottomTeamData.name,
+            record: bottomTeamData.record,
         },
         topScore: 0,
         bottomScore: 0,
@@ -53,11 +59,6 @@ for (let i = 1; i <= 32; i++) {
 
     if (i % 2 === 1) {
         increment--;
-    }
-    if (seedingIndex < seedingOrder.length - 2) {
-        seedingIndex += 2;
-    } else {
-        seedingIndex = 0;
     }
     teamIndex += 2;
 }
@@ -89,5 +90,5 @@ for (let i = 33; i <=63; i++) {
 }
 
 const asJson = JSON.stringify(matchups, null, 2);
-fs.writeFileSync(path.resolve(`data/${year}/marchmadness/matchups.json`), asJson);
+await writeFile(path.resolve(`data/${year}/marchmadness/matchups.json`), asJson);
 console.log(`Created a new file at data/${year}/marchmadness/matchups.json in order to keep track of the teams`);

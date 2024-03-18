@@ -198,5 +198,5 @@ export type { ValidPicks, ResultInfo, UserInfo, MarginPick, HighFivePick, Submis
 // March Madness specific constants
 type MarchMadnessStates = 'INACTIVE' | 'READY_FOR_PICKS' | 'ACTIVE';
 export const MARCH_MADNESS_STATE: MarchMadnessStates = 'READY_FOR_PICKS';
-export const MARCH_MADNESS_CUTOFF = new Date('2024-03-21T18:00:00.000Z'); // TODO: Get correct time
+export const MARCH_MADNESS_CUTOFF = new Date('2024-03-21T17:00:00.000Z'); // TODO: Get correct time
 export const ROUND_VALUES = [1, 2, 4, 8, 16, 32];
