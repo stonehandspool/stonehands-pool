@@ -15,6 +15,9 @@ const bracketData = await JSON.parse(
     await readFile(path.resolve(`data/${year}/marchmadness/matchups.json`))
 );
 
+// TODO: Next year this is what will be the starting file
+const seedingOrder = [1, 16, 8, 9, 5, 12, 4, 13, 6, 11, 3, 14, 7, 10, 2, 15];
+
 const teams = [];
 bracketData.forEach((matchupInfo) => {
     const { topTeam, bottomTeam } = matchupInfo;
