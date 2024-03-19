@@ -3,7 +3,7 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
-import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_FINAL_GAME, CURRENT_WEEK_STATUS, CURRENT_YEAR, SEASON_READY, SubmissionInfo, UserInfo } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_FINAL_GAME, CURRENT_WEEK_STATUS, CURRENT_YEAR, MARCH_MADNESS_STATE, SEASON_READY, SubmissionInfo, UserInfo } from '../../constants';
 import * as seasonData from '../../../data/2023/season.json';
 import * as playerData from '../../../data/2023/players.json';
 import * as weeklyPicks from '../../../data/2023/weeklyPicks.json';
@@ -37,6 +37,19 @@ function PickSheetForm(props: PicksheetFormProps) {
     const { session } = props;
     const { players } = playerData;
     const navigate = useNavigate();
+
+    if (MARCH_MADNESS_STATE === 'READY_FOR_PICKS' || MARCH_MADNESS_STATE === 'ACTIVE') {
+        return (
+            <section className='section'>
+                <div className='container'>
+                    <h3 className='title is-3 has-text-centered'>
+                        Sorry, this is the page for the picksheet for the football pools, you probably want to look{' '}
+                        <a href='/march-madness/picksheet'>HERE</a> for the March Madness Bracket Picksheet
+                    </h3>
+                </div>
+            </section>
+        )
+    }
 
     if (!SEASON_READY) {
         return (
@@ -135,7 +148,7 @@ function PickSheetForm(props: PicksheetFormProps) {
     }
 
     const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as unknown as UserInfo;
-    
+
     if (!userInfo) {
         return (
             <section className='section'>
@@ -212,20 +225,20 @@ function PickSheetForm(props: PicksheetFormProps) {
                 }
                 setSelectedPicks(priorConfidencePicks);
                 setSelectedConfidences(priorConfidenceValues);
-    
+
                 // Set prior survivor pick
                 if (userInfo.aliveInSurvivor) {
                     setSurvivorTeam(priorPicks['survivor-pick']);
                 }
                 // Set prior margin pick
                 setMarginTeam(priorPicks['margin-pick']);
-    
+
                 // Set prior high five picks
                 setHighFivePicks(priorPicks.highFivePicks);
-    
+
                 // Set prior tiebreaker
                 setTiebreaker(priorPicks.tiebreaker)
-    
+
                 // Update other state
                 setSelections(priorPicks);
                 // There won't be a submission to update in the database if it was auto-generated
@@ -233,13 +246,13 @@ function PickSheetForm(props: PicksheetFormProps) {
                 if (submission_id !== -1) {
                     setPriorPicks(true);
                 }
-            } 
+            }
         };
 
         // First, check the database since that is the most up-to-date version most of the time
         fetchPicks(searchJSON).catch(err => console.error(err));
     }, []);
-    
+
     const handleSubmit = async (e: any) => {
         e.preventDefault();
 
@@ -273,7 +286,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                 choices[`matchup-${i}`] = pick;
             }
         }
-        
+
         if (missingConfidencePick) {
             return;
         }
@@ -290,7 +303,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                 choices[`matchup-${i}-confidence`] = value;
             }
         }
-        
+
         if (missingConfidenceValue) {
             return;
         }
@@ -416,7 +429,7 @@ function PickSheetForm(props: PicksheetFormProps) {
                         </div>
                     </div>
                     {formError && formError.length > 0 && <p className='has-text-danger'>{formError}</p>}
-                </form> 
+                </form>
             </div>
         </section>
     );
