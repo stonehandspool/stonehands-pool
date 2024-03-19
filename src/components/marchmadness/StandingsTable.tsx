@@ -14,6 +14,7 @@ type TableColumns = {
     maxPoints: number;
     pointsByRound: number[];
     tiebreaker: number;
+    champion: string;
     username: string;
 }
 
@@ -45,8 +46,10 @@ function StandingsTable() {
         const tempPicks: TableColumns[] = [];
         for (let i = 0; i < allPicks.length; i++) {
             const playerInfo = allPicks[i];
-            const { firstName, lastName, username, points, pointsByRound, numCorrect, numIncorrect, currentMaxPoints } = playerInfo.submission_data ?? playerInfo;
+            const { firstName, lastName, username, points, pointsByRound, numCorrect, numIncorrect, currentMaxPoints, userPicks } = playerInfo.submission_data ?? playerInfo;
             const { tiebreaker } = playerInfo;
+            const finalMatchup = userPicks.find((p: any) => p.id === 'matchup-63');
+            const champion = finalMatchup.winner === 'top' ? finalMatchup.topTeam.name : finalMatchup.bottomTeam.name;
             const rowInfo: TableColumns = {
                 position: 0,
                 name: `${firstName} ${lastName}`,
@@ -56,6 +59,7 @@ function StandingsTable() {
                 maxPoints: MARCH_MADNESS_STATE !== 'ACTIVE' ? '?' : currentMaxPoints,
                 pointsByRound,
                 tiebreaker: MARCH_MADNESS_STATE !== 'ACTIVE' ? '?' : tiebreaker,
+                champion: MARCH_MADNESS_STATE !== 'ACTIVE' ? '?' : champion,
                 username,
             };
             tempPicks.push(rowInfo);
@@ -96,7 +100,7 @@ function StandingsTable() {
                         <tr>
                             <th colSpan={6}></th>
                             <th colSpan={6} className='has-text-centered'>Points By Round</th>
-                            <th colSpan={2}></th>
+                            <th colSpan={3}></th>
                         </tr>
                         <tr>
                             <th className='has-text-centered'>Position</th>
@@ -112,6 +116,7 @@ function StandingsTable() {
                             <th className='has-text-centered'>5</th>
                             <th className='has-text-centered'>6</th>
                             <th className='has-text-centered'>Tiebreaker</th>
+                            <th className='has-text-centered'>Champion</th>
                             <th className='has-text-centered'>Bracket</th>
                         </tr>
                     </thead>
@@ -130,6 +135,7 @@ function StandingsTable() {
                                     })
                                 }
                                 <td>{row.tiebreaker}</td>
+                                <td>{row.champion}</td>
                                 <td>
                                     <button
                                         className='button is-small is-primary'
