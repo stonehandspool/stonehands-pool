@@ -48,7 +48,7 @@ function StandingsTable() {
             const playerInfo = allPicks[i];
             const { firstName, lastName, username, points, pointsByRound, numCorrect, numIncorrect, currentMaxPoints, userPicks } = playerInfo.submission_data ?? playerInfo;
             const { tiebreaker } = playerInfo;
-            const finalMatchup = userPicks.find(p => p.id === 'matchup-63');
+            const finalMatchup = userPicks.find((p: any) => p.id === 'matchup-63');
             const champion = finalMatchup.winner === 'top' ? finalMatchup.topTeam.name : finalMatchup.bottomTeam.name;
             const rowInfo: TableColumns = {
                 position: 0,
