@@ -366,7 +366,7 @@ function About() {
                 <div className='columns is-centered'>
                     <div className='column is-two-thirds'>
                         <p className='mb-5'><b>The Pool will always pay out 100% of the collected buy ins. The site upkeep will be handled by Ryan.</b></p>
-                        <h5 className='title is-5'><b>Buy In: </b> ${buyIn}</h5>
+                        <h5 className='title is-5'><b>Buy In: </b> ${buyIn} <span className='has-text-danger'>This is the buy in for the football pool, for info about the March Madness pool please see the payouts section <a href='march-madness/about'>here</a> </span></h5>
                         <h5 className='title is-5'><b>Payment Options</b></h5>
                         <p><b>Venmo:</b> @Glen-Fandl | Last Four Digits (if needed): 7863</p>
                         <p><b>Zelle:</b> gmf2715@outlook.com</p>
