@@ -71,7 +71,7 @@ function StandingsTable() {
             const lastName1 = row1.name.split(' ').pop() as string;
             const firstName2 = row2.name.split(' ')[0] as string;
             const lastName2 = row2.name.split(' ').pop() as string;
-            return row2.points - row1.points || row2.wins - row1.wins || lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
+            return row2.points - row1.points || row2.wins - row1.wins || row2.maxPoints - row1.maxPoints || lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
         });
 
         // Now update everyones position value
