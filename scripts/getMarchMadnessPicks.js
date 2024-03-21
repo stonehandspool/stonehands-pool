@@ -40,6 +40,7 @@ if (data) {
             lastName,
             username,
             userPicks,
+            bracketTitle,
             points,
             numCorrect,
             numIncorrect,
@@ -61,6 +62,7 @@ if (data) {
             currentMaxPoints,
             startingMaxPoints,
             userPicks,
+            bracketTitle,
         });
     });
     const playersAsJson = JSON.stringify(playerPicks, null, 2);

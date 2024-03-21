@@ -28,6 +28,8 @@ function UserBracket() {
         return bracketData.find(matchup => matchup.id === matchupId)! as MarchMadnessMatchupInfo;
     };
 
+    console.log(playerInfo)
+
     return (
         <section className='section px-0'>
             <section className='section px-0'>
