@@ -111,6 +111,7 @@ function NavBar() {
                                 <Link className='navbar-item' to='/march-madness/about' onClick={() => onLinkClick('mm')}>About</Link>
                                 <Link className='navbar-item' to='/march-madness/picksheet' onClick={() => onLinkClick('mm')}>Picksheet</Link>
                                 <Link className='navbar-item' to='/march-madness/standings' onClick={() => onLinkClick('mm')}>Standings</Link>
+                                <Link className='navbar-item' to='/march-madness/pool-performance' onClick={() => onLinkClick('mm')}>Pool Performance</Link>
                             </div>
                         </div>
                     )}

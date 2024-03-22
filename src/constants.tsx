@@ -200,3 +200,4 @@ type MarchMadnessStates = 'INACTIVE' | 'READY_FOR_PICKS' | 'ACTIVE';
 export const MARCH_MADNESS_STATE: MarchMadnessStates = 'ACTIVE';
 export const MARCH_MADNESS_CUTOFF = new Date('2024-03-21T16:15:00.000Z');
 export const ROUND_VALUES = [1, 2, 4, 8, 16, 32];
+export const MARCH_MADNESS_CURRENT_ROUND = 1;
