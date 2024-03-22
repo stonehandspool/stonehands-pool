@@ -6,10 +6,11 @@ type DisplayCardProps = {
     topTeamAlive: boolean;
     bottomTeamAlive: boolean;
     upToDateMatchupInfo: MarchMadnessMatchupInfo;
+    isMobile: boolean;
 }
 
 function DisplayCard(props: DisplayCardProps) {
-    const { matchupInfo, customClass = '', topTeamAlive, bottomTeamAlive, upToDateMatchupInfo } = props;
+    const { matchupInfo, customClass = '', topTeamAlive, bottomTeamAlive, upToDateMatchupInfo, isMobile } = props;
     const { topTeam, bottomTeam, winner } = matchupInfo;
     const { winner: actualWinner, topScore, bottomScore } = upToDateMatchupInfo;
 
@@ -40,19 +41,19 @@ function DisplayCard(props: DisplayCardProps) {
     return (
         <div className={`box march-madness ${customClass} p-3 mb-3`}>
             <div className='field mb-0'>
-                <div className='columns'>
+                <div className='columns is-mobile'>
                     <div className='column is-1'>
                         <span className='has-text-weight-bold is-size-7'>{topTeam.seed}</span>
                     </div>
                     <div className='column pl-2'>
                         <span className={`${topTeamWeight} ${topTeamColor}`}>
-                            {topTeamAlive && <>{topTeam.name} {`(${topTeam.record})`}</>}
-                            {(!topTeamAlive && topTeamColor === 'has-text-danger') && <s>{topTeam.name} {`(${topTeam.record})`}</s>}
-                            {(!topTeamAlive && topTeamColor === 'has-text-black') && <>{topTeam.name} {`(${topTeam.record})`}</>}
+                            {topTeamAlive && <>{topTeam.name} {!isMobile && `(${topTeam.record})`}</>}
+                            {(!topTeamAlive && topTeamColor === 'has-text-danger') && <s>{topTeam.name} {!isMobile && `(${topTeam.record})`}</s>}
+                            {(!topTeamAlive && topTeamColor === 'has-text-black') && <>{topTeam.name} {!isMobile && `(${topTeam.record})`}</>}
                         </span>
                     </div>
                     {
-                        actualWinner !== null && (
+                        (actualWinner !== null && !isMobile) && (
                             <div className='column is-narrow is-align-self-flex-end'>
                                 {actualWinner === 'top' && <span><b>{topScore}</b></span>}
                                 {actualWinner === 'bottom' && <span>{topScore}</span>}
@@ -62,19 +63,19 @@ function DisplayCard(props: DisplayCardProps) {
                 </div>
             </div>
             <div className='field mb-0'>
-                <div className='columns'>
+                <div className='columns is-mobile'>
                     <div className='column is-1'>
                         <span className='has-text-weight-bold is-size-7'>{bottomTeam.seed}</span>
                     </div>
                     <div className='column pl-2'>
                         <span className={`${bottomTeamWeight} ${bottomTeamColor}`}>
-                            {bottomTeamAlive && <>{bottomTeam.name} {`(${bottomTeam.record})`}</>}
-                            {(!bottomTeamAlive && bottomTeamColor === 'has-text-danger') && <s>{bottomTeam.name} {`(${bottomTeam.record})`}</s>}
-                            {(!bottomTeamAlive && bottomTeamColor === 'has-text-black') && <>{bottomTeam.name} {`(${bottomTeam.record})`}</>}
+                            {bottomTeamAlive && <>{bottomTeam.name} {!isMobile && `(${bottomTeam.record})`}</>}
+                            {(!bottomTeamAlive && bottomTeamColor === 'has-text-danger') && <s>{bottomTeam.name} {!isMobile && `(${bottomTeam.record})`}</s>}
+                            {(!bottomTeamAlive && bottomTeamColor === 'has-text-black') && <>{bottomTeam.name} {!isMobile && `(${bottomTeam.record})`}</>}
                         </span>
                     </div>
                     {
-                        actualWinner !== null && (
+                        (actualWinner !== null && !isMobile) && (
                             <div className='column is-narrow is-align-self-flex-end'>
                                 {actualWinner === 'bottom' && <span><b>{bottomScore}</b></span>}
                                 {actualWinner === 'top' && <span>{bottomScore}</span>}

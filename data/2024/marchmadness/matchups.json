@@ -125,10 +125,10 @@
       "name": "Drake",
       "record": "28-6"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 66,
+    "bottomScore": 61,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-36"
   },
@@ -144,10 +144,10 @@
       "name": "South Dakota St.",
       "record": "22-12"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 82,
+    "bottomScore": 65,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-36"
   },
@@ -391,10 +391,10 @@
       "name": "NC State",
       "record": "22-14"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 67,
+    "bottomScore": 80,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-43"
   },
@@ -410,10 +410,10 @@
       "name": "Oakland",
       "record": "23-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 76,
+    "bottomScore": 80,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-43"
   },
@@ -505,10 +505,10 @@
       "name": "McNeese",
       "record": "30-3"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 65,
+    "bottomScore": 86,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-46"
   },
@@ -524,10 +524,10 @@
       "name": "Samford",
       "record": "29-5"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 93,
+    "bottomScore": 89,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-46"
   },
@@ -581,10 +581,10 @@
       "name": "Virginia/CO St.",
       "record": "23-10"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 56,
+    "bottomScore": 44,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-48"
   },
@@ -600,10 +600,10 @@
       "name": "Saint Peter's",
       "record": "19-13"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 83,
+    "bottomScore": 49,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-48"
   },
@@ -667,14 +667,14 @@
   {
     "id": "matchup-36",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 7,
+      "name": "Washington St.",
+      "record": "24-9"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Iowa St.",
+      "record": "27-7"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -800,14 +800,14 @@
   {
     "id": "matchup-43",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 11,
+      "name": "NC State",
+      "record": "22-14"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 14,
+      "name": "Oakland",
+      "record": "23-11"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -857,14 +857,14 @@
   {
     "id": "matchup-46",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 5,
+      "name": "Gonzaga",
+      "record": "25-7"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Kansas",
+      "record": "22-10"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -895,14 +895,14 @@
   {
     "id": "matchup-48",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 7,
+      "name": "Texas",
+      "record": "20-12"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Tennessee",
+      "record": "24-8"
     },
     "topScore": 0,
     "bottomScore": 0,
