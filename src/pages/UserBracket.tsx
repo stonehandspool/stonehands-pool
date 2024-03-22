@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams } from "react-router-dom";
 import DisplayCard from '../components/marchmadness/DisplayCard';
 import { CURRENT_YEAR, MarchMadnessMatchupInfo, MarchMadnessPlayerInfo } from '../constants';
@@ -5,8 +6,17 @@ import playerPicks from '../../data/2024/marchmadness/playerPicks.json';
 import teamData from '../../data/2024/marchmadness/teams.json';
 import bracketData from '../../data/2024/marchmadness/matchups.json';
 
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return { width, height };
+}
+
 function UserBracket() {
     const { username } = useParams();
+
+    // This is a lazy implementation that will not look for resizing, just on initial load
+    const [windowDimensions, setWindowDimensions] = useState<{ width: number, height: number }>(getWindowDimensions());
+    const isMobile = windowDimensions.width <= 768;
 
     const playerInfo = playerPicks.find((pickInfo) => pickInfo.username === username) as unknown as MarchMadnessPlayerInfo;
 
@@ -38,7 +48,7 @@ function UserBracket() {
                 </div>
             </section>
             <section className='section px-0 pt-0'>
-                <div className='columns px-6'>
+                {!isMobile && <div className='columns px-6'>
                     <div className='column is-narrow is-flex is-flex-direction-column is-justify-content-space-around'>
                         <p style={{ visibility: 'hidden', writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>A</b></p>
                     </div>
@@ -60,8 +70,8 @@ function UserBracket() {
                     <div className='column'>
                         <h4 className='title is-4 has-text-centered'>Finals</h4>
                     </div>
-                </div>
-                <div className='columns px-6'>
+                </div>}
+                <div className='columns is-mobile px-6'>
                     <div className='column is-narrow is-flex is-flex-direction-column is-justify-content-space-around'>
                         <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>WEST</b></p>
                         <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}><b>EAST</b></p>
@@ -80,6 +90,7 @@ function UserBracket() {
                                         topTeamAlive={teamAlive(matchupInfo.topTeam.name!)}
                                         bottomTeamAlive={teamAlive(matchupInfo.bottomTeam.name!)}
                                         upToDateMatchupInfo={getUpToDateMatchupInfo(matchupInfo.id)}
+                                        isMobile={isMobile}
                                     />
                                 )
                             })
@@ -97,6 +108,7 @@ function UserBracket() {
                                         topTeamAlive={teamAlive(matchupInfo.topTeam.name!)}
                                         bottomTeamAlive={teamAlive(matchupInfo.bottomTeam.name!)}
                                         upToDateMatchupInfo={getUpToDateMatchupInfo(matchupInfo.id)}
+                                        isMobile={isMobile}
                                     />
                                 )
                             })
@@ -114,6 +126,7 @@ function UserBracket() {
                                         topTeamAlive={teamAlive(matchupInfo.topTeam.name!)}
                                         bottomTeamAlive={teamAlive(matchupInfo.bottomTeam.name!)}
                                         upToDateMatchupInfo={getUpToDateMatchupInfo(matchupInfo.id)}
+                                        isMobile={isMobile}
                                     />
                                 )
                             })
@@ -131,6 +144,7 @@ function UserBracket() {
                                         topTeamAlive={teamAlive(matchupInfo.topTeam.name!)}
                                         bottomTeamAlive={teamAlive(matchupInfo.bottomTeam.name!)}
                                         upToDateMatchupInfo={getUpToDateMatchupInfo(matchupInfo.id)}
+                                        isMobile={isMobile}
                                     />
                                 )
                             })
@@ -148,6 +162,7 @@ function UserBracket() {
                                         topTeamAlive={teamAlive(matchupInfo.topTeam.name!)}
                                         bottomTeamAlive={teamAlive(matchupInfo.bottomTeam.name!)}
                                         upToDateMatchupInfo={getUpToDateMatchupInfo(matchupInfo.id)}
+                                        isMobile={isMobile}
                                     />
                                 )
                             })
@@ -160,6 +175,7 @@ function UserBracket() {
                             topTeamAlive={teamAlive(userPicks[userPicks.length - 1].topTeam.name!)}
                             bottomTeamAlive={teamAlive(userPicks[userPicks.length - 1].bottomTeam.name!)}
                             upToDateMatchupInfo={getUpToDateMatchupInfo(userPicks[userPicks.length - 1].id)}
+                            isMobile={isMobile}
                         />
                     </div>
                 </div>
