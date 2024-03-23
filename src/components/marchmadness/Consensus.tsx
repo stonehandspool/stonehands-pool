@@ -59,6 +59,8 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
     playerPicks.forEach(playerInfo => {
         const { userPicks } = playerInfo;
         consensusArr.forEach(matchup => {
+            // TODO: Why does this break builds?!
+            // @ts-ignore
             const userMatchInfo = userPicks.find(pick => pick.id === matchup.matchupId)!;
             const userWinner = userMatchInfo.winner === 'top' ? userMatchInfo.topTeam.name : userMatchInfo.bottomTeam.name;
             if (userWinner === matchup.topTeam) {

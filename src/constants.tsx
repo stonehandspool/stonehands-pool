@@ -173,6 +173,7 @@ type MarchMadnessMatchupInfo = {
     bottomScore: number | null;
     winner: 'top' | 'bottom' | null;
     round: number;
+    evaluated: boolean;
     nextMatchup: string | null;
 };
 
