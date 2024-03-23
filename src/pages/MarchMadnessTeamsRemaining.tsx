@@ -6,7 +6,7 @@ function MarchMadnessTeamsRemaining() {
         <section className='section'>
             <div className='container'>
                 <h1 className='title has-text-centered'>{CURRENT_YEAR} Stonehands Pool</h1>
-                <h2 className='subtitle has-text-centered'>March Madness Standings</h2>
+                <h2 className='subtitle has-text-centered'>March Madness teams remaining by round for each player</h2>
                 <MarchMadnessTeamsRemainingTable />
             </div>
         </section>
