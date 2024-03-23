@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import playerPicks from '../../../data/2024/marchmadness/playerPicks.json';
+import teams from '../../../data/2024/marchmadness/teams.json';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
@@ -122,6 +123,7 @@ function StandingsTable() {
                     </thead>
                     <tbody>
                         {calculatedPicks.map((row, index) => {
+                            const championAlive = teams.find(team => team.name === row.champion)!.alive;
                             return <tr key={`${index}`}>
                                 <td>{row.position}</td>
                                 <td>{row.name}</td>
@@ -135,7 +137,7 @@ function StandingsTable() {
                                     })
                                 }
                                 <td>{row.tiebreaker}</td>
-                                <td>{row.champion}</td>
+                                <td className={!championAlive ? 'has-text-danger' : 'has-text-black'}>{row.champion}</td>
                                 <td>
                                     <button
                                         className='button is-small is-primary'
