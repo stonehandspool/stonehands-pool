@@ -14,7 +14,7 @@ function NavBar() {
     const [mmState, setMMState] = useState(false);
 
     // This is a lazy implementation that will not look for resizing, just on initial load
-    const [windowDimensions, setWindowDimensions] = useState<{ width: number, height: number }>(getWindowDimensions());
+    const [windowDimensions] = useState<{ width: number, height: number }>(getWindowDimensions());
     const isMobile = windowDimensions.width <= 768;
 
     // Using a key for the dropdowns in the navbar will make sure that they close every time you click a link in them
@@ -111,7 +111,8 @@ function NavBar() {
                                 <Link className='navbar-item' to='/march-madness/about' onClick={() => onLinkClick('mm')}>About</Link>
                                 <Link className='navbar-item' to='/march-madness/picksheet' onClick={() => onLinkClick('mm')}>Picksheet</Link>
                                 <Link className='navbar-item' to='/march-madness/standings' onClick={() => onLinkClick('mm')}>Standings</Link>
-                                <Link className='navbar-item' to='/march-madness/pool-performance' onClick={() => onLinkClick('mm')}>Pool Performance</Link>
+                                <Link className='navbar-item' to='/march-madness/pool-consensus' onClick={() => onLinkClick('mm')}>Pool Consensus</Link>
+                                <Link className='navbar-item' to='/march-madness/teams-remaining' onClick={() => onLinkClick('mm')}>Teams Remaining</Link>
                             </div>
                         </div>
                     )}

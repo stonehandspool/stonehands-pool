@@ -1,8 +1,8 @@
-import { MARCH_MADNESS_CURRENT_ROUND, SubmissionInfo } from '../../constants';
+import { MARCH_MADNESS_CURRENT_ROUND } from '../../constants';
 import matchups from '../../../data/2024/marchmadness/matchups.json';
 import playerPicks from '../../../data/2024/marchmadness/playerPicks.json';
 
-type MatchupPerformanceInfo = {
+type MatchupConsensusInfo = {
     topTeam: string;
     topNumPicks: number;
     topPercent: string;
@@ -11,16 +11,18 @@ type MatchupPerformanceInfo = {
     bottomPercent: string;
     matchupId: string;
     matchupTotalParticipants: number;
+    numTimeDifferentTeamChosen: number;
+    differentTeamPercent: string;
 };
 
-type MarchMadnessPerformanceReportProps = {
+type MarchMadnessConsensusReportProps = {
     round: number;
 };
 
 const regions = ['WEST', 'EAST', 'SOUTH', 'MIDWEST'];
 const gamesPerRound = [8, 4, 2, 1, 1];
 
-function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps) {
+function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
     const { round } = props;
 
     if (round > MARCH_MADNESS_CURRENT_ROUND) {
@@ -34,12 +36,12 @@ function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps
     }
 
     const matchupsInRound = matchups.filter(matchup => matchup.round === round);
-    const performanceArr: MatchupPerformanceInfo[] = [];
+    const consensusArr: MatchupConsensusInfo[] = [];
     const gamesPerTable = gamesPerRound[round - 1];
 
     // First set up the initial values for the consensus info
     matchupsInRound.forEach(matchup => {
-        performanceArr.push({
+        consensusArr.push({
             topTeam: matchup.topTeam.name as string,
             topNumPicks: 0,
             topPercent: '0',
@@ -48,13 +50,15 @@ function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps
             bottomPercent: '0',
             matchupId: matchup.id,
             matchupTotalParticipants: 0,
+            numTimeDifferentTeamChosen: 0,
+            differentTeamPercent: '0',
         });
     });
 
     // Now go through every players response and update the consensus info
     playerPicks.forEach(playerInfo => {
         const { userPicks } = playerInfo;
-        performanceArr.forEach(matchup => {
+        consensusArr.forEach(matchup => {
             const userMatchInfo = userPicks.find(pick => pick.id === matchup.matchupId)!;
             const userWinner = userMatchInfo.winner === 'top' ? userMatchInfo.topTeam.name : userMatchInfo.bottomTeam.name;
             if (userWinner === matchup.topTeam) {
@@ -63,14 +67,17 @@ function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps
             } else if (userWinner === matchup.bottomTeam) {
                 matchup.bottomNumPicks++;
                 matchup.matchupTotalParticipants++;
+            } else {
+                matchup.numTimeDifferentTeamChosen++;
             }
         });
     });
 
     // Now calculate the percent and avg
-    performanceArr.forEach(matchupInfo => {
+    consensusArr.forEach(matchupInfo => {
         matchupInfo.topPercent = `${((matchupInfo.topNumPicks / matchupInfo.matchupTotalParticipants) * 100).toFixed(1)}%`;
         matchupInfo.bottomPercent = `${((matchupInfo.bottomNumPicks / matchupInfo.matchupTotalParticipants) * 100).toFixed(1)}%`;
+        matchupInfo.differentTeamPercent = `${((matchupInfo.numTimeDifferentTeamChosen / playerPicks.length) * 100).toFixed(1)}%`;
     });
 
     return (
@@ -87,7 +94,7 @@ function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps
                                         <tr>
                                             <td className='is-vcentered'><b>Team #1</b></td>
                                             {
-                                                performanceArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                                                consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
                                                     return <td key={`${info.topTeam}-name`}>{info.topTeam}</td>
                                                 })
                                             }
@@ -95,7 +102,7 @@ function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps
                                         <tr>
                                             <td># Times Chosen</td>
                                             {
-                                                performanceArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                                                consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
                                                     return <td key={`${info.topTeam}-name`}>{info.topNumPicks}</td>
                                                 })
                                             }
@@ -103,7 +110,7 @@ function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps
                                         <tr>
                                             <td>Percent</td>
                                             {
-                                                performanceArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                                                consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
                                                     return <td key={`${info.topTeam}-name`}>{info.topPercent}</td>
                                                 })
                                             }
@@ -111,7 +118,7 @@ function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps
                                         <tr>
                                             <td className='is-vcentered'><b>Team #2</b></td>
                                             {
-                                                performanceArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                                                consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
                                                     return <td key={`${info.bottomTeam}-name`}>{info.bottomTeam}</td>
                                                 })
                                             }
@@ -119,7 +126,7 @@ function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps
                                         <tr>
                                             <td># Times Chosen</td>
                                             {
-                                                performanceArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                                                consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
                                                     return <td key={`${info.bottomTeam}-name`}>{info.bottomNumPicks}</td>
                                                 })
                                             }
@@ -127,11 +134,35 @@ function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps
                                         <tr>
                                             <td>Percent</td>
                                             {
-                                                performanceArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                                                consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
                                                     return <td key={`${info.bottomTeam}-name`}>{info.bottomPercent}</td>
                                                 })
                                             }
                                         </tr>
+                                        {
+                                            round > 1 && (
+                                                <tr>
+                                                    <td><b># Brackets w/ Different Winner</b></td>
+                                                    {
+                                                        consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                                                            return <td key={`${info.matchupId}-other`}>{info.numTimeDifferentTeamChosen}</td>
+                                                        })
+                                                    }
+                                                </tr>
+                                            )
+                                        }
+                                        {
+                                            round > 1 && (
+                                                <tr>
+                                                    <td><b>% Pool w/ Different Winner</b></td>
+                                                    {
+                                                        consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                                                            return <td key={`${info.matchupId}-percent`}>{info.differentTeamPercent}</td>
+                                                        })
+                                                    }
+                                                </tr>
+                                            )
+                                        }
                                     </tbody>
                                 </table>
                             }
@@ -144,57 +175,4 @@ function MarchMadnessPerformanceReport(props: MarchMadnessPerformanceReportProps
     );
 }
 
-export default MarchMadnessPerformanceReport;
-
-{/* <table className='table is-hoverable has-text-centered'>
-    <tbody>
-        <tr>
-            <td className='is-vcentered'><b>Team #1</b></td>
-            {
-                performanceArr.map(info => {
-                    return <td key={`${info.topTeam}-name`}>{info.topTeam}</td>
-                })
-            }
-        </tr>
-        <tr>
-            <td># Times Chosen</td>
-            {
-                performanceArr.map(info => (
-                    <td key={`${info.topTeam}-numPicks`}>{info.topNumPicks}</td>
-                ))
-            }
-        </tr>
-        <tr>
-            <td>Percent</td>
-            {
-                performanceArr.map(info => (
-                    <td key={`${info.topTeam}-percent`}>{info.topPercent}</td>
-                ))
-            }
-        </tr>
-        <tr>
-            <td className='is-vcentered'><b>Team #2</b></td>
-            {
-                performanceArr.map(info => {
-                    return <td key={`${info.bottomTeam}-name`}>{info.bottomTeam}</td>
-                })
-            }
-        </tr>
-        <tr>
-            <td># Times Chosen</td>
-            {
-                performanceArr.map(info => (
-                    <td key={`${info.bottomTeam}-weekly-numPicks`}>{info.bottomNumPicks}</td>
-                ))
-            }
-        </tr>
-        <tr>
-            <td>Percent</td>
-            {
-                performanceArr.map(info => (
-                    <td key={`${info.bottomTeam}-weekly-percent`}>{info.bottomPercent}</td>
-                ))
-            }
-        </tr>
-    </tbody>
-</table> */}
+export default MarchMadnessConsensusReport;

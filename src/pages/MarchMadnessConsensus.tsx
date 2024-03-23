@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { CURRENT_YEAR, CURRENT_WEEK } from '../constants';
-import MarchMadnessPerformanceReport from '../components/marchmadness/Performance';
+import MarchMadnessConsensusReport from '../components/marchmadness/Consensus';
 
-function MarchMadnessPerformance() {
+function MarchMadnessConsensus() {
     const [activeChoice, setActiveChoice] = useState<number>(1);
 
     const showChoice = (choice: number) => {
@@ -13,7 +13,7 @@ function MarchMadnessPerformance() {
         <section className='section'>
             <div className='container'>
                 <h1 className='title has-text-centered'>{CURRENT_YEAR} Stonehands Pool</h1>
-                <h2 className='subtitle has-text-centered'>Consensus Reports for the pool (Season and Week {CURRENT_WEEK})</h2>
+                <h2 className='subtitle has-text-centered'>Consensus Reports for the pool by round</h2>
                 <div className='tabs is-centered is-boxed'>
                     <ul>
                         <li className={activeChoice === 1 ? 'is-active' : ''}>
@@ -49,11 +49,11 @@ function MarchMadnessPerformance() {
                     </ul>
                 </div>
                 <div className='container'>
-                    <MarchMadnessPerformanceReport round={activeChoice} />
+                    <MarchMadnessConsensusReport round={activeChoice} />
                 </div>
             </div>
         </section>
     );
 }
 
-export default MarchMadnessPerformance;
+export default MarchMadnessConsensus;

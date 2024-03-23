@@ -27,7 +27,8 @@ const StandingsByWeek = lazy(() => import('./pages/StandingsByWeek'));
 const MarchMadnessAbout = lazy(() => import('./pages/MarchMadnessAbout'));
 const MarchMadnessPicksheet = lazy(() => import('./pages/MarchMadnessPicksheet'));
 const MarchMadnessPicksheetSuccess = lazy(() => import('./pages/MarchMadnessPicksheetSuccess'));
-const MarchMadnessPerformance = lazy(() => import('./pages/MarchMadnessPerformance'));
+const MarchMadnessConsensus = lazy(() => import('./pages/MarchMadnessConsensus'));
+const MarchMadnessTeamsRemaining = lazy(() => import('./pages/MarchMadnessTeamsRemaining'));
 const MarchMadnessStandings = lazy(() => import('./pages/MarchMadnessStandings'));
 const UserBracket = lazy(() => import('./pages/UserBracket'));
 const YearlyAwards = lazy(() => import('./pages/YearlyAwards'));
@@ -61,7 +62,8 @@ function App() {
           <Route path='/march-madness/about' element={<MarchMadnessAbout />} />
           <Route path='/march-madness/picksheet' element={<MarchMadnessPicksheet />} />
           <Route path='/march-madness/picksheet-success' element={<MarchMadnessPicksheetSuccess />} />
-          <Route path='/march-madness/pool-performance' element={<MarchMadnessPerformance />} />
+          <Route path='/march-madness/pool-consensus' element={<MarchMadnessConsensus />} />
+          <Route path='/march-madness/teams-remaining' element={<MarchMadnessTeamsRemaining />} />
           <Route path='/march-madness/standings' element={<MarchMadnessStandings />} />
           <Route path='/march-madness/bracket/:username' element={<UserBracket />} />
           <Route path='/yearly-awards' element={<YearlyAwards />} />
