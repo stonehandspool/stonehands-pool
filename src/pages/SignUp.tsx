@@ -73,7 +73,7 @@ function SignUp() {
             password,
             options: {
                 data: {
-                    username,
+                    username: username.trim(),
                     first_name: capitalizedFirstName,
                     last_name: capitalizedLastName,
                 },
@@ -89,7 +89,7 @@ function SignUp() {
 
         const { data: userInfoData, error: userInfoError } = await supabaseClient
             .from(TABLE_NAMES.USER_INFO)
-            .insert({ id, username, first_name: capitalizedFirstName, last_name: capitalizedLastName, referral, email })
+            .insert({ id, username: username.trim(), first_name: capitalizedFirstName, last_name: capitalizedLastName, referral, email })
             .select();
 
         if (userInfoData) {
