@@ -201,10 +201,10 @@
       "name": "Grand Canyon",
       "record": "29-4"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 66,
+    "bottomScore": 75,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-38"
   },
@@ -220,10 +220,10 @@
       "name": "Charleston",
       "record": "27-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 109,
+    "bottomScore": 96,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-38"
   },
@@ -315,10 +315,10 @@
       "name": "Longwood",
       "record": "21-13"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 86,
+    "bottomScore": 46,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-41"
   },
@@ -334,10 +334,10 @@
       "name": "Texas A&M",
       "record": "20-14"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 83,
+    "bottomScore": 98,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-41"
   },
@@ -353,10 +353,10 @@
       "name": "James Madison",
       "record": "31-3"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 61,
+    "bottomScore": 72,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-42"
   },
@@ -372,10 +372,10 @@
       "name": "Vermont",
       "record": "28-6"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 64,
+    "bottomScore": 47,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-42"
   },
@@ -467,10 +467,10 @@
       "name": "Montana St./Grambling",
       "record": "17-17"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 78,
+    "bottomScore": 50,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-45"
   },
@@ -486,10 +486,10 @@
       "name": "TCU",
       "record": "21-12"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 88,
+    "bottomScore": 72,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-45"
   },
@@ -705,14 +705,14 @@
   {
     "id": "matchup-38",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 12,
+      "name": "Grand Canyon",
+      "record": "29-4"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Alabama",
+      "record": "21-11"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -762,14 +762,14 @@
   {
     "id": "matchup-41",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Houston",
+      "record": "30-4"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 9,
+      "name": "Texas A&M",
+      "record": "20-14"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -781,14 +781,14 @@
   {
     "id": "matchup-42",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 12,
+      "name": "James Madison",
+      "record": "31-3"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Duke",
+      "record": "24-8"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -838,14 +838,14 @@
   {
     "id": "matchup-45",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Purdue",
+      "record": "29-4"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 8,
+      "name": "Utah St.",
+      "record": "27-6"
     },
     "topScore": 0,
     "bottomScore": 0,
