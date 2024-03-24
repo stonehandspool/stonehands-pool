@@ -12,7 +12,7 @@ type DisplayCardProps = {
 function DisplayCard(props: DisplayCardProps) {
     const { matchupInfo, customClass = '', topTeamAlive, bottomTeamAlive, upToDateMatchupInfo, isMobile } = props;
     const { topTeam, bottomTeam, winner } = matchupInfo;
-    const { winner: actualWinner, topScore, bottomScore } = upToDateMatchupInfo;
+    const { winner: actualWinner, topTeam: actualTopTeam, bottomTeam: actualBottomTeam, topScore, bottomScore } = upToDateMatchupInfo;
 
     let topTeamColor;
     let bottomTeamColor;
@@ -26,14 +26,24 @@ function DisplayCard(props: DisplayCardProps) {
         bottomTeamColor = bottomTeamAlive ? 'has-text-black' : 'has-text-danger';
     } else if (actualWinner !== null) {
         // If the match has been completed, mark your choice as either red/green and other team stays black
-        if (winner === 'top') {
+        const actualWinnerName = actualWinner === 'top' ? actualTopTeam.name : actualBottomTeam.name;
+        const chosenWinnerName = winner === 'top' ? topTeam.name : bottomTeam.name
+        if (winner === 'top' && actualWinnerName === chosenWinnerName) {
             topTeamColor = actualWinner === 'top' ? 'has-text-success' : 'has-text-danger';
-            bottomTeamColor = 'has-text-black';
-        } else {
-            topTeamColor = 'has-text-black';
+            bottomTeamColor = actualBottomTeam.name === bottomTeam.name ? 'has-text-black' : 'has-text-danger';
+        } else if (winner === 'bottom' && actualWinnerName === chosenWinnerName) {
+            topTeamColor = actualTopTeam.name === topTeam.name ? 'has-text-black' : 'has-text-danger';
             bottomTeamColor = actualWinner === 'bottom' ? 'has-text-success' : 'has-text-danger';
+        } else if (winner === 'top' && actualWinnerName !== chosenWinnerName) {
+            topTeamColor = 'has-text-danger';
+            bottomTeamColor = actualBottomTeam.name === bottomTeam.name ? 'has-text-black' : 'has-text-danger';
+        } else if (winner === 'bottom' && actualWinnerName !== chosenWinnerName) {
+            topTeamColor = actualTopTeam.name === topTeam.name ? 'has-text-black' : 'has-text-danger';
+            bottomTeamColor = 'has-text-danger';
         }
     }
+
+    console.log(topTeam.name, bottomTeam.name, actualWinner, topTeamColor, bottomTeamColor);
 
     const topTeamWeight = winner === 'top' ? 'has-text-weight-bold' : 'has-text-weight-normal';
     const bottomTeamWeight = winner === 'bottom' ? 'has-text-weight-bold' : 'has-text-weight-normal';
@@ -50,6 +60,7 @@ function DisplayCard(props: DisplayCardProps) {
                             {topTeamAlive && <>{topTeam.name} {!isMobile && `(${topTeam.record})`}</>}
                             {(!topTeamAlive && topTeamColor === 'has-text-danger') && <s>{topTeam.name} {!isMobile && `(${topTeam.record})`}</s>}
                             {(!topTeamAlive && topTeamColor === 'has-text-black') && <>{topTeam.name} {!isMobile && `(${topTeam.record})`}</>}
+                            {(!topTeamAlive && topTeamColor === 'has-text-success') && <>{topTeam.name} {!isMobile && `(${topTeam.record})`}</>}
                         </span>
                     </div>
                     {
@@ -72,6 +83,7 @@ function DisplayCard(props: DisplayCardProps) {
                             {bottomTeamAlive && <>{bottomTeam.name} {!isMobile && `(${bottomTeam.record})`}</>}
                             {(!bottomTeamAlive && bottomTeamColor === 'has-text-danger') && <s>{bottomTeam.name} {!isMobile && `(${bottomTeam.record})`}</s>}
                             {(!bottomTeamAlive && bottomTeamColor === 'has-text-black') && <>{bottomTeam.name} {!isMobile && `(${bottomTeam.record})`}</>}
+                            {(!bottomTeamAlive && bottomTeamColor === 'has-text-success') && <>{bottomTeam.name} {!isMobile && `(${bottomTeam.record})`}</>}
                         </span>
                     </div>
                     {
