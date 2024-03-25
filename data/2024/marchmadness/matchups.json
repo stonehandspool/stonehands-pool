@@ -619,10 +619,10 @@
       "name": "Northwestern",
       "record": "21-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 75,
+    "bottomScore": 58,
+    "winner": "top",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-49"
   },
@@ -638,10 +638,10 @@
       "name": "Yale",
       "record": "22-9"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 85,
+    "bottomScore": 57,
+    "winner": "top",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-49"
   },
@@ -714,10 +714,10 @@
       "name": "Alabama",
       "record": "21-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 61,
+    "bottomScore": 72,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-51"
   },
@@ -733,10 +733,10 @@
       "name": "Baylor",
       "record": "23-10"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 72,
+    "bottomScore": 64,
+    "winner": "top",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-52"
   },
@@ -771,10 +771,10 @@
       "name": "Texas A&M",
       "record": "20-14"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 100,
+    "bottomScore": 95,
+    "winner": "top",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-53"
   },
@@ -790,10 +790,10 @@
       "name": "Duke",
       "record": "24-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 55,
+    "bottomScore": 93,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-53"
   },
@@ -828,10 +828,10 @@
       "name": "Marquette",
       "record": "25-9"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 77,
+    "bottomScore": 81,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-54"
   },
@@ -847,10 +847,10 @@
       "name": "Utah St.",
       "record": "27-6"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 106,
+    "bottomScore": 67,
+    "winner": "top",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-55"
   },
@@ -914,14 +914,14 @@
   {
     "id": "matchup-49",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "UConn",
+      "record": "31-3"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 5,
+      "name": "San Diego St.",
+      "record": "24-10"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -957,9 +957,9 @@
       "record": "27-7"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Alabama",
+      "record": "21-11"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -971,9 +971,9 @@
   {
     "id": "matchup-52",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 6,
+      "name": "Clemson",
+      "record": "21-11"
     },
     "bottomTeam": {
       "seed": 2,
@@ -990,14 +990,14 @@
   {
     "id": "matchup-53",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Houston",
+      "record": "30-4"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Duke",
+      "record": "24-8"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -1014,9 +1014,9 @@
       "record": "22-14"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Marquette",
+      "record": "25-9"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -1028,9 +1028,9 @@
   {
     "id": "matchup-55",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Purdue",
+      "record": "29-4"
     },
     "bottomTeam": {
       "seed": 5,
