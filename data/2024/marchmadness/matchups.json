@@ -923,10 +923,10 @@
       "name": "San Diego St.",
       "record": "24-10"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 82,
+    "bottomScore": 52,
+    "winner": "top",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-57"
   },
@@ -942,10 +942,10 @@
       "name": "Iowa St.",
       "record": "27-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 72,
+    "bottomScore": 69,
+    "winner": "top",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-57"
   },
@@ -961,10 +961,10 @@
       "name": "Alabama",
       "record": "21-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 87,
+    "bottomScore": 89,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-58"
   },
@@ -980,10 +980,10 @@
       "name": "Arizona",
       "record": "25-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 77,
+    "bottomScore": 72,
+    "winner": "top",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-58"
   },
@@ -1066,14 +1066,14 @@
   {
     "id": "matchup-57",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "UConn",
+      "record": "31-3"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 3,
+      "name": "Illinois",
+      "record": "26-8"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -1085,14 +1085,14 @@
   {
     "id": "matchup-58",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Alabama",
+      "record": "21-11"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 6,
+      "name": "Clemson",
+      "record": "21-11"
     },
     "topScore": 0,
     "bottomScore": 0,
