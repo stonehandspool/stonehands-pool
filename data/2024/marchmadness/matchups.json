@@ -999,10 +999,10 @@
       "name": "Duke",
       "record": "24-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 51,
+    "bottomScore": 54,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-59"
   },
@@ -1018,10 +1018,10 @@
       "name": "Marquette",
       "record": "25-9"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 67,
+    "bottomScore": 58,
+    "winner": "top",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-59"
   },
@@ -1037,10 +1037,10 @@
       "name": "Gonzaga",
       "record": "25-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 80,
+    "bottomScore": 68,
+    "winner": "top",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-60"
   },
@@ -1056,10 +1056,10 @@
       "name": "Tennessee",
       "record": "24-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 75,
+    "bottomScore": 82,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-60"
   },
@@ -1075,10 +1075,10 @@
       "name": "Illinois",
       "record": "26-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 77,
+    "bottomScore": 52,
+    "winner": "top",
+    "evaluated": true,
     "round": 4,
     "nextMatchup": "matchup-61"
   },
@@ -1094,62 +1094,62 @@
       "name": "Clemson",
       "record": "21-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 89,
+    "bottomScore": 82,
+    "winner": "top",
+    "evaluated": true,
     "round": 4,
     "nextMatchup": "matchup-61"
   },
   {
     "id": "matchup-59",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Duke",
+      "record": "24-8"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 11,
+      "name": "NC State",
+      "record": "22-14"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 64,
+    "bottomScore": 76,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 4,
     "nextMatchup": "matchup-62"
   },
   {
     "id": "matchup-60",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Purdue",
+      "record": "29-4"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Tennessee",
+      "record": "24-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 72,
+    "bottomScore": 66,
+    "winner": "top",
+    "evaluated": true,
     "round": 4,
     "nextMatchup": "matchup-62"
   },
   {
     "id": "matchup-61",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "UConn",
+      "record": "31-3"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Alabama",
+      "record": "21-11"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -1161,14 +1161,14 @@
   {
     "id": "matchup-62",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 11,
+      "name": "NC State",
+      "record": "22-14"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Purdue",
+      "record": "29-4"
     },
     "topScore": 0,
     "bottomScore": 0,
