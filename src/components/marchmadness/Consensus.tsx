@@ -20,10 +20,21 @@ type MarchMadnessConsensusReportProps = {
 };
 
 const regions = ['WEST', 'EAST', 'SOUTH', 'MIDWEST'];
+const regionsF4 = ['Final Four Game #1', 'Final Four Game #2'];
+const regionsFinals = ['Finals'];
 const gamesPerRound = [8, 4, 2, 1, 1];
 
 function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
     const { round } = props;
+
+    let regionsToShow;
+    if (round === 6) {
+        regionsToShow = regionsFinals;
+    } else if (round === 5) {
+        regionsToShow = regionsF4;
+    } else {
+        regionsToShow = regions;
+    }
 
     if (round > MARCH_MADNESS_CURRENT_ROUND) {
         return (
@@ -83,7 +94,7 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
     return (
         <section className='section'>
             {
-                regions.map((region, index) => {
+                regionsToShow.map((region, index) => {
                     console.log(region, index)
                     return (
                         <>
