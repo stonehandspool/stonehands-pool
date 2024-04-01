@@ -32,13 +32,16 @@ bracketData.forEach((matchInfo, index) => {
     const { id, topTeam, bottomTeam, winner, evaluated, round, nextMatchup } = matchInfo;
     // If a winner has been assigned then update everything else, otherwise just keep looping through
     if (winner !== null && !evaluated) {
+        let winningTeamName;
         // First, update the teams data and move the winning team over to the next matchup
         if (winner === 'top') {
             // Set the bottom teams 'alive' prop to false
             teamData[teamData.findIndex(team => team.name === bottomTeam.name)].alive = false;
+            winningTeamName = topTeam.name;
         } else if (winner === 'bottom') {
             // Set the top teams 'alive' prop to false
             teamData[teamData.findIndex(team => team.name === topTeam.name)].alive = false;
+            winningTeamName = bottomTeam.name;
         }
 
         // Next, move the winning team to the next matchup
@@ -55,8 +58,10 @@ bracketData.forEach((matchInfo, index) => {
         // Next, update each players points and max points based off the outcome of the game
         playerData.forEach((playerInfo, index) => {
             const { userPicks } = playerInfo;
-            const userChoice = userPicks[userPicks.findIndex(pick => pick.id === id)].winner;
-            if (userChoice === winner) {
+            const userChoice = userPicks[userPicks.findIndex(pick => pick.id === id)];
+            const userDirection = userChoice.winner;
+            const userWinnerTeamName = userChoice.winner === 'top' ? userChoice.topTeam.name : userChoice.bottomTeam.name;
+            if (userDirection === winner && userWinnerTeamName === winningTeamName) {
                 const winnerSeed = winner === 'top' ? topTeam.seed : bottomTeam.seed;
                 playerData[index].numCorrect++;
                 playerData[index].points += ROUND_VALUES[round - 1] * winnerSeed;
@@ -68,14 +73,16 @@ bracketData.forEach((matchInfo, index) => {
             // Now recalculate their max points
             let maxPoints = 0;
             userPicks.forEach((pickInfo) => {
-                const { topTeam, bottomTeam, winner, round } = pickInfo;
-                const winnerName = winner === 'top' ? topTeam.name : bottomTeam.name;
-                const winnerSeed = winner === 'top' ? topTeam.seed : bottomTeam.seed;
-                const teamAlive = teamData[teamData.findIndex(team => team.name === winnerName)].alive;
-
-                if (teamAlive) {
-                    maxPoints += ROUND_VALUES[round - 1] * winnerSeed;
-                }                
+                const matchupCompleted = bracketData.find(match => match.id === pickInfo.id).winner !== null;
+                if (!matchupCompleted) {
+                    const winnerName = pickInfo.winner === 'top' ? pickInfo.topTeam.name : pickInfo.bottomTeam.name;
+                    const winnerSeed = pickInfo.winner === 'top' ? pickInfo.topTeam.seed : pickInfo.bottomTeam.seed;
+                    const teamAlive = teamData[teamData.findIndex(team => team.name === winnerName)].alive;
+    
+                    if (teamAlive) {
+                        maxPoints += ROUND_VALUES[pickInfo.round - 1] * winnerSeed;
+                    }                    
+                }
             });
 
             playerData[index].currentMaxPoints = maxPoints;
