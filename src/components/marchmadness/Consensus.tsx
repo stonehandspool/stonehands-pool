@@ -22,7 +22,7 @@ type MarchMadnessConsensusReportProps = {
 const regions = ['WEST', 'EAST', 'SOUTH', 'MIDWEST'];
 const regionsF4 = ['Final Four Game #1', 'Final Four Game #2'];
 const regionsFinals = ['Finals'];
-const gamesPerRound = [8, 4, 2, 1, 1];
+const gamesPerRound = [8, 4, 2, 1, 1, 1];
 
 function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
     const { round } = props;
@@ -96,7 +96,7 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
             {
                 regionsToShow.map((region, index) => {
                     return (
-                        <>
+                        <div className='section' key={`table-holder${index}`}>
                             <h1 className='title is-1 has-text-centered'>{region}</h1>
                             {
                                 <table className='table is-hoverable has-text-centered mx-auto'>
@@ -113,7 +113,7 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
                                             <td># Times Chosen</td>
                                             {
                                                 consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
-                                                    return <td key={`${info.topTeam}-name`}>{info.topNumPicks}</td>
+                                                    return <td key={`${info.topTeam}-times-chosen`}>{info.topNumPicks}</td>
                                                 })
                                             }
                                         </tr>
@@ -121,7 +121,7 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
                                             <td>Percent</td>
                                             {
                                                 consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
-                                                    return <td key={`${info.topTeam}-name`}>{info.topPercent}</td>
+                                                    return <td key={`${info.topTeam}-percent`}>{info.topPercent}</td>
                                                 })
                                             }
                                         </tr>
@@ -137,7 +137,7 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
                                             <td># Times Chosen</td>
                                             {
                                                 consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
-                                                    return <td key={`${info.bottomTeam}-name`}>{info.bottomNumPicks}</td>
+                                                    return <td key={`${info.bottomTeam}-times-chosen`}>{info.bottomNumPicks}</td>
                                                 })
                                             }
                                         </tr>
@@ -145,7 +145,7 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
                                             <td>Percent</td>
                                             {
                                                 consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
-                                                    return <td key={`${info.bottomTeam}-name`}>{info.bottomPercent}</td>
+                                                    return <td key={`${info.bottomTeam}-percent`}>{info.bottomPercent}</td>
                                                 })
                                             }
                                         </tr>
@@ -176,7 +176,7 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
                                     </tbody>
                                 </table>
                             }
-                        </>
+                        </div>
 
                     )
                 })

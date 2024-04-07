@@ -1151,10 +1151,10 @@
       "name": "Alabama",
       "record": "21-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 86,
+    "bottomScore": 72,
+    "winner": "top",
+    "evaluated": true,
     "round": 5,
     "nextMatchup": "matchup-63"
   },
@@ -1170,24 +1170,24 @@
       "name": "Purdue",
       "record": "29-4"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 50,
+    "bottomScore": 63,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 5,
     "nextMatchup": "matchup-63"
   },
   {
     "id": "matchup-63",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "UConn",
+      "record": "31-3"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Purdue",
+      "record": "29-4"
     },
     "topScore": 0,
     "bottomScore": 0,
