@@ -95,7 +95,6 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
         <section className='section'>
             {
                 regionsToShow.map((region, index) => {
-                    console.log(region, index)
                     return (
                         <>
                             <h1 className='title is-1 has-text-centered'>{region}</h1>
