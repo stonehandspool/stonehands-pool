@@ -43,8 +43,6 @@ function DisplayCard(props: DisplayCardProps) {
         }
     }
 
-    console.log(topTeam.name, bottomTeam.name, actualWinner, topTeamColor, bottomTeamColor);
-
     const topTeamWeight = winner === 'top' ? 'has-text-weight-bold' : 'has-text-weight-normal';
     const bottomTeamWeight = winner === 'bottom' ? 'has-text-weight-bold' : 'has-text-weight-normal';
 
