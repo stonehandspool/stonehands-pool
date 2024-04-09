@@ -147,7 +147,7 @@ yearlyAccolades.push(inaccuratePeopleDataToExport);
 const unsuccessfulPeopleDataToExport = {
     id: 'unsuccessfulPeople',
     title: 'Bottom 5 Overall (Points)',
-    description: 'These are the people who got the most points throughout the tournament',
+    description: 'These are the people who got the least points throughout the tournament',
     data: [],
 };
 
