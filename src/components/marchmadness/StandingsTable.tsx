@@ -4,7 +4,7 @@ import teams from '../../../data/2024/marchmadness/teams.json';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
-import { MARCH_MADNESS_STATE } from '../../constants';
+import { MARCH_MADNESS_FINAL_TOTAL, MARCH_MADNESS_STATE } from '../../constants';
 
 type TableColumns = {
     position: number;
@@ -72,7 +72,9 @@ function StandingsTable() {
             const lastName1 = row1.name.split(' ').pop() as string;
             const firstName2 = row2.name.split(' ')[0] as string;
             const lastName2 = row2.name.split(' ').pop() as string;
-            return row2.points - row1.points || row2.wins - row1.wins || row2.maxPoints - row1.maxPoints || lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
+            const row1Tb = Math.abs(MARCH_MADNESS_FINAL_TOTAL - row1.tiebreaker);
+            const row2Tb = Math.abs(MARCH_MADNESS_FINAL_TOTAL - row2.tiebreaker);
+            return row2.points - row1.points || row2.wins - row1.wins || row1Tb - row2Tb || row2.maxPoints - row1.maxPoints || lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
         });
 
         // Now update everyones position value
