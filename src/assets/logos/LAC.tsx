@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -30,7 +30,7 @@ function LAC(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 LAC.defaultProps = {
   size: 40,

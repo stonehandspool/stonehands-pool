@@ -1,7 +1,7 @@
-type IconProps = {
-    size?: string | number;
-    opacity?: number;
-};
+interface IconProps {
+  size?: string | number;
+  opacity?: number;
+}
 
 function ATL(props: IconProps) {
   const { size, opacity } = props;
@@ -35,7 +35,7 @@ function ATL(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 ATL.defaultProps = {
   size: 40,

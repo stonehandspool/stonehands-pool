@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -34,7 +34,7 @@ function KC(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 KC.defaultProps = {
   size: 40,

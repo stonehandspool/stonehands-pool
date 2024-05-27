@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -34,7 +34,7 @@ function MIA(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 MIA.defaultProps = {
   size: 40,

@@ -1,213 +1,249 @@
-import { useState } from 'react';
-import { User } from '@supabase/supabase-js';
-import { useNavigate } from 'react-router-dom';
-import * as EmailValidator from 'email-validator';
-import { TABLE_NAMES } from '../config/supabaseConfig';
-import supabaseClient from '../config/supabaseClient';
-import { SIGN_UPS_DISABLED } from '../constants';
+import { useState } from "react";
+import { User } from "@supabase/supabase-js";
+import { useNavigate } from "react-router-dom";
+import * as EmailValidator from "email-validator";
+import { TABLE_NAMES } from "../config/supabaseConfig";
+import supabaseClient from "../config/supabaseClient";
+import { SIGN_UPS_DISABLED } from "../constants";
 
 function capitalize(name: string): string {
-    return name.charAt(0).toUpperCase() + name.slice(1);
+  return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 function SignUp() {
-    if (SIGN_UPS_DISABLED) {
-        return (
-            <section className='section'>
-                <div className='container'>
-                    <h1 className='title is-1 has-text-centered'>Sorry, the season has started and sign up has been disabled until next year</h1>
-                </div>
-            </section>
-        );
+  if (SIGN_UPS_DISABLED) {
+    return (
+      <section className="section">
+        <div className="container">
+          <h1 className="title is-1 has-text-centered">
+            Sorry, the season has started and sign up has been disabled until
+            next year
+          </h1>
+        </div>
+      </section>
+    );
+  }
+
+  const navigate = useNavigate();
+  const [firstName, setFirstName] = useState<string>("");
+  const [lastName, setLastName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [username, setUsername] = useState<string>("");
+  const [referral, setReferral] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [formError, setFormError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    if (
+      !firstName ||
+      !lastName ||
+      !email ||
+      !username ||
+      !password ||
+      !confirmPassword
+    ) {
+      setFormError("Please fill in all of the fields");
+      return;
     }
 
-    const navigate = useNavigate();
-    const [firstName, setFirstName] = useState<string>('');
-    const [lastName, setLastName] = useState<string>('');
-    const [email, setEmail] = useState<string>('');
-    const [username, setUsername] = useState<string>('');
-    const [referral, setReferral] = useState<string>('');
-    const [password, setPassword] = useState<string>('');
-    const [confirmPassword, setConfirmPassword] = useState<string>('');
-    const [formError, setFormError] = useState<string | null>(null);
+    if (password !== confirmPassword) {
+      setFormError("Please confirm both password fields match");
+      return;
+    }
 
-    const handleSubmit = async (e: any) => {
-        e.preventDefault();
+    if (password.length < 6) {
+      setFormError("Please user a password that is at least 6 character long");
+      return;
+    }
 
-        if (!firstName || !lastName || !email || !username || !password || !confirmPassword) {
-            setFormError('Please fill in all of the fields');
-            return;
-        }
+    if (!EmailValidator.validate(email)) {
+      setFormError("Please make sure you submitted a valid email address");
+      return;
+    }
 
-        if (password !== confirmPassword) {
-            setFormError('Please confirm both password fields match');
-            return;
-        }
+    // Check to make sure the username hasn't been used before
+    const { data: usernameCheckData, error: usernameCheckError } =
+      await supabaseClient
+        .from(TABLE_NAMES.USER_INFO)
+        .select("username")
+        .eq("username", username);
 
-        if (password.length < 6) {
-            setFormError('Please user a password that is at least 6 character long');
-            return;
-        }
+    if (usernameCheckData?.length !== 0) {
+      setFormError("Sorry, that username is taken, please try a different one");
+      return;
+    }
 
-        if (!EmailValidator.validate(email)) {
-            setFormError('Please make sure you submitted a valid email address');
-            return;
-        }
+    const capitalizedFirstName = capitalize(firstName).trim();
+    const capitalizedLastName = capitalize(lastName).trim();
 
-        // Check to make sure the username hasn't been used before
-        const { data: usernameCheckData, error: usernameCheckError } = await supabaseClient
-            .from(TABLE_NAMES.USER_INFO)
-            .select('username')
-            .eq('username', username);
+    const { data, error } = await supabaseClient.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          username: username.trim(),
+          first_name: capitalizedFirstName,
+          last_name: capitalizedLastName,
+        },
+      },
+    });
 
-        if (usernameCheckData?.length !== 0) {
-            setFormError('Sorry, that username is taken, please try a different one');
-            return;
-        }
+    if (error) {
+      setFormError(
+        "An error occurred when signing you up, please reach out to Ryan",
+      );
+      return;
+    }
 
-        const capitalizedFirstName = capitalize(firstName).trim();
-        const capitalizedLastName = capitalize(lastName).trim();
+    const { id } = data.user!;
 
-        const { data, error } = await supabaseClient.auth.signUp({
-            email,
-            password,
-            options: {
-                data: {
-                    username: username.trim(),
-                    first_name: capitalizedFirstName,
-                    last_name: capitalizedLastName,
-                },
-            },
-        });
+    const { data: userInfoData, error: userInfoError } = await supabaseClient
+      .from(TABLE_NAMES.USER_INFO)
+      .insert({
+        id,
+        username: username.trim(),
+        first_name: capitalizedFirstName,
+        last_name: capitalizedLastName,
+        referral,
+        email,
+      })
+      .select();
 
-        if (error) {
-            setFormError('An error occurred when signing you up, please reach out to Ryan');
-            return;
-        }
+    if (userInfoData) {
+      setFormError(null);
+      navigate("/sign-up-success");
+    }
+  };
 
-        const { id } = data.user as User;
-
-        const { data: userInfoData, error: userInfoError } = await supabaseClient
-            .from(TABLE_NAMES.USER_INFO)
-            .insert({ id, username: username.trim(), first_name: capitalizedFirstName, last_name: capitalizedLastName, referral, email })
-            .select();
-
-        if (userInfoData) {
-            setFormError(null);
-            navigate('/sign-up-success');
-        }
-    };
-
-    return (
-        <section className='section'>
-            <div className='columns is-centered'>
-                <div className='column is-one-third'>
-                    <div className='container'>
-                        <form className='box' onSubmit={handleSubmit}>
-                            <h1 className='title has-text-centered'>Sign Up</h1>
-                            <div className='field'>
-                                <label className='label' htmlFor='first-name'>First Name:</label>
-                                <div className='control'>
-                                    <input
-                                        className='input'
-                                        type='text'
-                                        id='first-name'
-                                        value={firstName}
-                                        onChange={(e) => setFirstName(e.target.value)}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className='field'>
-                                <label className='label' htmlFor='last-name'>Last Name:</label>
-                                <div className='control'>
-                                    <input
-                                        className='input'
-                                        type='text'
-                                        id='last-name'
-                                        value={lastName}
-                                        onChange={(e) => setLastName(e.target.value)}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className='field'>
-                                <label className='label' htmlFor='email'>Email:</label>
-                                <div className='control'>
-                                    <input
-                                        className='input'
-                                        type='text'
-                                        id='email'
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className='field'>
-                                <label className='label' htmlFor='username'>Username:</label>
-                                <div className='control'>
-                                    <input
-                                        className='input'
-                                        type='text'
-                                        id='username'
-                                        value={username}
-                                        onChange={(e) => setUsername(e.target.value)}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className='field'>
-                                <label className='label' htmlFor='referral'>Referral:</label>
-                                <div className='control'>
-                                    <input
-                                        className='input'
-                                        type='text'
-                                        id='referral'
-                                        value={referral}
-                                        placeholder='Who told you about this pool?'
-                                        onChange={(e) => setReferral(e.target.value)}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className='field'>
-                                <label className='label' htmlFor='password'>Password:</label>
-                                <div className='control'>
-                                    <input
-                                        className='input'
-                                        type='password'
-                                        id='password'
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className='field'>
-                                <label className='label' htmlFor='confirm-password'>Confirm Password:</label>
-                                <div className='control'>
-                                    <input
-                                        className='input'
-                                        type='password'
-                                        id='confirm-password'
-                                        value={confirmPassword}
-                                        onChange={(e) => setConfirmPassword(e.target.value)}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className='control'>
-                                <button className='button is-primary'>Sign Up</button>
-                            </div>
-
-                            {formError && formError.length > 0 && <p className='help is-danger'>{formError}</p>}
-                        </form>
-                    </div>
+  return (
+    <section className="section">
+      <div className="columns is-centered">
+        <div className="column is-one-third">
+          <div className="container">
+            <form className="box" onSubmit={handleSubmit}>
+              <h1 className="title has-text-centered">Sign Up</h1>
+              <div className="field">
+                <label className="label" htmlFor="first-name">
+                  First Name:
+                </label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    id="first-name"
+                    value={firstName}
+                    onChange={(e) => { setFirstName(e.target.value); }}
+                  />
                 </div>
-            </div>
-        </section>
-    );
+              </div>
+
+              <div className="field">
+                <label className="label" htmlFor="last-name">
+                  Last Name:
+                </label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    id="last-name"
+                    value={lastName}
+                    onChange={(e) => { setLastName(e.target.value); }}
+                  />
+                </div>
+              </div>
+
+              <div className="field">
+                <label className="label" htmlFor="email">
+                  Email:
+                </label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    id="email"
+                    value={email}
+                    onChange={(e) => { setEmail(e.target.value); }}
+                  />
+                </div>
+              </div>
+
+              <div className="field">
+                <label className="label" htmlFor="username">
+                  Username:
+                </label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    id="username"
+                    value={username}
+                    onChange={(e) => { setUsername(e.target.value); }}
+                  />
+                </div>
+              </div>
+
+              <div className="field">
+                <label className="label" htmlFor="referral">
+                  Referral:
+                </label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    id="referral"
+                    value={referral}
+                    placeholder="Who told you about this pool?"
+                    onChange={(e) => { setReferral(e.target.value); }}
+                  />
+                </div>
+              </div>
+
+              <div className="field">
+                <label className="label" htmlFor="password">
+                  Password:
+                </label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="password"
+                    id="password"
+                    value={password}
+                    onChange={(e) => { setPassword(e.target.value); }}
+                  />
+                </div>
+              </div>
+
+              <div className="field">
+                <label className="label" htmlFor="confirm-password">
+                  Confirm Password:
+                </label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="password"
+                    id="confirm-password"
+                    value={confirmPassword}
+                    onChange={(e) => { setConfirmPassword(e.target.value); }}
+                  />
+                </div>
+              </div>
+
+              <div className="control">
+                <button className="button is-primary">Sign Up</button>
+              </div>
+
+              {formError && formError.length > 0 && (
+                <p className="help is-danger">{formError}</p>
+              )}
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default SignUp;

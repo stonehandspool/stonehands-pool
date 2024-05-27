@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -51,7 +51,7 @@ function PHI(props: IconProps) {
       <path d="m182.015 228.926c-2.082 3.121 2.301 2.499 4.329 1.896 1.644-.49 9.048-2.641 9.048-2.641-4.123-.394-5.698-1.261-7.215-2.504-3.526 1.828-6.161 3.249-6.161 3.249" />
     </svg>
   );
-};
+}
 
 PHI.defaultProps = {
   size: 40,
