@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -26,7 +26,7 @@ function NYJ(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 NYJ.defaultProps = {
   size: 40,

@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -53,7 +53,7 @@ function TEN(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 TEN.defaultProps = {
   size: 40,

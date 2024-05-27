@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -42,7 +42,7 @@ function CAR(props: IconProps) {
       </g>
     </svg>
   );
-};
+}
 
 CAR.defaultProps = {
   size: 40,

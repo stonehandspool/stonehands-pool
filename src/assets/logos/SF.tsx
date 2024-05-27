@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -29,7 +29,7 @@ function SF(props: IconProps) {
       </g>
     </svg>
   );
-};
+}
 
 SF.defaultProps = {
   size: 40,

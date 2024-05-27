@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -51,7 +51,7 @@ function TB(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 TB.defaultProps = {
   size: 40,

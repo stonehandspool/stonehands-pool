@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -38,7 +38,7 @@ function NFL(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 NFL.defaultProps = {
   size: 40,

@@ -1,37 +1,41 @@
-import * as TeamLogos from '../../assets/logos'
+import * as TeamLogos from "../../assets/logos";
 
 function UserSurvivorReport(props: any) {
-    const { userInfo, unusedSurvivorPicks, weekToShow } = props;
+  const { userInfo, unusedSurvivorPicks, weekToShow } = props;
 
-    return (
-        <div className='container'>
-            <h4 className='title is-4'>Survivor Stats:</h4>
-            <div className='columns is-vcentered'>
-                <div className='column is-narrow'>
-                    <h5 className='title is-5'>Teams Used:</h5>
-                </div>
-                {
-                    userInfo?.survivorPicks.map((pick: any, index: number) => {
-                        if (pick !== undefined && pick !== '' && index < weekToShow) {
-                            const Logo = TeamLogos[pick as keyof typeof TeamLogos];
-                            return <div className='column is-narrow' key={`${pick}-survivor`}><Logo /></div>    
-                        }
-                    })
-                }
-            </div>
-            <div className='columns is-vcentered is-multiline'>
-                <div className='column is-narrow'>
-                    <h5 className='title is-5'>Unused Teams:</h5>
-                </div>
-                {
-                    unusedSurvivorPicks?.map((pick: any) => {
-                        const Logo = TeamLogos[pick as keyof typeof TeamLogos];
-                        return <div className='column is-narrow' key={`${pick}-survivor`}><Logo /></div>
-                    })
-                }
-            </div>
+  return (
+    <div className="container">
+      <h4 className="title is-4">Survivor Stats:</h4>
+      <div className="columns is-vcentered">
+        <div className="column is-narrow">
+          <h5 className="title is-5">Teams Used:</h5>
         </div>
-    );
+        {userInfo?.survivorPicks.map((pick: any, index: number) => {
+          if (pick !== undefined && pick !== "" && index < weekToShow) {
+            const Logo = TeamLogos[pick as keyof typeof TeamLogos];
+            return (
+              <div className="column is-narrow" key={`${pick}-survivor`}>
+                <Logo />
+              </div>
+            );
+          }
+        })}
+      </div>
+      <div className="columns is-vcentered is-multiline">
+        <div className="column is-narrow">
+          <h5 className="title is-5">Unused Teams:</h5>
+        </div>
+        {unusedSurvivorPicks?.map((pick: any) => {
+          const Logo = TeamLogos[pick as keyof typeof TeamLogos];
+          return (
+            <div className="column is-narrow" key={`${pick}-survivor`}>
+              <Logo />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default UserSurvivorReport;

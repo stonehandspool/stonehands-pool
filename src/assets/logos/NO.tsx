@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -28,7 +28,7 @@ function NO(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 NO.defaultProps = {
   size: 40,

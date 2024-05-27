@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -41,7 +41,7 @@ function MIN(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 MIN.defaultProps = {
   size: 40,

@@ -1,6 +1,6 @@
-type IconProps = {
-    size?: string | number;
-    opacity?: number;
+interface IconProps {
+  size?: string | number;
+  opacity?: number;
 }
 
 function BAL(props: IconProps) {
@@ -49,7 +49,7 @@ function BAL(props: IconProps) {
       />
     </svg>
   );
-};
+}
 
 BAL.defaultProps = {
   size: 40,

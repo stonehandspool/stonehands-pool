@@ -1,4 +1,4 @@
-type IconProps = {
+interface IconProps {
   size?: string | number;
   opacity?: number;
 }
@@ -37,7 +37,7 @@ function DAL(props: IconProps) {
       </g>
     </svg>
   );
-};
+}
 
 DAL.defaultProps = {
   size: 40,
