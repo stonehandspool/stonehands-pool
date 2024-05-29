@@ -1,4 +1,4 @@
-import * as TeamLogos from "../../assets/logos";
+import * as TeamLogos from '../../assets/logos';
 
 function UserSurvivorReport(props: any) {
   const { userInfo, unusedSurvivorPicks, weekToShow } = props;
@@ -11,7 +11,7 @@ function UserSurvivorReport(props: any) {
           <h5 className="title is-5">Teams Used:</h5>
         </div>
         {userInfo?.survivorPicks.map((pick: any, index: number) => {
-          if (pick !== undefined && pick !== "" && index < weekToShow) {
+          if (pick !== undefined && pick !== '' && index < weekToShow) {
             const Logo = TeamLogos[pick as keyof typeof TeamLogos];
             return (
               <div className="column is-narrow" key={`${pick}-survivor`}>

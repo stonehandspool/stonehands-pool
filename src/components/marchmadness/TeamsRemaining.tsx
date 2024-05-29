@@ -1,5 +1,5 @@
-import teams from "../../../data/2024/marchmadness/teams.json";
-import playerPicks from "../../../data/2024/marchmadness/playerPicks.json";
+import teams from '../../../data/2024/marchmadness/teams.json';
+import playerPicks from '../../../data/2024/marchmadness/playerPicks.json';
 
 interface TeamsRemainingInfo {
   firstName: string;
@@ -13,31 +13,23 @@ function MarchMadnessTeamsRemainingTable() {
   const teamsRemainingArr: TeamsRemainingInfo[] = [];
 
   // Create all of the needed data
-  playerPicks.forEach((player) => {
+  playerPicks.forEach(player => {
     const teamsRemainingByRound = [0, 0, 0, 0, 0, 0];
 
     // Now go through each pick and update the array
-    player.userPicks.forEach((pickInfo) => {
+    player.userPicks.forEach(pickInfo => {
       const { round, topTeam, bottomTeam } = pickInfo;
       if (round !== 1) {
-        const topTeamAlive = teams.find(
-          (team) => team.name === topTeam.name,
-        )!.alive;
-        const bottomTeamAlive = teams.find(
-          (team) => team.name === bottomTeam.name,
-        )!.alive;
+        const topTeamAlive = teams.find(team => team.name === topTeam.name)!.alive;
+        const bottomTeamAlive = teams.find(team => team.name === bottomTeam.name)!.alive;
         topTeamAlive && teamsRemainingByRound[round - 2]++;
         bottomTeamAlive && teamsRemainingByRound[round - 2]++;
       }
 
       if (pickInfo.nextMatchup === null) {
-        const champion =
-          pickInfo.winner === "top" ? topTeam.name : bottomTeam.name;
-        const championAlive = teams.find(
-          (team) => team.name === champion,
-        )!.alive;
-        championAlive &&
-          teamsRemainingByRound[teamsRemainingByRound.length - 1]++;
+        const champion = pickInfo.winner === 'top' ? topTeam.name : bottomTeam.name;
+        const championAlive = teams.find(team => team.name === champion)!.alive;
+        championAlive && teamsRemainingByRound[teamsRemainingByRound.length - 1]++;
       }
     });
 
@@ -50,10 +42,7 @@ function MarchMadnessTeamsRemainingTable() {
 
   // Now make sure to order the table alphabetically
   teamsRemainingArr.sort((row1, row2) => {
-    return (
-      row1.lastName.localeCompare(row2.lastName) ||
-      row1.firstName.localeCompare(row2.firstName)
-    );
+    return row1.lastName.localeCompare(row2.lastName) || row1.firstName.localeCompare(row2.firstName);
   });
 
   return (
@@ -76,7 +65,7 @@ function MarchMadnessTeamsRemainingTable() {
         </tr>
       </thead>
       <tbody>
-        {teamsRemainingArr.map((playerInfo) => {
+        {teamsRemainingArr.map(playerInfo => {
           return (
             <tr>
               <td>{`${playerInfo.firstName} ${playerInfo.lastName}`}</td>

@@ -1,14 +1,14 @@
-import * as TeamLogos from "../../assets/logos";
-import * as teamData from "../../../data/2023/teams.json";
-import UserConfidencePicksTable from "./UserConfidencePicksTable";
+import * as TeamLogos from '../../assets/logos';
+import * as teamData from '../../../data/2023/teams.json';
+import UserConfidencePicksTable from './UserConfidencePicksTable';
 
 function getProgressBarColor(percent: number) {
   if (percent >= 0.8) {
-    return "is-success";
+    return 'is-success';
   } else if (percent > 0.4) {
-    return "is-warning";
+    return 'is-warning';
   } else {
-    return "is-danger";
+    return 'is-danger';
   }
 }
 
@@ -18,19 +18,14 @@ function UserConfidenceReport(props: any) {
   return (
     <div className="container">
       <h4 className="title is-4">Confidence Picks by Week:</h4>
-      <UserConfidencePicksTable
-        confidencePicks={userPicks}
-        pointsByWeek={pointsByWeek}
-      />
+      <UserConfidencePicksTable confidencePicks={userPicks} pointsByWeek={pointsByWeek} />
       <h4 className="title is-4">Picks by Team:</h4>
       <div className="columns is-vcentered">
         <div className="column is-1">
           <h6 className="title is-6 has-text-centered">Team</h6>
         </div>
         <div className="column is-half">
-          <h6 className="title is-6 has-text-centered">
-            Percentage of weeks picked to win
-          </h6>
+          <h6 className="title is-6 has-text-centered">Percentage of weeks picked to win</h6>
         </div>
         <div className="column is-1"></div>
         <div className="column is-1">
@@ -50,13 +45,8 @@ function UserConfidenceReport(props: any) {
         </div>
       </div>
       {teamsByPicks.map((key: any, index: number) => {
-        const { team, wins, ties, losses, timesCorrect, timesIncorrect } =
-          teamsByPicks[index];
-        const {
-          wins: teamWins,
-          ties: teamTies,
-          losses: teamLosses,
-        } = teams[team as keyof typeof teams];
+        const { team, wins, ties, losses, timesCorrect, timesIncorrect } = teamsByPicks[index];
+        const { wins: teamWins, ties: teamTies, losses: teamLosses } = teams[team as keyof typeof teams];
         const Logo = TeamLogos[team as keyof typeof TeamLogos];
         const percentage = ((wins + ties / 2) / (wins + ties + losses)) * 100;
         const accuracy = (timesCorrect / (timesCorrect + timesIncorrect)) * 100;
@@ -75,9 +65,7 @@ function UserConfidenceReport(props: any) {
               </progress>
             </div>
             <div className="column is-1">
-              <h6 className="title is-6">
-                {Math.round(percentage * 100) / 100}%
-              </h6>
+              <h6 className="title is-6">{Math.round(percentage * 100) / 100}%</h6>
             </div>
             <div className="column is-1">
               <h6 className="title is-6 has-text-centered">
@@ -96,9 +84,7 @@ function UserConfidenceReport(props: any) {
               <h6 className="title is-6 has-text-centered">{timesIncorrect}</h6>
             </div>
             <div className="column is-1">
-              <h6 className="title is-6 has-text-centered">
-                {+accuracy.toFixed(2)}%
-              </h6>
+              <h6 className="title is-6 has-text-centered">{+accuracy.toFixed(2)}%</h6>
             </div>
           </div>
         );

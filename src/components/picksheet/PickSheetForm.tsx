@@ -1,8 +1,8 @@
-import { Session } from "@supabase/supabase-js";
-import { ChangeEvent, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import supabaseClient from "../../config/supabaseClient";
-import { TABLE_NAMES } from "../../config/supabaseConfig";
+import { Session } from '@supabase/supabase-js';
+import { ChangeEvent, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import supabaseClient from '../../config/supabaseClient';
+import { TABLE_NAMES } from '../../config/supabaseConfig';
 import {
   CURRENT_WEEK,
   CURRENT_WEEK_CUTOFF_TIME,
@@ -13,15 +13,15 @@ import {
   SEASON_READY,
   SubmissionInfo,
   UserInfo,
-} from "../../constants";
-import * as seasonData from "../../../data/2023/season.json";
-import * as playerData from "../../../data/2023/players.json";
-import * as weeklyPicks from "../../../data/2023/weeklyPicks.json";
-import ConfidencePicks from "./ConfidencePicks";
-import HighFivePicks from "./HighFivePicks";
-import MarginPick from "./MarginPick";
-import SurvivorPick from "./SurvivorPick";
-import TieBreaker from "./TieBreaker";
+} from '../../constants';
+import * as seasonData from '../../../data/2023/season.json';
+import * as playerData from '../../../data/2023/players.json';
+import * as weeklyPicks from '../../../data/2023/weeklyPicks.json';
+import ConfidencePicks from './ConfidencePicks';
+import HighFivePicks from './HighFivePicks';
+import MarginPick from './MarginPick';
+import SurvivorPick from './SurvivorPick';
+import TieBreaker from './TieBreaker';
 
 interface PicksheetFormProps {
   session: Session;
@@ -36,16 +36,13 @@ export interface choiceFormat {
   username: string;
 }
 
-const currentWeekInfo =
-  seasonData.weeks[`week_${CURRENT_WEEK}` as keyof typeof seasonData.weeks];
+const currentWeekInfo = seasonData.weeks[`week_${CURRENT_WEEK}` as keyof typeof seasonData.weeks];
 const currentWeeksPicks = weeklyPicks.weeklyPicks[
   `week_${CURRENT_WEEK}` as keyof typeof weeklyPicks.weeklyPicks
 ] as unknown as SubmissionInfo[];
 
 const findSubmission = (submissionId: string) => {
-  return currentWeeksPicks.find(
-    (submission) => submission.user_id === submissionId,
-  );
+  return currentWeeksPicks.find(submission => submission.user_id === submissionId);
 };
 
 function PickSheetForm(props: PicksheetFormProps) {
@@ -53,18 +50,13 @@ function PickSheetForm(props: PicksheetFormProps) {
   const { players } = playerData;
   const navigate = useNavigate();
 
-  if (
-    MARCH_MADNESS_STATE === "READY_FOR_PICKS" ||
-    MARCH_MADNESS_STATE === "ACTIVE"
-  ) {
+  if (MARCH_MADNESS_STATE === 'READY_FOR_PICKS' || MARCH_MADNESS_STATE === 'ACTIVE') {
     return (
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
-            Sorry, this is the page for the picksheet for the football pools,
-            you probably want to look{" "}
-            <a href="/march-madness/picksheet">HERE</a> for the March Madness
-            Bracket Picksheet
+            Sorry, this is the page for the picksheet for the football pools, you probably want to look{' '}
+            <a href="/march-madness/picksheet">HERE</a> for the March Madness Bracket Picksheet
           </h3>
         </div>
       </section>
@@ -76,21 +68,20 @@ function PickSheetForm(props: PicksheetFormProps) {
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
-            Sorry, the season hasn't started yet, please wait until the season
-            has been loaded
+            Sorry, the season hasn't started yet, please wait until the season has been loaded
           </h3>
         </div>
       </section>
     );
   }
 
-  if (CURRENT_WEEK_STATUS === "COMPLETE") {
+  if (CURRENT_WEEK_STATUS === 'COMPLETE') {
     return (
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
-            The prior week has completed and the new picksheet hasn't been
-            uploaded yet. An email will be sent once it becomes available
+            The prior week has completed and the new picksheet hasn't been uploaded yet. An email will be sent once it
+            becomes available
           </h3>
         </div>
       </section>
@@ -103,8 +94,7 @@ function PickSheetForm(props: PicksheetFormProps) {
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
-            Sorry, the cutoff for this week has passed. You can no longer make a
-            submission
+            Sorry, the cutoff for this week has passed. You can no longer make a submission
           </h3>
         </div>
       </section>
@@ -120,15 +110,9 @@ function PickSheetForm(props: PicksheetFormProps) {
   // Confidence Pool
   const numGamesThisWeek = Object.keys(currentWeekInfo).length;
   const lastGameCompleted =
-    currentWeekInfo[
-      `matchup_${numGamesThisWeek}` as keyof typeof currentWeekInfo
-    ].winner !== "";
-  const [selectedPicks, setSelectedPicks] = useState<string[]>(
-    new Array(numGamesThisWeek),
-  );
-  const [selectedConfidences, setSelectedConfidences] = useState<number[]>(
-    new Array(numGamesThisWeek),
-  );
+    currentWeekInfo[`matchup_${numGamesThisWeek}` as keyof typeof currentWeekInfo].winner !== '';
+  const [selectedPicks, setSelectedPicks] = useState<string[]>(new Array(numGamesThisWeek));
+  const [selectedConfidences, setSelectedConfidences] = useState<number[]>(new Array(numGamesThisWeek));
 
   const onUpdatePick = (newValue: string, index: number) => {
     const pickCopy = [...selectedPicks];
@@ -159,49 +143,39 @@ function PickSheetForm(props: PicksheetFormProps) {
   // High Five Picks
   const [highFivePicks, setHighFivePicks] = useState<string[]>([]);
 
-  const handleHighFiveSelection = (
-    type: string,
-    teamA: string,
-    teamB?: string,
-  ) => {
-    if (type === "remove") {
+  const handleHighFiveSelection = (type: string, teamA: string, teamB?: string) => {
+    if (type === 'remove') {
       // Remove the previous value if we're changing a drop down
-      setHighFivePicks((previousPicks) =>
-        previousPicks.filter((pick) => pick !== teamA),
-      );
-    } else if (type === "swap") {
+      setHighFivePicks(previousPicks => previousPicks.filter(pick => pick !== teamA));
+    } else if (type === 'swap') {
       // First remove the previous selection
-      setHighFivePicks((previousPicks) =>
-        previousPicks.filter((pick) => pick !== teamA),
-      );
+      setHighFivePicks(previousPicks => previousPicks.filter(pick => pick !== teamA));
       // Now add the other value
-      setHighFivePicks((previousPicks) => [...previousPicks, teamB!]);
+      setHighFivePicks(previousPicks => [...previousPicks, teamB!]);
     } else if (!highFivePicks.includes(teamA)) {
-      setHighFivePicks((previousPicks) => [...previousPicks, teamA]);
+      setHighFivePicks(previousPicks => [...previousPicks, teamA]);
     }
   };
 
   // Tiebreaker
-  const [tiebreaker, setTiebreaker] = useState<string>("");
+  const [tiebreaker, setTiebreaker] = useState<string>('');
 
   const handleTiebreakerInput = (event: ChangeEvent<HTMLInputElement>) => {
     const numRegex = /^[0-9\b]+$/;
-    if (event.target.value === "" || numRegex.test(event.target.value)) {
+    if (event.target.value === '' || numRegex.test(event.target.value)) {
       setTiebreaker(event.target.value);
     }
   };
 
-  const userInfo = players.find(
-    (playerInfo) => playerInfo.id === session.user.id,
-  ) as unknown as UserInfo;
+  const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as unknown as UserInfo;
 
   if (!userInfo) {
     return (
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
-            Thank you for signing up for the pool! Ryan needs to do something on
-            his end to activate your account. It should be activated shortly!
+            Thank you for signing up for the pool! Ryan needs to do something on his end to activate your account. It
+            should be activated shortly!
           </h3>
         </div>
       </section>
@@ -212,17 +186,14 @@ function PickSheetForm(props: PicksheetFormProps) {
   useEffect(() => {
     const fetchPicks = async (callback: () => void) => {
       const { data, error } = await supabaseClient
-        .from("user_picks")
+        .from('user_picks')
         .select()
-        .eq("week", CURRENT_WEEK)
-        .eq("year", CURRENT_YEAR)
-        .eq("user_id", userInfo.id);
+        .eq('week', CURRENT_WEEK)
+        .eq('year', CURRENT_YEAR)
+        .eq('user_id', userInfo.id);
 
       if (error) {
-        console.error(
-          "An error occurred when getting your prior picks from the database",
-          error,
-        );
+        console.error('An error occurred when getting your prior picks from the database', error);
       }
 
       if (data && data.length > 0) {
@@ -240,10 +211,10 @@ function PickSheetForm(props: PicksheetFormProps) {
 
         // Set prior survivor pick
         if (userInfo.aliveInSurvivor) {
-          setSurvivorTeam(priorPicks["survivor-pick"]);
+          setSurvivorTeam(priorPicks['survivor-pick']);
         }
         // Set prior margin pick
-        setMarginTeam(priorPicks["margin-pick"]);
+        setMarginTeam(priorPicks['margin-pick']);
 
         // Set prior high five picks
         setHighFivePicks(priorPicks.highFivePicks);
@@ -269,16 +240,9 @@ function PickSheetForm(props: PicksheetFormProps) {
         const priorConfidencePicks: string[] = [];
         const priorConfidenceValues: number[] = [];
         for (let i = 0; i < numGamesThisWeek; i++) {
-          priorConfidencePicks.push(
-            priorPicks[`matchup-${i}` as keyof typeof priorPicks] as string,
-          );
+          priorConfidencePicks.push(priorPicks[`matchup-${i}` as keyof typeof priorPicks] as string);
           priorConfidenceValues.push(
-            parseInt(
-              priorPicks[
-                `matchup-${i}-confidence` as keyof typeof priorPicks
-              ] as string,
-              10,
-            ),
+            parseInt(priorPicks[`matchup-${i}-confidence` as keyof typeof priorPicks] as string, 10)
           );
         }
         setSelectedPicks(priorConfidencePicks);
@@ -286,10 +250,10 @@ function PickSheetForm(props: PicksheetFormProps) {
 
         // Set prior survivor pick
         if (userInfo.aliveInSurvivor) {
-          setSurvivorTeam(priorPicks["survivor-pick"]);
+          setSurvivorTeam(priorPicks['survivor-pick']);
         }
         // Set prior margin pick
-        setMarginTeam(priorPicks["margin-pick"]);
+        setMarginTeam(priorPicks['margin-pick']);
 
         // Set prior high five picks
         setHighFivePicks(priorPicks.highFivePicks);
@@ -308,7 +272,9 @@ function PickSheetForm(props: PicksheetFormProps) {
     };
 
     // First, check the database since that is the most up-to-date version most of the time
-    fetchPicks(searchJSON).catch((err) => { console.error(err); });
+    fetchPicks(searchJSON).catch(err => {
+      console.error(err);
+    });
   }, []);
 
   const handleSubmit = async (e: any) => {
@@ -320,8 +286,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         <section className="section">
           <div className="container">
             <h3 className="title is-3 has-text-centered">
-              Sorry, the cutoff for this week has passed. You can no longer make
-              a submission
+              Sorry, the cutoff for this week has passed. You can no longer make a submission
             </h3>
           </div>
         </section>
@@ -329,11 +294,7 @@ function PickSheetForm(props: PicksheetFormProps) {
     }
 
     const { id } = session.user;
-    const {
-      first_name: firstName,
-      last_name: lastName,
-      username,
-    } = session.user.user_metadata;
+    const { first_name: firstName, last_name: lastName, username } = session.user.user_metadata;
     const choices: choiceFormat = {
       id,
       firstName,
@@ -350,9 +311,7 @@ function PickSheetForm(props: PicksheetFormProps) {
     for (let i = 0; i < selectedPicks.length; i++) {
       const pick = selectedPicks[i];
       if (pick === undefined) {
-        setFormError(
-          "Please make sure you have chosen a winner for each confidence matchup",
-        );
+        setFormError('Please make sure you have chosen a winner for each confidence matchup');
         missingConfidencePick = true;
         break;
       } else {
@@ -369,9 +328,7 @@ function PickSheetForm(props: PicksheetFormProps) {
     for (let i = 0; i < selectedConfidences.length; i++) {
       const value = selectedConfidences[i];
       if (value === undefined) {
-        setFormError(
-          "Please make sure you have chosen a confidence value for every matchup",
-        );
+        setFormError('Please make sure you have chosen a confidence value for every matchup');
         missingConfidenceValue = true;
         break;
       } else {
@@ -385,32 +342,30 @@ function PickSheetForm(props: PicksheetFormProps) {
 
     // Set the survivor pick
     if (userInfo.aliveInSurvivor && !survivorTeam) {
-      setFormError("Please make sure you have chosen a survivor pick");
+      setFormError('Please make sure you have chosen a survivor pick');
       return;
     } else {
-      choices["survivor-pick"] = survivorTeam!;
+      choices['survivor-pick'] = survivorTeam!;
     }
 
     // Set the margin pick
     if (!marginTeam) {
-      setFormError("Please make sure you have chosen a margin pick");
+      setFormError('Please make sure you have chosen a margin pick');
       return;
     } else {
-      choices["margin-pick"] = marginTeam;
+      choices['margin-pick'] = marginTeam;
     }
 
     // Set the high five picks
     if (highFivePicks.length !== 5) {
-      setFormError(
-        "Please make sure you have made all of your high five picks",
-      );
+      setFormError('Please make sure you have made all of your high five picks');
       return;
     } else {
       choices.highFivePicks = highFivePicks;
     }
 
     if (tiebreaker.length === 0) {
-      setFormError("Please make sure you have submitted a tiebreaker");
+      setFormError('Please make sure you have submitted a tiebreaker');
       return;
     } else {
       choices.tiebreaker = tiebreaker;
@@ -420,50 +375,44 @@ function PickSheetForm(props: PicksheetFormProps) {
     setFormError(null);
 
     if (priorPicks) {
-      const { data: picksheetSubmissionData, error: picksheetSubmissionError } =
-        await supabaseClient
-          .from(TABLE_NAMES.USER_PICKS)
-          .update({ submission_data: choices })
-          .eq("week", CURRENT_WEEK)
-          .eq("year", CURRENT_YEAR)
-          .eq("user_id", id)
-          .select();
+      const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
+        .from(TABLE_NAMES.USER_PICKS)
+        .update({ submission_data: choices })
+        .eq('week', CURRENT_WEEK)
+        .eq('year', CURRENT_YEAR)
+        .eq('user_id', id)
+        .select();
 
       if (picksheetSubmissionError) {
         console.error(picksheetSubmissionError);
-        setFormError(
-          "Something went wrong updating your picksheet, please reach out to Ryan",
-        );
+        setFormError('Something went wrong updating your picksheet, please reach out to Ryan');
         return;
       }
 
       if (picksheetSubmissionData) {
         setFormError(null);
-        navigate("/picksheet-success", { state: choices });
+        navigate('/picksheet-success', { state: choices });
       }
     } else {
-      const { data: picksheetSubmissionData, error: picksheetSubmissionError } =
-        await supabaseClient
-          .from(TABLE_NAMES.USER_PICKS)
-          .insert({
-            user_id: id,
-            week: CURRENT_WEEK,
-            year: CURRENT_YEAR,
-            submission_data: choices,
-          })
-          .select();
+      const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
+        .from(TABLE_NAMES.USER_PICKS)
+        .insert({
+          user_id: id,
+          week: CURRENT_WEEK,
+          year: CURRENT_YEAR,
+          submission_data: choices,
+        })
+        .select();
 
       if (picksheetSubmissionError) {
         console.error(picksheetSubmissionError);
-        setFormError(
-          "Something went wrong submitting your picksheet, please reach out to Ryan",
-        );
+        setFormError('Something went wrong submitting your picksheet, please reach out to Ryan');
         return;
       }
 
       if (picksheetSubmissionData) {
         setFormError(null);
-        navigate("/picksheet-success", { state: choices });
+        navigate('/picksheet-success', { state: choices });
       }
     }
   };
@@ -473,21 +422,19 @@ function PickSheetForm(props: PicksheetFormProps) {
       <div className="container">
         <h1 className="title is-1">Week {CURRENT_WEEK} Picksheet</h1>
         <h2 className="subtitle">
-          Make sure to fill out every field below. If you would like to change
-          your picks you can at any time prior to the below cutoff and as long
-          as that game hasn't started (i.e. no changing your Thursday pick on
-          Friday).
+          Make sure to fill out every field below. If you would like to change your picks you can at any time prior to
+          the below cutoff and as long as that game hasn't started (i.e. no changing your Thursday pick on Friday).
         </h2>
         <h2 className="subtitle has-text-danger">
-          Submission cutoff:{" "}
-          {CURRENT_WEEK_CUTOFF_TIME.toLocaleDateString("en-US", {
-            dateStyle: "full",
-            timeZone: "America/New_York",
-          })}{" "}
-          at{" "}
-          {CURRENT_WEEK_CUTOFF_TIME.toLocaleTimeString("en-US", {
-            timeZone: "America/New_York",
-          })}{" "}
+          Submission cutoff:{' '}
+          {CURRENT_WEEK_CUTOFF_TIME.toLocaleDateString('en-US', {
+            dateStyle: 'full',
+            timeZone: 'America/New_York',
+          })}{' '}
+          at{' '}
+          {CURRENT_WEEK_CUTOFF_TIME.toLocaleTimeString('en-US', {
+            timeZone: 'America/New_York',
+          })}{' '}
           ET
         </h2>
         <form className="box" onSubmit={handleSubmit}>
@@ -524,17 +471,12 @@ function PickSheetForm(props: PicksheetFormProps) {
           />
           <div className="field">
             <div className="control">
-              <button
-                className="button is-primary"
-                disabled={lastGameCompleted}
-              >
+              <button className="button is-primary" disabled={lastGameCompleted}>
                 Submit Choices
               </button>
             </div>
           </div>
-          {formError && formError.length > 0 && (
-            <p className="has-text-danger">{formError}</p>
-          )}
+          {formError && formError.length > 0 && <p className="has-text-danger">{formError}</p>}
         </form>
       </div>
     </section>

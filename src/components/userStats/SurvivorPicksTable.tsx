@@ -1,4 +1,4 @@
-import { CURRENT_WEEK } from "../../constants";
+import { CURRENT_WEEK } from '../../constants';
 
 interface TableProps {
   survivorPicks: string[];
@@ -6,7 +6,7 @@ interface TableProps {
 }
 
 const weeksArr = Array.from({ length: CURRENT_WEEK }, (_, i) => i + 1);
-const headers: string[] = ["Week"];
+const headers: string[] = ['Week'];
 for (let i = 0; i < weeksArr.length; i++) {
   headers.push(weeksArr[i].toString());
 }
@@ -18,7 +18,7 @@ function SurvivorPicksTable(props: TableProps) {
     <table className="table is-bordered is-hoverable">
       <thead>
         <tr>
-          {headers.map((heading) => {
+          {headers.map(heading => {
             return <th key={heading}>{heading}</th>;
           })}
         </tr>

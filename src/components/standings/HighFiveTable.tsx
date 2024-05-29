@@ -1,9 +1,5 @@
-import * as seasonStandings from "../../../data/2023/players.json";
-import {
-  CURRENT_WEEK_STATUS,
-  CURRENT_WEEK_CUTOFF_TIME,
-  CURRENT_WEEK,
-} from "../../constants";
+import * as seasonStandings from '../../../data/2023/players.json';
+import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK } from '../../constants';
 
 interface HighFivePick {
   team: string;
@@ -21,32 +17,32 @@ interface PlayerInfo {
 }
 
 const headers: string[] = [
-  "Rank",
-  "Player",
-  "Total",
-  "Pick 1",
-  "Pick 2",
-  "Pick 3",
-  "Pick 4",
-  "Pick 5",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "13",
-  "14",
-  "15",
-  "16",
-  "17",
-  "18",
+  'Rank',
+  'Player',
+  'Total',
+  'Pick 1',
+  'Pick 2',
+  'Pick 3',
+  'Pick 4',
+  'Pick 5',
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  '11',
+  '12',
+  '13',
+  '14',
+  '15',
+  '16',
+  '17',
+  '18',
 ];
 const weeksArr = [...Array(18)];
 
@@ -62,14 +58,8 @@ function HighFiveTable() {
       recentPicks: playerInfo.highFiveThisWeek as HighFivePick[],
       weeklyPoints: playerInfo.highFiveValues,
       highFiveTotal: playerInfo.highFiveTotal,
-      numPerfectWeeks: playerInfo.highFiveValues.reduce(
-        (n, val) => n + (val === 8 ? 1 : 0),
-        0,
-      ),
-      numAlmostPerfectWeeks: playerInfo.highFiveValues.reduce(
-        (n, val) => n + (val === 5 ? 1 : 0),
-        0,
-      ),
+      numPerfectWeeks: playerInfo.highFiveValues.reduce((n, val) => n + (val === 8 ? 1 : 0), 0),
+      numAlmostPerfectWeeks: playerInfo.highFiveValues.reduce((n, val) => n + (val === 5 ? 1 : 0), 0),
       numGamesRight: playerInfo.highFiveValues.reduce((n, val) => {
         if (val === 1) {
           return n + 1;
@@ -90,10 +80,10 @@ function HighFiveTable() {
 
   // Sort everyone by their point total
   playerPicks.sort((row1, row2) => {
-    const firstName1 = row1.name.split(" ")[0];
-    const lastName1 = row1.name.split(" ").pop()!;
-    const firstName2 = row2.name.split(" ")[0];
-    const lastName2 = row2.name.split(" ").pop()!;
+    const firstName1 = row1.name.split(' ')[0];
+    const lastName1 = row1.name.split(' ').pop()!;
+    const firstName2 = row2.name.split(' ')[0];
+    const lastName2 = row2.name.split(' ').pop()!;
     return (
       row2.highFiveTotal - row1.highFiveTotal ||
       row2.numGamesRight - row1.numGamesRight ||
@@ -105,9 +95,8 @@ function HighFiveTable() {
   // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
   // can't see what people have chosen prior to the cutoff happening
   const currentTime = new Date();
-  const isBrandNewWeek = CURRENT_WEEK_STATUS === "START";
-  const showAllPicks =
-    CURRENT_WEEK_STATUS !== "START" && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+  const isBrandNewWeek = CURRENT_WEEK_STATUS === 'START';
+  const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
 
   return (
     <section className="section">
@@ -151,7 +140,7 @@ function HighFiveTable() {
               </th>
             </tr>
             <tr>
-              {headers.map((heading) => {
+              {headers.map(heading => {
                 return (
                   <th key={heading} className="has-text-centered">
                     {heading}
@@ -164,19 +153,13 @@ function HighFiveTable() {
             {playerPicks.map((row, index) => {
               return (
                 <tr key={`${index}`}>
-                  <td
-                    key={`${row.name}-rank-${index}`}
-                    className="is-vcentered"
-                  >
+                  <td key={`${row.name}-rank-${index}`} className="is-vcentered">
                     {index + 1}
                   </td>
                   <td key={`${row.name}-row-${index}`} className="is-vcentered">
                     {row.name}
                   </td>
-                  <td
-                    key={`${row.name}-total-${index}`}
-                    className="is-vcentered"
-                  >
+                  <td key={`${row.name}-total-${index}`} className="is-vcentered">
                     <strong>{row.highFiveTotal}</strong>
                   </td>
                   {row.recentPicks.length > 0 &&
@@ -184,31 +167,21 @@ function HighFiveTable() {
                       let className;
                       // Doing explicit checks for true and false because it can be null and we want a white background for that
                       if (pick.won) {
-                        className = "has-background-success";
+                        className = 'has-background-success';
                       } else if (!pick.won) {
-                        className = "has-background-danger";
+                        className = 'has-background-danger';
                       }
                       if (showAllPicks || isBrandNewWeek) {
                         // If we're at a brand new week show prior weeks picks or show current picks once week is locked
                         return (
-                          <td
-                            key={`${row.name}-pick-${ind}`}
-                            className={className}
-                          >
+                          <td key={`${row.name}-pick-${ind}`} className={className}>
                             {pick.team}
                           </td>
                         );
-                      } else if (
-                        !showAllPicks &&
-                        className !== undefined &&
-                        pick.team !== "N/A"
-                      ) {
+                      } else if (!showAllPicks && className !== undefined && pick.team !== 'N/A') {
                         // If we're in progress in a week and a pick has completed then we can show it
                         return (
-                          <td
-                            key={`${row.name}-pick-${ind}`}
-                            className={className}
-                          >
+                          <td key={`${row.name}-pick-${ind}`} className={className}>
                             {pick.team}
                           </td>
                         );
@@ -224,15 +197,8 @@ function HighFiveTable() {
                     const isCurrentWeek = ind === CURRENT_WEEK - 1;
                     if (isCurrentWeek && !showAllPicks) {
                       return <td key={`${row.name}-hidden`}></td>;
-                    } else if (
-                      row.weeklyPoints[ind] ||
-                      row.weeklyPoints[ind] === 0
-                    ) {
-                      return (
-                        <td key={`${row.name}-${ind}`}>
-                          {row.weeklyPoints[ind]}
-                        </td>
-                      );
+                    } else if (row.weeklyPoints[ind] || row.weeklyPoints[ind] === 0) {
+                      return <td key={`${row.name}-${ind}`}>{row.weeklyPoints[ind]}</td>;
                     } else {
                       return <td key={`${row.name}-${ind}`}></td>;
                     }

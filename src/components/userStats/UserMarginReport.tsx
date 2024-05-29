@@ -1,28 +1,12 @@
-import * as TeamLogos from "../../assets/logos";
+import * as TeamLogos from '../../assets/logos';
 
 function UserMarginReport(props: any) {
-  const {
-    bestMarginWeek,
-    bestMargin,
-    worstMarginWeek,
-    worstMargin,
-    userInfo,
-    unusedMarginPicks,
-    weekToShow,
-  } = props;
+  const { bestMarginWeek, bestMargin, worstMarginWeek, worstMargin, userInfo, unusedMarginPicks, weekToShow } = props;
 
   const bestMarginWeekColor =
-    bestMargin.margin > 0
-      ? "has-text-success"
-      : bestMargin.margin < 0
-        ? "has-text-danger"
-        : "";
+    bestMargin.margin > 0 ? 'has-text-success' : bestMargin.margin < 0 ? 'has-text-danger' : '';
   const worstMarginWeekColor =
-    worstMargin.margin > 0
-      ? "has-text-success"
-      : worstMargin.margin < 0
-        ? "has-text-danger"
-        : "";
+    worstMargin.margin > 0 ? 'has-text-success' : worstMargin.margin < 0 ? 'has-text-danger' : '';
 
   return (
     <div className="container">
@@ -32,9 +16,7 @@ function UserMarginReport(props: any) {
           <h5 className="title is-5">
             Best Week: Week {bestMarginWeek} (
             <span className={bestMarginWeekColor}>
-              {bestMargin && bestMargin.margin > 0
-                ? `+${bestMargin.margin}`
-                : `${bestMargin?.margin}`}
+              {bestMargin && bestMargin.margin > 0 ? `+${bestMargin.margin}` : `${bestMargin?.margin}`}
             </span>
             )
           </h5>
@@ -43,9 +25,7 @@ function UserMarginReport(props: any) {
           <h5 className="title is-5">
             Worst Week: Week {worstMarginWeek} (
             <span className={worstMarginWeekColor}>
-              {worstMargin && worstMargin.margin > 0
-                ? `+${worstMargin.margin}`
-                : `${worstMargin?.margin}`}
+              {worstMargin && worstMargin.margin > 0 ? `+${worstMargin.margin}` : `${worstMargin?.margin}`}
             </span>
             )
           </h5>

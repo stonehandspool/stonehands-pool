@@ -1,7 +1,7 @@
-import { useLocation } from "react-router-dom";
-import { CURRENT_WEEK } from "../constants";
-import * as seasonData from "../../data/2023/season.json";
-import * as teamData from "../../data/2023/teams.json";
+import { useLocation } from 'react-router-dom';
+import { CURRENT_WEEK } from '../constants';
+import * as seasonData from '../../data/2023/season.json';
+import * as teamData from '../../data/2023/teams.json';
 
 function PickSheetSuccess() {
   // Get the users picks via the navigate hook
@@ -19,20 +19,17 @@ function PickSheetSuccess() {
         <div className="column is-three-quarters">
           <h1 className="title has-text-centered no-print">Success!</h1>
           <p className="has-text-centered no-print">
-            Thank you for your submission, it has been sent the database for
-            safe keeping!
+            Thank you for your submission, it has been sent the database for safe keeping!
           </p>
           <p className="has-text-centered no-print">
-            Feel free to either print this page or save it as a pdf for
-            yourself. Good luck and thank you for playing!
+            Feel free to either print this page or save it as a pdf for yourself. Good luck and thank you for playing!
           </p>
           <br />
           <table className="table is-bordered mx-auto">
             <thead>
               <tr>
                 <th className="has-text-centered" colSpan={3}>
-                  Week {CURRENT_WEEK} picks for{" "}
-                  {`${userPicks.firstName} ${userPicks.lastName}`}
+                  Week {CURRENT_WEEK} picks for {`${userPicks.firstName} ${userPicks.lastName}`}
                 </th>
               </tr>
               <tr>
@@ -42,11 +39,10 @@ function PickSheetSuccess() {
               </tr>
             </thead>
             <tbody>
-              {numGamesArr.map((num) => {
+              {numGamesArr.map(num => {
                 const pick = userPicks[`matchup-${num}`];
                 const confidence = userPicks[`matchup-${num}-confidence`];
-                const displayName =
-                  teams[pick as keyof typeof teams].displayName;
+                const displayName = teams[pick as keyof typeof teams].displayName;
                 return (
                   <tr key={`confidence-${num}`}>
                     <td className="has-text-centered">{num + 1}</td>
@@ -62,15 +58,11 @@ function PickSheetSuccess() {
             <tbody>
               <tr>
                 <td className="has-text-centered">Survivor Pick</td>
-                <td className="has-text-centered">
-                  {userPicks["survivor-pick"]}
-                </td>
+                <td className="has-text-centered">{userPicks['survivor-pick']}</td>
               </tr>
               <tr>
                 <td className="has-text-centered">Margin Pick</td>
-                <td className="has-text-centered">
-                  {userPicks["margin-pick"]}
-                </td>
+                <td className="has-text-centered">{userPicks['margin-pick']}</td>
               </tr>
               <tr>
                 <td className="has-text-centered">Tiebreaker</td>
@@ -90,8 +82,7 @@ function PickSheetSuccess() {
             <tbody>
               <tr>
                 {userPicks.highFivePicks.map((pick: string) => {
-                  const displayName =
-                    teams[pick as keyof typeof teams].displayName;
+                  const displayName = teams[pick as keyof typeof teams].displayName;
                   return (
                     <td className="has-text-centered" key={`high-5-${pick}`}>
                       {displayName}

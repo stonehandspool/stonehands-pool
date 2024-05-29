@@ -1,13 +1,10 @@
-import { useEffect, useState } from "react";
-import playerPicks from "../../../data/2024/marchmadness/playerPicks.json";
-import teams from "../../../data/2024/marchmadness/teams.json";
-import { useNavigate } from "react-router-dom";
-import supabaseClient from "../../config/supabaseClient";
-import { TABLE_NAMES } from "../../config/supabaseConfig";
-import {
-  MARCH_MADNESS_FINAL_TOTAL,
-  MARCH_MADNESS_STATE,
-} from "../../constants";
+import { useEffect, useState } from 'react';
+import playerPicks from '../../../data/2024/marchmadness/playerPicks.json';
+import teams from '../../../data/2024/marchmadness/teams.json';
+import { useNavigate } from 'react-router-dom';
+import supabaseClient from '../../config/supabaseClient';
+import { TABLE_NAMES } from '../../config/supabaseConfig';
+import { MARCH_MADNESS_FINAL_TOTAL, MARCH_MADNESS_STATE } from '../../constants';
 
 interface TableColumns {
   position: number;
@@ -29,16 +26,14 @@ function StandingsTable() {
 
   useEffect(() => {
     const fetchPicks = async () => {
-      const { data } = await supabaseClient
-        .from(TABLE_NAMES.MARCH_MADNESS_PICKS)
-        .select();
+      const { data } = await supabaseClient.from(TABLE_NAMES.MARCH_MADNESS_PICKS).select();
 
       if (data && data.length > 0) {
         setAllPicks(data);
       }
     };
 
-    if (MARCH_MADNESS_STATE !== "ACTIVE") {
+    if (MARCH_MADNESS_STATE !== 'ACTIVE') {
       fetchPicks();
     } else {
       setAllPicks(playerPicks);
@@ -62,21 +57,18 @@ function StandingsTable() {
         userPicks,
       } = playerInfo.submission_data ?? playerInfo;
       const { tiebreaker } = playerInfo;
-      const finalMatchup = userPicks.find((p: any) => p.id === "matchup-63");
-      const champion =
-        finalMatchup.winner === "top"
-          ? finalMatchup.topTeam.name
-          : finalMatchup.bottomTeam.name;
+      const finalMatchup = userPicks.find((p: any) => p.id === 'matchup-63');
+      const champion = finalMatchup.winner === 'top' ? finalMatchup.topTeam.name : finalMatchup.bottomTeam.name;
       const rowInfo: TableColumns = {
         position: 0,
         name: `${firstName} ${lastName}`,
         wins: numCorrect,
         losses: numIncorrect,
         points,
-        maxPoints: MARCH_MADNESS_STATE !== "ACTIVE" ? "?" : currentMaxPoints,
+        maxPoints: MARCH_MADNESS_STATE !== 'ACTIVE' ? '?' : currentMaxPoints,
         pointsByRound,
-        tiebreaker: MARCH_MADNESS_STATE !== "ACTIVE" ? "?" : tiebreaker,
-        champion: MARCH_MADNESS_STATE !== "ACTIVE" ? "?" : champion,
+        tiebreaker: MARCH_MADNESS_STATE !== 'ACTIVE' ? '?' : tiebreaker,
+        champion: MARCH_MADNESS_STATE !== 'ACTIVE' ? '?' : champion,
         username,
       };
       tempPicks.push(rowInfo);
@@ -84,10 +76,10 @@ function StandingsTable() {
 
     // Sort everyone by points now
     tempPicks.sort((row1, row2) => {
-      const firstName1 = row1.name.split(" ")[0];
-      const lastName1 = row1.name.split(" ").pop()!;
-      const firstName2 = row2.name.split(" ")[0];
-      const lastName2 = row2.name.split(" ").pop()!;
+      const firstName1 = row1.name.split(' ')[0];
+      const lastName1 = row1.name.split(' ').pop()!;
+      const firstName2 = row2.name.split(' ')[0];
+      const lastName2 = row2.name.split(' ').pop()!;
       const row1Tb = Math.abs(MARCH_MADNESS_FINAL_TOTAL - row1.tiebreaker);
       const row2Tb = Math.abs(MARCH_MADNESS_FINAL_TOTAL - row2.tiebreaker);
       return (
@@ -106,7 +98,7 @@ function StandingsTable() {
   }, [allPicks]);
 
   const goToUserStats = (username: string) => {
-    if (MARCH_MADNESS_STATE !== "ACTIVE") {
+    if (MARCH_MADNESS_STATE !== 'ACTIVE') {
       return;
     }
     navigate(`/march-madness/bracket/${username}`);
@@ -148,9 +140,7 @@ function StandingsTable() {
           </thead>
           <tbody>
             {calculatedPicks.map((row, index) => {
-              const championAlive = teams.find(
-                (team) => team.name === row.champion,
-              )!.alive;
+              const championAlive = teams.find(team => team.name === row.champion)!.alive;
               return (
                 <tr key={`${index}`}>
                   <td>{row.position}</td>
@@ -165,19 +155,15 @@ function StandingsTable() {
                     return <td key={`${row.username}-${index}`}>{val}</td>;
                   })}
                   <td>{row.tiebreaker}</td>
-                  <td
-                    className={
-                      !championAlive ? "has-text-danger" : "has-text-black"
-                    }
-                  >
-                    {row.champion}
-                  </td>
+                  <td className={!championAlive ? 'has-text-danger' : 'has-text-black'}>{row.champion}</td>
                   <td>
                     <button
                       className="button is-small is-primary"
-                      onClick={() => { goToUserStats(row.username); }}
+                      onClick={() => {
+                        goToUserStats(row.username);
+                      }}
                     >
-                      {MARCH_MADNESS_STATE === "ACTIVE" ? "Click Here" : "TBD"}
+                      {MARCH_MADNESS_STATE === 'ACTIVE' ? 'Click Here' : 'TBD'}
                     </button>
                   </td>
                 </tr>

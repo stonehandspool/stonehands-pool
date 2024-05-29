@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 interface ConfidenceDropDownProps {
   numOptions: number;
@@ -56,7 +56,7 @@ function ConfidenceDropDown(props: ConfidenceDropDownProps) {
         disabled={shouldDisable || matchupChoice === undefined}
       >
         <option value={-1} disabled hidden></option>
-        <option value={""}></option>
+        <option value={''}></option>
         {options.map((number, index) => (
           <option
             key={`matchup-${matchupNumber}-option-${index}`}

@@ -1,4 +1,4 @@
-import { SubmissionInfo } from "../../constants";
+import { SubmissionInfo } from '../../constants';
 
 interface TableProps {
   confidencePicks: SubmissionInfo[];
@@ -6,11 +6,11 @@ interface TableProps {
 }
 
 const gameArr = Array.from({ length: 16 }, (_, i) => i + 1);
-const headers: string[] = ["Week"];
+const headers: string[] = ['Week'];
 for (let i = 0; i < gameArr.length; i++) {
   headers.push(`Game ${gameArr[i]}`);
 }
-headers.push("Points");
+headers.push('Points');
 
 function UserConfidencePicksTable(props: TableProps) {
   const { confidencePicks, pointsByWeek } = props;
@@ -18,7 +18,7 @@ function UserConfidencePicksTable(props: TableProps) {
     <table className="table is-bordered is-hoverable">
       <thead>
         <tr>
-          {headers.map((heading) => {
+          {headers.map(heading => {
             return (
               <th key={heading} className="has-text-centered">
                 {heading}
@@ -33,21 +33,12 @@ function UserConfidencePicksTable(props: TableProps) {
           return (
             <tr key={`${index}-row`}>
               <td className="has-text-centered">{index + 1}</td>
-              {Array.from({ length: 16 }, (_, i) => i).map((number) => {
-                const team =
-                  submission_data[
-                    `matchup-${number}` as keyof typeof submission_data
-                  ];
-                const confidence =
-                  submission_data[
-                    `matchup-${number}-confidence` as keyof typeof submission_data
-                  ];
+              {Array.from({ length: 16 }, (_, i) => i).map(number => {
+                const team = submission_data[`matchup-${number}` as keyof typeof submission_data];
+                const confidence = submission_data[`matchup-${number}-confidence` as keyof typeof submission_data];
                 if (team) {
                   return (
-                    <td
-                      key={`week-${index}-pick-${number}`}
-                      className="has-text-centered"
-                    >
+                    <td key={`week-${index}-pick-${number}`} className="has-text-centered">
                       {team}
                       <br />
                       {confidence}

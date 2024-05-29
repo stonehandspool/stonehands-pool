@@ -1,5 +1,5 @@
-import { CURRENT_YEAR } from "../constants";
-import accolades from "../../data/2023/accolades.json";
+import { CURRENT_YEAR } from '../constants';
+import accolades from '../../data/2023/accolades.json';
 
 interface ForgetfulPeopleData {
   userId: string;
@@ -147,102 +147,48 @@ interface AccoladeInfo {
 function getEnding(place: number) {
   const lastDigit = +place.toString().slice(-1);
   if (lastDigit === 1 && place != 11) {
-    return "st";
+    return 'st';
   } else if (lastDigit === 2 && place != 12) {
-    return "nd";
+    return 'nd';
   } else if (lastDigit === 3 && place != 13) {
-    return "rd";
+    return 'rd';
   } else {
-    return "th";
+    return 'th';
   }
 }
 
 function YearlyAwards() {
-  const mostPoints = accolades.find(
-    (accolade) => accolade.id === "mostPoints",
-  ) as AccoladeInfo;
-  const mostWins = accolades.find(
-    (accolade) => accolade.id === "mostWins",
-  ) as AccoladeInfo;
-  const thursdayPoints = accolades.find(
-    (accolade) => accolade.id === "thursdayPoints",
-  ) as AccoladeInfo;
-  const thursdayWins = accolades.find(
-    (accolade) => accolade.id === "thursdayWins",
-  ) as AccoladeInfo;
-  const thursdayPointsRisked = accolades.find(
-    (accolade) => accolade.id === "thursdayPointsRisked",
-  ) as AccoladeInfo;
-  const thursdayEfficiency = accolades.find(
-    (accolade) => accolade.id === "thursdayEfficiency",
-  ) as AccoladeInfo;
-  const mondayPoints = accolades.find(
-    (accolade) => accolade.id === "mondayPoints",
-  ) as AccoladeInfo;
-  const mondayWins = accolades.find(
-    (accolade) => accolade.id === "mondayWins",
-  ) as AccoladeInfo;
-  const mondayPointsRisked = accolades.find(
-    (accolade) => accolade.id === "mondayPointsRisked",
-  ) as AccoladeInfo;
-  const mondayEfficiency = accolades.find(
-    (accolade) => accolade.id === "mondayEfficiency",
-  ) as AccoladeInfo;
-  const eagerPeople = accolades.find(
-    (accolade) => accolade.id === "eagerPeople",
-  ) as AccoladeInfo;
-  const loneWolf = accolades.find(
-    (accolade) => accolade.id === "loneWolf",
-  ) as AccoladeInfo;
-  const teamsAlwaysPicked = accolades.find(
-    (accolade) => accolade.id === "teamsAlwaysPicked",
-  ) as AccoladeInfo;
-  const teamsNeverPicked = accolades.find(
-    (accolade) => accolade.id === "teamsNeverPicked",
-  ) as AccoladeInfo;
-  const forgetfulPeople = accolades.find(
-    (accolade) => accolade.id === "forgetfulPeople",
-  ) as AccoladeInfo;
-  const leastEagerPeople = accolades.find(
-    (accolade) => accolade.id === "leastEagerPeople",
-  ) as AccoladeInfo;
-  const leastPointsInWeek = accolades.find(
-    (accolade) => accolade.id === "leastPointsInWeek",
-  ) as AccoladeInfo;
-  const loneLoser = accolades.find(
-    (accolade) => accolade.id === "loneLoser",
-  ) as AccoladeInfo;
-  const survivor = accolades.find(
-    (accolade) => accolade.id === "survivor",
-  ) as AccoladeInfo;
-  const marginPoints = accolades.find(
-    (accolade) => accolade.id === "marginPoints",
-  ) as AccoladeInfo;
-  const marginWins = accolades.find(
-    (accolade) => accolade.id === "marginWins",
-  ) as AccoladeInfo;
-  const highFivePoints = accolades.find(
-    (accolade) => accolade.id === "highFivePoints",
-  ) as AccoladeInfo;
-  const highFiveWins = accolades.find(
-    (accolade) => accolade.id === "highFiveWins",
-  ) as AccoladeInfo;
-  const teamsBestPicked = accolades.find(
-    (accolade) => accolade.id === "teamsBestPicked",
-  ) as AccoladeInfo;
-  const teamsWorstPicked = accolades.find(
-    (accolade) => accolade.id === "teamsWorstPicked",
-  ) as AccoladeInfo;
-  const secretMango = accolades.find(
-    (accolade) => accolade.id === "secretMango",
-  ) as AccoladeInfo;
+  const mostPoints = accolades.find(accolade => accolade.id === 'mostPoints') as AccoladeInfo;
+  const mostWins = accolades.find(accolade => accolade.id === 'mostWins') as AccoladeInfo;
+  const thursdayPoints = accolades.find(accolade => accolade.id === 'thursdayPoints') as AccoladeInfo;
+  const thursdayWins = accolades.find(accolade => accolade.id === 'thursdayWins') as AccoladeInfo;
+  const thursdayPointsRisked = accolades.find(accolade => accolade.id === 'thursdayPointsRisked') as AccoladeInfo;
+  const thursdayEfficiency = accolades.find(accolade => accolade.id === 'thursdayEfficiency') as AccoladeInfo;
+  const mondayPoints = accolades.find(accolade => accolade.id === 'mondayPoints') as AccoladeInfo;
+  const mondayWins = accolades.find(accolade => accolade.id === 'mondayWins') as AccoladeInfo;
+  const mondayPointsRisked = accolades.find(accolade => accolade.id === 'mondayPointsRisked') as AccoladeInfo;
+  const mondayEfficiency = accolades.find(accolade => accolade.id === 'mondayEfficiency') as AccoladeInfo;
+  const eagerPeople = accolades.find(accolade => accolade.id === 'eagerPeople') as AccoladeInfo;
+  const loneWolf = accolades.find(accolade => accolade.id === 'loneWolf') as AccoladeInfo;
+  const teamsAlwaysPicked = accolades.find(accolade => accolade.id === 'teamsAlwaysPicked') as AccoladeInfo;
+  const teamsNeverPicked = accolades.find(accolade => accolade.id === 'teamsNeverPicked') as AccoladeInfo;
+  const forgetfulPeople = accolades.find(accolade => accolade.id === 'forgetfulPeople') as AccoladeInfo;
+  const leastEagerPeople = accolades.find(accolade => accolade.id === 'leastEagerPeople') as AccoladeInfo;
+  const leastPointsInWeek = accolades.find(accolade => accolade.id === 'leastPointsInWeek') as AccoladeInfo;
+  const loneLoser = accolades.find(accolade => accolade.id === 'loneLoser') as AccoladeInfo;
+  const survivor = accolades.find(accolade => accolade.id === 'survivor') as AccoladeInfo;
+  const marginPoints = accolades.find(accolade => accolade.id === 'marginPoints') as AccoladeInfo;
+  const marginWins = accolades.find(accolade => accolade.id === 'marginWins') as AccoladeInfo;
+  const highFivePoints = accolades.find(accolade => accolade.id === 'highFivePoints') as AccoladeInfo;
+  const highFiveWins = accolades.find(accolade => accolade.id === 'highFiveWins') as AccoladeInfo;
+  const teamsBestPicked = accolades.find(accolade => accolade.id === 'teamsBestPicked') as AccoladeInfo;
+  const teamsWorstPicked = accolades.find(accolade => accolade.id === 'teamsWorstPicked') as AccoladeInfo;
+  const secretMango = accolades.find(accolade => accolade.id === 'secretMango') as AccoladeInfo;
 
   return (
     <section className="section">
       <div className="container">
-        <h1 className="title has-text-centered">
-          {CURRENT_YEAR} Stonehands Pool
-        </h1>
+        <h1 className="title has-text-centered">{CURRENT_YEAR} Stonehands Pool</h1>
         <h2 className="subtitle has-text-centered">
           A collection of awards, highlights, and lowlights from the 2023 season
         </h2>
@@ -252,9 +198,7 @@ function YearlyAwards() {
         <div className="columns">
           <div className="column">
             <h2 className="title has-text-centered">{mostPoints.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {mostPoints.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{mostPoints.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -284,9 +228,7 @@ function YearlyAwards() {
           </div>
           <div className="column">
             <h2 className="title has-text-centered">{mostWins.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {mostWins.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{mostWins.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -320,9 +262,7 @@ function YearlyAwards() {
         <div className="columns">
           <div className="column">
             <h2 className="title has-text-centered">{thursdayPoints.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {thursdayPoints.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{thursdayPoints.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -352,9 +292,7 @@ function YearlyAwards() {
           </div>
           <div className="column">
             <h2 className="title has-text-centered">{thursdayWins.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {thursdayWins.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{thursdayWins.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -385,12 +323,8 @@ function YearlyAwards() {
         </div>
         <div className="columns">
           <div className="column">
-            <h2 className="title has-text-centered">
-              {thursdayPointsRisked.title}
-            </h2>
-            <h3 className="subtitle has-text-centered">
-              {thursdayPointsRisked.description}
-            </h3>
+            <h2 className="title has-text-centered">{thursdayPointsRisked.title}</h2>
+            <h3 className="subtitle has-text-centered">{thursdayPointsRisked.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -422,12 +356,8 @@ function YearlyAwards() {
             </table>
           </div>
           <div className="column">
-            <h2 className="title has-text-centered">
-              {thursdayEfficiency.title}
-            </h2>
-            <h3 className="subtitle has-text-centered">
-              {thursdayEfficiency.description}
-            </h3>
+            <h2 className="title has-text-centered">{thursdayEfficiency.title}</h2>
+            <h3 className="subtitle has-text-centered">{thursdayEfficiency.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -463,9 +393,7 @@ function YearlyAwards() {
         <div className="columns">
           <div className="column">
             <h2 className="title has-text-centered">{mondayPoints.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {mondayPoints.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{mondayPoints.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -495,9 +423,7 @@ function YearlyAwards() {
           </div>
           <div className="column">
             <h2 className="title has-text-centered">{mondayWins.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {mondayWins.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{mondayWins.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -528,12 +454,8 @@ function YearlyAwards() {
         </div>
         <div className="columns">
           <div className="column">
-            <h2 className="title has-text-centered">
-              {mondayPointsRisked.title}
-            </h2>
-            <h3 className="subtitle has-text-centered">
-              {mondayPointsRisked.description}
-            </h3>
+            <h2 className="title has-text-centered">{mondayPointsRisked.title}</h2>
+            <h3 className="subtitle has-text-centered">{mondayPointsRisked.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -565,12 +487,8 @@ function YearlyAwards() {
             </table>
           </div>
           <div className="column">
-            <h2 className="title has-text-centered">
-              {mondayEfficiency.title}
-            </h2>
-            <h3 className="subtitle has-text-centered">
-              {mondayEfficiency.description}
-            </h3>
+            <h2 className="title has-text-centered">{mondayEfficiency.title}</h2>
+            <h3 className="subtitle has-text-centered">{mondayEfficiency.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -628,9 +546,7 @@ function YearlyAwards() {
         <div className="columns">
           <div className="column">
             <h2 className="title has-text-centered">{marginPoints.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {marginPoints.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{marginPoints.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -656,9 +572,7 @@ function YearlyAwards() {
           </div>
           <div className="column">
             <h2 className="title has-text-centered">{marginWins.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {marginWins.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{marginWins.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -689,9 +603,7 @@ function YearlyAwards() {
         <div className="columns">
           <div className="column">
             <h2 className="title has-text-centered">{highFivePoints.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {highFivePoints.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{highFivePoints.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -717,9 +629,7 @@ function YearlyAwards() {
           </div>
           <div className="column">
             <h2 className="title has-text-centered">{highFiveWins.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {highFiveWins.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{highFiveWins.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -750,9 +660,7 @@ function YearlyAwards() {
         <div className="columns">
           <div className="column">
             <h2 className="title has-text-centered">{eagerPeople.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {eagerPeople.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{eagerPeople.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -781,9 +689,7 @@ function YearlyAwards() {
           </div>
           <div className="column">
             <h2 className="title has-text-centered">{loneWolf.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {loneWolf.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{loneWolf.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -810,12 +716,8 @@ function YearlyAwards() {
         </div>
         <div className="columns">
           <div className="column">
-            <h2 className="title has-text-centered">
-              {teamsAlwaysPicked.title}
-            </h2>
-            <h3 className="subtitle has-text-centered">
-              {teamsAlwaysPicked.description}
-            </h3>
+            <h2 className="title has-text-centered">{teamsAlwaysPicked.title}</h2>
+            <h3 className="subtitle has-text-centered">{teamsAlwaysPicked.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -834,7 +736,7 @@ function YearlyAwards() {
                       <td>
                         <b>{info.count}</b>
                       </td>
-                      <td>{info.pickedBy.join(", ")}</td>
+                      <td>{info.pickedBy.join(', ')}</td>
                     </tr>
                   );
                 })}
@@ -842,12 +744,8 @@ function YearlyAwards() {
             </table>
           </div>
           <div className="column">
-            <h2 className="title has-text-centered">
-              {teamsNeverPicked.title}
-            </h2>
-            <h3 className="subtitle has-text-centered">
-              {teamsNeverPicked.description}
-            </h3>
+            <h2 className="title has-text-centered">{teamsNeverPicked.title}</h2>
+            <h3 className="subtitle has-text-centered">{teamsNeverPicked.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -866,7 +764,7 @@ function YearlyAwards() {
                       <td>
                         <b>{info.count}</b>
                       </td>
-                      <td>{info.pickedBy.join(", ")}</td>
+                      <td>{info.pickedBy.join(', ')}</td>
                     </tr>
                   );
                 })}
@@ -877,9 +775,7 @@ function YearlyAwards() {
         <div className="columns">
           <div className="column">
             <h2 className="title has-text-centered">{teamsBestPicked.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {teamsBestPicked.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{teamsBestPicked.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -892,9 +788,7 @@ function YearlyAwards() {
               <tbody>
                 {teamsBestPicked.data.map((info: BestPickedData, index) => {
                   return (
-                    <tr
-                      key={`${info.firstName}-${info.lastName}-teamsBestPicked`}
-                    >
+                    <tr key={`${info.firstName}-${info.lastName}-teamsBestPicked`}>
                       <td>{index + 1}</td>
                       <td>{`${info.firstName} ${info.lastName}`}</td>
                       <td>
@@ -911,9 +805,7 @@ function YearlyAwards() {
           </div>
           <div className="column">
             <h2 className="title has-text-centered">{secretMango.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {secretMango.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{secretMango.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -942,9 +834,7 @@ function YearlyAwards() {
         <div className="columns">
           <div className="column">
             <h2 className="title has-text-centered">{forgetfulPeople.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {forgetfulPeople.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{forgetfulPeople.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -954,29 +844,23 @@ function YearlyAwards() {
                 </tr>
               </thead>
               <tbody>
-                {forgetfulPeople.data.map(
-                  (info: ForgetfulPeopleData, index) => {
-                    return (
-                      <tr key={`${info.userId}-forgetfulPeople`}>
-                        <td>{index + 1}</td>
-                        <td>{`${info.firstName} ${info.lastName}`}</td>
-                        <td>
-                          <b>{info.timesForgotten}</b>
-                        </td>
-                      </tr>
-                    );
-                  },
-                )}
+                {forgetfulPeople.data.map((info: ForgetfulPeopleData, index) => {
+                  return (
+                    <tr key={`${info.userId}-forgetfulPeople`}>
+                      <td>{index + 1}</td>
+                      <td>{`${info.firstName} ${info.lastName}`}</td>
+                      <td>
+                        <b>{info.timesForgotten}</b>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
           <div className="column">
-            <h2 className="title has-text-centered">
-              {leastEagerPeople.title}
-            </h2>
-            <h3 className="subtitle has-text-centered">
-              {leastEagerPeople.description}
-            </h3>
+            <h2 className="title has-text-centered">{leastEagerPeople.title}</h2>
+            <h3 className="subtitle has-text-centered">{leastEagerPeople.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -1007,9 +891,7 @@ function YearlyAwards() {
         <div className="columns">
           <div className="column">
             <h2 className="title has-text-centered">{loneLoser.title}</h2>
-            <h3 className="subtitle has-text-centered">
-              {loneLoser.description}
-            </h3>
+            <h3 className="subtitle has-text-centered">{loneLoser.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -1034,12 +916,8 @@ function YearlyAwards() {
             </table>
           </div>
           <div className="column">
-            <h2 className="title has-text-centered">
-              {leastPointsInWeek.title}
-            </h2>
-            <h3 className="subtitle has-text-centered">
-              {leastPointsInWeek.description}
-            </h3>
+            <h2 className="title has-text-centered">{leastPointsInWeek.title}</h2>
+            <h3 className="subtitle has-text-centered">{leastPointsInWeek.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
               <thead>
                 <tr>
@@ -1069,9 +947,7 @@ function YearlyAwards() {
           </div>
         </div>
         <h2 className="title has-text-centered">{teamsWorstPicked.title}</h2>
-        <h3 className="subtitle has-text-centered">
-          {teamsWorstPicked.description}
-        </h3>
+        <h3 className="subtitle has-text-centered">{teamsWorstPicked.description}</h3>
         <table className="table is-striped is-hoverable mx-auto">
           <thead>
             <tr>
