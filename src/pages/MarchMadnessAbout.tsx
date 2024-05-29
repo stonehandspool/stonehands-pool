@@ -1,41 +1,41 @@
-import { CURRENT_YEAR } from "../constants";
+import { CURRENT_YEAR } from '../constants'
 
 const toMoney = (value: number) => {
-  return value.toLocaleString("en-US", {
+  return value.toLocaleString('en-US', {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-    style: "currency",
-    currency: "USD",
-    currencyDisplay: "narrowSymbol",
-  });
-};
+    style: 'currency',
+    currency: 'USD',
+    currencyDisplay: 'narrowSymbol',
+  })
+}
 
 function MarchMadnessAbout() {
   // Just dummy objects to allow the examples to somewhat work
-  const numPlayers = 72;
-  const buyIn = 25;
-  const totalPool = numPlayers * buyIn;
+  const numPlayers = 72
+  const buyIn = 25
+  const totalPool = numPlayers * buyIn
 
-  const roundAmount = 50;
-  const totalRounds = 50 * 5;
+  const roundAmount = 50
+  const totalRounds = 50 * 5
 
   // Final Payouts
-  const totalFinal = totalPool - totalRounds;
-  const final1 = totalFinal * 0.25;
-  const final2 = totalFinal * 0.18;
-  const final3 = totalFinal * 0.12;
-  const final4 = totalFinal * 0.1;
-  const final5 = totalFinal * 0.08;
-  const final6 = totalFinal * 0.06;
-  const final7 = totalFinal * 0.05;
-  const final8 = totalFinal * 0.04;
-  const final9 = totalFinal * 0.03;
-  const final10 = totalFinal * 0.02;
-  const final11 = totalFinal * 0.02;
-  const final12 = totalFinal * 0.02;
-  const final13 = totalFinal * 0.01;
-  const final14 = totalFinal * 0.01;
-  const final15 = totalFinal * 0.01;
+  const totalFinal = totalPool - totalRounds
+  const final1 = totalFinal * 0.25
+  const final2 = totalFinal * 0.18
+  const final3 = totalFinal * 0.12
+  const final4 = totalFinal * 0.1
+  const final5 = totalFinal * 0.08
+  const final6 = totalFinal * 0.06
+  const final7 = totalFinal * 0.05
+  const final8 = totalFinal * 0.04
+  const final9 = totalFinal * 0.03
+  const final10 = totalFinal * 0.02
+  const final11 = totalFinal * 0.02
+  const final12 = totalFinal * 0.02
+  const final13 = totalFinal * 0.01
+  const final14 = totalFinal * 0.01
+  const final15 = totalFinal * 0.01
 
   return (
     <section className="section">
@@ -69,7 +69,7 @@ function MarchMadnessAbout() {
               You are free to submit your picksheet any time prior to the start
               of the first game of the tournament but there is a hard cutoff at
               that time! No picksheets will be accepted after the start of the
-              first game, no exceptions!{" "}
+              first game, no exceptions!{' '}
               <b>
                 You will also be able to modify your picks leading up to the
                 start of the tournament as many times as you'd like.
@@ -197,7 +197,7 @@ function MarchMadnessAbout() {
             </p>
             <p className="has-text-danger">
               In the payment description please use the format: 'March Madness
-              Stonehands for: "name(s)"'{" "}
+              Stonehands for: "name(s)"'{' '}
             </p>
             <br />
             <p>
@@ -239,91 +239,91 @@ function MarchMadnessAbout() {
                 <br />
                 <p>
                   <b>
-                    1<sup>st</sup>:{" "}
+                    1<sup>st</sup>:{' '}
                   </b>
                   {toMoney(final1)} (25%)
                 </p>
                 <p>
                   <b>
-                    2<sup>nd</sup>:{" "}
+                    2<sup>nd</sup>:{' '}
                   </b>
                   {toMoney(final2)} (18%)
                 </p>
                 <p>
                   <b>
-                    3<sup>rd</sup>:{" "}
+                    3<sup>rd</sup>:{' '}
                   </b>
                   {toMoney(final3)} (12%)
                 </p>
                 <p>
                   <b>
-                    4<sup>th</sup>:{" "}
+                    4<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final4)} (10%)
                 </p>
                 <p>
                   <b>
-                    5<sup>th</sup>:{" "}
+                    5<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final5)} (8%)
                 </p>
                 <p>
                   <b>
-                    6<sup>th</sup>:{" "}
+                    6<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final6)} (6%)
                 </p>
                 <p>
                   <b>
-                    7<sup>th</sup>:{" "}
+                    7<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final7)} (5%)
                 </p>
                 <p>
                   <b>
-                    8<sup>th</sup>:{" "}
+                    8<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final8)} (4%)
                 </p>
                 <p>
                   <b>
-                    9<sup>th</sup>:{" "}
+                    9<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final9)} (3%)
                 </p>
                 <p>
                   <b>
-                    10<sup>th</sup>:{" "}
+                    10<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final10)} (2%)
                 </p>
                 <p>
                   <b>
-                    11<sup>th</sup>:{" "}
+                    11<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final11)} (2%)
                 </p>
                 <p>
                   <b>
-                    12<sup>th</sup>:{" "}
+                    12<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final12)} (2%)
                 </p>
                 <p>
                   <b>
-                    13<sup>th</sup>:{" "}
+                    13<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final13)} (1%)
                 </p>
                 <p>
                   <b>
-                    14<sup>th</sup>:{" "}
+                    14<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final14)} (1%)
                 </p>
                 <p>
                   <b>
-                    15<sup>th</sup>:{" "}
+                    15<sup>th</sup>:{' '}
                   </b>
                   {toMoney(final15)} (1%)
                 </p>
@@ -335,31 +335,31 @@ function MarchMadnessAbout() {
                 <br />
                 <p>
                   <b>
-                    1<sup>st</sup> Round:{" "}
+                    1<sup>st</sup> Round:{' '}
                   </b>
                   {toMoney(roundAmount)}
                 </p>
                 <p>
                   <b>
-                    2<sup>nd</sup> Round:{" "}
+                    2<sup>nd</sup> Round:{' '}
                   </b>
                   {toMoney(roundAmount)}
                 </p>
                 <p>
                   <b>
-                    3<sup>rd</sup> Round:{" "}
+                    3<sup>rd</sup> Round:{' '}
                   </b>
                   {toMoney(roundAmount)}
                 </p>
                 <p>
                   <b>
-                    4<sup>th</sup> Round:{" "}
+                    4<sup>th</sup> Round:{' '}
                   </b>
                   {toMoney(roundAmount)}
                 </p>
                 <p>
                   <b>
-                    5<sup>th</sup> Round:{" "}
+                    5<sup>th</sup> Round:{' '}
                   </b>
                   {toMoney(roundAmount)}
                 </p>
@@ -390,10 +390,10 @@ function MarchMadnessAbout() {
             <p className="mb-5">
               <b>
                 I ask that everyone pays prior to the start of the tournament.
-              </b>{" "}
-              If payments aren't received by the start of the{" "}
+              </b>{' '}
+              If payments aren't received by the start of the{' '}
               <b>round of 64 (1st round)</b> then I will reach out to you. If
-              payment is not received by the start of the{" "}
+              payment is not received by the start of the{' '}
               <b>round of 32 (2nd round)</b>, then you will be disqualified (and
               put on double secret probation) from the pool.
             </p>
@@ -406,7 +406,7 @@ function MarchMadnessAbout() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default MarchMadnessAbout;
+export default MarchMadnessAbout
