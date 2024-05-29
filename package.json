@@ -45,12 +45,8 @@
     "vite": "^4.0.0"
   },
   "lint-staged": {
-    "*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.tsx": [
-      "eslint --fix",
+    "*.(js|jsx|ts|tsx)": "eslint --fix",
+    "*.json": [
       "prettier --write"
     ]
   }
