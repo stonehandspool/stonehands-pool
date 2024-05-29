@@ -10,7 +10,7 @@
     "start": "vite",
     "preview": "vite preview",
     "process-week": "node scripts/processWeek.js",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "dependencies": {
     "@cityssm/bulma-sticky-table": "^2.1.0",
