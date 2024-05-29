@@ -1,12 +1,12 @@
-import { CURRENT_YEAR } from "../constants";
+import { CURRENT_YEAR } from '../constants';
 
 const toMoney = (value: number) => {
-  return value.toLocaleString("en-US", {
+  return value.toLocaleString('en-US', {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-    style: "currency",
-    currency: "USD",
-    currencyDisplay: "narrowSymbol",
+    style: 'currency',
+    currency: 'USD',
+    currencyDisplay: 'narrowSymbol',
   });
 };
 
@@ -40,12 +40,8 @@ function MarchMadnessPayouts() {
   return (
     <section className="section">
       <div className="container">
-        <h1 className="title has-text-centered">
-          The {CURRENT_YEAR} Stonehands Pool
-        </h1>
-        <h2 className="subtitle has-text-centered">
-          March Madness Payouts for {CURRENT_YEAR}
-        </h2>
+        <h1 className="title has-text-centered">The {CURRENT_YEAR} Stonehands Pool</h1>
+        <h2 className="subtitle has-text-centered">March Madness Payouts for {CURRENT_YEAR}</h2>
         <br /> <br />
         <div className="columns">
           <div className="column">
@@ -294,9 +290,8 @@ function MarchMadnessPayouts() {
               <b>
                 <sup>1</sup>
               </b>
-              I technically won this round but I'm awarding the payout to Jeff
-              Fandl because I messed up the scoring and he was the original
-              winner of this round
+              I technically won this round but I'm awarding the payout to Jeff Fandl because I messed up the scoring and
+              he was the original winner of this round
             </p>
             <p>
               <b>
@@ -308,10 +303,8 @@ function MarchMadnessPayouts() {
               <b>
                 <sup>3</sup>
               </b>
-              There was a 12-way tie for this round and so I picked a winner in
-              the only logical way I could think, an online duck race. You can
-              do your own races{" "}
-              <a href="https://www.online-stopwatch.com/duck-race/">here</a>
+              There was a 12-way tie for this round and so I picked a winner in the only logical way I could think, an
+              online duck race. You can do your own races <a href="https://www.online-stopwatch.com/duck-race/">here</a>
             </p>
           </div>
           <div className="column">

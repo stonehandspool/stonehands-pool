@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent } from 'react';
 
 interface TieBreakerProps {
   finalGame: string;
@@ -8,15 +8,13 @@ interface TieBreakerProps {
 }
 
 function TieBreaker(props: TieBreakerProps) {
-  const { finalGame, lastGameCompleted, tiebreaker, handleTiebreakerInput } =
-    props;
+  const { finalGame, lastGameCompleted, tiebreaker, handleTiebreakerInput } = props;
 
   return (
     <div className="container pb-6">
       <h3 className="title is-3">Tiebreaker:</h3>
       <h4 className="subtitle">
-        Please enter what you think the combined score will be in the Monday
-        night game ({finalGame})
+        Please enter what you think the combined score will be in the Monday night game ({finalGame})
       </h4>
       <div className="field columns">
         <div className="control column is-1">

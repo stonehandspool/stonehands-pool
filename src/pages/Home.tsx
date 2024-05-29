@@ -1,14 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
-import supabaseClient from "../config/supabaseClient";
-import { useEffect } from "react";
+import { Link, useNavigate } from 'react-router-dom';
+import supabaseClient from '../config/supabaseClient';
+import { useEffect } from 'react';
 
 function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
     supabaseClient.auth.onAuthStateChange(async (event, session) => {
-      if (event === "PASSWORD_RECOVERY") {
-        navigate("/password-reset");
+      if (event === 'PASSWORD_RECOVERY') {
+        navigate('/password-reset');
       }
     });
   }, []);

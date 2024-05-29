@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import * as TeamLogos from "../../assets/logos";
-import * as TeamInfo from "../../../data/2023/teams.json";
-import { ValidPicks } from "../../constants";
+import { useEffect, useState } from 'react';
+import * as TeamLogos from '../../assets/logos';
+import * as TeamInfo from '../../../data/2023/teams.json';
+import { ValidPicks } from '../../constants';
 
 export interface HighFiveCheckboxProps {
   homeTeam: ValidPicks;
@@ -44,10 +44,10 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
   useEffect(() => {
     if (picksArray.length > 0 && !currentWeekPickSet) {
       if (picksArray.includes(homeTeam)) {
-        handleSelection("add", homeTeam);
+        handleSelection('add', homeTeam);
         setSelectedTeam(homeTeam);
       } else if (picksArray.includes(awayTeam)) {
-        handleSelection("add", awayTeam);
+        handleSelection('add', awayTeam);
         setSelectedTeam(awayTeam);
       }
       setCurrentWeekPickSet(true);
@@ -59,34 +59,28 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
     if (
       picksArray.length === maxPicks &&
       !picksArray.includes(team) &&
-      !(
-        team !== selectedTeam &&
-        selectedTeam &&
-        picksArray.includes(selectedTeam)
-      )
+      !(team !== selectedTeam && selectedTeam && picksArray.includes(selectedTeam))
     ) {
       return;
     }
 
     if (team === selectedTeam) {
       // If deselecting a selected team
-      handleSelection("remove", selectedTeam);
+      handleSelection('remove', selectedTeam);
       setSelectedTeam(null);
       return;
     } else if (team !== selectedTeam) {
       // If selecting the opposite team
-      handleSelection("swap", selectedTeam, team);
+      handleSelection('swap', selectedTeam, team);
     } else {
       // Picking a team with no prior choice
-      handleSelection("add", team);
+      handleSelection('add', team);
     }
     setSelectedTeam(team);
   };
 
   const shouldDisable = gameStarted || gameCompleted;
-  const textColor = shouldDisable
-    ? "has-text-grey-light"
-    : "has-text-grey-dark";
+  const textColor = shouldDisable ? 'has-text-grey-light' : 'has-text-grey-dark';
 
   return (
     <div className="box">
@@ -95,10 +89,7 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
       </div>
       <div className="control is-vertical-center">
         <AwayLogo size={45} opacity={shouldDisable ? 0.4 : 1} />
-        <label
-          className={`checkbox ${textColor}`}
-          htmlFor={`${name}-matchup-${matchupNumber}-away-team`}
-        >
+        <label className={`checkbox ${textColor}`} htmlFor={`${name}-matchup-${matchupNumber}-away-team`}>
           <input
             type="checkbox"
             id={`${name}-matchup-${matchupNumber}-away-team`}
@@ -113,10 +104,7 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
       </div>
       <div className="control is-vertical-center">
         <HomeLogo size={45} opacity={shouldDisable ? 0.4 : 1} />
-        <label
-          className={`checkbox ${textColor}`}
-          htmlFor={`${name}-matchup-${matchupNumber}-home-team`}
-        >
+        <label className={`checkbox ${textColor}`} htmlFor={`${name}-matchup-${matchupNumber}-home-team`}>
           <input
             type="checkbox"
             id={`${name}-matchup-${matchupNumber}-home-team`}

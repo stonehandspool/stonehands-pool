@@ -1,6 +1,6 @@
-import { MARCH_MADNESS_CURRENT_ROUND } from "../../constants";
-import matchups from "../../../data/2024/marchmadness/matchups.json";
-import playerPicks from "../../../data/2024/marchmadness/playerPicks.json";
+import { MARCH_MADNESS_CURRENT_ROUND } from '../../constants';
+import matchups from '../../../data/2024/marchmadness/matchups.json';
+import playerPicks from '../../../data/2024/marchmadness/playerPicks.json';
 
 interface MatchupConsensusInfo {
   topTeam: string;
@@ -19,9 +19,9 @@ interface MarchMadnessConsensusReportProps {
   round: number;
 }
 
-const regions = ["WEST", "EAST", "SOUTH", "MIDWEST"];
-const regionsF4 = ["Final Four Game #1", "Final Four Game #2"];
-const regionsFinals = ["Finals"];
+const regions = ['WEST', 'EAST', 'SOUTH', 'MIDWEST'];
+const regionsF4 = ['Final Four Game #1', 'Final Four Game #2'];
+const regionsFinals = ['Finals'];
 const gamesPerRound = [8, 4, 2, 1, 1, 1];
 
 function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
@@ -41,45 +41,39 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
-            Sorry, we haven't made it that far in the tournament. Please check
-            back later
+            Sorry, we haven't made it that far in the tournament. Please check back later
           </h3>
         </div>
       </section>
     );
   }
 
-  const matchupsInRound = matchups.filter((matchup) => matchup.round === round);
+  const matchupsInRound = matchups.filter(matchup => matchup.round === round);
   const consensusArr: MatchupConsensusInfo[] = [];
   const gamesPerTable = gamesPerRound[round - 1];
 
   // First set up the initial values for the consensus info
-  matchupsInRound.forEach((matchup) => {
+  matchupsInRound.forEach(matchup => {
     consensusArr.push({
       topTeam: matchup.topTeam.name,
       topNumPicks: 0,
-      topPercent: "0",
+      topPercent: '0',
       bottomTeam: matchup.bottomTeam.name,
       bottomNumPicks: 0,
-      bottomPercent: "0",
+      bottomPercent: '0',
       matchupId: matchup.id,
       matchupTotalParticipants: 0,
       numTimeDifferentTeamChosen: 0,
-      differentTeamPercent: "0",
+      differentTeamPercent: '0',
     });
   });
 
   // Now go through every players response and update the consensus info
-  playerPicks.forEach((playerInfo) => {
+  playerPicks.forEach(playerInfo => {
     const { userPicks } = playerInfo;
-    consensusArr.forEach((matchup) => {
-      const userMatchInfo = userPicks.find(
-        (pick) => pick.id === matchup.matchupId,
-      )!;
-      const userWinner =
-        userMatchInfo.winner === "top"
-          ? userMatchInfo.topTeam.name
-          : userMatchInfo.bottomTeam.name;
+    consensusArr.forEach(matchup => {
+      const userMatchInfo = userPicks.find(pick => pick.id === matchup.matchupId)!;
+      const userWinner = userMatchInfo.winner === 'top' ? userMatchInfo.topTeam.name : userMatchInfo.bottomTeam.name;
       if (userWinner === matchup.topTeam) {
         matchup.topNumPicks++;
         matchup.matchupTotalParticipants++;
@@ -93,7 +87,7 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
   });
 
   // Now calculate the percent and avg
-  consensusArr.forEach((matchupInfo) => {
+  consensusArr.forEach(matchupInfo => {
     matchupInfo.topPercent = `${((matchupInfo.topNumPicks / matchupInfo.matchupTotalParticipants) * 100).toFixed(1)}%`;
     matchupInfo.bottomPercent = `${((matchupInfo.bottomNumPicks / matchupInfo.matchupTotalParticipants) * 100).toFixed(1)}%`;
     matchupInfo.differentTeamPercent = `${((matchupInfo.numTimeDifferentTeamChosen / playerPicks.length) * 100).toFixed(1)}%`;
@@ -112,111 +106,50 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
                     <td className="is-vcentered">
                       <b>Team #1</b>
                     </td>
-                    {consensusArr
-                      .slice(
-                        gamesPerTable * index,
-                        gamesPerTable * index + gamesPerTable,
-                      )
-                      .map((info) => {
-                        return (
-                          <td key={`${info.topTeam}-name`}>{info.topTeam}</td>
-                        );
-                      })}
+                    {consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                      return <td key={`${info.topTeam}-name`}>{info.topTeam}</td>;
+                    })}
                   </tr>
                   <tr>
                     <td># Times Chosen</td>
-                    {consensusArr
-                      .slice(
-                        gamesPerTable * index,
-                        gamesPerTable * index + gamesPerTable,
-                      )
-                      .map((info) => {
-                        return (
-                          <td key={`${info.topTeam}-times-chosen`}>
-                            {info.topNumPicks}
-                          </td>
-                        );
-                      })}
+                    {consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                      return <td key={`${info.topTeam}-times-chosen`}>{info.topNumPicks}</td>;
+                    })}
                   </tr>
                   <tr>
                     <td>Percent</td>
-                    {consensusArr
-                      .slice(
-                        gamesPerTable * index,
-                        gamesPerTable * index + gamesPerTable,
-                      )
-                      .map((info) => {
-                        return (
-                          <td key={`${info.topTeam}-percent`}>
-                            {info.topPercent}
-                          </td>
-                        );
-                      })}
+                    {consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                      return <td key={`${info.topTeam}-percent`}>{info.topPercent}</td>;
+                    })}
                   </tr>
                   <tr>
                     <td className="is-vcentered">
                       <b>Team #2</b>
                     </td>
-                    {consensusArr
-                      .slice(
-                        gamesPerTable * index,
-                        gamesPerTable * index + gamesPerTable,
-                      )
-                      .map((info) => {
-                        return (
-                          <td key={`${info.bottomTeam}-name`}>
-                            {info.bottomTeam}
-                          </td>
-                        );
-                      })}
+                    {consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                      return <td key={`${info.bottomTeam}-name`}>{info.bottomTeam}</td>;
+                    })}
                   </tr>
                   <tr>
                     <td># Times Chosen</td>
-                    {consensusArr
-                      .slice(
-                        gamesPerTable * index,
-                        gamesPerTable * index + gamesPerTable,
-                      )
-                      .map((info) => {
-                        return (
-                          <td key={`${info.bottomTeam}-times-chosen`}>
-                            {info.bottomNumPicks}
-                          </td>
-                        );
-                      })}
+                    {consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                      return <td key={`${info.bottomTeam}-times-chosen`}>{info.bottomNumPicks}</td>;
+                    })}
                   </tr>
                   <tr>
                     <td>Percent</td>
-                    {consensusArr
-                      .slice(
-                        gamesPerTable * index,
-                        gamesPerTable * index + gamesPerTable,
-                      )
-                      .map((info) => {
-                        return (
-                          <td key={`${info.bottomTeam}-percent`}>
-                            {info.bottomPercent}
-                          </td>
-                        );
-                      })}
+                    {consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                      return <td key={`${info.bottomTeam}-percent`}>{info.bottomPercent}</td>;
+                    })}
                   </tr>
                   {round > 1 && (
                     <tr>
                       <td>
                         <b># Brackets w/ Different Winner</b>
                       </td>
-                      {consensusArr
-                        .slice(
-                          gamesPerTable * index,
-                          gamesPerTable * index + gamesPerTable,
-                        )
-                        .map((info) => {
-                          return (
-                            <td key={`${info.matchupId}-other`}>
-                              {info.numTimeDifferentTeamChosen}
-                            </td>
-                          );
-                        })}
+                      {consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                        return <td key={`${info.matchupId}-other`}>{info.numTimeDifferentTeamChosen}</td>;
+                      })}
                     </tr>
                   )}
                   {round > 1 && (
@@ -224,18 +157,9 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
                       <td>
                         <b>% Pool w/ Different Winner</b>
                       </td>
-                      {consensusArr
-                        .slice(
-                          gamesPerTable * index,
-                          gamesPerTable * index + gamesPerTable,
-                        )
-                        .map((info) => {
-                          return (
-                            <td key={`${info.matchupId}-percent`}>
-                              {info.differentTeamPercent}
-                            </td>
-                          );
-                        })}
+                      {consensusArr.slice(gamesPerTable * index, gamesPerTable * index + gamesPerTable).map(info => {
+                        return <td key={`${info.matchupId}-percent`}>{info.differentTeamPercent}</td>;
+                      })}
                     </tr>
                   )}
                 </tbody>

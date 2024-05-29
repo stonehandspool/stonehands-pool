@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { User } from "@supabase/supabase-js";
-import { useNavigate } from "react-router-dom";
-import * as EmailValidator from "email-validator";
-import { TABLE_NAMES } from "../config/supabaseConfig";
-import supabaseClient from "../config/supabaseClient";
-import { SIGN_UPS_DISABLED } from "../constants";
+import { useState } from 'react';
+import { User } from '@supabase/supabase-js';
+import { useNavigate } from 'react-router-dom';
+import * as EmailValidator from 'email-validator';
+import { TABLE_NAMES } from '../config/supabaseConfig';
+import supabaseClient from '../config/supabaseClient';
+import { SIGN_UPS_DISABLED } from '../constants';
 
 function capitalize(name: string): string {
   return name.charAt(0).toUpperCase() + name.slice(1);
@@ -16,8 +16,7 @@ function SignUp() {
       <section className="section">
         <div className="container">
           <h1 className="title is-1 has-text-centered">
-            Sorry, the season has started and sign up has been disabled until
-            next year
+            Sorry, the season has started and sign up has been disabled until next year
           </h1>
         </div>
       </section>
@@ -25,54 +24,46 @@ function SignUp() {
   }
 
   const navigate = useNavigate();
-  const [firstName, setFirstName] = useState<string>("");
-  const [lastName, setLastName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [username, setUsername] = useState<string>("");
-  const [referral, setReferral] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [firstName, setFirstName] = useState<string>('');
+  const [lastName, setLastName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [username, setUsername] = useState<string>('');
+  const [referral, setReferral] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [confirmPassword, setConfirmPassword] = useState<string>('');
   const [formError, setFormError] = useState<string | null>(null);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    if (
-      !firstName ||
-      !lastName ||
-      !email ||
-      !username ||
-      !password ||
-      !confirmPassword
-    ) {
-      setFormError("Please fill in all of the fields");
+    if (!firstName || !lastName || !email || !username || !password || !confirmPassword) {
+      setFormError('Please fill in all of the fields');
       return;
     }
 
     if (password !== confirmPassword) {
-      setFormError("Please confirm both password fields match");
+      setFormError('Please confirm both password fields match');
       return;
     }
 
     if (password.length < 6) {
-      setFormError("Please user a password that is at least 6 character long");
+      setFormError('Please user a password that is at least 6 character long');
       return;
     }
 
     if (!EmailValidator.validate(email)) {
-      setFormError("Please make sure you submitted a valid email address");
+      setFormError('Please make sure you submitted a valid email address');
       return;
     }
 
     // Check to make sure the username hasn't been used before
-    const { data: usernameCheckData, error: usernameCheckError } =
-      await supabaseClient
-        .from(TABLE_NAMES.USER_INFO)
-        .select("username")
-        .eq("username", username);
+    const { data: usernameCheckData, error: usernameCheckError } = await supabaseClient
+      .from(TABLE_NAMES.USER_INFO)
+      .select('username')
+      .eq('username', username);
 
     if (usernameCheckData?.length !== 0) {
-      setFormError("Sorry, that username is taken, please try a different one");
+      setFormError('Sorry, that username is taken, please try a different one');
       return;
     }
 
@@ -92,9 +83,7 @@ function SignUp() {
     });
 
     if (error) {
-      setFormError(
-        "An error occurred when signing you up, please reach out to Ryan",
-      );
+      setFormError('An error occurred when signing you up, please reach out to Ryan');
       return;
     }
 
@@ -114,7 +103,7 @@ function SignUp() {
 
     if (userInfoData) {
       setFormError(null);
-      navigate("/sign-up-success");
+      navigate('/sign-up-success');
     }
   };
 
@@ -135,7 +124,9 @@ function SignUp() {
                     type="text"
                     id="first-name"
                     value={firstName}
-                    onChange={(e) => { setFirstName(e.target.value); }}
+                    onChange={e => {
+                      setFirstName(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -150,7 +141,9 @@ function SignUp() {
                     type="text"
                     id="last-name"
                     value={lastName}
-                    onChange={(e) => { setLastName(e.target.value); }}
+                    onChange={e => {
+                      setLastName(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -165,7 +158,9 @@ function SignUp() {
                     type="text"
                     id="email"
                     value={email}
-                    onChange={(e) => { setEmail(e.target.value); }}
+                    onChange={e => {
+                      setEmail(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -180,7 +175,9 @@ function SignUp() {
                     type="text"
                     id="username"
                     value={username}
-                    onChange={(e) => { setUsername(e.target.value); }}
+                    onChange={e => {
+                      setUsername(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -196,7 +193,9 @@ function SignUp() {
                     id="referral"
                     value={referral}
                     placeholder="Who told you about this pool?"
-                    onChange={(e) => { setReferral(e.target.value); }}
+                    onChange={e => {
+                      setReferral(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -211,7 +210,9 @@ function SignUp() {
                     type="password"
                     id="password"
                     value={password}
-                    onChange={(e) => { setPassword(e.target.value); }}
+                    onChange={e => {
+                      setPassword(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -226,7 +227,9 @@ function SignUp() {
                     type="password"
                     id="confirm-password"
                     value={confirmPassword}
-                    onChange={(e) => { setConfirmPassword(e.target.value); }}
+                    onChange={e => {
+                      setConfirmPassword(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -235,9 +238,7 @@ function SignUp() {
                 <button className="button is-primary">Sign Up</button>
               </div>
 
-              {formError && formError.length > 0 && (
-                <p className="help is-danger">{formError}</p>
-              )}
+              {formError && formError.length > 0 && <p className="help is-danger">{formError}</p>}
             </form>
           </div>
         </div>

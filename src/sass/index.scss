@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 // Add fonts here
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 // Setting colors
 $purple: #54188b;
@@ -16,7 +16,7 @@ $primary: $purple;
 }
 
 .stonehands-hero {
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 // March Madness specific styling
@@ -25,7 +25,7 @@ $primary: $purple;
 }
 
 .march-madness:not(.last-col):after {
-  content: "";
+  content: '';
   border-color: black;
   border-width: 2px;
   position: absolute;
@@ -110,7 +110,7 @@ $primary: $purple;
 }
 
 .march-madness:not(.first-col):before {
-  content: "";
+  content: '';
   border-top: 2px solid black;
   position: absolute;
   height: 2px;
@@ -134,8 +134,8 @@ $primary: $purple;
   }
 }
 
-@import "bulma/bulma.sass";
-@import "@cityssm/bulma-sticky-table/sticky-table";
+@import 'bulma/bulma.sass';
+@import '@cityssm/bulma-sticky-table/sticky-table';
 
 @include mobile {
   .navbar-item {

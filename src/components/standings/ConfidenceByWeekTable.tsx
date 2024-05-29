@@ -1,7 +1,7 @@
-import * as playerInfo from "../../../data/2023/players.json";
-import * as seasonInfo from "../../../data/2023/season.json";
+import * as playerInfo from '../../../data/2023/players.json';
+import * as seasonInfo from '../../../data/2023/season.json';
 
-import { CURRENT_WEEK, CURRENT_WEEK_STATUS } from "../../constants";
+import { CURRENT_WEEK, CURRENT_WEEK_STATUS } from '../../constants';
 
 interface TableColumns {
   position: number;
@@ -18,16 +18,7 @@ interface ConfidenceByWeekTableProps {
   week: number;
 }
 
-const headers: string[] = [
-  "Position",
-  "Name",
-  "Points",
-  "Wins",
-  "Losses",
-  "Ties",
-  "Tiebreaker",
-  "Result",
-];
+const headers: string[] = ['Position', 'Name', 'Points', 'Wins', 'Losses', 'Ties', 'Tiebreaker', 'Result'];
 
 function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
   const { week } = props;
@@ -41,8 +32,7 @@ function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
 
   const weekGames = weeks[`week_${week}` as keyof typeof weeks];
   const numGames = Object.keys(weekGames).length;
-  const lastMatchup =
-    weekGames[`matchup_${numGames}` as keyof typeof weekGames];
+  const lastMatchup = weekGames[`matchup_${numGames}` as keyof typeof weekGames];
   const mondayTotal = lastMatchup.away_score + lastMatchup.home_score;
 
   // Calculate the standings
@@ -57,7 +47,7 @@ function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
       losses: playerInfo.lossesByWeek[week - 1],
       ties: playerInfo.tiesByWeek[week - 1],
       tiebreaker: playerInfo.tiebreakerByWeek[week - 1],
-      result: "",
+      result: '',
     };
     calculatedPicks.push(rowInfo);
   }
@@ -66,24 +56,18 @@ function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
   calculatedPicks.sort((row1, row2) => {
     const row1Tb = Math.abs(mondayTotal - row1.tiebreaker);
     const row2Tb = Math.abs(mondayTotal - row2.tiebreaker);
-    return (
-      row2.points - row1.points || row2.wins - row1.wins || row1Tb - row2Tb
-    );
+    return row2.points - row1.points || row2.wins - row1.wins || row1Tb - row2Tb;
   });
 
   // Now update the position and result for the table
   for (let i = 0; i < calculatedPicks.length; i++) {
     calculatedPicks[i].position = i + 1;
     if (i === 0 && week < CURRENT_WEEK) {
-      calculatedPicks[i].result = "Winner";
-    } else if (
-      i === 0 &&
-      week === CURRENT_WEEK &&
-      CURRENT_WEEK_STATUS === "COMPLETE"
-    ) {
-      calculatedPicks[i].result = "Winner";
+      calculatedPicks[i].result = 'Winner';
+    } else if (i === 0 && week === CURRENT_WEEK && CURRENT_WEEK_STATUS === 'COMPLETE') {
+      calculatedPicks[i].result = 'Winner';
     } else {
-      calculatedPicks[i].result = "**";
+      calculatedPicks[i].result = '**';
     }
   }
 
@@ -96,7 +80,7 @@ function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
         <table className="table is-striped is-hoverable mx-auto">
           <thead>
             <tr>
-              {headers.map((heading) => {
+              {headers.map(heading => {
                 return <th key={heading}>{heading}</th>;
               })}
             </tr>
@@ -106,11 +90,7 @@ function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
               return (
                 <tr key={`${index}`}>
                   {tableKeys.map((key, ind) => {
-                    return (
-                      <td key={`${row.position}-${ind}`}>
-                        {row[key as keyof TableColumns]}
-                      </td>
-                    );
+                    return <td key={`${row.position}-${ind}`}>{row[key as keyof TableColumns]}</td>;
                   })}
                 </tr>
               );

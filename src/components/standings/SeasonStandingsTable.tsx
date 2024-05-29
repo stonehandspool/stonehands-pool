@@ -1,5 +1,5 @@
-import * as seasonStandings from "../../../data/2023/players.json";
-import { useNavigate } from "react-router-dom";
+import * as seasonStandings from '../../../data/2023/players.json';
+import { useNavigate } from 'react-router-dom';
 
 interface TableColumns {
   position: number;
@@ -44,9 +44,7 @@ function SeasonStandingsTable() {
   }
 
   // Sort everyone by points now
-  calculatedPicks.sort(
-    (row1, row2) => row2.points - row1.points || row2.wins - row1.wins,
-  );
+  calculatedPicks.sort((row1, row2) => row2.points - row1.points || row2.wins - row1.wins);
 
   // For looping through the submissions
   const tableKeys: string[] = Object.keys(calculatedPicks[0]);
@@ -78,23 +76,21 @@ function SeasonStandingsTable() {
               return (
                 <tr key={`${index}`}>
                   {tableKeys.map((key, ind) => {
-                    if (key !== "username") {
-                      if (key === "name") {
+                    if (key !== 'username') {
+                      if (key === 'name') {
                         return (
                           <td
                             key={`${row.position}-${ind}`}
-                            onClick={() => { goToUserStats(row.username); }}
-                            style={{ cursor: "pointer" }}
+                            onClick={() => {
+                              goToUserStats(row.username);
+                            }}
+                            style={{ cursor: 'pointer' }}
                           >
                             {row[key as keyof TableColumns]}
                           </td>
                         );
                       } else {
-                        return (
-                          <td key={`${row.position}-${ind}`}>
-                            {row[key as keyof TableColumns]}
-                          </td>
-                        );
+                        return <td key={`${row.position}-${ind}`}>{row[key as keyof TableColumns]}</td>;
                       }
                     } else {
                       return;

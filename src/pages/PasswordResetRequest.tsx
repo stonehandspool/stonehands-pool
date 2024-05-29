@@ -1,9 +1,9 @@
-import { useState } from "react";
-import * as EmailValidator from "email-validator";
-import supabaseClient from "../config/supabaseClient";
+import { useState } from 'react';
+import * as EmailValidator from 'email-validator';
+import supabaseClient from '../config/supabaseClient';
 
 function PasswordResetRequest() {
-  const [email, setEmail] = useState<string>("");
+  const [email, setEmail] = useState<string>('');
   const [formSuccess, setFormSuccess] = useState<string | null>(null);
   const [formError, setFormError] = useState<string | null>(null);
 
@@ -11,25 +11,20 @@ function PasswordResetRequest() {
     e.preventDefault();
 
     if (!EmailValidator.validate(email)) {
-      setFormError("Please make sure you submitted a valid email address");
+      setFormError('Please make sure you submitted a valid email address');
       return;
     }
 
-    const { data, error } =
-      await supabaseClient.auth.resetPasswordForEmail(email); // , { redirectTo: 'https://stonehands.org/password-reset' })
+    const { data, error } = await supabaseClient.auth.resetPasswordForEmail(email); // , { redirectTo: 'https://stonehands.org/password-reset' })
 
     if (data) {
-      setFormSuccess(
-        "Success! Please check your email for a password reset link.",
-      );
+      setFormSuccess('Success! Please check your email for a password reset link.');
       setFormError(null);
       return;
     }
 
     if (error) {
-      setFormError(
-        "Sorry, an error occurred when trying to reset your password, please reach out to Ryan.",
-      );
+      setFormError('Sorry, an error occurred when trying to reset your password, please reach out to Ryan.');
       return;
     }
   };
@@ -42,8 +37,7 @@ function PasswordResetRequest() {
             <form className="box" onSubmit={handleSubmit}>
               <h1 className="title has-text-centered">Password Reset</h1>
               <h2 className="subtitle has-text-centered">
-                If you forgot your email please submit your email below. If that
-                does not work, please email Ryan at{" "}
+                If you forgot your email please submit your email below. If that does not work, please email Ryan at{' '}
                 <a href="mailto:ryan@stonehands.org">ryan@stonehands.org</a>
               </h2>
 
@@ -57,7 +51,9 @@ function PasswordResetRequest() {
                     type="text"
                     id="email"
                     value={email}
-                    onChange={(e) => { setEmail(e.target.value); }}
+                    onChange={e => {
+                      setEmail(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -66,12 +62,8 @@ function PasswordResetRequest() {
                 <button className="button is-primary">Reset Password</button>
               </div>
 
-              {formSuccess && formSuccess.length > 0 && (
-                <p className="help is-success">{formSuccess}</p>
-              )}
-              {formError && formError.length > 0 && (
-                <p className="help is-danger">{formError}</p>
-              )}
+              {formSuccess && formSuccess.length > 0 && <p className="help is-success">{formSuccess}</p>}
+              {formError && formError.length > 0 && <p className="help is-danger">{formError}</p>}
             </form>
           </div>
         </div>

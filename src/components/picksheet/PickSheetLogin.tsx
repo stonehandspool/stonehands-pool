@@ -1,9 +1,9 @@
-import { useState } from "react";
-import supabaseClient from "../../config/supabaseClient";
+import { useState } from 'react';
+import supabaseClient from '../../config/supabaseClient';
 
 function PickSheetLogin() {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
   const [passwordFieldType, setPasswordFieldType] = useState<boolean>(true);
   const [formError, setFormError] = useState<string | null>(null);
 
@@ -11,7 +11,7 @@ function PickSheetLogin() {
     e.preventDefault();
 
     if (!email || !password) {
-      setFormError("Please fill in both of the fields");
+      setFormError('Please fill in both of the fields');
       return;
     }
 
@@ -21,9 +21,7 @@ function PickSheetLogin() {
     });
 
     if (error) {
-      setFormError(
-        "Something went wrong signing you in, please double check your email and password",
-      );
+      setFormError('Something went wrong signing you in, please double check your email and password');
       return;
     }
   };
@@ -49,7 +47,9 @@ function PickSheetLogin() {
                     type="text"
                     id="email"
                     value={email}
-                    onChange={(e) => { setEmail(e.target.value); }}
+                    onChange={e => {
+                      setEmail(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -61,15 +61,17 @@ function PickSheetLogin() {
                 <div className="control">
                   <input
                     className="input"
-                    type={passwordFieldType ? "password" : "text"}
+                    type={passwordFieldType ? 'password' : 'text'}
                     id="password"
                     value={password}
-                    onChange={(e) => { setPassword(e.target.value); }}
+                    onChange={e => {
+                      setPassword(e.target.value);
+                    }}
                   />
                 </div>
                 <label className="checkbox">
                   <input type="checkbox" onChange={onTogglePasswordField} />
-                  {passwordFieldType ? " Show" : " Hide"} password
+                  {passwordFieldType ? ' Show' : ' Hide'} password
                 </label>
               </div>
 
@@ -79,9 +81,7 @@ function PickSheetLogin() {
                 </div>
               </div>
               <a href="/password-reset-request">Forgot Password</a>
-              {formError && formError.length > 0 && (
-                <p className="form-error">{formError}</p>
-              )}
+              {formError && formError.length > 0 && <p className="form-error">{formError}</p>}
             </form>
           </div>
         </div>
