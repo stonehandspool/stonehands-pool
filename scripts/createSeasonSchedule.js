@@ -56,6 +56,6 @@ seasonData.weeks.forEach((week, index) => {
 });
 const seasonAsJson = JSON.stringify(seasonArray, null, 2);
 await writeFile(path.resolve(`data/${year}/football/season.json`), seasonAsJson);
-console.log(`Created a new file at data/season.json in order to keep track of the weekly results`);
+console.log(`Created a new file at data/${year}/football/season.json in order to keep track of the weekly results`);
 
 process.exit();
