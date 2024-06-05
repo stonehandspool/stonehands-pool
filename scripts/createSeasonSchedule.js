@@ -1,36 +1,61 @@
-import * as fs from 'node:fs';
 import * as path from 'path';
+import minimist from 'minimist';
 import { readFile, writeFile } from 'fs/promises';
+
+const args = minimist(process.argv.slice(2));
+const { year } = args;
+
+if (isNaN(year)) {
+    console.log('Please submit a valid year');
+    process.exit();
+}
 
 // Create the season.json file from the downloaded schedule.json file
 // We just want to cut out all of the unnecessary stuff that we got from the SportRadar API
 // Get the data from the season results json file
 const seasonData = await JSON.parse(
-    await readFile(path.resolve(`data/schedule.json`))
+    await readFile(path.resolve(`data/${year}/schedule.json`))
 );
 
-const seasonObj = { weeks: {} };
+const seasonArray = [];
 seasonData.weeks.forEach((week, index) => {
-    seasonObj.weeks[`week_${index + 1}`] = {};
+    const currentWeekObj = {
+        weekId: `week_${index + 1}`,
+        matchups: [],
+    };
+
     week.games.forEach((matchup, ind) => {
-        const wk = seasonObj.weeks[`week_${index + 1}`];
         const time = new Date(`${matchup.scheduled}`);
-        const dateInfo = Intl.DateTimeFormat('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', timeZoneName: 'shortGeneric', timeZone: 'America/New_York' }).format(time);
-        const location = `${matchup.venue.city}, ${matchup.venue.state}`;
-        wk[`matchup_${ind + 1}`] = {
-            "home_team": matchup.home.alias,
-            "away_team": matchup.away.alias,
-            "time": time,
-            "gameInfo": `${dateInfo} - ${location}`,
-            "home_score": 0,
-            "away_score": 0,
-            "winner": "",
-            "evaluated": false
+        const dateInfo = Intl.DateTimeFormat(
+            'en-US',
+            {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                timeZoneName: 'shortGeneric',
+                timeZone: 'America/New_York',
+            },
+        ).format(time);
+        const location = `${matchup.venue.city}, ${matchup.venue.state || matchup.venue.country}`;
+        const matchupObj = {
+            matchupId: `matchup_${ind + 1}`,
+            homeTeam: matchup.home.alias,
+            awayTeam: matchup.away.alias,
+            time: time,
+            gameInfo: `${dateInfo} - ${location}`,
+            homeScore: 0,
+            awayScore: 0,
+            winner: "",
+            evaluated: false
         };
+        currentWeekObj.matchups.push(matchupObj);
     });
+    seasonArray.push(currentWeekObj);
 });
-const seasonAsJson = JSON.stringify(seasonObj, null, 2);
-fs.writeFileSync(path.resolve(`data/season.json`), seasonAsJson);
+const seasonAsJson = JSON.stringify(seasonArray, null, 2);
+await writeFile(path.resolve(`data/${year}/football/season.json`), seasonAsJson);
 console.log(`Created a new file at data/season.json in order to keep track of the weekly results`);
 
 process.exit();
