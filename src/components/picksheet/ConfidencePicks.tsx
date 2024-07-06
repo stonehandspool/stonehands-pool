@@ -1,7 +1,17 @@
+import { MatchupInfo } from '../../constants';
 import ConfidenceDropDown from './ConfidenceDropDown';
 import MatchupCard from './MatchupCard';
 
-function ConfidencePicks(props: any) {
+type ConfidencePicksProps = {
+  weekInfo: MatchupInfo[];
+  priorPicks: any; // TODO: type this
+  selectedPicks: any; // TODO: type this
+  onUpdatePick: (value: string, index: number) => void;
+  selectedConfidences: any; // TODO: type this
+  onUpdateConfidence: (prevValue: number, newValue: number) => void;
+};
+
+function ConfidencePicks(props: ConfidencePicksProps) {
   const { weekInfo, priorPicks, selectedPicks, onUpdatePick, selectedConfidences, onUpdateConfidence } = props;
   const numOptions = Object.keys(weekInfo).length;
   const currentTime = new Date();
@@ -15,7 +25,7 @@ function ConfidencePicks(props: any) {
         in the confidence pool. <b>{numOptions} = best, 1 = worst!</b>
       </h4>
       <div className="columns is-multiline">
-        {Object.keys(weekInfo).map((matchup, index) => {
+        {weekInfo.map((matchup, index) => {
           const priorChoice =
             Object.keys(priorPicks).length === 0 && priorPicks.constructor === Object
               ? null
@@ -29,16 +39,16 @@ function ConfidencePicks(props: any) {
               <div className="box">
                 <div className="columns is-centered is-multiline">
                   <div className="column is-full py-0 pl-3">
-                    <p className="is-size-7 has-text-grey-light">{weekInfo[matchup].gameInfo}</p>
+                    <p className="is-size-7 has-text-grey-light">{matchup.gameInfo}</p>
                   </div>
                   <div className="column is-three-fifths">
                     <MatchupCard
                       key={`card-${index}`}
-                      homeTeam={weekInfo[matchup].home_team}
-                      awayTeam={weekInfo[matchup].away_team}
+                      homeTeam={matchup.homeTeam}
+                      awayTeam={matchup.awayTeam}
                       matchupNumber={index}
-                      gameStarted={currentTime > new Date(weekInfo[matchup].time)}
-                      gameCompleted={weekInfo[matchup].winner !== ''}
+                      gameStarted={currentTime > new Date(matchup.time)}
+                      gameCompleted={matchup.winner !== ''}
                       priorChoice={priorChoice}
                       onUpdatePick={onUpdatePick}
                     />
@@ -47,8 +57,8 @@ function ConfidencePicks(props: any) {
                     <ConfidenceDropDown
                       key={`dd-${index}`}
                       numOptions={numOptions}
-                      gameStarted={currentTime > new Date(weekInfo[matchup].time)}
-                      gameCompleted={weekInfo[matchup].winner !== ''}
+                      gameStarted={currentTime > new Date(matchup.time)}
+                      gameCompleted={matchup.winner !== ''}
                       priorConfidence={priorConfidence}
                       matchupChoice={selectedPicks[index]}
                       matchupNumber={index}

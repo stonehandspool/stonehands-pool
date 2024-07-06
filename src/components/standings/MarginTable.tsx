@@ -1,7 +1,7 @@
-import * as seasonStandings from '../../../data/2023/players.json';
-import * as seasonResults from '../../../data/2023/season.json';
+import players from '../../../data/2024/football/players.json';
+import seasonInfo from '../../../data/2024/football/season.json';
 
-import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK } from '../../constants';
+import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK, MatchupInfo } from '../../constants';
 
 interface MarginPick {
   team: string;
@@ -41,12 +41,11 @@ const headers: string[] = [
 ];
 const weeksArr = [...Array(18)];
 
-const weeklyResults = seasonResults.weeks[`week_${CURRENT_WEEK}` as keyof typeof seasonResults.weeks];
+const weeklyResults: MatchupInfo[] = seasonInfo.find(weekInfo => weekInfo.weekId === `week_${CURRENT_WEEK}`)!.matchups;
 const getGameCompleted = (teamName: string) => {
   let gameCompleted = false;
-  Object.keys(weeklyResults).map(key => {
-    const matchupInfo = weeklyResults[key as keyof typeof weeklyResults];
-    if (matchupInfo.home_team === teamName || matchupInfo.away_team === teamName) {
+  weeklyResults.map(matchupInfo => {
+    if (matchupInfo.homeTeam === teamName || matchupInfo.awayTeam === teamName) {
       gameCompleted = matchupInfo.winner !== '';
     }
   });
@@ -54,8 +53,6 @@ const getGameCompleted = (teamName: string) => {
 };
 
 function MarginTable() {
-  const { players } = seasonStandings;
-
   // Calculate the standings
   const playerPicks: PlayerInfo[] = [];
   for (let i = 0; i < players.length; i++) {

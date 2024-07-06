@@ -1,8 +1,15 @@
+import { MatchupInfo, UserInfo } from '../../constants';
 import HighFiveCheckboxes from './HighFiveCheckBoxes';
 
 const MAX_PICKS = 5;
 
-function HighFivePicks(props: any) {
+type HighFivePicks = {
+  weekInfo: MatchupInfo[];
+  highFivePicks: string[];
+  handleHighFiveSelection: Function;
+};
+
+function HighFivePicks(props: HighFivePicks) {
   const { weekInfo, highFivePicks, handleHighFiveSelection } = props;
 
   const currentTime = new Date();
@@ -21,15 +28,15 @@ function HighFivePicks(props: any) {
         of your picks
       </p>
       <div className="columns is-multiline">
-        {Object.keys(weekInfo).map((matchup, index) => (
+        {weekInfo.map((matchup, index) => (
           <div className="column is-one-quarter" key={`margin-container-${index}`}>
             <HighFiveCheckboxes
               key={`card-${index}`}
-              homeTeam={weekInfo[matchup].home_team}
-              awayTeam={weekInfo[matchup].away_team}
-              gameInfo={weekInfo[matchup].gameInfo}
-              gameStarted={currentTime > new Date(weekInfo[matchup].time)}
-              gameCompleted={weekInfo[matchup].winner !== ''}
+              homeTeam={matchup.homeTeam}
+              awayTeam={matchup.awayTeam}
+              gameInfo={matchup.gameInfo}
+              gameStarted={currentTime > new Date(matchup.time)}
+              gameCompleted={matchup.winner !== ''}
               matchupNumber={index}
               name={'high-five-picks'}
               handleSelection={handleHighFiveSelection}

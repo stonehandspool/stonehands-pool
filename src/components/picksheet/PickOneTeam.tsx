@@ -1,10 +1,10 @@
 import * as TeamLogos from '../../assets/logos';
-import * as TeamInfo from '../../../data/2023/teams.json';
-import { CURRENT_WEEK, MarginPick, ValidPicks } from '../../constants';
+import teams from '../../../data/2024/football/teams.json';
+import { CURRENT_WEEK, MarginPick } from '../../constants';
 
 export interface PickOneTeamProps {
-  homeTeam: ValidPicks;
-  awayTeam: ValidPicks;
+  homeTeam: string;
+  awayTeam: string;
   gameInfo: string;
   gameStarted: boolean;
   gameCompleted: boolean;
@@ -18,7 +18,6 @@ export interface PickOneTeamProps {
 }
 
 type TeamLogoKey = keyof typeof TeamLogos;
-const { teams } = TeamInfo;
 
 function PickOneTeam(props: PickOneTeamProps) {
   const {
@@ -39,8 +38,8 @@ function PickOneTeam(props: PickOneTeamProps) {
   const HomeLogo = TeamLogos[homeTeam as TeamLogoKey];
   const AwayLogo = TeamLogos[awayTeam as TeamLogoKey];
 
-  const homeTeamInfo = teams[homeTeam];
-  const awayTeamInfo = teams[awayTeam];
+  const homeTeamInfo = teams.find(team => team.teamCode === homeTeam)!;
+  const awayTeamInfo = teams.find(team => team.teamCode === awayTeam)!;
 
   const onChoiceChange = (e: any) => {
     if (e.target.checked) {

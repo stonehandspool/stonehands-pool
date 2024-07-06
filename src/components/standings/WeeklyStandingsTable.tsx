@@ -1,4 +1,4 @@
-import * as seasonStandings from '../../../data/2023/players.json';
+import players from '../../../data/2024/football/players.json';
 
 import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MONDAY_NIGHT_TOTAL } from '../../constants';
 
@@ -16,8 +16,6 @@ interface TableColumns {
 const headers: string[] = ['Position', 'Name', 'Points', 'Wins', 'Losses', 'Ties', 'Tiebreaker', 'Result'];
 
 function WeeklyStandingsTable() {
-  const { players } = seasonStandings;
-
   // If the current week is currently marked as START we don't want to show anything yet, so show the prior weeks data
   const weekToShow = CURRENT_WEEK_STATUS === 'START' && CURRENT_WEEK > 1 ? CURRENT_WEEK - 2 : CURRENT_WEEK - 1;
 

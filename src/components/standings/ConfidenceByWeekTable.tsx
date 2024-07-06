@@ -1,7 +1,7 @@
-import * as playerInfo from '../../../data/2023/players.json';
-import * as seasonInfo from '../../../data/2023/season.json';
+import players from '../../../data/2024/football/players.json';
+import seasonInfo from '../../../data/2024/football/season.json';
 
-import { CURRENT_WEEK, CURRENT_WEEK_STATUS } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MatchupInfo } from '../../constants';
 
 interface TableColumns {
   position: number;
@@ -22,18 +22,16 @@ const headers: string[] = ['Position', 'Name', 'Points', 'Wins', 'Losses', 'Ties
 
 function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
   const { week } = props;
-  const { players } = playerInfo;
-  const { weeks } = seasonInfo;
 
   // If we somehow get here, just don't return anything because that would break this
   if (week > CURRENT_WEEK) {
     return <></>;
   }
 
-  const weekGames = weeks[`week_${week}` as keyof typeof weeks];
-  const numGames = Object.keys(weekGames).length;
-  const lastMatchup = weekGames[`matchup_${numGames}` as keyof typeof weekGames];
-  const mondayTotal = lastMatchup.away_score + lastMatchup.home_score;
+  const weekGames: MatchupInfo[] = seasonInfo.find(weekInfo => weekInfo.weekId === `week_${week}`)!.matchups;
+  const numGames = weekGames.length;
+  const lastMatchup = weekGames.find(game => game.matchupId === `matchup_${numGames}`)!;
+  const mondayTotal = lastMatchup.awayScore + lastMatchup.homeScore;
 
   // Calculate the standings
   const calculatedPicks: TableColumns[] = [];

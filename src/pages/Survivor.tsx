@@ -1,4 +1,4 @@
-import * as seasonStandings from '../../data/2023/players.json';
+import players from '../../data/2024/football/players.json';
 import SurvivorTable from '../components/standings/SurvivorTable';
 import { CURRENT_YEAR, CURRENT_WEEK, SEASON_READY } from '../constants';
 
@@ -15,9 +15,9 @@ function Survivor() {
     );
   }
 
-  const { players } = seasonStandings;
   const numStarted = players.length;
   const numRemaining = players.filter(player => player.aliveInSurvivor).length;
+
   return (
     <section className="section">
       <div className="container">

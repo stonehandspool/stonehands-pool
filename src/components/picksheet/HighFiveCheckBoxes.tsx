@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import * as TeamLogos from '../../assets/logos';
-import * as TeamInfo from '../../../data/2023/teams.json';
-import { ValidPicks } from '../../constants';
+import teams from '../../../data/2024/football/teams.json';
 
 export interface HighFiveCheckboxProps {
-  homeTeam: ValidPicks;
-  awayTeam: ValidPicks;
+  homeTeam: string;
+  awayTeam: string;
   gameInfo: string;
   gameStarted: boolean;
   gameCompleted: boolean;
@@ -13,11 +12,10 @@ export interface HighFiveCheckboxProps {
   name: string;
   handleSelection: Function;
   maxPicks: number;
-  picksArray: ValidPicks[];
+  picksArray: string[];
 }
 
 type TeamLogoKey = keyof typeof TeamLogos;
-const { teams } = TeamInfo;
 
 function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
   const {
@@ -32,14 +30,14 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
     maxPicks,
     picksArray,
   } = props;
-  const [selectedTeam, setSelectedTeam] = useState<ValidPicks | null>(null);
+  const [selectedTeam, setSelectedTeam] = useState<string | null>(null);
   const [currentWeekPickSet, setCurrentWeekPickSet] = useState(false);
 
   const HomeLogo = TeamLogos[homeTeam as TeamLogoKey];
   const AwayLogo = TeamLogos[awayTeam as TeamLogoKey];
 
-  const homeTeamInfo = teams[homeTeam];
-  const awayTeamInfo = teams[awayTeam];
+  const homeTeamInfo = teams.find(team => team.teamCode === homeTeam)!;
+  const awayTeamInfo = teams.find(team => team.teamCode === awayTeam)!;
 
   useEffect(() => {
     if (picksArray.length > 0 && !currentWeekPickSet) {
@@ -55,7 +53,7 @@ function HighFiveCheckboxes(props: HighFiveCheckboxProps) {
   }, [picksArray]);
 
   const onChoiceChange = (e: any) => {
-    const team = e.target.value as ValidPicks;
+    const team = e.target.value;
     if (
       picksArray.length === maxPicks &&
       !picksArray.includes(team) &&

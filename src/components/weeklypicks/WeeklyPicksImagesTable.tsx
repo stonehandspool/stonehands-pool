@@ -1,8 +1,8 @@
 import './WeeklyPicksTable.css';
 
-import * as seasonStandings from '../../../data/2023/players.json';
-import * as allPicks from '../../../data/2023/weeklyPicks.json';
-import * as seasonData from '../../../data/2023/season.json';
+import players from '../../../data/2024/football/players.json';
+import weeklyPicks from '../../../data/2024/football/weeklyPicks.json';
+import seasonInfo from '../../../data/2024/football/season.json';
 
 import * as TeamLogos from '../../assets/logos';
 
@@ -10,6 +10,7 @@ import {
   CURRENT_WEEK,
   CURRENT_WEEK_CUTOFF_TIME,
   CURRENT_WEEK_STATUS,
+  MatchupInfo,
   SEASON_READY,
   SubmissionInfo,
 } from '../../constants';
@@ -26,20 +27,17 @@ function WeeklyPicksImagesTable() {
       </section>
     );
   }
-  const { players } = seasonStandings;
-  const weeklyPicks: SubmissionInfo[] = allPicks.weeklyPicks[
-    `week_${CURRENT_WEEK}` as keyof typeof allPicks.weeklyPicks
-  ] as unknown as SubmissionInfo[];
-  const { weeks } = seasonData;
-  const currentWeek = weeks[`week_${CURRENT_WEEK}` as keyof typeof weeks];
-  const numGamesThisWeek = Object.keys(currentWeek).length;
+  const currentWeekPicks: SubmissionInfo[] = weeklyPicks.find(picks => picks.id === `week_${CURRENT_WEEK}`)!.picks;
+  const currentWeekMatches: MatchupInfo[] = seasonInfo.find(
+    weekInfo => weekInfo.weekId === `week_${CURRENT_WEEK}`
+  )!.matchups;
+  const numGamesThisWeek = currentWeekMatches.length;
 
   const atArr = Array(numGamesThisWeek).fill('@');
   const emptyArr = Array(numGamesThisWeek + 4).fill('');
-  const matchupKeys: string[] = Object.keys(currentWeek);
 
   // Sort everyone alphabetically by name
-  weeklyPicks.sort((row1, row2) => {
+  currentWeekPicks.sort((row1, row2) => {
     const { firstName: firstName1, lastName: lastName1 } = row1.submission_data;
     const { firstName: firstName2, lastName: lastName2 } = row2.submission_data;
     return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
@@ -64,13 +62,13 @@ function WeeklyPicksImagesTable() {
             <br />
             Score:
           </td>
-          {matchupKeys.map((key, index) => {
-            const { away_team, away_score } = currentWeek[key as keyof typeof currentWeek];
+          {currentWeekMatches.map((matchupInfo, index) => {
+            const { awayTeam, awayScore } = matchupInfo;
             return (
               <td key={`away-${index}`}>
-                {away_team}
+                {awayTeam}
                 <br />
-                {away_score}
+                {awayScore}
               </td>
             );
           })}
@@ -87,13 +85,13 @@ function WeeklyPicksImagesTable() {
             <br />
             Score:
           </td>
-          {matchupKeys.map((key, index) => {
-            const { home_team, home_score } = currentWeek[key as keyof typeof currentWeek];
+          {currentWeekMatches.map((matchupInfo, index) => {
+            const { homeTeam, homeScore } = matchupInfo;
             return (
               <td key={`home-${index}`}>
-                {home_team}
+                {homeTeam}
                 <br />
-                {home_score}
+                {homeScore}
               </td>
             );
           })}
@@ -118,14 +116,14 @@ function WeeklyPicksImagesTable() {
             return <td key={`empty-${index}`}></td>;
           })}
         </tr>
-        {weeklyPicks.map((pickInfo, index) => {
+        {currentWeekPicks.map((pickInfo, index) => {
           const { submission_data: picks } = pickInfo;
           const playerInfo = players.find(player => player.id === pickInfo.user_id);
           return (
             <tr key={`picks-${index}`}>
               <td className="names is-vcentered">{`${picks.firstName} ${picks.lastName}`}</td>
-              {matchupKeys.map((key, index) => {
-                const { winner, evaluated } = currentWeek[key as keyof typeof currentWeek];
+              {currentWeekMatches.map((matchupInfo, index) => {
+                const { winner, evaluated } = matchupInfo;
                 const pick = picks[`matchup-${index}` as keyof typeof picks];
                 const confidence = picks[`matchup-${index}-confidence` as keyof typeof picks];
                 const correct = pick === winner;

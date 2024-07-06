@@ -1,13 +1,19 @@
+import { MatchupInfo, UserInfo } from '../../constants';
 import PickOneTeam from './PickOneTeam';
 
-function MarginPicks(props: any) {
+type MarginPickProps = {
+  weekInfo: MatchupInfo[];
+  userInfo: UserInfo;
+  marginTeam: string | null;
+  handleMarginSelection: Function;
+};
+
+function MarginPicks(props: MarginPickProps) {
   const { weekInfo, userInfo, marginTeam, handleMarginSelection } = props;
 
-  const findMatchupByTeam = (team: string) => {
-    const matchupId = Object.keys(weekInfo).find(
-      (matchup: any) => weekInfo[matchup].home_team === team || weekInfo[matchup].away_team === team
-    );
-    return matchupId !== undefined ? weekInfo[matchupId] : null;
+  const findMatchupByTeam = (team: string | null) => {
+    const matchup = weekInfo.find(match => match.homeTeam === team || match.awayTeam === team);
+    return matchup !== undefined ? matchup : null;
   };
 
   // See if the priorPick from this week has already happened (e.g. if their pick was the Thurs game and its now Fri)
@@ -30,15 +36,15 @@ function MarginPicks(props: any) {
         </h6>
       )}
       <div className="columns is-multiline">
-        {Object.keys(weekInfo).map((matchup, index) => (
+        {weekInfo.map((matchup, index) => (
           <div className="column is-one-quarter" key={`margin-container-${index}`}>
             <PickOneTeam
               key={`card-${index}`}
-              homeTeam={weekInfo[matchup].home_team}
-              awayTeam={weekInfo[matchup].away_team}
-              gameInfo={weekInfo[matchup].gameInfo}
-              gameStarted={currentTime > new Date(weekInfo[matchup].time)}
-              gameCompleted={weekInfo[matchup].winner !== ''}
+              homeTeam={matchup.homeTeam}
+              awayTeam={matchup.awayTeam}
+              gameInfo={matchup.gameInfo}
+              gameStarted={currentTime > new Date(matchup.time)}
+              gameCompleted={matchup.winner !== ''}
               matchupNumber={index}
               name={'margin-pick'}
               selectedTeam={marginTeam}
