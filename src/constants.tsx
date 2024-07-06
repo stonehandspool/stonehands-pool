@@ -1,18 +1,18 @@
 // This should be set to false prior to the release of the first weeks picksheet, and then true until the end of the regular season
 // This is used to check for each of the standings and stats pages to see if it should check for data, if false it will not display anything
-export const SEASON_READY: boolean = true;
+export const SEASON_READY: boolean = false;
 // This should be toggled once sign ups are disabled
 export const SIGN_UPS_DISABLED: boolean = false;
 // This should be updated on Wednesday of every week when the next weeks picksheet becomes available
 // This is used to keep track of the current NFL regular season week and is used to get data from the json files
-export const CURRENT_WEEK: number = 18;
+export const CURRENT_WEEK: number = 1;
 // This should match whatever the current NFL season that is active and should only update once a year
 // This is used for any of the stats/standings pages for the text up top
 export const CURRENT_YEAR: string = '2024';
 // This is a date in a valid `Date` format which should be taken from the season schedule each week
 // This is used to check if a user can still submit their picksheet, it should generally be the first Sunday game each week
 // Unless there is a few Saturday games later in the season
-export const CURRENT_WEEK_CUTOFF_TIME = new Date('2024-01-07T18:00:00.000Z');
+export const CURRENT_WEEK_CUTOFF_TIME = new Date('2024-09-07T18:00:00.000Z');
 // This is whatever the last scheduled game is in a given week
 // This is used to tell the users what game they should be predicting the total final score of for a week
 export const CURRENT_WEEK_FINAL_GAME: string = 'BUF @ MIA';
@@ -39,7 +39,7 @@ export const MONDAY_NIGHT_TOTAL: number = 35;
 //              - The weekly standings should signify the current weeks winner
 //          - The picksheet should still be unavailable
 type WeekStatus = 'START' | 'IN_PROGRESS' | 'COMPLETE';
-export const CURRENT_WEEK_STATUS: WeekStatus = 'COMPLETE';
+export const CURRENT_WEEK_STATUS: WeekStatus = 'START';
 // These are the team codes used throughout the codebase and should only be changed if a new team joins the league or a team relocates
 export const TEAM_CODES = [
   'ARI',
@@ -76,47 +76,12 @@ export const TEAM_CODES = [
   'WAS',
 ];
 
-// Global types
-type ValidPicks =
-  | 'BUF'
-  | 'MIA'
-  | 'NE'
-  | 'NYJ'
-  | 'BAL'
-  | 'CIN'
-  | 'CLE'
-  | 'PIT'
-  | 'HOU'
-  | 'IND'
-  | 'JAC'
-  | 'TEN'
-  | 'DEN'
-  | 'KC'
-  | 'LV'
-  | 'LAC'
-  | 'DAL'
-  | 'NYG'
-  | 'PHI'
-  | 'WAS'
-  | 'CHI'
-  | 'DET'
-  | 'GB'
-  | 'MIN'
-  | 'ATL'
-  | 'CAR'
-  | 'NO'
-  | 'TB'
-  | 'ARI'
-  | 'LA'
-  | 'SF'
-  | 'SEA';
-
 interface ResultInfo {
-  homeTeam: ValidPicks;
-  awayTeam: ValidPicks;
+  homeTeam: string;
+  awayTeam: string;
   homeScore: number;
   awayScore: number;
-  winner: ValidPicks | 'Tie'; // Probably not needed, but just to make my life easier
+  winner: string;
 }
 
 interface MarginPick {
@@ -215,7 +180,20 @@ interface SubmissionInfo {
   submission_data: SubmissionData;
 }
 
+interface MatchupInfo {
+  matchupId: string;
+  homeTeam: string;
+  awayTeam: string;
+  time: string;
+  gameInfo: string;
+  homeScore: number;
+  awayScore: number;
+  winner: string;
+  evaluated: boolean;
+}
+
 // March Madness specific types
+
 interface MarchMadnessTeamInfo {
   seed: number | null;
   name: string | null;
@@ -252,7 +230,7 @@ interface MarchMadnessPlayerInfo {
 }
 
 export type {
-  ValidPicks,
+  MatchupInfo,
   ResultInfo,
   UserInfo,
   MarginPick,
@@ -266,7 +244,7 @@ export type {
 
 // March Madness specific constants
 type MarchMadnessStates = 'INACTIVE' | 'READY_FOR_PICKS' | 'ACTIVE';
-export const MARCH_MADNESS_STATE: MarchMadnessStates = 'ACTIVE';
+export const MARCH_MADNESS_STATE: MarchMadnessStates = 'INACTIVE';
 export const MARCH_MADNESS_CUTOFF = new Date('2024-03-21T16:15:00.000Z');
 export const ROUND_VALUES = [1, 2, 4, 8, 16, 32];
 export const MARCH_MADNESS_CURRENT_ROUND = 6;

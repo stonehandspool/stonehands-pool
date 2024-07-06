@@ -14,9 +14,9 @@ import {
   SubmissionInfo,
   UserInfo,
 } from '../../constants';
-import * as seasonData from '../../../data/2023/season.json';
-import * as playerData from '../../../data/2023/players.json';
-import * as weeklyPicks from '../../../data/2023/weeklyPicks.json';
+import seasonData from '../../../data/2024/football/season.json';
+import playerData from '../../../data/2024/football/players.json';
+import weeklyPicks from '../../../data/2024/football/weeklyPicks.json';
 import ConfidencePicks from './ConfidencePicks';
 import HighFivePicks from './HighFivePicks';
 import MarginPick from './MarginPick';
@@ -36,10 +36,9 @@ export interface choiceFormat {
   username: string;
 }
 
-const currentWeekInfo = seasonData.weeks[`week_${CURRENT_WEEK}` as keyof typeof seasonData.weeks];
-const currentWeeksPicks = weeklyPicks.weeklyPicks[
-  `week_${CURRENT_WEEK}` as keyof typeof weeklyPicks.weeklyPicks
-] as unknown as SubmissionInfo[];
+const currentWeekInfo = seasonData.find(weekInfo => weekInfo.weekId === `week_${CURRENT_WEEK}`)!.matchups;
+const currentWeeksPicks = weeklyPicks.find(pickInfo => pickInfo.id === `week_${CURRENT_WEEK}`)!
+  .picks as SubmissionInfo[];
 
 const findSubmission = (submissionId: string) => {
   return currentWeeksPicks.find(submission => submission.user_id === submissionId);
@@ -47,7 +46,6 @@ const findSubmission = (submissionId: string) => {
 
 function PickSheetForm(props: PicksheetFormProps) {
   const { session } = props;
-  const { players } = playerData;
   const navigate = useNavigate();
 
   if (MARCH_MADNESS_STATE === 'READY_FOR_PICKS' || MARCH_MADNESS_STATE === 'ACTIVE') {
@@ -56,7 +54,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         <div className="container">
           <h3 className="title is-3 has-text-centered">
             Sorry, this is the page for the picksheet for the football pools, you probably want to look{' '}
-            <a href="/march-madness/picksheet">HERE</a> for the March Madness Bracket Picksheet
+            <a href="/march-madness/picksheet">HERE</a> for the March Madness Bracket Picksheet.
           </h3>
         </div>
       </section>
@@ -68,7 +66,7 @@ function PickSheetForm(props: PicksheetFormProps) {
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
-            Sorry, the season hasn't started yet, please wait until the season has been loaded
+            Sorry, the season hasn't started yet! The picksheet will become available closer to the start of the season.
           </h3>
         </div>
       </section>
@@ -81,7 +79,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         <div className="container">
           <h3 className="title is-3 has-text-centered">
             The prior week has completed and the new picksheet hasn't been uploaded yet. An email will be sent once it
-            becomes available
+            becomes available.
           </h3>
         </div>
       </section>
@@ -94,7 +92,7 @@ function PickSheetForm(props: PicksheetFormProps) {
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
-            Sorry, the cutoff for this week has passed. You can no longer make a submission
+            Sorry, the cutoff for this week has passed. You can no longer make a submission.
           </h3>
         </div>
       </section>
@@ -110,7 +108,7 @@ function PickSheetForm(props: PicksheetFormProps) {
   // Confidence Pool
   const numGamesThisWeek = Object.keys(currentWeekInfo).length;
   const lastGameCompleted =
-    currentWeekInfo[`matchup_${numGamesThisWeek}` as keyof typeof currentWeekInfo].winner !== '';
+    currentWeekInfo.find(matchupInfo => matchupInfo.matchupId === `matchup_${numGamesThisWeek}`)!.winner !== '';
   const [selectedPicks, setSelectedPicks] = useState<string[]>(new Array(numGamesThisWeek));
   const [selectedConfidences, setSelectedConfidences] = useState<number[]>(new Array(numGamesThisWeek));
 
@@ -167,7 +165,7 @@ function PickSheetForm(props: PicksheetFormProps) {
     }
   };
 
-  const userInfo = players.find(playerInfo => playerInfo.id === session.user.id) as unknown as UserInfo;
+  const userInfo = playerData.find(playerInfo => playerInfo.id === session.user.id) as unknown as UserInfo;
 
   if (!userInfo) {
     return (

@@ -1,4 +1,4 @@
-import * as seasonStandings from '../../../data/2023/players.json';
+import players from '../../../data/2024/football/players.json';
 import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK } from '../../constants';
 
 interface HighFivePick {
@@ -47,8 +47,6 @@ const headers: string[] = [
 const weeksArr = [...Array(18)];
 
 function HighFiveTable() {
-  const { players } = seasonStandings;
-
   // Calculate the standings
   const playerPicks: PlayerInfo[] = [];
   for (let i = 0; i < players.length; i++) {

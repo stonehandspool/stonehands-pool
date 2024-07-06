@@ -71,7 +71,7 @@ function App() {
           <Route path="/march-madness/standings" element={<MarchMadnessStandings />} />
           <Route path="/march-madness/bracket/:username" element={<UserBracket />} />
           <Route path="/yearly-awards" element={<YearlyAwards />} />
-          <Route path="/payouts" element={<Payouts />} />
+          {/* <Route path="/payouts" element={<Payouts />} /> */}
           <Route path="/404" element={<PageNotFound />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

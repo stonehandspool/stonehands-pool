@@ -1,4 +1,4 @@
-import * as seasonStandings from '../../../data/2023/players.json';
+import players from '../../../data/2024/football/players.json';
 import { useNavigate } from 'react-router-dom';
 
 interface TableColumns {
@@ -16,7 +16,6 @@ interface TableColumns {
 }
 
 function SeasonStandingsTable() {
-  const { players } = seasonStandings;
   const navigate = useNavigate();
 
   const goToUserStats = (username: string) => {
