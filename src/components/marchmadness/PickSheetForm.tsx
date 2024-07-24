@@ -232,7 +232,7 @@ function PickSheetForm(props: PicksheetFormProps) {
     };
 
     if (priorPicks) {
-      const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
+      const { data: picksheetPicksheetData, error: picksheetSubmissionError } = await supabaseClient
         .from(TABLE_NAMES.MARCH_MADNESS_PICKS)
         .update({
           submission_data,
@@ -247,11 +247,11 @@ function PickSheetForm(props: PicksheetFormProps) {
         return;
       }
 
-      if (picksheetSubmissionData) {
+      if (picksheetPicksheetData) {
         navigate('/march-madness/picksheet-success', { state: userPicks });
       }
     } else {
-      const { data: picksheetSubmissionData, error: picksheetSubmissionError } = await supabaseClient
+      const { data: picksheetPicksheetData, error: picksheetSubmissionError } = await supabaseClient
         .from(TABLE_NAMES.MARCH_MADNESS_PICKS)
         .insert({
           user_id: id,
@@ -265,7 +265,7 @@ function PickSheetForm(props: PicksheetFormProps) {
         return;
       }
 
-      if (picksheetSubmissionData) {
+      if (picksheetPicksheetData) {
         navigate('/march-madness/picksheet-success', { state: userPicks });
       }
     }

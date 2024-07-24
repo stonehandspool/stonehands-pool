@@ -3,7 +3,7 @@ import {
   CURRENT_WEEK_CUTOFF_TIME,
   CURRENT_WEEK_STATUS,
   SEASON_READY,
-  SubmissionInfo,
+  DatabaseData,
 } from '../../../constants';
 import * as playerData from '../../../../data/2023/players.json';
 import * as seasonData from '../../../../data/2023/season.json';

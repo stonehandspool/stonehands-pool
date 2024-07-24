@@ -9,6 +9,16 @@
   font-family: 'Roboto Slab', serif;
 }
 
+.football-picksheet-tile {
+  background-color: #fff;
+  border-radius: 6px;
+  color: #4a4a4a;
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15); */
+  border: 2px solid #54188b;
+  display: block;
+  padding: 1.25rem;
+}
+
 .march-madness {
   position: relative;
 }

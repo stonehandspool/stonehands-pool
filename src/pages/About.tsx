@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CURRENT_YEAR } from '../constants';
-import MatchupCard from '../components/picksheet/MatchupCard';
-import ConfidenceDropDown from '../components/picksheet/ConfidenceDropDown';
-import PickOneTeam from '../components/picksheet/PickOneTeam';
-import HighFiveCheckboxes from '../components/picksheet/HighFiveCheckBoxes';
+import ConfidenceCard from '../components/picksheet/ConfidenceCard';
+import MarginAndSurvivorCard from '../components/picksheet/MarginAndSurvivorCard';
+import HighFiveCard from '../components/picksheet/HighFiveCard';
 
 const toMoney = (value: number) => {
   return value.toLocaleString('en-US', {
@@ -14,6 +13,18 @@ const toMoney = (value: number) => {
     currency: 'USD',
     currencyDisplay: 'narrowSymbol',
   });
+};
+
+const fakeMatchupInfo = {
+  matchupId: 'matchup_1',
+  homeTeam: 'KC',
+  awayTeam: 'BAL',
+  time: '2024-09-06T00:20:00.000Z',
+  gameInfo: 'Thu, Sep 5, 8:20 PM ET - Kansas City, MO',
+  homeScore: 0,
+  awayScore: 0,
+  winner: '',
+  evaluated: false,
 };
 
 function About() {
@@ -227,45 +238,23 @@ function About() {
             </p>
             <div className="columns is-centered">
               <div className="column is-two-fifths">
-                <div className="box">
-                  <div className="columns is-centered is-multiline">
-                    <div className="column is-full py-0 pl-3">
-                      <p className="is-size-7 has-text-grey-light">THU, SEP 7th - 8:20 PM ET - Kansas City, MO</p>
-                    </div>
-                    <div className="column">
-                      <MatchupCard
-                        key={`card-0`}
-                        homeTeam="KC"
-                        awayTeam="DET"
-                        matchupNumber={0}
-                        gameStarted={false}
-                        gameCompleted={false}
-                        priorChoice={null}
-                        onUpdatePick={onUpdatePick}
-                      />
-                    </div>
-                    <div className="column is-narrow is-vertical-center">
-                      <ConfidenceDropDown
-                        key={`dd-0`}
-                        numOptions={16}
-                        gameStarted={false}
-                        gameCompleted={false}
-                        priorConfidence=""
-                        matchupChoice={selectedPick}
-                        matchupNumber={0}
-                        selectedNumbers={[]}
-                        onUpdateConfidence={onUpdateConfidence}
-                      />
-                    </div>
-                  </div>
-                </div>
+                <ConfidenceCard
+                  matchupInfo={fakeMatchupInfo}
+                  gameStarted={false}
+                  numGames={16}
+                  selectedNumbers={[]}
+                  priorTeam={null}
+                  priorConfidence={null}
+                  onUpdateConfidenceTeam={() => {}}
+                  onUpdateConfidenceValue={() => {}}
+                />
               </div>
             </div>
             <div className="content">
               <p>
-                <b>*This is not a fully functional tile*</b> You will see a tile for each matchup in a given week, so if
-                there are 14 games for a week you will need to fill out 14 tiles for the Confidence Pool. You will be
-                required to choose a winner <b>and</b> a confidence value for each tile in the picksheet.
+                You will see a tile for each matchup in a given week, so if there are 14 games for a week you will need
+                to fill out 14 tiles for the Confidence Pool. You will be required to choose a winner <b>and</b> a
+                confidence value for each tile in the picksheet.
               </p>
             </div>
             <h4 className="title is-4 has-text-centered">The Survivor and Margin Pools</h4>
@@ -275,18 +264,12 @@ function About() {
             </p>
             <div className="columns is-centered">
               <div className="column is-two-fifths">
-                <PickOneTeam
-                  key="margin-survivor-example"
-                  homeTeam="KC"
-                  awayTeam="DET"
-                  gameInfo="THU, SEP 7th - 8:20 PM ET - Kansas City, MO"
-                  matchupNumber={0}
-                  name={'margin-pick'}
-                  selectedTeam={marginTeam}
-                  handleSelection={handleMarginSelection}
-                  priorMarginPicks={undefined}
+                <MarginAndSurvivorCard
+                  matchupInfo={fakeMatchupInfo}
+                  selectedTeam={null}
+                  name="survivor"
                   gameStarted={false}
-                  gameCompleted={false}
+                  handleSelection={() => {}}
                   priorPickGameCompleted={false}
                 />
               </div>
@@ -306,18 +289,12 @@ function About() {
             </p>
             <div className="columns is-centered">
               <div className="column is-two-fifths">
-                <HighFiveCheckboxes
-                  key="high-five-0"
-                  homeTeam="KC"
-                  awayTeam="DET"
-                  gameInfo="THU, SEP 7th - 8:20 PM ET - Kansas City, MO"
+                <HighFiveCard
+                  matchupInfo={fakeMatchupInfo}
                   gameStarted={false}
-                  gameCompleted={false}
-                  matchupNumber={0}
-                  name={'high-five-picks'}
-                  handleSelection={handleHighFiveSelection}
-                  maxPicks={5}
+                  handleSelection={() => {}}
                   picksArray={[]}
+                  maxPicks={5}
                 />
               </div>
             </div>

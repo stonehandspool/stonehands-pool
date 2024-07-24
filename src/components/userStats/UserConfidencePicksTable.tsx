@@ -1,7 +1,7 @@
-import { SubmissionInfo } from '../../constants';
+import { DatabaseData } from '../../constants';
 
 interface TableProps {
-  confidencePicks: SubmissionInfo[];
+  confidencePicks: DatabaseData[];
   pointsByWeek: number[];
 }
 
@@ -29,23 +29,22 @@ function UserConfidencePicksTable(props: TableProps) {
       </thead>
       <tbody>
         {confidencePicks.map((weekInfo, index) => {
-          const { submission_data } = weekInfo;
+          const confidencePicks = weekInfo.submission_data.confidencePicks;
           return (
             <tr key={`${index}-row`}>
               <td className="has-text-centered">{index + 1}</td>
-              {Array.from({ length: 16 }, (_, i) => i).map(number => {
-                const team = submission_data[`matchup-${number}` as keyof typeof submission_data];
-                const confidence = submission_data[`matchup-${number}-confidence` as keyof typeof submission_data];
+              {Array.from({ length: 16 }, (_, i) => i).map((_: unknown, ind: number) => {
+                const { team, confidence } = confidencePicks[index];
                 if (team) {
                   return (
-                    <td key={`week-${index}-pick-${number}`} className="has-text-centered">
+                    <td key={`week-${index}-pick-${ind}`} className="has-text-centered">
                       {team}
                       <br />
                       {confidence}
                     </td>
                   );
                 } else {
-                  return <td key={`week-${index}-pick-${number}`}></td>;
+                  return <td key={`week-${index}-pick-${ind}`}></td>;
                 }
               })}
               <td className="has-text-centered is-vcentered">

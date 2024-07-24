@@ -1,32 +1,36 @@
 import { ChangeEvent } from 'react';
 
-interface TieBreakerProps {
+type TieBreakerProps = {
   finalGame: string;
   lastGameCompleted: boolean;
   tiebreaker: string;
-  handleTiebreakerInput: (event: ChangeEvent<HTMLInputElement>) => void;
-}
+  onUpdateTiebreaker: (event: ChangeEvent<HTMLInputElement>) => void;
+};
 
 function TieBreaker(props: TieBreakerProps) {
-  const { finalGame, lastGameCompleted, tiebreaker, handleTiebreakerInput } = props;
+  const { finalGame, lastGameCompleted, tiebreaker, onUpdateTiebreaker } = props;
 
   return (
-    <div className="container pb-6">
-      <h3 className="title is-3">Tiebreaker:</h3>
-      <h4 className="subtitle">
-        Please enter what you think the combined score will be in the Monday night game ({finalGame})
-      </h4>
-      <div className="field columns">
-        <div className="control column is-1">
-          <input
-            className="input"
-            type="text"
-            id="tiebreaker"
-            name="tiebreaker"
-            disabled={lastGameCompleted}
-            value={tiebreaker}
-            onChange={handleTiebreakerInput}
-          />
+    <div className="container">
+      <div className="block">
+        <h3 className="title is-3">Tiebreaker</h3>
+        <h4 className="subtitle">
+          Please enter what you think the combined score will be in the Monday night game ({finalGame})
+        </h4>
+      </div>
+      <div className="block">
+        <div className="columns">
+          <div className="column is-1">
+            <input
+              className="input"
+              type="text"
+              id="tiebreaker"
+              name="tiebreaker"
+              disabled={lastGameCompleted}
+              value={tiebreaker}
+              onChange={onUpdateTiebreaker}
+            />
+          </div>
         </div>
       </div>
     </div>

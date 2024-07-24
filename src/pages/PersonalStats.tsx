@@ -1,16 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import * as playerData from '../../data/2023/players.json';
-import * as seasonData from '../../data/2023/season.json';
-import * as weeklyPicks from '../../data/2023/weeklyPicks.json';
+import playerData from '../../data/2024/football/players.json';
+import seasonData from '../../data/2024/football/season.json';
 import {
   CURRENT_WEEK,
   CURRENT_WEEK_CUTOFF_TIME,
   CURRENT_WEEK_STATUS,
   CURRENT_YEAR,
   SEASON_READY,
-  SubmissionInfo,
+  DatabaseData,
   TEAM_CODES,
   UserInfo,
 } from '../constants';
@@ -18,6 +17,7 @@ import UserConfidenceReport from '../components/userStats/UserConfidenceReport';
 import UserSurvivorReport from '../components/userStats/UserSurvivorReport';
 import UserMarginReport from '../components/userStats/UserMarginReport';
 import UserHighFiveReport from '../components/userStats/UserHighFiveReport';
+import { useWeeklyPick } from '../utils/useWeeklyPicks';
 
 enum Pools {
   Confidence,
@@ -26,16 +26,16 @@ enum Pools {
   HighFive,
 }
 
-interface TeamInfo {
+type TeamInfo = {
   team: string;
   wins: number;
   losses: number;
   ties: number;
   timesCorrect: number;
   timesIncorrect: number;
-}
+};
 
-function getPickStats(userPicks: SubmissionInfo[], weeks: any) {
+function getPickStats(userPicks: DatabaseData[]) {
   // Init an array of the teams to keep track
   const teamArray: TeamInfo[] = [];
   TEAM_CODES.map(teamCode => {
@@ -49,20 +49,18 @@ function getPickStats(userPicks: SubmissionInfo[], weeks: any) {
     });
   });
 
-  // The user picks unfortunately go from matchup-0 to matchup-15 while the weekly data goes
-  // from matchup_1 to matchup_16, need to keep that discrepancy in mind
-  userPicks.map((pickInfo, index) => {
-    const { submission_data: picks } = pickInfo;
-    const weeklyMatchups = weeks[`week_${index + 1}` as keyof typeof weeks];
-    Object.keys(weeklyMatchups).map((matchup, ind) => {
-      const userPick = picks[`matchup-${ind}` as keyof typeof picks];
-      const { home_team, away_team, winner } = weeklyMatchups[matchup];
-      const pickedLoser = userPick === home_team ? away_team : home_team;
-      const userWinner = teamArray.find(team => team.team === userPick);
+  userPicks.forEach((picksInfo, index) => {
+    const { submission_data: picks } = picksInfo;
+    const weeklyMatchups = seasonData.find(data => data.weekId === `week_${index + 1}`)!;
+    weeklyMatchups.matchups.forEach(matchup => {
+      const { matchupId, homeTeam, awayTeam, winner } = matchup;
+      const userPick = picks.confidencePicks.find(p => p.matchupId === matchupId)!;
+      const pickedLoser = userPick.team === homeTeam ? awayTeam : homeTeam;
+      const userWinner = teamArray.find(team => team.team === userPick.team);
       const userLoser = teamArray.find(team => team.team === pickedLoser);
       userWinner && userWinner.wins++;
       userLoser && userLoser.losses++;
-      if (userPick === winner) {
+      if (userPick.team === winner) {
         userWinner && userWinner.timesCorrect++;
         userLoser && userLoser.timesCorrect++;
       } else {
@@ -105,9 +103,7 @@ function PersonalStats() {
     setActiveChoice(choice);
   };
 
-  const { players } = playerData;
-  const { weeks } = seasonData;
-  const userInfo: UserInfo = players.find(player => player.username === username) as unknown as UserInfo;
+  const userInfo: UserInfo | undefined = playerData.find(player => player.username === username);
 
   if (!userInfo) {
     return (
@@ -123,21 +119,25 @@ function PersonalStats() {
   const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
   const weekToShow = CURRENT_WEEK === 1 ? CURRENT_WEEK : showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
 
-  const userPicks: SubmissionInfo[] = [];
-  Object.keys(weeklyPicks.weeklyPicks).map((key, index) => {
-    const week: SubmissionInfo[] = weeklyPicks.weeklyPicks[
-      `week_${index + 1}` as keyof typeof weeklyPicks.weeklyPicks
-    ] as unknown as SubmissionInfo[];
-    if (week && week.length > 0 && index < weekToShow) {
-      const playerPicksThisWeek = week.find(submission => submission.submission_data.username === username);
-      if (playerPicksThisWeek) {
-        userPicks.push(playerPicksThisWeek);
-      }
+  const [userPicks, setUserPicks] = useState<DatabaseData[]>([]);
+  const allPicks = useWeeklyPick(1, CURRENT_WEEK > 1 ? CURRENT_WEEK : undefined);
+
+  useEffect(() => {
+    if (allPicks && allPicks.length > 0) {
+      const allUserPicks: DatabaseData[] = [];
+      allPicks.forEach(pickInfo => {
+        const { picks } = pickInfo;
+        const userPicks = picks.find(p => p.user_id === username);
+        if (userPicks) {
+          allUserPicks.push(userPicks);
+        }
+      });
+      setUserPicks(allUserPicks);
     }
-  });
+  }, [allPicks]);
 
   const { pointsByWeek } = userInfo;
-  const teamsByPicks = getPickStats(userPicks, weeks);
+  const teamsByPicks = getPickStats(userPicks);
 
   let marginOperator;
   let survivorColor;
@@ -173,20 +173,20 @@ function PersonalStats() {
     });
 
     if (weekToShow < CURRENT_WEEK) {
-      unusedMarginPicks.push(userInfo.marginPicks[userInfo.marginPicks.length - 1].team);
+      unusedMarginPicks.push(userInfo.marginPicks[userInfo.marginPicks.length - 1].team as string);
       unusedMarginPicks.sort();
     }
 
     bestMargin = userInfo.marginPicks.reduce((prev, current) => {
-      return prev.margin > current.margin ? prev : current;
+      return prev.margin! > current.margin! ? prev : current;
     });
-    const { team, margin } = bestMargin;
+    const { team } = bestMargin;
     bestMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === team) + 1;
 
     worstMargin = userInfo.marginPicks.reduce((prev, current) => {
-      return prev.margin > current.margin && current.margin !== null ? current : prev;
+      return prev.margin! > current.margin! && current.margin !== null ? current : prev;
     });
-    const { team: worst, margin: worstVal } = worstMargin;
+    const { team: worst } = worstMargin;
     worstMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === worst) + 1;
   }
 

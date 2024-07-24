@@ -4,8 +4,14 @@ import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js';
 import { fixupConfigRules } from '@eslint/compat';
 
 export default [
-  { languageOptions: { globals: globals.browser } },
-  { ignores: ['scripts/*'] },
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+  },
   {
     settings: {
       react: {

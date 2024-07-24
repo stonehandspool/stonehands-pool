@@ -17,7 +17,12 @@ function PickSheet() {
     });
   }, []);
 
-  return <>{!session ? <PickSheetLogin /> : <PickSheetForm session={session} />}</>;
+  return (
+    <>
+      {!session && <PickSheetLogin />}
+      {session && <PickSheetForm session={session} />}
+    </>
+  );
 }
 
 export default PickSheet;

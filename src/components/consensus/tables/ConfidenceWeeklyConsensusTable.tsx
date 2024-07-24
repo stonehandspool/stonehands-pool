@@ -3,7 +3,7 @@ import {
   CURRENT_WEEK_CUTOFF_TIME,
   CURRENT_WEEK_STATUS,
   SEASON_READY,
-  SubmissionInfo,
+  DatabaseData,
 } from '../../../constants';
 import * as playerPicks from '../../../../data/2023/weeklyPicks.json';
 import * as seasonData from '../../../../data/2023/season.json';
@@ -44,9 +44,9 @@ function ConfidenceWeeklyConsensusTable() {
   const weeklyConsensusArr: MatchupConsensusInfo[] = [];
   const allWeeks = seasonData.weeks;
   const weekField = `week_${weekToShow}`;
-  const weekPicks: SubmissionInfo[] = playerPicks.weeklyPicks[
+  const weekPicks: DatabaseData[] = playerPicks.weeklyPicks[
     weekField as keyof typeof playerPicks.weeklyPicks
-  ] as unknown as SubmissionInfo[];
+  ] as unknown as DatabaseData[];
   const weekGames = allWeeks[weekField as keyof typeof allWeeks];
 
   // First set up the initial values for the consensus info

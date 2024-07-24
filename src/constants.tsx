@@ -15,10 +15,10 @@ export const CURRENT_YEAR: string = '2024';
 export const CURRENT_WEEK_CUTOFF_TIME = new Date('2024-09-07T18:00:00.000Z');
 // This is whatever the last scheduled game is in a given week
 // This is used to tell the users what game they should be predicting the total final score of for a week
-export const CURRENT_WEEK_FINAL_GAME: string = 'BUF @ MIA';
+export const CURRENT_WEEK_FINAL_GAME: string = 'NYJ @ SF';
 // This should be updated every Tuesday morning with the total score of the game above
 // This is used to determine the tiebreaker for the weekly standings
-export const MONDAY_NIGHT_TOTAL: number = 35;
+export const MONDAY_NIGHT_TOTAL: number = 0;
 // This is to mark the different states that a week can be in
 // START: This means that this is a new week and no games have been played yet
 //          - Wednesday & Thursday
@@ -76,25 +76,25 @@ export const TEAM_CODES = [
   'WAS',
 ];
 
-interface ResultInfo {
+type ResultInfo = {
   homeTeam: string;
   awayTeam: string;
   homeScore: number;
   awayScore: number;
   winner: string;
-}
+};
 
-interface MarginPick {
+type MarginPick = {
+  team: string | null;
+  margin: number | null;
+};
+
+type HighFivePick = {
   team: string;
-  margin: number;
-}
+  won: boolean | null;
+};
 
-interface HighFivePick {
-  team: string;
-  won: boolean;
-}
-
-interface UserInfo {
+type UserInfo = {
   id: string;
   username: string;
   firstName: string;
@@ -126,61 +126,37 @@ interface UserInfo {
   currentWeekTies: number;
   currentWeekPoints: number;
   currentWeekTiebreaker: number;
-}
+};
 
-interface SubmissionData {
-  id: string;
-  lastName: string;
-  firstName: string;
+type ConfidenceMatchupInfo = {
+  matchupId: string;
+  team: string | null;
+  confidence: number | null;
+};
+
+type PicksheetData = {
+  userId: string;
   username: string;
-  'matchup-0': string;
-  'matchup-1': string;
-  'matchup-2': string;
-  'matchup-3': string;
-  'matchup-4': string;
-  'matchup-5': string;
-  'matchup-6': string;
-  'matchup-7': string;
-  'matchup-8': string;
-  'matchup-9': string;
-  'matchup-10': string;
-  'matchup-11': string;
-  'matchup-12'?: string;
-  'matchup-13'?: string;
-  'matchup-14'?: string;
-  'matchup-15'?: string;
-  tiebreaker: string;
-  'margin-pick': string;
+  firstName: string;
+  lastName: string;
+  confidencePicks: ConfidenceMatchupInfo[];
+  tiebreaker: number;
+  marginPick: string;
+  survivorPick: string | null;
   highFivePicks: string[];
-  'survivor-pick': string;
-  'matchup-0-confidence': string;
-  'matchup-1-confidence': string;
-  'matchup-2-confidence': string;
-  'matchup-3-confidence': string;
-  'matchup-4-confidence': string;
-  'matchup-5-confidence': string;
-  'matchup-6-confidence': string;
-  'matchup-7-confidence': string;
-  'matchup-8-confidence': string;
-  'matchup-9-confidence': string;
-  'matchup-10-confidence': string;
-  'matchup-11-confidence': string;
-  'matchup-12-confidence'?: string;
-  'matchup-13-confidence'?: string;
-  'matchup-14-confidence'?: string;
-  'matchup-15-confidence'?: string;
-}
+};
 
-interface SubmissionInfo {
-  submission_id: number;
+type DatabaseData = {
+  id: number;
   created_at: string;
   user_id: string;
+  username: string;
   week: number;
-  year: string;
-  submission_data: SubmissionData;
-}
+  times_updated: number;
+  submission_data: PicksheetData;
+};
 
-interface MatchupInfo {
+type MatchupInfo = {
   matchupId: string;
   homeTeam: string;
   awayTeam: string;
@@ -190,17 +166,17 @@ interface MatchupInfo {
   awayScore: number;
   winner: string;
   evaluated: boolean;
-}
+};
 
 // March Madness specific types
 
-interface MarchMadnessTeamInfo {
+type MarchMadnessTeamInfo = {
   seed: number | null;
   name: string | null;
   record: string | null;
-}
+};
 
-interface MarchMadnessMatchupInfo {
+type MarchMadnessMatchupInfo = {
   id: string;
   topTeam: MarchMadnessTeamInfo;
   bottomTeam: MarchMadnessTeamInfo;
@@ -210,9 +186,9 @@ interface MarchMadnessMatchupInfo {
   round: number;
   evaluated: boolean;
   nextMatchup: string | null;
-}
+};
 
-interface MarchMadnessPlayerInfo {
+type MarchMadnessPlayerInfo = {
   firstName: string;
   lastName: string;
   userId: string;
@@ -227,16 +203,17 @@ interface MarchMadnessPlayerInfo {
   currentMaxPoints: number;
   startingMaxPoints: number;
   userPicks: MarchMadnessMatchupInfo[];
-}
+};
 
 export type {
+  ConfidenceMatchupInfo,
   MatchupInfo,
   ResultInfo,
   UserInfo,
   MarginPick,
   HighFivePick,
-  SubmissionInfo,
-  SubmissionData,
+  DatabaseData,
+  PicksheetData,
   MarchMadnessTeamInfo,
   MarchMadnessMatchupInfo,
   MarchMadnessPlayerInfo,
