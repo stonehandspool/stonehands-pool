@@ -24,7 +24,7 @@ import ConfidencePicks from './ConfidencePicks';
 import SurvivorPick from './SurvivorPick';
 import MarginPick from './MarginPick';
 import HighFivePicks from './HighFivePicks';
-import TieBreaker from './Tiebreaker';
+import TieBreaker from './TieBreaker';
 
 type PickSheetFormProps = {
   session: Session;
