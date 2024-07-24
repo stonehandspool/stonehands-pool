@@ -1,21 +1,21 @@
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 
-interface ConfidenceDropDownProps {
+type ConfidenceDropDownProps = {
   numOptions: number;
-  matchupChoice: string | undefined;
-  matchupNumber: number;
+  matchupChoice: string | null;
+  matchupId: string;
   gameStarted: boolean;
   gameCompleted: boolean;
-  priorConfidence: string;
-  selectedNumbers: number[];
-  onUpdateConfidence: (prevValue: number, newValue: number) => void;
-}
+  priorConfidence: number | null;
+  selectedNumbers: (number | null)[];
+  onUpdateConfidence: (matchupId: string, confidence: number) => void;
+};
 
 function ConfidenceDropDown(props: ConfidenceDropDownProps) {
   const {
     numOptions,
     matchupChoice,
-    matchupNumber,
+    matchupId,
     gameStarted,
     gameCompleted,
     priorConfidence,
@@ -24,24 +24,20 @@ function ConfidenceDropDown(props: ConfidenceDropDownProps) {
   } = props;
 
   const [currentValue, setCurrentValue] = useState<number>(-1);
-
   const options: number[] = Array.from({ length: numOptions }, (_, i) => i + 1);
 
-  // If the user had previously submitted picks, update the rest of the dropdowns with that value
   useEffect(() => {
-    if (priorConfidence) {
-      const priorValue = parseInt(priorConfidence, 10);
-      onUpdateConfidence(priorValue, matchupNumber);
-      setCurrentValue(priorValue);
+    if (priorConfidence !== currentValue) {
+      setCurrentValue(priorConfidence || -1);
     }
   }, [priorConfidence]);
 
-  const onChange = (e: any) => {
-    e.preventDefault();
+  const onChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    event.preventDefault();
 
-    const newValue = parseInt(e.target.value, 10);
-    onUpdateConfidence(newValue, matchupNumber);
-    setCurrentValue(newValue);
+    const selectedValue = parseInt(event.target.value, 10);
+    onUpdateConfidence(matchupId, selectedValue);
+    setCurrentValue(selectedValue);
   };
 
   const shouldDisable = gameStarted || gameCompleted;
@@ -50,16 +46,16 @@ function ConfidenceDropDown(props: ConfidenceDropDownProps) {
     <div className="select is-small">
       <select
         onChange={onChange}
-        value={currentValue.toString()}
-        name={`matchup-${matchupNumber}-confidence`}
+        value={currentValue}
+        name={`${matchupId}_confidence`}
         required={true}
-        disabled={shouldDisable || matchupChoice === undefined}
+        disabled={shouldDisable || matchupChoice === null}
       >
         <option value={-1} disabled hidden></option>
         <option value={''}></option>
         {options.map((number, index) => (
           <option
-            key={`matchup-${matchupNumber}-option-${index}`}
+            key={`${matchupId}_option_${index}`}
             value={number}
             hidden={selectedNumbers.includes(number)}
             disabled={selectedNumbers.includes(number)}

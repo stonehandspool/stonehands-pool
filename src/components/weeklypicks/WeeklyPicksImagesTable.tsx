@@ -1,7 +1,7 @@
+import { useEffect, useState } from 'react';
 import './WeeklyPicksTable.css';
 
 import players from '../../../data/2024/football/players.json';
-import weeklyPicks from '../../../data/2024/football/weeklyPicks.json';
 import seasonInfo from '../../../data/2024/football/season.json';
 
 import * as TeamLogos from '../../assets/logos';
@@ -12,8 +12,9 @@ import {
   CURRENT_WEEK_STATUS,
   MatchupInfo,
   SEASON_READY,
-  SubmissionInfo,
+  DatabaseData,
 } from '../../constants';
+import { useWeeklyPick } from '../../utils/useWeeklyPicks';
 
 type TeamLogoKey = keyof typeof TeamLogos;
 
@@ -27,7 +28,16 @@ function WeeklyPicksImagesTable() {
       </section>
     );
   }
-  const currentWeekPicks: SubmissionInfo[] = weeklyPicks.find(picks => picks.id === `week_${CURRENT_WEEK}`)!.picks;
+
+  const weeklyPicks = useWeeklyPick(CURRENT_WEEK);
+  const [currentWeekPicks, setCurrentWeekPicks] = useState<DatabaseData[]>([]);
+
+  useEffect(() => {
+    if (weeklyPicks && weeklyPicks.length > 0) {
+      setCurrentWeekPicks(weeklyPicks[0].picks);
+    }
+  }, [weeklyPicks]);
+
   const currentWeekMatches: MatchupInfo[] = seasonInfo.find(
     weekInfo => weekInfo.weekId === `week_${CURRENT_WEEK}`
   )!.matchups;
@@ -112,26 +122,27 @@ function WeeklyPicksImagesTable() {
           </td>
         </tr>
         <tr>
-          {emptyArr.map((empty, index) => {
+          {emptyArr.map((_, index) => {
             return <td key={`empty-${index}`}></td>;
           })}
         </tr>
         {currentWeekPicks.map((pickInfo, index) => {
           const { submission_data: picks } = pickInfo;
-          const playerInfo = players.find(player => player.id === pickInfo.user_id);
+          const playerInfo = players.find(player => player.id === pickInfo.user_id)!;
           return (
             <tr key={`picks-${index}`}>
               <td className="names is-vcentered">{`${picks.firstName} ${picks.lastName}`}</td>
               {currentWeekMatches.map((matchupInfo, index) => {
                 const { winner, evaluated } = matchupInfo;
-                const pick = picks[`matchup-${index}` as keyof typeof picks];
-                const confidence = picks[`matchup-${index}-confidence` as keyof typeof picks];
-                const correct = pick === winner;
+                const { team, confidence } = picks.confidencePicks.find(
+                  confPick => confPick.matchupId === `matchup_${index + 1}`
+                )!;
+                const correct = team === winner;
                 let Logo;
-                if (pick === 'Tie' || pick === undefined) {
+                if (team === 'Tie' || team === undefined) {
                   Logo = TeamLogos.NFL;
                 } else {
-                  Logo = TeamLogos[pick as TeamLogoKey];
+                  Logo = TeamLogos[team as TeamLogoKey];
                 }
                 if ((!showAllPicks && evaluated) || showAllPicks) {
                   return (
@@ -141,7 +152,7 @@ function WeeklyPicksImagesTable() {
                     >
                       {<Logo size={35} />}
                       <br />
-                      {pick === undefined ? 'N/A' : pick}
+                      {team === undefined ? 'N/A' : team}
                       <br />
                       {confidence}
                     </td>
@@ -150,9 +161,9 @@ function WeeklyPicksImagesTable() {
                   return <td key={`${pickInfo.user_id}-${index}`}></td>;
                 }
               })}
-              <td className="is-vcentered">{playerInfo?.currentWeekTiebreaker}</td>
-              <td className="is-vcentered">{playerInfo?.currentWeekPoints}</td>
-              <td className="is-vcentered">{playerInfo?.points}</td>
+              <td className="is-vcentered">{playerInfo.currentWeekTiebreaker}</td>
+              <td className="is-vcentered">{playerInfo.currentWeekPoints}</td>
+              <td className="is-vcentered">{playerInfo.points}</td>
             </tr>
           );
         })}

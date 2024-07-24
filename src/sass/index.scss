@@ -19,6 +19,16 @@ $primary: $purple;
   font-family: 'Roboto Slab', serif;
 }
 
+// Football picksheet tiles
+.football-picksheet-tile {
+  background-color: #fff;
+  border-radius: 6px;
+  color: #4a4a4a;
+  border: 1px solid $primary;
+  display: block;
+  padding: 1.25rem;
+}
+
 // March Madness specific styling
 .march-madness {
   position: relative;

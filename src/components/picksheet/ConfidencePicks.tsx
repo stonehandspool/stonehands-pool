@@ -1,73 +1,52 @@
-import { MatchupInfo } from '../../constants';
-import ConfidenceDropDown from './ConfidenceDropDown';
-import MatchupCard from './MatchupCard';
+import { ConfidenceMatchupInfo, MatchupInfo } from '../../constants';
+import ConfidenceCard from './ConfidenceCard';
 
-type ConfidencePicksProps = {
+type ConfidencePickProps = {
   weekInfo: MatchupInfo[];
-  priorPicks: any; // TODO: type this
-  selectedPicks: any; // TODO: type this
-  onUpdatePick: (value: string, index: number) => void;
-  selectedConfidences: any; // TODO: type this
-  onUpdateConfidence: (prevValue: number, newValue: number) => void;
+  currentChoices: ConfidenceMatchupInfo[];
+  onUpdateConfidenceTeam: (matchupId: string, team: string) => void;
+  onUpdateConfidenceValue: (matchupId: string, confidence: number) => void;
+  onClearConfidencePicks: () => void;
 };
 
-function ConfidencePicks(props: ConfidencePicksProps) {
-  const { weekInfo, priorPicks, selectedPicks, onUpdatePick, selectedConfidences, onUpdateConfidence } = props;
-  const numOptions = Object.keys(weekInfo).length;
+function ConfidencePicks(props: ConfidencePickProps) {
+  const { weekInfo, currentChoices, onUpdateConfidenceTeam, onUpdateConfidenceValue, onClearConfidencePicks } = props;
   const currentTime = new Date();
 
   return (
-    <div className="container pb-6">
-      <h3 className="title is-3">Confidence Picks:</h3>
-      <h4 className="subtitle">
-        Pick a winner for every game and assign points based off how confident you are they will win! {numOptions} is
-        the <b>most</b> confident while 1 is the <b>least</b> confident. If you are right, you will get that many points
-        in the confidence pool. <b>{numOptions} = best, 1 = worst!</b>
-      </h4>
+    <div className="container">
+      <div className="block">
+        <h3 className="title is-3">Confidence Picks</h3>
+        <h4 className="subtitle">
+          Pick a winner for every game and assign points based off how confident you are they will win!{' '}
+          {weekInfo.length} is the <b>most</b> confident while 1 is the <b>least</b> confident. If you are right, you
+          will get that many points in the confidence pool. <b>{weekInfo.length} = best, 1 = worst!</b>
+        </h4>
+      </div>
+      <div className="block is-flex is-justify-content-right">
+        <button className="button is-primary" onClick={onClearConfidencePicks}>
+          Reset Confidence Picks
+        </button>
+      </div>
       <div className="columns is-multiline">
-        {weekInfo.map((matchup, index) => {
-          const priorChoice =
-            Object.keys(priorPicks).length === 0 && priorPicks.constructor === Object
-              ? null
-              : priorPicks[`matchup-${index}`];
-          const priorConfidence =
-            Object.keys(priorPicks).length === 0 && priorPicks.constructor === Object
-              ? null
-              : priorPicks[`matchup-${index}-confidence`];
+        {weekInfo.map(matchup => {
+          const { matchupId, time } = matchup;
+          const matchupChoices = currentChoices.find(match => match.matchupId === matchupId)!;
+          const selectedNumbers = currentChoices.map(match => match.confidence);
+          const { team, confidence } = matchupChoices;
           return (
-            <div className="column is-one-third" key={`confidence-${index}`}>
-              <div className="box">
-                <div className="columns is-centered is-multiline">
-                  <div className="column is-full py-0 pl-3">
-                    <p className="is-size-7 has-text-grey-light">{matchup.gameInfo}</p>
-                  </div>
-                  <div className="column is-three-fifths">
-                    <MatchupCard
-                      key={`card-${index}`}
-                      homeTeam={matchup.homeTeam}
-                      awayTeam={matchup.awayTeam}
-                      matchupNumber={index}
-                      gameStarted={currentTime > new Date(matchup.time)}
-                      gameCompleted={matchup.winner !== ''}
-                      priorChoice={priorChoice}
-                      onUpdatePick={onUpdatePick}
-                    />
-                  </div>
-                  <div className="column is-narrow is-vertical-center">
-                    <ConfidenceDropDown
-                      key={`dd-${index}`}
-                      numOptions={numOptions}
-                      gameStarted={currentTime > new Date(matchup.time)}
-                      gameCompleted={matchup.winner !== ''}
-                      priorConfidence={priorConfidence}
-                      matchupChoice={selectedPicks[index]}
-                      matchupNumber={index}
-                      selectedNumbers={selectedConfidences}
-                      onUpdateConfidence={onUpdateConfidence}
-                    />
-                  </div>
-                </div>
-              </div>
+            <div className="column is-one-quarter" key={`${matchupId}_confidence_tile`}>
+              <ConfidenceCard
+                key={`${matchupId}_confidence`}
+                matchupInfo={matchup}
+                gameStarted={currentTime > new Date(time)}
+                numGames={currentChoices.length}
+                selectedNumbers={selectedNumbers}
+                priorTeam={team}
+                priorConfidence={confidence}
+                onUpdateConfidenceTeam={onUpdateConfidenceTeam}
+                onUpdateConfidenceValue={onUpdateConfidenceValue}
+              />
             </div>
           );
         })}
