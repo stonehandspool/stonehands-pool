@@ -66,7 +66,7 @@ function ConfidenceCard(props: ConfidenceCardProps) {
       <div className="is-vertical-center">
         <span className="is-size-7 has-text-grey-light">{gameInfo}</span>
       </div>
-      <div className="columns">
+      <div className="columns is-mobile">
         <div className="column">
           <div className="is-vertical-center">
             <AwayLogo size={45} opacity={shouldDisable ? 0.4 : 1} />

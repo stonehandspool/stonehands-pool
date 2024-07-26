@@ -1,6 +1,7 @@
 import { Session } from '@supabase/supabase-js';
 import { ChangeEvent, MouseEvent, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
@@ -33,6 +34,7 @@ type PickSheetFormProps = {
 function PickSheetForm(props: PickSheetFormProps) {
   const { session } = props;
   const navigate = useNavigate();
+  const isMobileOrTablet = useMediaQuery({ query: '(max-width: 1224px)' });
 
   if (MARCH_MADNESS_STATE === 'READY_FOR_PICKS' || MARCH_MADNESS_STATE === 'ACTIVE') {
     return (
@@ -353,12 +355,12 @@ function PickSheetForm(props: PickSheetFormProps) {
     <section className="section">
       <div className="container">
         <div className="block">
-          <h1 className="title is-1">
+          <h1 className={`title ${isMobileOrTablet ? null : 'is-1'}`}>
             Week {CURRENT_WEEK} Picksheet for {firstName} {lastName}
           </h1>
         </div>
         <div className="block">
-          <h2 className="subtitle">
+          <h2 className={`subtitle ${isMobileOrTablet ? 'is-6' : null}`}>
             Make sure to fill out every field below. If you would like to change your picks you can at any time prior to
             the below cutoff and as long as that game hasn't started (i.e. no changing your Thursday pick on Friday).
           </h2>
@@ -378,6 +380,7 @@ function PickSheetForm(props: PickSheetFormProps) {
             <ConfidencePicks
               weekInfo={currentWeekInfo}
               currentChoices={confidencePicks}
+              isMobileOrTablet={isMobileOrTablet}
               onUpdateConfidenceTeam={onUpdateConfidenceTeam}
               onUpdateConfidenceValue={onUpdateConfidenceValue}
               onClearConfidencePicks={onClearConfidencePicks}
@@ -388,6 +391,7 @@ function PickSheetForm(props: PickSheetFormProps) {
               weekInfo={currentWeekInfo}
               userInfo={userInfo}
               survivorTeam={survivorTeam}
+              isMobileOrTablet={isMobileOrTablet}
               onUpdateSurvivorTeam={onUpdateSurvivorTeam}
             />
           </div>
@@ -396,6 +400,7 @@ function PickSheetForm(props: PickSheetFormProps) {
               weekInfo={currentWeekInfo}
               userInfo={userInfo}
               marginTeam={marginTeam}
+              isMobileOrTablet={isMobileOrTablet}
               onUpdateMarginTeam={onUpdateMarginTeam}
             />
           </div>
@@ -403,6 +408,7 @@ function PickSheetForm(props: PickSheetFormProps) {
             <HighFivePicks
               weekInfo={currentWeekInfo}
               highFivePicks={highFiveTeams}
+              isMobileOrTablet={isMobileOrTablet}
               onUpdateHighFiveTeams={onUpdateHighFiveTeams}
             />
           </div>
@@ -411,6 +417,7 @@ function PickSheetForm(props: PickSheetFormProps) {
               finalGame={CURRENT_WEEK_FINAL_GAME}
               lastGameCompleted={lastGameCompleted}
               tiebreaker={tiebreaker}
+              isMobileOrTablet={isMobileOrTablet}
               onUpdateTiebreaker={onUpdateTiebreaker}
             />
           </div>

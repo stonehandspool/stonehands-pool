@@ -5,11 +5,12 @@ type SurvivorPickProps = {
   weekInfo: MatchupInfo[];
   userInfo: UserInfo;
   survivorTeam: string | null;
+  isMobileOrTablet: boolean;
   onUpdateSurvivorTeam: (teamName: string) => void;
 };
 
 function SurvivorPick(props: SurvivorPickProps) {
-  const { weekInfo, userInfo, survivorTeam, onUpdateSurvivorTeam } = props;
+  const { weekInfo, userInfo, survivorTeam, isMobileOrTablet, onUpdateSurvivorTeam } = props;
   const { aliveInSurvivor } = userInfo;
 
   const findMatchupByTeam = (team: string | null) => {
@@ -33,8 +34,8 @@ function SurvivorPick(props: SurvivorPickProps) {
   return (
     <div className="container">
       <div className="block">
-        <h3 className="title is-3">Survivor Pick</h3>
-        <h4 className="subtitle">
+        <h3 className={`title ${isMobileOrTablet ? null : 'is-3'}`}>Survivor Pick</h3>
+        <h4 className={`subtitle ${isMobileOrTablet ? 'is-6' : null}`}>
           Pick one team each week that you are certain will win. You can only pick each team <b>once</b>. If you are
           right you will continue on to the next week, if you are wrong you are eliminated from the survivor pool, so be
           careful!
@@ -50,7 +51,7 @@ function SurvivorPick(props: SurvivorPickProps) {
       <div className="block">
         <div className="columns is-multiline">
           {weekInfo.map((matchup, index) => (
-            <div className="column is-one-quarter" key={`survivor_${index}`}>
+            <div className={`column ${isMobileOrTablet ? 'is-half' : 'is-one-quarter'}`} key={`survivor_${index}`}>
               <MarginAndSurvivorCard
                 key={`survivor_tile_${index}`}
                 name={'survivor'}
