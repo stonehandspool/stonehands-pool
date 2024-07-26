@@ -4,20 +4,28 @@ import ConfidenceCard from './ConfidenceCard';
 type ConfidencePickProps = {
   weekInfo: MatchupInfo[];
   currentChoices: ConfidenceMatchupInfo[];
+  isMobileOrTablet: boolean;
   onUpdateConfidenceTeam: (matchupId: string, team: string) => void;
   onUpdateConfidenceValue: (matchupId: string, confidence: number) => void;
   onClearConfidencePicks: () => void;
 };
 
 function ConfidencePicks(props: ConfidencePickProps) {
-  const { weekInfo, currentChoices, onUpdateConfidenceTeam, onUpdateConfidenceValue, onClearConfidencePicks } = props;
+  const {
+    weekInfo,
+    currentChoices,
+    isMobileOrTablet,
+    onUpdateConfidenceTeam,
+    onUpdateConfidenceValue,
+    onClearConfidencePicks,
+  } = props;
   const currentTime = new Date();
 
   return (
     <div className="container">
       <div className="block">
-        <h3 className="title is-3">Confidence Picks</h3>
-        <h4 className="subtitle">
+        <h3 className={`title ${isMobileOrTablet ? null : 'is-3'}`}>Confidence Picks</h3>
+        <h4 className={`subtitle ${isMobileOrTablet ? 'is-6' : null}`}>
           Pick a winner for every game and assign points based off how confident you are they will win!{' '}
           {weekInfo.length} is the <b>most</b> confident while 1 is the <b>least</b> confident. If you are right, you
           will get that many points in the confidence pool. <b>{weekInfo.length} = best, 1 = worst!</b>
@@ -35,7 +43,10 @@ function ConfidencePicks(props: ConfidencePickProps) {
           const selectedNumbers = currentChoices.map(match => match.confidence);
           const { team, confidence } = matchupChoices;
           return (
-            <div className="column is-one-quarter" key={`${matchupId}_confidence_tile`}>
+            <div
+              className={`column ${isMobileOrTablet ? 'is-half' : 'is-one-quarter'}`}
+              key={`${matchupId}_confidence_tile`}
+            >
               <ConfidenceCard
                 key={`${matchupId}_confidence`}
                 matchupInfo={matchup}
