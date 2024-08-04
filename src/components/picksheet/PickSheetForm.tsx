@@ -376,6 +376,10 @@ function PickSheetForm(props: PickSheetFormProps) {
             })}{' '}
             ET
           </h2>
+          <h2 className="subtitle has-text-danger">
+            The picksheet is currently being tested, you are welcome to make picks right now but they will not be saved
+            for the regular season
+          </h2>
           <div className="block">
             <ConfidencePicks
               weekInfo={currentWeekInfo}

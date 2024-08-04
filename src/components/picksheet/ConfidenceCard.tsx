@@ -45,8 +45,6 @@ function ConfidenceCard(props: ConfidenceCardProps) {
   useEffect(() => {
     if (priorTeam !== chosenTeam) {
       setChosenTeam(priorTeam);
-      // TODO: Is this necessary?
-      // onUpdateConfidenceTeam(matchupId, priorTeam);
     }
   }, [priorTeam]);
 
