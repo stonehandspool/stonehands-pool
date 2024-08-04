@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CURRENT_YEAR } from '../constants';
+import { CURRENT_YEAR, MARCH_MADNESS_STATE } from '../constants';
 import ConfidenceCard from '../components/picksheet/ConfidenceCard';
 import MarginAndSurvivorCard from '../components/picksheet/MarginAndSurvivorCard';
 import HighFiveCard from '../components/picksheet/HighFiveCard';
@@ -376,13 +376,11 @@ function About() {
             <h4 className="title is-4 has-text-centered">The High Five Pool</h4>
             <div className="content">
               <ul>
+                <li>The first tiebreaker is the number of "perfect" (i.e. 8-point weeks) each player got.</li>
+                <li>The second tiebreaker will be the number of 5-point weeks each player got</li>
                 <li>
-                  If there is a tie at the end of the season the only tiebreaker is number of games chosen correctly
-                </li>
-                {/* TODO: Update this to include perfect weeks followed by 5-point weeks */}
-                <li>
-                  If multiple people end up with the same high five total and same number of game chosen correctly, they
-                  will split the pot
+                  If two players have the same number of points and the same number of perfect and 5-point weeks, then
+                  they will split the pot
                 </li>
               </ul>
             </div>
@@ -426,10 +424,12 @@ function About() {
             </p>
             <h5 className="title is-5">
               <b>Buy In: </b> ${buyIn}{' '}
-              <span className="has-text-danger">
-                This is the buy in for the football pool, for info about the March Madness pool please see the payouts
-                section <a href="march-madness/about">here</a>{' '}
-              </span>
+              {MARCH_MADNESS_STATE !== 'INACTIVE' && (
+                <span className="has-text-danger">
+                  This is the buy in for the football pool, for info about the March Madness pool please see the payouts
+                  section <a href="march-madness/about">here</a>{' '}
+                </span>
+              )}
             </h5>
             <h5 className="title is-5">
               <b>Payment Options</b>
@@ -441,7 +441,7 @@ function About() {
               <b>Zelle:</b> gmf2715@outlook.com
             </p>
             <p className="has-text-danger">
-              In the payment description please use the format: '2023 Stonehands Payment for: "name(s)"'{' '}
+              In the payment description please use the format: '{CURRENT_YEAR} Stonehands Payment for: "name(s)"'{' '}
             </p>
             <br />
             <p>

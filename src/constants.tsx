@@ -1,6 +1,6 @@
 // This should be set to false prior to the release of the first weeks picksheet, and then true until the end of the regular season
 // This is used to check for each of the standings and stats pages to see if it should check for data, if false it will not display anything
-export const SEASON_READY: boolean = false;
+export const SEASON_READY: boolean = true;
 // This should be toggled once sign ups are disabled
 export const SIGN_UPS_DISABLED: boolean = false;
 // This should be updated on Wednesday of every week when the next weeks picksheet becomes available
