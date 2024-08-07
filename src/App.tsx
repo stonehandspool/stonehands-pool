@@ -35,6 +35,7 @@ const MarchMadnessStandings = lazy(() => import('./pages/MarchMadnessStandings')
 const UserBracket = lazy(() => import('./pages/UserBracket'));
 const YearlyAwards = lazy(() => import('./pages/YearlyAwards'));
 const Payouts = lazy(() => import('./pages/Payouts'));
+const HallOfFame = lazy(() => import('./pages/HallOfFame'));
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function App() {
           <Route path="/march-madness/bracket/:username" element={<UserBracket />} />
           <Route path="/yearly-awards" element={<YearlyAwards />} />
           {/* <Route path="/payouts" element={<Payouts />} /> */}
+          <Route path="/hall-of-fame" element={<HallOfFame />} />
           <Route path="/404" element={<PageNotFound />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

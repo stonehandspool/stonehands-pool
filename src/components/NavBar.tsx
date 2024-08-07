@@ -72,6 +72,9 @@ function NavBar() {
           <Link className="navbar-item" to="/about" onClick={onBurgerClick}>
             About
           </Link>
+          <Link className="navbar-item" to="/hall-of-fame" onClick={onBurgerClick}>
+            Hall of Fame
+          </Link>
           <Link className="navbar-item" to="/picksheet" onClick={onBurgerClick}>
             Picksheet
           </Link>
