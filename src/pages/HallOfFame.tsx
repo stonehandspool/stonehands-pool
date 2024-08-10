@@ -49,40 +49,69 @@ function HallOfFame() {
         </div>
         <div className="block">
           <div className="box level">
+            <div className="level-item has-text-centered is-invisible">
+              <div className="content">
+                <p className="heading">You are a</p>
+                <p className="title">Secret Murphy</p>
+                <p className="subtitle">Award Winner</p>
+              </div>
+            </div>
             <div className="level-item has-text-centered">
               <div className="content">
-                <p className="heading">1st</p>
+                <p className="heading">Most Points</p>
                 <p className="title">Alissa Onofrio</p>
                 <p className="subtitle">351 Points</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div className="content">
-                <p className="heading">2nd</p>
-                <p className="title">Bobby Crimmins</p>
-                <p className="subtitle">315 Points</p>
+                <p className="heading">Most Wins</p>
+                <p className="title">Nicole Tseng</p>
+                <p className="subtitle">44 Wins</p>
               </div>
             </div>
-            <div className="level-item has-text-centered">
+            <div className="level-item has-text-centered is-invisible">
               <div className="content">
-                <p className="heading">3rd</p>
-                <p className="title">Cindy Dolan</p>
-                <p className="subtitle">297 Points</p>
+                <p className="heading">Email Ryan</p>
+                <p className="title">"Murphy Doo"</p>
+                <p className="subtitle">To Win!</p>
               </div>
             </div>
-            <div className="level-item has-text-centered">
-              <div className="content">
-                <p className="heading">4th</p>
-                <p className="title">Jeff Fandl</p>
-                <p className="subtitle">264 Points</p>
-              </div>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="block has-text-centered">
+          <h1 className="title is-3 stonehands-hero">
+            <u>2024 Records</u>
+          </h1>
+        </div>
+        <div className="block has-text-centered">
+          <h1 className="title stonehands-hero">March Madness</h1>
+        </div>
+        <div className="columns is-centered">
+          <div className="column is-one-quarter">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Most Points</h1>
+              <ol>
+                <li>Alissa Onofrio - 351 Points</li>
+                <li>Bobby Crimmins - 315 Points</li>
+                <li>Cindy Dolan - 297 Points</li>
+                <li>Jeff Fandl - 264 Points</li>
+                <li>Kailey Fandl - 262 Points</li>
+              </ol>
             </div>
-            <div className="level-item has-text-centered">
-              <div className="content">
-                <p className="heading">5th</p>
-                <p className="title">Kailey Fandl</p>
-                <p className="subtitle">262 Points</p>
-              </div>
+          </div>
+          <div className="column is-one-quarter">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Most Wins</h1>
+              <ol>
+                <li>Nicole Tseng - 44 Wins</li>
+                <li>Mark Maltz - 43 Wins</li>
+                <li>Jason Segarra - 43 Wins</li>
+                <li>Jeff Fandl - 42 Wins</li>
+                <li>Kailey Fandl - 42 Wins</li>
+              </ol>
             </div>
           </div>
         </div>
@@ -142,42 +171,6 @@ function HallOfFame() {
                 <li>Thomas Passano - 87 Points</li>
                 <li>Nancy Fandl - 84 Points</li>
                 <li>Philip Seitz - 82 Points</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section">
-        <div className="block has-text-centered">
-          <h1 className="title is-3 stonehands-hero">
-            <u>2024 Records</u>
-          </h1>
-        </div>
-        <div className="block has-text-centered">
-          <h1 className="title stonehands-hero">March Madness</h1>
-        </div>
-        <div className="columns is-centered">
-          <div className="column is-one-quarter">
-            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
-              <h1 className="title has-text-centered">Most Points</h1>
-              <ol>
-                <li>Alissa Onofrio - 351 Points</li>
-                <li>Bobby Crimmins - 315 Points</li>
-                <li>Cindy Dolan - 297 Points</li>
-                <li>Jeff Fandl - 264 Points</li>
-                <li>Kailey Fandl - 262 Points</li>
-              </ol>
-            </div>
-          </div>
-          <div className="column is-one-quarter">
-            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
-              <h1 className="title has-text-centered">Most Games Right</h1>
-              <ol>
-                <li>Nicole Tseng - 44 Right</li>
-                <li>Mark Maltz - 43 Right</li>
-                <li>Jason Segarra - 43 Right</li>
-                <li>Jeff Fandl - 42 Right</li>
-                <li>Kailey Fandl - 42 Right</li>
               </ol>
             </div>
           </div>
