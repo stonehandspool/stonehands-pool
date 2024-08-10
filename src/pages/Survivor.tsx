@@ -1,4 +1,4 @@
-import players from '../../data/2024/football/players.json';
+import playerData from '../../data/2024/football/players.json';
 import SurvivorTable from '../components/standings/SurvivorTable';
 import { CURRENT_YEAR, CURRENT_WEEK, SEASON_READY } from '../constants';
 
@@ -15,8 +15,8 @@ function Survivor() {
     );
   }
 
-  const numStarted = players.length;
-  const numRemaining = players.filter(player => player.aliveInSurvivor).length;
+  const numStarted = playerData.length;
+  const numRemaining = playerData.filter(player => player.aliveInSurvivor).length;
 
   return (
     <section className="section">

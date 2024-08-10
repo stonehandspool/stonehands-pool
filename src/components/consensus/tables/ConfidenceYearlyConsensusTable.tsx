@@ -1,16 +1,10 @@
-import {
-  CURRENT_WEEK,
-  CURRENT_WEEK_CUTOFF_TIME,
-  CURRENT_WEEK_STATUS,
-  SEASON_READY,
-  DatabaseData,
-} from '../../../constants';
-import * as playerPicks from '../../../../data/2023/weeklyPicks.json';
-import * as seasonData from '../../../../data/2023/season.json';
+import { CURRENT_WEEK, SEASON_READY, DatabaseData, MatchupInfo } from '../../../constants';
+import seasonData from '../../../../data/2024/football/season.json';
 import * as TeamLogos from '../../../assets/logos';
 import { TEAM_CODES } from '../../../constants';
+import { useWeeklyPick } from '../../../utils/useWeeklyPicks';
 
-interface YearlyConsensusInfo {
+type YearlyConsensusInfo = {
   teamName: string;
   numTimesPicked: number;
   numTimesOppPicked: number;
@@ -19,28 +13,37 @@ interface YearlyConsensusInfo {
   pointsFor: number;
   pointsAgainst: number;
   pointDiff: number;
-}
+};
 
-function ConfidenceYearlyConsensusTable() {
-  // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
-  // can't see what people have chosen prior to the cutoff happening
-  const currentTime = new Date();
-  const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
-  const weekToShow = CURRENT_WEEK === 1 ? CURRENT_WEEK : showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
+type ConfidenceYearlyConsensusTableProps = {
+  showCurrentWeek: boolean;
+  weekToShow: number;
+};
+
+function ConfidenceYearlyConsensusTable(props: ConfidenceYearlyConsensusTableProps) {
+  const { showCurrentWeek, weekToShow } = props;
 
   if (!SEASON_READY || (CURRENT_WEEK === 1 && !showCurrentWeek)) {
     return (
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
-            Sorry, there is no data to show yet This will update after the 1pm cutoff.
+            Sorry, there is no data to show yet. This will update after the 1pm cutoff.
           </h3>
         </div>
       </section>
     );
   }
+
+  const weeklyPicks = useWeeklyPick(1, weekToShow === 1 ? undefined : weekToShow);
+  const allWeekData = weeklyPicks.length > 0 ? weeklyPicks : [];
+
+  // If it hasn't loaded all of the data yet, then just return nothing
+  if (allWeekData.length === 0) {
+    return <></>;
+  }
+
   const yearlyConsensusArr: YearlyConsensusInfo[] = [];
-  const allWeeks = seasonData.weeks;
 
   // First set up the initial values for the consensus info
   TEAM_CODES.forEach(teamCode => {
@@ -58,39 +61,32 @@ function ConfidenceYearlyConsensusTable() {
 
   // Now loop through every week that has been played so far
   for (let i = 0; i < weekToShow; i++) {
-    const weekField = `week_${i + 1}`;
-    const weekPicks: DatabaseData[] = playerPicks.weeklyPicks[
-      weekField as keyof typeof playerPicks.weeklyPicks
-    ] as unknown as DatabaseData[];
-    const weekGames = allWeeks[weekField as keyof typeof allWeeks];
+    const weekPicks: DatabaseData[] = allWeekData.find(weekData => weekData.id === `week_${i + 1}`)!.picks;
+    const weekGames: MatchupInfo[] = seasonData.find(weekInfo => weekInfo.weekId === `week_${i + 1}`)!.matchups;
 
     // Now loop through every players response and update the consensus info
-    const numGames = Object.keys(weekGames).length;
     weekPicks.forEach(pickInfo => {
       const { submission_data: picks } = pickInfo;
-      for (let j = 0; j < numGames; j++) {
-        const matchupField = `matchup_${j + 1}`;
-        const matchupInfo = weekGames[matchupField as keyof typeof weekGames];
-        const { home_team: homeTeam, away_team: awayTeam } = matchupInfo;
-        const userChoice = picks[`matchup-${j}` as keyof typeof picks];
-        const userConfidence = parseInt(picks[`matchup-${j}-confidence` as keyof typeof picks] as string, 10);
+      weekGames.forEach((matchupInfo, index) => {
+        const { homeTeam, awayTeam } = matchupInfo;
+        const { team, confidence } = picks.confidencePicks.find(p => p.matchupId === `matchup_${index + 1}`)!;
         const homeTeamConsensusInfo = yearlyConsensusArr.find(info => info.teamName === homeTeam);
         const awayTeamConsensusInfo = yearlyConsensusArr.find(info => info.teamName === awayTeam);
 
         if (homeTeamConsensusInfo !== undefined && awayTeamConsensusInfo !== undefined) {
-          if (userChoice === homeTeam) {
+          if (team === homeTeam) {
             homeTeamConsensusInfo.numTimesPicked++;
-            homeTeamConsensusInfo.pointsFor += userConfidence;
+            homeTeamConsensusInfo.pointsFor += confidence as number;
             awayTeamConsensusInfo.numTimesOppPicked++;
-            awayTeamConsensusInfo.pointsAgainst += userConfidence;
+            awayTeamConsensusInfo.pointsAgainst += confidence as number;
           } else {
             homeTeamConsensusInfo.numTimesOppPicked++;
-            homeTeamConsensusInfo.pointsAgainst += userConfidence;
+            homeTeamConsensusInfo.pointsAgainst += confidence as number;
             awayTeamConsensusInfo.numTimesPicked++;
-            awayTeamConsensusInfo.pointsFor += userConfidence;
+            awayTeamConsensusInfo.pointsFor += confidence as number;
           }
         }
-      }
+      });
     });
   }
 

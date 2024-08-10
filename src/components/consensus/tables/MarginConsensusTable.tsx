@@ -1,29 +1,24 @@
-import {
-  CURRENT_WEEK,
-  CURRENT_WEEK_CUTOFF_TIME,
-  CURRENT_WEEK_STATUS,
-  SEASON_READY,
-  DatabaseData,
-} from '../../../constants';
-import * as playerData from '../../../../data/2023/players.json';
-import * as seasonData from '../../../../data/2023/season.json';
+import { CURRENT_WEEK, SEASON_READY, MatchupInfo } from '../../../constants';
+import playerData from '../../../../data/2024/football/players.json';
+import seasonData from '../../../../data/2024/football/season.json';
 import * as TeamLogos from '../../../assets/logos';
 
-interface MatchupConsensusInfo {
+type MatchupConsensusInfo = {
   homeTeam: string;
   homeNumPicks: number;
   homePercent: string;
   awayTeam: string;
   awayNumPicks: number;
   awayPercent: string;
-}
+};
 
-function MarginConsensusTable() {
-  // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
-  // can't see what people have chosen prior to the cutoff happening
-  const currentTime = new Date();
-  const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
-  const weekToShow = showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
+type MarginConsensusTableProps = {
+  showCurrentWeek: boolean;
+  weekToShow: number;
+};
+
+function MarginConsensusTable(props: MarginConsensusTableProps) {
+  const { showCurrentWeek, weekToShow } = props;
 
   if (!SEASON_READY || (CURRENT_WEEK === 1 && !showCurrentWeek)) {
     return (
@@ -37,19 +32,15 @@ function MarginConsensusTable() {
     );
   }
   const weeklyConsensusArr: MatchupConsensusInfo[] = [];
-  const allWeeks = seasonData.weeks;
-  const weekField = `week_${weekToShow}`;
-  const { players } = playerData;
-  const weekGames = allWeeks[weekField as keyof typeof allWeeks];
+  const weekGames: MatchupInfo[] = seasonData.find(weekInfo => weekInfo.weekId === `week_${weekToShow}`)!.matchups;
 
   // First set up the initial values for the consensus info
-  Object.keys(weekGames).map(key => {
-    const matchup = weekGames[key as keyof typeof weekGames];
+  weekGames.forEach(matchup => {
     weeklyConsensusArr.push({
-      homeTeam: matchup.home_team,
+      homeTeam: matchup.homeTeam,
       homeNumPicks: 0,
       homePercent: '0',
-      awayTeam: matchup.away_team,
+      awayTeam: matchup.awayTeam,
       awayNumPicks: 0,
       awayPercent: '0',
     });
@@ -57,7 +48,7 @@ function MarginConsensusTable() {
 
   // Now go through every players response and update the consensus info
   let totalPicks = 0;
-  players.forEach(player => {
+  playerData.forEach(player => {
     const { team } = player.marginPicks[weekToShow - 1];
     const matchup = weeklyConsensusArr.find(
       matchupInfo => matchupInfo.homeTeam === team || matchupInfo.awayTeam === team

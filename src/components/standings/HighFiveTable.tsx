@@ -1,4 +1,4 @@
-import players from '../../../data/2024/football/players.json';
+import playerData from '../../../data/2024/football/players.json';
 import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK } from '../../constants';
 
 interface HighFivePick {
@@ -49,8 +49,8 @@ const weeksArr = [...Array(18)];
 function HighFiveTable() {
   // Calculate the standings
   const playerPicks: PlayerInfo[] = [];
-  for (let i = 0; i < players.length; i++) {
-    const playerInfo = players[i];
+  for (let i = 0; i < playerData.length; i++) {
+    const playerInfo = playerData[i];
     const rowInfo: PlayerInfo = {
       name: `${playerInfo.firstName.trim()} ${playerInfo.lastName.trim()}`,
       recentPicks: playerInfo.highFiveThisWeek as HighFivePick[],
@@ -95,6 +95,7 @@ function HighFiveTable() {
   const currentTime = new Date();
   const isBrandNewWeek = CURRENT_WEEK_STATUS === 'START';
   const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+  console.log(isBrandNewWeek, showAllPicks);
 
   return (
     <section className="section">
@@ -166,7 +167,7 @@ function HighFiveTable() {
                       // Doing explicit checks for true and false because it can be null and we want a white background for that
                       if (pick.won) {
                         className = 'has-background-success';
-                      } else if (!pick.won) {
+                      } else if (pick.won === false) {
                         className = 'has-background-danger';
                       }
                       if (showAllPicks || isBrandNewWeek) {
@@ -188,10 +189,10 @@ function HighFiveTable() {
                       }
                     })}
                   {row.recentPicks.length === 0 &&
-                    Array.from({ length: 5 }).map((key, ind) => {
+                    Array.from({ length: 5 }).map((_, ind) => {
                       return <td key={`${row.name}-pick-${ind}`}> </td>;
                     })}
-                  {weeksArr.map((week, ind) => {
+                  {weeksArr.map((_, ind) => {
                     const isCurrentWeek = ind === CURRENT_WEEK - 1;
                     if (isCurrentWeek && !showAllPicks) {
                       return <td key={`${row.name}-hidden`}></td>;

@@ -28,23 +28,17 @@ const fakeMatchupInfo = {
 };
 
 function About() {
-  // Just dummy objects to allow the examples to somewhat work
-  const [selectedPick, setSelectedPick] = useState<string>('');
-  const [marginTeam, setMarginTeam] = useState<string>('');
-  const onUpdatePick = () => {};
-  const onUpdateConfidence = () => {};
-  const handleMarginSelection = (team: string) => {
-    setMarginTeam(team);
-  };
-  const handleHighFiveSelection = () => {};
-
-  const numPlayers = 78;
+  const numPlayers = 109;
   const buyIn = 100;
   const totalPool = numPlayers * buyIn;
+  const totalSurv = 500;
+  const totalMarg = 1000;
+  const totalHF = 1000;
+
   // Confidence
-  const totalConf = totalPool * 0.7;
+  const totalConf = totalPool - totalSurv - totalMarg - totalHF;
   // Confidence EOY
-  const finalConf = totalConf * 0.3;
+  const finalConf = totalConf * 0.4;
   const final1 = finalConf * 0.2;
   const final2 = finalConf * 0.17;
   const final3 = finalConf * 0.14;
@@ -56,7 +50,7 @@ function About() {
   const final9 = finalConf * 0.045;
   const final10 = finalConf * 0.04;
   // Confidence Weekly
-  const weeklyConf = totalConf * 0.7;
+  const weeklyConf = totalConf * 0.6;
   const weeklyPot = weeklyConf / 18;
   const weekly1 = weeklyPot * 0.2;
   const weekly2 = weeklyPot * 0.17;
@@ -70,9 +64,6 @@ function About() {
   const weekly10 = weeklyPot * 0.04;
 
   // Others
-  const totalSurv = totalPool * 0.1;
-  const totalMarg = totalPool * 0.1;
-  const totalHF = totalPool * 0.1;
   const other1 = totalMarg * 0.38;
   const other2 = totalMarg * 0.25;
   const other3 = totalMarg * 0.15;
@@ -255,6 +246,10 @@ function About() {
                 You will see a tile for each matchup in a given week, so if there are 14 games for a week you will need
                 to fill out 14 tiles for the Confidence Pool. You will be required to choose a winner <b>and</b> a
                 confidence value for each tile in the picksheet.
+              </p>
+              <p>
+                <b>Note:</b> You can use the empty option (the empty space above the 1) in the drop down at the top to
+                "clear" your selection for that matchup.
               </p>
             </div>
             <h4 className="title is-4 has-text-centered">The Survivor and Margin Pools</h4>
@@ -702,6 +697,11 @@ function About() {
               Winnings from <b>all</b> pools will be paid out at the end of the regular season, no exceptions. Even
               though the survivor pool will most likely end earlier than that, the winner(s) will have to wait until the
               end of the regular season.
+            </p>
+            <h5 className="title is-5">Something went wrong, how can I contact you?</h5>
+            <p className="mb-5">
+              Feel free to email me at <a href="mailto:ryan@stonehands.org">ryan@stonehands.org</a>, I should get back
+              to you pretty quickly as I check it every day during the season.
             </p>
           </div>
         </div>
