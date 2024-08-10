@@ -1,4 +1,4 @@
-import players from '../../../data/2024/football/players.json';
+import playerData from '../../../data/2024/football/players.json';
 
 import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MONDAY_NIGHT_TOTAL } from '../../constants';
 
@@ -21,8 +21,8 @@ function WeeklyStandingsTable() {
 
   // Calculate the standings
   const calculatedPicks: TableColumns[] = [];
-  for (let i = 0; i < players.length; i++) {
-    const playerInfo = players[i];
+  for (let i = 0; i < playerData.length; i++) {
+    const playerInfo = playerData[i];
     const rowInfo: TableColumns = {
       position: -1,
       name: `${playerInfo.firstName.trim()} ${playerInfo.lastName.trim()}`,

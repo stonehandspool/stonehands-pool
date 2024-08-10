@@ -3,7 +3,8 @@ import ConfidenceReport from '../components/consensus/ConfidenceReport';
 import HighFiveReport from '../components/consensus/HighFiveReport';
 import MarginReport from '../components/consensus/MarginReport';
 import SurvivorReport from '../components/consensus/SurvivorReport';
-import { CURRENT_YEAR, CURRENT_WEEK } from '../constants';
+import { CURRENT_YEAR, CURRENT_WEEK, CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME } from '../constants';
+import { useWeeklyPick } from '../utils/useWeeklyPicks';
 
 enum Pools {
   Confidence,
@@ -14,6 +15,15 @@ enum Pools {
 
 function Consensus() {
   const [activeChoice, setActiveChoice] = useState(Pools.Confidence);
+
+  const weeklyPicks = useWeeklyPick(CURRENT_WEEK);
+  const pickData = weeklyPicks.length > 0 ? weeklyPicks[0].picks : [];
+
+  // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
+  // can't see what people have chosen prior to the cutoff happening
+  const currentTime = new Date();
+  const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+  const weekToShow = CURRENT_WEEK === 1 ? CURRENT_WEEK : showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
 
   const showChoice = (choice: Pools) => {
     setActiveChoice(choice);
@@ -65,10 +75,16 @@ function Consensus() {
           </ul>
         </div>
         <div className="container">
-          {activeChoice === Pools.Confidence && <ConfidenceReport />}
-          {activeChoice === Pools.Survivor && <SurvivorReport />}
-          {activeChoice === Pools.Margin && <MarginReport />}
-          {activeChoice === Pools.HighFive && <HighFiveReport />}
+          {activeChoice === Pools.Confidence && (
+            <ConfidenceReport weeklyPicks={pickData} showCurrentWeek={showCurrentWeek} weekToShow={weekToShow} />
+          )}
+          {activeChoice === Pools.Survivor && (
+            <SurvivorReport weeklyPicks={pickData} showCurrentWeek={showCurrentWeek} weekToShow={weekToShow} />
+          )}
+          {activeChoice === Pools.Margin && <MarginReport showCurrentWeek={showCurrentWeek} weekToShow={weekToShow} />}
+          {activeChoice === Pools.HighFive && (
+            <HighFiveReport weeklyPicks={pickData} showCurrentWeek={showCurrentWeek} weekToShow={weekToShow} />
+          )}
         </div>
       </div>
     </section>

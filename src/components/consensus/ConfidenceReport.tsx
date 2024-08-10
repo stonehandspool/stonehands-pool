@@ -1,13 +1,15 @@
-import { CURRENT_WEEK, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK_STATUS } from '../../constants';
+import { DatabaseData } from '../../constants';
 import ConfidenceWeeklyConsensusTable from './tables/ConfidenceWeeklyConsensusTable';
 import ConfidenceYearlyConsensusTable from './tables/ConfidenceYearlyConsensusTable';
 
-function ConfidenceReport() {
-  // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
-  // can't see what people have chosen prior to the cutoff happening
-  const currentTime = new Date();
-  const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
-  const weekToShow = CURRENT_WEEK === 1 ? CURRENT_WEEK : showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
+type ConfidenceReportProps = {
+  weeklyPicks: DatabaseData[];
+  showCurrentWeek: boolean;
+  weekToShow: number;
+};
+
+function ConfidenceReport(props: ConfidenceReportProps) {
+  const { weeklyPicks, showCurrentWeek, weekToShow } = props;
 
   return (
     <div className="section">
@@ -17,12 +19,16 @@ function ConfidenceReport() {
           How many people picked each team and how confident they were with that team in each matchup in week{' '}
           {weekToShow}.
         </h2>
-        <ConfidenceWeeklyConsensusTable />
+        <ConfidenceWeeklyConsensusTable
+          weeklyPicks={weeklyPicks}
+          showCurrentWeek={showCurrentWeek}
+          weekToShow={weekToShow}
+        />
       </div>
       <div className="container">
         <h1 className="title">Yearly Consensus Report</h1>
         <h2 className="subtitle">How often a team is picked compared to their opponent throughout the season.</h2>
-        <ConfidenceYearlyConsensusTable />
+        <ConfidenceYearlyConsensusTable showCurrentWeek={showCurrentWeek} weekToShow={weekToShow} />
       </div>
     </div>
   );

@@ -66,6 +66,14 @@ node scripts/processWeek.js --year {year} --week {week} --firstRun false --submi
 sass --no-source-map src/sass/index.scss:src/index.css --load-path=node_modules
 ```
 
+### Removing old branches at end of season
+
+- Switch to main and then do:
+
+```sh
+git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
+```
+
 ## Getting the NFL Schedule
 
 Use sportradar trial API and then run script to conver it to the format we need
@@ -77,7 +85,7 @@ Use sportradar trial API and then run script to conver it to the format we need
 - [x] Do a dry run
 - [x] Get a printable version of the picks to show up after submission
 - [x] Double check partial week standings
-- [ ] Add a Hall of Fame (Probably after year 1 is done)
+- [x] Add a Hall of Fame (Probably after year 1 is done)
 - [ ] Get a modal for team/matchup info on the picksheet (Maybe)
 - [ ] Add in a random stats page (e.g. Best + Worst, Thurs. Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)) (Maybe)
 - [ ] Look into the NFL API to further automate the process (Maybe)

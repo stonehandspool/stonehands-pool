@@ -1,4 +1,4 @@
-import players from '../../../data/2024/football/players.json';
+import playerData from '../../../data/2024/football/players.json';
 import { useNavigate } from 'react-router-dom';
 
 interface TableColumns {
@@ -24,8 +24,8 @@ function SeasonStandingsTable() {
 
   // Calculate the standings
   const calculatedPicks: TableColumns[] = [];
-  for (let i = 0; i < players.length; i++) {
-    const playerInfo = players[i];
+  for (let i = 0; i < playerData.length; i++) {
+    const playerInfo = playerData[i];
     const rowInfo: TableColumns = {
       position: playerInfo.currentWeekRank,
       name: `${playerInfo.firstName} ${playerInfo.lastName}`,

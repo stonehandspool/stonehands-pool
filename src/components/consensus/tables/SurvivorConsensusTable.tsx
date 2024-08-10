@@ -1,74 +1,62 @@
-import {
-  CURRENT_WEEK,
-  CURRENT_WEEK_CUTOFF_TIME,
-  CURRENT_WEEK_STATUS,
-  SEASON_READY,
-  DatabaseData,
-} from '../../../constants';
-import * as playerPicks from '../../../../data/2023/weeklyPicks.json';
-import * as seasonData from '../../../../data/2023/season.json';
+import { CURRENT_WEEK, SEASON_READY, DatabaseData, MatchupInfo } from '../../../constants';
+import seasonData from '../../../../data/2024/football/season.json';
 import * as TeamLogos from '../../../assets/logos';
 
-interface MatchupConsensusInfo {
+type MatchupConsensusInfo = {
   homeTeam: string;
   homeNumPicks: number;
   homePercent: string;
   awayTeam: string;
   awayNumPicks: number;
   awayPercent: string;
-}
+};
 
-function SurvivorConsensusTable() {
-  // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
-  // can't see what people have chosen prior to the cutoff happening
-  const currentTime = new Date();
-  const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
-  const weekToShow = showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
+type SurvivorConsensusTableProps = {
+  weeklyPicks: DatabaseData[];
+  showCurrentWeek: boolean;
+  weekToShow: number;
+};
+
+function SurvivorConsensusTable(props: SurvivorConsensusTableProps) {
+  const { weeklyPicks, showCurrentWeek, weekToShow } = props;
 
   if (!SEASON_READY || (CURRENT_WEEK === 1 && !showCurrentWeek)) {
     return (
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
-            Sorry, there is no data to show yet This will update after the 1pm cutoff.
+            Sorry, there is no data to show yet. This will update after the 1pm cutoff.
           </h3>
         </div>
       </section>
     );
   }
   const weeklyConsensusArr: MatchupConsensusInfo[] = [];
-  const allWeeks = seasonData.weeks;
-  const weekField = `week_${weekToShow}`;
-  const weekPicks: DatabaseData[] = playerPicks.weeklyPicks[
-    weekField as keyof typeof playerPicks.weeklyPicks
-  ] as unknown as DatabaseData[];
-  const weekGames = allWeeks[weekField as keyof typeof allWeeks];
+  const weekGames: MatchupInfo[] = seasonData.find(weeks => weeks.weekId === `week_${weekToShow}`)!.matchups;
 
   // First set up the initial values for the consensus info
-  Object.keys(weekGames).map(key => {
-    const matchup = weekGames[key as keyof typeof weekGames];
+  weekGames.forEach(matchup => {
     weeklyConsensusArr.push({
-      homeTeam: matchup.home_team,
+      homeTeam: matchup.homeTeam,
       homeNumPicks: 0,
       homePercent: '0',
-      awayTeam: matchup.away_team,
+      awayTeam: matchup.awayTeam,
       awayNumPicks: 0,
       awayPercent: '0',
     });
   });
 
   // Now go through every players response and update the consensus info
-  const numGames = Object.keys(weekGames).length;
   let totalPicks = 0;
-  weekPicks.forEach(pickInfo => {
+  weeklyPicks.forEach(pickInfo => {
     const { submission_data: picks } = pickInfo;
-    for (let i = 0; i < numGames; i++) {
+    for (let i = 0; i < weekGames.length; i++) {
       const consensusInfo = weeklyConsensusArr[i];
-      const userChoice = picks['survivor-pick' as keyof typeof picks] as string;
-      if (userChoice && userChoice !== '' && userChoice === consensusInfo.homeTeam) {
+      const { survivorPick } = picks;
+      if (survivorPick && survivorPick !== '' && survivorPick === consensusInfo.homeTeam) {
         consensusInfo.homeNumPicks++;
         totalPicks++;
-      } else if (userChoice && userChoice !== '' && userChoice === consensusInfo.awayTeam) {
+      } else if (survivorPick && survivorPick !== '' && survivorPick === consensusInfo.awayTeam) {
         consensusInfo.awayNumPicks++;
         totalPicks++;
       }

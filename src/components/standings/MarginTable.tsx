@@ -1,10 +1,10 @@
-import players from '../../../data/2024/football/players.json';
-import seasonInfo from '../../../data/2024/football/season.json';
+import playerData from '../../../data/2024/football/players.json';
+import seasonData from '../../../data/2024/football/season.json';
 
 import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK, MatchupInfo } from '../../constants';
 
 interface MarginPick {
-  team: string;
+  team: string | null;
   margin: number | null;
 }
 
@@ -41,8 +41,11 @@ const headers: string[] = [
 ];
 const weeksArr = [...Array(18)];
 
-const weeklyResults: MatchupInfo[] = seasonInfo.find(weekInfo => weekInfo.weekId === `week_${CURRENT_WEEK}`)!.matchups;
-const getGameCompleted = (teamName: string) => {
+const weeklyResults: MatchupInfo[] = seasonData.find(weekInfo => weekInfo.weekId === `week_${CURRENT_WEEK}`)!.matchups;
+const getGameCompleted = (teamName: string | null) => {
+  if (teamName === null) {
+    return false;
+  }
   let gameCompleted = false;
   weeklyResults.map(matchupInfo => {
     if (matchupInfo.homeTeam === teamName || matchupInfo.awayTeam === teamName) {
@@ -55,8 +58,8 @@ const getGameCompleted = (teamName: string) => {
 function MarginTable() {
   // Calculate the standings
   const playerPicks: PlayerInfo[] = [];
-  for (let i = 0; i < players.length; i++) {
-    const playerInfo = players[i];
+  for (let i = 0; i < playerData.length; i++) {
+    const playerInfo = playerData[i];
     let numWins = 0;
     for (let i = 0; i < playerInfo.marginPicks.length; i++) {
       const { margin } = playerInfo.marginPicks[i];

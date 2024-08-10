@@ -212,8 +212,6 @@ playerData.forEach(player => {
       player.aliveInSurvivor = false;
     } else if (survivorPick !== '') {
       const survivorMatchup = findMatchupByTeam(survivorPick);
-      console.log('SURVIVOR PICK', survivorPick);
-      console.log('MATCHUP', survivorMatchup);
       if (survivorMatchup.winner !== '' && survivorMatchup.winner !== survivorPick) {
         player.aliveInSurvivor = false;
       }

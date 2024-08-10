@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './WeeklyPicksTable.css';
 
-import players from '../../../data/2024/football/players.json';
-import seasonInfo from '../../../data/2024/football/season.json';
+import playerData from '../../../data/2024/football/players.json';
+import seasonData from '../../../data/2024/football/season.json';
 
 import * as TeamLogos from '../../assets/logos';
 
@@ -38,7 +38,7 @@ function WeeklyPicksImagesTable() {
     }
   }, [weeklyPicks]);
 
-  const currentWeekMatches: MatchupInfo[] = seasonInfo.find(
+  const currentWeekMatches: MatchupInfo[] = seasonData.find(
     weekInfo => weekInfo.weekId === `week_${CURRENT_WEEK}`
   )!.matchups;
   const numGamesThisWeek = currentWeekMatches.length;
@@ -128,7 +128,7 @@ function WeeklyPicksImagesTable() {
         </tr>
         {currentWeekPicks.map((pickInfo, index) => {
           const { submission_data: picks } = pickInfo;
-          const playerInfo = players.find(player => player.id === pickInfo.user_id)!;
+          const playerInfo = playerData.find(player => player.id === pickInfo.user_id)!;
           return (
             <tr key={`picks-${index}`}>
               <td className="names is-vcentered">{`${picks.firstName} ${picks.lastName}`}</td>

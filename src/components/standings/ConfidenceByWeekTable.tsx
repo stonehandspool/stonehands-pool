@@ -1,5 +1,5 @@
-import players from '../../../data/2024/football/players.json';
-import seasonInfo from '../../../data/2024/football/season.json';
+import playerData from '../../../data/2024/football/players.json';
+import seasonData from '../../../data/2024/football/season.json';
 
 import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MatchupInfo } from '../../constants';
 
@@ -28,15 +28,15 @@ function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
     return <></>;
   }
 
-  const weekGames: MatchupInfo[] = seasonInfo.find(weekInfo => weekInfo.weekId === `week_${week}`)!.matchups;
+  const weekGames: MatchupInfo[] = seasonData.find(weekInfo => weekInfo.weekId === `week_${week}`)!.matchups;
   const numGames = weekGames.length;
   const lastMatchup = weekGames.find(game => game.matchupId === `matchup_${numGames}`)!;
   const mondayTotal = lastMatchup.awayScore + lastMatchup.homeScore;
 
   // Calculate the standings
   const calculatedPicks: TableColumns[] = [];
-  for (let i = 0; i < players.length; i++) {
-    const playerInfo = players[i];
+  for (let i = 0; i < playerData.length; i++) {
+    const playerInfo = playerData[i];
     const rowInfo: TableColumns = {
       position: -1,
       name: `${playerInfo.firstName.trim()} ${playerInfo.lastName.trim()}`,
