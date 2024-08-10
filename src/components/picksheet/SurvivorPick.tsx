@@ -41,13 +41,25 @@ function SurvivorPick(props: SurvivorPickProps) {
           careful!
         </h4>
       </div>
-      <div className="block">
-        {priorPickGameCompleted && (
+      {priorPickGameCompleted && (
+        <div className="block">
           <h6 className="subtitle is-6 has-text-danger">
-            Your choice from this week has already played their game. you can no longer change your pick
+            Your choice from this week has already played their game, you can no longer change your pick
           </h6>
-        )}
-      </div>
+        </div>
+      )}
+      {isMobileOrTablet && (
+        <div className="block" style={{ position: 'sticky', top: 80, zIndex: 10 }}>
+          <div className="notification is-primary">
+            {survivorTeam !== null && (
+              <p>
+                Your current survivor pick is <strong>{survivorTeam}</strong>
+              </p>
+            )}
+            {survivorTeam === null && <p>You have yet to make a survivor pick this week</p>}
+          </div>
+        </div>
+      )}
       <div className="block">
         <div className="columns is-multiline">
           {weekInfo.map((matchup, index) => (

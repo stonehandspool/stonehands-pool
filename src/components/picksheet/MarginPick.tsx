@@ -32,13 +32,25 @@ function MarginPick(props: MarginPickProps) {
           eliminated from this pool.
         </h4>
       </div>
-      <div className="block">
-        {priorPickGameCompleted && (
+      {priorPickGameCompleted && (
+        <div className="block">
           <h6 className="subtitle is-6 has-text-danger">
-            Your choice from this week has already played their game. you can no longer change your pick
+            Your choice from this week has already played their game, you can no longer change your pick
           </h6>
-        )}
-      </div>
+        </div>
+      )}
+      {isMobileOrTablet && (
+        <div className="block" style={{ position: 'sticky', top: 80, zIndex: 10 }}>
+          <div className="notification is-primary">
+            {marginTeam !== null && (
+              <p>
+                Your current margin pick is <strong>{marginTeam}</strong>
+              </p>
+            )}
+            {marginTeam === null && <p>You have yet to make a margin pick this week</p>}
+          </div>
+        </div>
+      )}
       <div className="block">
         <div className="columns is-multiline">
           {weekInfo.map((matchup, index) => (

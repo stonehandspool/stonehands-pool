@@ -36,8 +36,8 @@ function HighFivePicks(props: HighFivePicks) {
       )}
       {isMobileOrTablet && (
         <div className="block" style={{ position: 'sticky', top: 80, zIndex: 10 }}>
-          <div className="box">
-            <p className="pb-3">
+          <div className="notification is-primary">
+            <p>
               You have made{' '}
               <strong>
                 {highFivePicks.length}/{MAX_PICKS}
