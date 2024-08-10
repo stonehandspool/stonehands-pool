@@ -109,6 +109,7 @@ function PickSheetForm(props: PickSheetFormProps) {
     currentWeekInfo.find(matchupInfo => matchupInfo.matchupId === `matchup_${numGamesThisWeek}`)!.winner !== '';
 
   const weeklyPicks = useWeeklyPick(CURRENT_WEEK);
+  const jsonPickData = weeklyPicks.length > 0 ? weeklyPicks[0].picks : [];
 
   const initialConfidencePicks: ConfidenceMatchupInfo[] = [];
   for (let i = 0; i < numGamesThisWeek; i++) {
@@ -123,6 +124,7 @@ function PickSheetForm(props: PickSheetFormProps) {
   const [tiebreaker, setTiebreaker] = useState<string>('');
   const [validSubmission, setValidSubmission] = useState<boolean>(false);
   const submissionRef = useRef(false);
+  const pingedDatabaseRef = useRef(false);
 
   const [priorPicks, setPriorPicks] = useState<boolean>(false);
   const [formError, setFormError] = useState<string>('');
@@ -220,7 +222,7 @@ function PickSheetForm(props: PickSheetFormProps) {
   // Ping the database to see if there are picks from this week for this user
   useEffect(() => {
     let ignore = false;
-    const fetchPicks = async (callback: () => void) => {
+    const fetchPicks = async () => {
       if (ignore) {
         return;
       }
@@ -249,15 +251,28 @@ function PickSheetForm(props: PickSheetFormProps) {
         setHighFiveTeams(priorPicks.highFivePicks);
         setTiebreaker(priorPicks.tiebreaker.toString());
         setPriorPicks(true);
-      } else {
-        callback();
+      }
+
+      if (!pingedDatabaseRef.current) {
+        pingedDatabaseRef.current = true;
       }
     };
 
-    // Backup in case the database search doesn't return anything
-    // This will really only happen if a user forgot to submit prior to Thu and has a forced Thu pick
-    const searchJSON = () => {
-      const submission = weeklyPicks[0].picks.find(picks => picks.user_id === userInfo.id);
+    // First, check the database since that is the most up-to-date version most of the time
+    fetchPicks().catch(err => {
+      console.error(err);
+    });
+
+    return () => {
+      ignore = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (pingedDatabaseRef.current && jsonPickData.length > 0 && !priorPicks) {
+      // Backup in case the database search doesn't return anything
+      // This will really only happen if a user forgot to submit prior to Thu and has a forced Thu pick
+      const submission = jsonPickData.find(picks => picks.user_id === userInfo.id);
       if (submission) {
         const { submission_data: priorPicks } = submission;
         // Set the prior picks and confidences
@@ -276,17 +291,8 @@ function PickSheetForm(props: PickSheetFormProps) {
           setPriorPicks(true);
         }
       }
-    };
-
-    // First, check the database since that is the most up-to-date version most of the time
-    fetchPicks(searchJSON).catch(err => {
-      console.error(err);
-    });
-
-    return () => {
-      ignore = true;
-    };
-  }, []);
+    }
+  }, [pingedDatabaseRef.current, jsonPickData, priorPicks]);
 
   const submitPicksheet = async (event: MouseEvent<HTMLButtonElement>) => {
     if (submissionRef.current) {
