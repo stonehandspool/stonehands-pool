@@ -4,6 +4,12 @@ import { CURRENT_YEAR, MARCH_MADNESS_STATE } from '../constants';
 import ConfidenceCard from '../components/picksheet/ConfidenceCard';
 import MarginAndSurvivorCard from '../components/picksheet/MarginAndSurvivorCard';
 import HighFiveCard from '../components/picksheet/HighFiveCard';
+import YearCounter from '../assets/awards/YearCounter';
+import GoldMedal from '../assets/awards/GoldMedal';
+import SilverMedal from '../assets/awards/SilverMedal';
+import BronzeMedal from '../assets/awards/BronzeMedal';
+import TopFiveMedal from '../assets/awards/TopFiveMedal';
+import SecretMango from '../assets/awards/SecretMango';
 
 const toMoney = (value: number) => {
   return value.toLocaleString('en-US', {
@@ -72,6 +78,15 @@ function About() {
 
   return (
     <section className="section">
+      {Array.from({ length: 10 }).map((_, index) => {
+        return <YearCounter years={index + 1} />;
+      })}
+      <GoldMedal />
+      <SilverMedal />
+      <BronzeMedal />
+      <TopFiveMedal place={4} />
+      <TopFiveMedal place={5} />
+      <SecretMango />
       <div className="container">
         <h1 className="title has-text-centered">The {CURRENT_YEAR} Stonehands Pool</h1>
         <h2 className="subtitle has-text-centered">About, How to Play, and more!</h2>
