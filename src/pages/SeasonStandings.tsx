@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import SeasonStandingsTable from '../components/standings/SeasonStandingsTable';
 
-import { CURRENT_YEAR, CURRENT_WEEK } from '../constants';
+import { CURRENT_YEAR, CURRENT_WEEK, SEASON_READY } from '../constants';
 
 function SeasonStandings() {
-  const [notificationVisible, setNotificationVisible] = useState(true);
+  const [notificationVisible, setNotificationVisible] = useState(SEASON_READY);
 
   const removeNotification = () => {
     setNotificationVisible(false);

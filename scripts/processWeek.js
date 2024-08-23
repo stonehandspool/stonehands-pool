@@ -114,6 +114,10 @@ const createRandomChoices = (playerId, username, firstName, lastName) => {
   return randomSubmission;
 };
 
+const randomIntInRange = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
 // Now evaluate all of the responses and update the files
 playerData.forEach(player => {
   // The player object is the season-long data for the player which needs to be updated
@@ -157,8 +161,22 @@ playerData.forEach(player => {
 
   // First, evaluate all of the confidence pool picks
   weekData.matchups.forEach(matchup => {
-    const { winner, evaluated } = matchup;
+    const { homeTeam, awayTeam, winner, evaluated } = matchup;
     // If we haven't evaluated this matchup yet and the game is actually finished
+    if (pickInfo.id === -1 && submissionsLocked && !evaluated && winner !== '') {
+      // If the user forgot for the whole week, we want to recalculate their random picks to make sure they
+      // are less likely to perform well for the week. We're gonna stick to 50/50 odds to get any game right
+      // that's under 10 points while games 10 and above you only get a 25% of getting that game right
+      const userChoice = submissionInfo.confidencePicks.find(match => match.matchupId === matchup.matchupId);
+      if (userChoice.confidence >= 10) {
+        const randomNum = randomIntInRange(1, 100);
+        if (randomNum < 25) {
+          userChoice.team = winner;
+        } else {
+          userChoice.team = winner === homeTeam ? awayTeam : homeTeam;
+        }
+      }
+    }
     if (!evaluated && winner !== '') {
       const userChoice = submissionInfo.confidencePicks.find(match => match.matchupId === matchup.matchupId);
       const { team, confidence } = userChoice;
@@ -287,12 +305,9 @@ playerData.forEach(player => {
   player.highFiveTotal = player.highFiveValues.reduce((partialSum, a) => partialSum + a, 0);
 });
 
-// Write to the weeklyPicks now in case anyone didn't submit
-if (!isSubmissionsLocked) {
-  // Now write to the weekly picks json file so that it is saved
-  const updatedWeeklyPicks = JSON.stringify(weeklyPicksData, null, 2);
-  await writeFile(path.resolve(`data/${year}/football/weeklyPicks/week${week}.json`), updatedWeeklyPicks);
-}
+// Now write to the weekly picks json file so that it is saved
+const updatedWeeklyPicks = JSON.stringify(weeklyPicksData, null, 2);
+await writeFile(path.resolve(`data/${year}/football/weeklyPicks/week${week}.json`), updatedWeeklyPicks);
 
 // Now calculate the rank of everyone for the weekly standings
 // First we need a clone to sort
