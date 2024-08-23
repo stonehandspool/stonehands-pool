@@ -15,7 +15,7 @@ function SeasonStandings() {
       <div className="container">
         <h1 className="title has-text-centered">{CURRENT_YEAR} Stonehands Pool</h1>
         <h2 className="subtitle has-text-centered">Season standings as of week {CURRENT_WEEK}</h2>
-        {notificationVisible && CURRENT_WEEK <= 2 && (
+        {notificationVisible && CURRENT_WEEK <= 4 && (
           <div className="columns is-centered">
             <div className="column is-half">
               <div className="notification is-info is-narrow">
