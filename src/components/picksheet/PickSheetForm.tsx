@@ -88,7 +88,6 @@ function PickSheetForm(props: PickSheetFormProps) {
   }
 
   const userInfo: UserInfo = playerData.find(playerInfo => playerInfo.id === session.user.id)!;
-  const { firstName, lastName } = userInfo;
 
   if (!userInfo) {
     return (
@@ -103,6 +102,7 @@ function PickSheetForm(props: PickSheetFormProps) {
     );
   }
 
+  const { firstName, lastName } = userInfo;
   const currentWeekInfo = seasonData.find(weekInfo => weekInfo.weekId === `week_${CURRENT_WEEK}`)!.matchups;
   const numGamesThisWeek = currentWeekInfo.length;
   const lastGameCompleted =
