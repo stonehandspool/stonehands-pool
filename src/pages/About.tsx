@@ -10,6 +10,8 @@ import SilverMedal from '../assets/awards/SilverMedal';
 import BronzeMedal from '../assets/awards/BronzeMedal';
 import TopFiveMedal from '../assets/awards/TopFiveMedal';
 import SecretMango from '../assets/awards/SecretMango';
+import FoundingMember from '../assets/awards/FoundingMember';
+import SecretMurphy from '../assets/awards/SecretMurphy';
 
 const toMoney = (value: number) => {
   return value.toLocaleString('en-US', {
@@ -79,14 +81,16 @@ function About() {
   return (
     <section className="section">
       {Array.from({ length: 10 }).map((_, index) => {
-        return <YearCounter years={index + 1} />;
+        return <YearCounter key={`trophy-${index}`} years={index + 1} />;
       })}
-      <GoldMedal />
-      <SilverMedal />
-      <BronzeMedal />
-      <TopFiveMedal place={4} />
-      <TopFiveMedal place={5} />
+      <GoldMedal year={2024} pool="March Madness" />
+      <SilverMedal year={2023} pool="High Five" />
+      <BronzeMedal year={2023} pool="Confidence" />
+      <TopFiveMedal place={4} year={2024} pool="Margin" />
+      <TopFiveMedal place={5} year={2023} pool="Survivor" />
       <SecretMango />
+      <SecretMurphy />
+      <FoundingMember />
       <div className="container">
         <h1 className="title has-text-centered">The {CURRENT_YEAR} Stonehands Pool</h1>
         <h2 className="subtitle has-text-centered">About, How to Play, and more!</h2>
