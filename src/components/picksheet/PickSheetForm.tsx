@@ -123,6 +123,7 @@ function PickSheetForm(props: PickSheetFormProps) {
   const [highFiveTeams, setHighFiveTeams] = useState<string[]>([]);
   const [tiebreaker, setTiebreaker] = useState<string>('');
   const [validSubmission, setValidSubmission] = useState<boolean>(false);
+  const [timesUpdated, setTimesUpdated] = useState<number>(0);
   const submissionRef = useRef(false);
   const pingedDatabaseRef = useRef(false);
 
@@ -221,12 +222,7 @@ function PickSheetForm(props: PickSheetFormProps) {
 
   // Ping the database to see if there are picks from this week for this user
   useEffect(() => {
-    let ignore = false;
     const fetchPicks = async () => {
-      if (ignore) {
-        return;
-      }
-
       const { data, error } = await supabaseClient
         .from(TABLE_NAMES.USER_PICKS)
         .select()
@@ -239,6 +235,7 @@ function PickSheetForm(props: PickSheetFormProps) {
 
       if (data && data.length > 0) {
         const priorPicks = data[0].submission_data as PicksheetData;
+        const prevTimesUpdated = data[0].times_updated as number;
 
         // Set the prior picks and confidences
         setConfidencePicks(priorPicks.confidencePicks);
@@ -250,6 +247,7 @@ function PickSheetForm(props: PickSheetFormProps) {
         setMarginTeam(priorPicks.marginPick);
         setHighFiveTeams(priorPicks.highFivePicks);
         setTiebreaker(priorPicks.tiebreaker.toString());
+        setTimesUpdated(prevTimesUpdated);
         setPriorPicks(true);
       }
 
@@ -262,10 +260,6 @@ function PickSheetForm(props: PickSheetFormProps) {
     fetchPicks().catch(err => {
       console.error(err);
     });
-
-    return () => {
-      ignore = true;
-    };
   }, []);
 
   useEffect(() => {
@@ -318,7 +312,7 @@ function PickSheetForm(props: PickSheetFormProps) {
     if (priorPicks) {
       const { data: picksheetPicksheetData, error: picksheetSubmissionError } = await supabaseClient
         .from(TABLE_NAMES.USER_PICKS)
-        .update({ submission_data: userSubmission })
+        .update({ submission_data: userSubmission, times_updated: timesUpdated + 1 })
         .eq('week', CURRENT_WEEK)
         .eq('user_id', id)
         .select();
@@ -339,7 +333,7 @@ function PickSheetForm(props: PickSheetFormProps) {
         .insert({
           user_id: id,
           week: CURRENT_WEEK,
-          times_updated: 0,
+          times_updated: timesUpdated,
           submission_data: userSubmission,
         })
         .select();
