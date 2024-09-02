@@ -102,6 +102,20 @@ function PickSheetForm(props: PickSheetFormProps) {
     );
   }
 
+  if (session.user.aud !== 'authenticated') {
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            Thank you for signing up for the pool! It looks like you haven't yet activated your account, please check
+            your email for the activation link you received when you signed up. If you can't find it, please reach out
+            to Ryan.
+          </h3>
+        </div>
+      </section>
+    );
+  }
+
   const { firstName, lastName } = userInfo;
   const currentWeekInfo = seasonData.find(weekInfo => weekInfo.weekId === `week_${CURRENT_WEEK}`)!.matchups;
   const numGamesThisWeek = currentWeekInfo.length;
