@@ -95,7 +95,6 @@ function HighFiveTable() {
   const currentTime = new Date();
   const isBrandNewWeek = CURRENT_WEEK_STATUS === 'START';
   const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
-  console.log(isBrandNewWeek, showAllPicks);
 
   return (
     <section className="section">
