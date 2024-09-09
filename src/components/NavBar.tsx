@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import { MARCH_MADNESS_STATE, SIGN_UPS_DISABLED } from '../constants';
+import { CURRENT_WEEK_CUTOFF_TIME, MARCH_MADNESS_STATE, SIGN_UPS_DISABLED } from '../constants';
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -16,6 +16,8 @@ function NavBar() {
   // This is a lazy implementation that will not look for resizing, just on initial load
   const [windowDimensions] = useState<{ width: number; height: number }>(getWindowDimensions());
   const isMobile = windowDimensions.width <= 768;
+
+  const currentTime = new Date();
 
   // Using a key for the dropdowns in the navbar will make sure that they close every time you click a link in them
   // This will change the key prop for the div causing a re-render which will ensure the dropdowns always close when
@@ -75,9 +77,16 @@ function NavBar() {
           <Link className="navbar-item" to="/hall-of-fame" onClick={onBurgerClick}>
             Hall of Fame
           </Link>
-          <Link className="navbar-item" to="/picksheet" onClick={onBurgerClick}>
-            Picksheet
-          </Link>
+          {currentTime < CURRENT_WEEK_CUTOFF_TIME && (
+            <Link className="navbar-item" to="/picksheet" onClick={onBurgerClick}>
+              Picksheet
+            </Link>
+          )}
+          {currentTime >= CURRENT_WEEK_CUTOFF_TIME && (
+            <Link className="navbar-item" to="/my-picks" onClick={onBurgerClick}>
+              My Picks
+            </Link>
+          )}
           <div
             className={`navbar-item has-dropdown is-hoverable ${standingsState && isMobile ? 'is-active' : ''}`}
             key={`${location}-dd-1`}
