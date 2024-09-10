@@ -66,6 +66,12 @@ function WeeklyPicksTable() {
   const currentTime = new Date();
   const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
 
+  // Logic for sorting the table
+  const [sortingMethod, setSortingMethod] = useState<SortedBy>(SortedBy.Default);
+  const [tableMessage, setTableMessage] = useState<string>(
+    'Pool members sorted by their last name in alphabetical order'
+  );
+
   const sortWeekly = (mostFirst: boolean) => {
     currentWeekPicks.sort((row1, row2) => {
       const playerInfo1 = playerData.find(player => player.id === row1.user_id)!;
@@ -92,17 +98,18 @@ function WeeklyPicksTable() {
     });
   };
 
-  // Logic for sorting the table
-  const [sortingMethod, setSortingMethod] = useState<SortedBy>(SortedBy.Default);
   const onWeekSort = () => {
     if (sortingMethod !== SortedBy.WeeklyDown && sortingMethod !== SortedBy.WeeklyUp) {
       setSortingMethod(SortedBy.WeeklyDown);
+      setTableMessage('Pool members sorted by their weekly points from most to least');
       sortWeekly(true);
     } else if (sortingMethod === SortedBy.WeeklyDown) {
       setSortingMethod(SortedBy.WeeklyUp);
+      setTableMessage('Pool members sorted by their weekly points from least to most');
       sortWeekly(false);
     } else if (sortingMethod === SortedBy.WeeklyUp) {
       setSortingMethod(SortedBy.Default);
+      setTableMessage('Pool members sorted by their last name in alphabetical order');
       sortDefault();
     }
   };
@@ -110,12 +117,15 @@ function WeeklyPicksTable() {
   const onSeasonSort = () => {
     if (sortingMethod !== SortedBy.SeasonDown && sortingMethod !== SortedBy.SeasonUp) {
       setSortingMethod(SortedBy.SeasonDown);
+      setTableMessage('Pool members sorted by their season points from most to least');
       sortSeason(true);
     } else if (sortingMethod === SortedBy.SeasonDown) {
       setSortingMethod(SortedBy.SeasonUp);
+      setTableMessage('Pool members sorted by their season points from least to most');
       sortSeason(false);
     } else if (sortingMethod === SortedBy.SeasonUp) {
       setSortingMethod(SortedBy.Default);
+      setTableMessage('Pool members sorted by their last name in alphabetical order');
       sortDefault();
     }
   };
@@ -125,7 +135,7 @@ function WeeklyPicksTable() {
       <tbody>
         <tr className="weekly-picks-table-top">
           <td colSpan={numGamesThisWeek + 4} align={'center'}>
-            Pool members sorted by their last name in alphabetical order (<b>Bold = Win</b>)
+            {tableMessage} (<b>Bold = Win</b>)
           </td>
         </tr>
         <tr>
