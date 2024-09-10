@@ -66,55 +66,57 @@ function WeeklyPicksTable() {
   const currentTime = new Date();
   const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
 
+  const sortWeekly = (mostFirst: boolean) => {
+    currentWeekPicks.sort((row1, row2) => {
+      const playerInfo1 = playerData.find(player => player.id === row1.user_id)!;
+      const playerInfo2 = playerData.find(player => player.id === row2.user_id)!;
+      return mostFirst
+        ? playerInfo2.currentWeekPoints - playerInfo1.currentWeekPoints
+        : playerInfo1.currentWeekPoints - playerInfo2.currentWeekPoints;
+    });
+  };
+
+  const sortSeason = (mostFirst: boolean) => {
+    currentWeekPicks.sort((row1, row2) => {
+      const playerInfo1 = playerData.find(player => player.id === row1.user_id)!;
+      const playerInfo2 = playerData.find(player => player.id === row2.user_id)!;
+      return mostFirst ? playerInfo2.points - playerInfo1.points : playerInfo1.points - playerInfo2.points;
+    });
+  };
+
+  const sortDefault = () => {
+    currentWeekPicks.sort((row1, row2) => {
+      const { firstName: firstName1, lastName: lastName1 } = row1.submission_data;
+      const { firstName: firstName2, lastName: lastName2 } = row2.submission_data;
+      return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
+    });
+  };
+
   // Logic for sorting the table
   const [sortingMethod, setSortingMethod] = useState<SortedBy>(SortedBy.Default);
   const onWeekSort = () => {
     if (sortingMethod !== SortedBy.WeeklyDown && sortingMethod !== SortedBy.WeeklyUp) {
       setSortingMethod(SortedBy.WeeklyDown);
-      currentWeekPicks.sort((row1, row2) => {
-        const playerInfo1 = playerData.find(player => player.id === row1.user_id)!;
-        const playerInfo2 = playerData.find(player => player.id === row2.user_id)!;
-        return playerInfo2.currentWeekPoints - playerInfo1.currentWeekPoints;
-      });
+      sortWeekly(true);
     } else if (sortingMethod === SortedBy.WeeklyDown) {
       setSortingMethod(SortedBy.WeeklyUp);
-      currentWeekPicks.sort((row1, row2) => {
-        const playerInfo1 = playerData.find(player => player.id === row1.user_id)!;
-        const playerInfo2 = playerData.find(player => player.id === row2.user_id)!;
-        return playerInfo1.currentWeekPoints - playerInfo2.currentWeekPoints;
-      });
+      sortWeekly(false);
     } else if (sortingMethod === SortedBy.WeeklyUp) {
       setSortingMethod(SortedBy.Default);
-      currentWeekPicks.sort((row1, row2) => {
-        const { firstName: firstName1, lastName: lastName1 } = row1.submission_data;
-        const { firstName: firstName2, lastName: lastName2 } = row2.submission_data;
-        return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
-      });
+      sortDefault();
     }
   };
 
   const onSeasonSort = () => {
     if (sortingMethod !== SortedBy.SeasonDown && sortingMethod !== SortedBy.SeasonUp) {
       setSortingMethod(SortedBy.SeasonDown);
-      currentWeekPicks.sort((row1, row2) => {
-        const playerInfo1 = playerData.find(player => player.id === row1.user_id)!;
-        const playerInfo2 = playerData.find(player => player.id === row2.user_id)!;
-        return playerInfo2.points - playerInfo1.points;
-      });
+      sortSeason(true);
     } else if (sortingMethod === SortedBy.SeasonDown) {
       setSortingMethod(SortedBy.SeasonUp);
-      currentWeekPicks.sort((row1, row2) => {
-        const playerInfo1 = playerData.find(player => player.id === row1.user_id)!;
-        const playerInfo2 = playerData.find(player => player.id === row2.user_id)!;
-        return playerInfo1.points - playerInfo2.points;
-      });
+      sortSeason(false);
     } else if (sortingMethod === SortedBy.SeasonUp) {
       setSortingMethod(SortedBy.Default);
-      currentWeekPicks.sort((row1, row2) => {
-        const { firstName: firstName1, lastName: lastName1 } = row1.submission_data;
-        const { firstName: firstName2, lastName: lastName2 } = row2.submission_data;
-        return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
-      });
+      sortDefault();
     }
   };
 
