@@ -88,7 +88,6 @@ function PickSheetForm(props: PickSheetFormProps) {
   }
 
   const userInfo: UserInfo = playerData.find(playerInfo => playerInfo.id === session.user.id)!;
-  const { firstName, lastName } = userInfo;
 
   if (!userInfo) {
     return (
@@ -103,6 +102,21 @@ function PickSheetForm(props: PickSheetFormProps) {
     );
   }
 
+  if (session.user.aud !== 'authenticated') {
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            Thank you for signing up for the pool! It looks like you haven't yet activated your account, please check
+            your email for the activation link you received when you signed up. If you can't find it, please reach out
+            to Ryan.
+          </h3>
+        </div>
+      </section>
+    );
+  }
+
+  const { firstName, lastName } = userInfo;
   const currentWeekInfo = seasonData.find(weekInfo => weekInfo.weekId === `week_${CURRENT_WEEK}`)!.matchups;
   const numGamesThisWeek = currentWeekInfo.length;
   const lastGameCompleted =
@@ -123,6 +137,7 @@ function PickSheetForm(props: PickSheetFormProps) {
   const [highFiveTeams, setHighFiveTeams] = useState<string[]>([]);
   const [tiebreaker, setTiebreaker] = useState<string>('');
   const [validSubmission, setValidSubmission] = useState<boolean>(false);
+  const [timesUpdated, setTimesUpdated] = useState<number>(0);
   const submissionRef = useRef(false);
   const pingedDatabaseRef = useRef(false);
 
@@ -221,12 +236,7 @@ function PickSheetForm(props: PickSheetFormProps) {
 
   // Ping the database to see if there are picks from this week for this user
   useEffect(() => {
-    let ignore = false;
     const fetchPicks = async () => {
-      if (ignore) {
-        return;
-      }
-
       const { data, error } = await supabaseClient
         .from(TABLE_NAMES.USER_PICKS)
         .select()
@@ -239,6 +249,7 @@ function PickSheetForm(props: PickSheetFormProps) {
 
       if (data && data.length > 0) {
         const priorPicks = data[0].submission_data as PicksheetData;
+        const prevTimesUpdated = data[0].times_updated as number;
 
         // Set the prior picks and confidences
         setConfidencePicks(priorPicks.confidencePicks);
@@ -250,6 +261,7 @@ function PickSheetForm(props: PickSheetFormProps) {
         setMarginTeam(priorPicks.marginPick);
         setHighFiveTeams(priorPicks.highFivePicks);
         setTiebreaker(priorPicks.tiebreaker.toString());
+        setTimesUpdated(prevTimesUpdated);
         setPriorPicks(true);
       }
 
@@ -262,10 +274,6 @@ function PickSheetForm(props: PickSheetFormProps) {
     fetchPicks().catch(err => {
       console.error(err);
     });
-
-    return () => {
-      ignore = true;
-    };
   }, []);
 
   useEffect(() => {
@@ -318,7 +326,7 @@ function PickSheetForm(props: PickSheetFormProps) {
     if (priorPicks) {
       const { data: picksheetPicksheetData, error: picksheetSubmissionError } = await supabaseClient
         .from(TABLE_NAMES.USER_PICKS)
-        .update({ submission_data: userSubmission })
+        .update({ submission_data: userSubmission, times_updated: timesUpdated + 1 })
         .eq('week', CURRENT_WEEK)
         .eq('user_id', id)
         .select();
@@ -339,7 +347,7 @@ function PickSheetForm(props: PickSheetFormProps) {
         .insert({
           user_id: id,
           week: CURRENT_WEEK,
-          times_updated: 0,
+          times_updated: timesUpdated,
           submission_data: userSubmission,
         })
         .select();
@@ -381,10 +389,6 @@ function PickSheetForm(props: PickSheetFormProps) {
               timeZone: 'America/New_York',
             })}{' '}
             ET
-          </h2>
-          <h2 className="subtitle has-text-danger">
-            The picksheet is currently being tested, you are welcome to make picks right now but they will not be saved
-            for the regular season
           </h2>
           <div className="block">
             <ConfidencePicks

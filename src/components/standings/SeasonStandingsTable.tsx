@@ -1,5 +1,6 @@
 import playerData from '../../../data/2024/football/players.json';
 import { useNavigate } from 'react-router-dom';
+import { CURRENT_WEEK, SEASON_READY } from '../../constants';
 
 interface TableColumns {
   position: number;
@@ -42,8 +43,19 @@ function SeasonStandingsTable() {
     calculatedPicks.push(rowInfo);
   }
 
-  // Sort everyone by points now
-  calculatedPicks.sort((row1, row2) => row2.points - row1.points || row2.wins - row1.wins);
+  if (!SEASON_READY && CURRENT_WEEK === 1) {
+    // If the season hasn't started, just list everyone in alphabetical order
+    calculatedPicks.sort((row1, row2) => {
+      const firstName1 = row1.name.split(' ')[0];
+      const lastName1 = row1.name.split(' ').pop()!;
+      const firstName2 = row2.name.split(' ')[0];
+      const lastName2 = row2.name.split(' ').pop()!;
+      return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
+    });
+  } else {
+    // Otherwise, sort everyone by points now
+    calculatedPicks.sort((row1, row2) => row2.points - row1.points || row2.wins - row1.wins);
+  }
 
   // For looping through the submissions
   const tableKeys: string[] = Object.keys(calculatedPicks[0]);

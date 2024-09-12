@@ -36,6 +36,7 @@ const UserBracket = lazy(() => import('./pages/UserBracket'));
 const YearlyAwards = lazy(() => import('./pages/YearlyAwards'));
 const Payouts = lazy(() => import('./pages/Payouts'));
 const HallOfFame = lazy(() => import('./pages/HallOfFame'));
+const UserPicks = lazy(() => import('./pages/UserPicks'));
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/picksheet" element={<PickSheet />} />
           <Route path="/picksheet-success" element={<PickSheetSuccess />} />
+          <Route path="/my-picks" element={<UserPicks />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-up-success" element={<SignUpSuccess />} />
           <Route path="/season-standings" element={<SeasonStandings />} />

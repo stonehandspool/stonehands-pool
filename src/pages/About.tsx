@@ -36,7 +36,7 @@ const fakeMatchupInfo = {
 };
 
 function About() {
-  const numPlayers = 109;
+  const numPlayers = 120;
   const buyIn = 100;
   const totalPool = numPlayers * buyIn;
   const totalSurv = 500;

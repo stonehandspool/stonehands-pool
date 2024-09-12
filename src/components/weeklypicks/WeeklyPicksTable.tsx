@@ -15,6 +15,18 @@ import {
 import './WeeklyPicksTable.css';
 import { useWeeklyPick } from '../../utils/useWeeklyPicks';
 
+import SortDefault from '../../assets/sort.svg';
+import SortUp from '../../assets/sort_up.svg';
+import SortDown from '../../assets/sort_down.svg';
+
+enum SortedBy {
+  Default,
+  WeeklyUp,
+  WeeklyDown,
+  SeasonUp,
+  SeasonDown,
+}
+
 function WeeklyPicksTable() {
   if (!SEASON_READY) {
     return (
@@ -31,6 +43,12 @@ function WeeklyPicksTable() {
 
   useEffect(() => {
     if (weeklyPicks && weeklyPicks.length > 0) {
+      // Sort everyone alphabetically by name by default
+      weeklyPicks[0].picks.sort((row1, row2) => {
+        const { firstName: firstName1, lastName: lastName1 } = row1.submission_data;
+        const { firstName: firstName2, lastName: lastName2 } = row2.submission_data;
+        return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
+      });
       setCurrentWeekPicks(weeklyPicks[0].picks);
     }
   }, [weeklyPicks]);
@@ -43,24 +61,81 @@ function WeeklyPicksTable() {
   const atArr = Array(numGamesThisWeek).fill('@');
   const emptyArr = Array(numGamesThisWeek + 4).fill('');
 
-  // Sort everyone alphabetically by name
-  currentWeekPicks.sort((row1, row2) => {
-    const { firstName: firstName1, lastName: lastName1 } = row1.submission_data;
-    const { firstName: firstName2, lastName: lastName2 } = row2.submission_data;
-    return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
-  });
-
   // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
   // can't see what people have chosen prior to the cutoff happening
   const currentTime = new Date();
   const showAllPicks = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
+
+  // Logic for sorting the table
+  const [sortingMethod, setSortingMethod] = useState<SortedBy>(SortedBy.Default);
+  const [tableMessage, setTableMessage] = useState<string>(
+    'Pool members sorted by their last name in alphabetical order'
+  );
+
+  const sortWeekly = (mostFirst: boolean) => {
+    currentWeekPicks.sort((row1, row2) => {
+      const playerInfo1 = playerData.find(player => player.id === row1.user_id)!;
+      const playerInfo2 = playerData.find(player => player.id === row2.user_id)!;
+      return mostFirst
+        ? playerInfo2.currentWeekPoints - playerInfo1.currentWeekPoints
+        : playerInfo1.currentWeekPoints - playerInfo2.currentWeekPoints;
+    });
+  };
+
+  const sortSeason = (mostFirst: boolean) => {
+    currentWeekPicks.sort((row1, row2) => {
+      const playerInfo1 = playerData.find(player => player.id === row1.user_id)!;
+      const playerInfo2 = playerData.find(player => player.id === row2.user_id)!;
+      return mostFirst ? playerInfo2.points - playerInfo1.points : playerInfo1.points - playerInfo2.points;
+    });
+  };
+
+  const sortDefault = () => {
+    currentWeekPicks.sort((row1, row2) => {
+      const { firstName: firstName1, lastName: lastName1 } = row1.submission_data;
+      const { firstName: firstName2, lastName: lastName2 } = row2.submission_data;
+      return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
+    });
+  };
+
+  const onWeekSort = () => {
+    if (sortingMethod !== SortedBy.WeeklyDown && sortingMethod !== SortedBy.WeeklyUp) {
+      setSortingMethod(SortedBy.WeeklyDown);
+      setTableMessage('Pool members sorted by their weekly points from most to least');
+      sortWeekly(true);
+    } else if (sortingMethod === SortedBy.WeeklyDown) {
+      setSortingMethod(SortedBy.WeeklyUp);
+      setTableMessage('Pool members sorted by their weekly points from least to most');
+      sortWeekly(false);
+    } else if (sortingMethod === SortedBy.WeeklyUp) {
+      setSortingMethod(SortedBy.Default);
+      setTableMessage('Pool members sorted by their last name in alphabetical order');
+      sortDefault();
+    }
+  };
+
+  const onSeasonSort = () => {
+    if (sortingMethod !== SortedBy.SeasonDown && sortingMethod !== SortedBy.SeasonUp) {
+      setSortingMethod(SortedBy.SeasonDown);
+      setTableMessage('Pool members sorted by their season points from most to least');
+      sortSeason(true);
+    } else if (sortingMethod === SortedBy.SeasonDown) {
+      setSortingMethod(SortedBy.SeasonUp);
+      setTableMessage('Pool members sorted by their season points from least to most');
+      sortSeason(false);
+    } else if (sortingMethod === SortedBy.SeasonUp) {
+      setSortingMethod(SortedBy.Default);
+      setTableMessage('Pool members sorted by their last name in alphabetical order');
+      sortDefault();
+    }
+  };
 
   return (
     <table className="table is-striped is-hoverable mx-auto has-text-centered">
       <tbody>
         <tr className="weekly-picks-table-top">
           <td colSpan={numGamesThisWeek + 4} align={'center'}>
-            Pool members sorted by their last name in alphabetical order (<b>Bold = Win</b>)
+            {tableMessage} (<b>Bold = Win</b>)
           </td>
         </tr>
         <tr>
@@ -107,12 +182,34 @@ function WeeklyPicksTable() {
             Tiebreaker
           </td>
           <td>
-            Weekly <br />
-            Points
+            <div className="is-flex is-align-items-center is-clickable" onClick={onWeekSort}>
+              <span>
+                Weekly <br />
+                Points
+              </span>
+              <span className="icon">
+                {sortingMethod !== SortedBy.WeeklyDown && sortingMethod !== SortedBy.WeeklyUp && (
+                  <img src={SortDefault} />
+                )}
+                {sortingMethod === SortedBy.WeeklyDown && <img src={SortDown} />}
+                {sortingMethod === SortedBy.WeeklyUp && <img src={SortUp} />}
+              </span>
+            </div>
           </td>
           <td>
-            Season <br />
-            Points
+            <div className="is-flex is-align-items-center is-clickable" onClick={onSeasonSort}>
+              <span>
+                Season <br />
+                Points
+              </span>
+              <span className="icon">
+                {sortingMethod !== SortedBy.SeasonDown && sortingMethod !== SortedBy.SeasonUp && (
+                  <img src={SortDefault} />
+                )}
+                {sortingMethod === SortedBy.SeasonDown && <img src={SortDown} />}
+                {sortingMethod === SortedBy.SeasonUp && <img src={SortUp} />}
+              </span>
+            </div>
           </td>
         </tr>
         <tr>

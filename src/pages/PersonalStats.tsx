@@ -117,7 +117,7 @@ function PersonalStats() {
 
   const currentTime = new Date();
   const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
-  const weekToShow = CURRENT_WEEK === 1 ? CURRENT_WEEK : showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
+  const weekToShow = showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
 
   const [userPicks, setUserPicks] = useState<DatabaseData[]>([]);
   const allPicks = useWeeklyPick(1, CURRENT_WEEK > 1 ? CURRENT_WEEK : undefined);
@@ -225,6 +225,16 @@ function PersonalStats() {
               <div>
                 <p className="heading">High Five Total</p>
                 <p className="title">{userInfo.highFiveTotal}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mb-6">
+          <h4 className="title is-4 has-text-centered">Trophy Case:</h4>
+          <div className="box is-narrow">
+            <div className="has-text-centered">
+              <div>
+                <p className="title">Coming Soon!</p>
               </div>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { User } from '@supabase/supabase-js';
 import { useNavigate } from 'react-router-dom';
 import * as EmailValidator from 'email-validator';
 import { TABLE_NAMES } from '../config/supabaseConfig';
@@ -16,7 +15,7 @@ function SignUp() {
       <section className="section">
         <div className="container">
           <h1 className="title is-1 has-text-centered">
-            Sorry, the season has started and sign up has been disabled until next year
+            Sorry, the season has started and sign ups have been disabled until next year.
           </h1>
         </div>
       </section>
@@ -67,8 +66,8 @@ function SignUp() {
       return;
     }
 
-    const capitalizedFirstName = capitalize(firstName).trim();
-    const capitalizedLastName = capitalize(lastName).trim();
+    const capitalizedFirstName = capitalize(firstName.toLowerCase()).trim();
+    const capitalizedLastName = capitalize(lastName.toLowerCase()).trim();
 
     const { data, error } = await supabaseClient.auth.signUp({
       email,
