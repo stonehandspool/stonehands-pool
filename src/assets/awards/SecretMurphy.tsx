@@ -1,7 +1,7 @@
 import AwardTooltip from './AwardTooltip';
 
 function SecretMurphy() {
-  const tooltip = 'Secret Murphy winner';
+  const tooltip = 'Found the Secret Murphy Award!';
 
   return (
     <AwardTooltip text={tooltip}>

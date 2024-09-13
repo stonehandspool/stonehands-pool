@@ -1,7 +1,7 @@
 import AwardTooltip from './AwardTooltip';
 
 function SecretMango() {
-  const tooltip = 'Secret Mango winner';
+  const tooltip = 'Found the Secret Mango Award!';
 
   return (
     <AwardTooltip text={tooltip}>
