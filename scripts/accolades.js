@@ -3,13 +3,12 @@ import { readFile } from 'fs/promises';
 
 // Get the data from the players json file
 const playerData = await JSON.parse(await readFile(path.resolve(`data/2024/football/players.json`)));
-const { players } = playerData;
 
 const highestRiser = { name: '', change: 0 };
 const lowestFaller = { name: '', change: 0 };
 
-for (let i = 0; i < players.length; i++) {
-  const player = players[i];
+for (let i = 0; i < playerData.length; i++) {
+  const player = playerData[i];
   const change = parseInt(player.change, 10);
   if (change > highestRiser.change) {
     highestRiser.name = `${player.firstName} ${player.lastName}`;
