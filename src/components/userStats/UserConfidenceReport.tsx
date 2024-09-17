@@ -1,6 +1,23 @@
-import * as TeamLogos from '../../assets/logos';
-import * as teamData from '../../../data/2023/teams.json';
+import { DatabaseData } from '../../constants';
 import UserConfidencePicksTable from './UserConfidencePicksTable';
+
+import * as TeamLogos from '../../assets/logos';
+import teamData from '../../../data/2024/football/teams.json';
+
+type TeamInfo = {
+  team: string;
+  wins: number;
+  losses: number;
+  ties: number;
+  timesCorrect: number;
+  timesIncorrect: number;
+};
+
+type UserConfidenceReportProps = {
+  userPicks: DatabaseData[];
+  teamsByPicks: TeamInfo[];
+  pointsByWeek: number[];
+};
 
 function getProgressBarColor(percent: number) {
   if (percent >= 0.8) {
@@ -12,9 +29,8 @@ function getProgressBarColor(percent: number) {
   }
 }
 
-function UserConfidenceReport(props: any) {
+function UserConfidenceReport(props: UserConfidenceReportProps) {
   const { userPicks, teamsByPicks, pointsByWeek } = props;
-  const { teams } = teamData;
   return (
     <div className="container">
       <h4 className="title is-4">Confidence Picks by Week:</h4>
@@ -46,7 +62,7 @@ function UserConfidenceReport(props: any) {
       </div>
       {teamsByPicks.map((key: any, index: number) => {
         const { team, wins, ties, losses, timesCorrect, timesIncorrect } = teamsByPicks[index];
-        const { wins: teamWins, ties: teamTies, losses: teamLosses } = teams[team as keyof typeof teams];
+        const { wins: teamWins, ties: teamTies, losses: teamLosses } = teamData.find(t => t.teamCode === team)!;
         const Logo = TeamLogos[team as keyof typeof TeamLogos];
         const percentage = ((wins + ties / 2) / (wins + ties + losses)) * 100;
         const accuracy = (timesCorrect / (timesCorrect + timesIncorrect)) * 100;

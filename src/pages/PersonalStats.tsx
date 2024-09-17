@@ -127,7 +127,7 @@ function PersonalStats() {
       const allUserPicks: DatabaseData[] = [];
       allPicks.forEach(pickInfo => {
         const { picks } = pickInfo;
-        const userPicks = picks.find(p => p.user_id === username);
+        const userPicks = picks.find(p => p.user_id === userInfo.id);
         if (userPicks) {
           allUserPicks.push(userPicks);
         }
