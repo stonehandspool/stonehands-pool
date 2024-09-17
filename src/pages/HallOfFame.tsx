@@ -54,6 +54,7 @@ function HallOfFame() {
                 <p className="heading">You are a</p>
                 <p className="title">Secret Murphy</p>
                 <p className="subtitle">Award Winner</p>
+                <span style={{ display: 'none' }}>Email Ryan "Murphy Doo" to win!</span>
               </div>
             </div>
             <div className="level-item has-text-centered">
