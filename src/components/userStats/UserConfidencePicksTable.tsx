@@ -34,7 +34,7 @@ function UserConfidencePicksTable(props: TableProps) {
             <tr key={`${index}-row`}>
               <td className="has-text-centered">{index + 1}</td>
               {Array.from({ length: 16 }, (_, i) => i).map((_: unknown, ind: number) => {
-                const { team, confidence } = confidencePicks[index];
+                const { team, confidence } = confidencePicks[ind];
                 if (team) {
                   return (
                     <td key={`week-${index}-pick-${ind}`} className="has-text-centered">

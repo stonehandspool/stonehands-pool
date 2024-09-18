@@ -17,32 +17,35 @@ if (isNaN(year)) {
 }
 
 // Get the data from the season results json file
-const seasonData = await JSON.parse(await readFile(path.resolve(`data/${year}/season.json`)));
-const weekData = seasonData.weeks[`week_${week}`];
+const seasonData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/season.json`)));
+const weekData = seasonData.find(weekInfo => weekInfo.weekId === `week_${week}`).matchups;
 
 // Get the data from the players json file
-const playerData = await JSON.parse(await readFile(path.resolve(`data/${year}/players.json`)));
-const { players } = playerData;
+const playerData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/players.json`)));
 
 // Get the data from the weekly picks json file
-const weeklyPicksData = await JSON.parse(await readFile(path.resolve(`data/${year}/weeklyPicks.json`)));
+const weeklyPicksData = await JSON.parse(
+  await readFile(path.resolve(`data/${year}/football/weeklyPicks/week${week}.json`))
+);
 
-const weeklyPicks = weeklyPicksData.weeklyPicks[`week_${week}`];
+const weeklyPicks = weeklyPicksData.picks;
 
-const numGamesInWeek = Object.keys(weekData).length;
+const numGamesInWeek = weekData.length;
 // Find any remaining games
 const matchupsRemaining = [];
-for (let i = 1; i <= numGamesInWeek; i++) {
-  const matchupInfo = weekData[`matchup_${i}`];
+for (let i = 0; i < numGamesInWeek; i++) {
+  const matchupInfo = weekData[i];
   if (!matchupInfo.evaluated) {
-    matchupsRemaining.push({ matchupId: `matchup-${i - 1}`, ...matchupInfo });
+    matchupsRemaining.push(matchupInfo);
   }
 }
 
+console.log(matchupsRemaining);
+
 // Build up current standings with all needed info
 const currentStandings = [];
-for (let i = 0; i < players.length; i++) {
-  const playerInfo = players[i];
+for (let i = 0; i < playerData.length; i++) {
+  const playerInfo = playerData[i];
   const playerPicks = weeklyPicks.find(picks => picks.user_id === playerInfo.id);
   const neededInfo = {
     id: playerInfo.id,
@@ -51,33 +54,33 @@ for (let i = 0; i < players.length; i++) {
     losses: playerInfo.currentWeekLosses,
     points: playerInfo.currentWeekPoints,
     tiebreaker: playerInfo.currentWeekTiebreaker,
+    remainingChoices: [],
   };
   for (let i = 0; i < matchupsRemaining.length; i++) {
     const { matchupId } = matchupsRemaining[i];
-    neededInfo[`matchup${i}pick`] = playerPicks.submission_data[`${matchupId}`];
-    neededInfo[`matchup${i}confidence`] = playerPicks.submission_data[`${matchupId}-confidence`];
+    neededInfo.remainingChoices.push(playerPicks.submission_data.confidencePicks.find(p => p.matchupId === matchupId));
   }
   currentStandings.push(neededInfo);
 }
 
 // Sort them by the current standings (we don't know the tiebreaker so don't factor it in here)
 currentStandings.sort((row1, row2) => {
-  // const row1Tb = Math.abs(MONDAY_NIGHT_TOTAL - row1.tiebreaker);
-  // const row2Tb = Math.abs(MONDAY_NIGHT_TOTAL - row2.tiebreaker);
-  return row2.points - row1.points || row2.wins - row1.wins; // || row1Tb - row2Tb;
+  return row2.points - row1.points || row2.wins - row1.wins;
 });
 
 // Now calculate the different scenarios
 if (matchupsRemaining.length === 1) {
-  const possibleWinners = [matchupsRemaining[0].home_team, matchupsRemaining[0].away_team];
+  const possibleWinners = [matchupsRemaining[0].homeTeam, matchupsRemaining[0].awayTeam];
+  const { matchupId } = matchupsRemaining[0];
   for (let i = 0; i < possibleWinners.length; i++) {
     const team = possibleWinners[i];
     const possibleStandings = [];
     for (let i = 0; i < currentStandings.length; i++) {
       const copy = { ...currentStandings[i] };
-      if (copy.matchup0pick === team) {
+      const { team: chosenTeam, confidence } = copy.remainingChoices.find(choice => choice.matchupId === matchupId);
+      if (chosenTeam === team) {
         copy.wins++;
-        copy.points += copy.matchup0confidence;
+        copy.points += confidence;
       } else {
         copy.losses++;
       }
@@ -96,8 +99,10 @@ if (matchupsRemaining.length === 1) {
     console.log('');
   }
 } else if (matchupsRemaining.length === 2) {
-  const possibleWinners1 = [matchupsRemaining[0].home_team, matchupsRemaining[0].away_team];
-  const possibleWinners2 = [matchupsRemaining[1].home_team, matchupsRemaining[1].away_team];
+  const possibleWinners1 = [matchupsRemaining[0].homeTeam, matchupsRemaining[0].awayTeam];
+  const game1Id = matchupsRemaining[0].matchupId;
+  const possibleWinners2 = [matchupsRemaining[1].homeTeam, matchupsRemaining[1].awayTeam];
+  const game2Id = matchupsRemaining[1].matchupId;
   for (let i = 0; i < possibleWinners1.length; i++) {
     for (let j = 0; j < possibleWinners2.length; j++) {
       const teamA = possibleWinners1[i];
@@ -105,15 +110,21 @@ if (matchupsRemaining.length === 1) {
       const possibleStandings = [];
       for (let k = 0; k < currentStandings.length; k++) {
         const copy = { ...currentStandings[k] };
-        if (copy.matchup0pick === teamA) {
+        const { team: chosenTeamA, confidence: confidenceA } = copy.remainingChoices.find(
+          choice => choice.matchupId === game1Id
+        );
+        const { team: chosenTeamB, confidence: confidenceB } = copy.remainingChoices.find(
+          choice => choice.matchupId === game2Id
+        );
+        if (chosenTeamA === teamA) {
           copy.wins++;
-          copy.points += copy.matchup0confidence;
+          copy.points += confidenceA;
         } else {
           copy.losses++;
         }
-        if (copy.matchup1pick === teamB) {
+        if (chosenTeamB === teamB) {
           copy.wins++;
-          copy.points += copy.matchup1confidence;
+          copy.points += confidenceB;
         } else {
           copy.losses++;
         }
