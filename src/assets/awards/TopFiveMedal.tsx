@@ -8,7 +8,7 @@ type TopFiveMedalProps = {
 
 function TopFiveMedal(props: TopFiveMedalProps) {
   const { place, pool, year } = props;
-  const tooltip = `${year} ${pool} winner`;
+  const tooltip = `${year} ${pool} Pool ${place}th place`;
 
   return (
     <AwardTooltip text={tooltip}>

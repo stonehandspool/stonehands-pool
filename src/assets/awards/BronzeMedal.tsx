@@ -7,7 +7,7 @@ type BronzeMedalProps = {
 
 function BronzeMedal(props: BronzeMedalProps) {
   const { pool, year } = props;
-  const tooltip = `${year} ${pool} winner`;
+  const tooltip = `${year} ${pool} Pool 3rd place`;
 
   return (
     <AwardTooltip text={tooltip}>
