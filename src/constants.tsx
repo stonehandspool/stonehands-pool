@@ -12,7 +12,7 @@ export const CURRENT_YEAR: string = '2024';
 // This is a date in a valid `Date` format which should be taken from the season schedule each week
 // This is used to check if a user can still submit their picksheet, it should generally be the first Sunday game each week
 // Unless there is a few Saturday games later in the season
-export const CURRENT_WEEK_CUTOFF_TIME = new Date('2024-09-29T17:00:00.000Z');
+export const CURRENT_WEEK_CUTOFF_TIME = new Date('2024-09-29T16:00:00.000Z');
 // This is whatever the last scheduled game is in a given week
 // This is used to tell the users what game they should be predicting the total final score of for a week
 export const CURRENT_WEEK_FINAL_GAME: string = 'SEA @ DET';
