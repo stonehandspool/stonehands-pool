@@ -14,7 +14,7 @@ type UserPicksTableProps = {
 
 function UserPicksTable(props: UserPicksTableProps) {
   const { session } = props;
-  const pingedDatabaseRef = useRef(false);
+  const [dataFetched, setDataFetched] = useState<boolean>(false);
   const userId = session?.user.id;
 
   // Get the users picks via the navigate hook
@@ -37,26 +37,24 @@ function UserPicksTable(props: UserPicksTableProps) {
       if (data && data.length > 0) {
         const priorPicks = data[0].submission_data as PicksheetData;
         setCurrentWeekPicks(priorPicks);
-
-        if (!pingedDatabaseRef.current) {
-          pingedDatabaseRef.current = true;
-        }
       }
+      setDataFetched(true);
     };
     // First, check the database since that is the most up-to-date version most of the time
     fetchPicks().catch(err => {
       console.error(err);
+      setDataFetched(true);
     });
   }, []);
 
   useEffect(() => {
-    if (pingedDatabaseRef.current && weeklyPicks && weeklyPicks.length > 0) {
+    if (dataFetched && !currentWeekPicks && weeklyPicks && weeklyPicks.length > 0) {
       const userData = weeklyPicks[0].picks.find(pickData => pickData.user_id === userId);
       if (userData) {
         setCurrentWeekPicks(userData.submission_data);
       }
     }
-  }, [weeklyPicks, pingedDatabaseRef.current]);
+  }, [weeklyPicks, dataFetched]);
 
   if (!currentWeekPicks) {
     return <></>;
