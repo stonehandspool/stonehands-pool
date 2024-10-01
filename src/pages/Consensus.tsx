@@ -16,14 +16,14 @@ enum Pools {
 function Consensus() {
   const [activeChoice, setActiveChoice] = useState(Pools.Confidence);
 
-  const weeklyPicks = useWeeklyPick(CURRENT_WEEK);
-  const pickData = weeklyPicks.length > 0 ? weeklyPicks[0].picks : [];
-
   // We want to make sure that everyones weekly picks only show up once the cutoff has occurred so that other players
   // can't see what people have chosen prior to the cutoff happening
   const currentTime = new Date();
   const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
   const weekToShow = CURRENT_WEEK === 1 ? CURRENT_WEEK : showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
+
+  const weeklyPicks = useWeeklyPick(weekToShow);
+  const pickData = weeklyPicks.length > 0 ? weeklyPicks[0].picks : [];
 
   const showChoice = (choice: Pools) => {
     setActiveChoice(choice);
