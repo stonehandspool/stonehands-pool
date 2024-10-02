@@ -19,31 +19,111 @@ const trophyCaseData = [
   },
   {
     trophyName: 'firstPlace',
-    eligibleUsers: [],
+    eligibleUsers: [
+      {
+        userId: 'ad50c309-eaab-4650-8f03-3828d72eac50',
+        pool: 'Confidence',
+      },
+      {
+        userId: '36061310-5718-49b2-9d16-99768bcc4aa3',
+        pool: 'Survivor',
+      },
+      {
+        userId: '3cd5ef80-6348-407b-bd5c-6477f49c322e',
+        pool: 'Margin',
+      },
+      {
+        userId: '8b94838f-9e4c-45b0-99ea-f5d1104d4f1a',
+        pool: 'High Five',
+      },
+    ],
   },
   {
     trophyName: 'secondPlace',
-    eligibleUsers: [],
+    eligibleUsers: [
+      {
+        userId: '0869826a-9ee4-4001-8142-f213f7504cc2',
+        pool: 'Confidence',
+      },
+      {
+        userId: '549b94f3-bbdb-49e2-9431-7de82d723f58',
+        pool: 'Margin',
+      },
+      {
+        userId: 'ad50c309-eaab-4650-8f03-3828d72eac50',
+        pool: 'High Five',
+      },
+      {
+        userId: '1c2c4e7e-c5b8-44a1-bf3a-dbf7449ddb14',
+        pool: 'High Five',
+      },
+    ],
   },
   {
     trophyName: 'thirdPlace',
-    eligibleUsers: [],
+    eligibleUsers: [
+      {
+        userId: 'dac48951-5b5c-48c9-b68f-c8b622c9ad40',
+        pool: 'Confidence',
+      },
+      {
+        userId: 'd50c6628-596f-4c11-a9b2-43775b1ab69f',
+        pool: 'Margin',
+      },
+    ],
   },
   {
     trophyName: 'fourthPlace',
-    eligibleUsers: [],
+    eligibleUsers: [
+      {
+        userId: 'f9a6ca4b-7169-4a26-9958-2a4c9ecf4a17',
+        pool: 'Confidence',
+      },
+      {
+        userId: '4943d53f-5a0f-44aa-8532-5a11bac66783',
+        pool: 'Margin',
+      },
+      {
+        userId: '4b957d37-eb28-4859-9bad-374dac2b7a4b',
+        pool: 'High Five',
+      },
+    ],
   },
   {
     trophyName: 'fifthPlace',
-    eligibleUsers: [],
+    eligibleUsers: [
+      {
+        userId: '891b628d-34ef-4959-a722-c4b467c24cae',
+        pool: 'Confidence',
+      },
+      {
+        userId: 'ff856cea-b8cb-470e-91ec-0fb8149f7fdb',
+        pool: 'Margin',
+      },
+      {
+        userId: 'dfcfd92c-5284-4093-8031-00eddbb19dde',
+        pool: 'High Five',
+      },
+    ],
   },
   {
     trophyName: 'secretMango',
-    eligibleUsers: [],
+    eligibleUsers: [
+      'd9985b83-08de-4e96-bcbc-e348666a554c',
+      '3cd5ef80-6348-407b-bd5c-6477f49c322e',
+      'a55189bd-505f-4b33-95fb-897d259fe149',
+      '9afffce2-a8dd-424d-b522-e60b68fc956f',
+      '32df21b5-d57b-4477-9f94-1ec20edbd2e5',
+      'd42850f1-bdd7-484b-88cc-8d58df10d63a',
+    ],
   },
   {
     trophyName: 'secretMurphy',
-    eligibleUsers: [],
+    eligibleUsers: ['d42850f1-bdd7-484b-88cc-8d58df10d63a', 'f9a6ca4b-7169-4a26-9958-2a4c9ecf4a17'],
+  },
+  {
+    trophyName: 'mrThursday',
+    eligibleUsers: ['dc6fb755-76be-483a-bc8e-cc17e138367f'],
   },
 ];
 

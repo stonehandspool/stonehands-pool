@@ -6,7 +6,7 @@ type IconProps = {
 
 function YearCounter(props: IconProps) {
   const { years } = props;
-  const tooltip = `Member for ${years} years`;
+  const tooltip = `Member for ${years} year${years > 1 ? 's' : ''}`;
 
   return (
     <AwardTooltip text={tooltip}>

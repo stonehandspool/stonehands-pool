@@ -13,6 +13,7 @@ import SecretMango from '../assets/awards/SecretMango';
 import FoundingMember from '../assets/awards/FoundingMember';
 import SecretMurphy from '../assets/awards/SecretMurphy';
 import LoneWolf from '../assets/awards/LoneWolf';
+import MrThursday from '../assets/awards/MrThursday';
 
 const toMoney = (value: number) => {
   return value.toLocaleString('en-US', {
@@ -93,6 +94,7 @@ function About() {
       <SecretMurphy />
       <FoundingMember />
       <LoneWolf team="CLE" week={2} year={2024} />
+      <MrThursday />
       <div className="container">
         <h1 className="title has-text-centered">The {CURRENT_YEAR} Stonehands Pool</h1>
         <h2 className="subtitle has-text-centered">About, How to Play, and more!</h2>
