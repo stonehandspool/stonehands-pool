@@ -11,7 +11,7 @@ function YearCounter(props: IconProps) {
   return (
     <AwardTooltip text={tooltip}>
       <svg width={40} height={40} xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${40} ${40}`}>
-        <circle r={40 / 2} cx={40 / 2} cy={40 / 2} fill="#54188b" />
+        <circle r={40 / 2 - 3} cx={40 / 2} cy={40 / 2} fill="#54188b" />
         <text
           x="50%"
           y="50%"
