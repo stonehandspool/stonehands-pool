@@ -114,8 +114,57 @@ const createRandomChoices = (playerId, username, firstName, lastName) => {
   return randomSubmission;
 };
 
+const getTeamWithOdds = (confPoints, matchupInfo, gamesInWeek) => {
+  const { winner, homeTeam, awayTeam } = matchupInfo;
+  const loser = winner === homeTeam ? awayTeam : homeTeam;
+  const pointDiff = gamesInWeek - confPoints;
+  // A random number between 1 -> 100
+  const randNum = Math.floor(Math.random() * 100) + 1;
+  switch (pointDiff) {
+    case 0: // If it is the max points of the week then always return the loser
+      return loser;
+    case 1: // One point off the max has a 1% chance of being right
+      return randNum === 1 ? winner : loser;
+    case 2: // Two and three points off have a 5% chance of being right
+    case 3:
+      return randNum <= 5 ? winner : loser;
+    case 4: // Four and five points off have a 10% chance of being right
+    case 5:
+      return randNum <= 10 ? winner : loser;
+    case 6: // Six and seven points off have a 15% chance of being right
+    case 7:
+      return randNum <= 15 ? winner : loser;
+    case 8: // Eight and nine points off have a 25% chance of being right
+    case 9:
+      return randNum <= 25 ? winner : loser;
+    case 10: // Ten and eleven points off have a 40% chance of being right
+    case 11:
+      return randNum <= 40 ? winner : loser;
+    case 12: // Twelve and higher points off have a 50% chance of being right
+    case 13:
+    case 14:
+    case 15:
+    case 16:
+      return randNum <= 50 ? winner : loser;
+    default:
+      console.log(
+        'Something went wrong when picking a random winner',
+        matchupInfo,
+        pointDiff,
+        randNum,
+        gamesInWeek,
+        confPoints
+      );
+      return loser;
+  }
+};
+
 // Now evaluate all of the responses and update the files
-playerData.forEach(player => {
+let i = 0;
+const len = playerData.length;
+let invalidSubmission = false;
+for (; i < len; i++) {
+  const player = playerData[i];
   // The player object is the season-long data for the player which needs to be updated
   // First, get the submission data for that player
   let pickInfo; // To check if this was a DB submission or random submission
@@ -160,8 +209,23 @@ playerData.forEach(player => {
     const { winner, evaluated } = matchup;
     // If we haven't evaluated this matchup yet and the game is actually finished
     if (!evaluated && winner !== '') {
+      // Before we evaluate, we change any missed picksheets based off odds (high points have much lower odds)
+      if (pickInfo.id === -1) {
+        submissionInfo.confidencePicks[
+          submissionInfo.confidencePicks.findIndex(pick => pick.matchupId === matchup.matchupId)
+        ].team = getTeamWithOdds(
+          submissionInfo.confidencePicks[
+            submissionInfo.confidencePicks.findIndex(pick => pick.matchupId === matchup.matchupId)
+          ].confidence,
+          matchup,
+          weekData.matchups.length
+        );
+      }
       const userChoice = submissionInfo.confidencePicks.find(match => match.matchupId === matchup.matchupId);
       const { team, confidence } = userChoice;
+      if (confidence === null) {
+        invalidSubmission = true;
+      }
       if (winner === team) {
         weeklyWins++;
         weeklyPoints += confidence;
@@ -173,6 +237,11 @@ playerData.forEach(player => {
       }
     }
   });
+
+  if (invalidSubmission) {
+    console.log(`Invalid submission found, returning early! ${player}`);
+    break;
+  }
 
   // Update the players information
   player.currentWeekWins += weeklyWins;
@@ -285,14 +354,15 @@ playerData.forEach(player => {
   }
   player.highFiveValues[player.highFiveValues.length - 1] = weeklyHighFivePoints;
   player.highFiveTotal = player.highFiveValues.reduce((partialSum, a) => partialSum + a, 0);
-});
-
-// Write to the weeklyPicks now in case anyone didn't submit
-if (!isSubmissionsLocked) {
-  // Now write to the weekly picks json file so that it is saved
-  const updatedWeeklyPicks = JSON.stringify(weeklyPicksData, null, 2);
-  await writeFile(path.resolve(`data/${year}/football/weeklyPicks/week${week}.json`), updatedWeeklyPicks);
 }
+
+if (invalidSubmission) {
+  process.exit();
+}
+
+// Now write to the weekly picks json file so that it is saved
+const updatedWeeklyPicks = JSON.stringify(weeklyPicksData, null, 2);
+await writeFile(path.resolve(`data/${year}/football/weeklyPicks/week${week}.json`), updatedWeeklyPicks);
 
 // Now calculate the rank of everyone for the weekly standings
 // First we need a clone to sort
