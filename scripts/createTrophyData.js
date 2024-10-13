@@ -73,57 +73,92 @@ const trophyCaseData = [
     ],
   },
   {
-    trophyName: 'fourthPlace',
+    trophyName: 'topFive',
     eligibleUsers: [
       {
         userId: 'f9a6ca4b-7169-4a26-9958-2a4c9ecf4a17',
         pool: 'Confidence',
+        place: 4,
       },
       {
         userId: '4943d53f-5a0f-44aa-8532-5a11bac66783',
         pool: 'Margin',
+        place: 4,
       },
       {
         userId: '4b957d37-eb28-4859-9bad-374dac2b7a4b',
         pool: 'High Five',
+        place: 4,
       },
-    ],
-  },
-  {
-    trophyName: 'fifthPlace',
-    eligibleUsers: [
       {
         userId: '891b628d-34ef-4959-a722-c4b467c24cae',
         pool: 'Confidence',
+        place: 5,
       },
       {
         userId: 'ff856cea-b8cb-470e-91ec-0fb8149f7fdb',
         pool: 'Margin',
+        place: 5,
       },
       {
         userId: 'dfcfd92c-5284-4093-8031-00eddbb19dde',
         pool: 'High Five',
+        place: 5,
       },
     ],
   },
   {
     trophyName: 'secretMango',
     eligibleUsers: [
-      'd9985b83-08de-4e96-bcbc-e348666a554c',
-      '3cd5ef80-6348-407b-bd5c-6477f49c322e',
-      'a55189bd-505f-4b33-95fb-897d259fe149',
-      '9afffce2-a8dd-424d-b522-e60b68fc956f',
-      '32df21b5-d57b-4477-9f94-1ec20edbd2e5',
-      'd42850f1-bdd7-484b-88cc-8d58df10d63a',
+      {
+        userId: 'd9985b83-08de-4e96-bcbc-e348666a554c',
+      },
+      {
+        userId: '3cd5ef80-6348-407b-bd5c-6477f49c322e',
+      },
+      {
+        userId: 'a55189bd-505f-4b33-95fb-897d259fe149',
+      },
+      {
+        userId: '9afffce2-a8dd-424d-b522-e60b68fc956f',
+      },
+      {
+        userId: '32df21b5-d57b-4477-9f94-1ec20edbd2e5',
+      },
+      {
+        userId: 'd42850f1-bdd7-484b-88cc-8d58df10d63a',
+      },
     ],
   },
   {
     trophyName: 'secretMurphy',
-    eligibleUsers: ['d42850f1-bdd7-484b-88cc-8d58df10d63a', 'f9a6ca4b-7169-4a26-9958-2a4c9ecf4a17'],
+    eligibleUsers: [
+      {
+        userId: 'd42850f1-bdd7-484b-88cc-8d58df10d63a',
+      },
+      {
+        userId: 'f9a6ca4b-7169-4a26-9958-2a4c9ecf4a17',
+      },
+    ],
   },
   {
     trophyName: 'mrThursday',
-    eligibleUsers: ['dc6fb755-76be-483a-bc8e-cc17e138367f'],
+    eligibleUsers: [
+      {
+        userId: 'dc6fb755-76be-483a-bc8e-cc17e138367f',
+      },
+    ],
+  },
+  {
+    trophyName: 'loneWolf',
+    eligibleUsers: [
+      {
+        userId: 'aceb39ff-150c-48ee-a879-41c21c6a7382',
+      },
+      {
+        userId: '1ca93cf7-e957-4cf5-9745-71b1018764fe',
+      },
+    ],
   },
 ];
 
@@ -141,7 +176,7 @@ if (error) {
 // First create the data for the founding members
 const { players: originalMembers } = await JSON.parse(await readFile(path.resolve(`data/2023/players.json`)));
 originalMembers.forEach(member => {
-  trophyCaseData[0].eligibleUsers.push(member.id);
+  trophyCaseData[0].eligibleUsers.push({ userId: member.id });
 });
 
 // Now get the number of years for each user
@@ -150,7 +185,7 @@ users.forEach(userInfo => {
   const ageDiff = Date.now() - new Date(signUpDate);
   const ageDate = new Date(ageDiff);
   const age = Math.abs(ageDate.getUTCFullYear() - 1970);
-  trophyCaseData[1].eligibleUsers.push({ id: id, years: age + 1 });
+  trophyCaseData[1].eligibleUsers.push({ userId: id, years: age + 1 });
 });
 
 const trophyDatasAsJson = JSON.stringify(trophyCaseData, null, 2);

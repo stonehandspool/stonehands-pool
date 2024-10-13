@@ -18,6 +18,7 @@ import UserSurvivorReport from '../components/userStats/UserSurvivorReport';
 import UserMarginReport from '../components/userStats/UserMarginReport';
 import UserHighFiveReport from '../components/userStats/UserHighFiveReport';
 import { useWeeklyPick } from '../utils/useWeeklyPicks';
+import { useGetTrophyAwards } from '../utils/useGetTrophyAwards';
 
 enum Pools {
   Confidence,
@@ -114,6 +115,8 @@ function PersonalStats() {
       </div>
     );
   }
+
+  const trophies = useGetTrophyAwards(userInfo.id);
 
   const currentTime = new Date();
   const showCurrentWeek = CURRENT_WEEK_STATUS !== 'START' && currentTime > CURRENT_WEEK_CUTOFF_TIME;
