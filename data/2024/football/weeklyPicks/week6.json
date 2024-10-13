@@ -2,25 +2,595 @@
   "id": "week_6",
   "picks": [
     {
+      "id": 674,
+      "created_at": "2024-10-10T22:07:40.255414+00:00",
+      "user_id": "5d6278ea-a207-4350-a2a5-ebba13175a97",
+      "week": 6,
+      "times_updated": 2,
+      "submission_data": {
+        "userId": "5d6278ea-a207-4350-a2a5-ebba13175a97",
+        "lastName": "Rysdyke",
+        "username": "Dyke",
+        "firstName": "Sean",
+        "marginPick": "TB",
+        "tiebreaker": 43,
+        "survivorPick": null,
+        "highFivePicks": [
+          "SF",
+          "JAC",
+          "NYJ",
+          "NYG",
+          "TB"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 14
+          },
+          {
+            "team": "JAC",
+            "matchupId": "matchup_2",
+            "confidence": 13
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 12
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 11
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 9
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 10
+          },
+          {
+            "team": "NE",
+            "matchupId": "matchup_7",
+            "confidence": 8
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 7
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 6
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 5
+          },
+          {
+            "team": "CAR",
+            "matchupId": "matchup_11",
+            "confidence": 4
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 3
+          },
+          {
+            "team": "NYG",
+            "matchupId": "matchup_13",
+            "confidence": 2
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 711,
+      "created_at": "2024-10-13T15:25:32.967109+00:00",
+      "user_id": "aceb39ff-150c-48ee-a879-41c21c6a7382",
+      "week": 6,
+      "times_updated": 0,
+      "submission_data": {
+        "userId": "aceb39ff-150c-48ee-a879-41c21c6a7382",
+        "lastName": "Ecker",
+        "username": "Aecker",
+        "firstName": "Alex",
+        "marginPick": "HOU",
+        "tiebreaker": 45,
+        "survivorPick": null,
+        "highFivePicks": [
+          "TB",
+          "PHI",
+          "HOU",
+          "PIT",
+          "ATL"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SEA",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 2
+          },
+          {
+            "team": "NO",
+            "matchupId": "matchup_3",
+            "confidence": 3
+          },
+          {
+            "team": "ARI",
+            "matchupId": "matchup_4",
+            "confidence": 4
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 5
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 6
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 7
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 8
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 9
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 10
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 11
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 12
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 13
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": 712,
+      "created_at": "2024-10-13T15:26:39.395414+00:00",
+      "user_id": "74325c17-feda-4926-a35b-9911265bcf1a",
+      "week": 6,
+      "times_updated": 0,
+      "submission_data": {
+        "userId": "74325c17-feda-4926-a35b-9911265bcf1a",
+        "lastName": "Brower",
+        "username": "Mbrower",
+        "firstName": "Michael",
+        "marginPick": "HOU",
+        "tiebreaker": 41,
+        "survivorPick": null,
+        "highFivePicks": [
+          "PHI",
+          "HOU",
+          "ATL",
+          "NO",
+          "BAL"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "JAC",
+            "matchupId": "matchup_2",
+            "confidence": 2
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 3
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 4
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 5
+          },
+          {
+            "team": "CLE",
+            "matchupId": "matchup_6",
+            "confidence": 6
+          },
+          {
+            "team": "NE",
+            "matchupId": "matchup_7",
+            "confidence": 7
+          },
+          {
+            "team": "WAS",
+            "matchupId": "matchup_8",
+            "confidence": 8
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 9
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 10
+          },
+          {
+            "team": "CAR",
+            "matchupId": "matchup_11",
+            "confidence": 11
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 12
+          },
+          {
+            "team": "NYG",
+            "matchupId": "matchup_13",
+            "confidence": 13
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": 631,
+      "created_at": "2024-10-10T10:00:40.043613+00:00",
+      "user_id": "89249ff3-ce1e-4bcc-941d-2e9de761ccfd",
+      "week": 6,
+      "times_updated": 3,
+      "submission_data": {
+        "userId": "89249ff3-ce1e-4bcc-941d-2e9de761ccfd",
+        "lastName": "Brink",
+        "username": "ABrink64",
+        "firstName": "Aidan",
+        "marginPick": "DET",
+        "tiebreaker": 37,
+        "survivorPick": null,
+        "highFivePicks": [
+          "GB",
+          "PHI",
+          "HOU",
+          "CIN",
+          "PIT"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 8
+          },
+          {
+            "team": "JAC",
+            "matchupId": "matchup_2",
+            "confidence": 1
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 7
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 9
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 5
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 12
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 4
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 2
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 11
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 10
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 6
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 13
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 709,
+      "created_at": "2024-10-12T00:31:53.231577+00:00",
+      "user_id": "843207b4-62ce-4a02-9b0f-f07cbc614a8a",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "843207b4-62ce-4a02-9b0f-f07cbc614a8a",
+        "lastName": "Brand",
+        "username": "Db26",
+        "firstName": "David",
+        "marginPick": "CHI",
+        "tiebreaker": 45,
+        "survivorPick": null,
+        "highFivePicks": [
+          "CHI",
+          "GB",
+          "PHI",
+          "HOU",
+          "ATL"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 7
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 6
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 11
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 5
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 13
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 9
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 8
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 10
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 12
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 4
+          },
+          {
+            "team": "NYG",
+            "matchupId": "matchup_13",
+            "confidence": 2
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 713,
+      "created_at": "2024-10-13T16:49:05.008307+00:00",
+      "user_id": "1837f095-daa9-4ec3-985f-cf5fc74818f6",
+      "week": 6,
+      "times_updated": 0,
+      "submission_data": {
+        "userId": "1837f095-daa9-4ec3-985f-cf5fc74818f6",
+        "lastName": "Onofrio",
+        "username": "aonofrio",
+        "firstName": "Alissa",
+        "marginPick": "PHI",
+        "tiebreaker": 54,
+        "survivorPick": null,
+        "highFivePicks": [
+          "WAS",
+          "HOU",
+          "PHI",
+          "CIN",
+          "BUF"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 2
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 3
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 4
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 5
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 6
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 7
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 8
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 9
+          },
+          {
+            "team": "LV",
+            "matchupId": "matchup_10",
+            "confidence": 10
+          },
+          {
+            "team": "CAR",
+            "matchupId": "matchup_11",
+            "confidence": 11
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 12
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 13
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 14
+          }
+        ]
+      }
+    },
+    {
       "id": 598,
       "created_at": "2024-10-09T13:21:14.279097+00:00",
       "user_id": "7a52a0e0-637a-4a13-a343-70674ac23955",
       "week": 6,
-      "times_updated": 0,
+      "times_updated": 14,
       "submission_data": {
         "userId": "7a52a0e0-637a-4a13-a343-70674ac23955",
         "lastName": "Zucker",
         "username": "Chiefs3peat",
         "firstName": "Matthew",
-        "marginPick": "HOU",
+        "marginPick": "ATL",
         "tiebreaker": 33,
         "survivorPick": null,
         "highFivePicks": [
           "SF",
           "HOU",
-          "DET",
-          "ATL",
-          "PHI"
+          "CHI",
+          "LAC",
+          "ATL"
         ],
         "confidencePicks": [
           {
@@ -31,12 +601,12 @@
           {
             "team": "CHI",
             "matchupId": "matchup_2",
-            "confidence": 1
+            "confidence": 13
           },
           {
             "team": "NO",
             "matchupId": "matchup_3",
-            "confidence": 2
+            "confidence": 6
           },
           {
             "team": "GB",
@@ -46,52 +616,147 @@
           {
             "team": "TEN",
             "matchupId": "matchup_5",
-            "confidence": 4
+            "confidence": 7
           },
           {
             "team": "CLE",
             "matchupId": "matchup_6",
-            "confidence": 5
+            "confidence": 1
           },
           {
-            "team": "NE",
+            "team": "HOU",
             "matchupId": "matchup_7",
-            "confidence": 6
+            "confidence": 9
           },
           {
-            "team": "WAS",
+            "team": "BAL",
             "matchupId": "matchup_8",
-            "confidence": 7
+            "confidence": 8
           },
           {
             "team": "LAC",
             "matchupId": "matchup_9",
+            "confidence": 10
+          },
+          {
+            "team": "LV",
+            "matchupId": "matchup_10",
+            "confidence": 2
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 5
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 4
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 11
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 12
+          }
+        ]
+      }
+    },
+    {
+      "id": 704,
+      "created_at": "2024-10-11T00:11:08.706706+00:00",
+      "user_id": "7a1a245e-de22-4ff5-819f-6ec86f288e98",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "7a1a245e-de22-4ff5-819f-6ec86f288e98",
+        "lastName": "Amodeo",
+        "username": "AAmodeo",
+        "firstName": "Ashley",
+        "marginPick": "PHI",
+        "tiebreaker": 40,
+        "survivorPick": null,
+        "highFivePicks": [
+          "IND",
+          "HOU",
+          "ATL",
+          "PHI",
+          "TB"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SEA",
+            "matchupId": "matchup_1",
+            "confidence": 2
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 5
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 6
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 7
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
             "confidence": 8
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 11
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 14
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 4
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 9
           },
           {
             "team": "PIT",
             "matchupId": "matchup_10",
-            "confidence": 9
+            "confidence": 3
           },
           {
-            "team": "CAR",
+            "team": "ATL",
             "matchupId": "matchup_11",
             "confidence": 10
           },
           {
-            "team": "DAL",
+            "team": "DET",
             "matchupId": "matchup_12",
-            "confidence": 11
+            "confidence": 12
           },
           {
-            "team": "NYG",
+            "team": "CIN",
             "matchupId": "matchup_13",
-            "confidence": 12
+            "confidence": 13
           },
           {
             "team": "BUF",
             "matchupId": "matchup_14",
-            "confidence": 13
+            "confidence": 1
           }
         ]
       }
@@ -287,6 +952,101 @@
       }
     },
     {
+      "id": 601,
+      "created_at": "2024-10-09T13:51:54.486067+00:00",
+      "user_id": "d0bbf908-0072-409d-8d12-b17f1c681874",
+      "week": 6,
+      "times_updated": 3,
+      "submission_data": {
+        "userId": "d0bbf908-0072-409d-8d12-b17f1c681874",
+        "lastName": "Goldfarb",
+        "username": "Dg727156",
+        "firstName": "Dan",
+        "marginPick": "PHI",
+        "tiebreaker": 44,
+        "survivorPick": null,
+        "highFivePicks": [
+          "BAL",
+          "HOU",
+          "ATL",
+          "PHI",
+          "CIN"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 9
+          },
+          {
+            "team": "JAC",
+            "matchupId": "matchup_2",
+            "confidence": 5
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 10
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 7
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 8
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 11
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 12
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 14
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 2
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 3
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 13
+          },
+          {
+            "team": "DAL",
+            "matchupId": "matchup_12",
+            "confidence": 1
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 6
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 4
+          }
+        ]
+      }
+    },
+    {
       "id": 604,
       "created_at": "2024-10-09T14:38:12.904464+00:00",
       "user_id": "0869826a-9ee4-4001-8142-f213f7504cc2",
@@ -377,196 +1137,6 @@
             "team": "BUF",
             "matchupId": "matchup_14",
             "confidence": 7
-          }
-        ]
-      }
-    },
-    {
-      "id": 601,
-      "created_at": "2024-10-09T13:51:54.486067+00:00",
-      "user_id": "d0bbf908-0072-409d-8d12-b17f1c681874",
-      "week": 6,
-      "times_updated": 1,
-      "submission_data": {
-        "userId": "d0bbf908-0072-409d-8d12-b17f1c681874",
-        "lastName": "Goldfarb",
-        "username": "Dg727156",
-        "firstName": "Dan",
-        "marginPick": "PHI",
-        "tiebreaker": 44,
-        "survivorPick": null,
-        "highFivePicks": [
-          "BAL",
-          "HOU",
-          "ATL",
-          "PHI",
-          "CIN"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 9
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 3
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 11
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 10
-          },
-          {
-            "team": "TEN",
-            "matchupId": "matchup_5",
-            "confidence": 8
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 14
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 12
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 7
-          },
-          {
-            "team": "DEN",
-            "matchupId": "matchup_9",
-            "confidence": 2
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 5
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 13
-          },
-          {
-            "team": "DAL",
-            "matchupId": "matchup_12",
-            "confidence": 1
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 6
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 4
-          }
-        ]
-      }
-    },
-    {
-      "id": 605,
-      "created_at": "2024-10-09T14:52:41.508326+00:00",
-      "user_id": "e267d0ae-c957-4619-83db-17f31670efe3",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "e267d0ae-c957-4619-83db-17f31670efe3",
-        "lastName": "White",
-        "username": "Brendanwhite",
-        "firstName": "Brendan",
-        "marginPick": "ATL",
-        "tiebreaker": 50,
-        "survivorPick": null,
-        "highFivePicks": [
-          "PHI",
-          "HOU",
-          "CIN",
-          "IND",
-          "SF"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 11
-          },
-          {
-            "team": "JAC",
-            "matchupId": "matchup_2",
-            "confidence": 2
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 3
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 4
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 8
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 13
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 14
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 5
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 6
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 7
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 10
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 9
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 12
-          },
-          {
-            "team": "NYJ",
-            "matchupId": "matchup_14",
-            "confidence": 1
           }
         ]
       }
@@ -956,7 +1526,7 @@
       "created_at": "2024-10-09T18:49:36.10245+00:00",
       "user_id": "4eadf14c-bbdb-442c-be1c-6f61ec5108ac",
       "week": 6,
-      "times_updated": 0,
+      "times_updated": 1,
       "submission_data": {
         "userId": "4eadf14c-bbdb-442c-be1c-6f61ec5108ac",
         "lastName": "Besser",
@@ -994,7 +1564,7 @@
             "confidence": 9
           },
           {
-            "team": "IND",
+            "team": "TEN",
             "matchupId": "matchup_5",
             "confidence": 2
           },
@@ -1902,101 +2472,6 @@
       }
     },
     {
-      "id": 622,
-      "created_at": "2024-10-10T00:23:32.663352+00:00",
-      "user_id": "ad50c309-eaab-4650-8f03-3828d72eac50",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "ad50c309-eaab-4650-8f03-3828d72eac50",
-        "lastName": "Backhaus",
-        "username": "Dbackhaus",
-        "firstName": "Dan",
-        "marginPick": "BAL",
-        "tiebreaker": 40,
-        "survivorPick": null,
-        "highFivePicks": [
-          "BAL",
-          "ATL",
-          "HOU",
-          "PHI",
-          "GB"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 9
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 1
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 7
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 10
-          },
-          {
-            "team": "TEN",
-            "matchupId": "matchup_5",
-            "confidence": 2
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 14
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 13
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 12
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 4
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 5
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 11
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 6
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 8
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 3
-          }
-        ]
-      }
-    },
-    {
       "id": 603,
       "created_at": "2024-10-09T14:05:47.289242+00:00",
       "user_id": "47aa75a6-122f-4bc0-8b5d-0014c1652e88",
@@ -2377,196 +2852,6 @@
       }
     },
     {
-      "id": 626,
-      "created_at": "2024-10-10T02:03:40.484159+00:00",
-      "user_id": "d9685b91-eaf3-47a5-b09a-0bd46f4c9606",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "d9685b91-eaf3-47a5-b09a-0bd46f4c9606",
-        "lastName": "Misiaszek",
-        "username": "PeteMiz",
-        "firstName": "Peter",
-        "marginPick": "HOU",
-        "tiebreaker": 45,
-        "survivorPick": null,
-        "highFivePicks": [
-          "ATL",
-          "HOU",
-          "PHI",
-          "TB",
-          "CHI"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SEA",
-            "matchupId": "matchup_1",
-            "confidence": 1
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 8
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 10
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 11
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 3
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 12
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 14
-          },
-          {
-            "team": "WAS",
-            "matchupId": "matchup_8",
-            "confidence": 2
-          },
-          {
-            "team": "DEN",
-            "matchupId": "matchup_9",
-            "confidence": 4
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 5
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 13
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 9
-          },
-          {
-            "team": "NYG",
-            "matchupId": "matchup_13",
-            "confidence": 7
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 6
-          }
-        ]
-      }
-    },
-    {
-      "id": 597,
-      "created_at": "2024-10-09T13:18:03.509237+00:00",
-      "user_id": "e78a0a21-ee7e-48a9-a821-8f0e80a6c65d",
-      "week": 6,
-      "times_updated": 1,
-      "submission_data": {
-        "userId": "e78a0a21-ee7e-48a9-a821-8f0e80a6c65d",
-        "lastName": "Bolino",
-        "username": "njbolino",
-        "firstName": "Nick",
-        "marginPick": "PHI",
-        "tiebreaker": 35,
-        "survivorPick": null,
-        "highFivePicks": [
-          "DET",
-          "LV",
-          "HOU",
-          "GB",
-          "SF"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 6
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 9
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 12
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 5
-          },
-          {
-            "team": "TEN",
-            "matchupId": "matchup_5",
-            "confidence": 2
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 11
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 14
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 3
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 4
-          },
-          {
-            "team": "LV",
-            "matchupId": "matchup_10",
-            "confidence": 1
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 13
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 10
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 8
-          },
-          {
-            "team": "NYJ",
-            "matchupId": "matchup_14",
-            "confidence": 7
-          }
-        ]
-      }
-    },
-    {
       "id": 627,
       "created_at": "2024-10-10T02:51:19.729934+00:00",
       "user_id": "80316b62-ecba-4b00-a2ea-c90cf05e4130",
@@ -2662,96 +2947,96 @@
       }
     },
     {
-      "id": 628,
-      "created_at": "2024-10-10T07:21:35.087866+00:00",
-      "user_id": "803138fa-9259-4226-be1b-3d3c002c7c1a",
+      "id": 597,
+      "created_at": "2024-10-09T13:18:03.509237+00:00",
+      "user_id": "e78a0a21-ee7e-48a9-a821-8f0e80a6c65d",
       "week": 6,
-      "times_updated": 0,
+      "times_updated": 2,
       "submission_data": {
-        "userId": "803138fa-9259-4226-be1b-3d3c002c7c1a",
-        "lastName": "Hwang",
-        "username": "Moo",
-        "firstName": "Connie",
-        "marginPick": "HOU",
-        "tiebreaker": 32,
+        "userId": "e78a0a21-ee7e-48a9-a821-8f0e80a6c65d",
+        "lastName": "Bolino",
+        "username": "njbolino",
+        "firstName": "Nick",
+        "marginPick": "PHI",
+        "tiebreaker": 35,
         "survivorPick": null,
         "highFivePicks": [
-          "PHI",
-          "LAC",
-          "PIT",
-          "ATL",
-          "BUF"
+          "DET",
+          "LV",
+          "HOU",
+          "GB",
+          "SF"
         ],
         "confidencePicks": [
           {
             "team": "SF",
             "matchupId": "matchup_1",
-            "confidence": 7
+            "confidence": 6
           },
           {
-            "team": "CHI",
+            "team": "JAC",
             "matchupId": "matchup_2",
-            "confidence": 12
+            "confidence": 3
           },
           {
             "team": "TB",
             "matchupId": "matchup_3",
-            "confidence": 11
+            "confidence": 12
           },
           {
             "team": "GB",
             "matchupId": "matchup_4",
-            "confidence": 6
+            "confidence": 5
           },
           {
-            "team": "IND",
+            "team": "TEN",
             "matchupId": "matchup_5",
-            "confidence": 8
+            "confidence": 2
           },
           {
             "team": "PHI",
             "matchupId": "matchup_6",
-            "confidence": 10
+            "confidence": 11
           },
           {
             "team": "HOU",
             "matchupId": "matchup_7",
-            "confidence": 13
+            "confidence": 14
           },
           {
-            "team": "WAS",
+            "team": "BAL",
             "matchupId": "matchup_8",
-            "confidence": 2
+            "confidence": 9
           },
           {
             "team": "LAC",
             "matchupId": "matchup_9",
-            "confidence": 9
+            "confidence": 4
           },
           {
-            "team": "PIT",
+            "team": "LV",
             "matchupId": "matchup_10",
-            "confidence": 14
+            "confidence": 1
           },
           {
             "team": "ATL",
             "matchupId": "matchup_11",
-            "confidence": 3
+            "confidence": 13
           },
           {
             "team": "DET",
             "matchupId": "matchup_12",
-            "confidence": 4
+            "confidence": 10
           },
           {
-            "team": "NYG",
+            "team": "CIN",
             "matchupId": "matchup_13",
-            "confidence": 1
+            "confidence": 8
           },
           {
-            "team": "BUF",
+            "team": "NYJ",
             "matchupId": "matchup_14",
-            "confidence": 5
+            "confidence": 7
           }
         ]
       }
@@ -3327,101 +3612,6 @@
       }
     },
     {
-      "id": 611,
-      "created_at": "2024-10-09T18:11:57.317495+00:00",
-      "user_id": "8df30fea-04c7-4c2d-a8c1-2fc5dd91a92b",
-      "week": 6,
-      "times_updated": 2,
-      "submission_data": {
-        "userId": "8df30fea-04c7-4c2d-a8c1-2fc5dd91a92b",
-        "lastName": "Rudberg",
-        "username": "mrudberg",
-        "firstName": "Melissa",
-        "marginPick": "ATL",
-        "tiebreaker": 38,
-        "survivorPick": null,
-        "highFivePicks": [
-          "ATL",
-          "CIN",
-          "HOU",
-          "BUF",
-          "IND"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SEA",
-            "matchupId": "matchup_1",
-            "confidence": 1
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 7
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 5
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 13
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 8
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 11
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 6
-          },
-          {
-            "team": "WAS",
-            "matchupId": "matchup_8",
-            "confidence": 3
-          },
-          {
-            "team": "DEN",
-            "matchupId": "matchup_9",
-            "confidence": 2
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 9
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 14
-          },
-          {
-            "team": "DAL",
-            "matchupId": "matchup_12",
-            "confidence": 4
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 12
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 10
-          }
-        ]
-      }
-    },
-    {
       "id": 599,
       "created_at": "2024-10-09T13:27:08.289432+00:00",
       "user_id": "1f5c6189-2ec0-4e3b-a444-84e5c5de3c2f",
@@ -3702,6 +3892,101 @@
             "team": "NYJ",
             "matchupId": "matchup_14",
             "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 611,
+      "created_at": "2024-10-09T18:11:57.317495+00:00",
+      "user_id": "8df30fea-04c7-4c2d-a8c1-2fc5dd91a92b",
+      "week": 6,
+      "times_updated": 3,
+      "submission_data": {
+        "userId": "8df30fea-04c7-4c2d-a8c1-2fc5dd91a92b",
+        "lastName": "Rudberg",
+        "username": "mrudberg",
+        "firstName": "Melissa",
+        "marginPick": "PHI",
+        "tiebreaker": 38,
+        "survivorPick": null,
+        "highFivePicks": [
+          "ATL",
+          "CIN",
+          "HOU",
+          "BUF",
+          "PHI"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SEA",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 7
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 5
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 13
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 8
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 6
+          },
+          {
+            "team": "WAS",
+            "matchupId": "matchup_8",
+            "confidence": 3
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 2
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 9
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 10
+          },
+          {
+            "team": "DAL",
+            "matchupId": "matchup_12",
+            "confidence": 4
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 12
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 11
           }
         ]
       }
@@ -4177,101 +4462,6 @@
             "team": "BUF",
             "matchupId": "matchup_14",
             "confidence": 13
-          }
-        ]
-      }
-    },
-    {
-      "id": 644,
-      "created_at": "2024-10-10T16:32:00.224936+00:00",
-      "user_id": "32476ed6-56bf-40be-89e8-6130d02a324a",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "32476ed6-56bf-40be-89e8-6130d02a324a",
-        "lastName": "Mathias",
-        "username": "Mathias",
-        "firstName": "Bill",
-        "marginPick": "GB",
-        "tiebreaker": 47,
-        "survivorPick": null,
-        "highFivePicks": [
-          "CHI",
-          "GB",
-          "PHI",
-          "HOU",
-          "ATL"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 9
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 14
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 13
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 12
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 11
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 10
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 8
-          },
-          {
-            "team": "WAS",
-            "matchupId": "matchup_8",
-            "confidence": 7
-          },
-          {
-            "team": "DEN",
-            "matchupId": "matchup_9",
-            "confidence": 6
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 5
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 4
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 3
-          },
-          {
-            "team": "NYG",
-            "matchupId": "matchup_13",
-            "confidence": 2
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 1
           }
         ]
       }
@@ -4847,101 +5037,6 @@
       }
     },
     {
-      "id": 651,
-      "created_at": "2024-10-10T18:55:00.564541+00:00",
-      "user_id": "54edf2fc-81f7-477e-9f9d-19afa5e5981a",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "54edf2fc-81f7-477e-9f9d-19afa5e5981a",
-        "lastName": "Bussinelli",
-        "username": "mbussinelli20",
-        "firstName": "Michael",
-        "marginPick": "PHI",
-        "tiebreaker": 14,
-        "survivorPick": null,
-        "highFivePicks": [
-          "HOU",
-          "BUF",
-          "TB",
-          "PHI",
-          "IND"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 3
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 5
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 10
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 4
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 11
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 14
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 13
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 2
-          },
-          {
-            "team": "DEN",
-            "matchupId": "matchup_9",
-            "confidence": 9
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 7
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 12
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 1
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 6
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 8
-          }
-        ]
-      }
-    },
-    {
       "id": 652,
       "created_at": "2024-10-10T19:16:37.91248+00:00",
       "user_id": "224b6801-e2c6-4985-ad3e-979ce8818482",
@@ -5127,101 +5222,6 @@
             "team": "BUF",
             "matchupId": "matchup_14",
             "confidence": 6
-          }
-        ]
-      }
-    },
-    {
-      "id": 654,
-      "created_at": "2024-10-10T19:19:16.247372+00:00",
-      "user_id": "3146505c-3d98-4072-afdc-00a0e2d4bb18",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "3146505c-3d98-4072-afdc-00a0e2d4bb18",
-        "lastName": "Ustas",
-        "username": "Danielle",
-        "firstName": "Danielle",
-        "marginPick": "PHI",
-        "tiebreaker": 41,
-        "survivorPick": null,
-        "highFivePicks": [
-          "GB",
-          "PHI",
-          "HOU",
-          "BAL",
-          "ATL"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 8
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 1
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 7
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 10
-          },
-          {
-            "team": "TEN",
-            "matchupId": "matchup_5",
-            "confidence": 3
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 14
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 13
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 12
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 4
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 5
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 11
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 6
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 9
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 2
           }
         ]
       }
@@ -5607,101 +5607,6 @@
       }
     },
     {
-      "id": 659,
-      "created_at": "2024-10-10T20:16:23.370918+00:00",
-      "user_id": "f28d9541-88e0-4a2f-acde-cceb3ad0e2cc",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "f28d9541-88e0-4a2f-acde-cceb3ad0e2cc",
-        "lastName": "Heotzler",
-        "username": "JefferJ17",
-        "firstName": "Jeff",
-        "marginPick": "PHI",
-        "tiebreaker": 45,
-        "survivorPick": null,
-        "highFivePicks": [
-          "HOU",
-          "PHI",
-          "ATL",
-          "CIN",
-          "TB"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SEA",
-            "matchupId": "matchup_1",
-            "confidence": 8
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 7
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 6
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 5
-          },
-          {
-            "team": "TEN",
-            "matchupId": "matchup_5",
-            "confidence": 4
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 3
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 2
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 1
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 9
-          },
-          {
-            "team": "LV",
-            "matchupId": "matchup_10",
-            "confidence": 10
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 11
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 12
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 13
-          },
-          {
-            "team": "NYJ",
-            "matchupId": "matchup_14",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
       "id": 660,
       "created_at": "2024-10-10T20:19:18.478417+00:00",
       "user_id": "98dae92b-3d5b-4932-a63a-14420e2b9d1e",
@@ -5987,6 +5892,101 @@
       }
     },
     {
+      "id": 659,
+      "created_at": "2024-10-10T20:16:23.370918+00:00",
+      "user_id": "f28d9541-88e0-4a2f-acde-cceb3ad0e2cc",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "f28d9541-88e0-4a2f-acde-cceb3ad0e2cc",
+        "lastName": "Heotzler",
+        "username": "JefferJ17",
+        "firstName": "Jeff",
+        "marginPick": "PHI",
+        "tiebreaker": 45,
+        "survivorPick": null,
+        "highFivePicks": [
+          "HOU",
+          "PHI",
+          "ATL",
+          "CIN",
+          "TB"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SEA",
+            "matchupId": "matchup_1",
+            "confidence": 8
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 7
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 12
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 11
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 2
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 13
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 14
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 5
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 4
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 6
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 9
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 3
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 10
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
       "id": 664,
       "created_at": "2024-10-10T20:55:16.11864+00:00",
       "user_id": "fb8ef942-1bd9-4cab-af71-ffc065ea81b7",
@@ -6177,101 +6177,6 @@
       }
     },
     {
-      "id": 631,
-      "created_at": "2024-10-10T10:00:40.043613+00:00",
-      "user_id": "89249ff3-ce1e-4bcc-941d-2e9de761ccfd",
-      "week": 6,
-      "times_updated": 1,
-      "submission_data": {
-        "userId": "89249ff3-ce1e-4bcc-941d-2e9de761ccfd",
-        "lastName": "Brink",
-        "username": "ABrink64",
-        "firstName": "Aidan",
-        "marginPick": "DET",
-        "tiebreaker": 37,
-        "survivorPick": null,
-        "highFivePicks": [
-          "GB",
-          "PHI",
-          "HOU",
-          "CIN",
-          "BAL"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 8
-          },
-          {
-            "team": "JAC",
-            "matchupId": "matchup_2",
-            "confidence": 1
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 7
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 9
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 2
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 14
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 12
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 5
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 4
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 11
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 10
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 6
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 13
-          },
-          {
-            "team": "NYJ",
-            "matchupId": "matchup_14",
-            "confidence": 3
-          }
-        ]
-      }
-    },
-    {
       "id": 666,
       "created_at": "2024-10-10T21:07:22.263946+00:00",
       "user_id": "f34ebd36-2aeb-480c-b614-ff2646da8287",
@@ -6450,196 +6355,6 @@
           },
           {
             "team": "NYG",
-            "matchupId": "matchup_13",
-            "confidence": 2
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 668,
-      "created_at": "2024-10-10T21:18:47.03576+00:00",
-      "user_id": "66c1862c-3f23-48b5-837d-a0c7adfef73e",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "66c1862c-3f23-48b5-837d-a0c7adfef73e",
-        "lastName": "Rogers",
-        "username": "Smalls:)",
-        "firstName": "Robyn",
-        "marginPick": "ATL",
-        "tiebreaker": 1,
-        "survivorPick": null,
-        "highFivePicks": [
-          "HOU",
-          "PHI",
-          "BAL",
-          "ATL",
-          "CIN"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 14
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 13
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 12
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 10
-          },
-          {
-            "team": "TEN",
-            "matchupId": "matchup_5",
-            "confidence": 11
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 7
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 8
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 9
-          },
-          {
-            "team": "DEN",
-            "matchupId": "matchup_9",
-            "confidence": 6
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 5
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 4
-          },
-          {
-            "team": "DAL",
-            "matchupId": "matchup_12",
-            "confidence": 3
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 2
-          },
-          {
-            "team": "NYJ",
-            "matchupId": "matchup_14",
-            "confidence": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 669,
-      "created_at": "2024-10-10T21:38:42.391437+00:00",
-      "user_id": "dc6fb755-76be-483a-bc8e-cc17e138367f",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "dc6fb755-76be-483a-bc8e-cc17e138367f",
-        "lastName": "Fandl",
-        "username": "Dfandl",
-        "firstName": "Dan",
-        "marginPick": "ATL",
-        "tiebreaker": 1,
-        "survivorPick": null,
-        "highFivePicks": [
-          "SF",
-          "JAC",
-          "TB",
-          "ARI",
-          "IND"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 14
-          },
-          {
-            "team": "JAC",
-            "matchupId": "matchup_2",
-            "confidence": 13
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 12
-          },
-          {
-            "team": "ARI",
-            "matchupId": "matchup_4",
-            "confidence": 11
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 10
-          },
-          {
-            "team": "CLE",
-            "matchupId": "matchup_6",
-            "confidence": 9
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 8
-          },
-          {
-            "team": "WAS",
-            "matchupId": "matchup_8",
-            "confidence": 7
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 6
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 5
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 4
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 3
-          },
-          {
-            "team": "CIN",
             "matchupId": "matchup_13",
             "confidence": 2
           },
@@ -6937,148 +6652,53 @@
       }
     },
     {
-      "id": 673,
-      "created_at": "2024-10-10T21:53:36.692763+00:00",
-      "user_id": "25d5f59c-4977-4471-bc29-e289c9b888a7",
+      "id": 669,
+      "created_at": "2024-10-10T21:38:42.391437+00:00",
+      "user_id": "dc6fb755-76be-483a-bc8e-cc17e138367f",
       "week": 6,
-      "times_updated": 0,
+      "times_updated": 1,
       "submission_data": {
-        "userId": "25d5f59c-4977-4471-bc29-e289c9b888a7",
-        "lastName": "Nargi",
-        "username": "Nargi27",
-        "firstName": "Matt",
+        "userId": "dc6fb755-76be-483a-bc8e-cc17e138367f",
+        "lastName": "Fandl",
+        "username": "Dfandl",
+        "firstName": "Dan",
         "marginPick": "ATL",
-        "tiebreaker": 56,
+        "tiebreaker": 47,
         "survivorPick": null,
         "highFivePicks": [
+          "SF",
           "HOU",
           "ATL",
           "CIN",
-          "PHI",
-          "PIT"
+          "CHI"
         ],
         "confidencePicks": [
           {
             "team": "SF",
             "matchupId": "matchup_1",
-            "confidence": 6
+            "confidence": 14
           },
           {
-            "team": "JAC",
+            "team": "CHI",
             "matchupId": "matchup_2",
-            "confidence": 7
+            "confidence": 9
           },
           {
             "team": "TB",
             "matchupId": "matchup_3",
-            "confidence": 2
+            "confidence": 5
           },
           {
             "team": "GB",
             "matchupId": "matchup_4",
-            "confidence": 5
+            "confidence": 8
           },
           {
             "team": "IND",
             "matchupId": "matchup_5",
-            "confidence": 8
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 10
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 9
-          },
-          {
-            "team": "WAS",
-            "matchupId": "matchup_8",
             "confidence": 3
           },
           {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 4
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 13
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 12
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 14
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 11
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 674,
-      "created_at": "2024-10-10T22:07:40.255414+00:00",
-      "user_id": "5d6278ea-a207-4350-a2a5-ebba13175a97",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "5d6278ea-a207-4350-a2a5-ebba13175a97",
-        "lastName": "Rysdyke",
-        "username": "Dyke",
-        "firstName": "Sean",
-        "marginPick": "PHI",
-        "tiebreaker": 43,
-        "survivorPick": null,
-        "highFivePicks": [
-          "SF",
-          "JAC",
-          "NYJ",
-          "LAC",
-          "ATL"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 14
-          },
-          {
-            "team": "JAC",
-            "matchupId": "matchup_2",
-            "confidence": 13
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 12
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 11
-          },
-          {
-            "team": "TEN",
-            "matchupId": "matchup_5",
-            "confidence": 9
-          },
-          {
             "team": "PHI",
             "matchupId": "matchup_6",
             "confidence": 10
@@ -7086,7 +6706,7 @@
           {
             "team": "HOU",
             "matchupId": "matchup_7",
-            "confidence": 8
+            "confidence": 13
           },
           {
             "team": "BAL",
@@ -7094,129 +6714,34 @@
             "confidence": 7
           },
           {
-            "team": "LAC",
+            "team": "DEN",
             "matchupId": "matchup_9",
-            "confidence": 6
+            "confidence": 2
           },
           {
             "team": "PIT",
             "matchupId": "matchup_10",
-            "confidence": 5
+            "confidence": 6
           },
           {
             "team": "ATL",
             "matchupId": "matchup_11",
-            "confidence": 4
+            "confidence": 12
           },
           {
             "team": "DET",
             "matchupId": "matchup_12",
-            "confidence": 3
+            "confidence": 4
           },
           {
             "team": "CIN",
             "matchupId": "matchup_13",
-            "confidence": 2
+            "confidence": 11
           },
           {
             "team": "NYJ",
             "matchupId": "matchup_14",
             "confidence": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 675,
-      "created_at": "2024-10-10T22:08:03.914304+00:00",
-      "user_id": "4943d53f-5a0f-44aa-8532-5a11bac66783",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "4943d53f-5a0f-44aa-8532-5a11bac66783",
-        "lastName": "Horn",
-        "username": "jrh357",
-        "firstName": "John",
-        "marginPick": "PHI",
-        "tiebreaker": 42,
-        "survivorPick": null,
-        "highFivePicks": [
-          "SF",
-          "PHI",
-          "BUF",
-          "HOU",
-          "BAL"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 14
-          },
-          {
-            "team": "JAC",
-            "matchupId": "matchup_2",
-            "confidence": 1
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 2
-          },
-          {
-            "team": "ARI",
-            "matchupId": "matchup_4",
-            "confidence": 3
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 7
-          },
-          {
-            "team": "CLE",
-            "matchupId": "matchup_6",
-            "confidence": 6
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 5
-          },
-          {
-            "team": "WAS",
-            "matchupId": "matchup_8",
-            "confidence": 4
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 11
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 10
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 9
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 8
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 12
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 13
           }
         ]
       }
@@ -7407,6 +6932,101 @@
             "team": "BUF",
             "matchupId": "matchup_14",
             "confidence": 13
+          }
+        ]
+      }
+    },
+    {
+      "id": 675,
+      "created_at": "2024-10-10T22:08:03.914304+00:00",
+      "user_id": "4943d53f-5a0f-44aa-8532-5a11bac66783",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "4943d53f-5a0f-44aa-8532-5a11bac66783",
+        "lastName": "Horn",
+        "username": "jrh357",
+        "firstName": "John",
+        "marginPick": "PHI",
+        "tiebreaker": 44,
+        "survivorPick": null,
+        "highFivePicks": [
+          "SF",
+          "PHI",
+          "BUF",
+          "HOU",
+          "BAL"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 14
+          },
+          {
+            "team": "JAC",
+            "matchupId": "matchup_2",
+            "confidence": 8
+          },
+          {
+            "team": "NO",
+            "matchupId": "matchup_3",
+            "confidence": 5
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 10
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 1
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 13
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 9
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 12
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 2
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 4
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 6
+          },
+          {
+            "team": "DAL",
+            "matchupId": "matchup_12",
+            "confidence": 7
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 3
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 11
           }
         ]
       }
@@ -7792,101 +7412,6 @@
       }
     },
     {
-      "id": 681,
-      "created_at": "2024-10-10T22:51:05.492232+00:00",
-      "user_id": "d73acab6-3e91-4163-8186-307726f425a6",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "d73acab6-3e91-4163-8186-307726f425a6",
-        "lastName": "(Panagopoulos) Ecker",
-        "username": "HotLilGiantsHoney",
-        "firstName": "Celeste ",
-        "marginPick": "ATL",
-        "tiebreaker": 52,
-        "survivorPick": null,
-        "highFivePicks": [
-          "SF",
-          "ATL",
-          "BUF",
-          "HOU",
-          "CHI"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 11
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 1
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 2
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 3
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 4
-          },
-          {
-            "team": "CLE",
-            "matchupId": "matchup_6",
-            "confidence": 5
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 6
-          },
-          {
-            "team": "WAS",
-            "matchupId": "matchup_8",
-            "confidence": 7
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 8
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 9
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 10
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 12
-          },
-          {
-            "team": "NYG",
-            "matchupId": "matchup_13",
-            "confidence": 13
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
       "id": 682,
       "created_at": "2024-10-10T22:51:31.878185+00:00",
       "user_id": "23804399-4f66-4299-8c59-8c63d1620ed0",
@@ -7977,101 +7502,6 @@
             "team": "NYJ",
             "matchupId": "matchup_14",
             "confidence": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 613,
-      "created_at": "2024-10-09T19:04:39.982802+00:00",
-      "user_id": "8b94838f-9e4c-45b0-99ea-f5d1104d4f1a",
-      "week": 6,
-      "times_updated": 1,
-      "submission_data": {
-        "userId": "8b94838f-9e4c-45b0-99ea-f5d1104d4f1a",
-        "lastName": "Seitz",
-        "username": "mseitz",
-        "firstName": "Marc",
-        "marginPick": "ATL",
-        "tiebreaker": 38,
-        "survivorPick": null,
-        "highFivePicks": [
-          "TB",
-          "GB",
-          "PHI",
-          "HOU",
-          "ATL"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 14
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 2
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 10
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 9
-          },
-          {
-            "team": "TEN",
-            "matchupId": "matchup_5",
-            "confidence": 3
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 4
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 11
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 6
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 5
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 1
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 13
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 12
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 8
-          },
-          {
-            "team": "NYJ",
-            "matchupId": "matchup_14",
-            "confidence": 7
           }
         ]
       }
@@ -8742,196 +8172,6 @@
       }
     },
     {
-      "id": 690,
-      "created_at": "2024-10-10T23:24:47.348143+00:00",
-      "user_id": "e2735e77-d5e4-41bc-8899-da598e6c317e",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "e2735e77-d5e4-41bc-8899-da598e6c317e",
-        "lastName": "Rosario",
-        "username": "FidelCashFlow63",
-        "firstName": "Chris",
-        "marginPick": "HOU",
-        "tiebreaker": 52,
-        "survivorPick": null,
-        "highFivePicks": [
-          "TB",
-          "IND",
-          "PHI",
-          "HOU",
-          "ATL"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SEA",
-            "matchupId": "matchup_1",
-            "confidence": 8
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 7
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 11
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 5
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 10
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 12
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 14
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 1
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 9
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 6
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 13
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 4
-          },
-          {
-            "team": "NYG",
-            "matchupId": "matchup_13",
-            "confidence": 3
-          },
-          {
-            "team": "NYJ",
-            "matchupId": "matchup_14",
-            "confidence": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 691,
-      "created_at": "2024-10-10T23:27:56.561258+00:00",
-      "user_id": "549b94f3-bbdb-49e2-9431-7de82d723f58",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "549b94f3-bbdb-49e2-9431-7de82d723f58",
-        "lastName": "Zhang",
-        "username": "Teezyfb",
-        "firstName": "Tim",
-        "marginPick": "GB",
-        "tiebreaker": 41,
-        "survivorPick": null,
-        "highFivePicks": [
-          "CHI",
-          "NO",
-          "GB",
-          "TEN",
-          "PHI"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 5
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 2
-          },
-          {
-            "team": "NO",
-            "matchupId": "matchup_3",
-            "confidence": 1
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 3
-          },
-          {
-            "team": "TEN",
-            "matchupId": "matchup_5",
-            "confidence": 4
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 6
-          },
-          {
-            "team": "NE",
-            "matchupId": "matchup_7",
-            "confidence": 7
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 8
-          },
-          {
-            "team": "DEN",
-            "matchupId": "matchup_9",
-            "confidence": 9
-          },
-          {
-            "team": "LV",
-            "matchupId": "matchup_10",
-            "confidence": 10
-          },
-          {
-            "team": "CAR",
-            "matchupId": "matchup_11",
-            "confidence": 11
-          },
-          {
-            "team": "DAL",
-            "matchupId": "matchup_12",
-            "confidence": 12
-          },
-          {
-            "team": "NYG",
-            "matchupId": "matchup_13",
-            "confidence": 13
-          },
-          {
-            "team": "NYJ",
-            "matchupId": "matchup_14",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
       "id": 692,
       "created_at": "2024-10-10T23:28:32.61345+00:00",
       "user_id": "02bee9d4-ea65-4930-801b-91eb457b39d1",
@@ -9022,101 +8262,6 @@
             "team": "BUF",
             "matchupId": "matchup_14",
             "confidence": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 693,
-      "created_at": "2024-10-10T23:29:39.897571+00:00",
-      "user_id": "7dbe1a7f-29ad-4000-b663-b2c7b5cfcb5f",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "7dbe1a7f-29ad-4000-b663-b2c7b5cfcb5f",
-        "lastName": "Steets",
-        "username": "thejdot",
-        "firstName": "Jim",
-        "marginPick": "IND",
-        "tiebreaker": 48,
-        "survivorPick": null,
-        "highFivePicks": [
-          "PHI",
-          "HOU",
-          "TB",
-          "WAS",
-          "DET"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SEA",
-            "matchupId": "matchup_1",
-            "confidence": 14
-          },
-          {
-            "team": "JAC",
-            "matchupId": "matchup_2",
-            "confidence": 13
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 12
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 11
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 10
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 9
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 8
-          },
-          {
-            "team": "WAS",
-            "matchupId": "matchup_8",
-            "confidence": 7
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 6
-          },
-          {
-            "team": "LV",
-            "matchupId": "matchup_10",
-            "confidence": 5
-          },
-          {
-            "team": "CAR",
-            "matchupId": "matchup_11",
-            "confidence": 4
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 3
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 2
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 1
           }
         ]
       }
@@ -9217,176 +8362,81 @@
       }
     },
     {
-      "id": 695,
-      "created_at": "2024-10-10T23:37:40.265795+00:00",
-      "user_id": "06914b45-6f70-45bf-adf3-bce100373cf1",
+      "id": 693,
+      "created_at": "2024-10-10T23:29:39.897571+00:00",
+      "user_id": "7dbe1a7f-29ad-4000-b663-b2c7b5cfcb5f",
       "week": 6,
-      "times_updated": 0,
+      "times_updated": 1,
       "submission_data": {
-        "userId": "06914b45-6f70-45bf-adf3-bce100373cf1",
-        "lastName": "Van Heemst",
-        "username": "NVH",
-        "firstName": "Nicholas",
-        "marginPick": "GB",
-        "tiebreaker": 42,
+        "userId": "7dbe1a7f-29ad-4000-b663-b2c7b5cfcb5f",
+        "lastName": "Steets",
+        "username": "thejdot",
+        "firstName": "Jim",
+        "marginPick": "PHI",
+        "tiebreaker": 48,
         "survivorPick": null,
         "highFivePicks": [
-          "BAL",
-          "HOU",
           "PHI",
-          "LAC",
+          "HOU",
+          "TB",
+          "WAS",
           "DET"
         ],
         "confidencePicks": [
           {
             "team": "SEA",
             "matchupId": "matchup_1",
-            "confidence": 1
+            "confidence": 14
           },
           {
             "team": "JAC",
             "matchupId": "matchup_2",
-            "confidence": 2
+            "confidence": 13
           },
           {
             "team": "TB",
             "matchupId": "matchup_3",
-            "confidence": 3
-          },
-          {
-            "team": "ARI",
-            "matchupId": "matchup_4",
-            "confidence": 4
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 14
-          },
-          {
-            "team": "CLE",
-            "matchupId": "matchup_6",
             "confidence": 12
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 13
-          },
-          {
-            "team": "WAS",
-            "matchupId": "matchup_8",
-            "confidence": 5
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 10
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 9
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 8
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 7
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 11
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 6
-          }
-        ]
-      }
-    },
-    {
-      "id": 696,
-      "created_at": "2024-10-10T23:39:15.232685+00:00",
-      "user_id": "dfcfd92c-5284-4093-8031-00eddbb19dde",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "dfcfd92c-5284-4093-8031-00eddbb19dde",
-        "lastName": "Seitz",
-        "username": "pseitz08",
-        "firstName": "Philip",
-        "marginPick": "ATL",
-        "tiebreaker": 45,
-        "survivorPick": null,
-        "highFivePicks": [
-          "HOU",
-          "LAC",
-          "ATL",
-          "GB",
-          "PHI"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 9
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 7
-          },
-          {
-            "team": "NO",
-            "matchupId": "matchup_3",
-            "confidence": 1
           },
           {
             "team": "GB",
             "matchupId": "matchup_4",
-            "confidence": 8
+            "confidence": 11
           },
           {
-            "team": "IND",
+            "team": "TEN",
             "matchupId": "matchup_5",
-            "confidence": 11
+            "confidence": 10
           },
           {
             "team": "PHI",
             "matchupId": "matchup_6",
-            "confidence": 12
+            "confidence": 9
           },
           {
             "team": "HOU",
             "matchupId": "matchup_7",
-            "confidence": 14
+            "confidence": 8
           },
           {
-            "team": "BAL",
+            "team": "WAS",
             "matchupId": "matchup_8",
-            "confidence": 4
+            "confidence": 7
           },
           {
             "team": "LAC",
             "matchupId": "matchup_9",
-            "confidence": 10
+            "confidence": 6
           },
           {
-            "team": "PIT",
+            "team": "LV",
             "matchupId": "matchup_10",
-            "confidence": 2
+            "confidence": 5
           },
           {
             "team": "ATL",
             "matchupId": "matchup_11",
-            "confidence": 13
+            "confidence": 4
           },
           {
             "team": "DET",
@@ -9396,12 +8446,12 @@
           {
             "team": "CIN",
             "matchupId": "matchup_13",
-            "confidence": 6
+            "confidence": 2
           },
           {
-            "team": "NYJ",
+            "team": "BUF",
             "matchupId": "matchup_14",
-            "confidence": 5
+            "confidence": 1
           }
         ]
       }
@@ -9692,51 +8742,51 @@
       }
     },
     {
-      "id": 700,
-      "created_at": "2024-10-11T00:00:39.715528+00:00",
-      "user_id": "4b5a94b9-f5f5-4f3b-b9b8-d0cdb7d11676",
+      "id": 696,
+      "created_at": "2024-10-10T23:39:15.232685+00:00",
+      "user_id": "dfcfd92c-5284-4093-8031-00eddbb19dde",
       "week": 6,
-      "times_updated": 0,
+      "times_updated": 1,
       "submission_data": {
-        "userId": "4b5a94b9-f5f5-4f3b-b9b8-d0cdb7d11676",
-        "lastName": "Della Penna Sr.",
-        "username": "dolardude1",
-        "firstName": "Greg",
-        "marginPick": "PHI",
-        "tiebreaker": 38,
+        "userId": "dfcfd92c-5284-4093-8031-00eddbb19dde",
+        "lastName": "Seitz",
+        "username": "pseitz08",
+        "firstName": "Philip",
+        "marginPick": "ATL",
+        "tiebreaker": 45,
         "survivorPick": null,
         "highFivePicks": [
-          "GB",
-          "CHI",
           "HOU",
+          "LAC",
           "ATL",
+          "GB",
           "PHI"
         ],
         "confidencePicks": [
           {
             "team": "SF",
             "matchupId": "matchup_1",
-            "confidence": 7
+            "confidence": 9
           },
           {
             "team": "CHI",
             "matchupId": "matchup_2",
-            "confidence": 14
+            "confidence": 7
           },
           {
             "team": "TB",
             "matchupId": "matchup_3",
-            "confidence": 6
+            "confidence": 1
           },
           {
             "team": "GB",
             "matchupId": "matchup_4",
-            "confidence": 13
+            "confidence": 8
           },
           {
             "team": "IND",
             "matchupId": "matchup_5",
-            "confidence": 4
+            "confidence": 11
           },
           {
             "team": "PHI",
@@ -9746,37 +8796,37 @@
           {
             "team": "HOU",
             "matchupId": "matchup_7",
-            "confidence": 11
+            "confidence": 14
           },
           {
             "team": "BAL",
             "matchupId": "matchup_8",
-            "confidence": 2
+            "confidence": 4
           },
           {
-            "team": "DEN",
+            "team": "LAC",
             "matchupId": "matchup_9",
-            "confidence": 3
+            "confidence": 10
           },
           {
             "team": "PIT",
             "matchupId": "matchup_10",
-            "confidence": 9
+            "confidence": 2
           },
           {
             "team": "ATL",
             "matchupId": "matchup_11",
-            "confidence": 10
+            "confidence": 13
           },
           {
             "team": "DET",
             "matchupId": "matchup_12",
-            "confidence": 1
+            "confidence": 3
           },
           {
-            "team": "NYG",
+            "team": "CIN",
             "matchupId": "matchup_13",
-            "confidence": 8
+            "confidence": 6
           },
           {
             "team": "NYJ",
@@ -9882,101 +8932,6 @@
       }
     },
     {
-      "id": 702,
-      "created_at": "2024-10-11T00:00:52.612211+00:00",
-      "user_id": "3cd5ef80-6348-407b-bd5c-6477f49c322e",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "3cd5ef80-6348-407b-bd5c-6477f49c322e",
-        "lastName": "Crimmins",
-        "username": "Bcrimmins",
-        "firstName": "Bobby",
-        "marginPick": "PHI",
-        "tiebreaker": 50,
-        "survivorPick": null,
-        "highFivePicks": [
-          "CHI",
-          "TB",
-          "PHI",
-          "HOU",
-          "ATL"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SF",
-            "matchupId": "matchup_1",
-            "confidence": 3
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 1
-          },
-          {
-            "team": "TB",
-            "matchupId": "matchup_3",
-            "confidence": 2
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 4
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 5
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
-            "confidence": 6
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 7
-          },
-          {
-            "team": "WAS",
-            "matchupId": "matchup_8",
-            "confidence": 8
-          },
-          {
-            "team": "DEN",
-            "matchupId": "matchup_9",
-            "confidence": 9
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 10
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 11
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 12
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 13
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
       "id": 703,
       "created_at": "2024-10-11T00:05:28.906419+00:00",
       "user_id": "4b957d37-eb28-4859-9bad-374dac2b7a4b",
@@ -10072,136 +9027,41 @@
       }
     },
     {
-      "id": 638,
-      "created_at": "2024-10-10T13:41:09.217652+00:00",
-      "user_id": "1af52a92-0242-491e-87f5-c166fa2fa730",
+      "id": 702,
+      "created_at": "2024-10-11T00:00:52.612211+00:00",
+      "user_id": "3cd5ef80-6348-407b-bd5c-6477f49c322e",
       "week": 6,
       "times_updated": 1,
       "submission_data": {
-        "userId": "1af52a92-0242-491e-87f5-c166fa2fa730",
-        "lastName": "Della Penna",
-        "username": "Dellapeg",
-        "firstName": "Gregory",
-        "marginPick": "HOU",
-        "tiebreaker": 38,
+        "userId": "3cd5ef80-6348-407b-bd5c-6477f49c322e",
+        "lastName": "Crimmins",
+        "username": "Bcrimmins",
+        "firstName": "Bobby",
+        "marginPick": "PHI",
+        "tiebreaker": 44,
         "survivorPick": null,
         "highFivePicks": [
+          "CHI",
           "TB",
           "PHI",
-          "NE",
-          "PIT",
-          "BUF"
+          "HOU",
+          "ATL"
         ],
         "confidencePicks": [
           {
             "team": "SF",
             "matchupId": "matchup_1",
-            "confidence": 14
+            "confidence": 3
           },
           {
             "team": "CHI",
             "matchupId": "matchup_2",
-            "confidence": 7
+            "confidence": 1
           },
           {
             "team": "TB",
             "matchupId": "matchup_3",
-            "confidence": 9
-          },
-          {
-            "team": "GB",
-            "matchupId": "matchup_4",
-            "confidence": 6
-          },
-          {
-            "team": "IND",
-            "matchupId": "matchup_5",
-            "confidence": 5
-          },
-          {
-            "team": "PHI",
-            "matchupId": "matchup_6",
             "confidence": 11
-          },
-          {
-            "team": "HOU",
-            "matchupId": "matchup_7",
-            "confidence": 10
-          },
-          {
-            "team": "BAL",
-            "matchupId": "matchup_8",
-            "confidence": 4
-          },
-          {
-            "team": "LAC",
-            "matchupId": "matchup_9",
-            "confidence": 3
-          },
-          {
-            "team": "PIT",
-            "matchupId": "matchup_10",
-            "confidence": 8
-          },
-          {
-            "team": "ATL",
-            "matchupId": "matchup_11",
-            "confidence": 12
-          },
-          {
-            "team": "DET",
-            "matchupId": "matchup_12",
-            "confidence": 1
-          },
-          {
-            "team": "CIN",
-            "matchupId": "matchup_13",
-            "confidence": 13
-          },
-          {
-            "team": "BUF",
-            "matchupId": "matchup_14",
-            "confidence": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 704,
-      "created_at": "2024-10-11T00:11:08.706706+00:00",
-      "user_id": "7a1a245e-de22-4ff5-819f-6ec86f288e98",
-      "week": 6,
-      "times_updated": 0,
-      "submission_data": {
-        "userId": "7a1a245e-de22-4ff5-819f-6ec86f288e98",
-        "lastName": "Amodeo",
-        "username": "AAmodeo",
-        "firstName": "Ashley",
-        "marginPick": "CIN",
-        "tiebreaker": 40,
-        "survivorPick": null,
-        "highFivePicks": [
-          "IND",
-          "HOU",
-          "ATL",
-          "DEN",
-          "PHI"
-        ],
-        "confidencePicks": [
-          {
-            "team": "SEA",
-            "matchupId": "matchup_1",
-            "confidence": 2
-          },
-          {
-            "team": "CHI",
-            "matchupId": "matchup_2",
-            "confidence": 5
-          },
-          {
-            "team": "NO",
-            "matchupId": "matchup_3",
-            "confidence": 6
           },
           {
             "team": "GB",
@@ -10209,54 +9069,54 @@
             "confidence": 7
           },
           {
-            "team": "IND",
+            "team": "TEN",
             "matchupId": "matchup_5",
-            "confidence": 8
+            "confidence": 4
           },
           {
             "team": "PHI",
             "matchupId": "matchup_6",
-            "confidence": 11
+            "confidence": 14
           },
           {
             "team": "HOU",
             "matchupId": "matchup_7",
-            "confidence": 14
+            "confidence": 13
           },
           {
             "team": "WAS",
             "matchupId": "matchup_8",
-            "confidence": 4
+            "confidence": 2
           },
           {
-            "team": "DEN",
+            "team": "LAC",
             "matchupId": "matchup_9",
-            "confidence": 9
+            "confidence": 5
           },
           {
             "team": "PIT",
             "matchupId": "matchup_10",
-            "confidence": 3
+            "confidence": 10
           },
           {
             "team": "ATL",
             "matchupId": "matchup_11",
-            "confidence": 10
+            "confidence": 12
           },
           {
             "team": "DET",
             "matchupId": "matchup_12",
-            "confidence": 12
+            "confidence": 8
           },
           {
             "team": "CIN",
             "matchupId": "matchup_13",
-            "confidence": 13
+            "confidence": 6
           },
           {
             "team": "BUF",
             "matchupId": "matchup_14",
-            "confidence": 1
+            "confidence": 9
           }
         ]
       }
@@ -10357,6 +9217,1906 @@
       }
     },
     {
+      "id": 651,
+      "created_at": "2024-10-10T18:55:00.564541+00:00",
+      "user_id": "54edf2fc-81f7-477e-9f9d-19afa5e5981a",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "54edf2fc-81f7-477e-9f9d-19afa5e5981a",
+        "lastName": "Bussinelli",
+        "username": "mbussinelli20",
+        "firstName": "Michael",
+        "marginPick": "PHI",
+        "tiebreaker": 14,
+        "survivorPick": null,
+        "highFivePicks": [
+          "HOU",
+          "BUF",
+          "TB",
+          "PHI",
+          "IND"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 3
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 10
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 5
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 4
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 11
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 13
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 2
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 9
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 7
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 12
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 1
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 6
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 706,
+      "created_at": "2024-10-11T17:20:53.027487+00:00",
+      "user_id": "f174f03c-62b1-4a47-a28c-7d93fe104171",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "f174f03c-62b1-4a47-a28c-7d93fe104171",
+        "lastName": "Linares",
+        "username": "mlinares",
+        "firstName": "Miguel",
+        "marginPick": "CIN",
+        "tiebreaker": 40,
+        "survivorPick": null,
+        "highFivePicks": [
+          "HOU",
+          "PIT",
+          "ATL",
+          "CIN",
+          "PHI"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 9
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 10
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 4
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 8
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 13
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 3
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 6
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 5
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 11
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 2
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 12
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": 613,
+      "created_at": "2024-10-09T19:04:39.982802+00:00",
+      "user_id": "8b94838f-9e4c-45b0-99ea-f5d1104d4f1a",
+      "week": 6,
+      "times_updated": 3,
+      "submission_data": {
+        "userId": "8b94838f-9e4c-45b0-99ea-f5d1104d4f1a",
+        "lastName": "Seitz",
+        "username": "mseitz",
+        "firstName": "Marc",
+        "marginPick": "ATL",
+        "tiebreaker": 38,
+        "survivorPick": null,
+        "highFivePicks": [
+          "TB",
+          "GB",
+          "PHI",
+          "HOU",
+          "ATL"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 14
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 2
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 10
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 9
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 3
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 7
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 11
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 6
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 5
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 1
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 13
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 12
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 8
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": 707,
+      "created_at": "2024-10-11T20:18:45.580864+00:00",
+      "user_id": "70171500-62ad-4954-8348-297aa1cc1f76",
+      "week": 6,
+      "times_updated": 0,
+      "submission_data": {
+        "userId": "70171500-62ad-4954-8348-297aa1cc1f76",
+        "lastName": "Reardon",
+        "username": "Billy",
+        "firstName": "Billy",
+        "marginPick": "PHI",
+        "tiebreaker": 47,
+        "survivorPick": null,
+        "highFivePicks": [
+          "PHI",
+          "HOU",
+          "DEN",
+          "ATL",
+          "DET"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 3
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 8
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 9
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 4
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 13
+          },
+          {
+            "team": "WAS",
+            "matchupId": "matchup_8",
+            "confidence": 5
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 7
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 10
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 12
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 11
+          },
+          {
+            "team": "NYG",
+            "matchupId": "matchup_13",
+            "confidence": 2
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": 708,
+      "created_at": "2024-10-11T22:29:27.710846+00:00",
+      "user_id": "95691265-52cc-4c61-8aa4-7dc4586dce3e",
+      "week": 6,
+      "times_updated": 0,
+      "submission_data": {
+        "userId": "95691265-52cc-4c61-8aa4-7dc4586dce3e",
+        "lastName": "Fandl",
+        "username": "Gfan69",
+        "firstName": "Gary",
+        "marginPick": "HOU",
+        "tiebreaker": 45,
+        "survivorPick": null,
+        "highFivePicks": [
+          "CHI",
+          "IND",
+          "PHI",
+          "HOU",
+          "NYJ"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 2
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 3
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 4
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 5
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 6
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 7
+          },
+          {
+            "team": "WAS",
+            "matchupId": "matchup_8",
+            "confidence": 8
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 9
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 10
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 11
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 12
+          },
+          {
+            "team": "NYG",
+            "matchupId": "matchup_13",
+            "confidence": 13
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": 691,
+      "created_at": "2024-10-10T23:27:56.561258+00:00",
+      "user_id": "549b94f3-bbdb-49e2-9431-7de82d723f58",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "549b94f3-bbdb-49e2-9431-7de82d723f58",
+        "lastName": "Zhang",
+        "username": "Teezyfb",
+        "firstName": "Tim",
+        "marginPick": "HOU",
+        "tiebreaker": 41,
+        "survivorPick": null,
+        "highFivePicks": [
+          "CHI",
+          "PHI",
+          "HOU",
+          "CIN",
+          "BAL"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 5
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 4
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 8
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 10
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 6
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 13
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 12
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 3
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 7
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 11
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 2
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 9
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 668,
+      "created_at": "2024-10-10T21:18:47.03576+00:00",
+      "user_id": "66c1862c-3f23-48b5-837d-a0c7adfef73e",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "66c1862c-3f23-48b5-837d-a0c7adfef73e",
+        "lastName": "Rogers",
+        "username": "Smalls:)",
+        "firstName": "Robyn",
+        "marginPick": "ATL",
+        "tiebreaker": 39,
+        "survivorPick": null,
+        "highFivePicks": [
+          "HOU",
+          "PHI",
+          "BAL",
+          "ATL",
+          "CIN"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 14
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 4
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 6
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 7
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 5
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 9
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 13
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 10
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 1
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 8
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 12
+          },
+          {
+            "team": "DAL",
+            "matchupId": "matchup_12",
+            "confidence": 3
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 11
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 690,
+      "created_at": "2024-10-10T23:24:47.348143+00:00",
+      "user_id": "e2735e77-d5e4-41bc-8899-da598e6c317e",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "e2735e77-d5e4-41bc-8899-da598e6c317e",
+        "lastName": "Rosario",
+        "username": "FidelCashFlow63",
+        "firstName": "Chris",
+        "marginPick": "HOU",
+        "tiebreaker": 52,
+        "survivorPick": null,
+        "highFivePicks": [
+          "TB",
+          "IND",
+          "PHI",
+          "HOU",
+          "ATL"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SEA",
+            "matchupId": "matchup_1",
+            "confidence": 8
+          },
+          {
+            "team": "JAC",
+            "matchupId": "matchup_2",
+            "confidence": 5
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 11
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 7
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 10
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 12
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 14
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 4
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 9
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 6
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 13
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 1
+          },
+          {
+            "team": "NYG",
+            "matchupId": "matchup_13",
+            "confidence": 3
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 700,
+      "created_at": "2024-10-11T00:00:39.715528+00:00",
+      "user_id": "4b5a94b9-f5f5-4f3b-b9b8-d0cdb7d11676",
+      "week": 6,
+      "times_updated": 2,
+      "submission_data": {
+        "userId": "4b5a94b9-f5f5-4f3b-b9b8-d0cdb7d11676",
+        "lastName": "Della Penna Sr.",
+        "username": "dolardude1",
+        "firstName": "Greg",
+        "marginPick": "PHI",
+        "tiebreaker": 38,
+        "survivorPick": null,
+        "highFivePicks": [
+          "GB",
+          "CHI",
+          "HOU",
+          "ATL",
+          "PHI"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 7
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 10
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 6
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 13
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 4
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 11
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 8
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 1
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 9
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 12
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 2
+          },
+          {
+            "team": "NYG",
+            "matchupId": "matchup_13",
+            "confidence": 3
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": 710,
+      "created_at": "2024-10-12T18:21:51.82637+00:00",
+      "user_id": "ac9f2b01-a476-42bb-9c10-c9178ff7180b",
+      "week": 6,
+      "times_updated": 0,
+      "submission_data": {
+        "userId": "ac9f2b01-a476-42bb-9c10-c9178ff7180b",
+        "lastName": "Maltz",
+        "username": "Dmaltz",
+        "firstName": "Devon",
+        "marginPick": "HOU",
+        "tiebreaker": 38,
+        "survivorPick": null,
+        "highFivePicks": [
+          "HOU",
+          "ATL",
+          "PHI",
+          "GB",
+          "BAL"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 9
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 4
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 5
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 3
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 13
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 10
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 8
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 6
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 12
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 11
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 7
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 644,
+      "created_at": "2024-10-10T16:32:00.224936+00:00",
+      "user_id": "32476ed6-56bf-40be-89e8-6130d02a324a",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "32476ed6-56bf-40be-89e8-6130d02a324a",
+        "lastName": "Mathias",
+        "username": "Mathias",
+        "firstName": "Bill",
+        "marginPick": "GB",
+        "tiebreaker": 43,
+        "survivorPick": null,
+        "highFivePicks": [
+          "GB",
+          "PHI",
+          "ATL",
+          "CHI",
+          "IND"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 9
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 11
+          },
+          {
+            "team": "NO",
+            "matchupId": "matchup_3",
+            "confidence": 2
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 14
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 10
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 13
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 8
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 4
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 3
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 1
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 12
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 5
+          },
+          {
+            "team": "NYG",
+            "matchupId": "matchup_13",
+            "confidence": 6
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": 605,
+      "created_at": "2024-10-09T14:52:41.508326+00:00",
+      "user_id": "e267d0ae-c957-4619-83db-17f31670efe3",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "e267d0ae-c957-4619-83db-17f31670efe3",
+        "lastName": "White",
+        "username": "Brendanwhite",
+        "firstName": "Brendan",
+        "marginPick": "ATL",
+        "tiebreaker": 50,
+        "survivorPick": null,
+        "highFivePicks": [
+          "PHI",
+          "HOU",
+          "CIN",
+          "SF",
+          "TB"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 11
+          },
+          {
+            "team": "JAC",
+            "matchupId": "matchup_2",
+            "confidence": 2
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 13
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 3
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 8
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 6
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 14
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 5
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 4
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 7
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 10
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 9
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 12
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 626,
+      "created_at": "2024-10-10T02:03:40.484159+00:00",
+      "user_id": "d9685b91-eaf3-47a5-b09a-0bd46f4c9606",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "d9685b91-eaf3-47a5-b09a-0bd46f4c9606",
+        "lastName": "Misiaszek",
+        "username": "PeteMiz",
+        "firstName": "Peter",
+        "marginPick": "HOU",
+        "tiebreaker": 41,
+        "survivorPick": null,
+        "highFivePicks": [
+          "ATL",
+          "HOU",
+          "PHI",
+          "TB",
+          "CHI"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SEA",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 7
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 12
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 9
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 2
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 13
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 14
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 10
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 3
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 8
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 11
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 6
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 4
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": 654,
+      "created_at": "2024-10-10T19:19:16.247372+00:00",
+      "user_id": "3146505c-3d98-4072-afdc-00a0e2d4bb18",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "3146505c-3d98-4072-afdc-00a0e2d4bb18",
+        "lastName": "Ustas",
+        "username": "Danielle",
+        "firstName": "Danielle",
+        "marginPick": "PHI",
+        "tiebreaker": 41,
+        "survivorPick": null,
+        "highFivePicks": [
+          "GB",
+          "PHI",
+          "HOU",
+          "BAL",
+          "ATL"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 8
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 1
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 7
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 10
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 3
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 13
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 12
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 4
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 5
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 11
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 6
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 9
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 622,
+      "created_at": "2024-10-10T00:23:32.663352+00:00",
+      "user_id": "ad50c309-eaab-4650-8f03-3828d72eac50",
+      "week": 6,
+      "times_updated": 2,
+      "submission_data": {
+        "userId": "ad50c309-eaab-4650-8f03-3828d72eac50",
+        "lastName": "Backhaus",
+        "username": "Dbackhaus",
+        "firstName": "Dan",
+        "marginPick": "BAL",
+        "tiebreaker": 40,
+        "survivorPick": null,
+        "highFivePicks": [
+          "BAL",
+          "ATL",
+          "HOU",
+          "PHI",
+          "GB"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 9
+          },
+          {
+            "team": "JAC",
+            "matchupId": "matchup_2",
+            "confidence": 1
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 8
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 10
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 3
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 12
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 13
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 6
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 7
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 11
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 4
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 5
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 628,
+      "created_at": "2024-10-10T07:21:35.087866+00:00",
+      "user_id": "803138fa-9259-4226-be1b-3d3c002c7c1a",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "803138fa-9259-4226-be1b-3d3c002c7c1a",
+        "lastName": "Hwang",
+        "username": "Moo",
+        "firstName": "Connie",
+        "marginPick": "HOU",
+        "tiebreaker": 32,
+        "survivorPick": null,
+        "highFivePicks": [
+          "LAC",
+          "PIT",
+          "ATL",
+          "HOU",
+          "IND"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 7
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 12
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 11
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 6
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 8
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 10
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 14
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 2
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 13
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 9
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 4
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 5
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 1
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 681,
+      "created_at": "2024-10-10T22:51:05.492232+00:00",
+      "user_id": "d73acab6-3e91-4163-8186-307726f425a6",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "d73acab6-3e91-4163-8186-307726f425a6",
+        "lastName": "(Panagopoulos) Ecker",
+        "username": "HotLilGiantsHoney",
+        "firstName": "Celeste ",
+        "marginPick": "ATL",
+        "tiebreaker": 52,
+        "survivorPick": null,
+        "highFivePicks": [
+          "SF",
+          "ATL",
+          "PHI",
+          "GB",
+          "HOU"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 11
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 2
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 9
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 13
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 6
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 8
+          },
+          {
+            "team": "WAS",
+            "matchupId": "matchup_8",
+            "confidence": 5
+          },
+          {
+            "team": "DEN",
+            "matchupId": "matchup_9",
+            "confidence": 1
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 7
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 12
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 10
+          },
+          {
+            "team": "NYG",
+            "matchupId": "matchup_13",
+            "confidence": 3
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": 695,
+      "created_at": "2024-10-10T23:37:40.265795+00:00",
+      "user_id": "06914b45-6f70-45bf-adf3-bce100373cf1",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "06914b45-6f70-45bf-adf3-bce100373cf1",
+        "lastName": "Van Heemst",
+        "username": "NVH",
+        "firstName": "Nicholas",
+        "marginPick": "GB",
+        "tiebreaker": 40,
+        "survivorPick": null,
+        "highFivePicks": [
+          "BAL",
+          "HOU",
+          "PHI",
+          "JAC",
+          "GB"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SEA",
+            "matchupId": "matchup_1",
+            "confidence": 1
+          },
+          {
+            "team": "JAC",
+            "matchupId": "matchup_2",
+            "confidence": 11
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 4
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 10
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 6
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 14
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 12
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 13
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 5
+          },
+          {
+            "team": "LV",
+            "matchupId": "matchup_10",
+            "confidence": 7
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 8
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 3
+          },
+          {
+            "team": "NYG",
+            "matchupId": "matchup_13",
+            "confidence": 2
+          },
+          {
+            "team": "NYJ",
+            "matchupId": "matchup_14",
+            "confidence": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": 673,
+      "created_at": "2024-10-10T21:53:36.692763+00:00",
+      "user_id": "25d5f59c-4977-4471-bc29-e289c9b888a7",
+      "week": 6,
+      "times_updated": 1,
+      "submission_data": {
+        "userId": "25d5f59c-4977-4471-bc29-e289c9b888a7",
+        "lastName": "Nargi",
+        "username": "Nargi27",
+        "firstName": "Matt",
+        "marginPick": "ATL",
+        "tiebreaker": 34,
+        "survivorPick": null,
+        "highFivePicks": [
+          "HOU",
+          "ATL",
+          "CIN",
+          "PHI",
+          "PIT"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 6
+          },
+          {
+            "team": "JAC",
+            "matchupId": "matchup_2",
+            "confidence": 5
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 11
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 1
+          },
+          {
+            "team": "IND",
+            "matchupId": "matchup_5",
+            "confidence": 9
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 7
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 12
+          },
+          {
+            "team": "WAS",
+            "matchupId": "matchup_8",
+            "confidence": 3
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 8
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 13
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 10
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 2
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 14
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": 638,
+      "created_at": "2024-10-10T13:41:09.217652+00:00",
+      "user_id": "1af52a92-0242-491e-87f5-c166fa2fa730",
+      "week": 6,
+      "times_updated": 7,
+      "submission_data": {
+        "userId": "1af52a92-0242-491e-87f5-c166fa2fa730",
+        "lastName": "Della Penna",
+        "username": "Dellapeg",
+        "firstName": "Gregory",
+        "marginPick": "HOU",
+        "tiebreaker": 38,
+        "survivorPick": null,
+        "highFivePicks": [
+          "TB",
+          "PHI",
+          "NE",
+          "PIT",
+          "BUF"
+        ],
+        "confidencePicks": [
+          {
+            "team": "SF",
+            "matchupId": "matchup_1",
+            "confidence": 14
+          },
+          {
+            "team": "CHI",
+            "matchupId": "matchup_2",
+            "confidence": 3
+          },
+          {
+            "team": "TB",
+            "matchupId": "matchup_3",
+            "confidence": 13
+          },
+          {
+            "team": "GB",
+            "matchupId": "matchup_4",
+            "confidence": 12
+          },
+          {
+            "team": "TEN",
+            "matchupId": "matchup_5",
+            "confidence": 2
+          },
+          {
+            "team": "PHI",
+            "matchupId": "matchup_6",
+            "confidence": 11
+          },
+          {
+            "team": "HOU",
+            "matchupId": "matchup_7",
+            "confidence": 10
+          },
+          {
+            "team": "BAL",
+            "matchupId": "matchup_8",
+            "confidence": 7
+          },
+          {
+            "team": "LAC",
+            "matchupId": "matchup_9",
+            "confidence": 1
+          },
+          {
+            "team": "PIT",
+            "matchupId": "matchup_10",
+            "confidence": 8
+          },
+          {
+            "team": "ATL",
+            "matchupId": "matchup_11",
+            "confidence": 9
+          },
+          {
+            "team": "DET",
+            "matchupId": "matchup_12",
+            "confidence": 5
+          },
+          {
+            "team": "CIN",
+            "matchupId": "matchup_13",
+            "confidence": 4
+          },
+          {
+            "team": "BUF",
+            "matchupId": "matchup_14",
+            "confidence": 6
+          }
+        ]
+      }
+    },
+    {
       "id": -1,
       "created_at": "N/A",
       "user_id": "11c577d3-f0d5-4690-ab51-40aced33087d",
@@ -10373,7 +11133,7 @@
         "confidencePicks": [
           {
             "matchupId": "matchup_1",
-            "team": "SEA",
+            "team": "SF",
             "confidence": 1
           },
           {
@@ -10383,7 +11143,7 @@
           },
           {
             "matchupId": "matchup_3",
-            "team": "TB",
+            "team": "NO",
             "confidence": 3
           },
           {
@@ -10403,7 +11163,7 @@
           },
           {
             "matchupId": "matchup_7",
-            "team": "HOU",
+            "team": "NE",
             "confidence": 7
           },
           {
@@ -10433,183 +11193,7 @@
           },
           {
             "matchupId": "matchup_13",
-            "team": "NYG",
-            "confidence": 13
-          },
-          {
-            "matchupId": "matchup_14",
-            "team": "BUF",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
-      "id": -1,
-      "created_at": "N/A",
-      "user_id": "95691265-52cc-4c61-8aa4-7dc4586dce3e",
-      "week": 6,
-      "submission_data": {
-        "userId": "95691265-52cc-4c61-8aa4-7dc4586dce3e",
-        "username": "Gfan69",
-        "firstName": "Gary",
-        "lastName": "Fandl",
-        "tiebreaker": 0,
-        "highFivePicks": [],
-        "marginPick": null,
-        "survivorPick": "",
-        "confidencePicks": [
-          {
-            "matchupId": "matchup_1",
-            "team": "SF",
-            "confidence": 1
-          },
-          {
-            "matchupId": "matchup_2",
-            "team": "CHI",
-            "confidence": 2
-          },
-          {
-            "matchupId": "matchup_3",
-            "team": "NO",
-            "confidence": 3
-          },
-          {
-            "matchupId": "matchup_4",
-            "team": "GB",
-            "confidence": 4
-          },
-          {
-            "matchupId": "matchup_5",
-            "team": "TEN",
-            "confidence": 5
-          },
-          {
-            "matchupId": "matchup_6",
-            "team": "PHI",
-            "confidence": 6
-          },
-          {
-            "matchupId": "matchup_7",
-            "team": "NE",
-            "confidence": 7
-          },
-          {
-            "matchupId": "matchup_8",
-            "team": "BAL",
-            "confidence": 8
-          },
-          {
-            "matchupId": "matchup_9",
-            "team": "DEN",
-            "confidence": 9
-          },
-          {
-            "matchupId": "matchup_10",
-            "team": "LV",
-            "confidence": 10
-          },
-          {
-            "matchupId": "matchup_11",
-            "team": "ATL",
-            "confidence": 11
-          },
-          {
-            "matchupId": "matchup_12",
-            "team": "DET",
-            "confidence": 12
-          },
-          {
-            "matchupId": "matchup_13",
-            "team": "NYG",
-            "confidence": 13
-          },
-          {
-            "matchupId": "matchup_14",
-            "team": "BUF",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
-      "id": -1,
-      "created_at": "N/A",
-      "user_id": "aceb39ff-150c-48ee-a879-41c21c6a7382",
-      "week": 6,
-      "submission_data": {
-        "userId": "aceb39ff-150c-48ee-a879-41c21c6a7382",
-        "username": "Aecker",
-        "firstName": "Alex",
-        "lastName": "Ecker",
-        "tiebreaker": 0,
-        "highFivePicks": [],
-        "marginPick": null,
-        "survivorPick": "",
-        "confidencePicks": [
-          {
-            "matchupId": "matchup_1",
-            "team": "SEA",
-            "confidence": 1
-          },
-          {
-            "matchupId": "matchup_2",
-            "team": "CHI",
-            "confidence": 2
-          },
-          {
-            "matchupId": "matchup_3",
-            "team": "NO",
-            "confidence": 3
-          },
-          {
-            "matchupId": "matchup_4",
-            "team": "ARI",
-            "confidence": 4
-          },
-          {
-            "matchupId": "matchup_5",
-            "team": "IND",
-            "confidence": 5
-          },
-          {
-            "matchupId": "matchup_6",
-            "team": "CLE",
-            "confidence": 6
-          },
-          {
-            "matchupId": "matchup_7",
-            "team": "NE",
-            "confidence": 7
-          },
-          {
-            "matchupId": "matchup_8",
-            "team": "WAS",
-            "confidence": 8
-          },
-          {
-            "matchupId": "matchup_9",
-            "team": "LAC",
-            "confidence": 9
-          },
-          {
-            "matchupId": "matchup_10",
-            "team": "LV",
-            "confidence": 10
-          },
-          {
-            "matchupId": "matchup_11",
-            "team": "ATL",
-            "confidence": 11
-          },
-          {
-            "matchupId": "matchup_12",
-            "team": "DAL",
-            "confidence": 12
-          },
-          {
-            "matchupId": "matchup_13",
-            "team": "NYG",
+            "team": "CIN",
             "confidence": 13
           },
           {
@@ -10657,94 +11241,6 @@
           },
           {
             "matchupId": "matchup_5",
-            "team": "IND",
-            "confidence": 5
-          },
-          {
-            "matchupId": "matchup_6",
-            "team": "PHI",
-            "confidence": 6
-          },
-          {
-            "matchupId": "matchup_7",
-            "team": "HOU",
-            "confidence": 7
-          },
-          {
-            "matchupId": "matchup_8",
-            "team": "WAS",
-            "confidence": 8
-          },
-          {
-            "matchupId": "matchup_9",
-            "team": "DEN",
-            "confidence": 9
-          },
-          {
-            "matchupId": "matchup_10",
-            "team": "LV",
-            "confidence": 10
-          },
-          {
-            "matchupId": "matchup_11",
-            "team": "CAR",
-            "confidence": 11
-          },
-          {
-            "matchupId": "matchup_12",
-            "team": "DAL",
-            "confidence": 12
-          },
-          {
-            "matchupId": "matchup_13",
-            "team": "NYG",
-            "confidence": 13
-          },
-          {
-            "matchupId": "matchup_14",
-            "team": "NYJ",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
-      "id": -1,
-      "created_at": "N/A",
-      "user_id": "f174f03c-62b1-4a47-a28c-7d93fe104171",
-      "week": 6,
-      "submission_data": {
-        "userId": "f174f03c-62b1-4a47-a28c-7d93fe104171",
-        "username": "mlinares",
-        "firstName": "Miguel",
-        "lastName": "Linares",
-        "tiebreaker": 0,
-        "highFivePicks": [],
-        "marginPick": null,
-        "survivorPick": "",
-        "confidencePicks": [
-          {
-            "matchupId": "matchup_1",
-            "team": "SF",
-            "confidence": 1
-          },
-          {
-            "matchupId": "matchup_2",
-            "team": "CHI",
-            "confidence": 2
-          },
-          {
-            "matchupId": "matchup_3",
-            "team": "NO",
-            "confidence": 3
-          },
-          {
-            "matchupId": "matchup_4",
-            "team": "GB",
-            "confidence": 4
-          },
-          {
-            "matchupId": "matchup_5",
             "team": "TEN",
             "confidence": 5
           },
@@ -10770,183 +11266,7 @@
           },
           {
             "matchupId": "matchup_10",
-            "team": "PIT",
-            "confidence": 10
-          },
-          {
-            "matchupId": "matchup_11",
-            "team": "ATL",
-            "confidence": 11
-          },
-          {
-            "matchupId": "matchup_12",
-            "team": "DET",
-            "confidence": 12
-          },
-          {
-            "matchupId": "matchup_13",
-            "team": "NYG",
-            "confidence": 13
-          },
-          {
-            "matchupId": "matchup_14",
-            "team": "NYJ",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
-      "id": -1,
-      "created_at": "N/A",
-      "user_id": "1837f095-daa9-4ec3-985f-cf5fc74818f6",
-      "week": 6,
-      "submission_data": {
-        "userId": "1837f095-daa9-4ec3-985f-cf5fc74818f6",
-        "username": "aonofrio",
-        "firstName": "Alissa",
-        "lastName": "Onofrio",
-        "tiebreaker": 0,
-        "highFivePicks": [],
-        "marginPick": null,
-        "survivorPick": "",
-        "confidencePicks": [
-          {
-            "matchupId": "matchup_1",
-            "team": "SF",
-            "confidence": 1
-          },
-          {
-            "matchupId": "matchup_2",
-            "team": "CHI",
-            "confidence": 2
-          },
-          {
-            "matchupId": "matchup_3",
-            "team": "NO",
-            "confidence": 3
-          },
-          {
-            "matchupId": "matchup_4",
-            "team": "GB",
-            "confidence": 4
-          },
-          {
-            "matchupId": "matchup_5",
-            "team": "IND",
-            "confidence": 5
-          },
-          {
-            "matchupId": "matchup_6",
-            "team": "PHI",
-            "confidence": 6
-          },
-          {
-            "matchupId": "matchup_7",
-            "team": "HOU",
-            "confidence": 7
-          },
-          {
-            "matchupId": "matchup_8",
-            "team": "BAL",
-            "confidence": 8
-          },
-          {
-            "matchupId": "matchup_9",
-            "team": "LAC",
-            "confidence": 9
-          },
-          {
-            "matchupId": "matchup_10",
             "team": "LV",
-            "confidence": 10
-          },
-          {
-            "matchupId": "matchup_11",
-            "team": "CAR",
-            "confidence": 11
-          },
-          {
-            "matchupId": "matchup_12",
-            "team": "DET",
-            "confidence": 12
-          },
-          {
-            "matchupId": "matchup_13",
-            "team": "CIN",
-            "confidence": 13
-          },
-          {
-            "matchupId": "matchup_14",
-            "team": "BUF",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
-      "id": -1,
-      "created_at": "N/A",
-      "user_id": "ac9f2b01-a476-42bb-9c10-c9178ff7180b",
-      "week": 6,
-      "submission_data": {
-        "userId": "ac9f2b01-a476-42bb-9c10-c9178ff7180b",
-        "username": "Dmaltz",
-        "firstName": "Devon",
-        "lastName": "Maltz",
-        "tiebreaker": 0,
-        "highFivePicks": [],
-        "marginPick": null,
-        "survivorPick": "",
-        "confidencePicks": [
-          {
-            "matchupId": "matchup_1",
-            "team": "SF",
-            "confidence": 1
-          },
-          {
-            "matchupId": "matchup_2",
-            "team": "JAC",
-            "confidence": 2
-          },
-          {
-            "matchupId": "matchup_3",
-            "team": "TB",
-            "confidence": 3
-          },
-          {
-            "matchupId": "matchup_4",
-            "team": "ARI",
-            "confidence": 4
-          },
-          {
-            "matchupId": "matchup_5",
-            "team": "IND",
-            "confidence": 5
-          },
-          {
-            "matchupId": "matchup_6",
-            "team": "PHI",
-            "confidence": 6
-          },
-          {
-            "matchupId": "matchup_7",
-            "team": "NE",
-            "confidence": 7
-          },
-          {
-            "matchupId": "matchup_8",
-            "team": "BAL",
-            "confidence": 8
-          },
-          {
-            "matchupId": "matchup_9",
-            "team": "LAC",
-            "confidence": 9
-          },
-          {
-            "matchupId": "matchup_10",
-            "team": "PIT",
             "confidence": 10
           },
           {
@@ -10967,270 +11287,6 @@
           {
             "matchupId": "matchup_14",
             "team": "NYJ",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
-      "id": -1,
-      "created_at": "N/A",
-      "user_id": "70171500-62ad-4954-8348-297aa1cc1f76",
-      "week": 6,
-      "submission_data": {
-        "userId": "70171500-62ad-4954-8348-297aa1cc1f76",
-        "username": "Billy",
-        "firstName": "Billy",
-        "lastName": "Reardon",
-        "tiebreaker": 0,
-        "highFivePicks": [],
-        "marginPick": null,
-        "survivorPick": "",
-        "confidencePicks": [
-          {
-            "matchupId": "matchup_1",
-            "team": "SF",
-            "confidence": 1
-          },
-          {
-            "matchupId": "matchup_2",
-            "team": "CHI",
-            "confidence": 2
-          },
-          {
-            "matchupId": "matchup_3",
-            "team": "TB",
-            "confidence": 3
-          },
-          {
-            "matchupId": "matchup_4",
-            "team": "ARI",
-            "confidence": 4
-          },
-          {
-            "matchupId": "matchup_5",
-            "team": "IND",
-            "confidence": 5
-          },
-          {
-            "matchupId": "matchup_6",
-            "team": "PHI",
-            "confidence": 6
-          },
-          {
-            "matchupId": "matchup_7",
-            "team": "HOU",
-            "confidence": 7
-          },
-          {
-            "matchupId": "matchup_8",
-            "team": "WAS",
-            "confidence": 8
-          },
-          {
-            "matchupId": "matchup_9",
-            "team": "DEN",
-            "confidence": 9
-          },
-          {
-            "matchupId": "matchup_10",
-            "team": "PIT",
-            "confidence": 10
-          },
-          {
-            "matchupId": "matchup_11",
-            "team": "CAR",
-            "confidence": 11
-          },
-          {
-            "matchupId": "matchup_12",
-            "team": "DET",
-            "confidence": 12
-          },
-          {
-            "matchupId": "matchup_13",
-            "team": "NYG",
-            "confidence": 13
-          },
-          {
-            "matchupId": "matchup_14",
-            "team": "NYJ",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
-      "id": -1,
-      "created_at": "N/A",
-      "user_id": "74325c17-feda-4926-a35b-9911265bcf1a",
-      "week": 6,
-      "submission_data": {
-        "userId": "74325c17-feda-4926-a35b-9911265bcf1a",
-        "username": "Mbrower",
-        "firstName": "Michael",
-        "lastName": "Brower",
-        "tiebreaker": 0,
-        "highFivePicks": [],
-        "marginPick": null,
-        "survivorPick": "",
-        "confidencePicks": [
-          {
-            "matchupId": "matchup_1",
-            "team": "SF",
-            "confidence": 1
-          },
-          {
-            "matchupId": "matchup_2",
-            "team": "JAC",
-            "confidence": 2
-          },
-          {
-            "matchupId": "matchup_3",
-            "team": "TB",
-            "confidence": 3
-          },
-          {
-            "matchupId": "matchup_4",
-            "team": "GB",
-            "confidence": 4
-          },
-          {
-            "matchupId": "matchup_5",
-            "team": "IND",
-            "confidence": 5
-          },
-          {
-            "matchupId": "matchup_6",
-            "team": "CLE",
-            "confidence": 6
-          },
-          {
-            "matchupId": "matchup_7",
-            "team": "NE",
-            "confidence": 7
-          },
-          {
-            "matchupId": "matchup_8",
-            "team": "WAS",
-            "confidence": 8
-          },
-          {
-            "matchupId": "matchup_9",
-            "team": "DEN",
-            "confidence": 9
-          },
-          {
-            "matchupId": "matchup_10",
-            "team": "PIT",
-            "confidence": 10
-          },
-          {
-            "matchupId": "matchup_11",
-            "team": "CAR",
-            "confidence": 11
-          },
-          {
-            "matchupId": "matchup_12",
-            "team": "DET",
-            "confidence": 12
-          },
-          {
-            "matchupId": "matchup_13",
-            "team": "NYG",
-            "confidence": 13
-          },
-          {
-            "matchupId": "matchup_14",
-            "team": "BUF",
-            "confidence": 14
-          }
-        ]
-      }
-    },
-    {
-      "id": -1,
-      "created_at": "N/A",
-      "user_id": "843207b4-62ce-4a02-9b0f-f07cbc614a8a",
-      "week": 6,
-      "submission_data": {
-        "userId": "843207b4-62ce-4a02-9b0f-f07cbc614a8a",
-        "username": "Db26",
-        "firstName": "David",
-        "lastName": "Brand",
-        "tiebreaker": 0,
-        "highFivePicks": [],
-        "marginPick": null,
-        "survivorPick": "",
-        "confidencePicks": [
-          {
-            "matchupId": "matchup_1",
-            "team": "SF",
-            "confidence": 1
-          },
-          {
-            "matchupId": "matchup_2",
-            "team": "JAC",
-            "confidence": 2
-          },
-          {
-            "matchupId": "matchup_3",
-            "team": "NO",
-            "confidence": 3
-          },
-          {
-            "matchupId": "matchup_4",
-            "team": "ARI",
-            "confidence": 4
-          },
-          {
-            "matchupId": "matchup_5",
-            "team": "TEN",
-            "confidence": 5
-          },
-          {
-            "matchupId": "matchup_6",
-            "team": "PHI",
-            "confidence": 6
-          },
-          {
-            "matchupId": "matchup_7",
-            "team": "NE",
-            "confidence": 7
-          },
-          {
-            "matchupId": "matchup_8",
-            "team": "WAS",
-            "confidence": 8
-          },
-          {
-            "matchupId": "matchup_9",
-            "team": "LAC",
-            "confidence": 9
-          },
-          {
-            "matchupId": "matchup_10",
-            "team": "PIT",
-            "confidence": 10
-          },
-          {
-            "matchupId": "matchup_11",
-            "team": "ATL",
-            "confidence": 11
-          },
-          {
-            "matchupId": "matchup_12",
-            "team": "DET",
-            "confidence": 12
-          },
-          {
-            "matchupId": "matchup_13",
-            "team": "NYG",
-            "confidence": 13
-          },
-          {
-            "matchupId": "matchup_14",
-            "team": "BUF",
             "confidence": 14
           }
         ]
