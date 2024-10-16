@@ -16,9 +16,11 @@ export const CURRENT_WEEK_CUTOFF_TIME = new Date('2024-10-20T17:00:00.000Z');
 // This is whatever the last scheduled game is in a given week
 // This is used to tell the users what game they should be predicting the total final score of for a week
 export const CURRENT_WEEK_FINAL_GAME: string = 'LAC @ ARI';
+export const PREV_WEEK_FINAL_GAME: string = 'BUF @ NYJ';
 // This should be updated every Tuesday morning with the total score of the game above
 // This is used to determine the tiebreaker for the weekly standings
 export const MONDAY_NIGHT_TOTAL: number = 0;
+export const PREV_MONDAY_NIGHT_TOTAL: number = 43;
 // This is to mark the different states that a week can be in
 // START: This means that this is a new week and no games have been played yet
 //          - Wednesday & Thursday
