@@ -1,6 +1,6 @@
 import playerData from '../../../data/2024/football/players.json';
 
-import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MONDAY_NIGHT_TOTAL } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MONDAY_NIGHT_TOTAL, PREV_MONDAY_NIGHT_TOTAL } from '../../constants';
 
 interface TableColumns {
   position: number;
@@ -18,6 +18,8 @@ const headers: string[] = ['Position', 'Name', 'Points', 'Wins', 'Losses', 'Ties
 function WeeklyStandingsTable() {
   // If the current week is currently marked as START we don't want to show anything yet, so show the prior weeks data
   const weekToShow = CURRENT_WEEK_STATUS === 'START' && CURRENT_WEEK > 1 ? CURRENT_WEEK - 2 : CURRENT_WEEK - 1;
+  const tiebreakerToUse =
+    CURRENT_WEEK_STATUS === 'START' && CURRENT_WEEK > 1 ? PREV_MONDAY_NIGHT_TOTAL : MONDAY_NIGHT_TOTAL;
 
   // Calculate the standings
   const calculatedPicks: TableColumns[] = [];
@@ -38,8 +40,8 @@ function WeeklyStandingsTable() {
 
   // Sort everyone by points now
   calculatedPicks.sort((row1, row2) => {
-    const row1Tb = Math.abs(MONDAY_NIGHT_TOTAL - row1.tiebreaker);
-    const row2Tb = Math.abs(MONDAY_NIGHT_TOTAL - row2.tiebreaker);
+    const row1Tb = Math.abs(tiebreakerToUse - row1.tiebreaker);
+    const row2Tb = Math.abs(tiebreakerToUse - row2.tiebreaker);
     return row2.points - row1.points || row2.wins - row1.wins || row1Tb - row2Tb;
   });
 
