@@ -51,7 +51,23 @@ if (!isSubmissionsLocked) {
   }
 
   // Move this data to the weekly picks json file
-  weeklyPicksData.picks = [...data];
+  if (isFirstRun) {
+    weeklyPicksData.picks = [...data];
+  } else {
+    // If this isn't the first run, we don't want to replace any still-forgotten picksheets because
+    // that can lead to a bug where a forgotten picksheet ends up with a 1-point difference between
+    // what is right and wrong
+    const updatedWeeklyPicks = weeklyPicksData.picks.map(pickData => {
+      const updatedPickIndex = data.findIndex(dbPicks => dbPicks.user_id === pickData.user_id);
+      if (updatedPickIndex !== -1) {
+        return data[updatedPickIndex];
+      } else {
+        return pickData;
+      }
+    });
+
+    weeklyPicksData.picks = [...updatedWeeklyPicks];
+  }
 }
 
 const findSubmission = submissionId => {
