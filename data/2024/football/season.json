@@ -1419,17 +1419,6 @@
       },
       {
         "matchupId": "matchup_3",
-        "homeTeam": "MIN",
-        "awayTeam": "IND",
-        "time": "2024-11-03T18:00:00.000Z",
-        "gameInfo": "Sun, Nov 3, 1:00 PM ET - Minneapolis, MN",
-        "homeScore": 0,
-        "awayScore": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      {
-        "matchupId": "matchup_4",
         "homeTeam": "CLE",
         "awayTeam": "LAC",
         "time": "2024-11-03T18:00:00.000Z",
@@ -1440,7 +1429,7 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_5",
+        "matchupId": "matchup_4",
         "homeTeam": "BUF",
         "awayTeam": "MIA",
         "time": "2024-11-03T18:00:00.000Z",
@@ -1451,7 +1440,7 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_6",
+        "matchupId": "matchup_5",
         "homeTeam": "ATL",
         "awayTeam": "DAL",
         "time": "2024-11-03T18:00:00.000Z",
@@ -1462,7 +1451,7 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_7",
+        "matchupId": "matchup_6",
         "homeTeam": "CAR",
         "awayTeam": "NO",
         "time": "2024-11-03T18:00:00.000Z",
@@ -1473,7 +1462,7 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_8",
+        "matchupId": "matchup_7",
         "homeTeam": "TEN",
         "awayTeam": "NE",
         "time": "2024-11-03T18:00:00.000Z",
@@ -1484,7 +1473,7 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_9",
+        "matchupId": "matchup_8",
         "homeTeam": "CIN",
         "awayTeam": "LV",
         "time": "2024-11-03T18:00:00.000Z",
@@ -1495,7 +1484,7 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_10",
+        "matchupId": "matchup_9",
         "homeTeam": "BAL",
         "awayTeam": "DEN",
         "time": "2024-11-03T18:00:00.000Z",
@@ -1506,11 +1495,22 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_11",
+        "matchupId": "matchup_10",
         "homeTeam": "ARI",
         "awayTeam": "CHI",
         "time": "2024-11-03T21:05:00.000Z",
         "gameInfo": "Sun, Nov 3, 4:05 PM ET - Glendale, AZ",
+        "homeScore": 0,
+        "awayScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "homeTeam": "PHI",
+        "awayTeam": "JAC",
+        "time": "2024-11-03T21:05:00.000Z",
+        "gameInfo": "Sun, Nov 3, 4:05 PM ET - Philadelphia, PA",
         "homeScore": 0,
         "awayScore": 0,
         "winner": "",
@@ -1540,10 +1540,10 @@
       },
       {
         "matchupId": "matchup_14",
-        "homeTeam": "PHI",
-        "awayTeam": "JAC",
+        "homeTeam": "MIN",
+        "awayTeam": "IND",
         "time": "2024-11-04T01:20:00.000Z",
-        "gameInfo": "Sun, Nov 3, 8:20 PM ET - Philadelphia, PA",
+        "gameInfo": "Sun, Nov 3, 8:20 PM ET - Minneapolis, MN",
         "homeScore": 0,
         "awayScore": 0,
         "winner": "",
