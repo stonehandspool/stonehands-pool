@@ -15,7 +15,7 @@ export const CURRENT_YEAR: string = '2024';
 export const CURRENT_WEEK_CUTOFF_TIME = new Date('2024-11-03T18:00:00.000Z');
 // This is whatever the last scheduled game is in a given week
 // This is used to tell the users what game they should be predicting the total final score of for a week
-export const CURRENT_WEEK_FINAL_GAME: string = 'NYG @ PIT';
+export const CURRENT_WEEK_FINAL_GAME: string = 'TB @ KC';
 export const PREV_WEEK_FINAL_GAME: string = 'NYG @ PIT';
 // This should be updated every Tuesday morning with the total score of the game above
 // This is used to determine the tiebreaker for the weekly standings
