@@ -18,8 +18,9 @@ function MarginPick(props: MarginPickProps) {
   };
 
   const priorPickMatchupInfo = findMatchupByTeam(marginTeam);
-  const priorPickGameCompleted = priorPickMatchupInfo && priorPickMatchupInfo.winner !== '' ? true : false;
   const currentTime = new Date();
+  const priorPickGameCompleted =
+    priorPickMatchupInfo && currentTime > new Date(priorPickMatchupInfo.time) ? true : false;
 
   return (
     <div className="container">
