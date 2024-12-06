@@ -336,7 +336,7 @@ function PickSheetForm(props: PickSheetFormProps) {
       if (picksheetSubmissionError) {
         console.error(picksheetSubmissionError);
         setFormError(
-          `Something went wrong updating your picksheet, please reach out to Ryan (Condition B): Temporary debug info: ${JSON.stringify(picksheetSubmissionError)}`
+          `Something went wrong updating your picksheet, please try again in a different tab or browser and then reach out to Ryan (Condition B): Temporary debug info: ${JSON.stringify(picksheetSubmissionError)}`
         );
         return;
       }
@@ -359,7 +359,7 @@ function PickSheetForm(props: PickSheetFormProps) {
       if (picksheetSubmissionError) {
         console.error(picksheetSubmissionError);
         setFormError(
-          `Something went wrong submitting your picksheet, please reach out to Ryan (Condition A): Temporary debug info: ${JSON.stringify(picksheetSubmissionError)}`
+          `Something went wrong submitting your picksheet, please try again in a different tab or browser and then reach out to Ryan (Condition A): Temporary debug info: ${JSON.stringify(picksheetSubmissionError)}`
         );
         return;
       }
