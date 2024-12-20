@@ -161,7 +161,7 @@ function NavBar() {
                 className="navbar-item"
                 to="/weekly-picks-images"
                 onClick={() => {
-                  onLinkClick('standings');
+                  onLinkClick('more');
                 }}
               >
                 Picks w/ Images
@@ -183,6 +183,15 @@ function NavBar() {
                 }}
               >
                 Standings By Week
+              </Link>
+              <Link
+                className="navbar-item"
+                to="/all-user-stats"
+                onClick={() => {
+                  onLinkClick('more');
+                }}
+              >
+                User Stats
               </Link>
               <Link
                 className="navbar-item"
