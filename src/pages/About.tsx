@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CURRENT_YEAR, MARCH_MADNESS_STATE } from '../constants';
 import ConfidenceCard from '../components/picksheet/ConfidenceCard';
