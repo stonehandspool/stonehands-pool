@@ -151,47 +151,46 @@ function PersonalStats() {
   let bestMarginWeek;
   let worstMargin;
   let worstMarginWeek;
-  if (userInfo) {
-    if (userInfo.marginTotal > 0) {
-      marginOperator = '+';
-    } else {
-      marginOperator = '';
-    }
 
-    survivorColor = userInfo.aliveInSurvivor ? 'has-text-success' : 'has-text-danger';
-    marginColor = userInfo.marginTotal > 0 ? 'has-text-success' : 'has-text-danger';
-
-    unusedSurvivorPicks = TEAM_CODES.filter(code => {
-      return !userInfo.survivorPicks.includes(code);
-    });
-
-    // If we don't want to show all of their picks, move the most recent one back into the unused pool and re-alphabetize
-    if (weekToShow < CURRENT_WEEK) {
-      unusedSurvivorPicks.push(userInfo.survivorPicks[userInfo.survivorPicks.length - 1]);
-      unusedSurvivorPicks.sort();
-    }
-
-    unusedMarginPicks = TEAM_CODES.filter(code => {
-      return !userInfo.marginPicks.some(pick => pick.team === code);
-    });
-
-    if (weekToShow < CURRENT_WEEK) {
-      unusedMarginPicks.push(userInfo.marginPicks[userInfo.marginPicks.length - 1].team as string);
-      unusedMarginPicks.sort();
-    }
-
-    bestMargin = userInfo.marginPicks.reduce((prev, current) => {
-      return prev.margin! > current.margin! ? prev : current;
-    });
-    const { team } = bestMargin;
-    bestMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === team) + 1;
-
-    worstMargin = userInfo.marginPicks.reduce((prev, current) => {
-      return prev.margin! > current.margin! && current.margin !== null ? current : prev;
-    });
-    const { team: worst } = worstMargin;
-    worstMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === worst) + 1;
+  if (userInfo.marginTotal > 0) {
+    marginOperator = '+';
+  } else {
+    marginOperator = '';
   }
+
+  survivorColor = userInfo.aliveInSurvivor ? 'has-text-success' : 'has-text-danger';
+  marginColor = userInfo.marginTotal > 0 ? 'has-text-success' : 'has-text-danger';
+
+  unusedSurvivorPicks = TEAM_CODES.filter(code => {
+    return !userInfo.survivorPicks.includes(code);
+  });
+
+  // If we don't want to show all of their picks, move the most recent one back into the unused pool and re-alphabetize
+  if (weekToShow < CURRENT_WEEK) {
+    unusedSurvivorPicks.push(userInfo.survivorPicks[userInfo.survivorPicks.length - 1]);
+    unusedSurvivorPicks.sort();
+  }
+
+  unusedMarginPicks = TEAM_CODES.filter(code => {
+    return !userInfo.marginPicks.some(pick => pick.team === code);
+  });
+
+  if (weekToShow < CURRENT_WEEK) {
+    unusedMarginPicks.push(userInfo.marginPicks[userInfo.marginPicks.length - 1].team as string);
+    unusedMarginPicks.sort();
+  }
+
+  bestMargin = userInfo.marginPicks.reduce((prev, current) => {
+    return prev.margin! > current.margin! ? prev : current;
+  });
+  const { team } = bestMargin;
+  bestMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === team) + 1;
+
+  worstMargin = userInfo.marginPicks.reduce((prev, current) => {
+    return prev.margin! > current.margin! && current.margin !== null ? current : prev;
+  });
+  const { team: worst } = worstMargin;
+  worstMarginWeek = userInfo.marginPicks.findIndex(pick => pick.team === worst) + 1;
 
   return (
     <section className="section">
@@ -236,9 +235,7 @@ function PersonalStats() {
           <h4 className="title is-4 has-text-centered">Trophy Case:</h4>
           <div className="box is-narrow">
             <div className="has-text-centered">
-              <div>
-                <p className="title">Coming Soon!</p>
-              </div>
+              <div>{trophies}</div>
             </div>
           </div>
         </div>

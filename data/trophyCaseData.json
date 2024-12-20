@@ -840,19 +840,23 @@
     "eligibleUsers": [
       {
         "userId": "ad50c309-eaab-4650-8f03-3828d72eac50",
-        "pool": "Confidence"
+        "pool": "Confidence",
+        "year": 2023
       },
       {
         "userId": "36061310-5718-49b2-9d16-99768bcc4aa3",
-        "pool": "Survivor"
+        "pool": "Survivor",
+        "year": 2023
       },
       {
         "userId": "3cd5ef80-6348-407b-bd5c-6477f49c322e",
-        "pool": "Margin"
+        "pool": "Margin",
+        "year": 2023
       },
       {
         "userId": "8b94838f-9e4c-45b0-99ea-f5d1104d4f1a",
-        "pool": "High Five"
+        "pool": "High Five",
+        "year": 2023
       }
     ]
   },
@@ -861,19 +865,23 @@
     "eligibleUsers": [
       {
         "userId": "0869826a-9ee4-4001-8142-f213f7504cc2",
-        "pool": "Confidence"
+        "pool": "Confidence",
+        "year": 2023
       },
       {
         "userId": "549b94f3-bbdb-49e2-9431-7de82d723f58",
-        "pool": "Margin"
+        "pool": "Margin",
+        "year": 2023
       },
       {
         "userId": "ad50c309-eaab-4650-8f03-3828d72eac50",
-        "pool": "High Five"
+        "pool": "High Five",
+        "year": 2023
       },
       {
         "userId": "1c2c4e7e-c5b8-44a1-bf3a-dbf7449ddb14",
-        "pool": "High Five"
+        "pool": "High Five",
+        "year": 2023
       }
     ]
   },
@@ -882,11 +890,13 @@
     "eligibleUsers": [
       {
         "userId": "dac48951-5b5c-48c9-b68f-c8b622c9ad40",
-        "pool": "Confidence"
+        "pool": "Confidence",
+        "year": 2023
       },
       {
         "userId": "d50c6628-596f-4c11-a9b2-43775b1ab69f",
-        "pool": "Margin"
+        "pool": "Margin",
+        "year": 2023
       }
     ]
   },
@@ -896,32 +906,38 @@
       {
         "userId": "f9a6ca4b-7169-4a26-9958-2a4c9ecf4a17",
         "pool": "Confidence",
-        "place": 4
+        "place": 4,
+        "year": 2023
       },
       {
         "userId": "4943d53f-5a0f-44aa-8532-5a11bac66783",
         "pool": "Margin",
-        "place": 4
+        "place": 4,
+        "year": 2023
       },
       {
         "userId": "4b957d37-eb28-4859-9bad-374dac2b7a4b",
         "pool": "High Five",
-        "place": 4
+        "place": 4,
+        "year": 2023
       },
       {
         "userId": "891b628d-34ef-4959-a722-c4b467c24cae",
         "pool": "Confidence",
-        "place": 5
+        "place": 5,
+        "year": 2023
       },
       {
         "userId": "ff856cea-b8cb-470e-91ec-0fb8149f7fdb",
         "pool": "Margin",
-        "place": 5
+        "place": 5,
+        "year": 2023
       },
       {
         "userId": "dfcfd92c-5284-4093-8031-00eddbb19dde",
         "pool": "High Five",
-        "place": 5
+        "place": 5,
+        "year": 2023
       }
     ]
   },
@@ -971,10 +987,22 @@
     "trophyName": "loneWolf",
     "eligibleUsers": [
       {
-        "userId": "aceb39ff-150c-48ee-a879-41c21c6a7382"
+        "userId": "aceb39ff-150c-48ee-a879-41c21c6a7382",
+        "team": "IND",
+        "week": 3,
+        "year": 2023
       },
       {
-        "userId": "1ca93cf7-e957-4cf5-9745-71b1018764fe"
+        "userId": "1ca93cf7-e957-4cf5-9745-71b1018764fe",
+        "team": "CLE",
+        "week": 10,
+        "year": 2023
+      },
+      {
+        "userId": "d42850f1-bdd7-484b-88cc-8d58df10d63a",
+        "team": "ATL",
+        "week": 2,
+        "year": 2024
       }
     ]
   }
