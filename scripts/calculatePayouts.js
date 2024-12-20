@@ -12,20 +12,18 @@ if (isNaN(year)) {
 }
 
 // Get the data from the players json file
-const playerData = await JSON.parse(await readFile(path.resolve(`data/${year}/players.json`)));
-const { players } = playerData;
+const playerData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/players.json`)));
 
 // Get the data from the season json file
-const seasonData = await JSON.parse(await readFile(path.resolve(`data/${year}/season.json`)));
-const { weeks } = seasonData;
+const seasonData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/season.json`)));
 
-const endOfYearPayouts = [327.6, 278.46, 229.32, 196.56, 163.8, 131.04, 90.09, 81.9, 73.71, 65.52];
-const weeklyConfidencePayouts = [42.47, 36.1, 29.73, 25.48, 21.23, 16.99, 11.68, 10.62, 9.55, 8.49];
-const marginHighFivePayouts = [296.4, 195, 117, 93.6, 78];
+const endOfYearPayouts = [752, 639.2, 526.4, 451.2, 376, 300.8, 206.8, 188, 169.2, 150.4];
+const weeklyConfidencePayouts = [62.67, 53.27, 43.87, 37.6, 31.33, 25.07, 17.23, 15.67, 14.1, 12.53];
+const marginHighFivePayouts = [380, 250, 150, 120, 100];
 
 const payouts = [];
 
-players.forEach(player => {
+playerData.forEach(player => {
   const { id, firstName, lastName, wins, points, winsByWeek, pointsByWeek, tiebreakerByWeek, marginTotal } = player;
   payouts.push({
     id,
@@ -46,15 +44,16 @@ players.forEach(player => {
   });
 });
 
+// Not going to assume 18 weeks will last forever
 const weeksInSeason = payouts[0].pointsByWeek.length;
 
 for (let i = 0; i < weeksInSeason; i++) {
   // For each week, sort the array by the weekly scores and tiebreaker and add in the correct payouts
   // First get the total score of the last game of that week
-  const weekGames = weeks[`week_${i + 1}`];
-  const numGames = Object.keys(weekGames).length;
-  const lastMatchup = weekGames[`matchup_${numGames}`];
-  const mondayTotal = lastMatchup.away_score + lastMatchup.home_score;
+  const weekData = seasonData.find(weekInfo => weekInfo.weekId === `week_${i + 1}`);
+  const numGames = weekData.matchups.length;
+  const lastMatchup = weekData.matchups.find(matchupInfo => matchupInfo.matchupId === `matchup_${numGames}`);
+  const mondayTotal = lastMatchup.awayScore + lastMatchup.homeScore;
   payouts.sort((row1, row2) => {
     const row1Tb = Math.abs(mondayTotal - row1.tiebreakerByWeek[i]);
     const row2Tb = Math.abs(mondayTotal - row2.tiebreakerByWeek[i]);
@@ -102,9 +101,13 @@ payouts.forEach(player => {
 
 // Finally, order alphabetically
 payouts.sort((row1, row2) => {
-  return row1.lastName.localeCompare(row2.lastName) || row1.firstName.localeCompare(row2.firstName);
+  const firstName1 = row1.firstName.split(' ')[0];
+  const lastName1 = row1.lastName.split(' ').pop();
+  const firstName2 = row2.firstName.split(' ')[0];
+  const lastName2 = row2.lastName.split(' ').pop();
+  return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
 });
 
 const payoutsAsJson = JSON.stringify(payouts, null, 2);
-fs.writeFileSync(path.resolve(`data/${year}/payouts.json`), payoutsAsJson);
-console.log(`Created a new file at data/${year}/payouts.json`);
+fs.writeFileSync(path.resolve(`data/${year}/football/payouts.json`), payoutsAsJson);
+console.log(`Created a new file at data/${year}/football/payouts.json`);

@@ -75,7 +75,7 @@ function App() {
           <Route path="/march-madness/standings" element={<MarchMadnessStandings />} />
           <Route path="/march-madness/bracket/:username" element={<UserBracket />} />
           <Route path="/yearly-awards" element={<YearlyAwards />} />
-          {/* <Route path="/payouts" element={<Payouts />} /> */}
+          <Route path="/payouts" element={<Payouts />} />
           <Route path="/hall-of-fame" element={<HallOfFame />} />
           <Route path="/all-user-stats" element={<AllUserStats />} />
           <Route path="/404" element={<PageNotFound />} />

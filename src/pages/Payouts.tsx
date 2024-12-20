@@ -1,5 +1,5 @@
 import { CURRENT_YEAR } from '../constants';
-import payouts from '../../data/2023/payouts.json';
+import payouts from '../../data/2024/football/payouts.json';
 import { useState } from 'react';
 
 const headers: string[] = [
