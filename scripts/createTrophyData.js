@@ -187,6 +187,266 @@ const trophyCaseData = [
       },
     ],
   },
+  {
+    trophyName: 'mostLoyal',
+    eligibleUsers: [
+      {
+        userId: 'f9a6ca4b-7169-4a26-9958-2a4c9ecf4a17',
+        team: 'SF',
+        years: [2023],
+      },
+      {
+        userId: 'dac48951-5b5c-48c9-b68f-c8b622c9ad40',
+        team: 'SF',
+        years: [2023],
+      },
+      {
+        userId: 'ad50c309-eaab-4650-8f03-3828d72eac50',
+        team: 'SF',
+        years: [2023],
+      },
+      {
+        userId: '11642444-4a38-42b3-8f2f-01b34bb50aef',
+        team: 'SF',
+        years: [2023],
+      },
+      {
+        userId: 'ac5d7aa9-47d3-4157-a319-5e4ec34dc4a6',
+        team: 'SF',
+        years: [2023],
+      },
+      {
+        userId: '803138fa-9259-4226-be1b-3d3c002c7c1a',
+        team: 'SF',
+        years: [2023],
+      },
+      {
+        userId: '7560beb5-f98f-493a-b226-c711952ecc7a',
+        team: 'SF',
+        years: [2023],
+      },
+      {
+        userId: 'd42850f1-bdd7-484b-88cc-8d58df10d63a',
+        team: 'SF',
+        years: [2023],
+      },
+      {
+        userId: '02bee9d4-ea65-4930-801b-91eb457b39d1',
+        team: 'SF',
+        years: [2023],
+      },
+      {
+        userId: '272dffc9-a5d7-410e-844a-48bae148cf32',
+        team: 'KC',
+        years: [2023],
+      },
+      {
+        userId: '6fcd546a-6aeb-4fb6-b99e-aa035c1af58e',
+        team: 'KC',
+        years: [2023],
+      },
+      {
+        userId: '1af52a92-0242-491e-87f5-c166fa2fa730',
+        team: 'KC',
+        years: [2023],
+      },
+      {
+        userId: '4943d53f-5a0f-44aa-8532-5a11bac66783',
+        team: 'KC',
+        years: [2023],
+      },
+      {
+        userId: '95691265-52cc-4c61-8aa4-7dc4586dce3e',
+        team: 'KC',
+        years: [2023],
+      },
+      {
+        userId: '71cab27c-2f20-4ec9-bc0d-fe7d9988b528',
+        team: 'KC',
+        years: [2023],
+      },
+      {
+        userId: '1ca93cf7-e957-4cf5-9745-71b1018764fe',
+        team: 'MIA',
+        years: [2023],
+      },
+      {
+        userId: 'd9985b83-08de-4e96-bcbc-e348666a554c',
+        team: 'MIA',
+        years: [2023],
+      },
+      {
+        userId: 'ed2ad1cc-e7db-406f-956e-bd3ff933f37e',
+        team: 'PHI',
+        years: [2023],
+      },
+      {
+        userId: '118b0007-ed0b-445e-b2fa-70d6d97ee7f3',
+        team: 'PHI',
+        years: [2023],
+      },
+      {
+        userId: '8a2fd044-ed39-490a-9331-3ccb6c6b4d67',
+        team: 'DAL',
+        years: [2023],
+      },
+      {
+        userId: 'f9d2b133-04b5-4b17-be87-99dac41d7f91',
+        team: 'PIT',
+        years: [2023],
+      },
+      {
+        userId: 'dc6fb755-76be-483a-bc8e-cc17e138367f',
+        team: 'NYJ',
+        years: [2023],
+      },
+      {
+        userId: '36061310-5718-49b2-9d16-99768bcc4aa3',
+        team: 'GB',
+        years: [2023],
+      },
+      {
+        userId: '2c470e65-6165-4807-bfea-3071c51716a3',
+        team: 'BAL',
+        years: [2023],
+      },
+    ],
+  },
+  {
+    trophyName: 'haters',
+    eligibleUsers: [
+      {
+        userId: 'f9a6ca4b-7169-4a26-9958-2a4c9ecf4a17',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: 'dac48951-5b5c-48c9-b68f-c8b622c9ad40',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '50aab471-80e6-45fb-b81f-e6bdba3f3ff1',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '8a2fd044-ed39-490a-9331-3ccb6c6b4d67',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: 'd8d0e432-2d89-4f83-ae3a-d0e311059b44',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '4b957d37-eb28-4859-9bad-374dac2b7a4b',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: 'de33008f-ae64-4eef-8c6c-7fcd4b8a6b3a',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '11642444-4a38-42b3-8f2f-01b34bb50aef',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '793198f9-cc44-4857-8864-87b2cb2833f5',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '8da0fe25-fbc7-414d-89f9-bfe0fada05d3',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: 'dc6fb755-76be-483a-bc8e-cc17e138367f',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: 'Peter Misiaszek',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+      {
+        userId: '',
+        team: 'CAR',
+        years: [2023],
+      },
+    ],
+  },
 ];
 
 const {

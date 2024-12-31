@@ -3,6 +3,8 @@ import { CURRENT_YEAR, MARCH_MADNESS_STATE } from '../constants';
 import ConfidenceCard from '../components/picksheet/ConfidenceCard';
 import MarginAndSurvivorCard from '../components/picksheet/MarginAndSurvivorCard';
 import HighFiveCard from '../components/picksheet/HighFiveCard';
+import MostLoyal from '../assets/awards/MostLoyal';
+import Hater from '../assets/awards/Hater';
 
 const toMoney = (value: number) => {
   return value.toLocaleString('en-US', {
@@ -72,6 +74,12 @@ function About() {
   return (
     <section className="section">
       <div className="container">
+        <MostLoyal team="HOU" years={[2023]} />
+        <MostLoyal team="HOU" years={[2023, 2024]} />
+        <MostLoyal team="HOU" years={[2023, 2024, 2025]} />
+        <Hater team="HOU" years={[2023]} />
+        <Hater team="HOU" years={[2023, 2024]} />
+        <Hater team="HOU" years={[2023, 2024, 2025]} />
         <h1 className="title has-text-centered">The {CURRENT_YEAR} Stonehands Pool</h1>
         <h2 className="subtitle has-text-centered">About, How to Play, and more!</h2>
         <br /> <br />
