@@ -1,5 +1,5 @@
 import * as path from 'path';
-import * as fs from 'node:fs';
+// import * as fs from 'node:fs';
 import minimist from 'minimist';
 import { readFile } from 'fs/promises';
 
@@ -48,24 +48,60 @@ const TEAM_CODES = [
 ];
 
 // Get the data from the players json file
-const playerData = await JSON.parse(await readFile(path.resolve(`data/${year}/players.json`)));
-const { players } = playerData;
+const playerData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/players.json`)));
 
 // Get the data from the season json file
-const seasonData = await JSON.parse(await readFile(path.resolve(`data/${year}/season.json`)));
-const { weeks } = seasonData;
+const seasonData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/season.json`)));
 
-// Get the data from the weekly picks json file
-const pickData = await JSON.parse(await readFile(path.resolve(`data/${year}/weeklyPicks.json`)));
-const { weeklyPicks } = pickData;
+// Get the data from the weekly picks json files
+const week1PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week1.json`)));
+const week2PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week2.json`)));
+const week3PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week3.json`)));
+const week4PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week4.json`)));
+const week5PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week5.json`)));
+const week6PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week6.json`)));
+const week7PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week7.json`)));
+const week8PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week8.json`)));
+const week9PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week9.json`)));
+const week10PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week10.json`)));
+const week11PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week11.json`)));
+const week12PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week12.json`)));
+const week13PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week13.json`)));
+const week14PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week14.json`)));
+const week15PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week15.json`)));
+const week16PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week16.json`)));
+const week17PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week17.json`)));
+const week18PickData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/weeklyPicks/week18.json`)));
+
+const weeklyPicks = [
+  week1PickData,
+  week2PickData,
+  week3PickData,
+  week4PickData,
+  week5PickData,
+  week6PickData,
+  week7PickData,
+  week8PickData,
+  week9PickData,
+  week10PickData,
+  week11PickData,
+  week12PickData,
+  week13PickData,
+  week14PickData,
+  week15PickData,
+  week16PickData,
+  week17PickData,
+  week18PickData,
+];
 
 // First, find the most forgetful people (i.e. people who failed to submit their picksheet the most)
 const forgetfulPeople = [];
-for (const weekKey in weeklyPicks) {
-  const weeksPicks = weeklyPicks[weekKey];
-  weeksPicks.forEach(pickInfo => {
-    const { submission_id: submissionId, submission_data: submissionData, user_id: userId } = pickInfo;
-    if (submissionId === -1) {
+for (let i = 0; i < weeklyPicks.length; i++) {
+  const { picks } = weeklyPicks[i];
+  for (let j = 0; j < picks.length; j++) {
+    const pickInfo = picks[j];
+    const { id, submission_data: submissionData, user_id: userId } = pickInfo;
+    if (id === -1) {
       // If the submissionId is -1 that means that that person never made picks that week
       const { firstName, lastName } = submissionData;
       const forgetfulPerson = forgetfulPeople.find(person => person.userId === userId);
@@ -75,7 +111,7 @@ for (const weekKey in weeklyPicks) {
         forgetfulPerson.timesForgotten++;
       }
     }
-  });
+  }
 }
 
 const forgetfulPeopleDataToExport = {
@@ -104,18 +140,19 @@ yearlyAccolades.push(forgetfulPeopleDataToExport);
 
 // Now, get who was the most eager player (i.e. who submitted their picksheet the earliest each week)
 const eagerPeople = [];
-for (const weekKey in weeklyPicks) {
-  const weeksPicks = weeklyPicks[weekKey];
+for (let i = 0; i < weeklyPicks.length; i++) {
+  const { picks } = weeklyPicks[i];
   const weeklyEager = [];
-  weeksPicks.forEach(pickInfo => {
-    const { submission_id: submissionId, submission_data: submissionData, user_id: userId } = pickInfo;
-    if (submissionId !== -1) {
+  for (let j = 0; j < picks.length; j++) {
+    const pickInfo = picks[j];
+    const { id, submission_data: submissionData, user_id: userId } = pickInfo;
+    if (id !== -1) {
       // If they forgot they just don't get included for the week
       const { firstName, lastName } = submissionData;
-      weeklyEager.push({ userId, firstName, lastName, submissionId });
+      weeklyEager.push({ userId, firstName, lastName, id });
     }
-  });
-  weeklyEager.sort((a, b) => a.submissionId - b.submissionId);
+  }
+  weeklyEager.sort((a, b) => a.id - b.id);
   // Now add the each person to the array so we can average after looping through
   weeklyEager.forEach((person, index) => {
     const { userId, firstName, lastName } = person;
@@ -147,8 +184,7 @@ console.log('Most Eager People');
 for (let i = 0; i < 6; i++) {
   // Going to do the first 6 people because most likely I'll always be in the top 5
   const personInfo = eagerPeople[i];
-  if (personInfo.firstName !== 'Ryan') {
-    // TODO: Change this to my userId to be safe
+  if (personInfo.userId !== '4b608c17-eaca-49df-b336-49ecd0fc1923') {
     eagerPeopleDataToExport.data.push(personInfo);
   }
   console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.average}`);
@@ -165,7 +201,7 @@ console.log();
 console.log('Least Eager People');
 for (let i = eagerPeople.length - 5; i < eagerPeople.length; i++) {
   const personInfo = eagerPeople[i];
-  leastEagerPeopleDataToExport.data.push(personInfo);
+  leastEagerPeopleDataToExport.data.unshift(personInfo);
   console.log(`${i + 1}. ${personInfo.firstName} ${personInfo.lastName} - ${personInfo.average}`);
 }
 
@@ -173,22 +209,18 @@ yearlyAccolades.push(eagerPeopleDataToExport, leastEagerPeopleDataToExport);
 
 // Now get the best records on Thursday games
 const thursdayRecords = [];
-for (const weekKey in weeklyPicks) {
-  const weeksPicks = weeklyPicks[weekKey];
-  const weeksGames = weeks[weekKey];
-  for (const gameKey in weeksGames) {
-    const gameData = weeksGames[gameKey];
-    const { gameInfo, winner } = gameData;
+for (let i = 0; i < weeklyPicks.length; i++) {
+  const { picks } = weeklyPicks[i];
+  const { matchups } = seasonData[i];
+  for (let j = 0; j < matchups.length; j++) {
+    const { gameInfo, winner, matchupId } = matchups[j];
     if (gameInfo.includes('Thu,')) {
       // If a game occurred on a Thursday, loop through all the picks that week and update the data
-      weeksPicks.forEach(pickInfo => {
-        const { submission_data: submissionData, user_id: userId } = pickInfo;
+      for (let k = 0; k < picks.length; k++) {
+        const { submission_data: submissionData, user_id: userId } = picks[k];
         const { firstName, lastName } = submissionData;
-        const gameNum = parseInt(gameKey.split('_').pop(), 10);
-        const gameChoice = submissionData[`matchup-${gameNum - 1}`];
-        const gamePoints = submissionData[`matchup-${gameNum - 1}-confidence`];
-        const idForChecking = `${weekKey}-${gameKey}`;
-        const pickedRight = gameChoice === winner;
+        const { team, confidence } = submissionData.confidencePicks.find(p => p.matchupId === matchupId);
+        const pickedRight = team === winner;
         const playerInfo = thursdayRecords.find(person => person.userId === userId);
         if (!playerInfo) {
           thursdayRecords.push({
@@ -197,19 +229,17 @@ for (const weekKey in weeklyPicks) {
             lastName,
             timesCorrect: pickedRight ? 1 : 0,
             timesIncorrect: pickedRight ? 0 : 1,
-            totalPoints: pickedRight ? gamePoints : 0,
-            pointsRisked: gamePoints,
-            weeksChecked: [idForChecking],
+            totalPoints: pickedRight ? confidence : 0,
+            pointsRisked: confidence,
             efficiency: 0,
           });
-        } else if (!playerInfo.weeksChecked.includes(idForChecking)) {
+        } else {
           playerInfo.timesCorrect = pickedRight ? playerInfo.timesCorrect + 1 : playerInfo.timesCorrect;
           playerInfo.timesIncorrect = pickedRight ? playerInfo.timesIncorrect : playerInfo.timesIncorrect + 1;
-          playerInfo.totalPoints = pickedRight ? playerInfo.totalPoints + gamePoints : playerInfo.totalPoints;
-          playerInfo.pointsRisked += gamePoints;
-          playerInfo.weeksChecked.push(idForChecking);
+          playerInfo.totalPoints = pickedRight ? playerInfo.totalPoints + confidence : playerInfo.totalPoints;
+          playerInfo.pointsRisked += confidence;
         }
-      });
+      }
     }
   }
 }
@@ -309,22 +339,18 @@ yearlyAccolades.push(
 
 // Now get the best records on Monday games
 const mondayRecords = [];
-for (const weekKey in weeklyPicks) {
-  const weeksPicks = weeklyPicks[weekKey];
-  const weeksGames = weeks[weekKey];
-  for (const gameKey in weeksGames) {
-    const gameData = weeksGames[gameKey];
-    const { gameInfo, winner } = gameData;
+for (let i = 0; i < weeklyPicks.length; i++) {
+  const { picks } = weeklyPicks[i];
+  const { matchups } = seasonData[i];
+  for (let j = 0; j < matchups.length; j++) {
+    const { gameInfo, winner, matchupId } = matchups[j];
     if (gameInfo.includes('Mon,')) {
       // If a game occurred on a Monday, loop through all the picks that week and update the data
-      weeksPicks.forEach(pickInfo => {
-        const { submission_data: submissionData, user_id: userId } = pickInfo;
+      for (let k = 0; k < picks.length; k++) {
+        const { submission_data: submissionData, user_id: userId } = picks[k];
         const { firstName, lastName } = submissionData;
-        const gameNum = parseInt(gameKey.split('_').pop(), 10);
-        const gameChoice = submissionData[`matchup-${gameNum - 1}`];
-        const gamePoints = submissionData[`matchup-${gameNum - 1}-confidence`];
-        const idForChecking = `${weekKey}-${gameKey}`;
-        const pickedRight = gameChoice === winner;
+        const { team, confidence } = submissionData.confidencePicks.find(p => p.matchupId === matchupId);
+        const pickedRight = team === winner;
         const playerInfo = mondayRecords.find(person => person.userId === userId);
         if (!playerInfo) {
           mondayRecords.push({
@@ -333,19 +359,17 @@ for (const weekKey in weeklyPicks) {
             lastName,
             timesCorrect: pickedRight ? 1 : 0,
             timesIncorrect: pickedRight ? 0 : 1,
-            totalPoints: pickedRight ? gamePoints : 0,
-            pointsRisked: gamePoints,
-            weeksChecked: [idForChecking],
+            totalPoints: pickedRight ? confidence : 0,
+            pointsRisked: confidence,
             efficiency: 0,
           });
-        } else if (!playerInfo.weeksChecked.includes(idForChecking)) {
+        } else {
           playerInfo.timesCorrect = pickedRight ? playerInfo.timesCorrect + 1 : playerInfo.timesCorrect;
           playerInfo.timesIncorrect = pickedRight ? playerInfo.timesIncorrect : playerInfo.timesIncorrect + 1;
-          playerInfo.totalPoints = pickedRight ? playerInfo.totalPoints + gamePoints : playerInfo.totalPoints;
-          playerInfo.pointsRisked += gamePoints;
-          playerInfo.weeksChecked.push(idForChecking);
+          playerInfo.totalPoints = pickedRight ? playerInfo.totalPoints + confidence : playerInfo.totalPoints;
+          playerInfo.pointsRisked += confidence;
         }
-      });
+      }
     }
   }
 }
@@ -427,7 +451,7 @@ const mondayEfficiencyDataToExport = {
 };
 
 console.log();
-console.log('Thursday Records by Efficiency');
+console.log('Monday Records by Efficiency');
 for (let i = 0; i < 5; i++) {
   const personInfo = mondayRecords[i];
   mondayEfficiencyDataToExport.data.push(personInfo);
@@ -461,81 +485,82 @@ const loneLoserDataToExport = {
 
 const loneWolves = [];
 console.log();
-for (const weekKey in weeklyPicks) {
-  const weeksPicks = weeklyPicks[weekKey];
-  const weeksGames = weeks[weekKey];
-  for (const gameKey in weeksGames) {
-    const gameData = weeksGames[gameKey];
-    const { home_team: homeTeam, away_team: awayTeam, winner } = gameData;
+for (let i = 0; i < weeklyPicks.length; i++) {
+  const { picks, id: weekId } = weeklyPicks[i];
+  const { matchups } = seasonData[i];
+  for (let j = 0; j < matchups.length; j++) {
+    const { homeTeam, awayTeam, matchupId, winner } = matchups[j];
     const loneWolfCheck = {
       homeTeamPicks: [],
       awayTeamPicks: [],
     };
-    weeksPicks.forEach(pickInfo => {
-      const { submission_data: submissionData, user_id: userId } = pickInfo;
-      const { firstName, lastName } = submissionData;
-      const gameNum = parseInt(gameKey.split('_').pop(), 10);
-      const gameChoice = submissionData[`matchup-${gameNum - 1}`];
-      const pickedRight = gameChoice === winner;
+    for (let k = 0; k < picks.length; k++) {
+      const { submission_data: submissionData, user_id: userId, id } = picks[k];
+      if (id !== -1) {
+        // We're going to ignore missed picks going forward to award people who actually made their picks
+        const { firstName, lastName } = submissionData;
+        const { team } = submissionData.confidencePicks.find(p => p.matchupId === matchupId);
+        const pickedRight = team === winner;
 
-      if (gameChoice === homeTeam) {
-        const playerFound = loneWolfCheck.homeTeamPicks.find(person => person.userId === userId);
-        if (!playerFound) {
-          loneWolfCheck.homeTeamPicks.push({
-            userId,
-            firstName,
-            lastName,
-            team: homeTeam,
-            losingTeam: awayTeam,
-            pickedRight,
-            weekKey,
-            gameKey,
-          });
-        }
-      } else if (gameChoice === awayTeam) {
-        const playerFound = loneWolfCheck.awayTeamPicks.find(person => person.userId === userId);
-        if (!playerFound) {
-          loneWolfCheck.awayTeamPicks.push({
-            userId,
-            firstName,
-            lastName,
-            team: awayTeam,
-            losingTeam: homeTeam,
-            pickedRight,
-            weekKey,
-            gameKey,
-          });
+        if (team === homeTeam) {
+          const playerFound = loneWolfCheck.homeTeamPicks.find(person => person.userId === userId);
+          if (!playerFound) {
+            loneWolfCheck.homeTeamPicks.push({
+              userId,
+              firstName,
+              lastName,
+              team: homeTeam,
+              losingTeam: awayTeam,
+              pickedRight,
+              weekId,
+              matchupId,
+            });
+          }
+        } else if (team === awayTeam) {
+          const playerFound = loneWolfCheck.awayTeamPicks.find(person => person.userId === userId);
+          if (!playerFound) {
+            loneWolfCheck.awayTeamPicks.push({
+              userId,
+              firstName,
+              lastName,
+              team: awayTeam,
+              losingTeam: homeTeam,
+              pickedRight,
+              weekId,
+              matchupId,
+            });
+          }
         }
       }
-    });
+    }
 
     if (loneWolfCheck.homeTeamPicks.length === 1) {
       const person = loneWolfCheck.homeTeamPicks[0];
       loneWolves.push(person);
       if (person.pickedRight) {
-        person.description = `They were the only person to correctly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekKey.split('_').pop()}`;
+        person.description = `They were the only person to correctly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId}`;
         loneWolfDataToExport.data.push(person);
       } else {
-        person.description = `They were the only person to incorrectly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekKey.split('_').pop()}`;
+        person.description = `They were the only person to incorrectly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId}`;
         loneLoserDataToExport.data.push(person);
       }
       console.log('Lone Wolf found!');
       console.log(
-        `${person.firstName} ${person.lastName} picked ${person.team} in ${person.weekKey} and they were ${person.pickedRight ? 'right' : 'wrong'}`
+        `${person.firstName} ${person.lastName} picked ${person.team} in ${person.weekId} and they were ${person.pickedRight ? 'right' : 'wrong'}`
       );
     } else if (loneWolfCheck.awayTeamPicks.length === 1) {
       const person = loneWolfCheck.awayTeamPicks[0];
       loneWolves.push(person);
       if (person.pickedRight) {
-        person.description = `They were the only person to correctly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekKey.split('_').pop()}`;
+        person.description = `They were the only person to correctly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId}`;
         loneWolfDataToExport.data.push(person);
       } else {
-        person.description = `They were the only person to incorrectly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekKey.split('_').pop()}`;
+        person.description = `They were the only person to incorrectly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId}`;
         loneLoserDataToExport.data.push(person);
       }
       console.log('Lone Wolf found!');
       console.log(
-        `${person.firstName} ${person.lastName} picked ${person.team} in ${person.weekKey} and they were ${person.pickedRight ? 'right' : 'wrong'}`
+        `${person.firstName} ${person.lastName} picked ${person.team} in ${person.weekId} and they were ${person.pickedRight ? 'right' : 'wrong'}`
       );
     }
   }
@@ -545,7 +570,7 @@ yearlyAccolades.push(loneWolfDataToExport, loneLoserDataToExport);
 
 // Now find the top 5 point getters on the season
 console.log();
-players.sort((row1, row2) => row2.points - row1.points);
+playerData.sort((row1, row2) => row2.points - row1.points);
 
 const mostPointsDataToExport = {
   id: 'mostPoints',
@@ -556,14 +581,14 @@ const mostPointsDataToExport = {
 
 console.log('Top 5 Points on the season');
 for (let i = 0; i < 5; i++) {
-  const player = players[i];
+  const player = playerData[i];
   mostPointsDataToExport.data.push(player);
   console.log(`${i + 1}. ${player.firstName} ${player.lastName} - ${player.points}`);
 }
 
 // Now find the top 5 wins on the season
 console.log();
-players.sort((row1, row2) => row2.wins - row1.wins);
+playerData.sort((row1, row2) => row2.wins - row1.wins);
 
 const mostWinsDataToExport = {
   id: 'mostWins',
@@ -574,7 +599,7 @@ const mostWinsDataToExport = {
 
 console.log('Top 5 Wins on the season');
 for (let i = 0; i < 5; i++) {
-  const player = players[i];
+  const player = playerData[i];
   mostWinsDataToExport.data.push(player);
   console.log(`${i + 1}. ${player.firstName} ${player.lastName} - ${player.wins}`);
 }
@@ -583,7 +608,7 @@ yearlyAccolades.push(mostPointsDataToExport, mostWinsDataToExport);
 
 // Now get the top and lowest 5 points in a week
 const allWeeklyResults = [];
-players.forEach(player => {
+playerData.forEach(player => {
   const { id, firstName, lastName } = player;
   for (let i = 0; i < player.winsByWeek.length; i++) {
     allWeeklyResults.push({
@@ -637,7 +662,7 @@ yearlyAccolades.push(mostPointsInWeekDataToExport, leastPointsInWeekDataToExport
 
 // Now get anyone who always picked a team to win or lose every week
 const pickingStats = [];
-players.forEach(player => {
+playerData.forEach(player => {
   const { id, firstName, lastName } = player;
   const playerInfo = { userId: id, firstName, lastName, teamArray: [], idsChecked: [] };
   TEAM_CODES.map(teamCode => {
@@ -652,18 +677,16 @@ players.forEach(player => {
   pickingStats.push(playerInfo);
 });
 
-for (const weekKey in weeklyPicks) {
-  const weeksPicks = weeklyPicks[weekKey];
-  const weeksGames = weeks[weekKey];
-  for (const gameKey in weeksGames) {
-    const gameData = weeksGames[gameKey];
-    const { home_team: homeTeam, away_team: awayTeam, winner } = gameData;
-    weeksPicks.forEach(pickInfo => {
-      const { submission_data: submissionData, user_id: userId } = pickInfo;
-      const gameNum = parseInt(gameKey.split('_').pop(), 10);
-      const gameChoice = submissionData[`matchup-${gameNum - 1}`];
-      const uniqueId = `${weekKey}-${gameKey}`;
-      const pickedRight = gameChoice === winner;
+for (let i = 0; i < weeklyPicks.length; i++) {
+  const { picks, id: weekId } = weeklyPicks[i];
+  const { matchups } = seasonData[i];
+  for (let j = 0; j < matchups.length; j++) {
+    const { homeTeam, awayTeam, matchupId, winner } = matchups[j];
+    for (let k = 0; k < picks.length; k++) {
+      const { submission_data: submissionData, user_id: userId } = picks[k];
+      const { team } = submissionData.confidencePicks.find(p => p.matchupId === matchupId);
+      const pickedRight = team === winner;
+      const uniqueId = `${weekId}_${matchupId}`;
 
       const playerFound = pickingStats.find(person => person.userId === userId);
       if (!playerFound.idsChecked.includes(uniqueId)) {
@@ -671,10 +694,10 @@ for (const weekKey in weeklyPicks) {
         const homeTeamPlayerInfo = playerFound.teamArray.find(team => team.team === homeTeam);
         const awayTeamPlayerInfo = playerFound.teamArray.find(team => team.team === awayTeam);
 
-        if (gameChoice === homeTeam) {
+        if (team === homeTeam) {
           homeTeamPlayerInfo.wins++;
           awayTeamPlayerInfo.losses++;
-        } else if (gameChoice === awayTeam) {
+        } else if (team === awayTeam) {
           homeTeamPlayerInfo.losses++;
           awayTeamPlayerInfo.wins++;
         }
@@ -687,7 +710,7 @@ for (const weekKey in weeklyPicks) {
           awayTeamPlayerInfo.timesIncorrect++;
         }
       }
-    });
+    }
   }
 }
 
@@ -815,158 +838,158 @@ for (let i = 0; i < 5; i++) {
 
 yearlyAccolades.push(teamsBestPickedDataToExport, teamsWorstPickedDataToExport);
 
-// Next, add in the secret mango award
-const secretMangoDataToExport = {
-  id: 'secretMango',
-  title: 'The "Secret Mango" Award',
-  description: 'This is given to those who discover the hidden "Secret Mango" award on the website',
-  data: [
-    {
-      name: 'Kailey Fandl',
-      week: 9,
-      year: 2023,
-    },
-  ],
-};
+// // Next, add in the secret mango award
+// const secretMangoDataToExport = {
+//   id: 'secretMango',
+//   title: 'The "Secret Mango" Award',
+//   description: 'This is given to those who discover the hidden "Secret Mango" award on the website',
+//   data: [
+//     {
+//       name: 'Kailey Fandl',
+//       week: 9,
+//       year: 2023,
+//     },
+//   ],
+// };
 
-yearlyAccolades.push(secretMangoDataToExport);
+// yearlyAccolades.push(secretMangoDataToExport);
 
-// Survivor Pool Stuff
-const survivorDataToExport = {
-  id: 'survivor',
-  title: 'Survivor Pool Winners',
-  description: 'The winners of the Survivor Pool throughout the years',
-  data: [
-    {
-      name: 'Brandon Horn',
-      weeksSurvived: 11,
-      year: 2023,
-    },
-  ],
-};
+// // Survivor Pool Stuff
+// const survivorDataToExport = {
+//   id: 'survivor',
+//   title: 'Survivor Pool Winners',
+//   description: 'The winners of the Survivor Pool throughout the years',
+//   data: [
+//     {
+//       name: 'Brandon Horn',
+//       weeksSurvived: 11,
+//       year: 2023,
+//     },
+//   ],
+// };
 
-yearlyAccolades.push(survivorDataToExport);
+// yearlyAccolades.push(survivorDataToExport);
 
-// Margin Pool Stuff
-const marginPointsDataToExport = {
-  id: 'marginPoints',
-  title: 'Top 5 Margin (Points)',
-  description: 'These are the 5 people who earned the most points in the Margin Pool',
-  data: [],
-};
+// // Margin Pool Stuff
+// const marginPointsDataToExport = {
+//   id: 'marginPoints',
+//   title: 'Top 5 Margin (Points)',
+//   description: 'These are the 5 people who earned the most points in the Margin Pool',
+//   data: [],
+// };
 
-players.sort((a, b) => b.marginTotal - a.marginTotal);
+// players.sort((a, b) => b.marginTotal - a.marginTotal);
 
-console.log();
-console.log('Top 5 Margin Points');
-for (let i = 0; i < 5; i++) {
-  const info = players[i];
-  const { firstName, lastName, marginTotal } = info;
-  marginPointsDataToExport.data.push(info);
-  console.log(`${i + 1}. ${firstName} ${lastName} - ${marginTotal}`);
-}
+// console.log();
+// console.log('Top 5 Margin Points');
+// for (let i = 0; i < 5; i++) {
+//   const info = players[i];
+//   const { firstName, lastName, marginTotal } = info;
+//   marginPointsDataToExport.data.push(info);
+//   console.log(`${i + 1}. ${firstName} ${lastName} - ${marginTotal}`);
+// }
 
-const marginWins = [];
-const marginWinsDataToExport = {
-  id: 'marginWins',
-  title: 'Top 5 Margin (Wins)',
-  description: 'These are the 5 people who earned the most wins in the Margin Pool',
-  data: [],
-};
-players.forEach(player => {
-  const { firstName, lastName, marginTotal, marginPicks } = player;
-  const totalWins = marginPicks.reduce((n, val) => n + (val.margin > 0 ? 1 : 0), 0);
-  marginWins.push({ firstName, lastName, marginTotal, totalWins });
-});
+// const marginWins = [];
+// const marginWinsDataToExport = {
+//   id: 'marginWins',
+//   title: 'Top 5 Margin (Wins)',
+//   description: 'These are the 5 people who earned the most wins in the Margin Pool',
+//   data: [],
+// };
+// players.forEach(player => {
+//   const { firstName, lastName, marginTotal, marginPicks } = player;
+//   const totalWins = marginPicks.reduce((n, val) => n + (val.margin > 0 ? 1 : 0), 0);
+//   marginWins.push({ firstName, lastName, marginTotal, totalWins });
+// });
 
-marginWins.sort((a, b) => b.totalWins - a.totalWins);
-console.log();
-console.log('Top 5 Margin Wins');
-for (let i = 0; i < 5; i++) {
-  const info = marginWins[i];
-  const { firstName, lastName, totalWins } = info;
-  marginWinsDataToExport.data.push(info);
-  console.log(`${i + 1}. ${firstName} ${lastName} - ${totalWins}`);
-}
+// marginWins.sort((a, b) => b.totalWins - a.totalWins);
+// console.log();
+// console.log('Top 5 Margin Wins');
+// for (let i = 0; i < 5; i++) {
+//   const info = marginWins[i];
+//   const { firstName, lastName, totalWins } = info;
+//   marginWinsDataToExport.data.push(info);
+//   console.log(`${i + 1}. ${firstName} ${lastName} - ${totalWins}`);
+// }
 
-yearlyAccolades.push(marginPointsDataToExport, marginWinsDataToExport);
+// yearlyAccolades.push(marginPointsDataToExport, marginWinsDataToExport);
 
-// High Five Stuff
-const highFivePointsDataToExport = {
-  id: 'highFivePoints',
-  title: 'Top 5 High Five (Points)',
-  description: 'These are the 5 people who earned the most points in the High Five Pool',
-  data: [],
-};
+// // High Five Stuff
+// const highFivePointsDataToExport = {
+//   id: 'highFivePoints',
+//   title: 'Top 5 High Five (Points)',
+//   description: 'These are the 5 people who earned the most points in the High Five Pool',
+//   data: [],
+// };
 
-players.sort((a, b) => b.highFiveTotal - a.highFiveTotal);
+// players.sort((a, b) => b.highFiveTotal - a.highFiveTotal);
 
-console.log();
-console.log('Top 5 High Five Points');
-for (let i = 0; i < 5; i++) {
-  const info = players[i];
-  const { firstName, lastName, highFiveTotal } = info;
-  highFivePointsDataToExport.data.push(info);
-  console.log(`${i + 1}. ${firstName} ${lastName} - ${highFiveTotal}`);
-}
+// console.log();
+// console.log('Top 5 High Five Points');
+// for (let i = 0; i < 5; i++) {
+//   const info = players[i];
+//   const { firstName, lastName, highFiveTotal } = info;
+//   highFivePointsDataToExport.data.push(info);
+//   console.log(`${i + 1}. ${firstName} ${lastName} - ${highFiveTotal}`);
+// }
 
-const highFiveWins = [];
-const highFiveWinsDataToExport = {
-  id: 'highFiveWins',
-  title: 'Top 5 High Five (Wins)',
-  description: 'These are the 5 people who earned the most wins in the High Five Pool',
-  data: [],
-};
-players.forEach(player => {
-  const { firstName, lastName, highFiveTotal, highFiveValues } = player;
-  const totalWins = highFiveValues.reduce((n, val) => {
-    if (val === 1) {
-      return n + 1;
-    } else if (val === 2) {
-      return n + 2;
-    } else if (val === 3) {
-      return n + 3;
-    } else if (val === 5) {
-      return n + 4;
-    } else if (val === 8) {
-      return n + 5;
-    }
-    return n;
-  }, 0);
-  highFiveWins.push({ firstName, lastName, highFiveTotal, totalWins });
-});
+// const highFiveWins = [];
+// const highFiveWinsDataToExport = {
+//   id: 'highFiveWins',
+//   title: 'Top 5 High Five (Wins)',
+//   description: 'These are the 5 people who earned the most wins in the High Five Pool',
+//   data: [],
+// };
+// players.forEach(player => {
+//   const { firstName, lastName, highFiveTotal, highFiveValues } = player;
+//   const totalWins = highFiveValues.reduce((n, val) => {
+//     if (val === 1) {
+//       return n + 1;
+//     } else if (val === 2) {
+//       return n + 2;
+//     } else if (val === 3) {
+//       return n + 3;
+//     } else if (val === 5) {
+//       return n + 4;
+//     } else if (val === 8) {
+//       return n + 5;
+//     }
+//     return n;
+//   }, 0);
+//   highFiveWins.push({ firstName, lastName, highFiveTotal, totalWins });
+// });
 
-highFiveWins.sort((a, b) => b.totalWins - a.totalWins);
-console.log();
-console.log('Top 5 High Fives Wins');
-for (let i = 0; i < 5; i++) {
-  const info = highFiveWins[i];
-  const { firstName, lastName, totalWins } = info;
-  highFiveWinsDataToExport.data.push(info);
-  console.log(`${i + 1}. ${firstName} ${lastName} - ${totalWins}`);
-}
+// highFiveWins.sort((a, b) => b.totalWins - a.totalWins);
+// console.log();
+// console.log('Top 5 High Fives Wins');
+// for (let i = 0; i < 5; i++) {
+//   const info = highFiveWins[i];
+//   const { firstName, lastName, totalWins } = info;
+//   highFiveWinsDataToExport.data.push(info);
+//   console.log(`${i + 1}. ${firstName} ${lastName} - ${totalWins}`);
+// }
 
-yearlyAccolades.push(highFivePointsDataToExport, highFiveWinsDataToExport);
+// yearlyAccolades.push(highFivePointsDataToExport, highFiveWinsDataToExport);
 
-// TODO: If anyone ever actually does this then add it, but I don't think it'll happen
-console.log();
-console.log('People who picked every game right for a team');
-perfectTeams.forEach((info, index) => {
-  const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
-  console.log(
-    `${index + 1}. ${firstName} ${lastName} was always right with ${team} (${timesCorrect}-${timesIncorrect})`
-  );
-});
+// // TODO: If anyone ever actually does this then add it, but I don't think it'll happen
+// console.log();
+// console.log('People who picked every game right for a team');
+// perfectTeams.forEach((info, index) => {
+//   const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
+//   console.log(
+//     `${index + 1}. ${firstName} ${lastName} was always right with ${team} (${timesCorrect}-${timesIncorrect})`
+//   );
+// });
 
-console.log();
-console.log('People who picked every game wrong for a team');
-reallyWrongTeams.forEach((info, index) => {
-  const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
-  console.log(
-    `${index + 1}. ${firstName} ${lastName} was always wrong with ${team} (${timesCorrect}-${timesIncorrect})`
-  );
-});
+// console.log();
+// console.log('People who picked every game wrong for a team');
+// reallyWrongTeams.forEach((info, index) => {
+//   const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
+//   console.log(
+//     `${index + 1}. ${firstName} ${lastName} was always wrong with ${team} (${timesCorrect}-${timesIncorrect})`
+//   );
+// });
 
-const accoladesAsJson = JSON.stringify(yearlyAccolades, null, 2);
-fs.writeFileSync(path.resolve(`data/${year}/accolades.json`), accoladesAsJson);
-console.log(`Created a new file at data/${year}/accolades.json`);
+// const accoladesAsJson = JSON.stringify(yearlyAccolades, null, 2);
+// fs.writeFileSync(path.resolve(`data/${year}/accolades.json`), accoladesAsJson);
+// console.log(`Created a new file at data/${year}/accolades.json`);

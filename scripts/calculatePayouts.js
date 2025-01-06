@@ -94,9 +94,15 @@ payouts.forEach((player, index) => {
 
 // Not going to programmatically do the high five since there were a bunch of ties
 
-// Now clean up the totals because they're ugly
+// Now clean up the totals because they're ugly and delete unnecessary data
 payouts.forEach(player => {
   player.totalEarned = +player.totalEarned.toFixed(2);
+  delete player.wins;
+  delete player.points;
+  delete player.winsByWeek;
+  delete player.marginTotal;
+  delete player.pointsByWeek;
+  delete player.tiebreakerByWeek;
 });
 
 // Finally, order alphabetically
