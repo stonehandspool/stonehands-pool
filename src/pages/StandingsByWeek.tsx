@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { CURRENT_WEEK, CURRENT_YEAR } from '../constants';
+import { CURRENT_WEEK, CURRENT_YEAR, MatchupInfo } from '../constants';
 import ConfidenceByWeekTable from '../components/standings/ConfidenceByWeekTable';
+import seasonData from '../../data/2024/football/season.json';
 
 const incorrectMessages = [
   "Sorry, that week hasn't happened yet!",
@@ -35,6 +36,11 @@ function StandingsByWeek() {
   const [activeChoice, setActiveChoice] = useState<number>(1);
   const [incorrectWeekClicks, setIncorrectWeekClicks] = useState<number>(-1);
 
+  const weekGames: MatchupInfo[] = seasonData.find(weekInfo => weekInfo.weekId === `week_${activeChoice}`)!.matchups;
+  const numGames = weekGames.length;
+  const lastMatchup = weekGames.find(game => game.matchupId === `matchup_${numGames}`)!;
+  const mondayTotal = lastMatchup.awayScore + lastMatchup.homeScore;
+
   const showChoice = (week: number) => {
     if (week > CURRENT_WEEK) {
       setIncorrectWeekClicks(incorrectWeekClicks + 1);
@@ -65,6 +71,9 @@ function StandingsByWeek() {
           </ul>
         </div>
         <div className="container">
+          {activeChoice <= CURRENT_WEEK && (
+            <h5 className="subtitle is-5 has-text-centered">The tiebreaker this week was {mondayTotal}</h5>
+          )}
           {activeChoice <= CURRENT_WEEK && <ConfidenceByWeekTable week={activeChoice} />}
           {activeChoice > CURRENT_WEEK && (
             <h5 className="subtitle is-5 has-text-centered">
