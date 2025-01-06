@@ -84,6 +84,8 @@ function HighFiveTable() {
     const lastName2 = row2.name.split(' ').pop()!;
     return (
       row2.highFiveTotal - row1.highFiveTotal ||
+      row2.numPerfectWeeks - row1.numPerfectWeeks ||
+      row2.numAlmostPerfectWeeks - row1.numAlmostPerfectWeeks ||
       row2.numGamesRight - row1.numGamesRight ||
       lastName1.localeCompare(lastName2) ||
       firstName1.localeCompare(firstName2)
