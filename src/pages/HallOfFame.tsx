@@ -15,29 +15,29 @@ function HallOfFame() {
             <div className="level-item has-text-centered">
               <div className="content">
                 <p className="heading">Confidence Pool</p>
-                <p className="title">Dan Backhaus</p>
-                <p className="subtitle">1547 Points</p>
+                <p className="title">Patrick Cook</p>
+                <p className="subtitle">1689 Points</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div className="content">
                 <p className="heading">Survivor Pool</p>
-                <p className="title">Brandon Horn</p>
-                <p className="subtitle">11 Weeks</p>
+                <p className="title">Andrew (& Katie) Cook</p>
+                <p className="subtitle">16 Weeks</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div className="content">
                 <p className="heading">Margin Pool</p>
-                <p className="title">Bobby Crimmins</p>
-                <p className="subtitle">254 Points</p>
+                <p className="title">Michael Bussinelli</p>
+                <p className="subtitle">287 Points</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div className="content">
                 <p className="heading">High Five Pool</p>
-                <p className="title">Marc Seitz</p>
-                <p className="subtitle">90 Points</p>
+                <p className="title">Sydney Sakwa</p>
+                <p className="subtitle">108 Points</p>
               </div>
             </div>
           </div>
@@ -86,6 +86,60 @@ function HallOfFame() {
           <h1 className="title is-3 stonehands-hero">
             <u>2024 Records</u>
           </h1>
+        </div>
+        <div className="block has-text-centered">
+          <h1 className="title stonehands-hero">Football</h1>
+        </div>
+        <div className="columns">
+          <div className="column">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Confidence Pool</h1>
+              <ol>
+                <li>Patrick Cook - 1689 Points</li>
+                <li>David Galatt - 1674 Points</li>
+                <li>Mike McCrudden - 1672 Points</li>
+                <li>Miguel Linares - 1672 Points</li>
+                <li>Dan Gilbert - 1669 Points</li>
+              </ol>
+            </div>
+          </div>
+          <div className="column">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Survivor Pool</h1>
+              <ol>
+                <li>Andrew (& Katie) Cook - 16 Weeks</li>
+                <li>Annie Dolan - 11 Weeks</li>
+                <li>
+                  Dan Fandl, Neal McGovern <br />
+                  Pat Schultz, and Amanda Tullo -<br /> 4 Weeks
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div className="column">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Margin Pool</h1>
+              <ol>
+                <li>Michael Bussinelli - 287 Points</li>
+                <li>Mendel Moise - 268 Points</li>
+                <li>David Brand - 258 Points</li>
+                <li>Dan Gilbert - 257 Points</li>
+                <li>Brendan White - 256 Points</li>
+              </ol>
+            </div>
+          </div>
+          <div className="column">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">High Five Pool</h1>
+              <ol>
+                <li>Sydney Sakwa - 108 Points</li>
+                <li>Dan Dupras - 104 Points</li>
+                <li>Dan Besser - 104 Points</li>
+                <li>Robert Garcia - 104 Points</li>
+                <li>Andrew (& Katie) Cook - 103 Points</li>
+              </ol>
+            </div>
+          </div>
         </div>
         <div className="block has-text-centered">
           <h1 className="title stonehands-hero">March Madness</h1>
