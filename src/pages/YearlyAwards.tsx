@@ -143,6 +143,12 @@ interface HighFiveData {
   totalWins: number;
 }
 
+interface MostIndecisiveData {
+  firstName: string;
+  lastName: string;
+  timesUpdated: number;
+}
+
 interface AccoladeInfo {
   id: string;
   title: string;
@@ -191,6 +197,7 @@ function YearlyAwards() {
   const teamsWorstPicked = accolades.find(accolade => accolade.id === 'teamsWorstPicked') as AccoladeInfo;
   const secretMango = accolades.find(accolade => accolade.id === 'secretMango') as AccoladeInfo;
   const secretMurphy = accolades.find(accolade => accolade.id === 'secretMurphy') as AccoladeInfo;
+  const mostIndecisive = accolades.find(accolade => accolade.id === 'indecisivePeople') as AccoladeInfo;
 
   return (
     <section className="section">
@@ -811,6 +818,34 @@ function YearlyAwards() {
             </table>
           </div>
           <div className="column">
+            <h2 className="title has-text-centered">{mostIndecisive.title}</h2>
+            <h3 className="subtitle has-text-centered">{mostIndecisive.description}</h3>
+            <table className="table is-striped is-hoverable mx-auto">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th># Picksheet Updates</th>
+                </tr>
+              </thead>
+              <tbody>
+                {mostIndecisive.data.map((info: MostIndecisiveData) => {
+                  return (
+                    <tr key={`${info.firstName}-${info.lastName}-mostIndecisive`}>
+                      <td>
+                        {info.firstName} {info.lastName}
+                      </td>
+                      <td>
+                        <b>{info.timesUpdated} updates</b>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column">
             <h2 className="title has-text-centered">{secretMango.title}</h2>
             <h3 className="subtitle has-text-centered">{secretMango.description}</h3>
             <table className="table is-striped is-hoverable mx-auto">
@@ -836,31 +871,33 @@ function YearlyAwards() {
               </tbody>
             </table>
           </div>
-        </div>
-        <h2 className="title has-text-centered">{secretMurphy.title}</h2>
-        <h3 className="subtitle has-text-centered">{secretMurphy.description}</h3>
-        <table className="table is-striped is-hoverable mx-auto">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Week</th>
-              <th>Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            {secretMurphy.data.map((info: SecretMurphyData) => {
-              return (
-                <tr key={`${info.name}-secretMurphy`}>
-                  <td>{info.name}</td>
-                  <td>
-                    <b>{info.week}</b>
-                  </td>
-                  <td>{info.year}</td>
+          <div className="column">
+            <h2 className="title has-text-centered">{secretMurphy.title}</h2>
+            <h3 className="subtitle has-text-centered">{secretMurphy.description}</h3>
+            <table className="table is-striped is-hoverable mx-auto">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Week</th>
+                  <th>Year</th>
                 </tr>
-              );
-            })}
-          </tbody>
-        </table>
+              </thead>
+              <tbody>
+                {secretMurphy.data.map((info: SecretMurphyData) => {
+                  return (
+                    <tr key={`${info.name}-secretMurphy`}>
+                      <td>{info.name}</td>
+                      <td>
+                        <b>{info.week}</b>
+                      </td>
+                      <td>{info.year}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
         <h3 className="title is-1 has-text-centered">Lowlights from 2023</h3>
         <div className="columns">
           <div className="column">

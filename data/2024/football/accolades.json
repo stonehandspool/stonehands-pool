@@ -290,6 +290,43 @@
     ]
   },
   {
+    "id": "indecisivePeople",
+    "title": "Most Indecisive People",
+    "description": "These are the people who forgot changed their picksheet the most times throughout the season",
+    "data": [
+      {
+        "userId": "7a52a0e0-637a-4a13-a343-70674ac23955",
+        "firstName": "Matthew",
+        "lastName": "Zucker",
+        "timesUpdated": 70
+      },
+      {
+        "userId": "0869826a-9ee4-4001-8142-f213f7504cc2",
+        "firstName": "Dan",
+        "lastName": "Gilbert",
+        "timesUpdated": 28
+      },
+      {
+        "userId": "891b628d-34ef-4959-a722-c4b467c24cae",
+        "firstName": "Dan",
+        "lastName": "Martin",
+        "timesUpdated": 28
+      },
+      {
+        "userId": "1af52a92-0242-491e-87f5-c166fa2fa730",
+        "firstName": "Gregory",
+        "lastName": "Della Penna",
+        "timesUpdated": 26
+      },
+      {
+        "userId": "8df30fea-04c7-4c2d-a8c1-2fc5dd91a92b",
+        "firstName": "Melissa",
+        "lastName": "Rudberg",
+        "timesUpdated": 24
+      }
+    ]
+  },
+  {
     "id": "thursdayPoints",
     "title": "Top 5 Thursday (Points)",
     "description": "These are the 5 people who earned the most points on Thursday night games",
@@ -759,7 +796,7 @@
         "pickedRight": true,
         "weekId": "week_2",
         "matchupId": "matchup_16",
-        "description": "They were the only person to correctly choose ATL to beat PHI in week week_2"
+        "description": "They were the only person to correctly choose ATL to beat PHI in week 2"
       },
       {
         "userId": "5d6278ea-a207-4350-a2a5-ebba13175a97",
@@ -770,7 +807,7 @@
         "pickedRight": true,
         "weekId": "week_8",
         "matchupId": "matchup_2",
-        "description": "They were the only person to correctly choose CLE to beat BAL in week week_8"
+        "description": "They were the only person to correctly choose CLE to beat BAL in week 8"
       },
       {
         "userId": "803138fa-9259-4226-be1b-3d3c002c7c1a",
@@ -781,7 +818,7 @@
         "pickedRight": true,
         "weekId": "week_18",
         "matchupId": "matchup_8",
-        "description": "They were the only person to correctly choose CHI to beat GB in week week_18"
+        "description": "They were the only person to correctly choose CHI to beat GB in week 18"
       }
     ]
   },
@@ -799,7 +836,7 @@
         "pickedRight": false,
         "weekId": "week_2",
         "matchupId": "matchup_14",
-        "description": "They were the only person to incorrectly choose CIN to beat KC in week week_2"
+        "description": "They were the only person to incorrectly choose CIN to beat KC in week 2"
       },
       {
         "userId": "5d6278ea-a207-4350-a2a5-ebba13175a97",
@@ -810,7 +847,7 @@
         "pickedRight": false,
         "weekId": "week_8",
         "matchupId": "matchup_5",
-        "description": "They were the only person to incorrectly choose TEN to beat DET in week week_8"
+        "description": "They were the only person to incorrectly choose TEN to beat DET in week 8"
       },
       {
         "userId": "d75f6d28-4766-4700-9cf3-b1a8cdf26c5a",
@@ -821,7 +858,7 @@
         "pickedRight": false,
         "weekId": "week_8",
         "matchupId": "matchup_13",
-        "description": "They were the only person to incorrectly choose LV to beat KC in week week_8"
+        "description": "They were the only person to incorrectly choose LV to beat KC in week 8"
       },
       {
         "userId": "1af52a92-0242-491e-87f5-c166fa2fa730",
@@ -832,7 +869,7 @@
         "pickedRight": false,
         "weekId": "week_8",
         "matchupId": "matchup_14",
-        "description": "They were the only person to incorrectly choose CAR to beat DEN in week week_8"
+        "description": "They were the only person to incorrectly choose CAR to beat DEN in week 8"
       },
       {
         "userId": "8f622792-dbcc-40d8-b94d-3ad33f875637",
@@ -843,7 +880,7 @@
         "pickedRight": false,
         "weekId": "week_10",
         "matchupId": "matchup_8",
-        "description": "They were the only person to incorrectly choose JAC to beat MIN in week week_10"
+        "description": "They were the only person to incorrectly choose JAC to beat MIN in week 10"
       },
       {
         "userId": "db9cc160-bbe2-42a2-a1c3-078227c28530",
@@ -854,7 +891,7 @@
         "pickedRight": false,
         "weekId": "week_11",
         "matchupId": "matchup_5",
-        "description": "They were the only person to incorrectly choose JAC to beat DET in week week_11"
+        "description": "They were the only person to incorrectly choose JAC to beat DET in week 11"
       },
       {
         "userId": "8f622792-dbcc-40d8-b94d-3ad33f875637",
@@ -865,7 +902,7 @@
         "pickedRight": false,
         "weekId": "week_14",
         "matchupId": "matchup_7",
-        "description": "They were the only person to incorrectly choose CAR to beat PHI in week week_14"
+        "description": "They were the only person to incorrectly choose CAR to beat PHI in week 14"
       },
       {
         "userId": "32df21b5-d57b-4477-9f94-1ec20edbd2e5",
@@ -876,7 +913,7 @@
         "pickedRight": false,
         "weekId": "week_15",
         "matchupId": "matchup_2",
-        "description": "They were the only person to incorrectly choose NYG to beat BAL in week week_15"
+        "description": "They were the only person to incorrectly choose NYG to beat BAL in week 15"
       }
     ]
   },

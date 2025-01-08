@@ -207,6 +207,68 @@ for (let i = eagerPeople.length - 5; i < eagerPeople.length; i++) {
 
 yearlyAccolades.push(eagerPeopleDataToExport, leastEagerPeopleDataToExport);
 
+// Now get the most indecisive people
+const indecisivePeople = [];
+let mostIndecisivePicksheet = {
+  userId: '',
+  firstName: '',
+  lastName: '',
+  timesUpdated: -1,
+};
+for (let i = 0; i < weeklyPicks.length; i++) {
+  const { picks } = weeklyPicks[i];
+  for (let j = 0; j < picks.length; j++) {
+    const pickInfo = picks[j];
+    const { id, submission_data: submissionData, user_id: userId, times_updated: _timesUpdated } = pickInfo;
+    if (id !== -1) {
+      const { firstName, lastName } = submissionData;
+      const indecisivePerson = indecisivePeople.find(person => person.userId === userId);
+      if (!indecisivePerson) {
+        indecisivePeople.push({ userId, firstName, lastName, timesUpdated: _timesUpdated });
+      } else {
+        indecisivePerson.timesUpdated += _timesUpdated;
+      }
+
+      if (_timesUpdated > mostIndecisivePicksheet.timesUpdated) {
+        mostIndecisivePicksheet = {
+          userId,
+          firstName,
+          lastName,
+          timesUpdated: _timesUpdated,
+        };
+      }
+    }
+  }
+}
+
+const indecisivePeopleDataToExport = {
+  id: 'indecisivePeople',
+  title: 'Most Indecisive People',
+  description: 'These are the people who forgot changed their picksheet the most times throughout the season',
+  data: [],
+};
+
+// Now sort in order of who was the most indecisive
+indecisivePeople.sort((a, b) => b.timesUpdated - a.timesUpdated);
+
+// Now print it out (we want to add it to a json file eventually)
+console.log();
+console.log('The most indecisive people');
+indecisivePeople.forEach((person, index) => {
+  if (index < 5) {
+    // Only get the top 5 most indecisive people
+    console.log(`${index + 1}. ${person.firstName} ${person.lastName} - ${person.timesUpdated}`);
+    indecisivePeopleDataToExport.data.push(person);
+  }
+});
+
+console.log();
+console.log(
+  `The most indecisive picksheet was ${mostIndecisivePicksheet.firstName} ${mostIndecisivePicksheet.lastName} - ${mostIndecisivePicksheet.timesUpdated}`
+);
+
+yearlyAccolades.push(indecisivePeopleDataToExport);
+
 // Now get the best records on Thursday games
 const thursdayRecords = [];
 for (let i = 0; i < weeklyPicks.length; i++) {
@@ -538,10 +600,10 @@ for (let i = 0; i < weeklyPicks.length; i++) {
       const person = loneWolfCheck.homeTeamPicks[0];
       loneWolves.push(person);
       if (person.pickedRight) {
-        person.description = `They were the only person to correctly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId}`;
+        person.description = `They were the only person to correctly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId.split('_').pop()}`;
         loneWolfDataToExport.data.push(person);
       } else {
-        person.description = `They were the only person to incorrectly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId}`;
+        person.description = `They were the only person to incorrectly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId.split('_').pop()}`;
         loneLoserDataToExport.data.push(person);
       }
       console.log('Lone Wolf found!');
@@ -552,10 +614,10 @@ for (let i = 0; i < weeklyPicks.length; i++) {
       const person = loneWolfCheck.awayTeamPicks[0];
       loneWolves.push(person);
       if (person.pickedRight) {
-        person.description = `They were the only person to correctly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId}`;
+        person.description = `They were the only person to correctly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId.split('_').pop()}`;
         loneWolfDataToExport.data.push(person);
       } else {
-        person.description = `They were the only person to incorrectly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId}`;
+        person.description = `They were the only person to incorrectly choose ${person.team} to beat ${person.losingTeam} in week ${person.weekId.split('_').pop()}`;
         loneLoserDataToExport.data.push(person);
       }
       console.log('Lone Wolf found!');
