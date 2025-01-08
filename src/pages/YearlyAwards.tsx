@@ -1,5 +1,5 @@
 import { CURRENT_YEAR } from '../constants';
-import accolades from '../../data/2023/accolades.json';
+import accolades from '../../data/2024/football/accolades.json';
 
 interface ForgetfulPeopleData {
   userId: string;
@@ -116,6 +116,12 @@ interface SecretMangoData {
   year: number;
 }
 
+interface SecretMurphyData {
+  name: string;
+  week: string;
+  year: number;
+}
+
 interface SurvivorData {
   name: string;
   weeksSurvived: number;
@@ -184,6 +190,7 @@ function YearlyAwards() {
   const teamsBestPicked = accolades.find(accolade => accolade.id === 'teamsBestPicked') as AccoladeInfo;
   const teamsWorstPicked = accolades.find(accolade => accolade.id === 'teamsWorstPicked') as AccoladeInfo;
   const secretMango = accolades.find(accolade => accolade.id === 'secretMango') as AccoladeInfo;
+  const secretMurphy = accolades.find(accolade => accolade.id === 'secretMurphy') as AccoladeInfo;
 
   return (
     <section className="section">
@@ -519,7 +526,7 @@ function YearlyAwards() {
             </table>
           </div>
         </div>
-        <h3 className="title is-1 has-text-centered">Survivor Awards</h3>
+        <h3 className="title is-1 has-text-centered">Survivor Award</h3>
         <h2 className="title has-text-centered">{survivor.title}</h2>
         <h3 className="subtitle has-text-centered">{survivor.description}</h3>
         <table className="table is-striped is-hoverable mx-auto">
@@ -615,7 +622,7 @@ function YearlyAwards() {
               <tbody>
                 {highFivePoints.data.map((info: HighFiveData, index) => {
                   return (
-                    <tr key={`${info.firstName}-highFivePoints`}>
+                    <tr key={`${info.firstName}-${info.lastName}-highFivePoints`}>
                       <td>{index + 1}</td>
                       <td>{`${info.firstName} ${info.lastName}`}</td>
                       <td>
@@ -830,6 +837,30 @@ function YearlyAwards() {
             </table>
           </div>
         </div>
+        <h2 className="title has-text-centered">{secretMurphy.title}</h2>
+        <h3 className="subtitle has-text-centered">{secretMurphy.description}</h3>
+        <table className="table is-striped is-hoverable mx-auto">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Week</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            {secretMurphy.data.map((info: SecretMurphyData) => {
+              return (
+                <tr key={`${info.name}-secretMurphy`}>
+                  <td>{info.name}</td>
+                  <td>
+                    <b>{info.week}</b>
+                  </td>
+                  <td>{info.year}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
         <h3 className="title is-1 has-text-centered">Lowlights from 2023</h3>
         <div className="columns">
           <div className="column">
@@ -903,7 +934,7 @@ function YearlyAwards() {
               <tbody>
                 {loneLoser.data.map((info: LoneWolfData, index) => {
                   return (
-                    <tr key={`${info.userId}-loneLoser`}>
+                    <tr key={`${info.userId}-loneLoser-${index}`}>
                       <td>{index + 1}</td>
                       <td>{`${info.firstName} ${info.lastName}`}</td>
                       <td>
@@ -931,7 +962,7 @@ function YearlyAwards() {
               <tbody>
                 {leastPointsInWeek.data.map((info: WinsInWeekData, index) => {
                   return (
-                    <tr key={`${info.id}-leastPointsInWeek`}>
+                    <tr key={`${info.id}-leastPointsInWeek-${index}`}>
                       <td>{index + 1}</td>
                       <td>{`${info.firstName} ${info.lastName}`}</td>
                       <td>
@@ -960,7 +991,7 @@ function YearlyAwards() {
           <tbody>
             {teamsWorstPicked.data.map((info: BestPickedData, index) => {
               return (
-                <tr key={`${info.firstName}-${info.lastName}-teamsWorstPicked`}>
+                <tr key={`${info.firstName}-${info.lastName}-teamsWorstPicked-${index}`}>
                   <td>{index + 1}</td>
                   <td>{`${info.firstName} ${info.lastName}`}</td>
                   <td>

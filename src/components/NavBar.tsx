@@ -200,7 +200,7 @@ function NavBar() {
                   onLinkClick('more');
                 }}
               >
-                2023 Awards
+                2024 Awards
               </Link>
               <Link
                 className="navbar-item"

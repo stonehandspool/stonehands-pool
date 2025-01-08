@@ -1,7 +1,7 @@
 import * as path from 'path';
 // import * as fs from 'node:fs';
 import minimist from 'minimist';
-import { readFile } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 
 const args = minimist(process.argv.slice(2));
 const { year } = args;
@@ -838,158 +838,198 @@ for (let i = 0; i < 5; i++) {
 
 yearlyAccolades.push(teamsBestPickedDataToExport, teamsWorstPickedDataToExport);
 
-// // Next, add in the secret mango award
-// const secretMangoDataToExport = {
-//   id: 'secretMango',
-//   title: 'The "Secret Mango" Award',
-//   description: 'This is given to those who discover the hidden "Secret Mango" award on the website',
-//   data: [
-//     {
-//       name: 'Kailey Fandl',
-//       week: 9,
-//       year: 2023,
-//     },
-//   ],
-// };
+// Next, add in the secret mango award
+const secretMangoDataToExport = {
+  id: 'secretMango',
+  title: 'The "Secret Mango" Award',
+  description: 'This is given to those who discover the hidden "Secret Mango" award on the website',
+  data: [
+    {
+      name: 'Bobby Crimmins',
+      week: 1,
+      year: 2024,
+    },
+    {
+      name: 'Jackie Cook',
+      week: 1,
+      year: 2024,
+    },
+    {
+      name: 'Andrew (& Katie) Cook',
+      week: 1,
+      year: 2024,
+    },
+    {
+      name: 'Ali Lospinuso',
+      week: 1,
+      year: 2024,
+    },
+    {
+      name: 'Matthew Arsenault',
+      week: 3,
+      year: 2024,
+    },
+  ],
+};
 
-// yearlyAccolades.push(secretMangoDataToExport);
+yearlyAccolades.push(secretMangoDataToExport);
 
-// // Survivor Pool Stuff
-// const survivorDataToExport = {
-//   id: 'survivor',
-//   title: 'Survivor Pool Winners',
-//   description: 'The winners of the Survivor Pool throughout the years',
-//   data: [
-//     {
-//       name: 'Brandon Horn',
-//       weeksSurvived: 11,
-//       year: 2023,
-//     },
-//   ],
-// };
+// Next, add in the secret murphy award
+const secretMurphyDataToExport = {
+  id: 'secretMurphy',
+  title: 'The "Secret Murphy" Award',
+  description: 'This is given to those who discover the hidden "Secret Murphy" award on the website',
+  data: [
+    {
+      name: 'Matthew Arsenault',
+      week: 3,
+      year: 2024,
+    },
+    {
+      name: 'Patrick Cook',
+      week: 3,
+      year: 2024,
+    },
+  ],
+};
 
-// yearlyAccolades.push(survivorDataToExport);
+yearlyAccolades.push(secretMurphyDataToExport);
 
-// // Margin Pool Stuff
-// const marginPointsDataToExport = {
-//   id: 'marginPoints',
-//   title: 'Top 5 Margin (Points)',
-//   description: 'These are the 5 people who earned the most points in the Margin Pool',
-//   data: [],
-// };
+// Survivor Pool Stuff
+const survivorDataToExport = {
+  id: 'survivor',
+  title: 'Survivor Pool Winner',
+  description: 'The winner of the Survivor Pool this year',
+  data: [
+    {
+      name: 'Andrew (& Katie) Cook',
+      weeksSurvived: 16,
+      year: 2024,
+    },
+  ],
+};
 
-// players.sort((a, b) => b.marginTotal - a.marginTotal);
+yearlyAccolades.push(survivorDataToExport);
 
-// console.log();
-// console.log('Top 5 Margin Points');
-// for (let i = 0; i < 5; i++) {
-//   const info = players[i];
-//   const { firstName, lastName, marginTotal } = info;
-//   marginPointsDataToExport.data.push(info);
-//   console.log(`${i + 1}. ${firstName} ${lastName} - ${marginTotal}`);
-// }
+// Margin Pool Stuff
+const marginPointsDataToExport = {
+  id: 'marginPoints',
+  title: 'Top 5 Margin (Points)',
+  description: 'These are the 5 people who earned the most points in the Margin Pool',
+  data: [],
+};
 
-// const marginWins = [];
-// const marginWinsDataToExport = {
-//   id: 'marginWins',
-//   title: 'Top 5 Margin (Wins)',
-//   description: 'These are the 5 people who earned the most wins in the Margin Pool',
-//   data: [],
-// };
-// players.forEach(player => {
-//   const { firstName, lastName, marginTotal, marginPicks } = player;
-//   const totalWins = marginPicks.reduce((n, val) => n + (val.margin > 0 ? 1 : 0), 0);
-//   marginWins.push({ firstName, lastName, marginTotal, totalWins });
-// });
+playerData.sort((a, b) => b.marginTotal - a.marginTotal);
 
-// marginWins.sort((a, b) => b.totalWins - a.totalWins);
-// console.log();
-// console.log('Top 5 Margin Wins');
-// for (let i = 0; i < 5; i++) {
-//   const info = marginWins[i];
-//   const { firstName, lastName, totalWins } = info;
-//   marginWinsDataToExport.data.push(info);
-//   console.log(`${i + 1}. ${firstName} ${lastName} - ${totalWins}`);
-// }
+console.log();
+console.log('Top 5 Margin Points');
+for (let i = 0; i < 5; i++) {
+  const info = playerData[i];
+  const { firstName, lastName, marginTotal } = info;
+  marginPointsDataToExport.data.push(info);
+  console.log(`${i + 1}. ${firstName} ${lastName} - ${marginTotal}`);
+}
 
-// yearlyAccolades.push(marginPointsDataToExport, marginWinsDataToExport);
+const marginWins = [];
+const marginWinsDataToExport = {
+  id: 'marginWins',
+  title: 'Top 5 Margin (Wins)',
+  description: 'These are the 5 people who earned the most wins in the Margin Pool',
+  data: [],
+};
+playerData.forEach(player => {
+  const { firstName, lastName, marginTotal, marginPicks } = player;
+  const totalWins = marginPicks.reduce((n, val) => n + (val.margin > 0 ? 1 : 0), 0);
+  marginWins.push({ firstName, lastName, marginTotal, totalWins });
+});
 
-// // High Five Stuff
-// const highFivePointsDataToExport = {
-//   id: 'highFivePoints',
-//   title: 'Top 5 High Five (Points)',
-//   description: 'These are the 5 people who earned the most points in the High Five Pool',
-//   data: [],
-// };
+marginWins.sort((a, b) => b.totalWins - a.totalWins);
+console.log();
+console.log('Top 5 Margin Wins');
+for (let i = 0; i < 5; i++) {
+  const info = marginWins[i];
+  const { firstName, lastName, totalWins } = info;
+  marginWinsDataToExport.data.push(info);
+  console.log(`${i + 1}. ${firstName} ${lastName} - ${totalWins}`);
+}
 
-// players.sort((a, b) => b.highFiveTotal - a.highFiveTotal);
+yearlyAccolades.push(marginPointsDataToExport, marginWinsDataToExport);
 
-// console.log();
-// console.log('Top 5 High Five Points');
-// for (let i = 0; i < 5; i++) {
-//   const info = players[i];
-//   const { firstName, lastName, highFiveTotal } = info;
-//   highFivePointsDataToExport.data.push(info);
-//   console.log(`${i + 1}. ${firstName} ${lastName} - ${highFiveTotal}`);
-// }
+// High Five Stuff
+const highFivePointsDataToExport = {
+  id: 'highFivePoints',
+  title: 'Top 5 High Five (Points)',
+  description: 'These are the 5 people who earned the most points in the High Five Pool',
+  data: [],
+};
 
-// const highFiveWins = [];
-// const highFiveWinsDataToExport = {
-//   id: 'highFiveWins',
-//   title: 'Top 5 High Five (Wins)',
-//   description: 'These are the 5 people who earned the most wins in the High Five Pool',
-//   data: [],
-// };
-// players.forEach(player => {
-//   const { firstName, lastName, highFiveTotal, highFiveValues } = player;
-//   const totalWins = highFiveValues.reduce((n, val) => {
-//     if (val === 1) {
-//       return n + 1;
-//     } else if (val === 2) {
-//       return n + 2;
-//     } else if (val === 3) {
-//       return n + 3;
-//     } else if (val === 5) {
-//       return n + 4;
-//     } else if (val === 8) {
-//       return n + 5;
-//     }
-//     return n;
-//   }, 0);
-//   highFiveWins.push({ firstName, lastName, highFiveTotal, totalWins });
-// });
+playerData.sort((a, b) => b.highFiveTotal - a.highFiveTotal);
 
-// highFiveWins.sort((a, b) => b.totalWins - a.totalWins);
-// console.log();
-// console.log('Top 5 High Fives Wins');
-// for (let i = 0; i < 5; i++) {
-//   const info = highFiveWins[i];
-//   const { firstName, lastName, totalWins } = info;
-//   highFiveWinsDataToExport.data.push(info);
-//   console.log(`${i + 1}. ${firstName} ${lastName} - ${totalWins}`);
-// }
+console.log();
+console.log('Top 5 High Five Points');
+for (let i = 0; i < 5; i++) {
+  const info = playerData[i];
+  const { firstName, lastName, highFiveTotal } = info;
+  highFivePointsDataToExport.data.push(info);
+  console.log(`${i + 1}. ${firstName} ${lastName} - ${highFiveTotal}`);
+}
 
-// yearlyAccolades.push(highFivePointsDataToExport, highFiveWinsDataToExport);
+const highFiveWins = [];
+const highFiveWinsDataToExport = {
+  id: 'highFiveWins',
+  title: 'Top 5 High Five (Wins)',
+  description: 'These are the 5 people who earned the most wins in the High Five Pool',
+  data: [],
+};
+playerData.forEach(player => {
+  const { firstName, lastName, highFiveTotal, highFiveValues } = player;
+  const totalWins = highFiveValues.reduce((n, val) => {
+    if (val === 1) {
+      return n + 1;
+    } else if (val === 2) {
+      return n + 2;
+    } else if (val === 3) {
+      return n + 3;
+    } else if (val === 5) {
+      return n + 4;
+    } else if (val === 8) {
+      return n + 5;
+    }
+    return n;
+  }, 0);
+  highFiveWins.push({ firstName, lastName, highFiveTotal, totalWins });
+});
 
-// // TODO: If anyone ever actually does this then add it, but I don't think it'll happen
-// console.log();
-// console.log('People who picked every game right for a team');
-// perfectTeams.forEach((info, index) => {
-//   const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
-//   console.log(
-//     `${index + 1}. ${firstName} ${lastName} was always right with ${team} (${timesCorrect}-${timesIncorrect})`
-//   );
-// });
+highFiveWins.sort((a, b) => b.totalWins - a.totalWins);
+console.log();
+console.log('Top 5 High Fives Wins');
+for (let i = 0; i < 5; i++) {
+  const info = highFiveWins[i];
+  const { firstName, lastName, totalWins } = info;
+  highFiveWinsDataToExport.data.push(info);
+  console.log(`${i + 1}. ${firstName} ${lastName} - ${totalWins}`);
+}
 
-// console.log();
-// console.log('People who picked every game wrong for a team');
-// reallyWrongTeams.forEach((info, index) => {
-//   const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
-//   console.log(
-//     `${index + 1}. ${firstName} ${lastName} was always wrong with ${team} (${timesCorrect}-${timesIncorrect})`
-//   );
-// });
+yearlyAccolades.push(highFivePointsDataToExport, highFiveWinsDataToExport);
 
-// const accoladesAsJson = JSON.stringify(yearlyAccolades, null, 2);
-// fs.writeFileSync(path.resolve(`data/${year}/accolades.json`), accoladesAsJson);
-// console.log(`Created a new file at data/${year}/accolades.json`);
+console.log();
+console.log('People who picked every game right for a team');
+perfectTeams.forEach((info, index) => {
+  const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
+  console.log(
+    `${index + 1}. ${firstName} ${lastName} was always right with ${team} (${timesCorrect}-${timesIncorrect})`
+  );
+});
+
+console.log();
+console.log('People who picked every game wrong for a team');
+reallyWrongTeams.forEach((info, index) => {
+  const { firstName, lastName, team, timesCorrect, timesIncorrect } = info;
+  console.log(
+    `${index + 1}. ${firstName} ${lastName} was always wrong with ${team} (${timesCorrect}-${timesIncorrect})`
+  );
+});
+
+const accoladesAsJson = JSON.stringify(yearlyAccolades, null, 2);
+await writeFile(path.resolve(`data/${year}/football/accolades.json`), accoladesAsJson);
+console.log(`Created a new file at data/${year}/accolades.json`);
