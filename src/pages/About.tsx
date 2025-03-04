@@ -78,6 +78,14 @@ function About() {
         <h3 className="title is-3 has-text-centered">About</h3>
         <div className="columns is-centered">
           <div className="column is-two-thirds">
+            {MARCH_MADNESS_STATE !== 'INACTIVE' && (
+              <span className="has-text-danger">
+                <b>
+                  This is the About page for the football pool, for info about the March Madness pool please{' '}
+                  <a href="march-madness/about">here</a>
+                </b>
+              </span>
+            )}
             <p className="mb-2">
               If you were wondering where the name for this Pool came from, it's a combination of the two things that
               inspired it: the Stablehand Pool and Stonehill College.
