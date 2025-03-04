@@ -48,10 +48,10 @@ function MarchMadnessAbout() {
           <div className="column is-two-thirds">
             <p className="mb-2">
               Welcome, and thanks for thinking about the Stonehands March Madness Bracket Pool! If you participated in
-              the 2023-2024 NFL Pools, then you will not need to sign up and are welcome to fill out a bracket. However,
-              if you are new to the Stonehands Pool and you are considering joining, then please make sure you sign up
-              for the site on the <a href="/sign-up">sign up page</a> (don't forget to confirm your email address after
-              signing up!). Once you have signed up feel free to fill out a bracket!
+              in any of the prior Stonehands Pools, then you will not need to sign up and are welcome to fill out a
+              bracket. However, if you are new to the Stonehands Pool and you are considering joining, then please make
+              sure you sign up for the site on the <a href="/sign-up">sign up page</a> (don't forget to confirm your
+              email address after signing up!). Once you have signed up feel free to fill out a bracket!
             </p>
             <p className="mb-2">
               The buy-in for the March Madness Pool will be $25 with the top 15 players winning (you can see the values
@@ -177,8 +177,7 @@ function MarchMadnessAbout() {
               received. This structure is designed to try and provide as many ways for players to win at least some
               money back so that there's always a motivation to keep playing. The "Per Round" payout will be given to
               whichever player gains the most points in that round. If there is a tie in that round then the money will
-              be split between the winners.
-              <b>All</b> payouts will be made at the end of the tournament.
+              be split between the winners. <b>All</b> payouts will be made at the end of the tournament.
             </p>
             <br />
             <h5 className="title is-5">Season Payout Structure w/ {numPlayers} members</h5>

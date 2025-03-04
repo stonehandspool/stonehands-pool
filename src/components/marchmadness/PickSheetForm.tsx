@@ -10,7 +10,7 @@ import {
   MARCH_MADNESS_STATE,
   ROUND_VALUES,
 } from '../../constants';
-import matchups from '../../../data/2024/marchmadness/matchups.json';
+import matchups from '../../../data/2025/marchmadness/matchups.json';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
 
@@ -40,7 +40,7 @@ function PickSheetForm(props: PicksheetFormProps) {
   const { first_name: firstName, last_name: lastName, username } = userInfo;
 
   // This is a lazy implementation that will not look for resizing, just on initial load
-  const [windowDimensions, setWindowDimensions] = useState<{
+  const [windowDimensions] = useState<{
     width: number;
     height: number;
   }>(getWindowDimensions());
@@ -52,6 +52,19 @@ function PickSheetForm(props: PicksheetFormProps) {
         <div className="container">
           <h3 className="title is-3 has-text-centered">
             Sorry, the March Madness Bracket hasn't been loaded yet, it will be available as soon as possible
+          </h3>
+        </div>
+      </section>
+    );
+  }
+
+  if (MARCH_MADNESS_STATE === 'PRE_SELECTION_SUNDAY') {
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            Sorry, the tournament hasn't been set! Please wait until Selection Sunday has occurred, Ryan will notify you
+            when the site is ready for picks!
           </h3>
         </div>
       </section>
