@@ -1,6 +1,6 @@
 import { MARCH_MADNESS_CURRENT_ROUND } from '../../constants';
-import matchups from '../../../data/2024/marchmadness/matchups.json';
-import playerPicks from '../../../data/2024/marchmadness/playerPicks.json';
+import matchups from '../../../data/2025/marchmadness/matchups.json';
+import playerPicks from '../../../data/2025/marchmadness/playerPicks.json';
 
 interface MatchupConsensusInfo {
   topTeam: string;
@@ -53,7 +53,8 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
   const gamesPerTable = gamesPerRound[round - 1];
 
   // First set up the initial values for the consensus info
-  matchupsInRound.forEach(matchup => {
+  // TODO: Remove this any and find a better solution for next year
+  matchupsInRound.forEach((matchup: any) => {
     consensusArr.push({
       topTeam: matchup.topTeam.name,
       topNumPicks: 0,
@@ -72,7 +73,8 @@ function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
   playerPicks.forEach(playerInfo => {
     const { userPicks } = playerInfo;
     consensusArr.forEach(matchup => {
-      const userMatchInfo = userPicks.find(pick => pick.id === matchup.matchupId)!;
+      // TODO: same as above
+      const userMatchInfo = (userPicks as any).find((pick: any) => pick.id === matchup.matchupId)!;
       const userWinner = userMatchInfo.winner === 'top' ? userMatchInfo.topTeam.name : userMatchInfo.bottomTeam.name;
       if (userWinner === matchup.topTeam) {
         matchup.topNumPicks++;

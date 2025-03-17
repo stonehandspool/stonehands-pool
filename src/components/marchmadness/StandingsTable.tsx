@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import playerPicks from '../../../data/2024/marchmadness/playerPicks.json';
-import teams from '../../../data/2024/marchmadness/teams.json';
+import playerPicks from '../../../data/2025/marchmadness/playerPicks.json';
+import teams from '../../../data/2025/marchmadness/teams.json';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
@@ -140,7 +140,7 @@ function StandingsTable() {
           </thead>
           <tbody>
             {calculatedPicks.map((row, index) => {
-              const championAlive = teams.find(team => team.name === row.champion)!.alive;
+              const championAlive = teams.find(team => team.name === row.champion)?.alive || row.champion === '?';
               return (
                 <tr key={`${index}`}>
                   <td>{row.position}</td>

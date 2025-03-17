@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import DisplayCard from '../components/marchmadness/DisplayCard';
 import { CURRENT_YEAR, MarchMadnessMatchupInfo, MarchMadnessPlayerInfo } from '../constants';
-import playerPicks from '../../data/2024/marchmadness/playerPicks.json';
-import teamData from '../../data/2024/marchmadness/teams.json';
-import bracketData from '../../data/2024/marchmadness/matchups.json';
+import playerPicks from '../../data/2025/marchmadness/playerPicks.json';
+import teamData from '../../data/2025/marchmadness/teams.json';
+import bracketData from '../../data/2025/marchmadness/matchups.json';
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -15,13 +15,16 @@ function UserBracket() {
   const { username } = useParams();
 
   // This is a lazy implementation that will not look for resizing, just on initial load
-  const [windowDimensions, setWindowDimensions] = useState<{
+  const [windowDimensions] = useState<{
     width: number;
     height: number;
   }>(getWindowDimensions());
   const isMobile = windowDimensions.width <= 768;
 
-  const playerInfo = playerPicks.find(pickInfo => pickInfo.username === username) as unknown as MarchMadnessPlayerInfo;
+  // TODO: Remove this and find a better solution for next year
+  const playerInfo = playerPicks.find(
+    (pickInfo: any) => pickInfo.username === username
+  ) as unknown as MarchMadnessPlayerInfo;
 
   if (!playerInfo) {
     return (
