@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import DisplayCard from '../components/marchmadness/DisplayCard';
 import { CURRENT_YEAR, MarchMadnessMatchupInfo, MarchMadnessPlayerInfo } from '../constants';
-import playerPicks from '../../data/2024/marchmadness/playerPicks.json';
-import teamData from '../../data/2024/marchmadness/teams.json';
-import bracketData from '../../data/2024/marchmadness/matchups.json';
+import playerPicks from '../../data/2025/marchmadness/playerPicks.json';
+import teamData from '../../data/2025/marchmadness/teams.json';
+import bracketData from '../../data/2025/marchmadness/matchups.json';
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;

@@ -1,5 +1,5 @@
-import teams from '../../../data/2024/marchmadness/teams.json';
-import playerPicks from '../../../data/2024/marchmadness/playerPicks.json';
+import teams from '../../../data/2025/marchmadness/teams.json';
+import playerPicks from '../../../data/2025/marchmadness/playerPicks.json';
 
 interface TeamsRemainingInfo {
   firstName: string;

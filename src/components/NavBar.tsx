@@ -248,7 +248,7 @@ function NavBar() {
                 >
                   Standings
                 </Link>
-                <Link
+                {/* <Link
                   className="navbar-item"
                   to="/march-madness/pool-consensus"
                   onClick={() => {
@@ -283,7 +283,7 @@ function NavBar() {
                   }}
                 >
                   2024 Payouts
-                </Link>
+                </Link> */}
               </div>
             </div>
           )}

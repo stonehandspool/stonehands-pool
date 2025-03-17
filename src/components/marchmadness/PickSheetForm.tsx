@@ -9,6 +9,7 @@ import {
   MARCH_MADNESS_CUTOFF,
   MARCH_MADNESS_STATE,
   ROUND_VALUES,
+  CURRENT_YEAR,
 } from '../../constants';
 import matchups from '../../../data/2025/marchmadness/matchups.json';
 import supabaseClient from '../../config/supabaseClient';
@@ -288,11 +289,12 @@ function PickSheetForm(props: PicksheetFormProps) {
     <section className="section px-0">
       <section className="section px-0">
         <div className="container">
-          <h1 className="title is-1">2024 March Madness Picksheet</h1>
+          <h1 className="title is-1">{CURRENT_YEAR} March Madness Picksheet</h1>
           <h2 className="subtitle">
-            Make sure to fill out every match below, you can select a team by clicking on the name of the school you
-            think will win. If you would like to change your picks you can at any time prior to the below cutoff. Once
-            the first game of the tournament has started you will be unable to change your picks
+            Make sure to fill out every match below,{' '}
+            <b>you can select a team by clicking on the name of the school you think will win.</b> If you would like to
+            change your picks you can at any time prior to the below cutoff. Once the first game of the tournament has
+            started you will be unable to change your picks
           </h2>
           {isMobile && (
             <h2 className="subtitle">

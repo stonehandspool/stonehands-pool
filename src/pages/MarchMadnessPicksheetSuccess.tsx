@@ -19,7 +19,7 @@ function MarchMadnessPicksheetSuccess() {
             playing!
           </p>
           <p className="has-text-centered">
-            Feel free to look at the standings page to make sure your name shows up there.
+            Feel free to look at the "March Madness" standings page to make sure your name shows up there.
           </p>
         </div>
       </div>
