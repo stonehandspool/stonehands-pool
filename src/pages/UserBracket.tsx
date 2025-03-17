@@ -15,13 +15,16 @@ function UserBracket() {
   const { username } = useParams();
 
   // This is a lazy implementation that will not look for resizing, just on initial load
-  const [windowDimensions, setWindowDimensions] = useState<{
+  const [windowDimensions] = useState<{
     width: number;
     height: number;
   }>(getWindowDimensions());
   const isMobile = windowDimensions.width <= 768;
 
-  const playerInfo = playerPicks.find(pickInfo => pickInfo.username === username) as unknown as MarchMadnessPlayerInfo;
+  // TODO: Remove this and find a better solution for next year
+  const playerInfo = playerPicks.find(
+    (pickInfo: any) => pickInfo.username === username
+  ) as unknown as MarchMadnessPlayerInfo;
 
   if (!playerInfo) {
     return (

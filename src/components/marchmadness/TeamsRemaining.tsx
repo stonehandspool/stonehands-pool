@@ -13,11 +13,12 @@ function MarchMadnessTeamsRemainingTable() {
   const teamsRemainingArr: TeamsRemainingInfo[] = [];
 
   // Create all of the needed data
-  playerPicks.forEach(player => {
+  // TODO: fix this any and find a better solution for next season
+  playerPicks.forEach((player: any) => {
     const teamsRemainingByRound = [0, 0, 0, 0, 0, 0];
 
     // Now go through each pick and update the array
-    player.userPicks.forEach(pickInfo => {
+    player.userPicks.forEach((pickInfo: any) => {
       const { round, topTeam, bottomTeam } = pickInfo;
       if (round !== 1) {
         const topTeamAlive = teams.find(team => team.name === topTeam.name)!.alive;
