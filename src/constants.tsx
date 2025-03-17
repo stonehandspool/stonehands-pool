@@ -223,7 +223,7 @@ export type {
 
 // March Madness specific constants
 type MarchMadnessStates = 'INACTIVE' | 'PRE_SELECTION_SUNDAY' | 'READY_FOR_PICKS' | 'ACTIVE';
-export const MARCH_MADNESS_STATE: MarchMadnessStates = 'PRE_SELECTION_SUNDAY';
+export const MARCH_MADNESS_STATE: MarchMadnessStates = 'READY_FOR_PICKS';
 export const MARCH_MADNESS_CUTOFF = new Date('2025-03-21T16:15:00.000Z');
 export const ROUND_VALUES = [1, 2, 4, 8, 16, 32];
 export const MARCH_MADNESS_CURRENT_ROUND = 6;
