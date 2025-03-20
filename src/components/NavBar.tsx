@@ -248,7 +248,7 @@ function NavBar() {
                 >
                   Standings
                 </Link>
-                {/* <Link
+                <Link
                   className="navbar-item"
                   to="/march-madness/pool-consensus"
                   onClick={() => {
@@ -266,7 +266,7 @@ function NavBar() {
                 >
                   Teams Remaining
                 </Link>
-                <Link
+                {/* <Link
                   className="navbar-item"
                   to="/march-madness/awards"
                   onClick={() => {
