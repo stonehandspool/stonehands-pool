@@ -49,10 +49,10 @@
       "name": "UCSD",
       "record": "30-4"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 68,
+    "bottomScore": 65,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-34"
   },
@@ -258,10 +258,10 @@
       "name": "UNC Wilmington",
       "record": "27-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 82,
+    "bottomScore": 72,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-39"
   },
@@ -296,10 +296,10 @@
       "name": "Omaha",
       "record": "22-12"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 83,
+    "bottomScore": 53,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-40"
   },
@@ -581,10 +581,10 @@
       "name": "Utah St",
       "record": "26-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 72,
+    "bottomScore": 47,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-48"
   },
@@ -629,9 +629,9 @@
   {
     "id": "matchup-34",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 5,
+      "name": "Michigan",
+      "record": "25-9"
     },
     "bottomTeam": {
       "seed": 4,
@@ -729,9 +729,9 @@
       "record": "30-3"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 3,
+      "name": "Texas Tech",
+      "record": "25-8"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -748,9 +748,9 @@
       "record": "20-13"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "St John's",
+      "record": "30-4"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -895,9 +895,9 @@
   {
     "id": "matchup-48",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 7,
+      "name": "UCLA",
+      "record": "22-10"
     },
     "bottomTeam": {
       "seed": 2,
