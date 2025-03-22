@@ -87,10 +87,10 @@
       "name": "UNC",
       "record": "23-13"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 71,
+    "bottomScore": 64,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-35"
   },
@@ -106,10 +106,10 @@
       "name": "Lipscomb",
       "record": "25-9"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 82,
+    "bottomScore": 55,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-35"
   },
@@ -201,10 +201,10 @@
       "name": "Colorado St",
       "record": "25-9"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 70,
+    "bottomScore": 78,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-38"
   },
@@ -220,10 +220,10 @@
       "name": "Grand Canyon",
       "record": "26-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 81,
+    "bottomScore": 49,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-38"
   },
@@ -315,10 +315,10 @@
       "name": "Mount St Marys",
       "record": "23-12"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 93,
+    "bottomScore": 49,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-41"
   },
@@ -334,10 +334,10 @@
       "name": "Baylor",
       "record": "19-14"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 72,
+    "bottomScore": 75,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-41"
   },
@@ -429,10 +429,10 @@
       "name": "Vanderbilt",
       "record": "20-12"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 59,
+    "bottomScore": 56,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-44"
   },
@@ -448,10 +448,10 @@
       "name": "Robert Morris",
       "record": "26-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 90,
+    "bottomScore": 81,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-44"
   },
@@ -648,14 +648,14 @@
   {
     "id": "matchup-35",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 6,
+      "name": "Ole Miss",
+      "record": "22-11"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 3,
+      "name": "Iowa St",
+      "record": "24-9"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -705,14 +705,14 @@
   {
     "id": "matchup-38",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 12,
+      "name": "Colorado St",
+      "record": "25-9"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Maryland",
+      "record": "25-8"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -762,14 +762,14 @@
   {
     "id": "matchup-41",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Duke",
+      "record": "31-3"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 9,
+      "name": "Baylor",
+      "record": "19-14"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -819,14 +819,14 @@
   {
     "id": "matchup-44",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 7,
+      "name": "St Mary's",
+      "record": "28-5"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Alabama",
+      "record": "25-8"
     },
     "topScore": 0,
     "bottomScore": 0,
