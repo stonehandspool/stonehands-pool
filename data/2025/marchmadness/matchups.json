@@ -923,10 +923,10 @@
       "name": "Michigan",
       "record": "25-9"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 78,
+    "bottomScore": 65,
+    "winner": "top",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-57"
   },
@@ -942,10 +942,10 @@
       "name": "Michigan St",
       "record": "27-6"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 70,
+    "bottomScore": 73,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-57"
   },
@@ -1037,10 +1037,10 @@
       "name": "Purdue",
       "record": "22-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 62,
+    "bottomScore": 60,
+    "winner": "top",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-60"
   },
@@ -1056,24 +1056,24 @@
       "name": "Tennessee",
       "record": "27-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 65,
+    "bottomScore": 78,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-60"
   },
   {
     "id": "matchup-57",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Auburn",
+      "record": "28-5"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Michigan St",
+      "record": "27-6"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -1123,14 +1123,14 @@
   {
     "id": "matchup-60",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Houston",
+      "record": "30-4"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Tennessee",
+      "record": "27-7"
     },
     "topScore": 0,
     "bottomScore": 0,
