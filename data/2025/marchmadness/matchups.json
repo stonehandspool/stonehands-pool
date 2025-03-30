@@ -1094,10 +1094,10 @@
       "name": "Texas Tech",
       "record": "25-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 84,
+    "bottomScore": 79,
+    "winner": "top",
+    "evaluated": true,
     "round": 4,
     "nextMatchup": "matchup-61"
   },
@@ -1113,10 +1113,10 @@
       "name": "Alabama",
       "record": "25-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 85,
+    "bottomScore": 65,
+    "winner": "top",
+    "evaluated": true,
     "round": 4,
     "nextMatchup": "matchup-62"
   },
@@ -1147,9 +1147,9 @@
       "record": null
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Florida",
+      "record": "30-4"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -1161,9 +1161,9 @@
   {
     "id": "matchup-62",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Duke",
+      "record": "31-3"
     },
     "bottomTeam": {
       "seed": null,
