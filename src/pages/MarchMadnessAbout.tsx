@@ -12,7 +12,7 @@ const toMoney = (value: number) => {
 
 function MarchMadnessAbout() {
   // Just dummy objects to allow the examples to somewhat work
-  const numPlayers = 72;
+  const numPlayers = 101;
   const buyIn = 25;
   const totalPool = numPlayers * buyIn;
 
@@ -177,7 +177,9 @@ function MarchMadnessAbout() {
               received. This structure is designed to try and provide as many ways for players to win at least some
               money back so that there's always a motivation to keep playing. The "Per Round" payout will be given to
               whichever player gains the most points in that round. If there is a tie in that round then the money will
-              be split between the winners. <b>All</b> payouts will be made at the end of the tournament.
+              be split between the winners as long as there are no more than 5 people tied. Once there are more than 5
+              people with the same score after a round a winner will be chosen at random. <b>All</b> payouts will be
+              made at the end of the tournament.
             </p>
             <br />
             <h5 className="title is-5">Season Payout Structure w/ {numPlayers} members</h5>
