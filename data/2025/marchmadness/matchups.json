@@ -1075,10 +1075,10 @@
       "name": "Michigan St",
       "record": "27-6"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 70,
+    "bottomScore": 64,
+    "winner": "top",
+    "evaluated": true,
     "round": 4,
     "nextMatchup": "matchup-61"
   },
@@ -1132,19 +1132,19 @@
       "name": "Tennessee",
       "record": "27-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 69,
+    "bottomScore": 50,
+    "winner": "top",
+    "evaluated": true,
     "round": 4,
     "nextMatchup": "matchup-62"
   },
   {
     "id": "matchup-61",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Auburn",
+      "record": "28-5"
     },
     "bottomTeam": {
       "seed": 1,
@@ -1166,9 +1166,9 @@
       "record": "31-3"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Houston",
+      "record": "30-4"
     },
     "topScore": 0,
     "bottomScore": 0,
