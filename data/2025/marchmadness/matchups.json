@@ -1151,10 +1151,10 @@
       "name": "Florida",
       "record": "30-4"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 73,
+    "bottomScore": 79,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 5,
     "nextMatchup": "matchup-63"
   },
@@ -1170,24 +1170,24 @@
       "name": "Houston",
       "record": "30-4"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 67,
+    "bottomScore": 70,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 5,
     "nextMatchup": "matchup-63"
   },
   {
     "id": "matchup-63",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Florida",
+      "record": "30-4"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Houston",
+      "record": "30-4"
     },
     "topScore": 0,
     "bottomScore": 0,
