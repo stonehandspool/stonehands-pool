@@ -12,7 +12,7 @@ const toMoney = (value: number) => {
 
 function MarchMadnessPayouts() {
   // Just dummy objects to allow the examples to somewhat work
-  const numPlayers = 72;
+  const numPlayers = 101;
   const buyIn = 25;
   const totalPool = numPlayers * buyIn;
 
@@ -68,7 +68,7 @@ function MarchMadnessPayouts() {
                       1<sup>st</sup>
                     </b>
                   </td>
-                  <td>Alissa Onofrio</td>
+                  <td>Rob Obernesser</td>
                   <td>{toMoney(final1)} (25%)</td>
                 </tr>
                 <tr>
@@ -77,7 +77,7 @@ function MarchMadnessPayouts() {
                       2<sup>nd</sup>
                     </b>
                   </td>
-                  <td>Bobby Crimmins</td>
+                  <td>Tom Hellen</td>
                   <td>{toMoney(final2)} (18%)</td>
                 </tr>
                 <tr>
@@ -86,7 +86,7 @@ function MarchMadnessPayouts() {
                       3<sup>rd</sup>
                     </b>
                   </td>
-                  <td>Cindy Dolan</td>
+                  <td>Ian Dick</td>
                   <td>{toMoney(final3)} (12%)</td>
                 </tr>
                 <tr>
@@ -95,7 +95,7 @@ function MarchMadnessPayouts() {
                       4<sup>th</sup>
                     </b>
                   </td>
-                  <td>Jeff Fandl</td>
+                  <td>Nancy Fandl</td>
                   <td>{toMoney(final4)} (10%)</td>
                 </tr>
                 <tr>
@@ -113,7 +113,7 @@ function MarchMadnessPayouts() {
                       6<sup>th</sup>
                     </b>
                   </td>
-                  <td>Nicole Tseng</td>
+                  <td>Melissa Templeton</td>
                   <td>{toMoney(final6)} (6%)</td>
                 </tr>
                 <tr>
@@ -122,7 +122,7 @@ function MarchMadnessPayouts() {
                       7<sup>th</sup>
                     </b>
                   </td>
-                  <td>Rachel Templeton</td>
+                  <td>Mark Boyajian</td>
                   <td>{toMoney(final7)} (5%)</td>
                 </tr>
                 <tr>
@@ -131,7 +131,7 @@ function MarchMadnessPayouts() {
                       8<sup>th</sup>
                     </b>
                   </td>
-                  <td>William Silva</td>
+                  <td>Chris Rosario</td>
                   <td>{toMoney(final8)} (4%)</td>
                 </tr>
                 <tr>
@@ -140,7 +140,7 @@ function MarchMadnessPayouts() {
                       9<sup>th</sup>
                     </b>
                   </td>
-                  <td>Peter Nargi</td>
+                  <td>Alex Gugliada</td>
                   <td>{toMoney(final9)} (3%)</td>
                 </tr>
                 <tr>
@@ -149,7 +149,7 @@ function MarchMadnessPayouts() {
                       10<sup>th</sup>
                     </b>
                   </td>
-                  <td>Mark Maltz</td>
+                  <td>Pat McGinn</td>
                   <td>{toMoney(final10)} (2%)</td>
                 </tr>
                 <tr>
@@ -158,7 +158,7 @@ function MarchMadnessPayouts() {
                       11<sup>th</sup>
                     </b>
                   </td>
-                  <td>John Blake</td>
+                  <td>Gary Fandl</td>
                   <td>{toMoney(final11)} (2%)</td>
                 </tr>
                 <tr>
@@ -167,7 +167,7 @@ function MarchMadnessPayouts() {
                       12<sup>th</sup>
                     </b>
                   </td>
-                  <td>Arthur Kroner</td>
+                  <td>Eric Rossi</td>
                   <td>{toMoney(final12)} (2%)</td>
                 </tr>
                 <tr>
@@ -176,7 +176,7 @@ function MarchMadnessPayouts() {
                       13<sup>th</sup>
                     </b>
                   </td>
-                  <td>Alex Gugliada</td>
+                  <td>Matthew Arsenault</td>
                   <td>{toMoney(final13)} (1%)</td>
                 </tr>
                 <tr>
@@ -185,7 +185,7 @@ function MarchMadnessPayouts() {
                       14<sup>th</sup>
                     </b>
                   </td>
-                  <td>Tom Hellen</td>
+                  <td>Joe Rodriguez</td>
                   <td>{toMoney(final14)} (1%)</td>
                 </tr>
                 <tr>
@@ -194,7 +194,7 @@ function MarchMadnessPayouts() {
                       15<sup>th</sup>
                     </b>
                   </td>
-                  <td>Paige Seitz</td>
+                  <td>Miguel Linares</td>
                   <td>{toMoney(final15)} (1%)</td>
                 </tr>
               </tbody>
@@ -224,7 +224,7 @@ function MarchMadnessPayouts() {
                       1<sup>st</sup>
                     </b>
                   </td>
-                  <td>Paige Seitz</td>
+                  <td>Rob Obernesser</td>
                   <td>{toMoney(roundAmount)}</td>
                 </tr>
                 <tr>
@@ -233,8 +233,23 @@ function MarchMadnessPayouts() {
                       2<sup>nd</sup>
                     </b>
                   </td>
-                  <td>Brian Meyer</td>
-                  <td>{toMoney(roundAmount)}</td>
+                  <td>Nancy Fandl</td>
+                  <td>
+                    {toMoney(roundAmount / 2)}
+                    <sup>1</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      2<sup>nd</sup>
+                    </b>
+                  </td>
+                  <td>Paige Seitz</td>
+                  <td>
+                    {toMoney(roundAmount / 2)}
+                    <sup>1</sup>
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -242,34 +257,58 @@ function MarchMadnessPayouts() {
                       3<sup>rd</sup>
                     </b>
                   </td>
-                  <td>Jeff Fandl</td>
+                  <td>Richard Grenier</td>
+                  <td>
+                    {toMoney(roundAmount / 4)}
+                    <sup>2</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      3<sup>rd</sup>
+                    </b>
+                  </td>
+                  <td>Miguel Linares</td>
+                  <td>
+                    {toMoney(roundAmount / 4)}
+                    <sup>2</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      3<sup>rd</sup>
+                    </b>
+                  </td>
+                  <td>Ryan Paulik</td>
+                  <td>
+                    {toMoney(roundAmount / 4)}
+                    <sup>2</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      3<sup>rd</sup>
+                    </b>
+                  </td>
+                  <td>Melissa Templeton</td>
+                  <td>
+                    {toMoney(roundAmount / 4)}
+                    <sup>2</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      4<sup>th</sup>
+                    </b>
+                  </td>
+                  <td>Kelsey Linares</td>
                   <td>
                     {toMoney(roundAmount)}
-                    <sup>1</sup>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <b>
-                      4<sup>th</sup>
-                    </b>
-                  </td>
-                  <td>Alissa Onofrio</td>
-                  <td>
-                    {toMoney(roundAmount / 2)}
-                    <sup>2</sup>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <b>
-                      4<sup>th</sup>
-                    </b>
-                  </td>
-                  <td>Bobby Crimmins</td>
-                  <td>
-                    {toMoney(roundAmount / 2)}
-                    <sup>2</sup>
+                    <sup>3</sup>
                   </td>
                 </tr>
                 <tr>
@@ -278,10 +317,10 @@ function MarchMadnessPayouts() {
                       5<sup>th</sup>
                     </b>
                   </td>
-                  <td>Mark Maltz</td>
+                  <td>Melissa Templeton</td>
                   <td>
                     {toMoney(roundAmount)}
-                    <sup>3</sup>
+                    <sup>4</sup>
                   </td>
                 </tr>
               </tbody>
@@ -290,21 +329,26 @@ function MarchMadnessPayouts() {
               <b>
                 <sup>1</sup>
               </b>
-              I technically won this round but I'm awarding the payout to Jeff Fandl because I messed up the scoring and
-              he was the original winner of this round
+              Nancy and Paige ties this round so the pot was split
             </p>
             <p>
               <b>
                 <sup>2</sup>
               </b>
-              Alissa and Bobby ties this round so the pot was split
+              Richard, Miguel, Ryan, and Melissa ties this round so the pot was split
             </p>
             <p>
               <b>
                 <sup>3</sup>
               </b>
-              There was a 12-way tie for this round and so I picked a winner in the only logical way I could think, an
+              There was a 10-way tie for this round and so I picked a winner in the only logical way I could think, an
               online duck race. You can do your own races <a href="https://www.online-stopwatch.com/duck-race/">here</a>
+            </p>
+            <p>
+              <b>
+                <sup>4</sup>
+              </b>
+              There was a 20-way tie for this round and so I picked a winner via another duck race.
             </p>
           </div>
           <div className="column">
@@ -324,68 +368,80 @@ function MarchMadnessPayouts() {
               </tfoot>
               <tbody>
                 <tr>
-                  <td>Alissa Onofrio</td>
-                  <td>{toMoney(412.5)}</td>
-                </tr>
-                <tr>
-                  <td>Bobby Crimmins</td>
-                  <td>{toMoney(304)}</td>
-                </tr>
-                <tr>
-                  <td>Jeff Fandl</td>
-                  <td>{toMoney(205)}</td>
-                </tr>
-                <tr>
-                  <td>Cindy Dolan</td>
-                  <td>{toMoney(186)}</td>
-                </tr>
-                <tr>
-                  <td>Kailey Fandl</td>
-                  <td>{toMoney(124)}</td>
-                </tr>
-                <tr>
-                  <td>Nicole Tseng</td>
-                  <td>{toMoney(93)}</td>
-                </tr>
-                <tr>
-                  <td>Mark Maltz</td>
-                  <td>{toMoney(81)}</td>
-                </tr>
-                <tr>
-                  <td>Rachel Templeton</td>
-                  <td>{toMoney(77.5)}</td>
-                </tr>
-                <tr>
-                  <td>Paige Seitz</td>
-                  <td>{toMoney(65.5)}</td>
-                </tr>
-                <tr>
-                  <td>William Silva</td>
-                  <td>{toMoney(62)}</td>
-                </tr>
-                <tr>
-                  <td>Brian Meyer</td>
-                  <td>{toMoney(50)}</td>
-                </tr>
-                <tr>
-                  <td>Peter Nargi</td>
-                  <td>{toMoney(46.5)}</td>
-                </tr>
-                <tr>
-                  <td>John Blake</td>
-                  <td>{toMoney(31)}</td>
-                </tr>
-                <tr>
-                  <td>Arthur Kroner</td>
-                  <td>{toMoney(31)}</td>
-                </tr>
-                <tr>
-                  <td>Alex Gugliada</td>
-                  <td>{toMoney(15.5)}</td>
+                  <td>Rob Obernesser</td>
+                  <td>{toMoney(618.75)}</td>
                 </tr>
                 <tr>
                   <td>Tom Hellen</td>
-                  <td>{toMoney(15.5)}</td>
+                  <td>{toMoney(409.5)}</td>
+                </tr>
+                <tr>
+                  <td>Ian Dick</td>
+                  <td>{toMoney(273)}</td>
+                </tr>
+                <tr>
+                  <td>Nancy Fandl</td>
+                  <td>{toMoney(252.5)}</td>
+                </tr>
+                <tr>
+                  <td>Melissa Templeton</td>
+                  <td>{toMoney(199)}</td>
+                </tr>
+                <tr>
+                  <td>Kailey Fandl</td>
+                  <td>{toMoney(182)}</td>
+                </tr>
+                <tr>
+                  <td>Mark Boyajian</td>
+                  <td>{toMoney(113.75)}</td>
+                </tr>
+                <tr>
+                  <td>Chris Rosario</td>
+                  <td>{toMoney(91)}</td>
+                </tr>
+                <tr>
+                  <td>Alex Gugliada</td>
+                  <td>{toMoney(68.25)}</td>
+                </tr>
+                <tr>
+                  <td>Kelsey Linares</td>
+                  <td>{toMoney(50)}</td>
+                </tr>
+                <tr>
+                  <td>Pat McGinn</td>
+                  <td>{toMoney(45.5)}</td>
+                </tr>
+                <tr>
+                  <td>Gary Fandl</td>
+                  <td>{toMoney(45.5)}</td>
+                </tr>
+                <tr>
+                  <td>Eric Rossi</td>
+                  <td>{toMoney(45.5)}</td>
+                </tr>
+                <tr>
+                  <td>Miguel Linares</td>
+                  <td>{toMoney(35.25)}</td>
+                </tr>
+                <tr>
+                  <td>Paige Seitz</td>
+                  <td>{toMoney(25)}</td>
+                </tr>
+                <tr>
+                  <td>Matthew Arsenault</td>
+                  <td>{toMoney(22.75)}</td>
+                </tr>
+                <tr>
+                  <td>Joe Rodriguez</td>
+                  <td>{toMoney(22.75)}</td>
+                </tr>
+                <tr>
+                  <td>Richard Grenier</td>
+                  <td>{toMoney(12.5)}</td>
+                </tr>
+                <tr>
+                  <td>Ryan Paulik</td>
+                  <td>{toMoney(12.5)}</td>
                 </tr>
               </tbody>
             </table>

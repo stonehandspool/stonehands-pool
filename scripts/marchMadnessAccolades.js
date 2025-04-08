@@ -174,19 +174,18 @@ const bestBracketTitleDataToExport = {
 console.log();
 console.log('The best bracket titles');
 const winnerIds = [
-  '03e4b85e-2916-4bc8-8551-8275c6ffdd98',
-  '1c2c4e7e-c5b8-44a1-bf3a-dbf7449ddb14',
   '2a1aafff-343a-452a-a8ad-f6c114c51f1c',
-  '56e6b6e8-258d-4c10-bca3-09b7f243a598',
+  '1c2c4e7e-c5b8-44a1-bf3a-dbf7449ddb14',
+  'c23344ec-74a5-4059-b16b-b165e1a11138',
+  '95691265-52cc-4c61-8aa4-7dc4586dce3e',
   '00481fee-90e5-416d-a51d-6988122500de',
-  '11642444-4a38-42b3-8f2f-01b34bb50aef',
-  'f7a41044-fda1-466e-b017-e8df3c5f3249',
-  '183817fa-4e6f-4573-8cfb-85ffd769b430',
-  '25d5f59c-4977-4471-bc29-e289c9b888a7',
-  '11c577d3-f0d5-4690-ab51-40aced33087d',
-  '3db7628e-5bb5-44f1-a180-2dd2cc74d529',
-  '41a9d38c-b7bd-493b-b3d3-81d5a00a314e',
-  'd50c6628-596f-4c11-a9b2-43775b1ab69f',
+  'a55189bd-505f-4b33-95fb-897d259fe149',
+  '5d6278ea-a207-4350-a2a5-ebba13175a97',
+  '891b628d-34ef-4959-a722-c4b467c24cae',
+  '02bee9d4-ea65-4930-801b-91eb457b39d1',
+  '89f5f4c1-16a0-4469-9a5d-e3b0dfe89d88',
+  '9afffce2-a8dd-424d-b522-e60b68fc956f',
+  'e132281b-062d-405b-8fe2-293150c6e326',
 ];
 winnerIds.forEach((winnerId, index) => {
   const person = playerData.find(p => p.userId === winnerId);

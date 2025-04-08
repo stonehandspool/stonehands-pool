@@ -266,14 +266,14 @@ function NavBar() {
                 >
                   Teams Remaining
                 </Link>
-                {/* <Link
+                <Link
                   className="navbar-item"
                   to="/march-madness/awards"
                   onClick={() => {
                     onLinkClick('mm');
                   }}
                 >
-                  2024 Awards
+                  2025 Awards
                 </Link>
                 <Link
                   className="navbar-item"
@@ -282,8 +282,8 @@ function NavBar() {
                     onLinkClick('mm');
                   }}
                 >
-                  2024 Payouts
-                </Link> */}
+                  2025 Payouts
+                </Link>
               </div>
             </div>
           )}
