@@ -80,12 +80,12 @@ function StandingsTable() {
       const lastName1 = row1.name.split(' ').pop()!;
       const firstName2 = row2.name.split(' ')[0];
       const lastName2 = row2.name.split(' ').pop()!;
-      // const row1Tb = Math.abs(MARCH_MADNESS_FINAL_TOTAL - row1.tiebreaker);
-      // const row2Tb = Math.abs(MARCH_MADNESS_FINAL_TOTAL - row2.tiebreaker);
+      const row1Tb = Math.abs(MARCH_MADNESS_FINAL_TOTAL - row1.tiebreaker);
+      const row2Tb = Math.abs(MARCH_MADNESS_FINAL_TOTAL - row2.tiebreaker);
       return (
         row2.points - row1.points ||
         row2.wins - row1.wins ||
-        // row1Tb - row2Tb ||
+        row1Tb - row2Tb ||
         row2.maxPoints - row1.maxPoints ||
         lastName1.localeCompare(lastName2) ||
         firstName1.localeCompare(firstName2)

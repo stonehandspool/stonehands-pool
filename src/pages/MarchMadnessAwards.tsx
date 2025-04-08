@@ -1,5 +1,5 @@
 import { CURRENT_YEAR } from '../constants';
-import accolades from '../../data/2024/marchmadness/accolades.json';
+import accolades from '../../data/2025/marchmadness/accolades.json';
 
 interface AccoladeInfo {
   id: string;

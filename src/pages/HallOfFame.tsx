@@ -67,8 +67,8 @@ function HallOfFame() {
             <div className="level-item has-text-centered">
               <div className="content">
                 <p className="heading">Most Wins</p>
-                <p className="title">Nicole Tseng</p>
-                <p className="subtitle">44 Wins</p>
+                <p className="title">Ian Dick</p>
+                <p className="subtitle">51 Wins</p>
               </div>
             </div>
             <div className="level-item has-text-centered is-invisible">
@@ -77,6 +77,42 @@ function HallOfFame() {
                 <p className="title">"Murphy Doo"</p>
                 <p className="subtitle">To Win!</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="block has-text-centered">
+          <h1 className="title is-3 stonehands-hero">
+            <u>2025 Records</u>
+          </h1>
+        </div>
+        <div className="block has-text-centered">
+          <h1 className="title stonehands-hero">March Madness</h1>
+        </div>
+        <div className="columns is-centered">
+          <div className="column is-one-quarter">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Most Points</h1>
+              <ol>
+                <li>Rob Obernesser - 300 Points</li>
+                <li>Tom Hellen - 300 Points</li>
+                <li>Ian Dick - 299 Points</li>
+                <li>Nancy Fandl - 289 Points</li>
+                <li>Kailey Fandl - 285 Points</li>
+              </ol>
+            </div>
+          </div>
+          <div className="column is-one-quarter">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Most Wins</h1>
+              <ol>
+                <li>Ian Dick - 51 Wins</li>
+                <li>Rob Obernesser - 50 Wins</li>
+                <li>Tom Hellen - 49 Wins</li>
+                <li>Kailey Fandl - 49 Wins</li>
+                <li>Alex Gugliada - 49 Wins</li>
+              </ol>
             </div>
           </div>
         </div>
