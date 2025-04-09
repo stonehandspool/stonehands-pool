@@ -317,9 +317,45 @@ function MarchMadnessPayouts() {
                       5<sup>th</sup>
                     </b>
                   </td>
-                  <td>Melissa Templeton</td>
+                  <td>Mark Boyajian</td>
                   <td>
-                    {toMoney(roundAmount)}
+                    {toMoney(roundAmount / 4)}
+                    <sup>4</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      5<sup>th</sup>
+                    </b>
+                  </td>
+                  <td>Matthew Arsenault</td>
+                  <td>
+                    {toMoney(roundAmount / 4)}
+                    <sup>4</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      5<sup>th</sup>
+                    </b>
+                  </td>
+                  <td>Dan Backhaus</td>
+                  <td>
+                    {toMoney(roundAmount / 4)}
+                    <sup>4</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      5<sup>th</sup>
+                    </b>
+                  </td>
+                  <td>Andrew Suh</td>
+                  <td>
+                    {toMoney(roundAmount / 4)}
                     <sup>4</sup>
                   </td>
                 </tr>
@@ -335,7 +371,7 @@ function MarchMadnessPayouts() {
               <b>
                 <sup>2</sup>
               </b>
-              Richard, Miguel, Ryan, and Melissa ties this round so the pot was split
+              Richard, Miguel, Ryan, and Melissa tied this round so the pot was split
             </p>
             <p>
               <b>
@@ -348,7 +384,7 @@ function MarchMadnessPayouts() {
               <b>
                 <sup>4</sup>
               </b>
-              There was a 20-way tie for this round and so I picked a winner via another duck race.
+              Mark, Matt, Dan, and Andrew tied this round so the pot was split
             </p>
           </div>
           <div className="column">
@@ -384,16 +420,16 @@ function MarchMadnessPayouts() {
                   <td>{toMoney(252.5)}</td>
                 </tr>
                 <tr>
-                  <td>Melissa Templeton</td>
-                  <td>{toMoney(199)}</td>
-                </tr>
-                <tr>
                   <td>Kailey Fandl</td>
                   <td>{toMoney(182)}</td>
                 </tr>
                 <tr>
+                  <td>Melissa Templeton</td>
+                  <td>{toMoney(149)}</td>
+                </tr>
+                <tr>
                   <td>Mark Boyajian</td>
-                  <td>{toMoney(113.75)}</td>
+                  <td>{toMoney(126.25)}</td>
                 </tr>
                 <tr>
                   <td>Chris Rosario</td>
@@ -424,12 +460,12 @@ function MarchMadnessPayouts() {
                   <td>{toMoney(35.25)}</td>
                 </tr>
                 <tr>
-                  <td>Paige Seitz</td>
-                  <td>{toMoney(25)}</td>
+                  <td>Matthew Arsenault</td>
+                  <td>{toMoney(35.25)}</td>
                 </tr>
                 <tr>
-                  <td>Matthew Arsenault</td>
-                  <td>{toMoney(22.75)}</td>
+                  <td>Paige Seitz</td>
+                  <td>{toMoney(25)}</td>
                 </tr>
                 <tr>
                   <td>Joe Rodriguez</td>
@@ -441,6 +477,14 @@ function MarchMadnessPayouts() {
                 </tr>
                 <tr>
                   <td>Ryan Paulik</td>
+                  <td>{toMoney(12.5)}</td>
+                </tr>
+                <tr>
+                  <td>Dan Backhaus</td>
+                  <td>{toMoney(12.5)}</td>
+                </tr>
+                <tr>
+                  <td>Andrew Suh</td>
                   <td>{toMoney(12.5)}</td>
                 </tr>
               </tbody>
