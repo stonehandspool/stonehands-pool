@@ -2,7 +2,7 @@ import * as path from 'path';
 import { readFile } from 'fs/promises';
 
 // Get the data from the players json file
-const playerData = await JSON.parse(await readFile(path.resolve(`data/2024/football/players.json`)));
+const playerData = await JSON.parse(await readFile(path.resolve(`data/2025/football/players.json`)));
 
 const highestRiser = { name: '', change: 0 };
 const lowestFaller = { name: '', change: 0 };

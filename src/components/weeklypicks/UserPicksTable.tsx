@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Session } from '@supabase/supabase-js';
 
 import { ConfidenceMatchupInfo, CURRENT_WEEK, PicksheetData } from '../../constants';
 import { useWeeklyPick } from '../../utils/useWeeklyPicks';
 
-import teamData from '../../../data/2024/football/teams.json';
+import teamData from '../../../data/2025/football/teams.json';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
 

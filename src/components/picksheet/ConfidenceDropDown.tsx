@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 type ConfidenceDropDownProps = {
   numOptions: number;
@@ -6,7 +6,7 @@ type ConfidenceDropDownProps = {
   matchupId: string;
   gameStarted: boolean;
   gameCompleted: boolean;
-  priorConfidence: number | null;
+  priorConfidence: number;
   selectedNumbers: (number | null)[];
   onUpdateConfidence: (matchupId: string, confidence: number) => void;
 };
@@ -26,11 +26,9 @@ function ConfidenceDropDown(props: ConfidenceDropDownProps) {
   const [currentValue, setCurrentValue] = useState<number>(-1);
   const options: number[] = Array.from({ length: numOptions }, (_, i) => i + 1);
 
-  useEffect(() => {
-    if (priorConfidence !== currentValue) {
-      setCurrentValue(priorConfidence || -1);
-    }
-  }, [priorConfidence]);
+  if (priorConfidence !== currentValue) {
+    setCurrentValue(priorConfidence);
+  }
 
   const onChange = (event: ChangeEvent<HTMLSelectElement>) => {
     event.preventDefault();

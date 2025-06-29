@@ -1,6 +1,6 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import * as TeamLogos from '../../assets/logos';
-import teamData from '../../../data/2024/football/teams.json';
+import teamData from '../../../data/2025/football/teams.json';
 
 import { MatchupInfo } from '../../constants';
 
@@ -29,14 +29,11 @@ function HighFiveCard(props: HighFiveCardProps) {
   const { wins: homeWins, losses: homeLosses, ties: homeTies, teamName: homeName } = homeTeamInfo;
   const { wins: awayWins, losses: awayLosses, ties: awayTies, teamName: awayName } = awayTeamInfo;
 
-  useEffect(() => {
-    const { homeTeam, awayTeam } = matchupInfo;
-    if (picksArray.includes(homeTeam) && selectedTeam !== homeTeam) {
-      setSelectedTeam(homeTeam);
-    } else if (picksArray.includes(awayTeam) && selectedTeam !== awayTeam) {
-      setSelectedTeam(awayTeam);
-    }
-  }, [picksArray]);
+  if (picksArray.includes(homeTeam) && selectedTeam !== homeTeam) {
+    setSelectedTeam(homeTeam);
+  } else if (picksArray.includes(awayTeam) && selectedTeam !== awayTeam) {
+    setSelectedTeam(awayTeam);
+  }
 
   const onChoiceChange = (event: ChangeEvent<HTMLInputElement>) => {
     const team = event.target.value;

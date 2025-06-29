@@ -1,7 +1,7 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 import * as TeamLogos from '../../assets/logos';
-import teamData from '../../../data/2024/football/teams.json';
+import teamData from '../../../data/2025/football/teams.json';
 import ConfidenceDropDown from './ConfidenceDropDown';
 import { MatchupInfo } from '../../constants';
 
@@ -42,11 +42,9 @@ function ConfidenceCard(props: ConfidenceCardProps) {
   const { wins: awayWins, losses: awayLosses, ties: awayTies, teamName: awayName } = awayTeamInfo;
 
   // If the user has previously submitted, select that radio button
-  useEffect(() => {
-    if (priorTeam !== chosenTeam) {
-      setChosenTeam(priorTeam);
-    }
-  }, [priorTeam]);
+  if (priorTeam !== chosenTeam) {
+    setChosenTeam(priorTeam);
+  }
 
   const onChoiceChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
@@ -104,7 +102,7 @@ function ConfidenceCard(props: ConfidenceCardProps) {
             matchupId={matchupId}
             gameStarted={gameStarted}
             gameCompleted={gameCompleted}
-            priorConfidence={priorConfidence}
+            priorConfidence={priorConfidence || -1}
             selectedNumbers={selectedNumbers}
             onUpdateConfidence={onUpdateConfidenceValue}
           />

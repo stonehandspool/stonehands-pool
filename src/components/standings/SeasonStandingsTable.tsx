@@ -1,4 +1,4 @@
-import playerData from '../../../data/2024/football/players.json';
+import playerData from '../../../data/2025/football/players.json';
 import { useNavigate } from 'react-router-dom';
 import { CURRENT_WEEK, SEASON_READY } from '../../constants';
 

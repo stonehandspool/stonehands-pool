@@ -107,6 +107,21 @@ function PickSheetForm(props: PicksheetFormProps) {
   const [tiebreaker, setTiebreaker] = useState<string>('');
   const [bracketTitle, setBracketTitle] = useState<string>('');
 
+  let allPicksMade = true;
+  for (let i = 0; i < userPicks.length - 1; i++) {
+    const pickInfo = userPicks[i];
+    const { topTeam, bottomTeam, winner } = pickInfo;
+    if (topTeam.name === null || bottomTeam.name === null || winner === null) {
+      allPicksMade = false;
+      break;
+    }
+  }
+  if (allPicksMade && tiebreaker !== '') {
+    setAllPicksFilled(true);
+  } else if (!allPicksMade && allPicksFilled) {
+    setAllPicksFilled(false);
+  }
+
   const handleTiebreakerInput = (event: ChangeEvent<HTMLInputElement>) => {
     const numRegex = /^[0-9\b]+$/;
     if (event.target.value === '' || numRegex.test(event.target.value)) {
@@ -170,23 +185,6 @@ function PickSheetForm(props: PicksheetFormProps) {
       setUserPicks(picksCopy);
     }
   };
-
-  useEffect(() => {
-    let allPicksMade = true;
-    for (let i = 0; i < userPicks.length - 1; i++) {
-      const pickInfo = userPicks[i];
-      const { topTeam, bottomTeam, winner } = pickInfo;
-      if (topTeam.name === null || bottomTeam.name === null || winner === null) {
-        allPicksMade = false;
-        break;
-      }
-    }
-    if (allPicksMade && tiebreaker !== '') {
-      setAllPicksFilled(true);
-    } else if (!allPicksMade && allPicksFilled) {
-      setAllPicksFilled(false);
-    }
-  }, [userPicks, tiebreaker]);
 
   // Ping the database to see if a prior submission was made
   useEffect(() => {

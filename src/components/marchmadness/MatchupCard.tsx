@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { MarchMadnessMatchupInfo } from '../../constants';
 
 interface MatchupCardProps {
@@ -14,21 +14,19 @@ function MatchupCard(props: MatchupCardProps) {
   const [selectedTeam, setSelectedTeam] = useState<'top' | 'bottom' | null>(null);
   const [currentMatchupInfo, setCurrentMatchupInfo] = useState<MarchMadnessMatchupInfo | null>(null);
 
-  useEffect(() => {
-    // If a user changes an earlier pick, we want to make sure that we de-select our current selection
-    // If it has been cleared (so that TBD is no longer bolded)
-    if (!_.isEqual(currentMatchupInfo, matchupInfo)) {
-      // If the new matchup info is different then update our saved state of that and reset selection
-      setCurrentMatchupInfo(matchupInfo);
-      if (selectedTeam !== null && selectedTeam !== matchupInfo.winner) {
-        // Only reset the selected the prior losing team has changed
-        setSelectedTeam(null);
-      } else if (selectedTeam === null) {
-        // If getting data from prior picks, bold the previously chosen winners
-        setSelectedTeam(matchupInfo.winner);
-      }
+  // If a user changes an earlier pick, we want to make sure that we de-select our current selection
+  // If it has been cleared (so that TBD is no longer bolded)
+  if (!_.isEqual(currentMatchupInfo, matchupInfo)) {
+    // If the new matchup info is different then update our saved state of that and reset selection
+    setCurrentMatchupInfo(matchupInfo);
+    if (selectedTeam !== null && selectedTeam !== matchupInfo.winner) {
+      // Only reset the selected the prior losing team has changed
+      setSelectedTeam(null);
+    } else if (selectedTeam === null) {
+      // If getting data from prior picks, bold the previously chosen winners
+      setSelectedTeam(matchupInfo.winner);
     }
-  }, [matchupInfo]);
+  }
 
   const chooseTeam = (direction: 'top' | 'bottom') => {
     if (

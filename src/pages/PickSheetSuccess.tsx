@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { ConfidenceMatchupInfo, CURRENT_WEEK } from '../constants';
-import teamData from '../../data/2024/football/teams.json';
+import teamData from '../../data/2025/football/teams.json';
 
 function PickSheetSuccess() {
   // Get the users picks via the navigate hook

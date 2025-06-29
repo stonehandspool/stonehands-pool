@@ -204,7 +204,7 @@ function YearlyAwards() {
       <div className="container">
         <h1 className="title has-text-centered">{CURRENT_YEAR} Stonehands Pool</h1>
         <h2 className="subtitle has-text-centered">
-          A collection of awards, highlights, and lowlights from the 2023 season
+          A collection of awards, highlights, and lowlights from the 2024 season
         </h2>
         <br />
         <br />
