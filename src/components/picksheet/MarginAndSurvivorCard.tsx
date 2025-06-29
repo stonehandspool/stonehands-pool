@@ -2,7 +2,7 @@ import { ChangeEvent } from 'react';
 import * as TeamLogos from '../../assets/logos';
 import { CURRENT_WEEK, MarginPick, MatchupInfo } from '../../constants';
 
-import teamData from '../../../data/2024/football/teams.json';
+import teamData from '../../../data/2025/football/teams.json';
 
 type MarginAndSurvivorCardProps = {
   matchupInfo: MatchupInfo;

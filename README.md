@@ -76,7 +76,7 @@ git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
 
 ## Getting the NFL Schedule
 
-Use sportradar trial API and then run script to conver it to the format we need
+Use sportradar trial API and then run script to conver it to the format we need, use guerrila mail for new account
 
 ## Remaining Todo Items
 
@@ -87,7 +87,7 @@ Use sportradar trial API and then run script to conver it to the format we need
 - [x] Double check partial week standings
 - [x] Add a Hall of Fame (Probably after year 1 is done)
 - [ ] Get a modal for team/matchup info on the picksheet (Maybe)
-- [ ] Add in a random stats page (e.g. Best + Worst, Thurs. Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)) (Maybe)
+- [x] Add in a random stats page (e.g. Best + Worst, Thurs. Night Record, Monday Night Record, Pool Performance by Week (w/ Averages)) (Maybe)
 - [ ] Look into the NFL API to further automate the process (Maybe)
 
 ## Scrapped Ideas
@@ -95,21 +95,3 @@ Use sportradar trial API and then run script to conver it to the format we need
 - Weekly Score Box (Not going to do this unless previous Stablehand pool members want it back)
 - Automated email on picksheet submission (This proved to be way too difficult and potentially expensive)
 - Ability to sign in/sign out (Didn't see the need for it, just extra work)
-
-## March Madness Awards
-
-## Most Ambitious
-
-1. Judy Gagnon - 1205 Max Points
-2. Matt Ustas - 976 Max Points
-3. Alissa Onofrio - 947 Max Points
-4. Ben Edwards - 914 Max Points
-5. Bobby Crimmins - 896 Max Points
-
-## Chalkiest
-
-1. Michael Bussinelli - 405 Max Points
-2. Bill Gagnon - 413 Max Points
-3. Jason Segarra - 419 Max Points
-4. William Kim - 422 Max Points
-5. Sundi Brewer-Griffin - 429 Max Points

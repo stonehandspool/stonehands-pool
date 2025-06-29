@@ -1,5 +1,5 @@
-import playerData from '../../../data/2024/football/players.json';
-import seasonData from '../../../data/2024/football/season.json';
+import playerData from '../../../data/2025/football/players.json';
+import seasonData from '../../../data/2025/football/season.json';
 
 import { CURRENT_WEEK_STATUS, CURRENT_WEEK_CUTOFF_TIME, CURRENT_WEEK, MatchupInfo } from '../../constants';
 

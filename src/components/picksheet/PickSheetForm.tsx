@@ -6,8 +6,8 @@ import { useMediaQuery } from 'react-responsive';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
 
-import seasonData from '../../../data/2024/football/season.json';
-import playerData from '../../../data/2024/football/players.json';
+import seasonData from '../../../data/2025/football/season.json';
+import playerData from '../../../data/2025/football/players.json';
 import {
   ConfidenceMatchupInfo,
   CURRENT_WEEK,
@@ -144,6 +144,27 @@ function PickSheetForm(props: PickSheetFormProps) {
   const [priorPicks, setPriorPicks] = useState<boolean>(false);
   const [formError, setFormError] = useState<string>('');
 
+  let validConfidencePicks = true;
+  confidencePicks.forEach(confidencePick => {
+    const { team, confidence } = confidencePick;
+    if (team === null || confidence === null) {
+      validConfidencePicks = false;
+    }
+  });
+
+  const validSurvivorPick = !userInfo.aliveInSurvivor || (userInfo.aliveInSurvivor && survivorTeam !== null);
+  const validMarginPick = marginTeam !== null;
+  const validHighFivePicks = highFiveTeams.length === 5;
+  const validTiebreaker = tiebreaker.length !== 0;
+
+  const currentSubmissionValid =
+    validConfidencePicks && validSurvivorPick && validMarginPick && validHighFivePicks && validTiebreaker;
+  if (currentSubmissionValid && currentSubmissionValid !== validSubmission) {
+    setValidSubmission(true);
+  } else if (!currentSubmissionValid && currentSubmissionValid !== validSubmission) {
+    setValidSubmission(false);
+  }
+
   // Callbacks for updating state
   const onUpdateConfidenceTeam = (matchupId: string, teamName: string) => {
     setConfidencePicks(
@@ -213,28 +234,6 @@ function PickSheetForm(props: PickSheetFormProps) {
       setTiebreaker(event.target.value);
     }
   };
-
-  // For enabling/disabling the submission button
-  useEffect(() => {
-    let validConfidencePicks = true;
-    confidencePicks.forEach(confidencePick => {
-      const { team, confidence } = confidencePick;
-      if (team === null || confidence === null) {
-        validConfidencePicks = false;
-      }
-    });
-
-    const validSurvivorPick = !userInfo.aliveInSurvivor || (userInfo.aliveInSurvivor && survivorTeam !== null);
-    const validMarginPick = marginTeam !== null;
-    const validHighFivePicks = highFiveTeams.length === 5;
-    const validTiebreaker = tiebreaker.length !== 0;
-
-    if (validConfidencePicks && validSurvivorPick && validMarginPick && validHighFivePicks && validTiebreaker) {
-      setValidSubmission(true);
-    } else if (validSubmission) {
-      setValidSubmission(false);
-    }
-  }, [confidencePicks, survivorTeam, marginTeam, highFiveTeams, tiebreaker]);
 
   // Ping the database to see if there are picks from this week for this user
   useEffect(() => {

@@ -1,4 +1,4 @@
-import playerData from '../../../data/2024/football/players.json';
+import playerData from '../../../data/2025/football/players.json';
 
 import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MONDAY_NIGHT_TOTAL, PREV_MONDAY_NIGHT_TOTAL } from '../../constants';
 

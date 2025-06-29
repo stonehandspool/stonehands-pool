@@ -1,5 +1,5 @@
 import { CURRENT_WEEK, SEASON_READY, DatabaseData, MatchupInfo } from '../../../constants';
-import seasonData from '../../../../data/2024/football/season.json';
+import seasonData from '../../../../data/2025/football/season.json';
 import * as TeamLogos from '../../../assets/logos';
 
 type MatchupConsensusInfo = {
