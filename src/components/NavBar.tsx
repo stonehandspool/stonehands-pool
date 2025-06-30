@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import { CURRENT_WEEK_CUTOFF_TIME, MARCH_MADNESS_STATE, SIGN_UPS_DISABLED } from '../constants';
+import { CURRENT_WEEK_CUTOFF_TIME, MARCH_MADNESS_STATE, SEASON_READY, SIGN_UPS_DISABLED } from '../constants';
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -184,15 +184,17 @@ function NavBar() {
               >
                 Standings By Week
               </Link>
-              <Link
-                className="navbar-item"
-                to="/all-user-stats"
-                onClick={() => {
-                  onLinkClick('more');
-                }}
-              >
-                User Stats
-              </Link>
+              {SEASON_READY && (
+                <Link
+                  className="navbar-item"
+                  to="/all-user-stats"
+                  onClick={() => {
+                    onLinkClick('more');
+                  }}
+                >
+                  User Stats
+                </Link>
+              )}
               <Link
                 className="navbar-item"
                 to="/yearly-awards"

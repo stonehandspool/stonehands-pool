@@ -3,6 +3,7 @@ import { CURRENT_YEAR, MARCH_MADNESS_STATE } from '../constants';
 import ConfidenceCard from '../components/picksheet/ConfidenceCard';
 import MarginAndSurvivorCard from '../components/picksheet/MarginAndSurvivorCard';
 import HighFiveCard from '../components/picksheet/HighFiveCard';
+import SecretGraham from '../assets/awards/SecretGraham';
 
 const toMoney = (value: number) => {
   return value.toLocaleString('en-US', {

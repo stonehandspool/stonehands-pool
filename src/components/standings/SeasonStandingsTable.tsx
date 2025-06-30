@@ -1,5 +1,5 @@
+import { useCallback, useRef, useState } from 'react';
 import playerData from '../../../data/2025/football/players.json';
-import { useNavigate } from 'react-router-dom';
 import { CURRENT_WEEK, SEASON_READY } from '../../constants';
 
 interface TableColumns {
@@ -16,12 +16,47 @@ interface TableColumns {
   username: string;
 }
 
-function SeasonStandingsTable() {
-  const navigate = useNavigate();
+const correctOrder = [4, 22, 25];
 
-  const goToUserStats = (username: string) => {
-    navigate(`/user/${username}`);
-  };
+function SeasonStandingsTable() {
+  const [currentSequence, setCurrentSequence] = useState<number[]>([]);
+  const [sequenceIsCorrect, setSequenceIsCorrect] = useState<boolean>(false);
+  const positionRefs = useRef<HTMLTableCellElement[]>([]);
+
+  const updateSequence = useCallback(
+    (position: number) => {
+      const sequenceCopy = [...currentSequence];
+      sequenceCopy.push(position);
+      if (sequenceIsCorrect) {
+        return;
+      } else if (
+        sequenceCopy[sequenceCopy.length - 1] === correctOrder[sequenceCopy.length - 1] &&
+        sequenceCopy.length < correctOrder.length
+      ) {
+        // If they clicked a correct number in the right spot
+        setCurrentSequence(sequenceCopy);
+        positionRefs.current[position - 1].style.color = 'rgb(72, 199, 142)';
+      } else if (
+        sequenceCopy[sequenceCopy.length - 1] === correctOrder[sequenceCopy.length - 1] &&
+        sequenceCopy.length === correctOrder.length
+      ) {
+        // If they successfully clicked the full sequence
+        setCurrentSequence(sequenceCopy);
+        setSequenceIsCorrect(true);
+        positionRefs.current[position - 1].style.color = 'rgb(72, 199, 142)';
+      } else {
+        //If they got an incorrect number
+        setCurrentSequence([]);
+        positionRefs.current[position - 1].style.color = 'rgb(255, 102, 133)';
+        setTimeout(() => {
+          sequenceCopy.forEach(pos => {
+            positionRefs.current[pos - 1].style.color = 'rgb(0, 0, 0)';
+          });
+        }, 1500);
+      }
+    },
+    [currentSequence, sequenceIsCorrect]
+  );
 
   // Calculate the standings
   const calculatedPicks: TableColumns[] = [];
@@ -52,6 +87,9 @@ function SeasonStandingsTable() {
       const lastName2 = row2.name.split(' ').pop()!;
       return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
     });
+    calculatedPicks.forEach((person, index) => {
+      person.position = index + 1;
+    });
   } else {
     // Otherwise, sort everyone by points now
     calculatedPicks.sort((row1, row2) => row2.points - row1.points || row2.wins - row1.wins);
@@ -63,6 +101,13 @@ function SeasonStandingsTable() {
   return (
     <section className="section">
       <div className="container">
+        {sequenceIsCorrect && (
+          <h2 className="subtitle has-text-centered">
+            Congratulations! You've discovered the "Secret Graham Award"! Please email Ryan the following message to
+            claim your reward and shoutout: <br /> "Graham loves moving, and Murphy does too! So the two of them will
+            move around for you!"
+          </h2>
+        )}
         <table className="table is-striped is-hoverable mx-auto">
           <thead>
             <tr>
@@ -88,12 +133,13 @@ function SeasonStandingsTable() {
                 <tr key={`${index}`}>
                   {tableKeys.map((key, ind) => {
                     if (key !== 'username') {
-                      if (key === 'name') {
+                      if (key === 'position') {
                         return (
                           <td
                             key={`${row.position}-${ind}`}
+                            ref={(el: HTMLTableCellElement) => positionRefs.current.push(el)}
                             onClick={() => {
-                              goToUserStats(row.username);
+                              updateSequence(index + 1);
                             }}
                             style={{ cursor: 'pointer' }}
                           >
