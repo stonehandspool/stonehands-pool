@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from 'react';
 import playerData from '../../../data/2025/football/players.json';
 import { CURRENT_WEEK, SEASON_READY } from '../../constants';
+import SecretGrahamModal from '../modals/SecretGrahamModal';
 
 interface TableColumns {
   position: number;
@@ -20,14 +21,29 @@ const correctOrder = [4, 22, 25];
 
 function SeasonStandingsTable() {
   const [currentSequence, setCurrentSequence] = useState<number[]>([]);
-  const [sequenceIsCorrect, setSequenceIsCorrect] = useState<boolean>(false);
+  const sequenceIsCorrect = useRef<boolean>(false);
+  const modalRef = useRef<HTMLDivElement>(null);
   const positionRefs = useRef<HTMLTableCellElement[]>([]);
+
+  const openModal = useCallback(() => {
+    modalRef.current?.classList.add('is-active');
+  }, []);
+
+  const closeModal = useCallback(() => {
+    modalRef.current?.classList.remove('is-active');
+    const sequenceCopy = [...currentSequence];
+    sequenceCopy.forEach(pos => {
+      positionRefs.current[pos - 1].style.color = 'rgb(0, 0, 0)';
+    });
+    setCurrentSequence([]);
+    sequenceIsCorrect.current = false;
+  }, [currentSequence]);
 
   const updateSequence = useCallback(
     (position: number) => {
       const sequenceCopy = [...currentSequence];
       sequenceCopy.push(position);
-      if (sequenceIsCorrect) {
+      if (sequenceIsCorrect.current) {
         return;
       } else if (
         sequenceCopy[sequenceCopy.length - 1] === correctOrder[sequenceCopy.length - 1] &&
@@ -42,7 +58,8 @@ function SeasonStandingsTable() {
       ) {
         // If they successfully clicked the full sequence
         setCurrentSequence(sequenceCopy);
-        setSequenceIsCorrect(true);
+        sequenceIsCorrect.current = true;
+        openModal();
         positionRefs.current[position - 1].style.color = 'rgb(72, 199, 142)';
       } else {
         //If they got an incorrect number
@@ -101,13 +118,6 @@ function SeasonStandingsTable() {
   return (
     <section className="section">
       <div className="container">
-        {sequenceIsCorrect && (
-          <h2 className="subtitle has-text-centered">
-            Congratulations! You've discovered the "Secret Graham Award"! Please email Ryan the following message to
-            claim your reward and shoutout: <br /> "Graham loves moving, and Murphy does too! So the two of them will
-            move around for you!"
-          </h2>
-        )}
         <table className="table is-striped is-hoverable mx-auto">
           <thead>
             <tr>
@@ -159,6 +169,7 @@ function SeasonStandingsTable() {
           </tbody>
         </table>
       </div>
+      <SecretGrahamModal ref={modalRef} closeModal={closeModal} />
     </section>
   );
 }
