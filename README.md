@@ -95,3 +95,9 @@ Use sportradar trial API and then run script to conver it to the format we need,
 - Weekly Score Box (Not going to do this unless previous Stablehand pool members want it back)
 - Automated email on picksheet submission (This proved to be way too difficult and potentially expensive)
 - Ability to sign in/sign out (Didn't see the need for it, just extra work)
+
+## 2025 Awards
+
+Award - Name - Week
+Secret Graham - Miguel Linares - Preseason
+Secret Mango - Ali Lospinuso - Preseason

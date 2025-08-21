@@ -13,6 +13,12 @@ const { data: user, error } = await supabaseClient.auth.admin.updateUserById('ff
   user_metadata: { last_name: 'Gilgen' },
 });
 
+// Resend a confirmation email
+// const { error } = await supabaseClient.auth.resend({
+//   type: 'signup',
+//   email: 'jbreen851@gmail.com',
+// });
+
 if (error) {
   console.log(error);
 }
