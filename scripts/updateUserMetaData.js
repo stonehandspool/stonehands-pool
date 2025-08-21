@@ -2,8 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = 'https://omerwyjzojbjcdtttehi.supabase.co';
 // TODO this needs to be the service role key and cannot get committed!!!
-const supabaseAnonKey =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9tZXJ3eWp6b2piamNkdHR0ZWhpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3MzIyNzI3MCwiZXhwIjoxOTg4ODAzMjcwfQ.p5eyHeIWEwqa1UBhslu1yWQGCnLoCbHdXv2nmoSVAuo';
+const supabaseAnonKey = '';
 const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
 // To get a users info
