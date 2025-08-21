@@ -36,7 +36,7 @@ function HallOfFame() {
             <div className="level-item has-text-centered">
               <div className="content">
                 <p className="heading">High Five Pool</p>
-                <p className="title">Sydney Sakwa</p>
+                <p className="title">Sydney Dannenbaum</p>
                 <p className="subtitle">108 Points</p>
               </div>
             </div>
@@ -168,7 +168,7 @@ function HallOfFame() {
             <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
               <h1 className="title has-text-centered">High Five Pool</h1>
               <ol>
-                <li>Sydney Sakwa - 108 Points</li>
+                <li>Sydney Dannenbaum - 108 Points</li>
                 <li>Dan Dupras - 104 Points</li>
                 <li>Dan Besser - 104 Points</li>
                 <li>Robert Garcia - 104 Points</li>
