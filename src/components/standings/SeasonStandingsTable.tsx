@@ -93,11 +93,15 @@ function SeasonStandingsTable() {
     }
   }, []);
 
+  if (!FIRST_GAME_PLAYED && currentlySignedUp.length === 0) {
+    return <></>;
+  }
+
   // Calculate the standings
   const calculatedPicks: TableColumns[] = [];
   for (let i = 0; i < playerData.length; i++) {
     const playerInfo = playerData[i];
-    if (!FIRST_GAME_PLAYED && currentlySignedUp.length > 0 && !currentlySignedUp.includes(playerInfo.id)) {
+    if (!FIRST_GAME_PLAYED && !currentlySignedUp.includes(playerInfo.id)) {
       continue;
     }
     const rowInfo: TableColumns = {
