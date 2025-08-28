@@ -1,6 +1,9 @@
 // This should be set to false prior to the release of the first weeks picksheet, and then true until the end of the regular season
 // This is used to check for each of the standings and stats pages to see if it should check for data, if false it will not display anything
-export const SEASON_READY: boolean = false;
+export const SEASON_READY: boolean = true;
+// This is to allow for the standings table to show who has submitted their picksheet prior to the first game of the season
+// It should be set to true after the first game of the season
+export const FIRST_GAME_PLAYED: boolean = false;
 // This should be toggled once sign ups are disabled
 export const SIGN_UPS_DISABLED: boolean = false;
 // This should be updated on Wednesday of every week when the next weeks picksheet becomes available
@@ -12,11 +15,11 @@ export const CURRENT_YEAR: string = '2025';
 // This is a date in a valid `Date` format which should be taken from the season schedule each week
 // This is used to check if a user can still submit their picksheet, it should generally be the first Sunday game each week
 // Unless there is a few Saturday games later in the season
-export const CURRENT_WEEK_CUTOFF_TIME = new Date('2026-01-05T18:00:00.000Z');
+export const CURRENT_WEEK_CUTOFF_TIME = new Date('2025-09-07T17:00:00.000Z');
 // This is whatever the last scheduled game is in a given week
 // This is used to tell the users what game they should be predicting the total final score of for a week
-export const CURRENT_WEEK_FINAL_GAME: string = 'MIN @ DET';
-export const PREV_WEEK_FINAL_GAME: string = 'DET @ SF';
+export const CURRENT_WEEK_FINAL_GAME: string = 'MIN @ CHI';
+export const PREV_WEEK_FINAL_GAME: string = 'N/A';
 // This should be updated every Tuesday morning with the total score of the game above
 // This is used to determine the tiebreaker for the weekly standings
 export const MONDAY_NIGHT_TOTAL: number = 0;

@@ -1,7 +1,9 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import playerData from '../../../data/2025/football/players.json';
-import { CURRENT_WEEK, SEASON_READY } from '../../constants';
+import { CURRENT_WEEK, FIRST_GAME_PLAYED, SEASON_READY } from '../../constants';
 import SecretGrahamModal from '../modals/SecretGrahamModal';
+import supabaseClient from '../../config/supabaseClient';
+import { TABLE_NAMES } from '../../config/supabaseConfig';
 
 interface TableColumns {
   position: number;
@@ -21,6 +23,7 @@ const correctOrder = [4, 22, 25];
 
 function SeasonStandingsTable() {
   const [currentSequence, setCurrentSequence] = useState<number[]>([]);
+  const [currentlySignedUp, setCurrentlySignedUp] = useState<string[]>([]);
   const sequenceIsCorrect = useRef<boolean>(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const positionRefs = useRef<HTMLTableCellElement[]>([]);
@@ -75,10 +78,28 @@ function SeasonStandingsTable() {
     [currentSequence, sequenceIsCorrect]
   );
 
+  useEffect(() => {
+    const fetchPicks = async () => {
+      const { data } = await supabaseClient.from(TABLE_NAMES.USER_PICKS).select();
+
+      if (data && data.length > 0) {
+        // Just create an array of all of the user ids that have made picks
+        setCurrentlySignedUp(data.map(d => d.user_id));
+      }
+    };
+
+    if (!FIRST_GAME_PLAYED) {
+      fetchPicks();
+    }
+  }, []);
+
   // Calculate the standings
   const calculatedPicks: TableColumns[] = [];
   for (let i = 0; i < playerData.length; i++) {
     const playerInfo = playerData[i];
+    if (!FIRST_GAME_PLAYED && currentlySignedUp.length > 0 && !currentlySignedUp.includes(playerInfo.id)) {
+      continue;
+    }
     const rowInfo: TableColumns = {
       position: playerInfo.currentWeekRank,
       name: `${playerInfo.firstName} ${playerInfo.lastName}`,
@@ -95,7 +116,7 @@ function SeasonStandingsTable() {
     calculatedPicks.push(rowInfo);
   }
 
-  if (!SEASON_READY && CURRENT_WEEK === 1) {
+  if ((!SEASON_READY && CURRENT_WEEK === 1) || !FIRST_GAME_PLAYED) {
     // If the season hasn't started, just list everyone in alphabetical order
     calculatedPicks.sort((row1, row2) => {
       const firstName1 = row1.name.split(' ')[0];
