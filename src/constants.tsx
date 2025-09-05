@@ -3,7 +3,7 @@
 export const SEASON_READY: boolean = true;
 // This is to allow for the standings table to show who has submitted their picksheet prior to the first game of the season
 // It should be set to true after the first game of the season
-export const FIRST_GAME_PLAYED: boolean = false;
+export const FIRST_GAME_PLAYED: boolean = true;
 // This should be toggled once sign ups are disabled
 export const SIGN_UPS_DISABLED: boolean = true;
 // This should be updated on Wednesday of every week when the next weeks picksheet becomes available
