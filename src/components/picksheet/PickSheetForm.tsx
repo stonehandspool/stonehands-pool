@@ -18,6 +18,7 @@ import {
   SEASON_READY,
   PicksheetData,
   UserInfo,
+  FIRST_GAME_PLAYED,
 } from '../../constants';
 import { useWeeklyPick } from '../../utils/useWeeklyPicks';
 
@@ -89,13 +90,25 @@ function PickSheetForm(props: PickSheetFormProps) {
 
   const userInfo: UserInfo = playerData.find(playerInfo => playerInfo.id === session.user.id)!;
 
-  if (!userInfo) {
+  if (!userInfo && !FIRST_GAME_PLAYED) {
     return (
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">
             Thank you for signing up for the pool! Ryan needs to do something on his end to activate your account. It
             should be activated shortly!
+          </h3>
+        </div>
+      </section>
+    );
+  }
+
+  if (!userInfo && FIRST_GAME_PLAYED) {
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            Sorry, the season has already begun and no more new submissions can be made.
           </h3>
         </div>
       </section>
