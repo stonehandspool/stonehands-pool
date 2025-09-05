@@ -15316,6 +15316,104 @@
           }
         ]
       }
+    },
+    {
+      "id": -1,
+      "created_at": "N/A",
+      "user_id": "e132281b-062d-405b-8fe2-293150c6e326",
+      "week": 1,
+      "submission_data": {
+        "userId": "e132281b-062d-405b-8fe2-293150c6e326",
+        "username": "Matt McGrath",
+        "firstName": "Matt",
+        "lastName": "Mcgrath",
+        "tiebreaker": 99,
+        "highFivePicks": [],
+        "marginPick": null,
+        "survivorPick": "",
+        "confidencePicks": [
+          {
+            "matchupId": "matchup_1",
+            "team": "DAL",
+            "confidence": 1
+          },
+          {
+            "matchupId": "matchup_2",
+            "team": "LAC",
+            "confidence": 2
+          },
+          {
+            "matchupId": "matchup_3",
+            "team": "ATL",
+            "confidence": 3
+          },
+          {
+            "matchupId": "matchup_4",
+            "team": "NYJ",
+            "confidence": 4
+          },
+          {
+            "matchupId": "matchup_5",
+            "team": "MIA",
+            "confidence": 5
+          },
+          {
+            "matchupId": "matchup_6",
+            "team": "JAC",
+            "confidence": 6
+          },
+          {
+            "matchupId": "matchup_7",
+            "team": "WAS",
+            "confidence": 7
+          },
+          {
+            "matchupId": "matchup_8",
+            "team": "NO",
+            "confidence": 8
+          },
+          {
+            "matchupId": "matchup_9",
+            "team": "CIN",
+            "confidence": 9
+          },
+          {
+            "matchupId": "matchup_10",
+            "team": "LV",
+            "confidence": 10
+          },
+          {
+            "matchupId": "matchup_11",
+            "team": "SF",
+            "confidence": 11
+          },
+          {
+            "matchupId": "matchup_12",
+            "team": "TEN",
+            "confidence": 12
+          },
+          {
+            "matchupId": "matchup_13",
+            "team": "GB",
+            "confidence": 13
+          },
+          {
+            "matchupId": "matchup_14",
+            "team": "HOU",
+            "confidence": 14
+          },
+          {
+            "matchupId": "matchup_15",
+            "team": "BAL",
+            "confidence": 15
+          },
+          {
+            "matchupId": "matchup_16",
+            "team": "CHI",
+            "confidence": 16
+          }
+        ]
+      }
     }
   ]
 }
