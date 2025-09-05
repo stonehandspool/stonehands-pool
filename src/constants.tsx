@@ -5,7 +5,7 @@ export const SEASON_READY: boolean = true;
 // It should be set to true after the first game of the season
 export const FIRST_GAME_PLAYED: boolean = false;
 // This should be toggled once sign ups are disabled
-export const SIGN_UPS_DISABLED: boolean = false;
+export const SIGN_UPS_DISABLED: boolean = true;
 // This should be updated on Wednesday of every week when the next weeks picksheet becomes available
 // This is used to keep track of the current NFL regular season week and is used to get data from the json files
 export const CURRENT_WEEK: number = 1;
