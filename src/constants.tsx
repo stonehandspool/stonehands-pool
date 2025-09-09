@@ -22,7 +22,7 @@ export const CURRENT_WEEK_FINAL_GAME: string = 'MIN @ CHI';
 export const PREV_WEEK_FINAL_GAME: string = 'N/A';
 // This should be updated every Tuesday morning with the total score of the game above
 // This is used to determine the tiebreaker for the weekly standings
-export const MONDAY_NIGHT_TOTAL: number = 0;
+export const MONDAY_NIGHT_TOTAL: number = 51;
 export const PREV_MONDAY_NIGHT_TOTAL: number = 0;
 // This is to mark the different states that a week can be in
 // START: This means that this is a new week and no games have been played yet
@@ -44,7 +44,7 @@ export const PREV_MONDAY_NIGHT_TOTAL: number = 0;
 //              - The weekly standings should signify the current weeks winner
 //          - The picksheet should still be unavailable
 type WeekStatus = 'START' | 'IN_PROGRESS' | 'COMPLETE';
-export const CURRENT_WEEK_STATUS: WeekStatus = 'IN_PROGRESS';
+export const CURRENT_WEEK_STATUS: WeekStatus = 'COMPLETE';
 // These are the team codes used throughout the codebase and should only be changed if a new team joins the league or a team relocates
 export const TEAM_CODES = [
   'ARI',
