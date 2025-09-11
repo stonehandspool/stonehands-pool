@@ -5,9 +5,11 @@ function AllUserStats() {
   // First, sort the names alphabetically
   playerData.sort((row1, row2) => {
     const firstName1 = row1.firstName.split(' ')[0];
-    const lastName1 = row1.lastName.split(' ').pop()!;
+    const lastNameSplit1 = row1.lastName.split(' ');
+    const lastName1 = lastNameSplit1[0].includes('(') ? lastNameSplit1[1] : lastNameSplit1[0];
     const firstName2 = row2.firstName.split(' ')[0];
-    const lastName2 = row2.lastName.split(' ').pop()!;
+    const lastNameSplit2 = row2.lastName.split(' ');
+    const lastName2 = lastNameSplit2[0].includes('(') ? lastNameSplit2[1] : lastNameSplit2[0];
     return lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2);
   });
   const rows = [...Array(Math.ceil(playerData.length / 4))];
