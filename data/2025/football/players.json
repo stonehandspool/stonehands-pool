@@ -4,26 +4,26 @@
     "username": "Kfandl",
     "firstName": "Kailey",
     "lastName": "Fandl",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       9,
-      12
+      13
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       7,
-      2
+      3
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 198,
+    "percent": 0.6875,
+    "points": 204,
     "pointsByWeek": [
       92,
-      106
+      112
     ],
     "tbAvg": 43,
     "tiebreakerByWeek": [
@@ -31,16 +31,16 @@
       43
     ],
     "lastWeekRank": 120,
-    "currentWeekRank": 96,
+    "currentWeekRank": 110,
     "rankByWeek": [
       120,
-      96
+      110
     ],
-    "change": "+24",
-    "currentWeekWins": 12,
-    "currentWeekLosses": 2,
+    "change": "+10",
+    "currentWeekWins": 13,
+    "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 106,
+    "currentWeekPoints": 112,
     "currentWeekTiebreaker": 43,
     "survivorPicks": [
       "DEN",
@@ -91,10 +91,10 @@
     "username": "Bcrimmins",
     "firstName": "Bobby",
     "lastName": "Crimmins",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       11,
-      10
+      12
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -106,11 +106,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 211,
+    "percent": 0.71875,
+    "points": 220,
     "pointsByWeek": [
       105,
-      106
+      115
     ],
     "tbAvg": 42,
     "tiebreakerByWeek": [
@@ -118,16 +118,16 @@
       44
     ],
     "lastWeekRank": 76,
-    "currentWeekRank": 49,
+    "currentWeekRank": 61,
     "rankByWeek": [
       76,
-      49
+      61
     ],
-    "change": "+27",
-    "currentWeekWins": 10,
+    "change": "+15",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 106,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 44,
     "survivorPicks": [
       "DEN",
@@ -178,26 +178,26 @@
     "username": "hfandl23",
     "firstName": "Heather",
     "lastName": "Fandl",
-    "wins": 24,
+    "wins": 25,
     "winsByWeek": [
       13,
-      11
+      12
     ],
-    "losses": 6,
+    "losses": 7,
     "lossesByWeek": [
       3,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 222,
+    "percent": 0.78125,
+    "points": 232,
     "pointsByWeek": [
       117,
-      105
+      115
     ],
     "tbAvg": 27,
     "tiebreakerByWeek": [
@@ -205,16 +205,16 @@
       32
     ],
     "lastWeekRank": 18,
-    "currentWeekRank": 16,
+    "currentWeekRank": 20,
     "rankByWeek": [
       18,
-      16
+      20
     ],
-    "change": "+2",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "-2",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 105,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 32,
     "survivorPicks": [
       "NE"
@@ -227,10 +227,10 @@
       },
       {
         "team": "LAC",
-        "margin": null
+        "margin": 11
       }
     ],
-    "marginTotal": -7,
+    "marginTotal": 4,
     "highFiveValues": [
       5,
       8
@@ -264,10 +264,10 @@
     "username": "aburd55",
     "firstName": "Andrew",
     "lastName": "Burdack",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       13,
-      7
+      9
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -279,11 +279,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 180,
+    "percent": 0.6875,
+    "points": 205,
     "pointsByWeek": [
       108,
-      72
+      97
     ],
     "tbAvg": 42.5,
     "tiebreakerByWeek": [
@@ -291,16 +291,16 @@
       42
     ],
     "lastWeekRank": 62,
-    "currentWeekRank": 126,
+    "currentWeekRank": 105,
     "rankByWeek": [
       62,
-      126
+      105
     ],
-    "change": "-64",
-    "currentWeekWins": 7,
+    "change": "-43",
+    "currentWeekWins": 9,
     "currentWeekLosses": 7,
     "currentWeekTies": 0,
-    "currentWeekPoints": 72,
+    "currentWeekPoints": 97,
     "currentWeekTiebreaker": 42,
     "survivorPicks": [
       "DEN",
@@ -320,9 +320,9 @@
     "marginTotal": 28,
     "highFiveValues": [
       8,
-      2
+      5
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -338,11 +338,11 @@
       },
       {
         "team": "TB",
-        "won": null
+        "won": true
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -351,10 +351,10 @@
     "username": "Mcgovene",
     "firstName": "Neal",
     "lastName": "McGovern",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       10,
-      11
+      13
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -366,11 +366,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 201,
+    "percent": 0.71875,
+    "points": 208,
     "pointsByWeek": [
       90,
-      111
+      118
     ],
     "tbAvg": 47.5,
     "tiebreakerByWeek": [
@@ -378,16 +378,16 @@
       51
     ],
     "lastWeekRank": 123,
-    "currentWeekRank": 84,
+    "currentWeekRank": 101,
     "rankByWeek": [
       123,
-      84
+      101
     ],
-    "change": "+39",
-    "currentWeekWins": 11,
+    "change": "+22",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 111,
+    "currentWeekPoints": 118,
     "currentWeekTiebreaker": 51,
     "survivorPicks": [
       "PHI",
@@ -407,9 +407,9 @@
     "marginTotal": -1,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -429,7 +429,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -438,26 +438,26 @@
     "username": "gfandl",
     "firstName": "Glen",
     "lastName": "Fandl",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       11,
-      10
+      11
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       5,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 218,
+    "percent": 0.6875,
+    "points": 227,
     "pointsByWeek": [
       116,
-      102
+      111
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -465,16 +465,16 @@
       46
     ],
     "lastWeekRank": 27,
-    "currentWeekRank": 30,
+    "currentWeekRank": 36,
     "rankByWeek": [
       27,
-      30
+      36
     ],
-    "change": "-3",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-9",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 111,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "DEN",
@@ -525,26 +525,26 @@
     "username": "Hostiss",
     "firstName": "Matt",
     "lastName": "Ustas",
-    "wins": 20,
+    "wins": 21,
     "winsByWeek": [
       9,
-      11
+      12
     ],
-    "losses": 10,
+    "losses": 11,
     "lossesByWeek": [
       7,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 203,
+    "percent": 0.65625,
+    "points": 211,
     "pointsByWeek": [
       94,
-      109
+      117
     ],
     "tbAvg": 47.5,
     "tiebreakerByWeek": [
@@ -552,16 +552,16 @@
       51
     ],
     "lastWeekRank": 111,
-    "currentWeekRank": 76,
+    "currentWeekRank": 91,
     "rankByWeek": [
       111,
-      76
+      91
     ],
-    "change": "+35",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "+20",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 109,
+    "currentWeekPoints": 117,
     "currentWeekTiebreaker": 51,
     "survivorPicks": [
       "DEN",
@@ -612,10 +612,10 @@
     "username": "Huep",
     "firstName": "Thomas",
     "lastName": "Passano",
-    "wins": 18,
+    "wins": 20,
     "winsByWeek": [
       8,
-      10
+      12
     ],
     "losses": 12,
     "lossesByWeek": [
@@ -627,11 +627,11 @@
       0,
       0
     ],
-    "percent": 0.6,
-    "points": 168,
+    "percent": 0.625,
+    "points": 188,
     "pointsByWeek": [
       85,
-      83
+      103
     ],
     "tbAvg": 48,
     "tiebreakerByWeek": [
@@ -639,16 +639,16 @@
       52
     ],
     "lastWeekRank": 130,
-    "currentWeekRank": 133,
+    "currentWeekRank": 132,
     "rankByWeek": [
       130,
-      133
+      132
     ],
-    "change": "-3",
-    "currentWeekWins": 10,
+    "change": "-2",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 83,
+    "currentWeekPoints": 103,
     "currentWeekTiebreaker": 52,
     "survivorPicks": [
       "PHI",
@@ -668,9 +668,9 @@
     "marginTotal": 25,
     "highFiveValues": [
       3,
-      3
+      5
     ],
-    "highFiveTotal": 6,
+    "highFiveTotal": 8,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -690,7 +690,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -699,26 +699,26 @@
     "username": "Foo Fighter",
     "firstName": "Patrick",
     "lastName": "Cook",
-    "wins": 23,
+    "wins": 24,
     "winsByWeek": [
       13,
-      10
+      11
     ],
-    "losses": 7,
+    "losses": 8,
     "lossesByWeek": [
       3,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 224,
+    "percent": 0.75,
+    "points": 230,
     "pointsByWeek": [
       118,
-      106
+      112
     ],
     "tbAvg": 41,
     "tiebreakerByWeek": [
@@ -726,16 +726,16 @@
       41
     ],
     "lastWeekRank": 13,
-    "currentWeekRank": 12,
+    "currentWeekRank": 26,
     "rankByWeek": [
       13,
-      12
+      26
     ],
-    "change": "+1",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-13",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 106,
+    "currentWeekPoints": 112,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "PHI",
@@ -786,10 +786,10 @@
     "username": "Lindasmom",
     "firstName": "Jackie",
     "lastName": "Cook",
-    "wins": 18,
+    "wins": 20,
     "winsByWeek": [
       9,
-      9
+      11
     ],
     "losses": 12,
     "lossesByWeek": [
@@ -801,11 +801,11 @@
       0,
       0
     ],
-    "percent": 0.6,
-    "points": 161,
+    "percent": 0.625,
+    "points": 177,
     "pointsByWeek": [
       82,
-      79
+      95
     ],
     "tbAvg": 29.5,
     "tiebreakerByWeek": [
@@ -819,10 +819,10 @@
       136
     ],
     "change": "-4",
-    "currentWeekWins": 9,
+    "currentWeekWins": 11,
     "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 79,
+    "currentWeekPoints": 95,
     "currentWeekTiebreaker": 32,
     "survivorPicks": [
       "NE"
@@ -872,10 +872,10 @@
     "username": "Nanfandl",
     "firstName": "Nancy ",
     "lastName": "Fandl",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       10,
-      11
+      13
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -887,11 +887,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 204,
+    "percent": 0.71875,
+    "points": 215,
     "pointsByWeek": [
       100,
-      104
+      115
     ],
     "tbAvg": 46.5,
     "tiebreakerByWeek": [
@@ -899,16 +899,16 @@
       46
     ],
     "lastWeekRank": 89,
-    "currentWeekRank": 73,
+    "currentWeekRank": 81,
     "rankByWeek": [
       89,
-      73
+      81
     ],
-    "change": "+16",
-    "currentWeekWins": 11,
+    "change": "+8",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 104,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "KC"
@@ -958,10 +958,10 @@
     "username": "Matt Snell",
     "firstName": "Jeff",
     "lastName": "Fandl",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       12,
-      11
+      13
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -973,11 +973,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 225,
+    "percent": 0.78125,
+    "points": 242,
     "pointsByWeek": [
       122,
-      103
+      120
     ],
     "tbAvg": 43.5,
     "tiebreakerByWeek": [
@@ -985,16 +985,16 @@
       44
     ],
     "lastWeekRank": 6,
-    "currentWeekRank": 9,
+    "currentWeekRank": 6,
     "rankByWeek": [
       6,
-      9
+      6
     ],
-    "change": "-3",
-    "currentWeekWins": 11,
+    "change": "--",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 120,
     "currentWeekTiebreaker": 44,
     "survivorPicks": [
       "DEN",
@@ -1045,10 +1045,10 @@
     "username": "Gfan69",
     "firstName": "Gary",
     "lastName": "Fandl",
-    "wins": 18,
+    "wins": 20,
     "winsByWeek": [
       9,
-      9
+      11
     ],
     "losses": 12,
     "lossesByWeek": [
@@ -1060,11 +1060,11 @@
       0,
       0
     ],
-    "percent": 0.6,
-    "points": 159,
+    "percent": 0.625,
+    "points": 169,
     "pointsByWeek": [
       76,
-      83
+      93
     ],
     "tbAvg": 30,
     "tiebreakerByWeek": [
@@ -1072,16 +1072,16 @@
       32
     ],
     "lastWeekRank": 138,
-    "currentWeekRank": 137,
+    "currentWeekRank": 139,
     "rankByWeek": [
       138,
-      137
+      139
     ],
-    "change": "+1",
-    "currentWeekWins": 9,
+    "change": "-1",
+    "currentWeekWins": 11,
     "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 83,
+    "currentWeekPoints": 93,
     "currentWeekTiebreaker": 32,
     "survivorPicks": [
       "DEN",
@@ -1137,17 +1137,17 @@
       10,
       9
     ],
-    "losses": 11,
+    "losses": 13,
     "lossesByWeek": [
       6,
-      5
+      7
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6333333333333333,
+    "percent": 0.59375,
     "points": 158,
     "pointsByWeek": [
       66,
@@ -1159,14 +1159,14 @@
       54
     ],
     "lastWeekRank": 144,
-    "currentWeekRank": 138,
+    "currentWeekRank": 142,
     "rankByWeek": [
       144,
-      138
+      142
     ],
-    "change": "+6",
+    "change": "+2",
     "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "currentWeekLosses": 7,
     "currentWeekTies": 0,
     "currentWeekPoints": 92,
     "currentWeekTiebreaker": 54,
@@ -1219,26 +1219,26 @@
     "username": "Mathias",
     "firstName": "Bill",
     "lastName": "Mathias",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       12,
-      9
+      10
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       4,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 218,
+    "percent": 0.6875,
+    "points": 227,
     "pointsByWeek": [
       122,
-      96
+      105
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -1246,16 +1246,16 @@
       47
     ],
     "lastWeekRank": 7,
-    "currentWeekRank": 31,
+    "currentWeekRank": 37,
     "rankByWeek": [
       7,
-      31
+      37
     ],
-    "change": "-24",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-30",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 96,
+    "currentWeekPoints": 105,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "DEN",
@@ -1306,26 +1306,26 @@
     "username": "Smalls:)",
     "firstName": "Robyn",
     "lastName": "Rogers",
-    "wins": 17,
+    "wins": 18,
     "winsByWeek": [
       10,
-      7
+      8
     ],
-    "losses": 13,
+    "losses": 14,
     "lossesByWeek": [
       6,
-      7
+      8
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.5666666666666667,
-    "points": 148,
+    "percent": 0.5625,
+    "points": 153,
     "pointsByWeek": [
       78,
-      70
+      75
     ],
     "tbAvg": 48,
     "tiebreakerByWeek": [
@@ -1333,16 +1333,16 @@
       47
     ],
     "lastWeekRank": 137,
-    "currentWeekRank": 142,
+    "currentWeekRank": 143,
     "rankByWeek": [
       137,
-      142
+      143
     ],
-    "change": "-5",
-    "currentWeekWins": 7,
-    "currentWeekLosses": 7,
+    "change": "-6",
+    "currentWeekWins": 8,
+    "currentWeekLosses": 8,
     "currentWeekTies": 0,
-    "currentWeekPoints": 70,
+    "currentWeekPoints": 75,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "WAS",
@@ -1384,7 +1384,7 @@
       },
       {
         "team": "LV",
-        "won": null
+        "won": false
       }
     ]
   },
@@ -1393,26 +1393,26 @@
     "username": "STEELERS",
     "firstName": "Chad",
     "lastName": "Obrien",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       11,
-      10
+      11
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       5,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 208,
+    "percent": 0.6875,
+    "points": 216,
     "pointsByWeek": [
       109,
-      99
+      107
     ],
     "tbAvg": 52.5,
     "tiebreakerByWeek": [
@@ -1420,16 +1420,16 @@
       47
     ],
     "lastWeekRank": 59,
-    "currentWeekRank": 57,
+    "currentWeekRank": 75,
     "rankByWeek": [
       59,
-      57
+      75
     ],
-    "change": "+2",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-16",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 99,
+    "currentWeekPoints": 107,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "WAS",
@@ -1485,17 +1485,17 @@
       14,
       9
     ],
-    "losses": 7,
+    "losses": 9,
     "lossesByWeek": [
       2,
-      5
+      7
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7666666666666667,
+    "percent": 0.71875,
     "points": 224,
     "pointsByWeek": [
       130,
@@ -1507,14 +1507,14 @@
       44
     ],
     "lastWeekRank": 2,
-    "currentWeekRank": 13,
+    "currentWeekRank": 44,
     "rankByWeek": [
       2,
-      13
+      44
     ],
-    "change": "-11",
+    "change": "-42",
     "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "currentWeekLosses": 7,
     "currentWeekTies": 0,
     "currentWeekPoints": 94,
     "currentWeekTiebreaker": 44,
@@ -1567,26 +1567,26 @@
     "username": "buccahead",
     "firstName": "James",
     "lastName": "Horn",
-    "wins": 23,
+    "wins": 24,
     "winsByWeek": [
       12,
-      11
+      12
     ],
-    "losses": 7,
+    "losses": 8,
     "lossesByWeek": [
       4,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 198,
+    "percent": 0.75,
+    "points": 204,
     "pointsByWeek": [
       104,
-      94
+      100
     ],
     "tbAvg": 41,
     "tiebreakerByWeek": [
@@ -1594,16 +1594,16 @@
       41
     ],
     "lastWeekRank": 78,
-    "currentWeekRank": 94,
+    "currentWeekRank": 109,
     "rankByWeek": [
       78,
-      94
+      109
     ],
-    "change": "-16",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "-31",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 94,
+    "currentWeekPoints": 100,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "PHI",
@@ -1654,26 +1654,26 @@
     "username": "rfandl",
     "firstName": "Ryan",
     "lastName": "Fandl",
-    "wins": 20,
+    "wins": 21,
     "winsByWeek": [
       9,
-      11
+      12
     ],
-    "losses": 10,
+    "losses": 11,
     "lossesByWeek": [
       7,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 200,
+    "percent": 0.65625,
+    "points": 209,
     "pointsByWeek": [
       94,
-      106
+      115
     ],
     "tbAvg": 39.5,
     "tiebreakerByWeek": [
@@ -1681,16 +1681,16 @@
       42
     ],
     "lastWeekRank": 112,
-    "currentWeekRank": 87,
+    "currentWeekRank": 99,
     "rankByWeek": [
       112,
-      87
+      99
     ],
-    "change": "+25",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "+13",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 106,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 42,
     "survivorPicks": [
       "ARI",
@@ -1741,26 +1741,26 @@
     "username": "dolardude1",
     "firstName": "Greg",
     "lastName": "Della Penna Sr.",
-    "wins": 23,
+    "wins": 24,
     "winsByWeek": [
       13,
-      10
+      11
     ],
-    "losses": 7,
+    "losses": 8,
     "lossesByWeek": [
       3,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 215,
+    "percent": 0.75,
+    "points": 226,
     "pointsByWeek": [
       121,
-      94
+      105
     ],
     "tbAvg": 42.5,
     "tiebreakerByWeek": [
@@ -1768,16 +1768,16 @@
       43
     ],
     "lastWeekRank": 8,
-    "currentWeekRank": 37,
+    "currentWeekRank": 39,
     "rankByWeek": [
       8,
-      37
+      39
     ],
-    "change": "-29",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-31",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 94,
+    "currentWeekPoints": 105,
     "currentWeekTiebreaker": 43,
     "survivorPicks": [
       "DEN",
@@ -1828,10 +1828,10 @@
     "username": "LKraft",
     "firstName": "Liam",
     "lastName": "Kraft",
-    "wins": 25,
+    "wins": 27,
     "winsByWeek": [
       12,
-      13
+      15
     ],
     "losses": 5,
     "lossesByWeek": [
@@ -1843,11 +1843,11 @@
       0,
       0
     ],
-    "percent": 0.8333333333333334,
-    "points": 236,
+    "percent": 0.84375,
+    "points": 243,
     "pointsByWeek": [
       115,
-      121
+      128
     ],
     "tbAvg": 38.5,
     "tiebreakerByWeek": [
@@ -1855,16 +1855,16 @@
       41
     ],
     "lastWeekRank": 31,
-    "currentWeekRank": 3,
+    "currentWeekRank": 4,
     "rankByWeek": [
       31,
-      3
+      4
     ],
-    "change": "+28",
-    "currentWeekWins": 13,
+    "change": "+27",
+    "currentWeekWins": 15,
     "currentWeekLosses": 1,
     "currentWeekTies": 0,
-    "currentWeekPoints": 121,
+    "currentWeekPoints": 128,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "DEN",
@@ -1915,26 +1915,26 @@
     "username": "SteveMarsh",
     "firstName": "Steve",
     "lastName": "Marshall",
-    "wins": 20,
+    "wins": 21,
     "winsByWeek": [
       10,
-      10
+      11
     ],
-    "losses": 10,
+    "losses": 11,
     "lossesByWeek": [
       6,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 166,
+    "percent": 0.65625,
+    "points": 176,
     "pointsByWeek": [
       90,
-      76
+      86
     ],
     "tbAvg": 21,
     "tiebreakerByWeek": [
@@ -1942,16 +1942,16 @@
       21
     ],
     "lastWeekRank": 124,
-    "currentWeekRank": 135,
+    "currentWeekRank": 137,
     "rankByWeek": [
       124,
-      135
+      137
     ],
-    "change": "-11",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-13",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 76,
+    "currentWeekPoints": 86,
     "currentWeekTiebreaker": 21,
     "survivorPicks": [
       "MIA"
@@ -2001,10 +2001,10 @@
     "username": "Aecker",
     "firstName": "Alex",
     "lastName": "Ecker",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       11,
-      10
+      12
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -2016,11 +2016,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 189,
+    "percent": 0.71875,
+    "points": 196,
     "pointsByWeek": [
       85,
-      104
+      111
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -2028,16 +2028,16 @@
       51
     ],
     "lastWeekRank": 129,
-    "currentWeekRank": 114,
+    "currentWeekRank": 123,
     "rankByWeek": [
       129,
-      114
+      123
     ],
-    "change": "+15",
-    "currentWeekWins": 10,
+    "change": "+6",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 104,
+    "currentWeekPoints": 111,
     "currentWeekTiebreaker": 51,
     "survivorPicks": [
       "DEN",
@@ -2088,26 +2088,26 @@
     "username": "HotLilGiantsHoney",
     "firstName": "Celeste ",
     "lastName": "(Panagopoulos) Ecker",
-    "wins": 20,
+    "wins": 21,
     "winsByWeek": [
       9,
-      11
+      12
     ],
-    "losses": 10,
+    "losses": 11,
     "lossesByWeek": [
       7,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 199,
+    "percent": 0.65625,
+    "points": 212,
     "pointsByWeek": [
       99,
-      100
+      113
     ],
     "tbAvg": 37.5,
     "tiebreakerByWeek": [
@@ -2115,16 +2115,16 @@
       41
     ],
     "lastWeekRank": 93,
-    "currentWeekRank": 92,
+    "currentWeekRank": 88,
     "rankByWeek": [
       93,
-      92
+      88
     ],
-    "change": "+1",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "+5",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 100,
+    "currentWeekPoints": 113,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "PHI",
@@ -2144,13 +2144,13 @@
     "marginTotal": 28,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "ARI",
@@ -2175,26 +2175,26 @@
     "username": "gman56",
     "firstName": "Gerard",
     "lastName": "Ecker",
-    "wins": 20,
+    "wins": 21,
     "winsByWeek": [
       9,
-      11
+      12
     ],
-    "losses": 10,
+    "losses": 11,
     "lossesByWeek": [
       7,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 203,
+    "percent": 0.65625,
+    "points": 211,
     "pointsByWeek": [
       89,
-      114
+      122
     ],
     "tbAvg": 42.5,
     "tiebreakerByWeek": [
@@ -2202,16 +2202,16 @@
       43
     ],
     "lastWeekRank": 128,
-    "currentWeekRank": 77,
+    "currentWeekRank": 92,
     "rankByWeek": [
       128,
-      77
+      92
     ],
-    "change": "+51",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "+36",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 114,
+    "currentWeekPoints": 122,
     "currentWeekTiebreaker": 43,
     "survivorPicks": [
       "PHI",
@@ -2262,10 +2262,10 @@
     "username": "Robert & Cal",
     "firstName": "Mike",
     "lastName": "McCrudden",
-    "wins": 19,
+    "wins": 21,
     "winsByWeek": [
       10,
-      9
+      11
     ],
     "losses": 11,
     "lossesByWeek": [
@@ -2277,11 +2277,11 @@
       0,
       0
     ],
-    "percent": 0.6333333333333333,
-    "points": 209,
+    "percent": 0.65625,
+    "points": 216,
     "pointsByWeek": [
       106,
-      103
+      110
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -2289,16 +2289,16 @@
       46
     ],
     "lastWeekRank": 74,
-    "currentWeekRank": 53,
+    "currentWeekRank": 78,
     "rankByWeek": [
       74,
-      53
+      78
     ],
-    "change": "+21",
-    "currentWeekWins": 9,
+    "change": "-4",
+    "currentWeekWins": 11,
     "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 110,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "DEN",
@@ -2349,10 +2349,10 @@
     "username": "Nargi27",
     "firstName": "Matt",
     "lastName": "Nargi",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       12,
-      11
+      13
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -2364,11 +2364,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 199,
+    "percent": 0.78125,
+    "points": 217,
     "pointsByWeek": [
       107,
-      92
+      110
     ],
     "tbAvg": 34.5,
     "tiebreakerByWeek": [
@@ -2376,16 +2376,16 @@
       48
     ],
     "lastWeekRank": 66,
-    "currentWeekRank": 90,
+    "currentWeekRank": 71,
     "rankByWeek": [
       66,
-      90
+      71
     ],
-    "change": "-24",
-    "currentWeekWins": 11,
+    "change": "-5",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 92,
+    "currentWeekPoints": 110,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "DEN",
@@ -2399,15 +2399,15 @@
       },
       {
         "team": "LAC",
-        "margin": null
+        "margin": 11
       }
     ],
-    "marginTotal": -25,
+    "marginTotal": -14,
     "highFiveValues": [
       5,
-      3
+      5
     ],
-    "highFiveTotal": 8,
+    "highFiveTotal": 10,
     "highFiveThisWeek": [
       {
         "team": "SF",
@@ -2419,7 +2419,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "DET",
@@ -2436,26 +2436,26 @@
     "username": "Dbackhaus",
     "firstName": "Dan",
     "lastName": "Backhaus",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       12,
-      9
+      10
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       4,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 208,
+    "percent": 0.6875,
+    "points": 216,
     "pointsByWeek": [
       110,
-      98
+      106
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -2463,16 +2463,16 @@
       46
     ],
     "lastWeekRank": 53,
-    "currentWeekRank": 58,
+    "currentWeekRank": 76,
     "rankByWeek": [
       53,
-      58
+      76
     ],
-    "change": "-5",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-23",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 98,
+    "currentWeekPoints": 106,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "ARI",
@@ -2523,10 +2523,10 @@
     "username": "Scott",
     "firstName": "Scott",
     "lastName": "Carroll",
-    "wins": 19,
+    "wins": 21,
     "winsByWeek": [
       8,
-      11
+      13
     ],
     "losses": 11,
     "lossesByWeek": [
@@ -2538,11 +2538,11 @@
       0,
       0
     ],
-    "percent": 0.6333333333333333,
-    "points": 203,
+    "percent": 0.65625,
+    "points": 217,
     "pointsByWeek": [
       94,
-      109
+      123
     ],
     "tbAvg": 39.5,
     "tiebreakerByWeek": [
@@ -2550,16 +2550,16 @@
       41
     ],
     "lastWeekRank": 114,
-    "currentWeekRank": 78,
+    "currentWeekRank": 73,
     "rankByWeek": [
       114,
-      78
+      73
     ],
-    "change": "+36",
-    "currentWeekWins": 11,
+    "change": "+41",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 109,
+    "currentWeekPoints": 123,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "DEN",
@@ -2610,26 +2610,26 @@
     "username": "atullo27",
     "firstName": "Amanda",
     "lastName": "Tullo",
-    "wins": 19,
+    "wins": 20,
     "winsByWeek": [
       7,
-      12
+      13
     ],
-    "losses": 11,
+    "losses": 12,
     "lossesByWeek": [
       9,
-      2
+      3
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6333333333333333,
-    "points": 181,
+    "percent": 0.625,
+    "points": 193,
     "pointsByWeek": [
       76,
-      105
+      117
     ],
     "tbAvg": 47,
     "tiebreakerByWeek": [
@@ -2637,16 +2637,16 @@
       47
     ],
     "lastWeekRank": 139,
-    "currentWeekRank": 125,
+    "currentWeekRank": 126,
     "rankByWeek": [
       139,
-      125
+      126
     ],
-    "change": "+14",
-    "currentWeekWins": 12,
-    "currentWeekLosses": 2,
+    "change": "+13",
+    "currentWeekWins": 13,
+    "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 105,
+    "currentWeekPoints": 117,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "JAC",
@@ -2697,10 +2697,10 @@
     "username": "tatechambers",
     "firstName": "Tate",
     "lastName": "Chambers",
-    "wins": 25,
+    "wins": 27,
     "winsByWeek": [
       13,
-      12
+      14
     ],
     "losses": 5,
     "lossesByWeek": [
@@ -2712,11 +2712,11 @@
       0,
       0
     ],
-    "percent": 0.8333333333333334,
-    "points": 220,
+    "percent": 0.84375,
+    "points": 240,
     "pointsByWeek": [
       112,
-      108
+      128
     ],
     "tbAvg": 34,
     "tiebreakerByWeek": [
@@ -2724,16 +2724,16 @@
       34
     ],
     "lastWeekRank": 43,
-    "currentWeekRank": 23,
+    "currentWeekRank": 7,
     "rankByWeek": [
       43,
-      23
+      7
     ],
-    "change": "+20",
-    "currentWeekWins": 12,
+    "change": "+36",
+    "currentWeekWins": 14,
     "currentWeekLosses": 2,
     "currentWeekTies": 0,
-    "currentWeekPoints": 108,
+    "currentWeekPoints": 128,
     "currentWeekTiebreaker": 34,
     "survivorPicks": [
       "PHI",
@@ -2784,10 +2784,10 @@
     "username": "Jblake19",
     "firstName": "John",
     "lastName": "Blake",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       10,
-      11
+      13
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -2799,11 +2799,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 201,
+    "percent": 0.71875,
+    "points": 214,
     "pointsByWeek": [
       99,
-      102
+      115
     ],
     "tbAvg": 38.5,
     "tiebreakerByWeek": [
@@ -2811,16 +2811,16 @@
       35
     ],
     "lastWeekRank": 92,
-    "currentWeekRank": 85,
+    "currentWeekRank": 84,
     "rankByWeek": [
       92,
-      85
+      84
     ],
-    "change": "+7",
-    "currentWeekWins": 11,
+    "change": "+8",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 35,
     "survivorPicks": [
       "DEN",
@@ -2871,10 +2871,10 @@
     "username": "AGugs",
     "firstName": "Alex",
     "lastName": "Gugliada",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       10,
-      11
+      13
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -2886,11 +2886,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 188,
+    "percent": 0.71875,
+    "points": 206,
     "pointsByWeek": [
       92,
-      96
+      114
     ],
     "tbAvg": 41,
     "tiebreakerByWeek": [
@@ -2898,16 +2898,16 @@
       41
     ],
     "lastWeekRank": 119,
-    "currentWeekRank": 117,
+    "currentWeekRank": 103,
     "rankByWeek": [
       119,
-      117
+      103
     ],
-    "change": "+2",
-    "currentWeekWins": 11,
+    "change": "+16",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 96,
+    "currentWeekPoints": 114,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "CIN",
@@ -2927,9 +2927,9 @@
     "marginTotal": 6,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -2945,7 +2945,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "DET",
@@ -2958,10 +2958,10 @@
     "username": "D$$$",
     "firstName": "Caroline",
     "lastName": "Dolan",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       12,
-      10
+      12
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -2973,11 +2973,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 202,
+    "percent": 0.75,
+    "points": 224,
     "pointsByWeek": [
       108,
-      94
+      116
     ],
     "tbAvg": 43,
     "tiebreakerByWeek": [
@@ -2985,16 +2985,16 @@
       42
     ],
     "lastWeekRank": 63,
-    "currentWeekRank": 79,
+    "currentWeekRank": 43,
     "rankByWeek": [
       63,
-      79
+      43
     ],
-    "change": "-16",
-    "currentWeekWins": 10,
+    "change": "+20",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 94,
+    "currentWeekPoints": 116,
     "currentWeekTiebreaker": 42,
     "survivorPicks": [
       "DEN",
@@ -3014,9 +3014,9 @@
     "marginTotal": 9,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "ARI",
@@ -3036,7 +3036,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -3050,17 +3050,17 @@
       11,
       10
     ],
-    "losses": 9,
+    "losses": 11,
     "lossesByWeek": [
       5,
-      4
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
+    "percent": 0.65625,
     "points": 203,
     "pointsByWeek": [
       106,
@@ -3072,14 +3072,14 @@
       31
     ],
     "lastWeekRank": 72,
-    "currentWeekRank": 74,
+    "currentWeekRank": 113,
     "rankByWeek": [
       72,
-      74
+      113
     ],
-    "change": "-2",
+    "change": "-41",
     "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
     "currentWeekPoints": 97,
     "currentWeekTiebreaker": 31,
@@ -3137,17 +3137,17 @@
       11,
       10
     ],
-    "losses": 9,
+    "losses": 11,
     "lossesByWeek": [
       5,
-      4
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
+    "percent": 0.65625,
     "points": 217,
     "pointsByWeek": [
       113,
@@ -3159,14 +3159,14 @@
       45
     ],
     "lastWeekRank": 41,
-    "currentWeekRank": 32,
+    "currentWeekRank": 74,
     "rankByWeek": [
       41,
-      32
+      74
     ],
-    "change": "+9",
+    "change": "-33",
     "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
     "currentWeekPoints": 104,
     "currentWeekTiebreaker": 45,
@@ -3219,10 +3219,10 @@
     "username": "UncleJoe",
     "firstName": "Joseph",
     "lastName": "Gangi",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       9,
-      11
+      13
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -3234,11 +3234,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 190,
+    "percent": 0.6875,
+    "points": 205,
     "pointsByWeek": [
       97,
-      93
+      108
     ],
     "tbAvg": 50,
     "tiebreakerByWeek": [
@@ -3246,16 +3246,16 @@
       53
     ],
     "lastWeekRank": 100,
-    "currentWeekRank": 113,
+    "currentWeekRank": 106,
     "rankByWeek": [
       100,
-      113
+      106
     ],
-    "change": "-13",
-    "currentWeekWins": 11,
+    "change": "-6",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 93,
+    "currentWeekPoints": 108,
     "currentWeekTiebreaker": 53,
     "survivorPicks": [
       "DEN",
@@ -3275,9 +3275,9 @@
     "marginTotal": 32,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -3289,7 +3289,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "DET",
@@ -3306,26 +3306,26 @@
     "username": "Brmeyer913",
     "firstName": "Brian",
     "lastName": "Meyer",
-    "wins": 18,
+    "wins": 19,
     "winsByWeek": [
       10,
-      8
+      9
     ],
-    "losses": 12,
+    "losses": 13,
     "lossesByWeek": [
       6,
-      6
+      7
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6,
-    "points": 182,
+    "percent": 0.59375,
+    "points": 191,
     "pointsByWeek": [
       97,
-      85
+      94
     ],
     "tbAvg": 41,
     "tiebreakerByWeek": [
@@ -3333,16 +3333,16 @@
       41
     ],
     "lastWeekRank": 97,
-    "currentWeekRank": 123,
+    "currentWeekRank": 131,
     "rankByWeek": [
       97,
-      123
+      131
     ],
-    "change": "-26",
-    "currentWeekWins": 8,
-    "currentWeekLosses": 6,
+    "change": "-34",
+    "currentWeekWins": 9,
+    "currentWeekLosses": 7,
     "currentWeekTies": 0,
-    "currentWeekPoints": 85,
+    "currentWeekPoints": 94,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "CIN",
@@ -3393,10 +3393,10 @@
     "username": "ConnorGilgen",
     "firstName": "Connor",
     "lastName": "Gilgen",
-    "wins": 19,
+    "wins": 21,
     "winsByWeek": [
       7,
-      12
+      14
     ],
     "losses": 11,
     "lossesByWeek": [
@@ -3408,11 +3408,11 @@
       0,
       0
     ],
-    "percent": 0.6333333333333333,
-    "points": 183,
+    "percent": 0.65625,
+    "points": 191,
     "pointsByWeek": [
       73,
-      110
+      118
     ],
     "tbAvg": 44.5,
     "tiebreakerByWeek": [
@@ -3420,16 +3420,16 @@
       46
     ],
     "lastWeekRank": 143,
-    "currentWeekRank": 121,
+    "currentWeekRank": 130,
     "rankByWeek": [
       143,
-      121
+      130
     ],
-    "change": "+22",
-    "currentWeekWins": 12,
+    "change": "+13",
+    "currentWeekWins": 14,
     "currentWeekLosses": 2,
     "currentWeekTies": 0,
-    "currentWeekPoints": 110,
+    "currentWeekPoints": 118,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "DEN",
@@ -3480,26 +3480,26 @@
     "username": "Npn0514",
     "firstName": "Nick",
     "lastName": "Nargi",
-    "wins": 23,
+    "wins": 24,
     "winsByWeek": [
       12,
-      11
+      12
     ],
-    "losses": 7,
+    "losses": 8,
     "lossesByWeek": [
       4,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 221,
+    "percent": 0.75,
+    "points": 234,
     "pointsByWeek": [
       113,
-      108
+      121
     ],
     "tbAvg": 50.5,
     "tiebreakerByWeek": [
@@ -3507,16 +3507,16 @@
       56
     ],
     "lastWeekRank": 36,
-    "currentWeekRank": 20,
+    "currentWeekRank": 16,
     "rankByWeek": [
       36,
-      20
+      16
     ],
-    "change": "+16",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "+20",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 108,
+    "currentWeekPoints": 121,
     "currentWeekTiebreaker": 56,
     "survivorPicks": [
       "DEN",
@@ -3567,26 +3567,26 @@
     "username": "Moo",
     "firstName": "Connie",
     "lastName": "Hwang",
-    "wins": 24,
+    "wins": 25,
     "winsByWeek": [
       13,
-      11
+      12
     ],
-    "losses": 6,
+    "losses": 7,
     "lossesByWeek": [
       3,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 229,
+    "percent": 0.78125,
+    "points": 237,
     "pointsByWeek": [
       120,
-      109
+      117
     ],
     "tbAvg": 38,
     "tiebreakerByWeek": [
@@ -3594,16 +3594,16 @@
       39
     ],
     "lastWeekRank": 11,
-    "currentWeekRank": 6,
+    "currentWeekRank": 10,
     "rankByWeek": [
       11,
-      6
+      10
     ],
-    "change": "+5",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "+1",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 109,
+    "currentWeekPoints": 117,
     "currentWeekTiebreaker": 39,
     "survivorPicks": [
       "ARI",
@@ -3654,10 +3654,10 @@
     "username": "danglebert",
     "firstName": "Dan",
     "lastName": "Gilbert",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       13,
-      9
+      11
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -3669,11 +3669,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 216,
+    "percent": 0.75,
+    "points": 232,
     "pointsByWeek": [
       116,
-      100
+      116
     ],
     "tbAvg": 51,
     "tiebreakerByWeek": [
@@ -3681,16 +3681,16 @@
       51
     ],
     "lastWeekRank": 24,
-    "currentWeekRank": 34,
+    "currentWeekRank": 22,
     "rankByWeek": [
       24,
-      34
+      22
     ],
-    "change": "-10",
-    "currentWeekWins": 9,
+    "change": "+2",
+    "currentWeekWins": 11,
     "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 100,
+    "currentWeekPoints": 116,
     "currentWeekTiebreaker": 51,
     "survivorPicks": [
       "ARI",
@@ -3741,10 +3741,10 @@
     "username": "Dfandl",
     "firstName": "Dan",
     "lastName": "Fandl",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       11,
-      10
+      12
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -3756,11 +3756,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 215,
+    "percent": 0.71875,
+    "points": 230,
     "pointsByWeek": [
       112,
-      103
+      118
     ],
     "tbAvg": 46.5,
     "tiebreakerByWeek": [
@@ -3768,16 +3768,16 @@
       47
     ],
     "lastWeekRank": 45,
-    "currentWeekRank": 39,
+    "currentWeekRank": 27,
     "rankByWeek": [
       45,
-      39
+      27
     ],
-    "change": "+6",
-    "currentWeekWins": 10,
+    "change": "+18",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 118,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "PHI",
@@ -3828,10 +3828,10 @@
     "username": "Brendanwhite",
     "firstName": "Brendan",
     "lastName": "White",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       12,
-      10
+      12
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -3843,11 +3843,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 196,
+    "percent": 0.75,
+    "points": 215,
     "pointsByWeek": [
       110,
-      86
+      105
     ],
     "tbAvg": 45.5,
     "tiebreakerByWeek": [
@@ -3855,16 +3855,16 @@
       50
     ],
     "lastWeekRank": 54,
-    "currentWeekRank": 100,
+    "currentWeekRank": 80,
     "rankByWeek": [
       54,
-      100
+      80
     ],
-    "change": "-46",
-    "currentWeekWins": 10,
+    "change": "-26",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 86,
+    "currentWeekPoints": 105,
     "currentWeekTiebreaker": 50,
     "survivorPicks": [
       "ARI",
@@ -3884,9 +3884,9 @@
     "marginTotal": 31,
     "highFiveValues": [
       5,
-      3
+      8
     ],
-    "highFiveTotal": 8,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "DAL",
@@ -3902,11 +3902,11 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "TB",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -3915,26 +3915,26 @@
     "username": "Winner",
     "firstName": "Chris",
     "lastName": "Garber",
-    "wins": 23,
+    "wins": 24,
     "winsByWeek": [
       14,
-      9
+      10
     ],
-    "losses": 7,
+    "losses": 8,
     "lossesByWeek": [
       2,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 231,
+    "percent": 0.75,
+    "points": 238,
     "pointsByWeek": [
       123,
-      108
+      115
     ],
     "tbAvg": 48,
     "tiebreakerByWeek": [
@@ -3942,16 +3942,16 @@
       46
     ],
     "lastWeekRank": 5,
-    "currentWeekRank": 5,
+    "currentWeekRank": 9,
     "rankByWeek": [
       5,
-      5
+      9
     ],
-    "change": "--",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-4",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 108,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "PHI",
@@ -4002,26 +4002,26 @@
     "username": "Kimberlee17",
     "firstName": "Kimberlee",
     "lastName": "Horn",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       12,
-      9
+      10
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       4,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 214,
+    "percent": 0.6875,
+    "points": 217,
     "pointsByWeek": [
       106,
-      108
+      111
     ],
     "tbAvg": 52,
     "tiebreakerByWeek": [
@@ -4029,16 +4029,16 @@
       68
     ],
     "lastWeekRank": 71,
-    "currentWeekRank": 41,
+    "currentWeekRank": 72,
     "rankByWeek": [
       71,
-      41
+      72
     ],
-    "change": "+30",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-1",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 108,
+    "currentWeekPoints": 111,
     "currentWeekTiebreaker": 68,
     "survivorPicks": [
       "WAS",
@@ -4089,10 +4089,10 @@
     "username": "FidelCashFlow63",
     "firstName": "Chris",
     "lastName": "Rosario",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       11,
-      12
+      14
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -4104,11 +4104,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 208,
+    "percent": 0.78125,
+    "points": 223,
     "pointsByWeek": [
       98,
-      110
+      125
     ],
     "tbAvg": 40,
     "tiebreakerByWeek": [
@@ -4116,16 +4116,16 @@
       42
     ],
     "lastWeekRank": 94,
-    "currentWeekRank": 54,
+    "currentWeekRank": 45,
     "rankByWeek": [
       94,
-      54
+      45
     ],
-    "change": "+40",
-    "currentWeekWins": 12,
+    "change": "+49",
+    "currentWeekWins": 14,
     "currentWeekLosses": 2,
     "currentWeekTies": 0,
-    "currentWeekPoints": 110,
+    "currentWeekPoints": 125,
     "currentWeekTiebreaker": 42,
     "survivorPicks": [
       "DEN",
@@ -4176,10 +4176,10 @@
     "username": "mlinares",
     "firstName": "Miguel",
     "lastName": "Linares",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       11,
-      11
+      13
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -4191,11 +4191,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 206,
+    "percent": 0.75,
+    "points": 227,
     "pointsByWeek": [
       106,
-      100
+      121
     ],
     "tbAvg": 43.5,
     "tiebreakerByWeek": [
@@ -4203,16 +4203,16 @@
       45
     ],
     "lastWeekRank": 73,
-    "currentWeekRank": 65,
+    "currentWeekRank": 35,
     "rankByWeek": [
       73,
-      65
+      35
     ],
-    "change": "+8",
-    "currentWeekWins": 11,
+    "change": "+38",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 100,
+    "currentWeekPoints": 121,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "ARI",
@@ -4268,17 +4268,17 @@
       9,
       9
     ],
-    "losses": 12,
+    "losses": 14,
     "lossesByWeek": [
       7,
-      5
+      7
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6,
+    "percent": 0.5625,
     "points": 192,
     "pointsByWeek": [
       100,
@@ -4290,14 +4290,14 @@
       67
     ],
     "lastWeekRank": 90,
-    "currentWeekRank": 111,
+    "currentWeekRank": 129,
     "rankByWeek": [
       90,
-      111
+      129
     ],
-    "change": "-21",
+    "change": "-39",
     "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "currentWeekLosses": 7,
     "currentWeekTies": 0,
     "currentWeekPoints": 92,
     "currentWeekTiebreaker": 67,
@@ -4350,15 +4350,15 @@
     "username": "HTech85",
     "firstName": "Cindy",
     "lastName": "Dolan",
-    "wins": 15,
+    "wins": 16,
     "winsByWeek": [
       8,
-      7
+      8
     ],
-    "losses": 15,
+    "losses": 16,
     "lossesByWeek": [
       8,
-      7
+      8
     ],
     "ties": 0,
     "tiesByWeek": [
@@ -4366,10 +4366,10 @@
       0
     ],
     "percent": 0.5,
-    "points": 146,
+    "points": 160,
     "pointsByWeek": [
       79,
-      67
+      81
     ],
     "tbAvg": 45.5,
     "tiebreakerByWeek": [
@@ -4377,16 +4377,16 @@
       47
     ],
     "lastWeekRank": 136,
-    "currentWeekRank": 143,
+    "currentWeekRank": 141,
     "rankByWeek": [
       136,
-      143
+      141
     ],
-    "change": "-7",
-    "currentWeekWins": 7,
-    "currentWeekLosses": 7,
+    "change": "-5",
+    "currentWeekWins": 8,
+    "currentWeekLosses": 8,
     "currentWeekTies": 0,
-    "currentWeekPoints": 67,
+    "currentWeekPoints": 81,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "DEN",
@@ -4406,9 +4406,9 @@
     "marginTotal": 27,
     "highFiveValues": [
       5,
-      2
+      3
     ],
-    "highFiveTotal": 7,
+    "highFiveTotal": 8,
     "highFiveThisWeek": [
       {
         "team": "GB",
@@ -4420,7 +4420,7 @@
       },
       {
         "team": "TB",
-        "won": null
+        "won": true
       },
       {
         "team": "DEN",
@@ -4437,10 +4437,10 @@
     "username": "Dellapeg",
     "firstName": "Gregory",
     "lastName": "Della Penna",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       11,
-      11
+      13
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -4452,11 +4452,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 212,
+    "percent": 0.75,
+    "points": 229,
     "pointsByWeek": [
       99,
-      113
+      130
     ],
     "tbAvg": 44,
     "tiebreakerByWeek": [
@@ -4464,16 +4464,16 @@
       46
     ],
     "lastWeekRank": 91,
-    "currentWeekRank": 45,
+    "currentWeekRank": 28,
     "rankByWeek": [
       91,
-      45
+      28
     ],
-    "change": "+46",
-    "currentWeekWins": 11,
+    "change": "+63",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 113,
+    "currentWeekPoints": 130,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "DEN",
@@ -4524,26 +4524,26 @@
     "username": "disco2010",
     "firstName": "David",
     "lastName": "Galatt",
-    "wins": 24,
+    "wins": 25,
     "winsByWeek": [
       14,
-      10
+      11
     ],
-    "losses": 6,
+    "losses": 7,
     "lossesByWeek": [
       2,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 218,
+    "percent": 0.78125,
+    "points": 222,
     "pointsByWeek": [
       115,
-      103
+      107
     ],
     "tbAvg": 51,
     "tiebreakerByWeek": [
@@ -4551,16 +4551,16 @@
       53
     ],
     "lastWeekRank": 28,
-    "currentWeekRank": 28,
+    "currentWeekRank": 48,
     "rankByWeek": [
       28,
-      28
+      48
     ],
-    "change": "--",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-20",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 107,
     "currentWeekTiebreaker": 53,
     "survivorPicks": [
       "DEN",
@@ -4611,10 +4611,10 @@
     "username": "Jay7288",
     "firstName": "Jason",
     "lastName": "Segarra",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       13,
-      10
+      12
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -4626,11 +4626,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 204,
+    "percent": 0.78125,
+    "points": 220,
     "pointsByWeek": [
       112,
-      92
+      108
     ],
     "tbAvg": 35,
     "tiebreakerByWeek": [
@@ -4638,16 +4638,16 @@
       35
     ],
     "lastWeekRank": 44,
-    "currentWeekRank": 71,
+    "currentWeekRank": 59,
     "rankByWeek": [
       44,
-      71
+      59
     ],
-    "change": "-27",
-    "currentWeekWins": 10,
+    "change": "-15",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 92,
+    "currentWeekPoints": 108,
     "currentWeekTiebreaker": 35,
     "survivorPicks": [
       "DEN",
@@ -4667,9 +4667,9 @@
     "marginTotal": -1,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "LA",
@@ -4689,7 +4689,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -4698,10 +4698,10 @@
     "username": "dandup10$",
     "firstName": "Dan",
     "lastName": "Dupras",
-    "wins": 18,
+    "wins": 20,
     "winsByWeek": [
       10,
-      8
+      10
     ],
     "losses": 12,
     "lossesByWeek": [
@@ -4713,11 +4713,11 @@
       0,
       0
     ],
-    "percent": 0.6,
-    "points": 179,
+    "percent": 0.625,
+    "points": 195,
     "pointsByWeek": [
       96,
-      83
+      99
     ],
     "tbAvg": 50.5,
     "tiebreakerByWeek": [
@@ -4725,16 +4725,16 @@
       47
     ],
     "lastWeekRank": 102,
-    "currentWeekRank": 127,
+    "currentWeekRank": 124,
     "rankByWeek": [
       102,
-      127
+      124
     ],
-    "change": "-25",
-    "currentWeekWins": 8,
+    "change": "-22",
+    "currentWeekWins": 10,
     "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 83,
+    "currentWeekPoints": 99,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "CIN",
@@ -4785,10 +4785,10 @@
     "username": "chrisokelly3@gmail.com",
     "firstName": "Chris",
     "lastName": "Kelly",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       10,
-      11
+      13
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -4800,11 +4800,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 195,
+    "percent": 0.71875,
+    "points": 214,
     "pointsByWeek": [
       94,
-      101
+      120
     ],
     "tbAvg": 47.5,
     "tiebreakerByWeek": [
@@ -4812,16 +4812,16 @@
       43
     ],
     "lastWeekRank": 109,
-    "currentWeekRank": 102,
+    "currentWeekRank": 85,
     "rankByWeek": [
       109,
-      102
+      85
     ],
-    "change": "+7",
-    "currentWeekWins": 11,
+    "change": "+24",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 101,
+    "currentWeekPoints": 120,
     "currentWeekTiebreaker": 43,
     "survivorPicks": [
       "DEN",
@@ -4841,9 +4841,9 @@
     "marginTotal": 25,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -4859,7 +4859,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "CIN",
@@ -4872,10 +4872,10 @@
     "username": "Dmiz33",
     "firstName": "David",
     "lastName": "Misiaszek",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       11,
-      11
+      13
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -4887,11 +4887,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 199,
+    "percent": 0.75,
+    "points": 219,
     "pointsByWeek": [
       97,
-      102
+      122
     ],
     "tbAvg": 42.5,
     "tiebreakerByWeek": [
@@ -4899,16 +4899,16 @@
       44
     ],
     "lastWeekRank": 96,
-    "currentWeekRank": 91,
+    "currentWeekRank": 64,
     "rankByWeek": [
       96,
-      91
+      64
     ],
-    "change": "+5",
-    "currentWeekWins": 11,
+    "change": "+32",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 122,
     "currentWeekTiebreaker": 44,
     "survivorPicks": [
       "NO"
@@ -4927,9 +4927,9 @@
     "marginTotal": 21,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "LA",
@@ -4949,7 +4949,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -4958,10 +4958,10 @@
     "username": "MudFeet",
     "firstName": "Mendel",
     "lastName": "Moise",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       11,
-      11
+      13
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -4973,11 +4973,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 210,
+    "percent": 0.75,
+    "points": 234,
     "pointsByWeek": [
       107,
-      103
+      127
     ],
     "tbAvg": 50,
     "tiebreakerByWeek": [
@@ -4985,16 +4985,16 @@
       47
     ],
     "lastWeekRank": 68,
-    "currentWeekRank": 52,
+    "currentWeekRank": 17,
     "rankByWeek": [
       68,
-      52
+      17
     ],
-    "change": "+16",
-    "currentWeekWins": 11,
+    "change": "+51",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 127,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "PHI",
@@ -5014,9 +5014,9 @@
     "marginTotal": 9,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -5032,7 +5032,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "ARI",
@@ -5045,10 +5045,10 @@
     "username": "pnargi13",
     "firstName": "Peter",
     "lastName": "Nargi",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       11,
-      10
+      12
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -5060,11 +5060,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 202,
+    "percent": 0.71875,
+    "points": 214,
     "pointsByWeek": [
       109,
-      93
+      105
     ],
     "tbAvg": 49,
     "tiebreakerByWeek": [
@@ -5072,16 +5072,16 @@
       49
     ],
     "lastWeekRank": 60,
-    "currentWeekRank": 80,
+    "currentWeekRank": 86,
     "rankByWeek": [
       60,
-      80
+      86
     ],
-    "change": "-20",
-    "currentWeekWins": 10,
+    "change": "-26",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 93,
+    "currentWeekPoints": 105,
     "currentWeekTiebreaker": 49,
     "survivorPicks": [
       "WAS",
@@ -5132,10 +5132,10 @@
     "username": "Beard",
     "firstName": "Matthew",
     "lastName": "Arsenault",
-    "wins": 24,
+    "wins": 26,
     "winsByWeek": [
       13,
-      11
+      13
     ],
     "losses": 6,
     "lossesByWeek": [
@@ -5147,11 +5147,11 @@
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 210,
+    "percent": 0.8125,
+    "points": 222,
     "pointsByWeek": [
       111,
-      99
+      111
     ],
     "tbAvg": 42,
     "tiebreakerByWeek": [
@@ -5159,16 +5159,16 @@
       44
     ],
     "lastWeekRank": 47,
-    "currentWeekRank": 50,
+    "currentWeekRank": 47,
     "rankByWeek": [
       47,
-      50
+      47
     ],
-    "change": "-3",
-    "currentWeekWins": 11,
+    "change": "--",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 99,
+    "currentWeekPoints": 111,
     "currentWeekTiebreaker": 44,
     "survivorPicks": [
       "CIN",
@@ -5219,26 +5219,26 @@
     "username": "Gallivanme",
     "firstName": "Mark",
     "lastName": "Gallivan",
-    "wins": 25,
+    "wins": 26,
     "winsByWeek": [
       14,
-      11
+      12
     ],
-    "losses": 5,
+    "losses": 6,
     "lossesByWeek": [
       2,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.8333333333333334,
-    "points": 226,
+    "percent": 0.8125,
+    "points": 232,
     "pointsByWeek": [
       117,
-      109
+      115
     ],
     "tbAvg": 53,
     "tiebreakerByWeek": [
@@ -5246,16 +5246,16 @@
       48
     ],
     "lastWeekRank": 17,
-    "currentWeekRank": 8,
+    "currentWeekRank": 19,
     "rankByWeek": [
       17,
-      8
+      19
     ],
-    "change": "+9",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "-2",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 109,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "DEN",
@@ -5306,26 +5306,26 @@
     "username": "Teezyfb",
     "firstName": "Tim",
     "lastName": "Zhang",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       11,
-      10
+      11
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       5,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 207,
+    "percent": 0.6875,
+    "points": 219,
     "pointsByWeek": [
       111,
-      96
+      108
     ],
     "tbAvg": 47,
     "tiebreakerByWeek": [
@@ -5333,16 +5333,16 @@
       47
     ],
     "lastWeekRank": 51,
-    "currentWeekRank": 61,
+    "currentWeekRank": 67,
     "rankByWeek": [
       51,
-      61
+      67
     ],
-    "change": "-10",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-16",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 96,
+    "currentWeekPoints": 108,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "PHI",
@@ -5362,9 +5362,9 @@
     "marginTotal": 31,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BAL",
@@ -5376,7 +5376,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "DET",
@@ -5393,10 +5393,10 @@
     "username": "fanman411@gmail.com",
     "firstName": "Dan",
     "lastName": "Martin",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       12,
-      11
+      13
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -5408,11 +5408,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 219,
+    "percent": 0.78125,
+    "points": 231,
     "pointsByWeek": [
       113,
-      106
+      118
     ],
     "tbAvg": 44.5,
     "tiebreakerByWeek": [
@@ -5420,16 +5420,16 @@
       46
     ],
     "lastWeekRank": 37,
-    "currentWeekRank": 26,
+    "currentWeekRank": 24,
     "rankByWeek": [
       37,
-      26
+      24
     ],
-    "change": "+11",
-    "currentWeekWins": 11,
+    "change": "+13",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 106,
+    "currentWeekPoints": 118,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "ARI",
@@ -5480,10 +5480,10 @@
     "username": "tjmartin411",
     "firstName": "Trevor",
     "lastName": "Martin",
-    "wins": 19,
+    "wins": 21,
     "winsByWeek": [
       10,
-      9
+      11
     ],
     "losses": 11,
     "lossesByWeek": [
@@ -5495,11 +5495,11 @@
       0,
       0
     ],
-    "percent": 0.6333333333333333,
-    "points": 187,
+    "percent": 0.65625,
+    "points": 212,
     "pointsByWeek": [
       98,
-      89
+      114
     ],
     "tbAvg": 37,
     "tiebreakerByWeek": [
@@ -5507,16 +5507,16 @@
       38
     ],
     "lastWeekRank": 95,
-    "currentWeekRank": 118,
+    "currentWeekRank": 89,
     "rankByWeek": [
       95,
-      118
+      89
     ],
-    "change": "-23",
-    "currentWeekWins": 9,
+    "change": "+6",
+    "currentWeekWins": 11,
     "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 89,
+    "currentWeekPoints": 114,
     "currentWeekTiebreaker": 38,
     "survivorPicks": [
       "DEN",
@@ -5536,9 +5536,9 @@
     "marginTotal": 31,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "LA",
@@ -5558,7 +5558,7 @@
       },
       {
         "team": "TB",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -5567,10 +5567,10 @@
     "username": "PeteMiz",
     "firstName": "Peter",
     "lastName": "Misiaszek",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       10,
-      13
+      15
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -5582,11 +5582,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 208,
+    "percent": 0.78125,
+    "points": 232,
     "pointsByWeek": [
       102,
-      106
+      130
     ],
     "tbAvg": 46,
     "tiebreakerByWeek": [
@@ -5594,16 +5594,16 @@
       51
     ],
     "lastWeekRank": 83,
-    "currentWeekRank": 55,
+    "currentWeekRank": 21,
     "rankByWeek": [
       83,
-      55
+      21
     ],
-    "change": "+28",
-    "currentWeekWins": 13,
+    "change": "+62",
+    "currentWeekWins": 15,
     "currentWeekLosses": 1,
     "currentWeekTies": 0,
-    "currentWeekPoints": 106,
+    "currentWeekPoints": 130,
     "currentWeekTiebreaker": 51,
     "survivorPicks": [
       "DEN",
@@ -5654,10 +5654,10 @@
     "username": "Wedwards95",
     "firstName": "William",
     "lastName": "Edwards",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       12,
-      11
+      13
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -5669,11 +5669,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 208,
+    "percent": 0.78125,
+    "points": 231,
     "pointsByWeek": [
       110,
-      98
+      121
     ],
     "tbAvg": 34.5,
     "tiebreakerByWeek": [
@@ -5681,16 +5681,16 @@
       38
     ],
     "lastWeekRank": 55,
-    "currentWeekRank": 56,
+    "currentWeekRank": 25,
     "rankByWeek": [
       55,
-      56
+      25
     ],
-    "change": "-1",
-    "currentWeekWins": 11,
+    "change": "+30",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 98,
+    "currentWeekPoints": 121,
     "currentWeekTiebreaker": 38,
     "survivorPicks": [
       "PHI",
@@ -5741,26 +5741,26 @@
     "username": "mmaltz",
     "firstName": "Mark",
     "lastName": "Maltz",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       12,
-      9
+      10
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       4,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 213,
+    "percent": 0.6875,
+    "points": 216,
     "pointsByWeek": [
       111,
-      102
+      105
     ],
     "tbAvg": 50.5,
     "tiebreakerByWeek": [
@@ -5768,16 +5768,16 @@
       51
     ],
     "lastWeekRank": 49,
-    "currentWeekRank": 44,
+    "currentWeekRank": 77,
     "rankByWeek": [
       49,
-      44
+      77
     ],
-    "change": "+5",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-28",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 105,
     "currentWeekTiebreaker": 51,
     "survivorPicks": [
       "DEN",
@@ -5828,26 +5828,26 @@
     "username": "SPJ",
     "firstName": "Stephen",
     "lastName": "Jamieson",
-    "wins": 22,
+    "wins": 23,
     "winsByWeek": [
       13,
-      9
+      10
     ],
-    "losses": 8,
+    "losses": 9,
     "lossesByWeek": [
       3,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 204,
+    "percent": 0.71875,
+    "points": 210,
     "pointsByWeek": [
       116,
-      88
+      94
     ],
     "tbAvg": 42,
     "tiebreakerByWeek": [
@@ -5855,16 +5855,16 @@
       42
     ],
     "lastWeekRank": 25,
-    "currentWeekRank": 72,
+    "currentWeekRank": 93,
     "rankByWeek": [
       25,
-      72
+      93
     ],
-    "change": "-47",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-68",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 88,
+    "currentWeekPoints": 94,
     "currentWeekTiebreaker": 42,
     "survivorPicks": [
       "ARI",
@@ -5915,10 +5915,10 @@
     "username": "ABrink64",
     "firstName": "Aidan",
     "lastName": "Brink",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       13,
-      10
+      12
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -5930,11 +5930,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 224,
+    "percent": 0.78125,
+    "points": 234,
     "pointsByWeek": [
       117,
-      107
+      117
     ],
     "tbAvg": 46,
     "tiebreakerByWeek": [
@@ -5948,10 +5948,10 @@
       14
     ],
     "change": "+5",
-    "currentWeekWins": 10,
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 107,
+    "currentWeekPoints": 117,
     "currentWeekTiebreaker": 51,
     "survivorPicks": [
       "DEN",
@@ -6002,26 +6002,26 @@
     "username": "rob6918",
     "firstName": "Robert",
     "lastName": "Garcia",
-    "wins": 24,
+    "wins": 25,
     "winsByWeek": [
       12,
-      12
+      13
     ],
-    "losses": 6,
+    "losses": 7,
     "lossesByWeek": [
       4,
-      2
+      3
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 221,
+    "percent": 0.78125,
+    "points": 227,
     "pointsByWeek": [
       109,
-      112
+      118
     ],
     "tbAvg": 59,
     "tiebreakerByWeek": [
@@ -6029,16 +6029,16 @@
       56
     ],
     "lastWeekRank": 58,
-    "currentWeekRank": 19,
+    "currentWeekRank": 33,
     "rankByWeek": [
       58,
-      19
+      33
     ],
-    "change": "+39",
-    "currentWeekWins": 12,
-    "currentWeekLosses": 2,
+    "change": "+25",
+    "currentWeekWins": 13,
+    "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 112,
+    "currentWeekPoints": 118,
     "currentWeekTiebreaker": 56,
     "survivorPicks": [
       "PHI",
@@ -6089,10 +6089,10 @@
     "username": "wasilva111@gmail.com",
     "firstName": "William",
     "lastName": "Silva",
-    "wins": 18,
+    "wins": 20,
     "winsByWeek": [
       9,
-      9
+      11
     ],
     "losses": 12,
     "lossesByWeek": [
@@ -6104,11 +6104,11 @@
       0,
       0
     ],
-    "percent": 0.6,
-    "points": 157,
+    "percent": 0.625,
+    "points": 182,
     "pointsByWeek": [
       81,
-      76
+      101
     ],
     "tbAvg": 50.5,
     "tiebreakerByWeek": [
@@ -6116,16 +6116,16 @@
       52
     ],
     "lastWeekRank": 133,
-    "currentWeekRank": 139,
+    "currentWeekRank": 135,
     "rankByWeek": [
       133,
-      139
+      135
     ],
-    "change": "-6",
-    "currentWeekWins": 9,
+    "change": "-2",
+    "currentWeekWins": 11,
     "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 76,
+    "currentWeekPoints": 101,
     "currentWeekTiebreaker": 52,
     "survivorPicks": [
       "MIA"
@@ -6175,26 +6175,26 @@
     "username": "Lisa Gugs",
     "firstName": "Lisa",
     "lastName": "Gugliada",
-    "wins": 20,
+    "wins": 21,
     "winsByWeek": [
       10,
-      10
+      11
     ],
-    "losses": 10,
+    "losses": 11,
     "lossesByWeek": [
       6,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 185,
+    "percent": 0.65625,
+    "points": 198,
     "pointsByWeek": [
       95,
-      90
+      103
     ],
     "tbAvg": 53.5,
     "tiebreakerByWeek": [
@@ -6202,16 +6202,16 @@
       49
     ],
     "lastWeekRank": 105,
-    "currentWeekRank": 120,
+    "currentWeekRank": 121,
     "rankByWeek": [
       105,
-      120
+      121
     ],
-    "change": "-15",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-16",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 90,
+    "currentWeekPoints": 103,
     "currentWeekTiebreaker": 49,
     "survivorPicks": [
       "ARI",
@@ -6262,26 +6262,26 @@
     "username": "Dmaltz",
     "firstName": "Devon",
     "lastName": "Maltz",
-    "wins": 23,
+    "wins": 24,
     "winsByWeek": [
       13,
-      10
+      11
     ],
-    "losses": 7,
+    "losses": 8,
     "lossesByWeek": [
       3,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 220,
+    "percent": 0.75,
+    "points": 232,
     "pointsByWeek": [
       118,
-      102
+      114
     ],
     "tbAvg": 41.5,
     "tiebreakerByWeek": [
@@ -6289,16 +6289,16 @@
       45
     ],
     "lastWeekRank": 14,
-    "currentWeekRank": 24,
+    "currentWeekRank": 23,
     "rankByWeek": [
       14,
-      24
+      23
     ],
-    "change": "-10",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-9",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 114,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "DEN",
@@ -6349,10 +6349,10 @@
     "username": "njbolino",
     "firstName": "Nick",
     "lastName": "Bolino",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       10,
-      10
+      12
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -6364,11 +6364,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 194,
+    "percent": 0.6875,
+    "points": 205,
     "pointsByWeek": [
       96,
-      98
+      109
     ],
     "tbAvg": 38,
     "tiebreakerByWeek": [
@@ -6376,16 +6376,16 @@
       42
     ],
     "lastWeekRank": 103,
-    "currentWeekRank": 106,
+    "currentWeekRank": 107,
     "rankByWeek": [
       103,
-      106
+      107
     ],
-    "change": "-3",
-    "currentWeekWins": 10,
+    "change": "-4",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 98,
+    "currentWeekPoints": 109,
     "currentWeekTiebreaker": 42,
     "survivorPicks": [
       "DEN",
@@ -6436,10 +6436,10 @@
     "username": "Cfan",
     "firstName": "Chris",
     "lastName": "Fandl",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       10,
-      10
+      12
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -6451,11 +6451,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 200,
+    "percent": 0.6875,
+    "points": 210,
     "pointsByWeek": [
       97,
-      103
+      113
     ],
     "tbAvg": 44,
     "tiebreakerByWeek": [
@@ -6463,16 +6463,16 @@
       44
     ],
     "lastWeekRank": 98,
-    "currentWeekRank": 88,
+    "currentWeekRank": 94,
     "rankByWeek": [
       98,
-      88
+      94
     ],
-    "change": "+10",
-    "currentWeekWins": 10,
+    "change": "+4",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 113,
     "currentWeekTiebreaker": 44,
     "survivorPicks": [
       "DEN",
@@ -6523,10 +6523,10 @@
     "username": "Klinares",
     "firstName": "Kelsey",
     "lastName": "Linares",
-    "wins": 19,
+    "wins": 21,
     "winsByWeek": [
       9,
-      10
+      12
     ],
     "losses": 11,
     "lossesByWeek": [
@@ -6538,11 +6538,11 @@
       0,
       0
     ],
-    "percent": 0.6333333333333333,
-    "points": 191,
+    "percent": 0.65625,
+    "points": 212,
     "pointsByWeek": [
       94,
-      97
+      118
     ],
     "tbAvg": 44.5,
     "tiebreakerByWeek": [
@@ -6550,16 +6550,16 @@
       44
     ],
     "lastWeekRank": 113,
-    "currentWeekRank": 112,
+    "currentWeekRank": 90,
     "rankByWeek": [
       113,
-      112
+      90
     ],
-    "change": "+1",
-    "currentWeekWins": 10,
+    "change": "+23",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 97,
+    "currentWeekPoints": 118,
     "currentWeekTiebreaker": 44,
     "survivorPicks": [
       "DEN",
@@ -6573,15 +6573,15 @@
       },
       {
         "team": "LAC",
-        "margin": null
+        "margin": 11
       }
     ],
-    "marginTotal": 8,
+    "marginTotal": 19,
     "highFiveValues": [
       3,
-      5
+      8
     ],
-    "highFiveTotal": 8,
+    "highFiveTotal": 11,
     "highFiveThisWeek": [
       {
         "team": "DAL",
@@ -6593,7 +6593,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "CIN",
@@ -6610,10 +6610,10 @@
     "username": "anniedolan",
     "firstName": "Annie",
     "lastName": "Dolan",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       10,
-      10
+      12
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -6625,11 +6625,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 192,
+    "percent": 0.6875,
+    "points": 210,
     "pointsByWeek": [
       96,
-      96
+      114
     ],
     "tbAvg": 39.5,
     "tiebreakerByWeek": [
@@ -6637,16 +6637,16 @@
       47
     ],
     "lastWeekRank": 104,
-    "currentWeekRank": 108,
+    "currentWeekRank": 95,
     "rankByWeek": [
       104,
-      108
+      95
     ],
-    "change": "-4",
-    "currentWeekWins": 10,
+    "change": "+9",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 96,
+    "currentWeekPoints": 114,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "DEN",
@@ -6666,9 +6666,9 @@
     "marginTotal": 7,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "LA",
@@ -6688,7 +6688,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -6697,10 +6697,10 @@
     "username": "mbussinelli20",
     "firstName": "Michael",
     "lastName": "Bussinelli",
-    "wins": 25,
+    "wins": 27,
     "winsByWeek": [
       12,
-      13
+      15
     ],
     "losses": 5,
     "lossesByWeek": [
@@ -6712,11 +6712,11 @@
       0,
       0
     ],
-    "percent": 0.8333333333333334,
-    "points": 211,
+    "percent": 0.84375,
+    "points": 234,
     "pointsByWeek": [
       105,
-      106
+      129
     ],
     "tbAvg": 42,
     "tiebreakerByWeek": [
@@ -6724,16 +6724,16 @@
       36
     ],
     "lastWeekRank": 75,
-    "currentWeekRank": 46,
+    "currentWeekRank": 13,
     "rankByWeek": [
       75,
-      46
+      13
     ],
-    "change": "+29",
-    "currentWeekWins": 13,
+    "change": "+62",
+    "currentWeekWins": 15,
     "currentWeekLosses": 1,
     "currentWeekTies": 0,
-    "currentWeekPoints": 106,
+    "currentWeekPoints": 129,
     "currentWeekTiebreaker": 36,
     "survivorPicks": [
       "DEN",
@@ -6753,9 +6753,9 @@
     "marginTotal": 31,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "LA",
@@ -6775,7 +6775,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -6784,10 +6784,10 @@
     "username": "rdgjr1994",
     "firstName": "Richard",
     "lastName": "Grenier",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       12,
-      10
+      12
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -6799,11 +6799,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 206,
+    "percent": 0.75,
+    "points": 218,
     "pointsByWeek": [
       108,
-      98
+      110
     ],
     "tbAvg": 54,
     "tiebreakerByWeek": [
@@ -6811,16 +6811,16 @@
       52
     ],
     "lastWeekRank": 64,
-    "currentWeekRank": 66,
+    "currentWeekRank": 69,
     "rankByWeek": [
       64,
-      66
+      69
     ],
-    "change": "-2",
-    "currentWeekWins": 10,
+    "change": "-5",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 98,
+    "currentWeekPoints": 110,
     "currentWeekTiebreaker": 52,
     "survivorPicks": [
       "WAS",
@@ -6871,26 +6871,26 @@
     "username": "bmaltz5@gmail.com",
     "firstName": "Billy",
     "lastName": "Maltz",
-    "wins": 20,
+    "wins": 21,
     "winsByWeek": [
       10,
-      10
+      11
     ],
-    "losses": 10,
+    "losses": 11,
     "lossesByWeek": [
       6,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 206,
+    "percent": 0.65625,
+    "points": 219,
     "pointsByWeek": [
       104,
-      102
+      115
     ],
     "tbAvg": 26,
     "tiebreakerByWeek": [
@@ -6898,16 +6898,16 @@
       28
     ],
     "lastWeekRank": 80,
-    "currentWeekRank": 69,
+    "currentWeekRank": 68,
     "rankByWeek": [
       80,
-      69
+      68
     ],
-    "change": "+11",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "+12",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 28,
     "survivorPicks": [
       "DEN",
@@ -6958,10 +6958,10 @@
     "username": "Lobstaman",
     "firstName": "Todd",
     "lastName": "Mosher",
-    "wins": 24,
+    "wins": 26,
     "winsByWeek": [
       14,
-      10
+      12
     ],
     "losses": 6,
     "lossesByWeek": [
@@ -6973,11 +6973,11 @@
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 224,
+    "percent": 0.8125,
+    "points": 235,
     "pointsByWeek": [
       120,
-      104
+      115
     ],
     "tbAvg": 42,
     "tiebreakerByWeek": [
@@ -6985,16 +6985,16 @@
       42
     ],
     "lastWeekRank": 10,
-    "currentWeekRank": 10,
+    "currentWeekRank": 12,
     "rankByWeek": [
       10,
-      10
+      12
     ],
-    "change": "--",
-    "currentWeekWins": 10,
+    "change": "-2",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 104,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 42,
     "survivorPicks": [
       "WAS",
@@ -7050,17 +7050,17 @@
       8,
       9
     ],
-    "losses": 13,
+    "losses": 15,
     "lossesByWeek": [
       8,
-      5
+      7
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.5666666666666667,
+    "percent": 0.53125,
     "points": 133,
     "pointsByWeek": [
       74,
@@ -7079,7 +7079,7 @@
     ],
     "change": "-4",
     "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "currentWeekLosses": 7,
     "currentWeekTies": 0,
     "currentWeekPoints": 59,
     "currentWeekTiebreaker": 54,
@@ -7131,10 +7131,10 @@
     "username": "ali_losp",
     "firstName": "Ali",
     "lastName": "Lospinuso",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       11,
-      10
+      12
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -7146,11 +7146,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 202,
+    "percent": 0.71875,
+    "points": 219,
     "pointsByWeek": [
       107,
-      95
+      112
     ],
     "tbAvg": 42.5,
     "tiebreakerByWeek": [
@@ -7158,16 +7158,16 @@
       48
     ],
     "lastWeekRank": 69,
-    "currentWeekRank": 81,
+    "currentWeekRank": 65,
     "rankByWeek": [
       69,
-      81
+      65
     ],
-    "change": "-12",
-    "currentWeekWins": 10,
+    "change": "+4",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 95,
+    "currentWeekPoints": 112,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "DEN",
@@ -7187,9 +7187,9 @@
     "marginTotal": 32,
     "highFiveValues": [
       3,
-      5
+      8
     ],
-    "highFiveTotal": 8,
+    "highFiveTotal": 11,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -7205,7 +7205,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "ARI",
@@ -7218,26 +7218,26 @@
     "username": "IanJarred",
     "firstName": "Ian",
     "lastName": "Dick",
-    "wins": 16,
+    "wins": 17,
     "winsByWeek": [
       10,
-      6
+      7
     ],
-    "losses": 14,
+    "losses": 15,
     "lossesByWeek": [
       6,
-      8
+      9
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.5333333333333333,
-    "points": 157,
+    "percent": 0.53125,
+    "points": 164,
     "pointsByWeek": [
       90,
-      67
+      74
     ],
     "tbAvg": 48,
     "tiebreakerByWeek": [
@@ -7251,10 +7251,10 @@
       140
     ],
     "change": "-15",
-    "currentWeekWins": 6,
-    "currentWeekLosses": 8,
+    "currentWeekWins": 7,
+    "currentWeekLosses": 9,
     "currentWeekTies": 0,
-    "currentWeekPoints": 67,
+    "currentWeekPoints": 74,
     "currentWeekTiebreaker": 51,
     "survivorPicks": [
       "ARI",
@@ -7305,10 +7305,10 @@
     "username": "mrudberg",
     "firstName": "Melissa",
     "lastName": "Rudberg",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       10,
-      11
+      13
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -7320,11 +7320,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 186,
+    "percent": 0.71875,
+    "points": 201,
     "pointsByWeek": [
       90,
-      96
+      111
     ],
     "tbAvg": 39.5,
     "tiebreakerByWeek": [
@@ -7332,16 +7332,16 @@
       42
     ],
     "lastWeekRank": 126,
-    "currentWeekRank": 119,
+    "currentWeekRank": 117,
     "rankByWeek": [
       126,
-      119
+      117
     ],
-    "change": "+7",
-    "currentWeekWins": 11,
+    "change": "+9",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 96,
+    "currentWeekPoints": 111,
     "currentWeekTiebreaker": 42,
     "survivorPicks": [
       "WAS",
@@ -7361,9 +7361,9 @@
     "marginTotal": 24,
     "highFiveValues": [
       3,
-      5
+      8
     ],
-    "highFiveTotal": 8,
+    "highFiveTotal": 11,
     "highFiveThisWeek": [
       {
         "team": "SF",
@@ -7375,7 +7375,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "BAL",
@@ -7397,17 +7397,17 @@
       7,
       5
     ],
-    "losses": 18,
+    "losses": 20,
     "lossesByWeek": [
       9,
-      9
+      11
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.4,
+    "percent": 0.375,
     "points": 90,
     "pointsByWeek": [
       75,
@@ -7426,7 +7426,7 @@
     ],
     "change": "-7",
     "currentWeekWins": 5,
-    "currentWeekLosses": 9,
+    "currentWeekLosses": 11,
     "currentWeekTies": 0,
     "currentWeekPoints": 15,
     "currentWeekTiebreaker": 0,
@@ -7458,26 +7458,26 @@
     "username": "Gdifiore",
     "firstName": "George",
     "lastName": "Difiore",
-    "wins": 20,
+    "wins": 21,
     "winsByWeek": [
       10,
-      10
+      11
     ],
-    "losses": 10,
+    "losses": 11,
     "lossesByWeek": [
       6,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 189,
+    "percent": 0.65625,
+    "points": 203,
     "pointsByWeek": [
       94,
-      95
+      109
     ],
     "tbAvg": 46.5,
     "tiebreakerByWeek": [
@@ -7485,16 +7485,16 @@
       45
     ],
     "lastWeekRank": 110,
-    "currentWeekRank": 115,
+    "currentWeekRank": 114,
     "rankByWeek": [
       110,
-      115
+      114
     ],
-    "change": "-5",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-4",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 95,
+    "currentWeekPoints": 109,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "DEN",
@@ -7545,10 +7545,10 @@
     "username": "bedwards",
     "firstName": "Ben",
     "lastName": "Edwards",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       12,
-      11
+      13
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -7560,11 +7560,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 221,
+    "percent": 0.78125,
+    "points": 238,
     "pointsByWeek": [
       118,
-      103
+      120
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -7572,16 +7572,16 @@
       48
     ],
     "lastWeekRank": 16,
-    "currentWeekRank": 21,
+    "currentWeekRank": 8,
     "rankByWeek": [
       16,
-      21
+      8
     ],
-    "change": "-5",
-    "currentWeekWins": 11,
+    "change": "+8",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 120,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "DEN",
@@ -7601,9 +7601,9 @@
     "marginTotal": 31,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -7619,7 +7619,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "ARI",
@@ -7632,26 +7632,26 @@
     "username": "Jti3200",
     "firstName": "Jarred",
     "lastName": "Irvin",
-    "wins": 20,
+    "wins": 21,
     "winsByWeek": [
       11,
-      9
+      10
     ],
-    "losses": 10,
+    "losses": 11,
     "lossesByWeek": [
       5,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 192,
+    "percent": 0.65625,
+    "points": 203,
     "pointsByWeek": [
       94,
-      98
+      109
     ],
     "tbAvg": 48,
     "tiebreakerByWeek": [
@@ -7659,16 +7659,16 @@
       48
     ],
     "lastWeekRank": 107,
-    "currentWeekRank": 109,
+    "currentWeekRank": 115,
     "rankByWeek": [
       107,
-      109
+      115
     ],
-    "change": "-2",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-8",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 98,
+    "currentWeekPoints": 109,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "WAS",
@@ -7719,10 +7719,10 @@
     "username": "Danielle",
     "firstName": "Danielle",
     "lastName": "Ustas",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       13,
-      10
+      12
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -7734,11 +7734,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 220,
+    "percent": 0.78125,
+    "points": 227,
     "pointsByWeek": [
       119,
-      101
+      108
     ],
     "tbAvg": 47,
     "tiebreakerByWeek": [
@@ -7746,16 +7746,16 @@
       49
     ],
     "lastWeekRank": 12,
-    "currentWeekRank": 25,
+    "currentWeekRank": 34,
     "rankByWeek": [
       12,
-      25
+      34
     ],
-    "change": "-13",
-    "currentWeekWins": 10,
+    "change": "-22",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 101,
+    "currentWeekPoints": 108,
     "currentWeekTiebreaker": 49,
     "survivorPicks": [
       "DEN",
@@ -7806,10 +7806,10 @@
     "username": "JefferJ17",
     "firstName": "Jeff",
     "lastName": "Heotzler",
-    "wins": 24,
+    "wins": 26,
     "winsByWeek": [
       14,
-      10
+      12
     ],
     "losses": 6,
     "lossesByWeek": [
@@ -7821,11 +7821,11 @@
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 227,
+    "percent": 0.8125,
+    "points": 236,
     "pointsByWeek": [
       115,
-      112
+      121
     ],
     "tbAvg": 40,
     "tiebreakerByWeek": [
@@ -7833,16 +7833,16 @@
       39
     ],
     "lastWeekRank": 29,
-    "currentWeekRank": 7,
+    "currentWeekRank": 11,
     "rankByWeek": [
       29,
-      7
+      11
     ],
-    "change": "+22",
-    "currentWeekWins": 10,
+    "change": "+18",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 112,
+    "currentWeekPoints": 121,
     "currentWeekTiebreaker": 39,
     "survivorPicks": [
       "PHI",
@@ -7893,10 +7893,10 @@
     "username": "Cheryl",
     "firstName": "Cheryl",
     "lastName": "Cook",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       12,
-      9
+      11
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -7908,11 +7908,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 206,
+    "percent": 0.71875,
+    "points": 221,
     "pointsByWeek": [
       111,
-      95
+      110
     ],
     "tbAvg": 43,
     "tiebreakerByWeek": [
@@ -7920,16 +7920,16 @@
       48
     ],
     "lastWeekRank": 50,
-    "currentWeekRank": 68,
+    "currentWeekRank": 57,
     "rankByWeek": [
       50,
-      68
+      57
     ],
-    "change": "-18",
-    "currentWeekWins": 9,
+    "change": "-7",
+    "currentWeekWins": 11,
     "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 95,
+    "currentWeekPoints": 110,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "ARI",
@@ -7980,26 +7980,26 @@
     "username": "2CooksInTheKitchen",
     "firstName": "Andrew (& Katie)",
     "lastName": "Cook",
-    "wins": 22,
+    "wins": 23,
     "winsByWeek": [
       10,
-      12
+      13
     ],
-    "losses": 8,
+    "losses": 9,
     "lossesByWeek": [
       6,
-      2
+      3
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 194,
+    "percent": 0.71875,
+    "points": 203,
     "pointsByWeek": [
       91,
-      103
+      112
     ],
     "tbAvg": 33,
     "tiebreakerByWeek": [
@@ -8007,16 +8007,16 @@
       28
     ],
     "lastWeekRank": 122,
-    "currentWeekRank": 104,
+    "currentWeekRank": 111,
     "rankByWeek": [
       122,
-      104
+      111
     ],
-    "change": "+18",
-    "currentWeekWins": 12,
-    "currentWeekLosses": 2,
+    "change": "+11",
+    "currentWeekWins": 13,
+    "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 112,
     "currentWeekTiebreaker": 28,
     "survivorPicks": [
       "CIN",
@@ -8067,26 +8067,26 @@
     "username": "AAmodeo",
     "firstName": "Ashley",
     "lastName": "Amodeo",
-    "wins": 22,
+    "wins": 23,
     "winsByWeek": [
       12,
-      10
+      11
     ],
-    "losses": 8,
+    "losses": 9,
     "lossesByWeek": [
       4,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 195,
+    "percent": 0.71875,
+    "points": 199,
     "pointsByWeek": [
       113,
-      82
+      86
     ],
     "tbAvg": 50.5,
     "tiebreakerByWeek": [
@@ -8094,16 +8094,16 @@
       52
     ],
     "lastWeekRank": 38,
-    "currentWeekRank": 101,
+    "currentWeekRank": 119,
     "rankByWeek": [
       38,
-      101
+      119
     ],
-    "change": "-63",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-81",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 82,
+    "currentWeekPoints": 86,
     "currentWeekTiebreaker": 52,
     "survivorPicks": [
       "KC"
@@ -8153,10 +8153,10 @@
     "username": "Dg727156",
     "firstName": "Dan",
     "lastName": "Goldfarb",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       11,
-      9
+      11
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -8168,11 +8168,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 200,
+    "percent": 0.6875,
+    "points": 215,
     "pointsByWeek": [
       107,
-      93
+      108
     ],
     "tbAvg": 46,
     "tiebreakerByWeek": [
@@ -8180,16 +8180,16 @@
       48
     ],
     "lastWeekRank": 70,
-    "currentWeekRank": 89,
+    "currentWeekRank": 82,
     "rankByWeek": [
       70,
-      89
+      82
     ],
-    "change": "-19",
-    "currentWeekWins": 9,
+    "change": "-12",
+    "currentWeekWins": 11,
     "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 93,
+    "currentWeekPoints": 108,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "DEN",
@@ -8240,26 +8240,26 @@
     "username": "marinagialanella",
     "firstName": "Marina",
     "lastName": "Gialanella",
-    "wins": 23,
+    "wins": 24,
     "winsByWeek": [
       12,
-      11
+      12
     ],
-    "losses": 7,
+    "losses": 8,
     "lossesByWeek": [
       4,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 218,
+    "percent": 0.75,
+    "points": 222,
     "pointsByWeek": [
       115,
-      103
+      107
     ],
     "tbAvg": 44,
     "tiebreakerByWeek": [
@@ -8267,16 +8267,16 @@
       47
     ],
     "lastWeekRank": 32,
-    "currentWeekRank": 29,
+    "currentWeekRank": 49,
     "rankByWeek": [
       32,
-      29
+      49
     ],
-    "change": "+3",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "-17",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 107,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "ARI",
@@ -8327,26 +8327,26 @@
     "username": "chipgilgen",
     "firstName": "Chip",
     "lastName": "Gilgen",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       11,
-      10
+      11
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       5,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 203,
+    "percent": 0.6875,
+    "points": 209,
     "pointsByWeek": [
       108,
-      95
+      101
     ],
     "tbAvg": 48.5,
     "tiebreakerByWeek": [
@@ -8354,16 +8354,16 @@
       52
     ],
     "lastWeekRank": 65,
-    "currentWeekRank": 75,
+    "currentWeekRank": 97,
     "rankByWeek": [
       65,
-      75
+      97
     ],
-    "change": "-10",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-32",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 95,
+    "currentWeekPoints": 101,
     "currentWeekTiebreaker": 52,
     "survivorPicks": [
       "DEN",
@@ -8383,9 +8383,9 @@
     "marginTotal": 32,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "BAL",
@@ -8405,7 +8405,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -8414,10 +8414,10 @@
     "username": "Careyak128",
     "firstName": "Carey",
     "lastName": "Kaiser",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       11,
-      12
+      14
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -8429,11 +8429,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 211,
+    "percent": 0.78125,
+    "points": 223,
     "pointsByWeek": [
       101,
-      110
+      122
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -8441,16 +8441,16 @@
       45
     ],
     "lastWeekRank": 88,
-    "currentWeekRank": 47,
+    "currentWeekRank": 46,
     "rankByWeek": [
       88,
-      47
+      46
     ],
-    "change": "+41",
-    "currentWeekWins": 12,
+    "change": "+42",
+    "currentWeekWins": 14,
     "currentWeekLosses": 2,
     "currentWeekTies": 0,
-    "currentWeekPoints": 110,
+    "currentWeekPoints": 122,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "CIN",
@@ -8501,10 +8501,10 @@
     "username": "kmattei17",
     "firstName": "Kristen",
     "lastName": "Misiaszek",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       11,
-      10
+      12
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -8516,11 +8516,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 207,
+    "percent": 0.71875,
+    "points": 220,
     "pointsByWeek": [
       104,
-      103
+      116
     ],
     "tbAvg": 37,
     "tiebreakerByWeek": [
@@ -8534,10 +8534,10 @@
       62
     ],
     "change": "+17",
-    "currentWeekWins": 10,
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 116,
     "currentWeekTiebreaker": 37,
     "survivorPicks": [
       "DEN",
@@ -8588,10 +8588,10 @@
     "username": "LobsterVsDeepDish",
     "firstName": "Ben",
     "lastName": "Nicholson",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       12,
-      10
+      12
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -8603,11 +8603,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 215,
+    "percent": 0.75,
+    "points": 225,
     "pointsByWeek": [
       113,
-      102
+      112
     ],
     "tbAvg": 44.5,
     "tiebreakerByWeek": [
@@ -8615,16 +8615,16 @@
       45
     ],
     "lastWeekRank": 39,
-    "currentWeekRank": 38,
+    "currentWeekRank": 42,
     "rankByWeek": [
       39,
-      38
+      42
     ],
-    "change": "+1",
-    "currentWeekWins": 10,
+    "change": "-3",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 112,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "DEN",
@@ -8675,26 +8675,26 @@
     "username": "timweng",
     "firstName": "Tim",
     "lastName": "Weng",
-    "wins": 23,
+    "wins": 24,
     "winsByWeek": [
       12,
-      11
+      12
     ],
-    "losses": 7,
+    "losses": 8,
     "lossesByWeek": [
       4,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 210,
+    "percent": 0.75,
+    "points": 220,
     "pointsByWeek": [
       101,
-      109
+      119
     ],
     "tbAvg": 44.5,
     "tiebreakerByWeek": [
@@ -8702,16 +8702,16 @@
       45
     ],
     "lastWeekRank": 85,
-    "currentWeekRank": 51,
+    "currentWeekRank": 60,
     "rankByWeek": [
       85,
-      51
+      60
     ],
-    "change": "+34",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "+25",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 109,
+    "currentWeekPoints": 119,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "DEN",
@@ -8762,26 +8762,26 @@
     "username": "Jrod15",
     "firstName": "Joe",
     "lastName": "Rodriguez",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       12,
-      9
+      10
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       4,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 216,
+    "percent": 0.6875,
+    "points": 228,
     "pointsByWeek": [
       117,
-      99
+      111
     ],
     "tbAvg": 45.5,
     "tiebreakerByWeek": [
@@ -8789,16 +8789,16 @@
       46
     ],
     "lastWeekRank": 21,
-    "currentWeekRank": 35,
+    "currentWeekRank": 32,
     "rankByWeek": [
       21,
-      35
+      32
     ],
-    "change": "-14",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-11",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 99,
+    "currentWeekPoints": 111,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "ARI",
@@ -8818,9 +8818,9 @@
     "marginTotal": 32,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "DET",
@@ -8840,7 +8840,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -8849,10 +8849,10 @@
     "username": "mattnewman007",
     "firstName": "Matt",
     "lastName": "Newman",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       11,
-      9
+      11
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -8864,11 +8864,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 151,
+    "percent": 0.6875,
+    "points": 182,
     "pointsByWeek": [
       94,
-      57
+      88
     ],
     "tbAvg": 44.5,
     "tiebreakerByWeek": [
@@ -8876,16 +8876,16 @@
       52
     ],
     "lastWeekRank": 108,
-    "currentWeekRank": 141,
+    "currentWeekRank": 134,
     "rankByWeek": [
       108,
-      141
+      134
     ],
-    "change": "-33",
-    "currentWeekWins": 9,
+    "change": "-26",
+    "currentWeekWins": 11,
     "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 57,
+    "currentWeekPoints": 88,
     "currentWeekTiebreaker": 52,
     "survivorPicks": [
       "DEN",
@@ -8936,10 +8936,10 @@
     "username": "_zoroclapt",
     "firstName": "Suswara",
     "lastName": "Mullapudi",
-    "wins": 19,
+    "wins": 21,
     "winsByWeek": [
       9,
-      10
+      12
     ],
     "losses": 11,
     "lossesByWeek": [
@@ -8951,11 +8951,11 @@
       0,
       0
     ],
-    "percent": 0.6333333333333333,
-    "points": 183,
+    "percent": 0.65625,
+    "points": 193,
     "pointsByWeek": [
       92,
-      91
+      101
     ],
     "tbAvg": 46,
     "tiebreakerByWeek": [
@@ -8963,16 +8963,16 @@
       46
     ],
     "lastWeekRank": 121,
-    "currentWeekRank": 122,
+    "currentWeekRank": 125,
     "rankByWeek": [
       121,
-      122
+      125
     ],
-    "change": "-1",
-    "currentWeekWins": 10,
+    "change": "-4",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 91,
+    "currentWeekPoints": 101,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "WAS",
@@ -9023,10 +9023,10 @@
     "username": "noahjones",
     "firstName": "Noah",
     "lastName": "Jones",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       10,
-      10
+      12
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -9038,11 +9038,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 189,
+    "percent": 0.6875,
+    "points": 202,
     "pointsByWeek": [
       93,
-      96
+      109
     ],
     "tbAvg": 40.5,
     "tiebreakerByWeek": [
@@ -9056,10 +9056,10 @@
       116
     ],
     "change": "--",
-    "currentWeekWins": 10,
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 96,
+    "currentWeekPoints": 109,
     "currentWeekTiebreaker": 34,
     "survivorPicks": [
       "NE"
@@ -9114,17 +9114,17 @@
       12,
       11
     ],
-    "losses": 7,
+    "losses": 9,
     "lossesByWeek": [
       4,
-      3
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7666666666666667,
+    "percent": 0.71875,
     "points": 222,
     "pointsByWeek": [
       121,
@@ -9136,14 +9136,14 @@
       51
     ],
     "lastWeekRank": 9,
-    "currentWeekRank": 17,
+    "currentWeekRank": 51,
     "rankByWeek": [
       9,
-      17
+      51
     ],
-    "change": "-8",
+    "change": "-42",
     "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
     "currentWeekPoints": 101,
     "currentWeekTiebreaker": 51,
@@ -9196,10 +9196,10 @@
     "username": "erossi",
     "firstName": "Eric",
     "lastName": "Rossi",
-    "wins": 24,
+    "wins": 26,
     "winsByWeek": [
       13,
-      11
+      13
     ],
     "losses": 6,
     "lossesByWeek": [
@@ -9211,11 +9211,11 @@
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 224,
+    "percent": 0.8125,
+    "points": 243,
     "pointsByWeek": [
       118,
-      106
+      125
     ],
     "tbAvg": 46.5,
     "tiebreakerByWeek": [
@@ -9223,16 +9223,16 @@
       45
     ],
     "lastWeekRank": 15,
-    "currentWeekRank": 11,
+    "currentWeekRank": 5,
     "rankByWeek": [
       15,
-      11
+      5
     ],
-    "change": "+4",
-    "currentWeekWins": 11,
+    "change": "+10",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 106,
+    "currentWeekPoints": 125,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "CIN",
@@ -9252,13 +9252,13 @@
     "marginTotal": 25,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "ARI",
@@ -9283,10 +9283,10 @@
     "username": "Joyousmin",
     "firstName": "Mindy",
     "lastName": "Mclees",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       12,
-      11
+      13
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -9298,11 +9298,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 222,
+    "percent": 0.78125,
+    "points": 234,
     "pointsByWeek": [
       113,
-      109
+      121
     ],
     "tbAvg": 44,
     "tiebreakerByWeek": [
@@ -9310,16 +9310,16 @@
       48
     ],
     "lastWeekRank": 40,
-    "currentWeekRank": 18,
+    "currentWeekRank": 15,
     "rankByWeek": [
       40,
-      18
+      15
     ],
-    "change": "+22",
-    "currentWeekWins": 11,
+    "change": "+25",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 109,
+    "currentWeekPoints": 121,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "ARI",
@@ -9370,10 +9370,10 @@
     "username": "kwansoo",
     "firstName": "Kwan",
     "lastName": "Jun",
-    "wins": 24,
+    "wins": 26,
     "winsByWeek": [
       13,
-      11
+      13
     ],
     "losses": 6,
     "lossesByWeek": [
@@ -9385,11 +9385,11 @@
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 239,
+    "percent": 0.8125,
+    "points": 253,
     "pointsByWeek": [
       127,
-      112
+      126
     ],
     "tbAvg": 38.5,
     "tiebreakerByWeek": [
@@ -9403,10 +9403,10 @@
       1
     ],
     "change": "+2",
-    "currentWeekWins": 11,
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 112,
+    "currentWeekPoints": 126,
     "currentWeekTiebreaker": 44,
     "survivorPicks": [
       "ARI",
@@ -9457,10 +9457,10 @@
     "username": "Joe Breen",
     "firstName": "Joe",
     "lastName": "Breen",
-    "wins": 26,
+    "wins": 28,
     "winsByWeek": [
       16,
-      10
+      12
     ],
     "losses": 4,
     "lossesByWeek": [
@@ -9472,11 +9472,11 @@
       0,
       0
     ],
-    "percent": 0.8666666666666667,
-    "points": 238,
+    "percent": 0.875,
+    "points": 249,
     "pointsByWeek": [
       136,
-      102
+      113
     ],
     "tbAvg": 42.5,
     "tiebreakerByWeek": [
@@ -9490,10 +9490,10 @@
       2
     ],
     "change": "-1",
-    "currentWeekWins": 10,
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 113,
     "currentWeekTiebreaker": 42,
     "survivorPicks": [
       "CIN",
@@ -9544,26 +9544,26 @@
     "username": "jwetzler3",
     "firstName": "Joseph",
     "lastName": "Wetzler",
-    "wins": 18,
+    "wins": 19,
     "winsByWeek": [
       8,
-      10
+      11
     ],
-    "losses": 12,
+    "losses": 13,
     "lossesByWeek": [
       8,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6,
-    "points": 182,
+    "percent": 0.59375,
+    "points": 192,
     "pointsByWeek": [
       81,
-      101
+      111
     ],
     "tbAvg": 47,
     "tiebreakerByWeek": [
@@ -9571,16 +9571,16 @@
       45
     ],
     "lastWeekRank": 134,
-    "currentWeekRank": 124,
+    "currentWeekRank": 128,
     "rankByWeek": [
       134,
-      124
+      128
     ],
-    "change": "+10",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "+6",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 101,
+    "currentWeekPoints": 111,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "ARI",
@@ -9631,10 +9631,10 @@
     "username": "RyanRose99",
     "firstName": "Ryan",
     "lastName": "Rose",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       9,
-      11
+      13
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -9646,11 +9646,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 207,
+    "percent": 0.6875,
+    "points": 222,
     "pointsByWeek": [
       105,
-      102
+      117
     ],
     "tbAvg": 43,
     "tiebreakerByWeek": [
@@ -9658,16 +9658,16 @@
       48
     ],
     "lastWeekRank": 77,
-    "currentWeekRank": 64,
+    "currentWeekRank": 53,
     "rankByWeek": [
       77,
-      64
+      53
     ],
-    "change": "+13",
-    "currentWeekWins": 11,
+    "change": "+24",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 117,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "DEN",
@@ -9718,10 +9718,10 @@
     "username": "mikegrom",
     "firstName": "Mike",
     "lastName": "Grom",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       10,
-      11
+      13
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -9733,11 +9733,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 177,
+    "percent": 0.71875,
+    "points": 197,
     "pointsByWeek": [
       83,
-      94
+      114
     ],
     "tbAvg": 53.5,
     "tiebreakerByWeek": [
@@ -9745,16 +9745,16 @@
       61
     ],
     "lastWeekRank": 131,
-    "currentWeekRank": 129,
+    "currentWeekRank": 122,
     "rankByWeek": [
       131,
-      129
+      122
     ],
-    "change": "+2",
-    "currentWeekWins": 11,
+    "change": "+9",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 94,
+    "currentWeekPoints": 114,
     "currentWeekTiebreaker": 61,
     "survivorPicks": [
       "NE"
@@ -9804,10 +9804,10 @@
     "username": "jmonahan96",
     "firstName": "Jordan",
     "lastName": "Monahan",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       9,
-      12
+      14
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -9819,11 +9819,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 205,
+    "percent": 0.71875,
+    "points": 222,
     "pointsByWeek": [
       95,
-      110
+      127
     ],
     "tbAvg": 43.5,
     "tiebreakerByWeek": [
@@ -9831,16 +9831,16 @@
       49
     ],
     "lastWeekRank": 106,
-    "currentWeekRank": 70,
+    "currentWeekRank": 52,
     "rankByWeek": [
       106,
-      70
+      52
     ],
-    "change": "+36",
-    "currentWeekWins": 12,
+    "change": "+54",
+    "currentWeekWins": 14,
     "currentWeekLosses": 2,
     "currentWeekTies": 0,
-    "currentWeekPoints": 110,
+    "currentWeekPoints": 127,
     "currentWeekTiebreaker": 49,
     "survivorPicks": [
       "ARI",
@@ -9854,15 +9854,15 @@
       },
       {
         "team": "LAC",
-        "margin": null
+        "margin": 11
       }
     ],
-    "marginTotal": -25,
+    "marginTotal": -14,
     "highFiveValues": [
       3,
-      5
+      8
     ],
-    "highFiveTotal": 8,
+    "highFiveTotal": 11,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -9874,7 +9874,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "LA",
@@ -9891,26 +9891,26 @@
     "username": "pdl",
     "firstName": "Peter",
     "lastName": "Landt",
-    "wins": 18,
+    "wins": 19,
     "winsByWeek": [
       8,
-      10
+      11
     ],
-    "losses": 12,
+    "losses": 13,
     "lossesByWeek": [
       8,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6,
-    "points": 174,
+    "percent": 0.59375,
+    "points": 183,
     "pointsByWeek": [
       81,
-      93
+      102
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -9918,16 +9918,16 @@
       47
     ],
     "lastWeekRank": 135,
-    "currentWeekRank": 132,
+    "currentWeekRank": 133,
     "rankByWeek": [
       135,
-      132
+      133
     ],
-    "change": "+3",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "+2",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 93,
+    "currentWeekPoints": 102,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "ARI",
@@ -9978,10 +9978,10 @@
     "username": "zachkoval",
     "firstName": "Zach",
     "lastName": "Koval",
-    "wins": 24,
+    "wins": 26,
     "winsByWeek": [
       14,
-      10
+      12
     ],
     "losses": 6,
     "lossesByWeek": [
@@ -9993,11 +9993,11 @@
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 200,
+    "percent": 0.8125,
+    "points": 221,
     "pointsByWeek": [
       115,
-      85
+      106
     ],
     "tbAvg": 48,
     "tiebreakerByWeek": [
@@ -10005,16 +10005,16 @@
       48
     ],
     "lastWeekRank": 30,
-    "currentWeekRank": 86,
+    "currentWeekRank": 56,
     "rankByWeek": [
       30,
-      86
+      56
     ],
-    "change": "-56",
-    "currentWeekWins": 10,
+    "change": "-26",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 85,
+    "currentWeekPoints": 106,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "LA",
@@ -10034,9 +10034,9 @@
     "marginTotal": 32,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -10048,7 +10048,7 @@
       },
       {
         "team": "TB",
-        "won": null
+        "won": true
       },
       {
         "team": "NE",
@@ -10065,26 +10065,26 @@
     "username": "BHarwick",
     "firstName": "Ben",
     "lastName": "Harwick",
-    "wins": 22,
+    "wins": 23,
     "winsByWeek": [
       12,
-      10
+      11
     ],
-    "losses": 8,
+    "losses": 9,
     "lossesByWeek": [
       4,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 206,
+    "percent": 0.71875,
+    "points": 219,
     "pointsByWeek": [
       107,
-      99
+      112
     ],
     "tbAvg": 42.5,
     "tiebreakerByWeek": [
@@ -10092,16 +10092,16 @@
       41
     ],
     "lastWeekRank": 67,
-    "currentWeekRank": 67,
+    "currentWeekRank": 66,
     "rankByWeek": [
       67,
-      67
+      66
     ],
-    "change": "--",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "+1",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 99,
+    "currentWeekPoints": 112,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "DEN",
@@ -10152,10 +10152,10 @@
     "username": "willjstack",
     "firstName": "Will",
     "lastName": "Stack",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       9,
-      12
+      14
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -10167,11 +10167,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 178,
+    "percent": 0.71875,
+    "points": 198,
     "pointsByWeek": [
       74,
-      104
+      124
     ],
     "tbAvg": 39.5,
     "tiebreakerByWeek": [
@@ -10179,16 +10179,16 @@
       41
     ],
     "lastWeekRank": 141,
-    "currentWeekRank": 128,
+    "currentWeekRank": 120,
     "rankByWeek": [
       141,
-      128
+      120
     ],
-    "change": "+13",
-    "currentWeekWins": 12,
+    "change": "+21",
+    "currentWeekWins": 14,
     "currentWeekLosses": 2,
     "currentWeekTies": 0,
-    "currentWeekPoints": 104,
+    "currentWeekPoints": 124,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "DEN",
@@ -10239,26 +10239,26 @@
     "username": "Erm",
     "firstName": "Emma",
     "lastName": "Carmody",
-    "wins": 16,
+    "wins": 17,
     "winsByWeek": [
       6,
-      10
+      11
     ],
-    "losses": 14,
+    "losses": 15,
     "lossesByWeek": [
       10,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.5333333333333333,
-    "points": 143,
+    "percent": 0.53125,
+    "points": 146,
     "pointsByWeek": [
       52,
-      91
+      94
     ],
     "tbAvg": 53,
     "tiebreakerByWeek": [
@@ -10266,16 +10266,16 @@
       53
     ],
     "lastWeekRank": 147,
-    "currentWeekRank": 144,
+    "currentWeekRank": 145,
     "rankByWeek": [
       147,
-      144
+      145
     ],
-    "change": "+3",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "+2",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 91,
+    "currentWeekPoints": 94,
     "currentWeekTiebreaker": 53,
     "survivorPicks": [
       "PIT",
@@ -10326,26 +10326,26 @@
     "username": "drothberg727",
     "firstName": "Deanna",
     "lastName": "Rothberg",
-    "wins": 20,
+    "wins": 21,
     "winsByWeek": [
       10,
-      10
+      11
     ],
-    "losses": 10,
+    "losses": 11,
     "lossesByWeek": [
       6,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 177,
+    "percent": 0.65625,
+    "points": 192,
     "pointsByWeek": [
       97,
-      80
+      95
     ],
     "tbAvg": 51,
     "tiebreakerByWeek": [
@@ -10353,16 +10353,16 @@
       53
     ],
     "lastWeekRank": 99,
-    "currentWeekRank": 130,
+    "currentWeekRank": 127,
     "rankByWeek": [
       99,
-      130
+      127
     ],
-    "change": "-31",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-28",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 80,
+    "currentWeekPoints": 95,
     "currentWeekTiebreaker": 53,
     "survivorPicks": [
       "ARI",
@@ -10413,10 +10413,10 @@
     "username": "GBussinelli",
     "firstName": "Guido",
     "lastName": "Bussinelli",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       11,
-      11
+      13
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -10428,11 +10428,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 219,
+    "percent": 0.75,
+    "points": 234,
     "pointsByWeek": [
       117,
-      102
+      117
     ],
     "tbAvg": 41,
     "tiebreakerByWeek": [
@@ -10440,16 +10440,16 @@
       41
     ],
     "lastWeekRank": 23,
-    "currentWeekRank": 27,
+    "currentWeekRank": 18,
     "rankByWeek": [
       23,
-      27
+      18
     ],
-    "change": "-4",
-    "currentWeekWins": 11,
+    "change": "+5",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 117,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "DEN",
@@ -10469,9 +10469,9 @@
     "marginTotal": 32,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "LA",
@@ -10491,7 +10491,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -10500,10 +10500,10 @@
     "username": "samkast",
     "firstName": "Samantha",
     "lastName": "Kast",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       11,
-      10
+      12
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -10515,11 +10515,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 214,
+    "percent": 0.71875,
+    "points": 226,
     "pointsByWeek": [
       111,
-      103
+      115
     ],
     "tbAvg": 41,
     "tiebreakerByWeek": [
@@ -10527,16 +10527,16 @@
       41
     ],
     "lastWeekRank": 52,
-    "currentWeekRank": 42,
+    "currentWeekRank": 40,
     "rankByWeek": [
       52,
-      42
+      40
     ],
-    "change": "+10",
-    "currentWeekWins": 10,
+    "change": "+12",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 103,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "DEN",
@@ -10587,10 +10587,10 @@
     "username": "keithbrabec",
     "firstName": "Keith",
     "lastName": "Brabec",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       13,
-      8
+      10
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -10602,11 +10602,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 215,
+    "percent": 0.71875,
+    "points": 226,
     "pointsByWeek": [
       117,
-      98
+      109
     ],
     "tbAvg": 45.5,
     "tiebreakerByWeek": [
@@ -10614,16 +10614,16 @@
       49
     ],
     "lastWeekRank": 20,
-    "currentWeekRank": 40,
+    "currentWeekRank": 41,
     "rankByWeek": [
       20,
-      40
+      41
     ],
-    "change": "-20",
-    "currentWeekWins": 8,
+    "change": "-21",
+    "currentWeekWins": 10,
     "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 98,
+    "currentWeekPoints": 109,
     "currentWeekTiebreaker": 49,
     "survivorPicks": [
       "DEN",
@@ -10643,9 +10643,9 @@
     "marginTotal": 25,
     "highFiveValues": [
       5,
-      3
+      5
     ],
-    "highFiveTotal": 8,
+    "highFiveTotal": 10,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -10665,7 +10665,7 @@
       },
       {
         "team": "TB",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -10674,10 +10674,10 @@
     "username": "Kgould822",
     "firstName": "Katie",
     "lastName": "Gould",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       11,
-      10
+      12
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -10689,11 +10689,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 193,
+    "percent": 0.71875,
+    "points": 203,
     "pointsByWeek": [
       92,
-      101
+      111
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -10701,16 +10701,16 @@
       45
     ],
     "lastWeekRank": 118,
-    "currentWeekRank": 107,
+    "currentWeekRank": 112,
     "rankByWeek": [
       118,
-      107
+      112
     ],
-    "change": "+11",
-    "currentWeekWins": 10,
+    "change": "+6",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 101,
+    "currentWeekPoints": 111,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "ARI",
@@ -10761,26 +10761,26 @@
     "username": "sakwasydney",
     "firstName": "Sydney",
     "lastName": "Dannenbaum",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       12,
-      9
+      10
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       4,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 208,
+    "percent": 0.6875,
+    "points": 215,
     "pointsByWeek": [
       117,
-      91
+      98
     ],
     "tbAvg": 34.5,
     "tiebreakerByWeek": [
@@ -10788,16 +10788,16 @@
       38
     ],
     "lastWeekRank": 22,
-    "currentWeekRank": 59,
+    "currentWeekRank": 83,
     "rankByWeek": [
       22,
-      59
+      83
     ],
-    "change": "-37",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-61",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 91,
+    "currentWeekPoints": 98,
     "currentWeekTiebreaker": 38,
     "survivorPicks": [
       "DEN",
@@ -10848,10 +10848,10 @@
     "username": "Sbussi",
     "firstName": "Samantha",
     "lastName": "Gilgen",
-    "wins": 25,
+    "wins": 27,
     "winsByWeek": [
       14,
-      11
+      13
     ],
     "losses": 5,
     "lossesByWeek": [
@@ -10863,11 +10863,11 @@
       0,
       0
     ],
-    "percent": 0.8333333333333334,
-    "points": 197,
+    "percent": 0.84375,
+    "points": 221,
     "pointsByWeek": [
       112,
-      85
+      109
     ],
     "tbAvg": 44.5,
     "tiebreakerByWeek": [
@@ -10875,16 +10875,16 @@
       47
     ],
     "lastWeekRank": 42,
-    "currentWeekRank": 97,
+    "currentWeekRank": 55,
     "rankByWeek": [
       42,
-      97
+      55
     ],
-    "change": "-55",
-    "currentWeekWins": 11,
+    "change": "-13",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 85,
+    "currentWeekPoints": 109,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "DEN",
@@ -10904,9 +10904,9 @@
     "marginTotal": 32,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -10922,7 +10922,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "SF",
@@ -10935,10 +10935,10 @@
     "username": "Laurenshaw",
     "firstName": "Lauren",
     "lastName": "Shaw",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       12,
-      10
+      12
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -10950,11 +10950,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 213,
+    "percent": 0.75,
+    "points": 228,
     "pointsByWeek": [
       114,
-      99
+      114
     ],
     "tbAvg": 42,
     "tiebreakerByWeek": [
@@ -10962,16 +10962,16 @@
       44
     ],
     "lastWeekRank": 35,
-    "currentWeekRank": 43,
+    "currentWeekRank": 29,
     "rankByWeek": [
       35,
-      43
+      29
     ],
-    "change": "-8",
-    "currentWeekWins": 10,
+    "change": "+6",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 99,
+    "currentWeekPoints": 114,
     "currentWeekTiebreaker": 44,
     "survivorPicks": [
       "DEN",
@@ -11022,10 +11022,10 @@
     "username": "kcarozza",
     "firstName": "Kevin",
     "lastName": "Carozza",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       10,
-      11
+      13
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -11037,11 +11037,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 217,
+    "percent": 0.71875,
+    "points": 228,
     "pointsByWeek": [
       109,
-      108
+      119
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -11049,16 +11049,16 @@
       49
     ],
     "lastWeekRank": 61,
-    "currentWeekRank": 33,
+    "currentWeekRank": 30,
     "rankByWeek": [
       61,
-      33
+      30
     ],
-    "change": "+28",
-    "currentWeekWins": 11,
+    "change": "+31",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 108,
+    "currentWeekPoints": 119,
     "currentWeekTiebreaker": 49,
     "survivorPicks": [
       "DEN",
@@ -11078,9 +11078,9 @@
     "marginTotal": 10,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "LA",
@@ -11096,7 +11096,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "ARI",
@@ -11109,26 +11109,26 @@
     "username": "DaBears",
     "firstName": "Emily",
     "lastName": "Yerkes",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       12,
-      9
+      10
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       4,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 197,
+    "percent": 0.6875,
+    "points": 206,
     "pointsByWeek": [
       110,
-      87
+      96
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -11136,16 +11136,16 @@
       45
     ],
     "lastWeekRank": 56,
-    "currentWeekRank": 98,
+    "currentWeekRank": 104,
     "rankByWeek": [
       56,
-      98
+      104
     ],
-    "change": "-42",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-48",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 87,
+    "currentWeekPoints": 96,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "DEN",
@@ -11196,26 +11196,26 @@
     "username": "monica.ahlam.ho@gmail.com",
     "firstName": "Monica",
     "lastName": "Ho",
-    "wins": 22,
+    "wins": 23,
     "winsByWeek": [
       11,
-      11
+      12
     ],
-    "losses": 8,
+    "losses": 9,
     "lossesByWeek": [
       5,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 221,
+    "percent": 0.71875,
+    "points": 228,
     "pointsByWeek": [
       112,
-      109
+      116
     ],
     "tbAvg": 44.5,
     "tiebreakerByWeek": [
@@ -11223,16 +11223,16 @@
       46
     ],
     "lastWeekRank": 46,
-    "currentWeekRank": 22,
+    "currentWeekRank": 31,
     "rankByWeek": [
       46,
-      22
+      31
     ],
-    "change": "+24",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "+15",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 109,
+    "currentWeekPoints": 116,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "DEN",
@@ -11283,10 +11283,10 @@
     "username": "Arnie20",
     "firstName": "Brian",
     "lastName": "Armstrong",
-    "wins": 18,
+    "wins": 20,
     "winsByWeek": [
       8,
-      10
+      12
     ],
     "losses": 12,
     "lossesByWeek": [
@@ -11298,11 +11298,11 @@
       0,
       0
     ],
-    "percent": 0.6,
-    "points": 167,
+    "percent": 0.625,
+    "points": 173,
     "pointsByWeek": [
       66,
-      101
+      107
     ],
     "tbAvg": 39,
     "tiebreakerByWeek": [
@@ -11310,16 +11310,16 @@
       43
     ],
     "lastWeekRank": 145,
-    "currentWeekRank": 134,
+    "currentWeekRank": 138,
     "rankByWeek": [
       145,
-      134
+      138
     ],
-    "change": "+11",
-    "currentWeekWins": 10,
+    "change": "+7",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 101,
+    "currentWeekPoints": 107,
     "currentWeekTiebreaker": 43,
     "survivorPicks": [
       "PHI",
@@ -11339,9 +11339,9 @@
     "marginTotal": -1,
     "highFiveValues": [
       5,
-      2
+      3
     ],
-    "highFiveTotal": 7,
+    "highFiveTotal": 8,
     "highFiveThisWeek": [
       {
         "team": "CIN",
@@ -11353,7 +11353,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "ARI",
@@ -11370,26 +11370,26 @@
     "username": "Masotta411",
     "firstName": "Brett",
     "lastName": "Masotta",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       13,
-      8
+      9
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       3,
-      6
+      7
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 207,
+    "percent": 0.6875,
+    "points": 210,
     "pointsByWeek": [
       111,
-      96
+      99
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -11397,16 +11397,16 @@
       47
     ],
     "lastWeekRank": 48,
-    "currentWeekRank": 63,
+    "currentWeekRank": 96,
     "rankByWeek": [
       48,
-      63
+      96
     ],
-    "change": "-15",
-    "currentWeekWins": 8,
-    "currentWeekLosses": 6,
+    "change": "-48",
+    "currentWeekWins": 9,
+    "currentWeekLosses": 7,
     "currentWeekTies": 0,
-    "currentWeekPoints": 96,
+    "currentWeekPoints": 99,
     "currentWeekTiebreaker": 47,
     "survivorPicks": [
       "PHI",
@@ -11457,10 +11457,10 @@
     "username": "Kfan",
     "firstName": "Kellan",
     "lastName": "Fandl",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       9,
-      13
+      15
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -11472,11 +11472,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 198,
+    "percent": 0.75,
+    "points": 222,
     "pointsByWeek": [
       93,
-      105
+      129
     ],
     "tbAvg": 57,
     "tiebreakerByWeek": [
@@ -11484,16 +11484,16 @@
       67
     ],
     "lastWeekRank": 117,
-    "currentWeekRank": 95,
+    "currentWeekRank": 50,
     "rankByWeek": [
       117,
-      95
+      50
     ],
-    "change": "+22",
-    "currentWeekWins": 13,
+    "change": "+67",
+    "currentWeekWins": 15,
     "currentWeekLosses": 1,
     "currentWeekTies": 0,
-    "currentWeekPoints": 105,
+    "currentWeekPoints": 129,
     "currentWeekTiebreaker": 67,
     "survivorPicks": [
       "ARI",
@@ -11513,9 +11513,9 @@
     "marginTotal": 10,
     "highFiveValues": [
       5,
-      3
+      8
     ],
-    "highFiveTotal": 8,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BAL",
@@ -11531,11 +11531,11 @@
       },
       {
         "team": "TB",
-        "won": null
+        "won": true
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -11544,10 +11544,10 @@
     "username": "bdfreedman",
     "firstName": "Brenden",
     "lastName": "Freedman",
-    "wins": 21,
+    "wins": 23,
     "winsByWeek": [
       11,
-      10
+      12
     ],
     "losses": 9,
     "lossesByWeek": [
@@ -11559,11 +11559,11 @@
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 202,
+    "percent": 0.71875,
+    "points": 218,
     "pointsByWeek": [
       102,
-      100
+      116
     ],
     "tbAvg": 45.5,
     "tiebreakerByWeek": [
@@ -11571,16 +11571,16 @@
       46
     ],
     "lastWeekRank": 81,
-    "currentWeekRank": 82,
+    "currentWeekRank": 70,
     "rankByWeek": [
       81,
-      82
+      70
     ],
-    "change": "-1",
-    "currentWeekWins": 10,
+    "change": "+11",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 100,
+    "currentWeekPoints": 116,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "DEN",
@@ -11600,9 +11600,9 @@
     "marginTotal": 31,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "BAL",
@@ -11618,7 +11618,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "CIN",
@@ -11631,26 +11631,26 @@
     "username": "m_rose95",
     "firstName": "Matt",
     "lastName": "Rosenlof",
-    "wins": 18,
+    "wins": 19,
     "winsByWeek": [
       8,
-      10
+      11
     ],
-    "losses": 12,
+    "losses": 13,
     "lossesByWeek": [
       8,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6,
-    "points": 199,
+    "percent": 0.59375,
+    "points": 209,
     "pointsByWeek": [
       94,
-      105
+      115
     ],
     "tbAvg": 43.5,
     "tiebreakerByWeek": [
@@ -11658,16 +11658,16 @@
       42
     ],
     "lastWeekRank": 115,
-    "currentWeekRank": 93,
+    "currentWeekRank": 100,
     "rankByWeek": [
       115,
-      93
+      100
     ],
-    "change": "+22",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "+15",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 105,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 42,
     "survivorPicks": [
       "JAC",
@@ -11718,26 +11718,26 @@
     "username": "Chrismiz23",
     "firstName": "Chris",
     "lastName": "Misiaszek",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       11,
-      10
+      11
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       5,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 195,
+    "percent": 0.6875,
+    "points": 207,
     "pointsByWeek": [
       102,
-      93
+      105
     ],
     "tbAvg": 39.5,
     "tiebreakerByWeek": [
@@ -11745,16 +11745,16 @@
       41
     ],
     "lastWeekRank": 82,
-    "currentWeekRank": 103,
+    "currentWeekRank": 102,
     "rankByWeek": [
       82,
-      103
+      102
     ],
-    "change": "-21",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-20",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 93,
+    "currentWeekPoints": 105,
     "currentWeekTiebreaker": 41,
     "survivorPicks": [
       "DEN",
@@ -11805,26 +11805,26 @@
     "username": "kfwaterhouse@yahoo.com",
     "firstName": "Kevin",
     "lastName": "Waterhouse",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       10,
-      11
+      12
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       6,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 202,
+    "percent": 0.6875,
+    "points": 209,
     "pointsByWeek": [
       102,
-      100
+      107
     ],
     "tbAvg": 43,
     "tiebreakerByWeek": [
@@ -11832,16 +11832,16 @@
       46
     ],
     "lastWeekRank": 84,
-    "currentWeekRank": 83,
+    "currentWeekRank": 98,
     "rankByWeek": [
       84,
-      83
+      98
     ],
-    "change": "+1",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "-14",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 100,
+    "currentWeekPoints": 107,
     "currentWeekTiebreaker": 46,
     "survivorPicks": [
       "WAS",
@@ -11861,9 +11861,9 @@
     "marginTotal": 39,
     "highFiveValues": [
       5,
-      5
+      8
     ],
-    "highFiveTotal": 10,
+    "highFiveTotal": 13,
     "highFiveThisWeek": [
       {
         "team": "BAL",
@@ -11883,7 +11883,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -11892,10 +11892,10 @@
     "username": "Flynnie72",
     "firstName": "Sarah",
     "lastName": "Waterhouse",
-    "wins": 24,
+    "wins": 26,
     "winsByWeek": [
       14,
-      10
+      12
     ],
     "losses": 6,
     "lossesByWeek": [
@@ -11907,11 +11907,11 @@
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 233,
+    "percent": 0.8125,
+    "points": 244,
     "pointsByWeek": [
       125,
-      108
+      119
     ],
     "tbAvg": 39,
     "tiebreakerByWeek": [
@@ -11919,16 +11919,16 @@
       43
     ],
     "lastWeekRank": 4,
-    "currentWeekRank": 4,
+    "currentWeekRank": 3,
     "rankByWeek": [
       4,
-      4
+      3
     ],
-    "change": "--",
-    "currentWeekWins": 10,
+    "change": "+1",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 108,
+    "currentWeekPoints": 119,
     "currentWeekTiebreaker": 43,
     "survivorPicks": [
       "ARI",
@@ -11948,9 +11948,9 @@
     "marginTotal": 32,
     "highFiveValues": [
       8,
-      5
+      8
     ],
-    "highFiveTotal": 13,
+    "highFiveTotal": 16,
     "highFiveThisWeek": [
       {
         "team": "DAL",
@@ -11966,7 +11966,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "BAL",
@@ -11979,10 +11979,10 @@
     "username": "Sheilajoy",
     "firstName": "Sheila",
     "lastName": "Olt",
-    "wins": 23,
+    "wins": 25,
     "winsByWeek": [
       12,
-      11
+      13
     ],
     "losses": 7,
     "lossesByWeek": [
@@ -11994,11 +11994,11 @@
       0,
       0
     ],
-    "percent": 0.7666666666666667,
-    "points": 207,
+    "percent": 0.78125,
+    "points": 219,
     "pointsByWeek": [
       110,
-      97
+      109
     ],
     "tbAvg": 44,
     "tiebreakerByWeek": [
@@ -12006,16 +12006,16 @@
       44
     ],
     "lastWeekRank": 57,
-    "currentWeekRank": 60,
+    "currentWeekRank": 63,
     "rankByWeek": [
       57,
-      60
+      63
     ],
-    "change": "-3",
-    "currentWeekWins": 11,
+    "change": "-6",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 97,
+    "currentWeekPoints": 109,
     "currentWeekTiebreaker": 44,
     "survivorPicks": [
       "DEN",
@@ -12066,10 +12066,10 @@
     "username": "David Condon",
     "firstName": "David",
     "lastName": "Condon iii",
-    "wins": 22,
+    "wins": 24,
     "winsByWeek": [
       12,
-      10
+      12
     ],
     "losses": 8,
     "lossesByWeek": [
@@ -12081,11 +12081,11 @@
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 194,
+    "percent": 0.75,
+    "points": 212,
     "pointsByWeek": [
       101,
-      93
+      111
     ],
     "tbAvg": 39,
     "tiebreakerByWeek": [
@@ -12093,16 +12093,16 @@
       37
     ],
     "lastWeekRank": 86,
-    "currentWeekRank": 105,
+    "currentWeekRank": 87,
     "rankByWeek": [
       86,
-      105
+      87
     ],
-    "change": "-19",
-    "currentWeekWins": 10,
+    "change": "-1",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 93,
+    "currentWeekPoints": 111,
     "currentWeekTiebreaker": 37,
     "survivorPicks": [
       "PHI",
@@ -12153,10 +12153,10 @@
     "username": "cpine98",
     "firstName": "Connor",
     "lastName": "Pine",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       9,
-      11
+      13
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -12168,11 +12168,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 192,
+    "percent": 0.6875,
+    "points": 205,
     "pointsByWeek": [
       90,
-      102
+      115
     ],
     "tbAvg": 44.5,
     "tiebreakerByWeek": [
@@ -12180,16 +12180,16 @@
       51
     ],
     "lastWeekRank": 127,
-    "currentWeekRank": 110,
+    "currentWeekRank": 108,
     "rankByWeek": [
       127,
-      110
+      108
     ],
-    "change": "+17",
-    "currentWeekWins": 11,
+    "change": "+19",
+    "currentWeekWins": 13,
     "currentWeekLosses": 3,
     "currentWeekTies": 0,
-    "currentWeekPoints": 102,
+    "currentWeekPoints": 115,
     "currentWeekTiebreaker": 51,
     "survivorPicks": [
       "ARI",
@@ -12209,9 +12209,9 @@
     "marginTotal": 10,
     "highFiveValues": [
       3,
-      5
+      8
     ],
-    "highFiveTotal": 8,
+    "highFiveTotal": 11,
     "highFiveThisWeek": [
       {
         "team": "BUF",
@@ -12223,7 +12223,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "LA",
@@ -12240,10 +12240,10 @@
     "username": "PapaCook",
     "firstName": "James",
     "lastName": "Cook",
-    "wins": 20,
+    "wins": 22,
     "winsByWeek": [
       12,
-      8
+      10
     ],
     "losses": 10,
     "lossesByWeek": [
@@ -12255,11 +12255,11 @@
       0,
       0
     ],
-    "percent": 0.6666666666666666,
-    "points": 174,
+    "percent": 0.6875,
+    "points": 201,
     "pointsByWeek": [
       101,
-      73
+      100
     ],
     "tbAvg": 34.5,
     "tiebreakerByWeek": [
@@ -12267,16 +12267,16 @@
       45
     ],
     "lastWeekRank": 87,
-    "currentWeekRank": 131,
+    "currentWeekRank": 118,
     "rankByWeek": [
       87,
-      131
+      118
     ],
-    "change": "-44",
-    "currentWeekWins": 8,
+    "change": "-31",
+    "currentWeekWins": 10,
     "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 73,
+    "currentWeekPoints": 100,
     "currentWeekTiebreaker": 45,
     "survivorPicks": [
       "KC"
@@ -12289,15 +12289,15 @@
       },
       {
         "team": "LAC",
-        "margin": null
+        "margin": 11
       }
     ],
-    "marginTotal": 7,
+    "marginTotal": 18,
     "highFiveValues": [
       5,
-      2
+      3
     ],
-    "highFiveTotal": 7,
+    "highFiveTotal": 8,
     "highFiveThisWeek": [
       {
         "team": "BAL",
@@ -12317,7 +12317,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       }
     ]
   },
@@ -12326,26 +12326,26 @@
     "username": "bscanlon",
     "firstName": "Barry",
     "lastName": "Scanlon",
-    "wins": 22,
+    "wins": 23,
     "winsByWeek": [
       13,
-      9
+      10
     ],
-    "losses": 8,
+    "losses": 9,
     "lossesByWeek": [
       3,
-      5
+      6
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7333333333333333,
-    "points": 211,
+    "percent": 0.71875,
+    "points": 221,
     "pointsByWeek": [
       114,
-      97
+      107
     ],
     "tbAvg": 45,
     "tiebreakerByWeek": [
@@ -12353,16 +12353,16 @@
       48
     ],
     "lastWeekRank": 34,
-    "currentWeekRank": 48,
+    "currentWeekRank": 58,
     "rankByWeek": [
       34,
-      48
+      58
     ],
-    "change": "-14",
-    "currentWeekWins": 9,
-    "currentWeekLosses": 5,
+    "change": "-24",
+    "currentWeekWins": 10,
+    "currentWeekLosses": 6,
     "currentWeekTies": 0,
-    "currentWeekPoints": 97,
+    "currentWeekPoints": 107,
     "currentWeekTiebreaker": 48,
     "survivorPicks": [
       "DEN",
@@ -12413,26 +12413,26 @@
     "username": "Djg4evr25",
     "firstName": "Daniel",
     "lastName": "Graham",
-    "wins": 24,
+    "wins": 25,
     "winsByWeek": [
       13,
-      11
+      12
     ],
-    "losses": 6,
+    "losses": 7,
     "lossesByWeek": [
       3,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.8,
-    "points": 223,
+    "percent": 0.78125,
+    "points": 226,
     "pointsByWeek": [
       116,
-      107
+      110
     ],
     "tbAvg": 40,
     "tiebreakerByWeek": [
@@ -12440,16 +12440,16 @@
       43
     ],
     "lastWeekRank": 26,
-    "currentWeekRank": 15,
+    "currentWeekRank": 38,
     "rankByWeek": [
       26,
-      15
+      38
     ],
-    "change": "+11",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "-12",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 107,
+    "currentWeekPoints": 110,
     "currentWeekTiebreaker": 43,
     "survivorPicks": [
       "DEN",
@@ -12463,15 +12463,15 @@
       },
       {
         "team": "LAC",
-        "margin": null
+        "margin": 11
       }
     ],
-    "marginTotal": 7,
+    "marginTotal": 18,
     "highFiveValues": [
       5,
-      3
+      5
     ],
-    "highFiveTotal": 8,
+    "highFiveTotal": 10,
     "highFiveThisWeek": [
       {
         "team": "GB",
@@ -12487,7 +12487,7 @@
       },
       {
         "team": "LAC",
-        "won": null
+        "won": true
       },
       {
         "team": "NO",
@@ -12500,26 +12500,26 @@
     "username": "bling",
     "firstName": "Ben",
     "lastName": "Ling",
-    "wins": 19,
+    "wins": 20,
     "winsByWeek": [
       8,
-      11
+      12
     ],
-    "losses": 11,
+    "losses": 12,
     "lossesByWeek": [
       8,
-      3
+      4
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.6333333333333333,
-    "points": 137,
+    "percent": 0.625,
+    "points": 152,
     "pointsByWeek": [
       59,
-      78
+      93
     ],
     "tbAvg": 38.5,
     "tiebreakerByWeek": [
@@ -12527,16 +12527,16 @@
       43
     ],
     "lastWeekRank": 146,
-    "currentWeekRank": 145,
+    "currentWeekRank": 144,
     "rankByWeek": [
       146,
-      145
+      144
     ],
-    "change": "+1",
-    "currentWeekWins": 11,
-    "currentWeekLosses": 3,
+    "change": "+2",
+    "currentWeekWins": 12,
+    "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 78,
+    "currentWeekPoints": 93,
     "currentWeekTiebreaker": 43,
     "survivorPicks": [
       "MIA"
@@ -12586,10 +12586,10 @@
     "username": "Bhorn421",
     "firstName": "Brandon",
     "lastName": "Horn",
-    "wins": 19,
+    "wins": 21,
     "winsByWeek": [
       9,
-      10
+      12
     ],
     "losses": 11,
     "lossesByWeek": [
@@ -12601,11 +12601,11 @@
       0,
       0
     ],
-    "percent": 0.6333333333333333,
-    "points": 197,
+    "percent": 0.65625,
+    "points": 216,
     "pointsByWeek": [
       97,
-      100
+      119
     ],
     "tbAvg": 49,
     "tiebreakerByWeek": [
@@ -12613,16 +12613,16 @@
       50
     ],
     "lastWeekRank": 101,
-    "currentWeekRank": 99,
+    "currentWeekRank": 79,
     "rankByWeek": [
       101,
-      99
+      79
     ],
-    "change": "+2",
-    "currentWeekWins": 10,
+    "change": "+22",
+    "currentWeekWins": 12,
     "currentWeekLosses": 4,
     "currentWeekTies": 0,
-    "currentWeekPoints": 100,
+    "currentWeekPoints": 119,
     "currentWeekTiebreaker": 50,
     "survivorPicks": [
       "CIN",
@@ -12673,26 +12673,26 @@
     "username": "Matt McGrath",
     "firstName": "Matt",
     "lastName": "Mcgrath",
-    "wins": 21,
+    "wins": 22,
     "winsByWeek": [
       11,
-      10
+      11
     ],
-    "losses": 9,
+    "losses": 10,
     "lossesByWeek": [
       5,
-      4
+      5
     ],
     "ties": 0,
     "tiesByWeek": [
       0,
       0
     ],
-    "percent": 0.7,
-    "points": 216,
+    "percent": 0.6875,
+    "points": 222,
     "pointsByWeek": [
       115,
-      101
+      107
     ],
     "tbAvg": 52.5,
     "tiebreakerByWeek": [
@@ -12700,16 +12700,16 @@
       51
     ],
     "lastWeekRank": 33,
-    "currentWeekRank": 36,
+    "currentWeekRank": 54,
     "rankByWeek": [
       33,
-      36
+      54
     ],
-    "change": "-3",
-    "currentWeekWins": 10,
-    "currentWeekLosses": 4,
+    "change": "-21",
+    "currentWeekWins": 11,
+    "currentWeekLosses": 5,
     "currentWeekTies": 0,
-    "currentWeekPoints": 101,
+    "currentWeekPoints": 107,
     "currentWeekTiebreaker": 51,
     "survivorPicks": [
       "DEN",
