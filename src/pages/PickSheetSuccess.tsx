@@ -13,7 +13,7 @@ function PickSheetSuccess() {
         <div className="column is-three-quarters">
           <h1 className="title has-text-centered no-print">Success!</h1>
           <p className="has-text-centered no-print">
-            Thank you for your submission, it has been sent the database for safe keeping!
+            Thank you for your submission, it has been sent to the database for safe keeping!
           </p>
           <p className="has-text-centered no-print">
             Feel free to either print this page or save it as a pdf for yourself. Good luck and thank you for playing!
