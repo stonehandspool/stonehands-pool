@@ -44,7 +44,7 @@ export const PREV_MONDAY_NIGHT_TOTAL: number = 46;
 //              - The weekly standings should signify the current weeks winner
 //          - The picksheet should still be unavailable
 type WeekStatus = 'START' | 'IN_PROGRESS' | 'COMPLETE';
-export const CURRENT_WEEK_STATUS: WeekStatus = 'START';
+export const CURRENT_WEEK_STATUS: WeekStatus = 'IN_PROGRESS';
 // These are the team codes used throughout the codebase and should only be changed if a new team joins the league or a team relocates
 export const TEAM_CODES = [
   'ARI',
