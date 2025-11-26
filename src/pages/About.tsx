@@ -165,6 +165,9 @@ function About() {
                   You <b>cannot</b> use a team multiple times, each team may only be used once!
                 </li>
                 <li>If you pick correctly you survive</li>
+                <li>
+                  If the team you pick <b>ties</b> you are eliminated
+                </li>
                 <li>If you pick wrong, you are eliminated from the Survivor Pool</li>
                 <li>The last player alive wins!</li>
                 <li>
