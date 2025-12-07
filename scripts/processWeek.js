@@ -255,7 +255,7 @@ for (; i < len; i++) {
   });
 
   if (invalidSubmission) {
-    console.log(`Invalid submission found, returning early! ${player}`);
+    console.log(`Invalid submission found, returning early! ${player.firstName} ${player.lastName} - ${player.id}`);
     break;
   }
 
