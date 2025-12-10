@@ -83,7 +83,10 @@ function MarginTable() {
     const firstName2 = row2.name.split(' ')[0];
     const lastName2 = row2.name.split(' ').pop()!;
     return (
-      row2.marginTotal - row1.marginTotal || lastName1.localeCompare(lastName2) || firstName1.localeCompare(firstName2)
+      row2.marginTotal - row1.marginTotal ||
+      row2.numWins - row1.numWins ||
+      lastName1.localeCompare(lastName2) ||
+      firstName1.localeCompare(firstName2)
     );
   });
 
