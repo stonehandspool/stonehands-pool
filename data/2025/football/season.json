@@ -2757,6 +2757,28 @@
       },
       {
         "matchupId": "matchup_4",
+        "homeTeam": "LAC",
+        "awayTeam": "HOU",
+        "time": "2025-12-27T21:30:00.000Z",
+        "gameInfo": "Sat, Dec 27, 4:30 PM ET - Inglewood, CA",
+        "homeScore": 0,
+        "awayScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "homeTeam": "GB",
+        "awayTeam": "BAL",
+        "time": "2025-12-28T01:00:00.000Z",
+        "gameInfo": "Sat, Dec 27, 8:00 PM ET - Green Bay, WI",
+        "homeScore": 0,
+        "awayScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
         "homeTeam": "MIA",
         "awayTeam": "TB",
         "time": "2025-12-28T18:00:00.000Z",
@@ -2767,33 +2789,11 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_5",
+        "matchupId": "matchup_7",
         "homeTeam": "NYJ",
         "awayTeam": "NE",
         "time": "2025-12-28T18:00:00.000Z",
         "gameInfo": "Sun, Dec 28, 1:00 PM ET - East Rutherford, NJ",
-        "homeScore": 0,
-        "awayScore": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      {
-        "matchupId": "matchup_6",
-        "homeTeam": "LAC",
-        "awayTeam": "HOU",
-        "time": "2025-12-28T18:00:00.000Z",
-        "gameInfo": "Sun, Dec 28, 1:00 PM ET - Inglewood, CA",
-        "homeScore": 0,
-        "awayScore": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      {
-        "matchupId": "matchup_7",
-        "homeTeam": "LV",
-        "awayTeam": "NYG",
-        "time": "2025-12-28T18:00:00.000Z",
-        "gameInfo": "Sun, Dec 28, 1:00 PM ET - Las Vegas, NV",
         "homeScore": 0,
         "awayScore": 0,
         "winner": "",
@@ -2834,17 +2834,6 @@
       },
       {
         "matchupId": "matchup_11",
-        "homeTeam": "GB",
-        "awayTeam": "BAL",
-        "time": "2025-12-28T18:00:00.000Z",
-        "gameInfo": "Sun, Dec 28, 1:00 PM ET - Green Bay, WI",
-        "homeScore": 0,
-        "awayScore": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      {
-        "matchupId": "matchup_12",
         "homeTeam": "IND",
         "awayTeam": "JAC",
         "time": "2025-12-28T18:00:00.000Z",
@@ -2855,11 +2844,22 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_13",
+        "matchupId": "matchup_12",
         "homeTeam": "CAR",
         "awayTeam": "SEA",
         "time": "2025-12-28T18:00:00.000Z",
         "gameInfo": "Sun, Dec 28, 1:00 PM ET - Charlotte, NC",
+        "homeScore": 0,
+        "awayScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "homeTeam": "LV",
+        "awayTeam": "NYG",
+        "time": "2025-12-28T21:05:00.000Z",
+        "gameInfo": "Sun, Dec 28, 4:05 PM ET - Las Vegas, NV",
         "homeScore": 0,
         "awayScore": 0,
         "winner": "",
