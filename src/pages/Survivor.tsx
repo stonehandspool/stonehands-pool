@@ -41,7 +41,9 @@ function Survivor() {
             </div>
           </div>
         </div>
-
+        <h2 className="title has-text-centered">
+          Congratulations to <b>Kwan Jun</b> and <b>Emily Yerkes</b> for winning the Pool this year!
+        </h2>
         <SurvivorTable />
       </div>
     </section>
