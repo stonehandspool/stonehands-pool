@@ -15,10 +15,10 @@ export const CURRENT_YEAR: string = '2025';
 // This is a date in a valid `Date` format which should be taken from the season schedule each week
 // This is used to check if a user can still submit their picksheet, it should generally be the first Sunday game each week
 // Unless there is a few Saturday games later in the season
-export const CURRENT_WEEK_CUTOFF_TIME = new Date('2025-12-28T18:00:00.000Z');
+export const CURRENT_WEEK_CUTOFF_TIME = new Date('2026-01-04T18:00:00.000Z');
 // This is whatever the last scheduled game is in a given week
 // This is used to tell the users what game they should be predicting the total final score of for a week
-export const CURRENT_WEEK_FINAL_GAME: string = 'LA @ ATL';
+export const CURRENT_WEEK_FINAL_GAME: string = 'BAL @ PIT';
 export const PREV_WEEK_FINAL_GAME: string = 'LA @ ATL';
 // This should be updated every Tuesday morning with the total score of the game above
 // This is used to determine the tiebreaker for the weekly standings
