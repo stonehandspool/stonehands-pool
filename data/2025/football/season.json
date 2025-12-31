@@ -2905,6 +2905,28 @@
     "matchups": [
       {
         "matchupId": "matchup_1",
+        "homeTeam": "TB",
+        "awayTeam": "CAR",
+        "time": "2026-01-03T21:30:00.000Z",
+        "gameInfo": "Sat, Jan 3, 4:30 PM ET - Tampa, FL",
+        "homeScore": 0,
+        "awayScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "homeTeam": "SF",
+        "awayTeam": "SEA",
+        "time": "2026-01-04T01:00:00.000Z",
+        "gameInfo": "Sat, Jan 3, 8:00 PM ET - Santa Clara, CA",
+        "homeScore": 0,
+        "awayScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
         "homeTeam": "MIN",
         "awayTeam": "GB",
         "time": "2026-01-04T18:00:00.000Z",
@@ -2915,18 +2937,7 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_2",
-        "homeTeam": "NE",
-        "awayTeam": "MIA",
-        "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - Foxborough, MA",
-        "homeScore": 0,
-        "awayScore": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      {
-        "matchupId": "matchup_3",
+        "matchupId": "matchup_4",
         "homeTeam": "JAC",
         "awayTeam": "TEN",
         "time": "2026-01-04T18:00:00.000Z",
@@ -2937,40 +2948,7 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_4",
-        "homeTeam": "TB",
-        "awayTeam": "CAR",
-        "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - Tampa, FL",
-        "homeScore": 0,
-        "awayScore": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      {
         "matchupId": "matchup_5",
-        "homeTeam": "LA",
-        "awayTeam": "ARI",
-        "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - Inglewood, CA",
-        "homeScore": 0,
-        "awayScore": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      {
-        "matchupId": "matchup_6",
-        "homeTeam": "CHI",
-        "awayTeam": "DET",
-        "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - Chicago, IL",
-        "homeScore": 0,
-        "awayScore": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      {
-        "matchupId": "matchup_7",
         "homeTeam": "HOU",
         "awayTeam": "IND",
         "time": "2026-01-04T18:00:00.000Z",
@@ -2981,29 +2959,7 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_8",
-        "homeTeam": "PHI",
-        "awayTeam": "WAS",
-        "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - Philadelphia, PA",
-        "homeScore": 0,
-        "awayScore": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      {
-        "matchupId": "matchup_9",
-        "homeTeam": "NYG",
-        "awayTeam": "DAL",
-        "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - East Rutherford, NJ",
-        "homeScore": 0,
-        "awayScore": 0,
-        "winner": "",
-        "evaluated": false
-      },
-      {
-        "matchupId": "matchup_10",
+        "matchupId": "matchup_6",
         "homeTeam": "CIN",
         "awayTeam": "CLE",
         "time": "2026-01-04T18:00:00.000Z",
@@ -3014,7 +2970,7 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_11",
+        "matchupId": "matchup_7",
         "homeTeam": "ATL",
         "awayTeam": "NO",
         "time": "2026-01-04T18:00:00.000Z",
@@ -3025,11 +2981,55 @@
         "evaluated": false
       },
       {
-        "matchupId": "matchup_12",
-        "homeTeam": "PIT",
-        "awayTeam": "BAL",
+        "matchupId": "matchup_8",
+        "homeTeam": "NYG",
+        "awayTeam": "DAL",
         "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - Pittsburgh, PA",
+        "gameInfo": "Sun, Jan 4, 1:00 PM ET - East Rutherford, NJ",
+        "homeScore": 0,
+        "awayScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "homeTeam": "NE",
+        "awayTeam": "MIA",
+        "time": "2026-01-04T21:45:00.000Z",
+        "gameInfo": "Sun, Jan 4, 4:25 PM ET - Foxborough, MA",
+        "homeScore": 0,
+        "awayScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "homeTeam": "LA",
+        "awayTeam": "ARI",
+        "time": "2026-01-04T21:45:00.000Z",
+        "gameInfo": "Sun, Jan 4, 4:25 PM ET - Inglewood, CA",
+        "homeScore": 0,
+        "awayScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "homeTeam": "CHI",
+        "awayTeam": "DET",
+        "time": "2026-01-04T21:45:00.000Z",
+        "gameInfo": "Sun, Jan 4, 4:25 PM ET - Chicago, IL",
+        "homeScore": 0,
+        "awayScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "homeTeam": "PHI",
+        "awayTeam": "WAS",
+        "time": "2026-01-04T21:45:00.000Z",
+        "gameInfo": "Sun, Jan 4, 4:25 PM ET - Philadelphia, PA",
         "homeScore": 0,
         "awayScore": 0,
         "winner": "",
@@ -3039,8 +3039,8 @@
         "matchupId": "matchup_13",
         "homeTeam": "BUF",
         "awayTeam": "NYJ",
-        "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - Orchard Park, NY",
+        "time": "2026-01-04T21:45:00.000Z",
+        "gameInfo": "Sun, Jan 4, 4:25 PM ET - Orchard Park, NY",
         "homeScore": 0,
         "awayScore": 0,
         "winner": "",
@@ -3050,8 +3050,8 @@
         "matchupId": "matchup_14",
         "homeTeam": "LV",
         "awayTeam": "KC",
-        "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - Las Vegas, NV",
+        "time": "2026-01-04T21:45:00.000Z",
+        "gameInfo": "Sun, Jan 4, 4:25 PM ET - Las Vegas, NV",
         "homeScore": 0,
         "awayScore": 0,
         "winner": "",
@@ -3061,8 +3061,8 @@
         "matchupId": "matchup_15",
         "homeTeam": "DEN",
         "awayTeam": "LAC",
-        "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - Denver, CO",
+        "time": "2026-01-04T21:45:00.000Z",
+        "gameInfo": "Sun, Jan 4, 4:25 PM ET - Denver, CO",
         "homeScore": 0,
         "awayScore": 0,
         "winner": "",
@@ -3070,10 +3070,10 @@
       },
       {
         "matchupId": "matchup_16",
-        "homeTeam": "SF",
-        "awayTeam": "SEA",
-        "time": "2026-01-04T18:00:00.000Z",
-        "gameInfo": "Sun, Jan 4, 1:00 PM ET - Santa Clara, CA",
+        "homeTeam": "PIT",
+        "awayTeam": "BAL",
+        "time": "2026-01-05T01:20:00.000Z",
+        "gameInfo": "Sun, Jan 4, 8:20 PM ET - Pittsburgh, PA",
         "homeScore": 0,
         "awayScore": 0,
         "winner": "",
