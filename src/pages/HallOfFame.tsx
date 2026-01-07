@@ -16,28 +16,28 @@ function HallOfFame() {
               <div className="content">
                 <p className="heading">Confidence Pool</p>
                 <p className="title">Patrick Cook</p>
-                <p className="subtitle">1689 Points</p>
+                <p className="subtitle">1689 Points (2024)</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div className="content">
                 <p className="heading">Survivor Pool</p>
                 <p className="title">Andrew (& Katie) Cook</p>
-                <p className="subtitle">16 Weeks</p>
+                <p className="subtitle">16 Weeks (2024)</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div className="content">
                 <p className="heading">Margin Pool</p>
                 <p className="title">Michael Bussinelli</p>
-                <p className="subtitle">287 Points</p>
+                <p className="subtitle">287 Points (2024)</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div className="content">
                 <p className="heading">High Five Pool</p>
                 <p className="title">Sydney Dannenbaum</p>
-                <p className="subtitle">108 Points</p>
+                <p className="subtitle">108 Points (2024)</p>
               </div>
             </div>
           </div>
@@ -86,6 +86,57 @@ function HallOfFame() {
           <h1 className="title is-3 stonehands-hero">
             <u>2025 Records</u>
           </h1>
+        </div>
+        <div className="block has-text-centered">
+          <h1 className="title stonehands-hero">Football</h1>
+        </div>
+        <div className="columns">
+          <div className="column">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Confidence Pool</h1>
+              <ol>
+                <li>Dan Fandl - 1616 Points</li>
+                <li>Bill Mathias - 1600 Points</li>
+                <li>Kelsey Linares - 1599.5 Points</li>
+                <li>Celeste (Panagopoulos) Ecker - 1598.5 Points</li>
+                <li>Heather Fandl - 1592 Points</li>
+              </ol>
+            </div>
+          </div>
+          <div className="column">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Survivor Pool</h1>
+              <ol>
+                <li>Kwan Jun - 14 Weeks</li>
+                <li>Emily Yerkes - 14 Weeks</li>
+                <li>7-way tie - 13 Weeks</li>
+              </ol>
+            </div>
+          </div>
+          <div className="column">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Margin Pool</h1>
+              <ol>
+                <li>Joe Breen - 280 Points</li>
+                <li>Dan Backhaus - 275 Points</li>
+                <li>John Horn - 272 Points</li>
+                <li>Richard Grenier - 270 Points</li>
+                <li>Tate Chambers - 269 Points</li>
+              </ol>
+            </div>
+          </div>
+          <div className="column">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">High Five Pool</h1>
+              <ol>
+                <li>Dan Fandl - 108 Points</li>
+                <li>Billy Maltz - 105 Points</li>
+                <li>Dan Gilbert - 105 Points</li>
+                <li>Patrick Cook - 102 Points</li>
+                <li>David Galatt - 102 Points</li>
+              </ol>
+            </div>
+          </div>
         </div>
         <div className="block has-text-centered">
           <h1 className="title stonehands-hero">March Madness</h1>
