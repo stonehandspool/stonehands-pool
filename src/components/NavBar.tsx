@@ -202,17 +202,17 @@ function NavBar() {
                   onLinkClick('more');
                 }}
               >
-                2024 Awards
+                2025 Awards
               </Link>
-              {/* <Link
+              <Link
                 className="navbar-item"
                 to="/payouts"
                 onClick={() => {
                   onLinkClick('more');
                 }}
               >
-                2024 Payouts
-              </Link> */}
+                2025 Payouts
+              </Link>
             </div>
           </div>
           {MARCH_MADNESS_STATE !== 'INACTIVE' && (
