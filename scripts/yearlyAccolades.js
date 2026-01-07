@@ -49,6 +49,9 @@ const TEAM_CODES = [
 
 // Get the data from the players json file
 const playerData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/players.json`)));
+const lastYearPlayerData = await JSON.parse(
+  await readFile(path.resolve(`data/${Number(year) - 1}/football/players.json`))
+);
 
 // Get the data from the season json file
 const seasonData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/season.json`)));
@@ -1091,6 +1094,58 @@ reallyWrongTeams.forEach((info, index) => {
     `${index + 1}. ${firstName} ${lastName} was always wrong with ${team} (${timesCorrect}-${timesIncorrect})`
   );
 });
+
+let mostImproved = { name: '', diff: 0, lastYear: 0, thisYear: 0 };
+let closest = { name: '', diff: 1000, lastYear: 0, thisYear: 0 };
+let fellApart = { name: '', diff: 0, lastYear: 0, thisYear: 0 };
+let bestNew = { name: '', total: 0 };
+
+playerData.forEach(player => {
+  const { points: thisYearsPoints, id, firstName, lastName } = player;
+  const playedLastYear = lastYearPlayerData.some(p => p.id === id);
+  if (playedLastYear) {
+    const lastYearPoints = lastYearPlayerData.find(p => p.id === id).points;
+    const diffFromLastYear = thisYearsPoints - lastYearPoints;
+    if (diffFromLastYear > mostImproved.diff) {
+      mostImproved = {
+        name: `${firstName} ${lastName}`,
+        diff: diffFromLastYear,
+        lastYear: lastYearPoints,
+        thisYear: thisYearsPoints,
+      };
+    }
+    if (Math.abs(diffFromLastYear) < Math.abs(closest.diff)) {
+      closest = {
+        name: `${firstName} ${lastName}`,
+        diff: diffFromLastYear,
+        lastYear: lastYearPoints,
+        thisYear: thisYearsPoints,
+      };
+    }
+    if (diffFromLastYear < fellApart.diff) {
+      fellApart = {
+        name: `${firstName} ${lastName}`,
+        diff: diffFromLastYear,
+        lastYear: lastYearPoints,
+        thisYear: thisYearsPoints,
+      };
+    }
+  } else if (thisYearsPoints > bestNew.total) {
+    bestNew = { name: `${firstName} ${lastName}`, total: thisYearsPoints };
+  }
+});
+
+console.log();
+console.log(
+  `The most improved player was ${mostImproved.name} who improved by ${mostImproved.diff} from ${mostImproved.lastYear} points last year to ${mostImproved.thisYear} points this year`
+);
+console.log(
+  `The most consistent player was ${closest.name} who changed by ${closest.diff} from ${closest.lastYear} points last year to ${closest.thisYear} points this year`
+);
+console.log(
+  `The fall apart player was ${fellApart.name} who fell by ${fellApart.diff} from ${fellApart.lastYear} points last year to ${fellApart.thisYear} points this year`
+);
+console.log(`The best new player this year was ${bestNew.name} with ${bestNew.total} points`);
 
 const accoladesAsJson = JSON.stringify(yearlyAccolades, null, 2);
 await writeFile(path.resolve(`data/${year}/football/accolades.json`), accoladesAsJson);
