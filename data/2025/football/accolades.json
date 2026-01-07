@@ -1,0 +1,6885 @@
+[
+  {
+    "id": "forgetfulPeople",
+    "title": "Most Forgetful People",
+    "description": "These are the people who forgot to submit their picksheet the most times throughout the season",
+    "data": [
+      {
+        "userId": "ac5d7aa9-47d3-4157-a319-5e4ec34dc4a6",
+        "firstName": "Mark",
+        "lastName": "Gallivan",
+        "timesForgotten": 14
+      },
+      {
+        "userId": "9b64510f-964d-4f54-96c6-c6cf68a93a02",
+        "firstName": "David",
+        "lastName": "Condon iii",
+        "timesForgotten": 13
+      },
+      {
+        "userId": "35160dc6-ae4d-4d05-aa2b-5213ba41f214",
+        "firstName": "Ben",
+        "lastName": "Harwick",
+        "timesForgotten": 11
+      },
+      {
+        "userId": "44f58df3-3a45-4f04-bf55-546525755c27",
+        "firstName": "William",
+        "lastName": "Silva",
+        "timesForgotten": 9
+      },
+      {
+        "userId": "b55a460a-d186-482f-98c9-d0607ab3dc6f",
+        "firstName": "John",
+        "lastName": "Blake",
+        "timesForgotten": 8
+      }
+    ]
+  },
+  {
+    "id": "eagerPeople",
+    "title": "Most Eager People",
+    "description": "These are the people who on average got their picksheet in the earliest in the week",
+    "data": [
+      {
+        "userId": "a7fe229a-d3e1-4fbc-8c72-f7cfe0a25e23",
+        "firstName": "Eric",
+        "lastName": "Rossi",
+        "places": [
+          42,
+          18,
+          7,
+          1,
+          2,
+          4,
+          4,
+          2,
+          1,
+          4,
+          7,
+          2,
+          6,
+          5,
+          27,
+          4,
+          4,
+          73
+        ],
+        "average": 11.833333333333334
+      },
+      {
+        "userId": "fd65b259-e7f2-4fc6-9e7b-5d0a5a522399",
+        "firstName": "Ben",
+        "lastName": "Edwards",
+        "places": [
+          15,
+          5,
+          3,
+          3,
+          4,
+          13,
+          22,
+          16,
+          23,
+          19,
+          2,
+          5,
+          20,
+          2,
+          11,
+          23,
+          45,
+          14
+        ],
+        "average": 13.61111111111111
+      },
+      {
+        "userId": "81dfed50-3ad4-4d85-9af2-0286b9d23f9e",
+        "firstName": "Guido",
+        "lastName": "Bussinelli",
+        "places": [
+          6,
+          1,
+          8,
+          17,
+          15,
+          24,
+          21,
+          17,
+          22,
+          22,
+          18,
+          7,
+          4,
+          10,
+          7,
+          10,
+          33,
+          8
+        ],
+        "average": 13.88888888888889
+      },
+      {
+        "userId": "23016a50-5fd8-4743-b5a8-f5bd06eb0e04",
+        "firstName": "Caroline",
+        "lastName": "Dolan",
+        "places": [
+          26,
+          4,
+          4,
+          22,
+          17,
+          25,
+          6,
+          5,
+          6,
+          9,
+          1,
+          4,
+          47,
+          9,
+          3,
+          5,
+          19,
+          63
+        ],
+        "average": 15.277777777777779
+      },
+      {
+        "userId": "1f5c6189-2ec0-4e3b-a444-84e5c5de3c2f",
+        "firstName": "George",
+        "lastName": "Difiore",
+        "places": [
+          49,
+          3,
+          22,
+          54,
+          3,
+          3,
+          44,
+          1,
+          2,
+          6,
+          4,
+          13,
+          7,
+          4,
+          10,
+          11,
+          8,
+          31
+        ],
+        "average": 15.277777777777779
+      }
+    ]
+  },
+  {
+    "id": "leastEagerPeople",
+    "title": "Least Eager People",
+    "description": "These are the people who on average got their picksheet in the latest in the week",
+    "data": [
+      {
+        "userId": "7a1a245e-de22-4ff5-819f-6ec86f288e98",
+        "firstName": "Ashley",
+        "lastName": "Amodeo",
+        "places": [
+          133,
+          134,
+          138,
+          135,
+          138,
+          144,
+          110,
+          125,
+          133,
+          130,
+          141,
+          138,
+          139,
+          133,
+          125,
+          120
+        ],
+        "average": 132.25
+      },
+      {
+        "userId": "aceb39ff-150c-48ee-a879-41c21c6a7382",
+        "firstName": "Alex",
+        "lastName": "Ecker",
+        "places": [
+          107,
+          145,
+          145,
+          142,
+          143,
+          119,
+          114,
+          69,
+          109,
+          139,
+          130
+        ],
+        "average": 123.81818181818181
+      },
+      {
+        "userId": "4943d53f-5a0f-44aa-8532-5a11bac66783",
+        "firstName": "John",
+        "lastName": "Horn",
+        "places": [
+          139,
+          125,
+          121,
+          125,
+          131,
+          131,
+          120,
+          127,
+          127,
+          111,
+          121,
+          113,
+          127,
+          121,
+          118,
+          119,
+          114,
+          113
+        ],
+        "average": 122.38888888888889
+      },
+      {
+        "userId": "f54a8283-bc63-4138-a77f-3331bcaee97b",
+        "firstName": "Daniel",
+        "lastName": "Graham",
+        "places": [
+          138,
+          131,
+          122,
+          103,
+          117,
+          89,
+          108,
+          112,
+          124,
+          128,
+          125,
+          116,
+          128,
+          119,
+          121,
+          126,
+          118
+        ],
+        "average": 119.11764705882354
+      },
+      {
+        "userId": "71cab27c-2f20-4ec9-bc0d-fe7d9988b528",
+        "firstName": "Kimberlee",
+        "lastName": "Horn",
+        "places": [
+          143,
+          42,
+          141,
+          139,
+          142,
+          137,
+          131,
+          139,
+          139,
+          138,
+          136,
+          95,
+          10,
+          130,
+          127,
+          134,
+          80,
+          125
+        ],
+        "average": 118.22222222222223
+      }
+    ]
+  },
+  {
+    "id": "indecisivePeople",
+    "title": "Most Indecisive People",
+    "description": "These are the people who forgot changed their picksheet the most times throughout the season",
+    "data": [
+      {
+        "userId": "81dfed50-3ad4-4d85-9af2-0286b9d23f9e",
+        "firstName": "Guido",
+        "lastName": "Bussinelli",
+        "timesUpdated": 76
+      },
+      {
+        "userId": "57110a0b-ad45-437f-9f55-2f4869a584cc",
+        "firstName": "Kwan",
+        "lastName": "Jun",
+        "timesUpdated": 46
+      },
+      {
+        "userId": "cfe398b6-3b3e-49a3-a0b5-607df1da902d",
+        "firstName": "Kevin",
+        "lastName": "Carozza",
+        "timesUpdated": 36
+      },
+      {
+        "userId": "891b628d-34ef-4959-a722-c4b467c24cae",
+        "firstName": "Dan",
+        "lastName": "Martin",
+        "timesUpdated": 34
+      },
+      {
+        "userId": "85627722-0b6a-4ccb-986f-efc393b43f05",
+        "firstName": "Brian",
+        "lastName": "Armstrong",
+        "timesUpdated": 32
+      }
+    ]
+  },
+  {
+    "id": "thursdayPoints",
+    "title": "Top 5 Thursday (Points)",
+    "description": "These are the 5 people who earned the most points on Thursday night games",
+    "data": [
+      {
+        "userId": "66c1862c-3f23-48b5-837d-a0c7adfef73e",
+        "firstName": "Robyn",
+        "lastName": "Rogers",
+        "timesCorrect": 14,
+        "timesIncorrect": 7,
+        "totalPoints": 161,
+        "pointsRisked": 228,
+        "efficiency": 70.61
+      },
+      {
+        "userId": "128330c3-fc98-4050-8c9a-58b08829f455",
+        "firstName": "Joseph",
+        "lastName": "Gangi",
+        "timesCorrect": 10,
+        "timesIncorrect": 11,
+        "totalPoints": 143,
+        "pointsRisked": 259,
+        "efficiency": 55.21
+      },
+      {
+        "userId": "00481fee-90e5-416d-a51d-6988122500de",
+        "firstName": "Chris",
+        "lastName": "Fandl",
+        "timesCorrect": 11,
+        "timesIncorrect": 10,
+        "totalPoints": 140,
+        "pointsRisked": 223,
+        "efficiency": 62.78
+      },
+      {
+        "userId": "dc6fb755-76be-483a-bc8e-cc17e138367f",
+        "firstName": "Dan",
+        "lastName": "Fandl",
+        "timesCorrect": 14,
+        "timesIncorrect": 7,
+        "totalPoints": 139,
+        "pointsRisked": 205,
+        "efficiency": 67.8
+      },
+      {
+        "userId": "d73acab6-3e91-4163-8186-307726f425a6",
+        "firstName": "Celeste ",
+        "lastName": "(Panagopoulos) Ecker",
+        "timesCorrect": 13,
+        "timesIncorrect": 8,
+        "totalPoints": 138,
+        "pointsRisked": 205,
+        "efficiency": 67.32
+      }
+    ]
+  },
+  {
+    "id": "thursdayWins",
+    "title": "Top 5 Thursday (Wins)",
+    "description": "These are the 5 people who got the most games right on Thursday night",
+    "data": [
+      {
+        "userId": "ac5d7aa9-47d3-4157-a319-5e4ec34dc4a6",
+        "firstName": "Mark",
+        "lastName": "Gallivan",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 54,
+        "pointsRisked": 75,
+        "efficiency": 72
+      },
+      {
+        "userId": "66c1862c-3f23-48b5-837d-a0c7adfef73e",
+        "firstName": "Robyn",
+        "lastName": "Rogers",
+        "timesCorrect": 14,
+        "timesIncorrect": 7,
+        "totalPoints": 161,
+        "pointsRisked": 228,
+        "efficiency": 70.61
+      },
+      {
+        "userId": "dc6fb755-76be-483a-bc8e-cc17e138367f",
+        "firstName": "Dan",
+        "lastName": "Fandl",
+        "timesCorrect": 14,
+        "timesIncorrect": 7,
+        "totalPoints": 139,
+        "pointsRisked": 205,
+        "efficiency": 67.8
+      },
+      {
+        "userId": "51692677-7eb4-4cf1-928b-1575232815e9",
+        "firstName": "Katie",
+        "lastName": "Gould",
+        "timesCorrect": 14,
+        "timesIncorrect": 8,
+        "totalPoints": 131,
+        "pointsRisked": 195,
+        "efficiency": 67.18
+      },
+      {
+        "userId": "57110a0b-ad45-437f-9f55-2f4869a584cc",
+        "firstName": "Kwan",
+        "lastName": "Jun",
+        "timesCorrect": 14,
+        "timesIncorrect": 7,
+        "totalPoints": 120,
+        "pointsRisked": 199,
+        "efficiency": 60.3
+      }
+    ]
+  },
+  {
+    "id": "thursdayPointsRisked",
+    "title": "Top 5 Thursday (Points Risked)",
+    "description": "These are the 5 people who risked the most points on Thursday night games",
+    "data": [
+      {
+        "userId": "128330c3-fc98-4050-8c9a-58b08829f455",
+        "firstName": "Joseph",
+        "lastName": "Gangi",
+        "timesCorrect": 10,
+        "timesIncorrect": 11,
+        "totalPoints": 143,
+        "pointsRisked": 259,
+        "efficiency": 55.21
+      },
+      {
+        "userId": "e267d0ae-c957-4619-83db-17f31670efe3",
+        "firstName": "Brendan",
+        "lastName": "White",
+        "timesCorrect": 11,
+        "timesIncorrect": 10,
+        "totalPoints": 128,
+        "pointsRisked": 251,
+        "efficiency": 51
+      },
+      {
+        "userId": "f9d2b133-04b5-4b17-be87-99dac41d7f91",
+        "firstName": "Paige",
+        "lastName": "Seitz",
+        "timesCorrect": 10,
+        "timesIncorrect": 11,
+        "totalPoints": 135,
+        "pointsRisked": 251,
+        "efficiency": 53.78
+      },
+      {
+        "userId": "e83e6e7a-345b-42be-8e7f-910d381b1ee4",
+        "firstName": "James",
+        "lastName": "Horn",
+        "timesCorrect": 10,
+        "timesIncorrect": 11,
+        "totalPoints": 102,
+        "pointsRisked": 243,
+        "efficiency": 41.98
+      },
+      {
+        "userId": "f28d9541-88e0-4a2f-acde-cceb3ad0e2cc",
+        "firstName": "Jeff",
+        "lastName": "Heotzler",
+        "timesCorrect": 11,
+        "timesIncorrect": 10,
+        "totalPoints": 131,
+        "pointsRisked": 236,
+        "efficiency": 55.51
+      }
+    ]
+  },
+  {
+    "id": "thursdayEfficiency",
+    "title": "Top 5 Thursday (Efficiency)",
+    "description": "These are the 5 people who were the most efficient with their points assigned on Thursday night",
+    "data": [
+      {
+        "userId": "9b64510f-964d-4f54-96c6-c6cf68a93a02",
+        "firstName": "David",
+        "lastName": "Condon iii",
+        "timesCorrect": 12,
+        "timesIncorrect": 9,
+        "totalPoints": 47,
+        "pointsRisked": 58,
+        "efficiency": 81.03
+      },
+      {
+        "userId": "ac5d7aa9-47d3-4157-a319-5e4ec34dc4a6",
+        "firstName": "Mark",
+        "lastName": "Gallivan",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 54,
+        "pointsRisked": 75,
+        "efficiency": 72
+      },
+      {
+        "userId": "44f58df3-3a45-4f04-bf55-546525755c27",
+        "firstName": "William",
+        "lastName": "Silva",
+        "timesCorrect": 12,
+        "timesIncorrect": 9,
+        "totalPoints": 41,
+        "pointsRisked": 57,
+        "efficiency": 71.93
+      },
+      {
+        "userId": "66c1862c-3f23-48b5-837d-a0c7adfef73e",
+        "firstName": "Robyn",
+        "lastName": "Rogers",
+        "timesCorrect": 14,
+        "timesIncorrect": 7,
+        "totalPoints": 161,
+        "pointsRisked": 228,
+        "efficiency": 70.61
+      },
+      {
+        "userId": "6dad62c5-5c10-4567-974d-87dee401f59d",
+        "firstName": "Ryan",
+        "lastName": "Rose",
+        "timesCorrect": 13,
+        "timesIncorrect": 8,
+        "totalPoints": 116,
+        "pointsRisked": 169,
+        "efficiency": 68.64
+      }
+    ]
+  },
+  {
+    "id": "mondayPoints",
+    "title": "Top 5 Monday (Points)",
+    "description": "These are the 5 people who earned the most points on Monday night games",
+    "data": [
+      {
+        "userId": "224de293-ba4e-4b11-987b-ae65f8d082d2",
+        "firstName": "James",
+        "lastName": "Cook",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 174,
+        "pointsRisked": 230,
+        "efficiency": 75.65
+      },
+      {
+        "userId": "f2628a63-99f5-46f4-8972-55ab06139e68",
+        "firstName": "Cindy",
+        "lastName": "Dolan",
+        "timesCorrect": 14,
+        "timesIncorrect": 7,
+        "totalPoints": 158,
+        "pointsRisked": 221,
+        "efficiency": 71.49
+      },
+      {
+        "userId": "a79d5087-e05f-4575-8368-e46caab98dea",
+        "firstName": "Matt",
+        "lastName": "Newman",
+        "timesCorrect": 13,
+        "timesIncorrect": 8,
+        "totalPoints": 139,
+        "pointsRisked": 220,
+        "efficiency": 63.18
+      },
+      {
+        "userId": "00d824fe-a66f-467f-bad9-530391bb3581",
+        "firstName": "Tate",
+        "lastName": "Chambers",
+        "timesCorrect": 13,
+        "timesIncorrect": 8,
+        "totalPoints": 130,
+        "pointsRisked": 208,
+        "efficiency": 62.5
+      },
+      {
+        "userId": "16abfae2-61fa-408a-9720-454b92b2d415",
+        "firstName": "Kristen",
+        "lastName": "Misiaszek",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 130,
+        "pointsRisked": 171,
+        "efficiency": 76.02
+      }
+    ]
+  },
+  {
+    "id": "mondayWins",
+    "title": "Top 5 Monday (Wins)",
+    "description": "These are the 5 people who got the most games right on Monday night",
+    "data": [
+      {
+        "userId": "47aa75a6-122f-4bc0-8b5d-0014c1652e88",
+        "firstName": "Liam",
+        "lastName": "Kraft",
+        "timesCorrect": 16,
+        "timesIncorrect": 5,
+        "totalPoints": 97,
+        "pointsRisked": 137,
+        "efficiency": 70.8
+      },
+      {
+        "userId": "224de293-ba4e-4b11-987b-ae65f8d082d2",
+        "firstName": "James",
+        "lastName": "Cook",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 174,
+        "pointsRisked": 230,
+        "efficiency": 75.65
+      },
+      {
+        "userId": "16abfae2-61fa-408a-9720-454b92b2d415",
+        "firstName": "Kristen",
+        "lastName": "Misiaszek",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 130,
+        "pointsRisked": 171,
+        "efficiency": 76.02
+      },
+      {
+        "userId": "f193f228-40a5-4d54-87bf-28b51eeb50f9",
+        "firstName": "Samantha",
+        "lastName": "Kast",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 127,
+        "pointsRisked": 172,
+        "efficiency": 73.84
+      },
+      {
+        "userId": "d0bbf908-0072-409d-8d12-b17f1c681874",
+        "firstName": "Dan",
+        "lastName": "Goldfarb",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 121,
+        "pointsRisked": 177,
+        "efficiency": 68.36
+      }
+    ]
+  },
+  {
+    "id": "mondayPointsRisked",
+    "title": "Top 5 Monday (Points Risked)",
+    "description": "These are the 5 people who risked the most points on Monday night games",
+    "data": [
+      {
+        "userId": "44f58df3-3a45-4f04-bf55-546525755c27",
+        "firstName": "William",
+        "lastName": "Silva",
+        "timesCorrect": 6,
+        "timesIncorrect": 15,
+        "totalPoints": 75,
+        "pointsRisked": 291,
+        "efficiency": 25.77
+      },
+      {
+        "userId": "7dbe1a7f-29ad-4000-b663-b2c7b5cfcb5f",
+        "firstName": "Jim",
+        "lastName": "Steets",
+        "timesCorrect": 7,
+        "timesIncorrect": 14,
+        "totalPoints": 84,
+        "pointsRisked": 268,
+        "efficiency": 31.34
+      },
+      {
+        "userId": "ac5d7aa9-47d3-4157-a319-5e4ec34dc4a6",
+        "firstName": "Mark",
+        "lastName": "Gallivan",
+        "timesCorrect": 2,
+        "timesIncorrect": 19,
+        "totalPoints": 8,
+        "pointsRisked": 265,
+        "efficiency": 3.02
+      },
+      {
+        "userId": "9b64510f-964d-4f54-96c6-c6cf68a93a02",
+        "firstName": "David",
+        "lastName": "Condon iii",
+        "timesCorrect": 5,
+        "timesIncorrect": 16,
+        "totalPoints": 40,
+        "pointsRisked": 259,
+        "efficiency": 15.44
+      },
+      {
+        "userId": "224de293-ba4e-4b11-987b-ae65f8d082d2",
+        "firstName": "James",
+        "lastName": "Cook",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 174,
+        "pointsRisked": 230,
+        "efficiency": 75.65
+      }
+    ]
+  },
+  {
+    "id": "mondayEfficiency",
+    "title": "Top 5 Monday (Efficiency)",
+    "description": "These are the 5 people who were the most efficient with their points assigned on Monday night",
+    "data": [
+      {
+        "userId": "0d243ee0-819e-4977-ba9f-065f18f5a96f",
+        "firstName": "Jeff",
+        "lastName": "Fandl",
+        "timesCorrect": 14,
+        "timesIncorrect": 7,
+        "totalPoints": 128,
+        "pointsRisked": 159,
+        "efficiency": 80.5
+      },
+      {
+        "userId": "32abe494-730f-49b9-8e1e-f9d121a9a477",
+        "firstName": "Kellan",
+        "lastName": "Fandl",
+        "timesCorrect": 14,
+        "timesIncorrect": 7,
+        "totalPoints": 126,
+        "pointsRisked": 162,
+        "efficiency": 77.78
+      },
+      {
+        "userId": "16abfae2-61fa-408a-9720-454b92b2d415",
+        "firstName": "Kristen",
+        "lastName": "Misiaszek",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 130,
+        "pointsRisked": 171,
+        "efficiency": 76.02
+      },
+      {
+        "userId": "224de293-ba4e-4b11-987b-ae65f8d082d2",
+        "firstName": "James",
+        "lastName": "Cook",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 174,
+        "pointsRisked": 230,
+        "efficiency": 75.65
+      },
+      {
+        "userId": "b103a057-3be7-498d-985c-d80debf420d1",
+        "firstName": "Connor",
+        "lastName": "Gilgen",
+        "timesCorrect": 15,
+        "timesIncorrect": 6,
+        "totalPoints": 102,
+        "pointsRisked": 136,
+        "efficiency": 75
+      }
+    ]
+  },
+  {
+    "id": "loneWolf",
+    "title": "Lone Wolf Award",
+    "description": "These are the people who were able to be the only person to pick a team correctly in a matchup",
+    "data": [
+      {
+        "userId": "d9985b83-08de-4e96-bcbc-e348666a554c",
+        "firstName": "Kailey",
+        "lastName": "Fandl",
+        "team": "MIN",
+        "losingTeam": "DET",
+        "pickedRight": true,
+        "weekId": "week_9",
+        "matchupId": "matchup_6",
+        "description": "They were the only person to correctly choose MIN to beat DET in week 9"
+      },
+      {
+        "userId": "aa2a25c0-6ada-4250-ad76-509d4b10203f",
+        "firstName": "Ben",
+        "lastName": "Ling",
+        "team": "NO",
+        "losingTeam": "TB",
+        "pickedRight": true,
+        "weekId": "week_14",
+        "matchupId": "matchup_6",
+        "description": "They were the only person to correctly choose NO to beat TB in week 14"
+      }
+    ]
+  },
+  {
+    "id": "loneLoser",
+    "title": "Lone Loser Award",
+    "description": "These are the people who unfortunately were the only ones to pick a matchup incorrectly during the season",
+    "data": [
+      {
+        "userId": "224de293-ba4e-4b11-987b-ae65f8d082d2",
+        "firstName": "James",
+        "lastName": "Cook",
+        "team": "CAR",
+        "losingTeam": "ARI",
+        "pickedRight": false,
+        "weekId": "week_2",
+        "matchupId": "matchup_11",
+        "description": "They were the only person to incorrectly choose CAR to beat ARI in week 2"
+      },
+      {
+        "userId": "44f58df3-3a45-4f04-bf55-546525755c27",
+        "firstName": "William",
+        "lastName": "Silva",
+        "team": "CLE",
+        "losingTeam": "DET",
+        "pickedRight": false,
+        "weekId": "week_4",
+        "matchupId": "matchup_5",
+        "description": "They were the only person to incorrectly choose CLE to beat DET in week 4"
+      },
+      {
+        "userId": "0b415cdc-0a90-47bb-9133-922db04cf0f4",
+        "firstName": "Will",
+        "lastName": "Stack",
+        "team": "LV",
+        "losingTeam": "KC",
+        "pickedRight": false,
+        "weekId": "week_7",
+        "matchupId": "matchup_8",
+        "description": "They were the only person to incorrectly choose LV to beat KC in week 7"
+      },
+      {
+        "userId": "b785a213-b449-462c-8ff0-2380462159bc",
+        "firstName": "Sarah",
+        "lastName": "Waterhouse",
+        "team": "TEN",
+        "losingTeam": "IND",
+        "pickedRight": false,
+        "weekId": "week_8",
+        "matchupId": "matchup_11",
+        "description": "They were the only person to incorrectly choose TEN to beat IND in week 8"
+      },
+      {
+        "userId": "4c3fb8b7-4be7-4f02-9e47-e7d024fd0c31",
+        "firstName": "Lisa",
+        "lastName": "Gugliada",
+        "team": "WAS",
+        "losingTeam": "KC",
+        "pickedRight": false,
+        "weekId": "week_8",
+        "matchupId": "matchup_13",
+        "description": "They were the only person to incorrectly choose WAS to beat KC in week 8"
+      },
+      {
+        "userId": "89249ff3-ce1e-4bcc-941d-2e9de761ccfd",
+        "firstName": "Aidan",
+        "lastName": "Brink",
+        "team": "CLE",
+        "losingTeam": "BAL",
+        "pickedRight": false,
+        "weekId": "week_11",
+        "matchupId": "matchup_13",
+        "description": "They were the only person to incorrectly choose CLE to beat BAL in week 11"
+      },
+      {
+        "userId": "f9d2b133-04b5-4b17-be87-99dac41d7f91",
+        "firstName": "Paige",
+        "lastName": "Seitz",
+        "team": "MIN",
+        "losingTeam": "SEA",
+        "pickedRight": false,
+        "weekId": "week_13",
+        "matchupId": "matchup_12",
+        "description": "They were the only person to incorrectly choose MIN to beat SEA in week 13"
+      },
+      {
+        "userId": "d75f6d28-4766-4700-9cf3-b1a8cdf26c5a",
+        "firstName": "Nicole",
+        "lastName": "Tseng",
+        "team": "LV",
+        "losingTeam": "DEN",
+        "pickedRight": false,
+        "weekId": "week_14",
+        "matchupId": "matchup_10",
+        "description": "They were the only person to incorrectly choose LV to beat DEN in week 14"
+      },
+      {
+        "userId": "aa2a25c0-6ada-4250-ad76-509d4b10203f",
+        "firstName": "Ben",
+        "lastName": "Ling",
+        "team": "ARI",
+        "losingTeam": "LA",
+        "pickedRight": false,
+        "weekId": "week_14",
+        "matchupId": "matchup_12",
+        "description": "They were the only person to incorrectly choose ARI to beat LA in week 14"
+      },
+      {
+        "userId": "7a1a245e-de22-4ff5-819f-6ec86f288e98",
+        "firstName": "Ashley",
+        "lastName": "Amodeo",
+        "team": "NYJ",
+        "losingTeam": "NE",
+        "pickedRight": false,
+        "weekId": "week_17",
+        "matchupId": "matchup_7",
+        "description": "They were the only person to incorrectly choose NYJ to beat NE in week 17"
+      }
+    ]
+  },
+  {
+    "id": "mostPoints",
+    "title": "Top 5 Overall (Points)",
+    "description": "These are the 5 people who earned the most points throughout the season",
+    "data": [
+      {
+        "id": "dc6fb755-76be-483a-bc8e-cc17e138367f",
+        "username": "Dfandl",
+        "firstName": "Dan",
+        "lastName": "Fandl",
+        "wins": 180,
+        "winsByWeek": [
+          11,
+          12,
+          10,
+          8,
+          6,
+          11,
+          9,
+          9,
+          9,
+          9,
+          14,
+          10,
+          13,
+          10,
+          10,
+          10,
+          9,
+          10
+        ],
+        "losses": 91,
+        "lossesByWeek": [
+          5,
+          4,
+          6,
+          7,
+          8,
+          4,
+          6,
+          4,
+          5,
+          5,
+          1,
+          4,
+          3,
+          4,
+          6,
+          6,
+          7,
+          6
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6636029411764706,
+        "points": 1616,
+        "pointsByWeek": [
+          112,
+          118,
+          91,
+          87,
+          42,
+          98,
+          77,
+          73,
+          84,
+          69,
+          112,
+          80,
+          109,
+          73,
+          105,
+          109,
+          77,
+          100
+        ],
+        "tbAvg": 40.833333333333336,
+        "tiebreakerByWeek": [
+          46,
+          47,
+          46,
+          46,
+          46,
+          42,
+          46,
+          46,
+          46,
+          46,
+          1,
+          1,
+          46,
+          46,
+          46,
+          46,
+          46,
+          46
+        ],
+        "lastWeekRank": 1,
+        "currentWeekRank": 1,
+        "rankByWeek": [
+          45,
+          27,
+          38,
+          51,
+          44,
+          19,
+          44,
+          37,
+          19,
+          18,
+          11,
+          15,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "change": "--",
+        "currentWeekWins": 10,
+        "currentWeekLosses": 6,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 100,
+        "currentWeekTiebreaker": 46,
+        "survivorPicks": [
+          "PHI",
+          "BAL",
+          "SEA",
+          "LAC"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "ARI",
+            "margin": 7
+          },
+          {
+            "team": "DAL",
+            "margin": 3
+          },
+          {
+            "team": "LV",
+            "margin": -17
+          },
+          {
+            "team": "BUF",
+            "margin": 12
+          },
+          {
+            "team": "DET",
+            "margin": 13
+          },
+          {
+            "team": "DEN",
+            "margin": 2
+          },
+          {
+            "team": "SEA",
+            "margin": 8
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "BAL",
+            "margin": 22
+          },
+          {
+            "team": "CLE",
+            "margin": -7
+          },
+          {
+            "team": "NE",
+            "margin": 13
+          },
+          {
+            "team": "SF",
+            "margin": 11
+          },
+          {
+            "team": "LAC",
+            "margin": 17
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "JAC",
+            "margin": 28
+          },
+          {
+            "team": "HOU",
+            "margin": 2
+          },
+          {
+            "team": "LA",
+            "margin": -3
+          },
+          {
+            "team": "ATL",
+            "margin": 2
+          }
+        ],
+        "marginTotal": 133,
+        "highFiveValues": [
+          8,
+          8,
+          5,
+          3,
+          2,
+          8,
+          8,
+          8,
+          8,
+          3,
+          8,
+          5,
+          8,
+          5,
+          8,
+          8,
+          2,
+          3
+        ],
+        "highFiveTotal": 108,
+        "highFiveThisWeek": [
+          {
+            "team": "HOU",
+            "won": true
+          },
+          {
+            "team": "CIN",
+            "won": false
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "KC",
+            "won": false
+          }
+        ]
+      },
+      {
+        "id": "32476ed6-56bf-40be-89e8-6130d02a324a",
+        "username": "Mathias",
+        "firstName": "Bill",
+        "lastName": "Mathias",
+        "wins": 182,
+        "winsByWeek": [
+          12,
+          10,
+          12,
+          9,
+          7,
+          9,
+          13,
+          10,
+          10,
+          9,
+          12,
+          10,
+          9,
+          8,
+          10,
+          11,
+          12,
+          9
+        ],
+        "losses": 89,
+        "lossesByWeek": [
+          4,
+          6,
+          4,
+          6,
+          7,
+          6,
+          2,
+          3,
+          4,
+          5,
+          3,
+          4,
+          7,
+          6,
+          6,
+          5,
+          4,
+          7
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6709558823529411,
+        "points": 1600,
+        "pointsByWeek": [
+          122,
+          105,
+          101,
+          99,
+          46,
+          72,
+          102,
+          75,
+          67,
+          75,
+          102,
+          88,
+          81,
+          66,
+          101,
+          101,
+          96,
+          101
+        ],
+        "tbAvg": 48.05555555555556,
+        "tiebreakerByWeek": [
+          43,
+          47,
+          54,
+          46,
+          48,
+          53,
+          39,
+          50,
+          58,
+          44,
+          52,
+          48,
+          48,
+          43,
+          45,
+          51,
+          51,
+          45
+        ],
+        "lastWeekRank": 3,
+        "currentWeekRank": 2,
+        "rankByWeek": [
+          7,
+          37,
+          18,
+          16,
+          10,
+          22,
+          16,
+          12,
+          13,
+          10,
+          9,
+          5,
+          11,
+          13,
+          12,
+          7,
+          3,
+          2
+        ],
+        "change": "+1",
+        "currentWeekWins": 9,
+        "currentWeekLosses": 7,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 101,
+        "currentWeekTiebreaker": 45,
+        "survivorPicks": [
+          "DEN",
+          "ARI",
+          "WAS",
+          "GB"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "DEN",
+            "margin": 8
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "DET",
+            "margin": 24
+          },
+          {
+            "team": "LA",
+            "margin": -3
+          },
+          {
+            "team": "GB",
+            "margin": 9
+          },
+          {
+            "team": "KC",
+            "margin": 31
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "LAC",
+            "margin": 7
+          },
+          {
+            "team": "SEA",
+            "margin": 22
+          },
+          {
+            "team": "NE",
+            "margin": 13
+          },
+          {
+            "team": "SF",
+            "margin": 11
+          },
+          {
+            "team": "JAC",
+            "margin": 22
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "HOU",
+            "margin": 20
+          },
+          {
+            "team": "PHI",
+            "margin": 11
+          },
+          {
+            "team": "CIN",
+            "margin": 23
+          },
+          {
+            "team": "MIN",
+            "margin": 13
+          }
+        ],
+        "marginTotal": 265,
+        "highFiveValues": [
+          8,
+          8,
+          5,
+          5,
+          2,
+          3,
+          5,
+          5,
+          3,
+          5,
+          8,
+          8,
+          3,
+          5,
+          8,
+          3,
+          5,
+          8
+        ],
+        "highFiveTotal": 97,
+        "highFiveThisWeek": [
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "8de8c486-694b-4545-8739-f67bb0bf2761",
+        "username": "Klinares",
+        "firstName": "Kelsey",
+        "lastName": "Linares",
+        "wins": 180,
+        "winsByWeek": [
+          9,
+          12,
+          11,
+          11,
+          5,
+          10,
+          12,
+          9,
+          8,
+          11,
+          10,
+          10,
+          10,
+          9,
+          12,
+          13,
+          8,
+          10
+        ],
+        "losses": 91,
+        "lossesByWeek": [
+          7,
+          4,
+          5,
+          4,
+          9,
+          5,
+          3,
+          4,
+          6,
+          3,
+          5,
+          4,
+          6,
+          5,
+          4,
+          3,
+          8,
+          6
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6636029411764706,
+        "points": 1599.5,
+        "pointsByWeek": [
+          94,
+          118,
+          96,
+          101.5,
+          40,
+          84,
+          95,
+          65,
+          64,
+          90,
+          100,
+          77,
+          100,
+          79,
+          102,
+          112,
+          85,
+          97
+        ],
+        "tbAvg": 45.5,
+        "tiebreakerByWeek": [
+          45,
+          44,
+          54,
+          40,
+          47,
+          48,
+          45,
+          45,
+          51,
+          45,
+          45,
+          45,
+          45,
+          45,
+          42,
+          42,
+          42,
+          49
+        ],
+        "lastWeekRank": 2,
+        "currentWeekRank": 3,
+        "rankByWeek": [
+          113,
+          90,
+          74,
+          48,
+          48,
+          42,
+          39,
+          44,
+          48,
+          25,
+          24,
+          27,
+          18,
+          10,
+          9,
+          2,
+          2,
+          3
+        ],
+        "change": "-1",
+        "currentWeekWins": 10,
+        "currentWeekLosses": 6,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 97,
+        "currentWeekTiebreaker": 49,
+        "survivorPicks": [
+          "DEN",
+          "BAL",
+          "ATL"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "DEN",
+            "margin": 8
+          },
+          {
+            "team": "LAC",
+            "margin": 11
+          },
+          {
+            "team": "KC",
+            "margin": 13
+          },
+          {
+            "team": "BUF",
+            "margin": 12
+          },
+          {
+            "team": "DET",
+            "margin": 13
+          },
+          {
+            "team": "IND",
+            "margin": 4
+          },
+          {
+            "team": "CHI",
+            "margin": 12
+          },
+          {
+            "team": "CIN",
+            "margin": -1
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "CAR",
+            "margin": -10
+          },
+          {
+            "team": "NE",
+            "margin": 13
+          },
+          {
+            "team": "SEA",
+            "margin": 6
+          },
+          {
+            "team": "JAC",
+            "margin": 22
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "SF",
+            "margin": 13
+          },
+          {
+            "team": "PHI",
+            "margin": 11
+          },
+          {
+            "team": "PIT",
+            "margin": -7
+          },
+          {
+            "team": "DAL",
+            "margin": -17
+          }
+        ],
+        "marginTotal": 123,
+        "highFiveValues": [
+          3,
+          8,
+          3,
+          5,
+          3,
+          5,
+          8,
+          5,
+          2,
+          3,
+          8,
+          5,
+          5,
+          5,
+          5,
+          8,
+          5,
+          5
+        ],
+        "highFiveTotal": 91,
+        "highFiveThisWeek": [
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "PHI",
+            "won": false
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "JAC",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "d73acab6-3e91-4163-8186-307726f425a6",
+        "username": "HotLilGiantsHoney",
+        "firstName": "Celeste ",
+        "lastName": "(Panagopoulos) Ecker",
+        "wins": 176,
+        "winsByWeek": [
+          9,
+          12,
+          10,
+          9,
+          4,
+          9,
+          10,
+          8,
+          11,
+          9,
+          12,
+          11,
+          11,
+          6,
+          12,
+          12,
+          10,
+          11
+        ],
+        "losses": 95,
+        "lossesByWeek": [
+          7,
+          4,
+          6,
+          6,
+          10,
+          6,
+          5,
+          5,
+          3,
+          5,
+          3,
+          3,
+          5,
+          8,
+          4,
+          4,
+          6,
+          5
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6488970588235294,
+        "points": 1598.5,
+        "pointsByWeek": [
+          99,
+          113,
+          96,
+          94.5,
+          35,
+          82,
+          99,
+          69,
+          76,
+          73,
+          103,
+          89,
+          94,
+          50,
+          116,
+          116,
+          91,
+          103
+        ],
+        "tbAvg": 37.44444444444444,
+        "tiebreakerByWeek": [
+          34,
+          41,
+          42,
+          44,
+          39,
+          39,
+          32,
+          39,
+          40,
+          34,
+          36,
+          32,
+          30,
+          47,
+          30,
+          41,
+          39,
+          35
+        ],
+        "lastWeekRank": 5,
+        "currentWeekRank": 4,
+        "rankByWeek": [
+          93,
+          88,
+          75,
+          64,
+          77,
+          66,
+          58,
+          51,
+          38,
+          35,
+          29,
+          23,
+          20,
+          40,
+          20,
+          6,
+          5,
+          4
+        ],
+        "change": "+1",
+        "currentWeekWins": 11,
+        "currentWeekLosses": 5,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 103,
+        "currentWeekTiebreaker": 35,
+        "survivorPicks": [
+          "PHI",
+          "BAL",
+          "GB"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "PHI",
+            "margin": 4
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "GB",
+            "margin": -3
+          },
+          {
+            "team": "LAC",
+            "margin": -3
+          },
+          {
+            "team": "DET",
+            "margin": 13
+          },
+          {
+            "team": "LA",
+            "margin": 14
+          },
+          {
+            "team": "NE",
+            "margin": 18
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "SEA",
+            "margin": 24
+          },
+          {
+            "team": "DEN",
+            "margin": 3
+          },
+          {
+            "team": "HOU",
+            "margin": 3
+          },
+          {
+            "team": "BUF",
+            "margin": -4
+          },
+          {
+            "team": "JAC",
+            "margin": 22
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "SF",
+            "margin": 13
+          },
+          {
+            "team": "NO",
+            "margin": 23
+          },
+          {
+            "team": "CIN",
+            "margin": 23
+          },
+          {
+            "team": "CHI",
+            "margin": -3
+          }
+        ],
+        "marginTotal": 191,
+        "highFiveValues": [
+          8,
+          8,
+          3,
+          5,
+          2,
+          3,
+          5,
+          5,
+          3,
+          3,
+          8,
+          8,
+          3,
+          3,
+          8,
+          5,
+          5,
+          5
+        ],
+        "highFiveTotal": 90,
+        "highFiveThisWeek": [
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "HOU",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "KC",
+            "won": false
+          }
+        ]
+      },
+      {
+        "id": "11642444-4a38-42b3-8f2f-01b34bb50aef",
+        "username": "hfandl23",
+        "firstName": "Heather",
+        "lastName": "Fandl",
+        "wins": 180,
+        "winsByWeek": [
+          13,
+          12,
+          12,
+          11,
+          6,
+          10,
+          12,
+          11,
+          8,
+          9,
+          11,
+          10,
+          9,
+          8,
+          9,
+          10,
+          9,
+          10
+        ],
+        "losses": 91,
+        "lossesByWeek": [
+          3,
+          4,
+          4,
+          4,
+          8,
+          5,
+          3,
+          2,
+          6,
+          5,
+          4,
+          4,
+          7,
+          6,
+          7,
+          6,
+          7,
+          6
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6636029411764706,
+        "points": 1592,
+        "pointsByWeek": [
+          117,
+          115,
+          99,
+          105,
+          39,
+          88,
+          103,
+          74,
+          67,
+          73,
+          97,
+          85,
+          82,
+          67,
+          100,
+          97,
+          86,
+          98
+        ],
+        "tbAvg": 47.5,
+        "tiebreakerByWeek": [
+          22,
+          32,
+          42,
+          48,
+          67,
+          44,
+          57,
+          62,
+          48,
+          53,
+          48,
+          48,
+          49,
+          48,
+          48,
+          49,
+          48,
+          42
+        ],
+        "lastWeekRank": 6,
+        "currentWeekRank": 5,
+        "rankByWeek": [
+          18,
+          20,
+          13,
+          7,
+          9,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          7,
+          5,
+          3,
+          4,
+          6,
+          5
+        ],
+        "change": "+1",
+        "currentWeekWins": 10,
+        "currentWeekLosses": 6,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 98,
+        "currentWeekTiebreaker": 42,
+        "survivorPicks": [
+          "NE"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "NE",
+            "margin": -7
+          },
+          {
+            "team": "LAC",
+            "margin": 11
+          },
+          {
+            "team": "SEA",
+            "margin": 31
+          },
+          {
+            "team": "HOU",
+            "margin": 26
+          },
+          {
+            "team": "ARI",
+            "margin": -1
+          },
+          {
+            "team": "GB",
+            "margin": 9
+          },
+          {
+            "team": "DEN",
+            "margin": 1
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "CAR",
+            "margin": -10
+          },
+          {
+            "team": "BAL",
+            "margin": 7
+          },
+          {
+            "team": "SF",
+            "margin": 11
+          },
+          {
+            "team": "JAC",
+            "margin": 22
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "CHI",
+            "margin": 28
+          },
+          {
+            "team": "BUF",
+            "margin": 3
+          },
+          {
+            "team": "DAL",
+            "margin": 7
+          },
+          {
+            "team": "MIN",
+            "margin": 13
+          }
+        ],
+        "marginTotal": 195,
+        "highFiveValues": [
+          5,
+          8,
+          3,
+          5,
+          2,
+          3,
+          5,
+          5,
+          3,
+          3,
+          8,
+          8,
+          3,
+          5,
+          8,
+          5,
+          3,
+          8
+        ],
+        "highFiveTotal": 90,
+        "highFiveThisWeek": [
+          {
+            "team": "DEN",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "HOU",
+            "won": true
+          },
+          {
+            "team": "MIN",
+            "won": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mostWins",
+    "title": "Top 5 Overall (Wins)",
+    "description": "These are the 5 people who picked the most games correctly throughout the season",
+    "data": [
+      {
+        "id": "224de293-ba4e-4b11-987b-ae65f8d082d2",
+        "username": "PapaCook",
+        "firstName": "James",
+        "lastName": "Cook",
+        "wins": 183,
+        "winsByWeek": [
+          12,
+          10,
+          6,
+          11,
+          7,
+          9,
+          13,
+          11,
+          9,
+          9,
+          10,
+          11,
+          12,
+          10,
+          8,
+          14,
+          10,
+          11
+        ],
+        "losses": 88,
+        "lossesByWeek": [
+          4,
+          6,
+          10,
+          4,
+          7,
+          6,
+          2,
+          2,
+          5,
+          5,
+          5,
+          3,
+          4,
+          4,
+          8,
+          2,
+          6,
+          5
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6746323529411765,
+        "points": 1578,
+        "pointsByWeek": [
+          101,
+          100,
+          55,
+          107,
+          45,
+          76,
+          104,
+          84,
+          75,
+          67,
+          88,
+          81,
+          112,
+          77,
+          92,
+          123,
+          82,
+          109
+        ],
+        "tbAvg": 38.77777777777778,
+        "tiebreakerByWeek": [
+          24,
+          45,
+          35,
+          40,
+          48,
+          24,
+          35,
+          45,
+          35,
+          45,
+          45,
+          45,
+          45,
+          48,
+          45,
+          35,
+          24,
+          35
+        ],
+        "lastWeekRank": 22,
+        "currentWeekRank": 11,
+        "rankByWeek": [
+          87,
+          118,
+          141,
+          121,
+          116,
+          118,
+          103,
+          77,
+          58,
+          66,
+          74,
+          77,
+          56,
+          41,
+          42,
+          23,
+          22,
+          11
+        ],
+        "change": "+11",
+        "currentWeekWins": 11,
+        "currentWeekLosses": 5,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 109,
+        "currentWeekTiebreaker": 35,
+        "survivorPicks": [
+          "KC"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "ARI",
+            "margin": 7
+          },
+          {
+            "team": "LAC",
+            "margin": 11
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "DEN",
+            "margin": 25
+          },
+          {
+            "team": "MIN",
+            "margin": 4
+          },
+          {
+            "team": "IND",
+            "margin": 4
+          },
+          {
+            "team": "NE",
+            "margin": 18
+          },
+          {
+            "team": "KC",
+            "margin": 21
+          },
+          {
+            "team": "GB",
+            "margin": -3
+          },
+          {
+            "team": "CAR",
+            "margin": -10
+          },
+          {
+            "team": "SF",
+            "margin": 19
+          },
+          {
+            "team": "SEA",
+            "margin": 6
+          },
+          {
+            "team": "LA",
+            "margin": -3
+          },
+          {
+            "team": "CLE",
+            "margin": -2
+          },
+          {
+            "team": "CHI",
+            "margin": 28
+          },
+          {
+            "team": "HOU",
+            "margin": 2
+          },
+          {
+            "team": "DET",
+            "margin": -13
+          },
+          {
+            "team": "JAC",
+            "margin": 34
+          }
+        ],
+        "marginTotal": 158,
+        "highFiveValues": [
+          5,
+          3,
+          3,
+          5,
+          2,
+          3,
+          8,
+          5,
+          5,
+          3,
+          5,
+          5,
+          3,
+          5,
+          8,
+          8,
+          2,
+          8
+        ],
+        "highFiveTotal": 86,
+        "highFiveThisWeek": [
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "LV",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "32476ed6-56bf-40be-89e8-6130d02a324a",
+        "username": "Mathias",
+        "firstName": "Bill",
+        "lastName": "Mathias",
+        "wins": 182,
+        "winsByWeek": [
+          12,
+          10,
+          12,
+          9,
+          7,
+          9,
+          13,
+          10,
+          10,
+          9,
+          12,
+          10,
+          9,
+          8,
+          10,
+          11,
+          12,
+          9
+        ],
+        "losses": 89,
+        "lossesByWeek": [
+          4,
+          6,
+          4,
+          6,
+          7,
+          6,
+          2,
+          3,
+          4,
+          5,
+          3,
+          4,
+          7,
+          6,
+          6,
+          5,
+          4,
+          7
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6709558823529411,
+        "points": 1600,
+        "pointsByWeek": [
+          122,
+          105,
+          101,
+          99,
+          46,
+          72,
+          102,
+          75,
+          67,
+          75,
+          102,
+          88,
+          81,
+          66,
+          101,
+          101,
+          96,
+          101
+        ],
+        "tbAvg": 48.05555555555556,
+        "tiebreakerByWeek": [
+          43,
+          47,
+          54,
+          46,
+          48,
+          53,
+          39,
+          50,
+          58,
+          44,
+          52,
+          48,
+          48,
+          43,
+          45,
+          51,
+          51,
+          45
+        ],
+        "lastWeekRank": 3,
+        "currentWeekRank": 2,
+        "rankByWeek": [
+          7,
+          37,
+          18,
+          16,
+          10,
+          22,
+          16,
+          12,
+          13,
+          10,
+          9,
+          5,
+          11,
+          13,
+          12,
+          7,
+          3,
+          2
+        ],
+        "change": "+1",
+        "currentWeekWins": 9,
+        "currentWeekLosses": 7,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 101,
+        "currentWeekTiebreaker": 45,
+        "survivorPicks": [
+          "DEN",
+          "ARI",
+          "WAS",
+          "GB"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "DEN",
+            "margin": 8
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "DET",
+            "margin": 24
+          },
+          {
+            "team": "LA",
+            "margin": -3
+          },
+          {
+            "team": "GB",
+            "margin": 9
+          },
+          {
+            "team": "KC",
+            "margin": 31
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "LAC",
+            "margin": 7
+          },
+          {
+            "team": "SEA",
+            "margin": 22
+          },
+          {
+            "team": "NE",
+            "margin": 13
+          },
+          {
+            "team": "SF",
+            "margin": 11
+          },
+          {
+            "team": "JAC",
+            "margin": 22
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "HOU",
+            "margin": 20
+          },
+          {
+            "team": "PHI",
+            "margin": 11
+          },
+          {
+            "team": "CIN",
+            "margin": 23
+          },
+          {
+            "team": "MIN",
+            "margin": 13
+          }
+        ],
+        "marginTotal": 265,
+        "highFiveValues": [
+          8,
+          8,
+          5,
+          5,
+          2,
+          3,
+          5,
+          5,
+          3,
+          5,
+          8,
+          8,
+          3,
+          5,
+          8,
+          3,
+          5,
+          8
+        ],
+        "highFiveTotal": 97,
+        "highFiveThisWeek": [
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "ec5aac1e-d411-4020-9e86-dc3c0a6c9a43",
+        "username": "sakwasydney",
+        "firstName": "Sydney",
+        "lastName": "Dannenbaum",
+        "wins": 182,
+        "winsByWeek": [
+          12,
+          10,
+          10,
+          11,
+          7,
+          8,
+          12,
+          10,
+          8,
+          11,
+          11,
+          10,
+          10,
+          8,
+          12,
+          12,
+          10,
+          10
+        ],
+        "losses": 89,
+        "lossesByWeek": [
+          4,
+          6,
+          6,
+          4,
+          7,
+          7,
+          3,
+          3,
+          6,
+          3,
+          4,
+          4,
+          6,
+          6,
+          4,
+          4,
+          6,
+          6
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6709558823529411,
+        "points": 1585,
+        "pointsByWeek": [
+          117,
+          98,
+          84,
+          99,
+          44,
+          68,
+          102,
+          75,
+          68,
+          79,
+          98,
+          84,
+          94,
+          74,
+          113,
+          98,
+          95,
+          95
+        ],
+        "tbAvg": 38.27777777777778,
+        "tiebreakerByWeek": [
+          31,
+          38,
+          38,
+          38,
+          38,
+          38,
+          42,
+          38,
+          38,
+          38,
+          41,
+          38,
+          38,
+          38,
+          38,
+          39,
+          42,
+          38
+        ],
+        "lastWeekRank": 7,
+        "currentWeekRank": 9,
+        "rankByWeek": [
+          22,
+          83,
+          96,
+          72,
+          65,
+          81,
+          68,
+          52,
+          49,
+          38,
+          36,
+          34,
+          36,
+          23,
+          15,
+          14,
+          7,
+          9
+        ],
+        "change": "-2",
+        "currentWeekWins": 10,
+        "currentWeekLosses": 6,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 95,
+        "currentWeekTiebreaker": 38,
+        "survivorPicks": [
+          "DEN",
+          "BAL",
+          "TB",
+          "DET",
+          "BUF"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "PHI",
+            "margin": 4
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "DET",
+            "margin": 24
+          },
+          {
+            "team": "IND",
+            "margin": 34
+          },
+          {
+            "team": "DEN",
+            "margin": 2
+          },
+          {
+            "team": "KC",
+            "margin": 31
+          },
+          {
+            "team": "NE",
+            "margin": 19
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "SEA",
+            "margin": 22
+          },
+          {
+            "team": "GB",
+            "margin": 7
+          },
+          {
+            "team": "SF",
+            "margin": 11
+          },
+          {
+            "team": "JAC",
+            "margin": 22
+          },
+          {
+            "team": "CLE",
+            "margin": -2
+          },
+          {
+            "team": "DAL",
+            "margin": -8
+          },
+          {
+            "team": "HOU",
+            "margin": 2
+          },
+          {
+            "team": "PIT",
+            "margin": -7
+          },
+          {
+            "team": "CIN",
+            "margin": -2
+          }
+        ],
+        "marginTotal": 217,
+        "highFiveValues": [
+          5,
+          8,
+          3,
+          5,
+          2,
+          2,
+          5,
+          8,
+          3,
+          5,
+          8,
+          8,
+          5,
+          3,
+          8,
+          5,
+          3,
+          5
+        ],
+        "highFiveTotal": 91,
+        "highFiveThisWeek": [
+          {
+            "team": "HOU",
+            "won": true
+          },
+          {
+            "team": "CIN",
+            "won": false
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "JAC",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "a9f048b5-dcd4-44b5-94be-27eadc5daeac",
+        "username": "Joe Breen",
+        "firstName": "Joe",
+        "lastName": "Breen",
+        "wins": 182,
+        "winsByWeek": [
+          16,
+          12,
+          11,
+          11,
+          5,
+          9,
+          10,
+          11,
+          7,
+          11,
+          11,
+          11,
+          10,
+          9,
+          9,
+          12,
+          10,
+          7
+        ],
+        "losses": 89,
+        "lossesByWeek": [
+          0,
+          4,
+          5,
+          4,
+          9,
+          6,
+          5,
+          2,
+          7,
+          3,
+          4,
+          3,
+          6,
+          5,
+          7,
+          4,
+          6,
+          9
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6709558823529411,
+        "points": 1561.5,
+        "pointsByWeek": [
+          136,
+          113,
+          99,
+          96.5,
+          42,
+          77,
+          96,
+          79,
+          54,
+          81,
+          99,
+          91,
+          86,
+          63,
+          90,
+          99,
+          79,
+          81
+        ],
+        "tbAvg": 44.5,
+        "tiebreakerByWeek": [
+          43,
+          42,
+          51,
+          42,
+          44,
+          48,
+          42,
+          48,
+          42,
+          44,
+          48,
+          44,
+          44,
+          41,
+          41,
+          47,
+          50,
+          40
+        ],
+        "lastWeekRank": 12,
+        "currentWeekRank": 24,
+        "rankByWeek": [
+          1,
+          2,
+          1,
+          2,
+          3,
+          2,
+          7,
+          2,
+          9,
+          6,
+          3,
+          1,
+          4,
+          4,
+          10,
+          8,
+          12,
+          24
+        ],
+        "change": "-12",
+        "currentWeekWins": 7,
+        "currentWeekLosses": 9,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 81,
+        "currentWeekTiebreaker": 40,
+        "survivorPicks": [
+          "CIN",
+          "LA",
+          "BUF",
+          "DET",
+          "ARI"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "WAS",
+            "margin": 15
+          },
+          {
+            "team": "LA",
+            "margin": 14
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "DET",
+            "margin": 24
+          },
+          {
+            "team": "ARI",
+            "margin": -1
+          },
+          {
+            "team": "GB",
+            "margin": 9
+          },
+          {
+            "team": "KC",
+            "margin": 31
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "LAC",
+            "margin": 7
+          },
+          {
+            "team": "DEN",
+            "margin": 3
+          },
+          {
+            "team": "HOU",
+            "margin": 3
+          },
+          {
+            "team": "SEA",
+            "margin": 6
+          },
+          {
+            "team": "SF",
+            "margin": 18
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "PHI",
+            "margin": 31
+          },
+          {
+            "team": "CIN",
+            "margin": 24
+          },
+          {
+            "team": "NE",
+            "margin": 32
+          },
+          {
+            "team": "JAC",
+            "margin": 34
+          }
+        ],
+        "marginTotal": 280,
+        "highFiveValues": [
+          8,
+          8,
+          5,
+          5,
+          2,
+          3,
+          5,
+          8,
+          3,
+          3,
+          8,
+          8,
+          3,
+          2,
+          8,
+          5,
+          2,
+          8
+        ],
+        "highFiveTotal": 94,
+        "highFiveThisWeek": [
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "JAC",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "9afffce2-a8dd-424d-b522-e60b68fc956f",
+        "username": "2CooksInTheKitchen",
+        "firstName": "Andrew (& Katie)",
+        "lastName": "Cook",
+        "wins": 182,
+        "winsByWeek": [
+          10,
+          13,
+          11,
+          9,
+          5,
+          9,
+          14,
+          10,
+          10,
+          10,
+          13,
+          9,
+          9,
+          11,
+          10,
+          12,
+          8,
+          9
+        ],
+        "losses": 89,
+        "lossesByWeek": [
+          6,
+          3,
+          5,
+          6,
+          9,
+          6,
+          1,
+          3,
+          4,
+          4,
+          2,
+          5,
+          7,
+          3,
+          6,
+          4,
+          8,
+          7
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6709558823529411,
+        "points": 1523,
+        "pointsByWeek": [
+          91,
+          112,
+          96,
+          67,
+          36,
+          71,
+          113,
+          72,
+          68,
+          74,
+          106,
+          66,
+          100,
+          83,
+          100,
+          110,
+          75,
+          83
+        ],
+        "tbAvg": 43.05555555555556,
+        "tiebreakerByWeek": [
+          38,
+          28,
+          58,
+          34,
+          44,
+          42,
+          56,
+          38,
+          29,
+          54,
+          39,
+          40,
+          45,
+          33,
+          45,
+          46,
+          52,
+          54
+        ],
+        "lastWeekRank": 46,
+        "currentWeekRank": 53,
+        "rankByWeek": [
+          122,
+          111,
+          95,
+          117,
+          123,
+          125,
+          106,
+          98,
+          96,
+          86,
+          70,
+          85,
+          79,
+          55,
+          51,
+          39,
+          46,
+          53
+        ],
+        "change": "-7",
+        "currentWeekWins": 9,
+        "currentWeekLosses": 7,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 83,
+        "currentWeekTiebreaker": 54,
+        "survivorPicks": [
+          "CIN",
+          "BUF",
+          "GB"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "DEN",
+            "margin": 8
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "LAC",
+            "margin": -3
+          },
+          {
+            "team": "ARI",
+            "margin": -1
+          },
+          {
+            "team": "NE",
+            "margin": 6
+          },
+          {
+            "team": "SEA",
+            "margin": 8
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "DET",
+            "margin": 22
+          },
+          {
+            "team": "HOU",
+            "margin": 3
+          },
+          {
+            "team": "PHI",
+            "margin": -3
+          },
+          {
+            "team": "JAC",
+            "margin": 22
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "CHI",
+            "margin": 28
+          },
+          {
+            "team": "MIN",
+            "margin": 3
+          },
+          {
+            "team": "PIT",
+            "margin": -7
+          },
+          {
+            "team": "CIN",
+            "margin": -2
+          }
+        ],
+        "marginTotal": 162,
+        "highFiveValues": [
+          3,
+          5,
+          3,
+          2,
+          2,
+          2,
+          8,
+          8,
+          3,
+          5,
+          8,
+          2,
+          8,
+          5,
+          5,
+          8,
+          3,
+          5
+        ],
+        "highFiveTotal": 85,
+        "highFiveThisWeek": [
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "PHI",
+            "won": false
+          },
+          {
+            "team": "BUF",
+            "won": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mostWinsInWeek",
+    "title": "Top 5 Points in a Week",
+    "description": "These are the 5 people who got the most points in a single week",
+    "data": [
+      {
+        "id": "a9f048b5-dcd4-44b5-94be-27eadc5daeac",
+        "firstName": "Joe",
+        "lastName": "Breen",
+        "year": 2025,
+        "week": 1,
+        "wins": 16,
+        "losses": 0,
+        "points": 136
+      },
+      {
+        "id": "4943d53f-5a0f-44aa-8532-5a11bac66783",
+        "firstName": "John",
+        "lastName": "Horn",
+        "year": 2025,
+        "week": 1,
+        "wins": 14,
+        "losses": 2,
+        "points": 130
+      },
+      {
+        "id": "1af52a92-0242-491e-87f5-c166fa2fa730",
+        "firstName": "Gregory",
+        "lastName": "Della Penna",
+        "year": 2025,
+        "week": 2,
+        "wins": 13,
+        "losses": 3,
+        "points": 130
+      },
+      {
+        "id": "d9685b91-eaf3-47a5-b09a-0bd46f4c9606",
+        "firstName": "Peter",
+        "lastName": "Misiaszek",
+        "year": 2025,
+        "week": 2,
+        "wins": 15,
+        "losses": 1,
+        "points": 130
+      },
+      {
+        "id": "32abe494-730f-49b9-8e1e-f9d121a9a477",
+        "firstName": "Kellan",
+        "lastName": "Fandl",
+        "year": 2025,
+        "week": 2,
+        "wins": 15,
+        "losses": 1,
+        "points": 129
+      }
+    ]
+  },
+  {
+    "id": "leastPointsInWeek",
+    "title": "Bottom 5 Points in a week",
+    "description": "These are the 5 people who got the lowest points in a single week",
+    "data": [
+      {
+        "id": "0b415cdc-0a90-47bb-9133-922db04cf0f4",
+        "firstName": "Will",
+        "lastName": "Stack",
+        "year": 2025,
+        "week": 11,
+        "wins": 0,
+        "losses": 15,
+        "points": 0
+      },
+      {
+        "id": "44f58df3-3a45-4f04-bf55-546525755c27",
+        "firstName": "William",
+        "lastName": "Silva",
+        "year": 2025,
+        "week": 12,
+        "wins": 0,
+        "losses": 14,
+        "points": 0
+      },
+      {
+        "id": "35160dc6-ae4d-4d05-aa2b-5213ba41f214",
+        "firstName": "Ben",
+        "lastName": "Harwick",
+        "year": 2025,
+        "week": 8,
+        "wins": 0,
+        "losses": 13,
+        "points": 0
+      },
+      {
+        "id": "0b415cdc-0a90-47bb-9133-922db04cf0f4",
+        "firstName": "Will",
+        "lastName": "Stack",
+        "year": 2025,
+        "week": 15,
+        "wins": 1,
+        "losses": 15,
+        "points": 2
+      },
+      {
+        "id": "7dbe1a7f-29ad-4000-b663-b2c7b5cfcb5f",
+        "firstName": "Jim",
+        "lastName": "Steets",
+        "year": 2025,
+        "week": 15,
+        "wins": 1,
+        "losses": 15,
+        "points": 2
+      }
+    ]
+  },
+  {
+    "id": "teamsAlwaysPicked",
+    "title": "Fan Favorite Teams",
+    "description": "These are the teams that had at least one person pick them to win every single week",
+    "data": [
+      {
+        "name": "BUF",
+        "count": 16,
+        "pickedBy": [
+          "Mike McCrudden",
+          "Chris Garber",
+          "Mark Maltz",
+          "Matt Mcgrath",
+          "Chris Misiaszek",
+          "Samantha Gilgen",
+          "Kailey Fandl",
+          "Greg Della Penna Sr.",
+          "James Horn",
+          "Kellan Fandl",
+          "Kristen Misiaszek",
+          "Rob Obernesser",
+          "Lisa Gugliada",
+          "Stephen Jamieson",
+          "Ian Dick",
+          "Nicole Tseng"
+        ]
+      },
+      {
+        "name": "PHI",
+        "count": 3,
+        "pickedBy": [
+          "Eric Rossi",
+          "Matt Ustas",
+          "Marina Gialanella"
+        ]
+      },
+      {
+        "name": "LA",
+        "count": 3,
+        "pickedBy": [
+          "Nick Nargi",
+          "Brian Armstrong",
+          "Joe Rodriguez"
+        ]
+      },
+      {
+        "name": "NYG",
+        "count": 3,
+        "pickedBy": [
+          "Ali Lospinuso",
+          "Annie Dolan",
+          "Caroline Dolan"
+        ]
+      },
+      {
+        "name": "NE",
+        "count": 2,
+        "pickedBy": [
+          "Jackie Cook",
+          "Matthew Arsenault"
+        ]
+      },
+      {
+        "name": "GB",
+        "count": 2,
+        "pickedBy": [
+          "Greg Della Penna Sr.",
+          "Brandon Horn"
+        ]
+      },
+      {
+        "name": "CHI",
+        "count": 1,
+        "pickedBy": [
+          "Emily Yerkes"
+        ]
+      },
+      {
+        "name": "DEN",
+        "count": 1,
+        "pickedBy": [
+          "Robyn Rogers"
+        ]
+      },
+      {
+        "name": "PIT",
+        "count": 1,
+        "pickedBy": [
+          "Paige Seitz"
+        ]
+      },
+      {
+        "name": "HOU",
+        "count": 1,
+        "pickedBy": [
+          "Ryan Fandl"
+        ]
+      },
+      {
+        "name": "DET",
+        "count": 1,
+        "pickedBy": [
+          "Nick Bolino"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "teamsNeverPicked",
+    "title": "Highly Hated Teams",
+    "description": "These are the teams that had at least one person never pick them to win every single week",
+    "data": [
+      {
+        "name": "TEN",
+        "count": 50,
+        "pickedBy": [
+          "Bill Mathias",
+          "Sydney Dannenbaum",
+          "Zach Koval",
+          "Dan Fandl",
+          "Heather Fandl",
+          "Mindy Mclees",
+          "Patrick Cook",
+          "Eric Rossi",
+          "Nick Nargi",
+          "Nancy  Fandl",
+          "Tim Weng",
+          "Emily Yerkes",
+          "Ben Nicholson",
+          "Todd Mosher",
+          "Jason Segarra",
+          "Keith Brabec",
+          "Matt Mcgrath",
+          "David Galatt",
+          "Miguel Linares",
+          "Richard Grenier",
+          "Guido Bussinelli",
+          "Kimberlee Horn",
+          "Robert Garcia",
+          "Ben Edwards",
+          "Kevin Waterhouse",
+          "Liam Kraft",
+          "Sheila Olt",
+          "Katie Gould",
+          "Jeff Heotzler",
+          "Matt Nargi",
+          "Greg Della Penna Sr.",
+          "Chris Fandl",
+          "Matt Rosenlof",
+          "George Difiore",
+          "James Horn",
+          "Brenden Freedman",
+          "Kellan Fandl",
+          "Gregory Della Penna",
+          "Caroline Dolan",
+          "Cheryl Cook",
+          "Melissa Rudberg",
+          "Kristen Misiaszek",
+          "Brett Masotta",
+          "Gary Fandl",
+          "Trevor Martin",
+          "Matthew Arsenault",
+          "Barry Scanlon",
+          "Bobby Crimmins",
+          "Aidan Brink",
+          "Alex Gugliada"
+        ]
+      },
+      {
+        "name": "NYJ",
+        "count": 23,
+        "pickedBy": [
+          "Bill Mathias",
+          "Andrew (& Katie) Cook",
+          "Heather Fandl",
+          "Mindy Mclees",
+          "Patrick Cook",
+          "Eric Rossi",
+          "Monica Ho",
+          "Tim Weng",
+          "Emily Yerkes",
+          "Tate Chambers",
+          "Dan Martin",
+          "Jason Segarra",
+          "Mark Maltz",
+          "Keith Brabec",
+          "Miguel Linares",
+          "Kwan Jun",
+          "Gerard Ecker",
+          "Kevin Waterhouse",
+          "Liam Kraft",
+          "Dan Goldfarb",
+          "George Difiore",
+          "Peter Misiaszek",
+          "Chad Obrien"
+        ]
+      },
+      {
+        "name": "NYG",
+        "count": 4,
+        "pickedBy": [
+          "Kelsey Linares",
+          "Todd Mosher",
+          "Lauren Shaw",
+          "Chad Obrien"
+        ]
+      },
+      {
+        "name": "NO",
+        "count": 2,
+        "pickedBy": [
+          "Joseph Wetzler",
+          "Joe Rodriguez"
+        ]
+      },
+      {
+        "name": "LV",
+        "count": 2,
+        "pickedBy": [
+          "Mendel Moise",
+          "Scott Carroll"
+        ]
+      },
+      {
+        "name": "CLE",
+        "count": 1,
+        "pickedBy": [
+          "Joseph Wetzler"
+        ]
+      },
+      {
+        "name": "DAL",
+        "count": 1,
+        "pickedBy": [
+          "Connie Hwang"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "teamsBestPicked",
+    "title": "Best Job Picking",
+    "description": "These 5 people were the best at picking a specific teams win/loss week by week",
+    "data": [
+      {
+        "userId": "ec5aac1e-d411-4020-9e86-dc3c0a6c9a43",
+        "firstName": "Sydney",
+        "lastName": "Dannenbaum",
+        "team": "NYJ",
+        "timesCorrect": 16,
+        "timesIncorrect": 1
+      },
+      {
+        "userId": "a9f048b5-dcd4-44b5-94be-27eadc5daeac",
+        "firstName": "Joe",
+        "lastName": "Breen",
+        "team": "NYJ",
+        "timesCorrect": 16,
+        "timesIncorrect": 1
+      },
+      {
+        "userId": "8de8c486-694b-4545-8739-f67bb0bf2761",
+        "firstName": "Kelsey",
+        "lastName": "Linares",
+        "team": "ARI",
+        "timesCorrect": 16,
+        "timesIncorrect": 1
+      },
+      {
+        "userId": "8de8c486-694b-4545-8739-f67bb0bf2761",
+        "firstName": "Kelsey",
+        "lastName": "Linares",
+        "team": "TEN",
+        "timesCorrect": 16,
+        "timesIncorrect": 1
+      },
+      {
+        "userId": "ad86eab6-c378-4481-a36d-4a123ac40a68",
+        "firstName": "Mindy",
+        "lastName": "Mclees",
+        "team": "LV",
+        "timesCorrect": 16,
+        "timesIncorrect": 1
+      }
+    ]
+  },
+  {
+    "id": "teamsWorstPicked",
+    "title": "Worst Job Picking",
+    "description": "These 5 people were the worst at picking a specific teams win/loss week by week",
+    "data": [
+      {
+        "userId": "b55a460a-d186-482f-98c9-d0607ab3dc6f",
+        "firstName": "John",
+        "lastName": "Blake",
+        "team": "DET",
+        "timesCorrect": 2,
+        "timesIncorrect": 15
+      },
+      {
+        "userId": "35160dc6-ae4d-4d05-aa2b-5213ba41f214",
+        "firstName": "Ben",
+        "lastName": "Harwick",
+        "team": "NE",
+        "timesCorrect": 2,
+        "timesIncorrect": 15
+      },
+      {
+        "userId": "9b64510f-964d-4f54-96c6-c6cf68a93a02",
+        "firstName": "David",
+        "lastName": "Condon iii",
+        "team": "ATL",
+        "timesCorrect": 2,
+        "timesIncorrect": 15
+      },
+      {
+        "userId": "9b64510f-964d-4f54-96c6-c6cf68a93a02",
+        "firstName": "David",
+        "lastName": "Condon iii",
+        "team": "LAC",
+        "timesCorrect": 2,
+        "timesIncorrect": 15
+      },
+      {
+        "userId": "66d92729-e23f-4e57-95da-69b99378741c",
+        "firstName": "Lauren",
+        "lastName": "Shaw",
+        "team": "KC",
+        "timesCorrect": 3,
+        "timesIncorrect": 14
+      }
+    ]
+  },
+  {
+    "id": "secretMango",
+    "title": "The \"Secret Mango\" Award",
+    "description": "This is given to those who discover the hidden \"Secret Mango\" award on the website",
+    "data": [
+      {
+        "name": "Kwan Jun",
+        "week": 1,
+        "year": 2025
+      },
+      {
+        "name": "Connie Hwang",
+        "week": 8,
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": "secretMurphy",
+    "title": "The \"Secret Murphy\" Award",
+    "description": "This is given to those who discover the hidden \"Secret Murphy\" award on the website",
+    "data": []
+  },
+  {
+    "id": "secretGraham",
+    "title": "The \"Secret Graham\" Award",
+    "description": "This is given to those who discover the hidden \"Secret Murphy\" award on the website",
+    "data": [
+      {
+        "name": "Miguel Linares",
+        "week": 1,
+        "year": 2025
+      },
+      {
+        "name": "Kwan Jun",
+        "week": 1,
+        "year": 2025
+      },
+      {
+        "name": "Ali Lospinuso",
+        "week": 1,
+        "year": 2025
+      },
+      {
+        "name": "Andrew (& Katie) Cook",
+        "week": 1,
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": "survivor",
+    "title": "Survivor Pool Winner",
+    "description": "The winner of the Survivor Pool this year",
+    "data": [
+      {
+        "name": "Emily Yerkes",
+        "weeksSurvived": 14,
+        "year": 2025
+      },
+      {
+        "name": "Kwan Jun",
+        "weeksSurvived": 14,
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": "marginPoints",
+    "title": "Top 5 Margin (Points)",
+    "description": "These are the 5 people who earned the most points in the Margin Pool",
+    "data": [
+      {
+        "id": "a9f048b5-dcd4-44b5-94be-27eadc5daeac",
+        "username": "Joe Breen",
+        "firstName": "Joe",
+        "lastName": "Breen",
+        "wins": 182,
+        "winsByWeek": [
+          16,
+          12,
+          11,
+          11,
+          5,
+          9,
+          10,
+          11,
+          7,
+          11,
+          11,
+          11,
+          10,
+          9,
+          9,
+          12,
+          10,
+          7
+        ],
+        "losses": 89,
+        "lossesByWeek": [
+          0,
+          4,
+          5,
+          4,
+          9,
+          6,
+          5,
+          2,
+          7,
+          3,
+          4,
+          3,
+          6,
+          5,
+          7,
+          4,
+          6,
+          9
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6709558823529411,
+        "points": 1561.5,
+        "pointsByWeek": [
+          136,
+          113,
+          99,
+          96.5,
+          42,
+          77,
+          96,
+          79,
+          54,
+          81,
+          99,
+          91,
+          86,
+          63,
+          90,
+          99,
+          79,
+          81
+        ],
+        "tbAvg": 44.5,
+        "tiebreakerByWeek": [
+          43,
+          42,
+          51,
+          42,
+          44,
+          48,
+          42,
+          48,
+          42,
+          44,
+          48,
+          44,
+          44,
+          41,
+          41,
+          47,
+          50,
+          40
+        ],
+        "lastWeekRank": 12,
+        "currentWeekRank": 24,
+        "rankByWeek": [
+          1,
+          2,
+          1,
+          2,
+          3,
+          2,
+          7,
+          2,
+          9,
+          6,
+          3,
+          1,
+          4,
+          4,
+          10,
+          8,
+          12,
+          24
+        ],
+        "change": "-12",
+        "currentWeekWins": 7,
+        "currentWeekLosses": 9,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 81,
+        "currentWeekTiebreaker": 40,
+        "survivorPicks": [
+          "CIN",
+          "LA",
+          "BUF",
+          "DET",
+          "ARI"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "WAS",
+            "margin": 15
+          },
+          {
+            "team": "LA",
+            "margin": 14
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "DET",
+            "margin": 24
+          },
+          {
+            "team": "ARI",
+            "margin": -1
+          },
+          {
+            "team": "GB",
+            "margin": 9
+          },
+          {
+            "team": "KC",
+            "margin": 31
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "LAC",
+            "margin": 7
+          },
+          {
+            "team": "DEN",
+            "margin": 3
+          },
+          {
+            "team": "HOU",
+            "margin": 3
+          },
+          {
+            "team": "SEA",
+            "margin": 6
+          },
+          {
+            "team": "SF",
+            "margin": 18
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "PHI",
+            "margin": 31
+          },
+          {
+            "team": "CIN",
+            "margin": 24
+          },
+          {
+            "team": "NE",
+            "margin": 32
+          },
+          {
+            "team": "JAC",
+            "margin": 34
+          }
+        ],
+        "marginTotal": 280,
+        "highFiveValues": [
+          8,
+          8,
+          5,
+          5,
+          2,
+          3,
+          5,
+          8,
+          3,
+          3,
+          8,
+          8,
+          3,
+          2,
+          8,
+          5,
+          2,
+          8
+        ],
+        "highFiveTotal": 94,
+        "highFiveThisWeek": [
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "JAC",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "ad50c309-eaab-4650-8f03-3828d72eac50",
+        "username": "Dbackhaus",
+        "firstName": "Dan",
+        "lastName": "Backhaus",
+        "wins": 175,
+        "winsByWeek": [
+          12,
+          10,
+          10,
+          9,
+          5,
+          12,
+          11,
+          10,
+          7,
+          10,
+          9,
+          12,
+          9,
+          8,
+          11,
+          10,
+          10,
+          10
+        ],
+        "losses": 96,
+        "lossesByWeek": [
+          4,
+          6,
+          6,
+          6,
+          9,
+          3,
+          4,
+          3,
+          7,
+          4,
+          6,
+          2,
+          7,
+          6,
+          5,
+          6,
+          6,
+          6
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6452205882352942,
+        "points": 1575,
+        "pointsByWeek": [
+          110,
+          106,
+          94,
+          99,
+          37,
+          97,
+          104,
+          74,
+          57,
+          80,
+          93,
+          95,
+          79,
+          60,
+          104,
+          96,
+          90,
+          100
+        ],
+        "tbAvg": 46.27777777777778,
+        "tiebreakerByWeek": [
+          44,
+          46,
+          53,
+          44,
+          46,
+          49,
+          41,
+          47,
+          53,
+          45,
+          48,
+          50,
+          47,
+          40,
+          42,
+          47,
+          50,
+          41
+        ],
+        "lastWeekRank": 20,
+        "currentWeekRank": 15,
+        "rankByWeek": [
+          53,
+          76,
+          71,
+          49,
+          60,
+          25,
+          17,
+          13,
+          22,
+          14,
+          19,
+          13,
+          16,
+          21,
+          19,
+          24,
+          20,
+          15
+        ],
+        "change": "+5",
+        "currentWeekWins": 10,
+        "currentWeekLosses": 6,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 100,
+        "currentWeekTiebreaker": 41,
+        "survivorPicks": [
+          "ARI",
+          "BAL",
+          "SEA",
+          "DEN",
+          "MIN",
+          "IND",
+          "KC",
+          "PHI",
+          "GB"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "WAS",
+            "margin": 15
+          },
+          {
+            "team": "ARI",
+            "margin": 5
+          },
+          {
+            "team": "SEA",
+            "margin": 31
+          },
+          {
+            "team": "BUF",
+            "margin": 12
+          },
+          {
+            "team": "DET",
+            "margin": 13
+          },
+          {
+            "team": "GB",
+            "margin": 9
+          },
+          {
+            "team": "NE",
+            "margin": 18
+          },
+          {
+            "team": "KC",
+            "margin": 21
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "CHI",
+            "margin": 4
+          },
+          {
+            "team": "HOU",
+            "margin": 3
+          },
+          {
+            "team": "SF",
+            "margin": 11
+          },
+          {
+            "team": "LAC",
+            "margin": 17
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "PHI",
+            "margin": 31
+          },
+          {
+            "team": "CIN",
+            "margin": 24
+          },
+          {
+            "team": "DAL",
+            "margin": 7
+          },
+          {
+            "team": "JAC",
+            "margin": 34
+          }
+        ],
+        "marginTotal": 275,
+        "highFiveValues": [
+          8,
+          8,
+          5,
+          5,
+          2,
+          5,
+          8,
+          5,
+          3,
+          5,
+          5,
+          8,
+          3,
+          5,
+          8,
+          5,
+          5,
+          8
+        ],
+        "highFiveTotal": 101,
+        "highFiveThisWeek": [
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "MIN",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "4943d53f-5a0f-44aa-8532-5a11bac66783",
+        "username": "jrh357",
+        "firstName": "John",
+        "lastName": "Horn",
+        "wins": 175,
+        "winsByWeek": [
+          14,
+          9,
+          11,
+          11,
+          7,
+          9,
+          12,
+          10,
+          7,
+          11,
+          11,
+          10,
+          9,
+          8,
+          10,
+          9,
+          8,
+          9
+        ],
+        "losses": 96,
+        "lossesByWeek": [
+          2,
+          7,
+          5,
+          4,
+          7,
+          6,
+          3,
+          3,
+          7,
+          3,
+          4,
+          4,
+          7,
+          6,
+          6,
+          7,
+          8,
+          7
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6452205882352942,
+        "points": 1529.5,
+        "pointsByWeek": [
+          130,
+          94,
+          107,
+          109.5,
+          38,
+          75,
+          104,
+          76,
+          64,
+          81,
+          93,
+          79,
+          70,
+          64,
+          94,
+          81,
+          74,
+          96
+        ],
+        "tbAvg": 43.166666666666664,
+        "tiebreakerByWeek": [
+          40,
+          44,
+          46,
+          45,
+          45,
+          40,
+          40,
+          45,
+          47,
+          44,
+          47,
+          40,
+          40,
+          44,
+          44,
+          46,
+          40,
+          40
+        ],
+        "lastWeekRank": 56,
+        "currentWeekRank": 48,
+        "rankByWeek": [
+          2,
+          44,
+          14,
+          5,
+          5,
+          11,
+          9,
+          7,
+          6,
+          2,
+          4,
+          6,
+          22,
+          22,
+          29,
+          48,
+          56,
+          48
+        ],
+        "change": "+8",
+        "currentWeekWins": 9,
+        "currentWeekLosses": 7,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 96,
+        "currentWeekTiebreaker": 40,
+        "survivorPicks": [
+          "PHI",
+          "BAL",
+          "BUF",
+          "SF"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "WAS",
+            "margin": 15
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "KC",
+            "margin": 13
+          },
+          {
+            "team": "BUF",
+            "margin": 12
+          },
+          {
+            "team": "IND",
+            "margin": 34
+          },
+          {
+            "team": "GB",
+            "margin": 9
+          },
+          {
+            "team": "CHI",
+            "margin": 12
+          },
+          {
+            "team": "PHI",
+            "margin": 18
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "DEN",
+            "margin": 3
+          },
+          {
+            "team": "NE",
+            "margin": 13
+          },
+          {
+            "team": "DET",
+            "margin": 7
+          },
+          {
+            "team": "SEA",
+            "margin": 26
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "JAC",
+            "margin": 28
+          },
+          {
+            "team": "HOU",
+            "margin": 2
+          },
+          {
+            "team": "CIN",
+            "margin": 23
+          },
+          {
+            "team": "MIN",
+            "margin": 13
+          }
+        ],
+        "marginTotal": 272,
+        "highFiveValues": [
+          8,
+          8,
+          3,
+          5,
+          1,
+          2,
+          5,
+          8,
+          3,
+          5,
+          5,
+          5,
+          2,
+          5,
+          5,
+          5,
+          5,
+          8
+        ],
+        "highFiveTotal": 88,
+        "highFiveThisWeek": [
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          },
+          {
+            "team": "MIN",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "52faa104-ad69-461c-99a1-1616a160df65",
+        "username": "rdgjr1994",
+        "firstName": "Richard",
+        "lastName": "Grenier",
+        "wins": 174,
+        "winsByWeek": [
+          12,
+          12,
+          8,
+          8,
+          7,
+          10,
+          12,
+          10,
+          8,
+          9,
+          9,
+          12,
+          12,
+          8,
+          8,
+          11,
+          8,
+          10
+        ],
+        "losses": 97,
+        "lossesByWeek": [
+          4,
+          4,
+          8,
+          7,
+          7,
+          5,
+          3,
+          3,
+          6,
+          5,
+          6,
+          2,
+          4,
+          6,
+          8,
+          5,
+          8,
+          6
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6415441176470589,
+        "points": 1521,
+        "pointsByWeek": [
+          108,
+          110,
+          83,
+          84,
+          40,
+          72,
+          105,
+          72,
+          63,
+          65,
+          90,
+          92,
+          107,
+          71,
+          87,
+          97,
+          75,
+          100
+        ],
+        "tbAvg": 47.333333333333336,
+        "tiebreakerByWeek": [
+          56,
+          52,
+          62,
+          52,
+          48,
+          48,
+          45,
+          46,
+          48,
+          45,
+          49,
+          45,
+          44,
+          42,
+          42,
+          42,
+          44,
+          42
+        ],
+        "lastWeekRank": 67,
+        "currentWeekRank": 57,
+        "rankByWeek": [
+          64,
+          69,
+          93,
+          97,
+          92,
+          99,
+          82,
+          75,
+          77,
+          80,
+          85,
+          75,
+          62,
+          46,
+          59,
+          65,
+          67,
+          57
+        ],
+        "change": "+10",
+        "currentWeekWins": 10,
+        "currentWeekLosses": 6,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 100,
+        "currentWeekTiebreaker": 42,
+        "survivorPicks": [
+          "WAS",
+          "BAL",
+          "KC",
+          "BUF",
+          "DET",
+          "NE",
+          "DEN",
+          "PHI",
+          "LA",
+          "SEA",
+          "GB",
+          "SF",
+          "LAC",
+          "TB"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "WAS",
+            "margin": 15
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "KC",
+            "margin": 13
+          },
+          {
+            "team": "BUF",
+            "margin": 12
+          },
+          {
+            "team": "DET",
+            "margin": 13
+          },
+          {
+            "team": "NE",
+            "margin": 6
+          },
+          {
+            "team": "DEN",
+            "margin": 1
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "SEA",
+            "margin": 22
+          },
+          {
+            "team": "GB",
+            "margin": 7
+          },
+          {
+            "team": "CHI",
+            "margin": 3
+          },
+          {
+            "team": "LAC",
+            "margin": 17
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "SF",
+            "margin": 13
+          },
+          {
+            "team": "NO",
+            "margin": 23
+          },
+          {
+            "team": "CIN",
+            "margin": 23
+          },
+          {
+            "team": "JAC",
+            "margin": 34
+          }
+        ],
+        "marginTotal": 270,
+        "highFiveValues": [
+          5,
+          8,
+          3,
+          2,
+          1,
+          5,
+          8,
+          8,
+          3,
+          3,
+          8,
+          5,
+          8,
+          5,
+          8,
+          5,
+          3,
+          8
+        ],
+        "highFiveTotal": 96,
+        "highFiveThisWeek": [
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "HOU",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "00d824fe-a66f-467f-bad9-530391bb3581",
+        "username": "tatechambers",
+        "firstName": "Tate",
+        "lastName": "Chambers",
+        "wins": 177,
+        "winsByWeek": [
+          13,
+          14,
+          12,
+          10,
+          4,
+          9,
+          11,
+          9,
+          9,
+          8,
+          12,
+          11,
+          7,
+          7,
+          12,
+          12,
+          8,
+          9
+        ],
+        "losses": 94,
+        "lossesByWeek": [
+          3,
+          2,
+          4,
+          5,
+          10,
+          6,
+          4,
+          4,
+          5,
+          6,
+          3,
+          3,
+          9,
+          7,
+          4,
+          4,
+          8,
+          7
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6525735294117647,
+        "points": 1518,
+        "pointsByWeek": [
+          112,
+          128,
+          102,
+          100,
+          34,
+          72,
+          84,
+          71,
+          67,
+          73,
+          107,
+          76,
+          75,
+          59,
+          102,
+          105,
+          73,
+          78
+        ],
+        "tbAvg": 52.05555555555556,
+        "tiebreakerByWeek": [
+          34,
+          34,
+          52,
+          52,
+          52,
+          54,
+          56,
+          52,
+          58,
+          54,
+          54,
+          55,
+          55,
+          55,
+          55,
+          55,
+          55,
+          55
+        ],
+        "lastWeekRank": 47,
+        "currentWeekRank": 61,
+        "rankByWeek": [
+          43,
+          7,
+          5,
+          3,
+          7,
+          17,
+          32,
+          29,
+          28,
+          31,
+          23,
+          26,
+          46,
+          51,
+          45,
+          37,
+          47,
+          61
+        ],
+        "change": "-14",
+        "currentWeekWins": 9,
+        "currentWeekLosses": 7,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 78,
+        "currentWeekTiebreaker": 55,
+        "survivorPicks": [
+          "PHI",
+          "BAL",
+          "BUF",
+          "LAC"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "DEN",
+            "margin": 8
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "LAC",
+            "margin": -3
+          },
+          {
+            "team": "DET",
+            "margin": 13
+          },
+          {
+            "team": "GB",
+            "margin": 9
+          },
+          {
+            "team": "NE",
+            "margin": 18
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "SEA",
+            "margin": 22
+          },
+          {
+            "team": "DAL",
+            "margin": 17
+          },
+          {
+            "team": "ATL",
+            "margin": 14
+          },
+          {
+            "team": "TB",
+            "margin": 3
+          },
+          {
+            "team": "CLE",
+            "margin": -2
+          },
+          {
+            "team": "HOU",
+            "margin": 20
+          },
+          {
+            "team": "PHI",
+            "margin": 11
+          },
+          {
+            "team": "CIN",
+            "margin": 23
+          },
+          {
+            "team": "JAC",
+            "margin": 34
+          }
+        ],
+        "marginTotal": 269,
+        "highFiveValues": [
+          8,
+          8,
+          3,
+          3,
+          1,
+          3,
+          8,
+          5,
+          2,
+          5,
+          5,
+          5,
+          2,
+          3,
+          5,
+          8,
+          2,
+          5
+        ],
+        "highFiveTotal": 81,
+        "highFiveThisWeek": [
+          {
+            "team": "HOU",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "PHI",
+            "won": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marginWins",
+    "title": "Top 5 Margin (Wins)",
+    "description": "These are the 5 people who earned the most wins in the Margin Pool",
+    "data": [
+      {
+        "firstName": "Matt",
+        "lastName": "Ustas",
+        "marginTotal": 264,
+        "totalWins": 18
+      },
+      {
+        "firstName": "George",
+        "lastName": "Difiore",
+        "marginTotal": 255,
+        "totalWins": 18
+      },
+      {
+        "firstName": "Zach",
+        "lastName": "Koval",
+        "marginTotal": 229,
+        "totalWins": 18
+      },
+      {
+        "firstName": "Dan",
+        "lastName": "Backhaus",
+        "marginTotal": 275,
+        "totalWins": 17
+      },
+      {
+        "firstName": "John",
+        "lastName": "Horn",
+        "marginTotal": 272,
+        "totalWins": 17
+      }
+    ]
+  },
+  {
+    "id": "highFivePoints",
+    "title": "Top 5 High Five (Points)",
+    "description": "These are the 5 people who earned the most points in the High Five Pool",
+    "data": [
+      {
+        "id": "dc6fb755-76be-483a-bc8e-cc17e138367f",
+        "username": "Dfandl",
+        "firstName": "Dan",
+        "lastName": "Fandl",
+        "wins": 180,
+        "winsByWeek": [
+          11,
+          12,
+          10,
+          8,
+          6,
+          11,
+          9,
+          9,
+          9,
+          9,
+          14,
+          10,
+          13,
+          10,
+          10,
+          10,
+          9,
+          10
+        ],
+        "losses": 91,
+        "lossesByWeek": [
+          5,
+          4,
+          6,
+          7,
+          8,
+          4,
+          6,
+          4,
+          5,
+          5,
+          1,
+          4,
+          3,
+          4,
+          6,
+          6,
+          7,
+          6
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6636029411764706,
+        "points": 1616,
+        "pointsByWeek": [
+          112,
+          118,
+          91,
+          87,
+          42,
+          98,
+          77,
+          73,
+          84,
+          69,
+          112,
+          80,
+          109,
+          73,
+          105,
+          109,
+          77,
+          100
+        ],
+        "tbAvg": 40.833333333333336,
+        "tiebreakerByWeek": [
+          46,
+          47,
+          46,
+          46,
+          46,
+          42,
+          46,
+          46,
+          46,
+          46,
+          1,
+          1,
+          46,
+          46,
+          46,
+          46,
+          46,
+          46
+        ],
+        "lastWeekRank": 1,
+        "currentWeekRank": 1,
+        "rankByWeek": [
+          45,
+          27,
+          38,
+          51,
+          44,
+          19,
+          44,
+          37,
+          19,
+          18,
+          11,
+          15,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "change": "--",
+        "currentWeekWins": 10,
+        "currentWeekLosses": 6,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 100,
+        "currentWeekTiebreaker": 46,
+        "survivorPicks": [
+          "PHI",
+          "BAL",
+          "SEA",
+          "LAC"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "ARI",
+            "margin": 7
+          },
+          {
+            "team": "DAL",
+            "margin": 3
+          },
+          {
+            "team": "LV",
+            "margin": -17
+          },
+          {
+            "team": "BUF",
+            "margin": 12
+          },
+          {
+            "team": "DET",
+            "margin": 13
+          },
+          {
+            "team": "DEN",
+            "margin": 2
+          },
+          {
+            "team": "SEA",
+            "margin": 8
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "BAL",
+            "margin": 22
+          },
+          {
+            "team": "CLE",
+            "margin": -7
+          },
+          {
+            "team": "NE",
+            "margin": 13
+          },
+          {
+            "team": "SF",
+            "margin": 11
+          },
+          {
+            "team": "LAC",
+            "margin": 17
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "JAC",
+            "margin": 28
+          },
+          {
+            "team": "HOU",
+            "margin": 2
+          },
+          {
+            "team": "LA",
+            "margin": -3
+          },
+          {
+            "team": "ATL",
+            "margin": 2
+          }
+        ],
+        "marginTotal": 133,
+        "highFiveValues": [
+          8,
+          8,
+          5,
+          3,
+          2,
+          8,
+          8,
+          8,
+          8,
+          3,
+          8,
+          5,
+          8,
+          5,
+          8,
+          8,
+          2,
+          3
+        ],
+        "highFiveTotal": 108,
+        "highFiveThisWeek": [
+          {
+            "team": "HOU",
+            "won": true
+          },
+          {
+            "team": "CIN",
+            "won": false
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "KC",
+            "won": false
+          }
+        ]
+      },
+      {
+        "id": "55ce0f80-9a10-4323-af71-9896efc8f89f",
+        "username": "bmaltz5@gmail.com",
+        "firstName": "Billy",
+        "lastName": "Maltz",
+        "wins": 168,
+        "winsByWeek": [
+          10,
+          11,
+          9,
+          12,
+          5,
+          9,
+          10,
+          9,
+          10,
+          10,
+          10,
+          10,
+          8,
+          7,
+          8,
+          11,
+          9,
+          10
+        ],
+        "losses": 103,
+        "lossesByWeek": [
+          6,
+          5,
+          7,
+          3,
+          9,
+          6,
+          5,
+          4,
+          4,
+          4,
+          5,
+          4,
+          8,
+          7,
+          8,
+          5,
+          7,
+          6
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6194852941176471,
+        "points": 1567.5,
+        "pointsByWeek": [
+          104,
+          115,
+          90,
+          103.5,
+          45,
+          72,
+          100,
+          73,
+          80,
+          74,
+          99,
+          92,
+          80,
+          54,
+          97,
+          102,
+          88,
+          99
+        ],
+        "tbAvg": 41.888888888888886,
+        "tiebreakerByWeek": [
+          24,
+          28,
+          35,
+          49,
+          38,
+          42,
+          49,
+          42,
+          50,
+          59,
+          38,
+          48,
+          38,
+          48,
+          42,
+          38,
+          48,
+          38
+        ],
+        "lastWeekRank": 23,
+        "currentWeekRank": 21,
+        "rankByWeek": [
+          80,
+          68,
+          73,
+          40,
+          32,
+          51,
+          38,
+          30,
+          18,
+          15,
+          15,
+          12,
+          14,
+          25,
+          31,
+          26,
+          23,
+          21
+        ],
+        "change": "+2",
+        "currentWeekWins": 10,
+        "currentWeekLosses": 6,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 99,
+        "currentWeekTiebreaker": 38,
+        "survivorPicks": [
+          "DEN",
+          "DET",
+          "BUF",
+          "HOU",
+          "ARI"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "DEN",
+            "margin": 8
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "DET",
+            "margin": 24
+          },
+          {
+            "team": "MIN",
+            "margin": 4
+          },
+          {
+            "team": "PIT",
+            "margin": 14
+          },
+          {
+            "team": "KC",
+            "margin": 31
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "SEA",
+            "margin": 22
+          },
+          {
+            "team": "NE",
+            "margin": 13
+          },
+          {
+            "team": "SF",
+            "margin": 11
+          },
+          {
+            "team": "LAC",
+            "margin": 17
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "JAC",
+            "margin": 28
+          },
+          {
+            "team": "HOU",
+            "margin": 2
+          },
+          {
+            "team": "CIN",
+            "margin": 23
+          },
+          {
+            "team": "DAL",
+            "margin": -17
+          }
+        ],
+        "marginTotal": 258,
+        "highFiveValues": [
+          8,
+          8,
+          5,
+          8,
+          2,
+          3,
+          8,
+          8,
+          3,
+          3,
+          8,
+          8,
+          3,
+          3,
+          8,
+          8,
+          3,
+          8
+        ],
+        "highFiveTotal": 105,
+        "highFiveThisWeek": [
+          {
+            "team": "HOU",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "0869826a-9ee4-4001-8142-f213f7504cc2",
+        "username": "danglebert",
+        "firstName": "Dan",
+        "lastName": "Gilbert",
+        "wins": 175,
+        "winsByWeek": [
+          13,
+          11,
+          12,
+          11,
+          7,
+          8,
+          12,
+          9,
+          9,
+          9,
+          11,
+          9,
+          10,
+          6,
+          10,
+          9,
+          10,
+          9
+        ],
+        "losses": 96,
+        "lossesByWeek": [
+          3,
+          5,
+          4,
+          4,
+          7,
+          7,
+          3,
+          4,
+          5,
+          5,
+          4,
+          5,
+          6,
+          8,
+          6,
+          7,
+          6,
+          7
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6452205882352942,
+        "points": 1571,
+        "pointsByWeek": [
+          116,
+          116,
+          109,
+          104,
+          45,
+          70,
+          103,
+          72,
+          67,
+          72,
+          96,
+          80,
+          99,
+          55,
+          95,
+          90,
+          85,
+          97
+        ],
+        "tbAvg": 49.44444444444444,
+        "tiebreakerByWeek": [
+          51,
+          51,
+          51,
+          48,
+          43,
+          51,
+          48,
+          51,
+          51,
+          51,
+          51,
+          51,
+          49,
+          45,
+          51,
+          45,
+          51,
+          51
+        ],
+        "lastWeekRank": 21,
+        "currentWeekRank": 18,
+        "rankByWeek": [
+          24,
+          22,
+          6,
+          1,
+          1,
+          4,
+          4,
+          4,
+          4,
+          5,
+          6,
+          9,
+          5,
+          9,
+          14,
+          19,
+          21,
+          18
+        ],
+        "change": "+3",
+        "currentWeekWins": 9,
+        "currentWeekLosses": 7,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 97,
+        "currentWeekTiebreaker": 51,
+        "survivorPicks": [
+          "ARI",
+          "BAL",
+          "SEA",
+          "HOU",
+          "DET",
+          "GB",
+          "CHI",
+          "IND",
+          "LA",
+          "DEN",
+          "NE",
+          "BUF"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "ARI",
+            "margin": 7
+          },
+          {
+            "team": "DAL",
+            "margin": 3
+          },
+          {
+            "team": "TB",
+            "margin": 2
+          },
+          {
+            "team": "BUF",
+            "margin": 12
+          },
+          {
+            "team": "DET",
+            "margin": 13
+          },
+          {
+            "team": "GB",
+            "margin": 9
+          },
+          {
+            "team": "KC",
+            "margin": 31
+          },
+          {
+            "team": "IND",
+            "margin": 24
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "CLE",
+            "margin": -7
+          },
+          {
+            "team": "MIA",
+            "margin": 3
+          },
+          {
+            "team": "SEA",
+            "margin": 6
+          },
+          {
+            "team": "JAC",
+            "margin": 22
+          },
+          {
+            "team": "DEN",
+            "margin": 7
+          },
+          {
+            "team": "SF",
+            "margin": 13
+          },
+          {
+            "team": "PHI",
+            "margin": 11
+          },
+          {
+            "team": "NE",
+            "margin": 32
+          },
+          {
+            "team": "HOU",
+            "margin": 8
+          }
+        ],
+        "marginTotal": 220,
+        "highFiveValues": [
+          8,
+          8,
+          8,
+          5,
+          2,
+          5,
+          5,
+          5,
+          3,
+          5,
+          8,
+          8,
+          8,
+          3,
+          8,
+          5,
+          3,
+          8
+        ],
+        "highFiveTotal": 105,
+        "highFiveThisWeek": [
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "7560beb5-f98f-493a-b226-c711952ecc7a",
+        "username": "disco2010",
+        "firstName": "David",
+        "lastName": "Galatt",
+        "wins": 174,
+        "winsByWeek": [
+          14,
+          11,
+          12,
+          10,
+          6,
+          9,
+          11,
+          8,
+          10,
+          10,
+          11,
+          11,
+          7,
+          9,
+          10,
+          8,
+          9,
+          8
+        ],
+        "losses": 97,
+        "lossesByWeek": [
+          2,
+          5,
+          4,
+          5,
+          8,
+          6,
+          4,
+          5,
+          4,
+          4,
+          4,
+          3,
+          9,
+          5,
+          6,
+          8,
+          7,
+          8
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.6415441176470589,
+        "points": 1562,
+        "pointsByWeek": [
+          115,
+          107,
+          102,
+          101,
+          35,
+          89,
+          100,
+          58,
+          67,
+          74,
+          102,
+          89,
+          81,
+          67,
+          99,
+          89,
+          90,
+          97
+        ],
+        "tbAvg": 45.611111111111114,
+        "tiebreakerByWeek": [
+          49,
+          53,
+          57,
+          47,
+          45,
+          38,
+          51,
+          39,
+          53,
+          47,
+          41,
+          48,
+          41,
+          41,
+          37,
+          44,
+          49,
+          41
+        ],
+        "lastWeekRank": 25,
+        "currentWeekRank": 23,
+        "rankByWeek": [
+          28,
+          48,
+          26,
+          17,
+          25,
+          15,
+          14,
+          23,
+          26,
+          23,
+          22,
+          16,
+          24,
+          20,
+          23,
+          31,
+          25,
+          23
+        ],
+        "change": "+2",
+        "currentWeekWins": 8,
+        "currentWeekLosses": 8,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 97,
+        "currentWeekTiebreaker": 41,
+        "survivorPicks": [
+          "DEN",
+          "DAL",
+          "SEA",
+          "BUF",
+          "IND",
+          "GB",
+          "KC",
+          "NE",
+          "LA",
+          "DET",
+          "BAL",
+          "PHI"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "WAS",
+            "margin": 15
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "DET",
+            "margin": 24
+          },
+          {
+            "team": "IND",
+            "margin": 34
+          },
+          {
+            "team": "PHI",
+            "margin": -17
+          },
+          {
+            "team": "KC",
+            "margin": 31
+          },
+          {
+            "team": "TB",
+            "margin": 20
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "DEN",
+            "margin": 3
+          },
+          {
+            "team": "NE",
+            "margin": 13
+          },
+          {
+            "team": "SEA",
+            "margin": 6
+          },
+          {
+            "team": "JAC",
+            "margin": 22
+          },
+          {
+            "team": "CLE",
+            "margin": -2
+          },
+          {
+            "team": "SF",
+            "margin": 13
+          },
+          {
+            "team": "HOU",
+            "margin": 2
+          },
+          {
+            "team": "DAL",
+            "margin": 7
+          },
+          {
+            "team": "CIN",
+            "margin": -2
+          }
+        ],
+        "marginTotal": 227,
+        "highFiveValues": [
+          8,
+          8,
+          5,
+          5,
+          1,
+          5,
+          8,
+          5,
+          3,
+          5,
+          8,
+          5,
+          5,
+          5,
+          8,
+          5,
+          5,
+          8
+        ],
+        "highFiveTotal": 102,
+        "highFiveThisWeek": [
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "HOU",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "BUF",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          }
+        ]
+      },
+      {
+        "id": "f9a6ca4b-7169-4a26-9958-2a4c9ecf4a17",
+        "username": "Foo Fighter",
+        "firstName": "Patrick",
+        "lastName": "Cook",
+        "wins": 178,
+        "winsByWeek": [
+          13,
+          11,
+          13,
+          9,
+          6,
+          10,
+          12,
+          11,
+          8,
+          9,
+          11,
+          10,
+          9,
+          8,
+          9,
+          10,
+          9,
+          10
+        ],
+        "losses": 93,
+        "lossesByWeek": [
+          3,
+          5,
+          3,
+          6,
+          8,
+          5,
+          3,
+          2,
+          6,
+          5,
+          4,
+          4,
+          7,
+          6,
+          7,
+          6,
+          7,
+          6
+        ],
+        "ties": 1,
+        "tiesByWeek": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "percent": 0.65625,
+        "points": 1586.5,
+        "pointsByWeek": [
+          118,
+          112,
+          100,
+          97.5,
+          39,
+          88,
+          104,
+          75,
+          67,
+          74,
+          95,
+          88,
+          84,
+          67,
+          99,
+          93,
+          87,
+          99
+        ],
+        "tbAvg": 41,
+        "tiebreakerByWeek": [
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41
+        ],
+        "lastWeekRank": 8,
+        "currentWeekRank": 6,
+        "rankByWeek": [
+          13,
+          26,
+          15,
+          14,
+          15,
+          9,
+          8,
+          6,
+          5,
+          4,
+          7,
+          4,
+          8,
+          7,
+          5,
+          10,
+          8,
+          6
+        ],
+        "change": "+2",
+        "currentWeekWins": 10,
+        "currentWeekLosses": 6,
+        "currentWeekTies": 0,
+        "currentWeekPoints": 99,
+        "currentWeekTiebreaker": 41,
+        "survivorPicks": [
+          "PHI",
+          "BAL",
+          "BUF",
+          "DET",
+          "LA"
+        ],
+        "aliveInSurvivor": false,
+        "marginPicks": [
+          {
+            "team": "DEN",
+            "margin": 8
+          },
+          {
+            "team": "BAL",
+            "margin": 24
+          },
+          {
+            "team": "BUF",
+            "margin": 10
+          },
+          {
+            "team": "GB",
+            "margin": 0
+          },
+          {
+            "team": "DET",
+            "margin": 13
+          },
+          {
+            "team": "IND",
+            "margin": 4
+          },
+          {
+            "team": "KC",
+            "margin": 31
+          },
+          {
+            "team": "ATL",
+            "margin": -24
+          },
+          {
+            "team": "LA",
+            "margin": 24
+          },
+          {
+            "team": "SEA",
+            "margin": 22
+          },
+          {
+            "team": "NE",
+            "margin": 13
+          },
+          {
+            "team": "SF",
+            "margin": 11
+          },
+          {
+            "team": "LAC",
+            "margin": 17
+          },
+          {
+            "team": "TB",
+            "margin": -4
+          },
+          {
+            "team": "JAC",
+            "margin": 28
+          },
+          {
+            "team": "HOU",
+            "margin": 2
+          },
+          {
+            "team": "DAL",
+            "margin": 7
+          },
+          {
+            "team": "MIN",
+            "margin": 13
+          }
+        ],
+        "marginTotal": 199,
+        "highFiveValues": [
+          8,
+          8,
+          5,
+          5,
+          2,
+          5,
+          8,
+          5,
+          3,
+          5,
+          8,
+          8,
+          3,
+          5,
+          8,
+          5,
+          3,
+          8
+        ],
+        "highFiveTotal": 102,
+        "highFiveThisWeek": [
+          {
+            "team": "JAC",
+            "won": true
+          },
+          {
+            "team": "HOU",
+            "won": true
+          },
+          {
+            "team": "DEN",
+            "won": true
+          },
+          {
+            "team": "NE",
+            "won": true
+          },
+          {
+            "team": "LA",
+            "won": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "highFiveWins",
+    "title": "Top 5 High Five (Wins)",
+    "description": "These are the 5 people who earned the most wins in the High Five Pool",
+    "data": [
+      {
+        "firstName": "Dan",
+        "lastName": "Fandl",
+        "highFiveTotal": 108,
+        "totalWins": 75
+      },
+      {
+        "firstName": "Dan",
+        "lastName": "Gilbert",
+        "highFiveTotal": 105,
+        "totalWins": 75
+      },
+      {
+        "firstName": "Nick",
+        "lastName": "Nargi",
+        "highFiveTotal": 102,
+        "totalWins": 75
+      },
+      {
+        "firstName": "Billy",
+        "lastName": "Maltz",
+        "highFiveTotal": 105,
+        "totalWins": 74
+      },
+      {
+        "firstName": "David",
+        "lastName": "Galatt",
+        "highFiveTotal": 102,
+        "totalWins": 74
+      }
+    ]
+  }
+]

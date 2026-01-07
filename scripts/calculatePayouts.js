@@ -17,8 +17,8 @@ const playerData = await JSON.parse(await readFile(path.resolve(`data/${year}/fo
 // Get the data from the season json file
 const seasonData = await JSON.parse(await readFile(path.resolve(`data/${year}/football/season.json`)));
 
-const endOfYearPayouts = [752, 639.2, 526.4, 451.2, 376, 300.8, 206.8, 188, 169.2, 150.4];
-const weeklyConfidencePayouts = [62.67, 53.27, 43.87, 37.6, 31.33, 25.07, 17.23, 15.67, 14.1, 12.53];
+const endOfYearPayouts = [968, 822.8, 677.6, 580.8, 484, 387.2, 266.2, 242, 217.8, 193.6];
+const weeklyConfidencePayouts = [80.67, 68.57, 56.47, 48.4, 40.33, 32.27, 22.18, 20.17, 18.15, 16.13];
 const marginHighFivePayouts = [380, 250, 150, 120, 100];
 
 const payouts = [];
