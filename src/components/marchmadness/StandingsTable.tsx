@@ -105,7 +105,15 @@ function StandingsTable() {
   };
 
   if (calculatedPicks.length === 0) {
-    return <></>;
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            Once submissions are open, there will be a table here with all of the people who have submitted.
+          </h3>
+        </div>
+      </section>
+    );
   }
 
   return (
