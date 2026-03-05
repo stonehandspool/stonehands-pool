@@ -110,6 +110,8 @@ function HallOfFame() {
                 <li>Kwan Jun - 14 Weeks</li>
                 <li>Emily Yerkes - 14 Weeks</li>
                 <li>7-way tie - 13 Weeks</li>
+                <li style={{ visibility: 'hidden' }}>Hidden for space</li>
+                <li style={{ visibility: 'hidden' }}>Hidden for space</li>
               </ol>
             </div>
           </div>

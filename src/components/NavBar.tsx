@@ -1,6 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import { CURRENT_WEEK_CUTOFF_TIME, MARCH_MADNESS_STATE, SEASON_READY, SIGN_UPS_DISABLED } from '../constants';
+import {
+  CURRENT_WEEK_CUTOFF_TIME,
+  MARCH_MADNESS_CUTOFF,
+  MARCH_MADNESS_STATE,
+  SEASON_READY,
+  SIGN_UPS_DISABLED,
+} from '../constants';
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -69,233 +75,199 @@ function NavBar() {
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <div className={`navbar-menu mr-6 ${burgerState ? 'is-active' : ''}`}>
-        <div className="navbar-end">
-          <Link className="navbar-item" to="/about" onClick={onBurgerClick}>
-            About
-          </Link>
-          <Link className="navbar-item" to="/hall-of-fame" onClick={onBurgerClick}>
-            Hall of Fame
-          </Link>
-          {currentTime < CURRENT_WEEK_CUTOFF_TIME && (
-            <Link className="navbar-item" to="/picksheet" onClick={onBurgerClick}>
-              Picksheet
+      {MARCH_MADNESS_STATE === 'INACTIVE' ? (
+        <div className={`navbar-menu mr-6 ${burgerState ? 'is-active' : ''}`}>
+          <div className="navbar-end">
+            <Link className="navbar-item" to="/about" onClick={onBurgerClick}>
+              About
             </Link>
-          )}
-          {currentTime >= CURRENT_WEEK_CUTOFF_TIME && (
-            <Link className="navbar-item" to="/my-picks" onClick={onBurgerClick}>
-              My Picks
+            <Link className="navbar-item" to="/hall-of-fame" onClick={onBurgerClick}>
+              Hall of Fame
             </Link>
-          )}
-          <div
-            className={`navbar-item has-dropdown is-hoverable ${standingsState && isMobile ? 'is-active' : ''}`}
-            key={`${location}-dd-1`}
-            onClick={onStandingsClick}
-          >
-            <a className="navbar-link">Standings</a>
-            <div className="navbar-dropdown">
-              <Link
-                className="navbar-item"
-                to="/season-standings"
-                onClick={() => {
-                  onLinkClick('standings');
-                }}
-              >
-                Season
+            {currentTime < CURRENT_WEEK_CUTOFF_TIME && (
+              <Link className="navbar-item" to="/picksheet" onClick={onBurgerClick}>
+                Picksheet
               </Link>
-              <Link
-                className="navbar-item"
-                to="/weekly-standings"
-                onClick={() => {
-                  onLinkClick('standings');
-                }}
-              >
-                Weekly
+            )}
+            {currentTime >= CURRENT_WEEK_CUTOFF_TIME && (
+              <Link className="navbar-item" to="/my-picks" onClick={onBurgerClick}>
+                My Picks
               </Link>
-              <Link
-                className="navbar-item"
-                to="/survivor"
-                onClick={() => {
-                  onLinkClick('standings');
-                }}
-              >
-                Survivor
-              </Link>
-              <Link
-                className="navbar-item"
-                to="/margin"
-                onClick={() => {
-                  onLinkClick('standings');
-                }}
-              >
-                Margin
-              </Link>
-              <Link
-                className="navbar-item"
-                to="/high-five"
-                onClick={() => {
-                  onLinkClick('standings');
-                }}
-              >
-                High Five
-              </Link>
-            </div>
-          </div>
-          <div
-            className={`navbar-item has-dropdown is-hoverable ${moreState && isMobile ? 'is-active' : ''}`}
-            key={`${location}-dd-2`}
-            onClick={onMoreClick}
-          >
-            <a className="navbar-link">More</a>
-            <div className="navbar-dropdown is-right">
-              <Link
-                className="navbar-item"
-                to="/weekly-picks"
-                onClick={() => {
-                  onLinkClick('more');
-                }}
-              >
-                Picks
-              </Link>
-              <Link
-                className="navbar-item"
-                to="/weekly-picks-images"
-                onClick={() => {
-                  onLinkClick('more');
-                }}
-              >
-                Picks w/ Images
-              </Link>
-              <Link
-                className="navbar-item"
-                to="/consensus"
-                onClick={() => {
-                  onLinkClick('more');
-                }}
-              >
-                Consensus
-              </Link>
-              <Link
-                className="navbar-item"
-                to="/standings-by-week"
-                onClick={() => {
-                  onLinkClick('more');
-                }}
-              >
-                Standings By Week
-              </Link>
-              {SEASON_READY && (
+            )}
+            <div
+              className={`navbar-item has-dropdown is-hoverable ${standingsState && isMobile ? 'is-active' : ''}`}
+              key={`${location}-dd-1`}
+              onClick={onStandingsClick}
+            >
+              <a className="navbar-link">Standings</a>
+              <div className="navbar-dropdown">
                 <Link
                   className="navbar-item"
-                  to="/all-user-stats"
+                  to="/season-standings"
+                  onClick={() => {
+                    onLinkClick('standings');
+                  }}
+                >
+                  Season
+                </Link>
+                <Link
+                  className="navbar-item"
+                  to="/weekly-standings"
+                  onClick={() => {
+                    onLinkClick('standings');
+                  }}
+                >
+                  Weekly
+                </Link>
+                <Link
+                  className="navbar-item"
+                  to="/survivor"
+                  onClick={() => {
+                    onLinkClick('standings');
+                  }}
+                >
+                  Survivor
+                </Link>
+                <Link
+                  className="navbar-item"
+                  to="/margin"
+                  onClick={() => {
+                    onLinkClick('standings');
+                  }}
+                >
+                  Margin
+                </Link>
+                <Link
+                  className="navbar-item"
+                  to="/high-five"
+                  onClick={() => {
+                    onLinkClick('standings');
+                  }}
+                >
+                  High Five
+                </Link>
+              </div>
+            </div>
+            <div
+              className={`navbar-item has-dropdown is-hoverable ${moreState && isMobile ? 'is-active' : ''}`}
+              key={`${location}-dd-2`}
+              onClick={onMoreClick}
+            >
+              <a className="navbar-link">More</a>
+              <div className="navbar-dropdown is-right">
+                <Link
+                  className="navbar-item"
+                  to="/weekly-picks"
                   onClick={() => {
                     onLinkClick('more');
                   }}
                 >
-                  User Stats
+                  Picks
                 </Link>
-              )}
-              <Link
-                className="navbar-item"
-                to="/yearly-awards"
-                onClick={() => {
-                  onLinkClick('more');
-                }}
-              >
-                2025 Awards
-              </Link>
-              <Link
-                className="navbar-item"
-                to="/payouts"
-                onClick={() => {
-                  onLinkClick('more');
-                }}
-              >
-                2025 Payouts
-              </Link>
-            </div>
-          </div>
-          {MARCH_MADNESS_STATE !== 'INACTIVE' && (
-            <div
-              className={`navbar-item has-dropdown is-hoverable ${mmState && isMobile ? 'is-active' : ''}`}
-              key={`${location}-dd-3`}
-              onClick={onMMClick}
-            >
-              <a className="navbar-link">March Madness</a>
-              <div className="navbar-dropdown">
                 <Link
                   className="navbar-item"
-                  to="/march-madness/about"
+                  to="/weekly-picks-images"
                   onClick={() => {
-                    onLinkClick('mm');
+                    onLinkClick('more');
                   }}
                 >
-                  About
+                  Picks w/ Images
                 </Link>
                 <Link
                   className="navbar-item"
-                  to="/march-madness/picksheet"
+                  to="/consensus"
                   onClick={() => {
-                    onLinkClick('mm');
+                    onLinkClick('more');
                   }}
                 >
-                  Picksheet
+                  Consensus
                 </Link>
                 <Link
                   className="navbar-item"
-                  to="/march-madness/standings"
+                  to="/standings-by-week"
                   onClick={() => {
-                    onLinkClick('mm');
+                    onLinkClick('more');
                   }}
                 >
-                  Standings
+                  Standings By Week
                 </Link>
+                {SEASON_READY && (
+                  <Link
+                    className="navbar-item"
+                    to="/all-user-stats"
+                    onClick={() => {
+                      onLinkClick('more');
+                    }}
+                  >
+                    User Stats
+                  </Link>
+                )}
                 <Link
                   className="navbar-item"
-                  to="/march-madness/pool-consensus"
+                  to="/yearly-awards"
                   onClick={() => {
-                    onLinkClick('mm');
-                  }}
-                >
-                  Pool Consensus
-                </Link>
-                <Link
-                  className="navbar-item"
-                  to="/march-madness/teams-remaining"
-                  onClick={() => {
-                    onLinkClick('mm');
-                  }}
-                >
-                  Teams Remaining
-                </Link>
-                <Link
-                  className="navbar-item"
-                  to="/march-madness/awards"
-                  onClick={() => {
-                    onLinkClick('mm');
+                    onLinkClick('more');
                   }}
                 >
                   2025 Awards
                 </Link>
                 <Link
                   className="navbar-item"
-                  to="/march-madness/payouts"
+                  to="/payouts"
                   onClick={() => {
-                    onLinkClick('mm');
+                    onLinkClick('more');
                   }}
                 >
                   2025 Payouts
                 </Link>
               </div>
             </div>
-          )}
-          {!SIGN_UPS_DISABLED && (
-            <Link className="navbar-item" to="/sign-up" onClick={onBurgerClick}>
-              Sign Up
-            </Link>
-          )}
+            {!SIGN_UPS_DISABLED && (
+              <Link className="navbar-item" to="/sign-up" onClick={onBurgerClick}>
+                Sign Up
+              </Link>
+            )}
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className={`navbar-menu mr-6 ${burgerState ? 'is-active' : ''}`}>
+          <div className="navbar-end">
+            <Link className="navbar-item" to="/march-madness/about" onClick={onBurgerClick}>
+              About
+            </Link>
+            <Link className="navbar-item" to="/hall-of-fame" onClick={onBurgerClick}>
+              Hall of Fame
+            </Link>
+            {currentTime < MARCH_MADNESS_CUTOFF && (
+              <Link className="navbar-item" to="/march-madness/picksheet" onClick={onBurgerClick}>
+                Picksheet
+              </Link>
+            )}
+            {currentTime >= MARCH_MADNESS_CUTOFF && (
+              <Link className="navbar-item" to="/my-picks" onClick={onBurgerClick}>
+                My Picks
+              </Link>
+            )}
+            <Link className="navbar-item" to="/march-madness/standings" onClick={onBurgerClick}>
+              Standings
+            </Link>
+            <Link className="navbar-item" to="/march-madness/pool-consensus" onClick={onBurgerClick}>
+              Consensus
+            </Link>
+            <Link className="navbar-item" to="/march-madness/teams-remaining" onClick={onBurgerClick}>
+              Teams Remaining
+            </Link>
+            <Link className="navbar-item" to="/march-madness/awards" onClick={onBurgerClick}>
+              2025 Awards
+            </Link>
+            {!SIGN_UPS_DISABLED && (
+              <Link className="navbar-item" to="/sign-up" onClick={onBurgerClick}>
+                Sign Up
+              </Link>
+            )}
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
