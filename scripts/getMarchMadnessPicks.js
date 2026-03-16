@@ -17,7 +17,7 @@ if (isNaN(year)) {
 }
 
 // Now create the players json file
-const { data, error } = await supabaseClient.from('march_madness_picks').select();
+const { data, error } = await supabaseClient.from('mm_picks_2026').select();
 
 if (error) {
   console.log('An error occurred when trying to connect to supabase');
