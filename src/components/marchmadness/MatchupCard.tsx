@@ -37,7 +37,6 @@ function MatchupCard(props: MatchupCardProps) {
     }
     const matchupCopy = _.cloneDeep(matchupInfo);
     matchupCopy.winner = direction;
-    setCurrentMatchupInfo(matchupCopy);
     setSelectedTeam(direction);
     onClick(matchupCopy);
   };

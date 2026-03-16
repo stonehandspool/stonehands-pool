@@ -11,7 +11,7 @@ import {
   ROUND_VALUES,
   CURRENT_YEAR,
 } from '../../constants';
-import matchups from '../../../data/2025/marchmadness/matchups.json';
+import matchups from '../../../data/2026/marchmadness/matchups.json';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
 
@@ -107,25 +107,24 @@ function PickSheetForm(props: PicksheetFormProps) {
   const [tiebreaker, setTiebreaker] = useState<string>('');
   const [bracketTitle, setBracketTitle] = useState<string>('');
 
-  let allPicksMade = true;
-  for (let i = 0; i < userPicks.length - 1; i++) {
-    const pickInfo = userPicks[i];
-    const { topTeam, bottomTeam, winner } = pickInfo;
-    if (topTeam.name === null || bottomTeam.name === null || winner === null) {
-      allPicksMade = false;
-      break;
-    }
-  }
-  if (allPicksMade && tiebreaker !== '') {
-    setAllPicksFilled(true);
-  } else if (!allPicksMade && allPicksFilled) {
-    setAllPicksFilled(false);
-  }
-
   const handleTiebreakerInput = (event: ChangeEvent<HTMLInputElement>) => {
     const numRegex = /^[0-9\b]+$/;
     if (event.target.value === '' || numRegex.test(event.target.value)) {
       setTiebreaker(event.target.value);
+      let allPicksMade = true;
+      for (let i = 0; i < userPicks.length - 1; i++) {
+        const pickInfo = userPicks[i];
+        const { topTeam, bottomTeam, winner } = pickInfo;
+        if (topTeam.name === null || bottomTeam.name === null || winner === null) {
+          allPicksMade = false;
+          break;
+        }
+      }
+      if (allPicksMade && event.target.value !== '') {
+        setAllPicksFilled(true);
+      } else if ((!allPicksMade && allPicksFilled) || (event.target.value === '' && allPicksFilled)) {
+        setAllPicksFilled(false);
+      }
     }
   };
 
@@ -183,6 +182,20 @@ function PickSheetForm(props: PicksheetFormProps) {
     } else {
       // To handle picking the finals game so that their chosen winner is saved
       setUserPicks(picksCopy);
+    }
+    let allPicksMade = true;
+    for (let i = 0; i < picksCopy.length - 1; i++) {
+      const pickInfo = picksCopy[i];
+      const { topTeam, bottomTeam, winner } = pickInfo;
+      if (topTeam.name === null || bottomTeam.name === null || winner === null) {
+        allPicksMade = false;
+        break;
+      }
+    }
+    if (allPicksMade && tiebreaker !== '') {
+      setAllPicksFilled(true);
+    } else if (!allPicksMade && allPicksFilled) {
+      setAllPicksFilled(false);
     }
   };
 

@@ -1,0 +1,1199 @@
+[
+  {
+    "id": "matchup-1",
+    "topTeam": {
+      "seed": 1,
+      "name": "Duke",
+      "record": "32-2"
+    },
+    "bottomTeam": {
+      "seed": 16,
+      "name": "Siena",
+      "record": "23-11"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-33"
+  },
+  {
+    "id": "matchup-2",
+    "topTeam": {
+      "seed": 8,
+      "name": "Ohio St",
+      "record": "21-12"
+    },
+    "bottomTeam": {
+      "seed": 9,
+      "name": "TCU",
+      "record": "22-11"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-33"
+  },
+  {
+    "id": "matchup-3",
+    "topTeam": {
+      "seed": 5,
+      "name": "St John's",
+      "record": "28-6"
+    },
+    "bottomTeam": {
+      "seed": 12,
+      "name": "UNI",
+      "record": "23-12"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-34"
+  },
+  {
+    "id": "matchup-4",
+    "topTeam": {
+      "seed": 4,
+      "name": "Kansas",
+      "record": "23-10"
+    },
+    "bottomTeam": {
+      "seed": 13,
+      "name": "CA Baptist",
+      "record": "25-8"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-34"
+  },
+  {
+    "id": "matchup-5",
+    "topTeam": {
+      "seed": 6,
+      "name": "Louisville",
+      "record": "23-10"
+    },
+    "bottomTeam": {
+      "seed": 11,
+      "name": "USF",
+      "record": "25-8"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-35"
+  },
+  {
+    "id": "matchup-6",
+    "topTeam": {
+      "seed": 3,
+      "name": "Michigan St",
+      "record": "25-7"
+    },
+    "bottomTeam": {
+      "seed": 14,
+      "name": "NDSU",
+      "record": "27-7"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-35"
+  },
+  {
+    "id": "matchup-7",
+    "topTeam": {
+      "seed": 7,
+      "name": "UCLA",
+      "record": "23-11"
+    },
+    "bottomTeam": {
+      "seed": 10,
+      "name": "UCF",
+      "record": "21-11"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-36"
+  },
+  {
+    "id": "matchup-8",
+    "topTeam": {
+      "seed": 2,
+      "name": "UConn",
+      "record": "29-5"
+    },
+    "bottomTeam": {
+      "seed": 15,
+      "name": "Furman",
+      "record": "22-12"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-36"
+  },
+  {
+    "id": "matchup-9",
+    "topTeam": {
+      "seed": 1,
+      "name": "Florida",
+      "record": "26-7"
+    },
+    "bottomTeam": {
+      "seed": 16,
+      "name": "PV/LEH",
+      "record": "-"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-37"
+  },
+  {
+    "id": "matchup-10",
+    "topTeam": {
+      "seed": 8,
+      "name": "Clemson",
+      "record": "24-10"
+    },
+    "bottomTeam": {
+      "seed": 9,
+      "name": "Iowa",
+      "record": "21-12"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-37"
+  },
+  {
+    "id": "matchup-11",
+    "topTeam": {
+      "seed": 5,
+      "name": "Vanderbilt",
+      "record": "26-8"
+    },
+    "bottomTeam": {
+      "seed": 12,
+      "name": "McNeese",
+      "record": "28-5"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-38"
+  },
+  {
+    "id": "matchup-12",
+    "topTeam": {
+      "seed": 4,
+      "name": "Nebraska",
+      "record": "26-6"
+    },
+    "bottomTeam": {
+      "seed": 13,
+      "name": "Troy",
+      "record": "22-11"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-38"
+  },
+  {
+    "id": "matchup-13",
+    "topTeam": {
+      "seed": 6,
+      "name": "UNC",
+      "record": "24-8"
+    },
+    "bottomTeam": {
+      "seed": 11,
+      "name": "VCU",
+      "record": "27-7"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-39"
+  },
+  {
+    "id": "matchup-14",
+    "topTeam": {
+      "seed": 3,
+      "name": "Illinois",
+      "record": "24-8"
+    },
+    "bottomTeam": {
+      "seed": 14,
+      "name": "UPenn",
+      "record": "18-11"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-39"
+  },
+  {
+    "id": "matchup-15",
+    "topTeam": {
+      "seed": 7,
+      "name": "St Mary's",
+      "record": "27-5"
+    },
+    "bottomTeam": {
+      "seed": 10,
+      "name": "Texas A&M",
+      "record": "21-11"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-40"
+  },
+  {
+    "id": "matchup-16",
+    "topTeam": {
+      "seed": 2,
+      "name": "Houston",
+      "record": "28-6"
+    },
+    "bottomTeam": {
+      "seed": 15,
+      "name": "Idaho",
+      "record": "21-14"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-40"
+  },
+  {
+    "id": "matchup-17",
+    "topTeam": {
+      "seed": 1,
+      "name": "Arizona",
+      "record": "32-2"
+    },
+    "bottomTeam": {
+      "seed": 16,
+      "name": "Long Island",
+      "record": "24-10"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-41"
+  },
+  {
+    "id": "matchup-18",
+    "topTeam": {
+      "seed": 8,
+      "name": "Villanova",
+      "record": "24-8"
+    },
+    "bottomTeam": {
+      "seed": 9,
+      "name": "Utah St",
+      "record": "28-6"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-41"
+  },
+  {
+    "id": "matchup-19",
+    "topTeam": {
+      "seed": 5,
+      "name": "Wisconsin",
+      "record": "24-10"
+    },
+    "bottomTeam": {
+      "seed": 12,
+      "name": "High Point",
+      "record": "30-4"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-42"
+  },
+  {
+    "id": "matchup-20",
+    "topTeam": {
+      "seed": 4,
+      "name": "Arkansas",
+      "record": "26-8"
+    },
+    "bottomTeam": {
+      "seed": 13,
+      "name": "Hawaii",
+      "record": "24-8"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-42"
+  },
+  {
+    "id": "matchup-21",
+    "topTeam": {
+      "seed": 6,
+      "name": "BYU",
+      "record": "23-11"
+    },
+    "bottomTeam": {
+      "seed": 11,
+      "name": "NC St/Texas",
+      "record": "-"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-43"
+  },
+  {
+    "id": "matchup-22",
+    "topTeam": {
+      "seed": 3,
+      "name": "Gonzaga",
+      "record": "30-3"
+    },
+    "bottomTeam": {
+      "seed": 14,
+      "name": "Kennesaw St",
+      "record": "21-13"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-43"
+  },
+  {
+    "id": "matchup-23",
+    "topTeam": {
+      "seed": 7,
+      "name": "Miami (FL)",
+      "record": "25-8"
+    },
+    "bottomTeam": {
+      "seed": 10,
+      "name": "Missouri",
+      "record": "20-12"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-44"
+  },
+  {
+    "id": "matchup-24",
+    "topTeam": {
+      "seed": 2,
+      "name": "Purdue",
+      "record": "27-8"
+    },
+    "bottomTeam": {
+      "seed": 15,
+      "name": "Queens",
+      "record": "21-13"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-44"
+  },
+  {
+    "id": "matchup-25",
+    "topTeam": {
+      "seed": 1,
+      "name": "Michigan",
+      "record": "31-3"
+    },
+    "bottomTeam": {
+      "seed": 16,
+      "name": "HOW/UMBC",
+      "record": "-"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-45"
+  },
+  {
+    "id": "matchup-26",
+    "topTeam": {
+      "seed": 8,
+      "name": "Georgia",
+      "record": "22-10"
+    },
+    "bottomTeam": {
+      "seed": 9,
+      "name": "St Louis",
+      "record": "28-5"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-45"
+  },
+  {
+    "id": "matchup-27",
+    "topTeam": {
+      "seed": 5,
+      "name": "Texas Tech",
+      "record": "22-10"
+    },
+    "bottomTeam": {
+      "seed": 12,
+      "name": "Akron",
+      "record": "29-5"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-46"
+  },
+  {
+    "id": "matchup-28",
+    "topTeam": {
+      "seed": 4,
+      "name": "Alabama",
+      "record": "23-9"
+    },
+    "bottomTeam": {
+      "seed": 13,
+      "name": "Hofstra",
+      "record": "24-10"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-46"
+  },
+  {
+    "id": "matchup-29",
+    "topTeam": {
+      "seed": 6,
+      "name": "Tenn",
+      "record": "22-11"
+    },
+    "bottomTeam": {
+      "seed": 11,
+      "name": "SMU/MIA(OH)",
+      "record": "-"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-47"
+  },
+  {
+    "id": "matchup-30",
+    "topTeam": {
+      "seed": 3,
+      "name": "Virginia",
+      "record": "29-5"
+    },
+    "bottomTeam": {
+      "seed": 14,
+      "name": "Wright St",
+      "record": "23-11"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-47"
+  },
+  {
+    "id": "matchup-31",
+    "topTeam": {
+      "seed": 7,
+      "name": "Kentucky",
+      "record": "21-13"
+    },
+    "bottomTeam": {
+      "seed": 10,
+      "name": "Santa Clara",
+      "record": "26-8"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-48"
+  },
+  {
+    "id": "matchup-32",
+    "topTeam": {
+      "seed": 2,
+      "name": "Iowa St",
+      "record": "27-7"
+    },
+    "bottomTeam": {
+      "seed": 15,
+      "name": "Tenn St",
+      "record": "23-9"
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 1,
+    "nextMatchup": "matchup-48"
+  },
+  {
+    "id": "matchup-33",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-49"
+  },
+  {
+    "id": "matchup-34",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-49"
+  },
+  {
+    "id": "matchup-35",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-50"
+  },
+  {
+    "id": "matchup-36",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-50"
+  },
+  {
+    "id": "matchup-37",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-51"
+  },
+  {
+    "id": "matchup-38",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-51"
+  },
+  {
+    "id": "matchup-39",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-52"
+  },
+  {
+    "id": "matchup-40",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-52"
+  },
+  {
+    "id": "matchup-41",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-53"
+  },
+  {
+    "id": "matchup-42",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-53"
+  },
+  {
+    "id": "matchup-43",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-54"
+  },
+  {
+    "id": "matchup-44",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-54"
+  },
+  {
+    "id": "matchup-45",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-55"
+  },
+  {
+    "id": "matchup-46",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-55"
+  },
+  {
+    "id": "matchup-47",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-56"
+  },
+  {
+    "id": "matchup-48",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 2,
+    "nextMatchup": "matchup-56"
+  },
+  {
+    "id": "matchup-49",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 3,
+    "nextMatchup": "matchup-57"
+  },
+  {
+    "id": "matchup-50",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 3,
+    "nextMatchup": "matchup-57"
+  },
+  {
+    "id": "matchup-51",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 3,
+    "nextMatchup": "matchup-58"
+  },
+  {
+    "id": "matchup-52",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 3,
+    "nextMatchup": "matchup-58"
+  },
+  {
+    "id": "matchup-53",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 3,
+    "nextMatchup": "matchup-59"
+  },
+  {
+    "id": "matchup-54",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 3,
+    "nextMatchup": "matchup-59"
+  },
+  {
+    "id": "matchup-55",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 3,
+    "nextMatchup": "matchup-60"
+  },
+  {
+    "id": "matchup-56",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 3,
+    "nextMatchup": "matchup-60"
+  },
+  {
+    "id": "matchup-57",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 4,
+    "nextMatchup": "matchup-61"
+  },
+  {
+    "id": "matchup-58",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 4,
+    "nextMatchup": "matchup-61"
+  },
+  {
+    "id": "matchup-59",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 4,
+    "nextMatchup": "matchup-62"
+  },
+  {
+    "id": "matchup-60",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 4,
+    "nextMatchup": "matchup-62"
+  },
+  {
+    "id": "matchup-61",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 5,
+    "nextMatchup": "matchup-63"
+  },
+  {
+    "id": "matchup-62",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 5,
+    "nextMatchup": "matchup-63"
+  },
+  {
+    "id": "matchup-63",
+    "topTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "bottomTeam": {
+      "seed": null,
+      "name": null,
+      "record": null
+    },
+    "topScore": 0,
+    "bottomScore": 0,
+    "winner": null,
+    "evaluated": false,
+    "round": 6,
+    "nextMatchup": null
+  }
+]
