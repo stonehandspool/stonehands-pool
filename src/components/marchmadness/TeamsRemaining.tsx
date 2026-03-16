@@ -1,5 +1,6 @@
 import teams from '../../../data/2026/marchmadness/teams.json';
 import playerPicks from '../../../data/2025/marchmadness/playerPicks.json';
+import { MARCH_MADNESS_STATE } from '../../constants';
 
 interface TeamsRemainingInfo {
   firstName: string;
@@ -11,6 +12,10 @@ const teamsPerRound = [32, 16, 8, 4, 2, 1];
 
 function MarchMadnessTeamsRemainingTable() {
   const teamsRemainingArr: TeamsRemainingInfo[] = [];
+
+  if (MARCH_MADNESS_STATE !== 'ACTIVE') {
+    return <p className="has-text-centered">This page will become available once the Round of 64 starts</p>;
+  }
 
   // Create all of the needed data
   // TODO: fix this any and find a better solution for next season

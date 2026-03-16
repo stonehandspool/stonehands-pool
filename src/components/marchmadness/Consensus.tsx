@@ -1,4 +1,4 @@
-import { MARCH_MADNESS_CURRENT_ROUND } from '../../constants';
+import { MARCH_MADNESS_CURRENT_ROUND, MARCH_MADNESS_STATE } from '../../constants';
 import matchups from '../../../data/2026/marchmadness/matchups.json';
 import playerPicks from '../../../data/2025/marchmadness/playerPicks.json';
 
@@ -26,6 +26,10 @@ const gamesPerRound = [8, 4, 2, 1, 1, 1];
 
 function MarchMadnessConsensusReport(props: MarchMadnessConsensusReportProps) {
   const { round } = props;
+
+  if (MARCH_MADNESS_STATE !== 'ACTIVE') {
+    return <p className="has-text-centered">This page will become available once the Round of 64 starts</p>;
+  }
 
   let regionsToShow;
   if (round === 6) {
