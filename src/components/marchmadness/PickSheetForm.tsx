@@ -130,6 +130,20 @@ function PickSheetForm(props: PicksheetFormProps) {
 
   const handleBracketTitleInput = (event: ChangeEvent<HTMLInputElement>) => {
     setBracketTitle(event.target.value);
+    let allPicksMade = true;
+    for (let i = 0; i < userPicks.length - 1; i++) {
+      const pickInfo = userPicks[i];
+      const { topTeam, bottomTeam, winner } = pickInfo;
+      if (topTeam.name === null || bottomTeam.name === null || winner === null) {
+        allPicksMade = false;
+        break;
+      }
+    }
+    if (allPicksMade && tiebreaker !== '') {
+      setAllPicksFilled(true);
+    } else if ((!allPicksMade && allPicksFilled) || (tiebreaker === '' && allPicksFilled)) {
+      setAllPicksFilled(false);
+    }
   };
 
   const clearGamesAfter = (picksCopy: MarchMadnessMatchupInfo[], startingIndex: number, teamToClear: string) => {
@@ -366,13 +380,13 @@ function PickSheetForm(props: PicksheetFormProps) {
         <div className="columns is-mobile px-6">
           <div className="column is-narrow is-flex is-flex-direction-column is-justify-content-space-around">
             <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>
+              <b>EAST</b>
+            </p>
+            <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>
               <b>SOUTH</b>
             </p>
             <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>
               <b>WEST</b>
-            </p>
-            <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>
-              <b>EAST</b>
             </p>
             <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>
               <b>MIDWEST</b>

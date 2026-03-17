@@ -103,13 +103,13 @@ function UserBracket() {
         <div className="columns is-mobile px-6">
           <div className="column is-narrow is-flex is-flex-direction-column is-justify-content-space-around">
             <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>
-              <b>WEST</b>
-            </p>
-            <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>
               <b>EAST</b>
             </p>
             <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>
               <b>SOUTH</b>
+            </p>
+            <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>
+              <b>WEST</b>
             </p>
             <p style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>
               <b>MIDWEST</b>
