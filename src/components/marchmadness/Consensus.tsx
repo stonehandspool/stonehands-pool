@@ -19,7 +19,7 @@ interface MarchMadnessConsensusReportProps {
   round: number;
 }
 
-const regions = ['WEST', 'EAST', 'SOUTH', 'MIDWEST'];
+const regions = ['EAST', 'SOUTH', 'WEST', 'MIDWEST'];
 const regionsF4 = ['Final Four Game #1', 'Final Four Game #2'];
 const regionsFinals = ['Finals'];
 const gamesPerRound = [8, 4, 2, 1, 1, 1];

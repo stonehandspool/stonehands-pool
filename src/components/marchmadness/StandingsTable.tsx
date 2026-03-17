@@ -104,7 +104,7 @@ function StandingsTable() {
     navigate(`/march-madness/bracket/${username}`);
   };
 
-  if (calculatedPicks.length === 0) {
+  if (calculatedPicks.length === 0 && MARCH_MADNESS_STATE === 'PRE_SELECTION_SUNDAY') {
     return (
       <section className="section">
         <div className="container">
