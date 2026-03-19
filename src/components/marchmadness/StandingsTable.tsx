@@ -85,6 +85,7 @@ function StandingsTable() {
       return (
         row2.points - row1.points ||
         row2.wins - row1.wins ||
+        // row1Tb - row2Tb || // THIS ONLY NEEDS TO BE HERE AT THE END OF THE TOURNAMENT TO CALC TBS
         row2.maxPoints - row1.maxPoints ||
         lastName1.localeCompare(lastName2) ||
         firstName1.localeCompare(firstName2)
