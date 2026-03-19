@@ -1,5 +1,5 @@
 import teams from '../../../data/2026/marchmadness/teams.json';
-import playerPicks from '../../../data/2025/marchmadness/playerPicks.json';
+import playerPicks from '../../../data/2026/marchmadness/playerPicks.json';
 import { MARCH_MADNESS_STATE } from '../../constants';
 
 interface TeamsRemainingInfo {

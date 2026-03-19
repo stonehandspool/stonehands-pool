@@ -244,8 +244,8 @@ function NavBar() {
               </Link>
             )}
             {currentTime >= MARCH_MADNESS_CUTOFF && (
-              <Link className="navbar-item" to="/my-picks" onClick={onBurgerClick}>
-                My Picks
+              <Link className="navbar-item" to="/march-madness/my-bracket" onClick={onBurgerClick}>
+                My Bracket
               </Link>
             )}
             <Link className="navbar-item" to="/march-madness/standings" onClick={onBurgerClick}>

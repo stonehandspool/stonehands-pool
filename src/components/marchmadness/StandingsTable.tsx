@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import playerPicks from '../../../data/2025/marchmadness/playerPicks.json';
+import playerPicks from '../../../data/2026/marchmadness/playerPicks.json';
 import teams from '../../../data/2026/marchmadness/teams.json';
 import { useNavigate } from 'react-router-dom';
 import supabaseClient from '../../config/supabaseClient';
@@ -85,7 +85,6 @@ function StandingsTable() {
       return (
         row2.points - row1.points ||
         row2.wins - row1.wins ||
-        row1Tb - row2Tb ||
         row2.maxPoints - row1.maxPoints ||
         lastName1.localeCompare(lastName2) ||
         firstName1.localeCompare(firstName2)

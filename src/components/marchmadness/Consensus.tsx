@@ -1,6 +1,6 @@
 import { MARCH_MADNESS_CURRENT_ROUND, MARCH_MADNESS_STATE } from '../../constants';
 import matchups from '../../../data/2026/marchmadness/matchups.json';
-import playerPicks from '../../../data/2025/marchmadness/playerPicks.json';
+import playerPicks from '../../../data/2026/marchmadness/playerPicks.json';
 
 interface MatchupConsensusInfo {
   topTeam: string;
