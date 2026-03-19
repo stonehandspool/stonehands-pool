@@ -30,10 +30,10 @@
       "name": "TCU",
       "record": "22-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 64,
+    "bottomScore": 66,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-33"
   },
@@ -220,10 +220,10 @@
       "name": "Troy",
       "record": "22-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 76,
+    "bottomScore": 47,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-38"
   },
@@ -615,9 +615,9 @@
       "record": null
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 9,
+      "name": "TCU",
+      "record": "22-11"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -710,9 +710,9 @@
       "record": null
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Nebraska",
+      "record": "26-6"
     },
     "topScore": 0,
     "bottomScore": 0,
