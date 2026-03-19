@@ -106,10 +106,10 @@
       "name": "NDSU",
       "record": "27-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 92,
+    "bottomScore": 67,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-35"
   },
@@ -372,10 +372,10 @@
       "name": "Hawaii",
       "record": "24-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 97,
+    "bottomScore": 78,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-42"
   },
@@ -653,9 +653,9 @@
       "record": "23-10"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 3,
+      "name": "Michigan St",
+      "record": "25-7"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -786,9 +786,9 @@
       "record": "30-4"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Arkansas",
+      "record": "26-8"
     },
     "topScore": 0,
     "bottomScore": 0,
