@@ -2,17 +2,29 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import DisplayCard from '../components/marchmadness/DisplayCard';
 import { CURRENT_YEAR, MarchMadnessMatchupInfo, MarchMadnessPlayerInfo } from '../constants';
-import playerPicks from '../../data/2025/marchmadness/playerPicks.json';
+import playerPicks from '../../data/2026/marchmadness/playerPicks.json';
 import teamData from '../../data/2026/marchmadness/teams.json';
 import bracketData from '../../data/2026/marchmadness/matchups.json';
+import { Session } from '@supabase/supabase-js';
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return { width, height };
 }
 
-function UserBracket() {
+type UserBracketProps = {
+  session?: Session;
+};
+
+function UserBracket(props: UserBracketProps) {
+  const { session } = props;
+  console.log(session);
   const { username } = useParams();
+
+  let nameToUse = username;
+  if (session) {
+    nameToUse = session.user.user_metadata.username;
+  }
 
   // This is a lazy implementation that will not look for resizing, just on initial load
   const [windowDimensions] = useState<{
@@ -23,7 +35,7 @@ function UserBracket() {
 
   // TODO: Remove this and find a better solution for next year
   const playerInfo = playerPicks.find(
-    (pickInfo: any) => pickInfo.username === username
+    (pickInfo: any) => pickInfo.username === nameToUse
   ) as unknown as MarchMadnessPlayerInfo;
 
   if (!playerInfo) {

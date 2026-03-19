@@ -12,7 +12,7 @@ const toMoney = (value: number) => {
 
 function MarchMadnessAbout() {
   // Just dummy objects to allow the examples to somewhat work
-  const numPlayers = 137;
+  const numPlayers = 119;
   const buyIn = 25;
   const totalPool = numPlayers * buyIn;
 
