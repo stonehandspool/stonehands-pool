@@ -11,10 +11,10 @@
       "name": "Siena",
       "record": "23-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 71,
+    "bottomScore": 65,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-33"
   },
@@ -87,10 +87,10 @@
       "name": "USF",
       "record": "25-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 83,
+    "bottomScore": 79,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-35"
   },
@@ -201,10 +201,10 @@
       "name": "McNeese",
       "record": "28-5"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 78,
+    "bottomScore": 68,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-38"
   },
@@ -353,10 +353,10 @@
       "name": "High Point",
       "record": "30-4"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 82,
+    "bottomScore": 83,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-42"
   },
@@ -610,9 +610,9 @@
   {
     "id": "matchup-33",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Duke",
+      "record": "32-2"
     },
     "bottomTeam": {
       "seed": 9,
@@ -648,9 +648,9 @@
   {
     "id": "matchup-35",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 6,
+      "name": "Louisville",
+      "record": "23-10"
     },
     "bottomTeam": {
       "seed": null,
@@ -705,9 +705,9 @@
   {
     "id": "matchup-38",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 5,
+      "name": "Vanderbilt",
+      "record": "26-8"
     },
     "bottomTeam": {
       "seed": 4,
@@ -781,9 +781,9 @@
   {
     "id": "matchup-42",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 12,
+      "name": "High Point",
+      "record": "30-4"
     },
     "bottomTeam": {
       "seed": null,
