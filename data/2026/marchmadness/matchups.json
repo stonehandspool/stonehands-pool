@@ -315,10 +315,10 @@
       "name": "Long Island",
       "record": "24-10"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 92,
+    "bottomScore": 58,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-41"
   },
@@ -505,10 +505,10 @@
       "name": "Akron",
       "record": "29-5"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 91,
+    "bottomScore": 71,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-46"
   },
@@ -562,10 +562,10 @@
       "name": "Wright St",
       "record": "23-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 82,
+    "bottomScore": 73,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-47"
   },
@@ -581,10 +581,10 @@
       "name": "Santa Clara",
       "record": "26-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 89,
+    "bottomScore": 84,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-48"
   },
@@ -762,9 +762,9 @@
   {
     "id": "matchup-41",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Arizona",
+      "record": "32-2"
     },
     "bottomTeam": {
       "seed": null,
@@ -857,9 +857,9 @@
   {
     "id": "matchup-46",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 5,
+      "name": "Texas Tech",
+      "record": "22-10"
     },
     "bottomTeam": {
       "seed": null,
@@ -881,9 +881,9 @@
       "record": null
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 3,
+      "name": "Virginia",
+      "record": "29-5"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -895,9 +895,9 @@
   {
     "id": "matchup-48",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 7,
+      "name": "Kentucky",
+      "record": "21-13"
     },
     "bottomTeam": {
       "seed": null,
