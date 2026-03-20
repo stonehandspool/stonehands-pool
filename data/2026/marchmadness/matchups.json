@@ -239,10 +239,10 @@
       "name": "VCU",
       "record": "27-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 78,
+    "bottomScore": 82,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-39"
   },
@@ -277,10 +277,10 @@
       "name": "Texas A&M",
       "record": "21-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 50,
+    "bottomScore": 63,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-40"
   },
@@ -391,10 +391,10 @@
       "name": "NC St/Texas",
       "record": "-"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 71,
+    "bottomScore": 79,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-43"
   },
@@ -467,10 +467,10 @@
       "name": "HOW/UMBC",
       "record": "-"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 101,
+    "bottomScore": 80,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-45"
   },
@@ -724,9 +724,9 @@
   {
     "id": "matchup-39",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 11,
+      "name": "VCU",
+      "record": "27-7"
     },
     "bottomTeam": {
       "seed": null,
@@ -743,9 +743,9 @@
   {
     "id": "matchup-40",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 10,
+      "name": "Texas A&M",
+      "record": "21-11"
     },
     "bottomTeam": {
       "seed": null,
@@ -800,9 +800,9 @@
   {
     "id": "matchup-43",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 11,
+      "name": "NC St/Texas",
+      "record": "-"
     },
     "bottomTeam": {
       "seed": null,
@@ -838,9 +838,9 @@
   {
     "id": "matchup-45",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Michigan",
+      "record": "31-3"
     },
     "bottomTeam": {
       "seed": null,
