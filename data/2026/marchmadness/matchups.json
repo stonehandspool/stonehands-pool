@@ -49,10 +49,10 @@
       "name": "UNI",
       "record": "23-12"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 79,
+    "bottomScore": 53,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-34"
   },
@@ -68,10 +68,10 @@
       "name": "CA Baptist",
       "record": "25-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 68,
+    "bottomScore": 60,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-34"
   },
@@ -125,10 +125,10 @@
       "name": "UCF",
       "record": "21-11"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 75,
+    "bottomScore": 71,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-36"
   },
@@ -144,10 +144,10 @@
       "name": "Furman",
       "record": "22-12"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 82,
+    "bottomScore": 71,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-36"
   },
@@ -163,10 +163,10 @@
       "name": "PV/LEH",
       "record": "-"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 114,
+    "bottomScore": 55,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-37"
   },
@@ -182,10 +182,10 @@
       "name": "Iowa",
       "record": "21-12"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 61,
+    "bottomScore": 67,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-37"
   },
@@ -334,10 +334,10 @@
       "name": "Utah St",
       "record": "28-6"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 76,
+    "bottomScore": 86,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-41"
   },
@@ -429,10 +429,10 @@
       "name": "Missouri",
       "record": "20-12"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 80,
+    "bottomScore": 66,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-44"
   },
@@ -448,10 +448,10 @@
       "name": "Queens",
       "record": "21-13"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 104,
+    "bottomScore": 71,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-44"
   },
@@ -524,10 +524,10 @@
       "name": "Hofstra",
       "record": "24-10"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 90,
+    "bottomScore": 70,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-46"
   },
@@ -543,10 +543,10 @@
       "name": "SMU/MIA(OH)",
       "record": "-"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 78,
+    "bottomScore": 56,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-47"
   },
@@ -600,10 +600,10 @@
       "name": "Tenn St",
       "record": "23-9"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 108,
+    "bottomScore": 74,
+    "winner": "top",
+    "evaluated": true,
     "round": 1,
     "nextMatchup": "matchup-48"
   },
@@ -629,14 +629,14 @@
   {
     "id": "matchup-34",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 5,
+      "name": "St John's",
+      "record": "28-6"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Kansas",
+      "record": "23-10"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -667,14 +667,14 @@
   {
     "id": "matchup-36",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 7,
+      "name": "UCLA",
+      "record": "23-11"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "UConn",
+      "record": "29-5"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -686,14 +686,14 @@
   {
     "id": "matchup-37",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Florida",
+      "record": "26-7"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 9,
+      "name": "Iowa",
+      "record": "21-12"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -767,9 +767,9 @@
       "record": "32-2"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 9,
+      "name": "Utah St",
+      "record": "28-6"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -819,14 +819,14 @@
   {
     "id": "matchup-44",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 7,
+      "name": "Miami (FL)",
+      "record": "25-8"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Purdue",
+      "record": "27-8"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -862,9 +862,9 @@
       "record": "22-10"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Alabama",
+      "record": "23-9"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -876,9 +876,9 @@
   {
     "id": "matchup-47",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 6,
+      "name": "Tenn",
+      "record": "22-11"
     },
     "bottomTeam": {
       "seed": 3,
@@ -900,9 +900,9 @@
       "record": "21-13"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Iowa St",
+      "record": "27-7"
     },
     "topScore": 0,
     "bottomScore": 0,
