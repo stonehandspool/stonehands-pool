@@ -638,10 +638,10 @@
       "name": "Kansas",
       "record": "23-10"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 67,
+    "bottomScore": 65,
+    "winner": "top",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-49"
   },
@@ -676,10 +676,10 @@
       "name": "UConn",
       "record": "29-5"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 57,
+    "bottomScore": 73,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-50"
   },
@@ -695,10 +695,10 @@
       "name": "Iowa",
       "record": "21-12"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 72,
+    "bottomScore": 73,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-51"
   },
@@ -771,10 +771,10 @@
       "name": "Utah St",
       "record": "28-6"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 78,
+    "bottomScore": 66,
+    "winner": "top",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-53"
   },
@@ -828,10 +828,10 @@
       "name": "Purdue",
       "record": "27-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 69,
+    "bottomScore": 79,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-54"
   },
@@ -866,10 +866,10 @@
       "name": "Alabama",
       "record": "23-9"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 65,
+    "bottomScore": 90,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-55"
   },
@@ -885,10 +885,10 @@
       "name": "Virginia",
       "record": "29-5"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 79,
+    "bottomScore": 72,
+    "winner": "top",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-56"
   },
@@ -904,10 +904,10 @@
       "name": "Iowa St",
       "record": "27-7"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 63,
+    "bottomScore": 82,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 2,
     "nextMatchup": "matchup-56"
   },
@@ -919,9 +919,9 @@
       "record": "32-2"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 5,
+      "name": "St John's",
+      "record": "28-6"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -938,9 +938,9 @@
       "record": "25-7"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "UConn",
+      "record": "29-5"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -952,9 +952,9 @@
   {
     "id": "matchup-51",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 9,
+      "name": "Iowa",
+      "record": "21-12"
     },
     "bottomTeam": {
       "seed": 4,
@@ -990,9 +990,9 @@
   {
     "id": "matchup-53",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Arizona",
+      "record": "32-2"
     },
     "bottomTeam": {
       "seed": 4,
@@ -1014,9 +1014,9 @@
       "record": "-"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Purdue",
+      "record": "27-8"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -1033,9 +1033,9 @@
       "record": "31-3"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 4,
+      "name": "Alabama",
+      "record": "23-9"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -1047,14 +1047,14 @@
   {
     "id": "matchup-56",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 6,
+      "name": "Tenn",
+      "record": "22-11"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Iowa St",
+      "record": "27-7"
     },
     "topScore": 0,
     "bottomScore": 0,
