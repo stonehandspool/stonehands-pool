@@ -961,10 +961,10 @@
       "name": "Nebraska",
       "record": "26-6"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 77,
+    "bottomScore": 71,
+    "winner": "top",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-58"
   },
@@ -980,10 +980,10 @@
       "name": "Houston",
       "record": "28-6"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 65,
+    "bottomScore": 55,
+    "winner": "top",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-58"
   },
@@ -999,10 +999,10 @@
       "name": "Arkansas",
       "record": "26-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 109,
+    "bottomScore": 88,
+    "winner": "top",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-59"
   },
@@ -1018,10 +1018,10 @@
       "name": "Purdue",
       "record": "27-8"
     },
-    "topScore": 0,
-    "bottomScore": 0,
-    "winner": null,
-    "evaluated": false,
+    "topScore": 77,
+    "bottomScore": 79,
+    "winner": "bottom",
+    "evaluated": true,
     "round": 3,
     "nextMatchup": "matchup-59"
   },
@@ -1085,14 +1085,14 @@
   {
     "id": "matchup-58",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 9,
+      "name": "Iowa",
+      "record": "21-12"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 3,
+      "name": "Illinois",
+      "record": "24-8"
     },
     "topScore": 0,
     "bottomScore": 0,
@@ -1104,14 +1104,14 @@
   {
     "id": "matchup-59",
     "topTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 1,
+      "name": "Arizona",
+      "record": "32-2"
     },
     "bottomTeam": {
-      "seed": null,
-      "name": null,
-      "record": null
+      "seed": 2,
+      "name": "Purdue",
+      "record": "27-8"
     },
     "topScore": 0,
     "bottomScore": 0,
