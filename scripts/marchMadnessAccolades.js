@@ -166,7 +166,7 @@ const bestBracketTitleDataToExport = {
   id: 'bestBracketTitles',
   title: 'Best Bracket Titles',
   description:
-    "These were my favorite bracket titles that people submitted in no particular order. I don't know what they all mean, but they all gave me a good laugh. I just want it known that one of them is a lie.",
+    'These were my favorite bracket titles that people submitted in no particular order. Some made me laugh, some confused me, some were even thought provoking! Thanks to everyone for an entertaining list of bracket titles!',
   data: [],
 };
 
@@ -174,18 +174,23 @@ const bestBracketTitleDataToExport = {
 console.log();
 console.log('The best bracket titles');
 const winnerIds = [
-  '2a1aafff-343a-452a-a8ad-f6c114c51f1c',
-  '1c2c4e7e-c5b8-44a1-bf3a-dbf7449ddb14',
-  'c23344ec-74a5-4059-b16b-b165e1a11138',
-  '95691265-52cc-4c61-8aa4-7dc4586dce3e',
-  '00481fee-90e5-416d-a51d-6988122500de',
-  'a55189bd-505f-4b33-95fb-897d259fe149',
-  '5d6278ea-a207-4350-a2a5-ebba13175a97',
-  '891b628d-34ef-4959-a722-c4b467c24cae',
-  '02bee9d4-ea65-4930-801b-91eb457b39d1',
-  '89f5f4c1-16a0-4469-9a5d-e3b0dfe89d88',
-  '9afffce2-a8dd-424d-b522-e60b68fc956f',
-  'e132281b-062d-405b-8fe2-293150c6e326',
+  '9b47458c-0ecb-46ac-a3be-bc189012a795',
+  '32df21b5-d57b-4477-9f94-1ec20edbd2e5',
+  '25803613-0b97-459b-9ae1-fddc0ccde3c7',
+  'afa00dd0-0bb9-4b71-8271-c123c51898b5',
+  'e267d0ae-c957-4619-83db-17f31670efe3',
+  'd9985b83-08de-4e96-bcbc-e348666a554c',
+  '118b0007-ed0b-445e-b2fa-70d6d97ee7f3',
+  'ec6ff5e0-8731-42db-84b8-30d639c7f857',
+  '2d8ab3f1-5791-4386-8132-475ed9aae7d1',
+  'c44d8e67-4f49-4fc7-a044-936023ce88a5',
+  '2c470e65-6165-4807-bfea-3071c51716a3',
+  'cd139e47-03f7-4075-9bb7-c9c65048373c',
+  'dc6fb755-76be-483a-bc8e-cc17e138367f',
+  '3641e603-22f7-4904-b176-3538cb0a66cd',
+  'd42850f1-bdd7-484b-88cc-8d58df10d63a',
+  '80316b62-ecba-4b00-a2ea-c90cf05e4130',
+  '8a23b6a0-7357-442d-a225-5d8b09840748',
 ];
 winnerIds.forEach((winnerId, index) => {
   const person = playerData.find(p => p.userId === winnerId);

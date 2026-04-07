@@ -84,6 +84,42 @@ function HallOfFame() {
       <section className="section">
         <div className="block has-text-centered">
           <h1 className="title is-3 stonehands-hero">
+            <u>2026 Records</u>
+          </h1>
+        </div>
+        <div className="block has-text-centered">
+          <h1 className="title stonehands-hero">March Madness</h1>
+        </div>
+        <div className="columns is-centered">
+          <div className="column is-one-quarter">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Most Points</h1>
+              <ol>
+                <li>Glenn Rudberg - 305 Points</li>
+                <li>Jayne Rudberg - 302 Points</li>
+                <li>Richard Grenier - 299 Points</li>
+                <li>Brandon Horn - 298 Points</li>
+                <li>David Martin - 289 Points</li>
+              </ol>
+            </div>
+          </div>
+          <div className="column is-one-quarter">
+            <div className="box is-flex is-flex-direction-column is-flex-wrap-nowrap is-align-items-center">
+              <h1 className="title has-text-centered">Most Wins</h1>
+              <ol>
+                <li>Glenn Rudberg - 48 Wins</li>
+                <li>Patrick Cook - 48 Wins</li>
+                <li>David Martin - 47 Wins</li>
+                <li>David Galatt - 47 Wins</li>
+                <li>Brandon Horn - 46 Wins</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="block has-text-centered">
+          <h1 className="title is-3 stonehands-hero">
             <u>2025 Records</u>
           </h1>
         </div>

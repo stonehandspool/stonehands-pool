@@ -258,7 +258,7 @@ function NavBar() {
               Teams Remaining
             </Link>
             <Link className="navbar-item" to="/march-madness/awards" onClick={onBurgerClick}>
-              2025 Awards
+              2026 Awards
             </Link>
             {!SIGN_UPS_DISABLED && (
               <Link className="navbar-item" to="/sign-up" onClick={onBurgerClick}>
