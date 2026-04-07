@@ -230,4 +230,4 @@ export const MARCH_MADNESS_STATE: MarchMadnessStates = 'ACTIVE';
 export const MARCH_MADNESS_CUTOFF = new Date('2026-03-19T16:15:00.000Z');
 export const ROUND_VALUES = [1, 2, 4, 8, 16, 32];
 export const MARCH_MADNESS_CURRENT_ROUND = 6;
-export const MARCH_MADNESS_FINAL_TOTAL = 135;
+export const MARCH_MADNESS_FINAL_TOTAL = 132;
