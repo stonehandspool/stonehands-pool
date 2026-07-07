@@ -172,7 +172,9 @@ function SeasonStandingsTable() {
                         return (
                           <td
                             key={`${row.position}-${ind}`}
-                            ref={(el: HTMLTableCellElement) => positionRefs.current.push(el)}
+                            ref={(el: HTMLTableCellElement) => {
+                              positionRefs.current.push(el);
+                            }}
                             onClick={() => {
                               updateSequence(index + 1);
                             }}
