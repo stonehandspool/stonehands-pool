@@ -1,29 +1,29 @@
 // This should be set to false prior to the release of the first weeks picksheet, and then true until the end of the regular season
 // This is used to check for each of the standings and stats pages to see if it should check for data, if false it will not display anything
-export const SEASON_READY: boolean = true;
+export const SEASON_READY: boolean = false;
 // This is to allow for the standings table to show who has submitted their picksheet prior to the first game of the season
 // It should be set to true after the first game of the season
-export const FIRST_GAME_PLAYED: boolean = true;
+export const FIRST_GAME_PLAYED: boolean = false;
 // This should be toggled once sign ups are disabled
 export const SIGN_UPS_DISABLED: boolean = false;
 // This should be updated on Wednesday of every week when the next weeks picksheet becomes available
 // This is used to keep track of the current NFL regular season week and is used to get data from the json files
-export const CURRENT_WEEK: number = 18;
+export const CURRENT_WEEK: number = 1;
 // This should match whatever the current NFL season that is active and should only update once a year
 // This is used for any of the stats/standings pages for the text up top
 export const CURRENT_YEAR: string = '2026';
 // This is a date in a valid `Date` format which should be taken from the season schedule each week
 // This is used to check if a user can still submit their picksheet, it should generally be the first Sunday game each week
 // Unless there is a few Saturday games later in the season
-export const CURRENT_WEEK_CUTOFF_TIME = new Date('2026-01-04T18:00:00.000Z');
+export const CURRENT_WEEK_CUTOFF_TIME = new Date('2026-09-13T18:00:00.000Z');
 // This is whatever the last scheduled game is in a given week
 // This is used to tell the users what game they should be predicting the total final score of for a week
-export const CURRENT_WEEK_FINAL_GAME: string = 'BAL @ PIT';
-export const PREV_WEEK_FINAL_GAME: string = 'LA @ ATL';
+export const CURRENT_WEEK_FINAL_GAME: string = 'DEN @ KC';
+export const PREV_WEEK_FINAL_GAME: string = 'N/A';
 // This should be updated every Tuesday morning with the total score of the game above
 // This is used to determine the tiebreaker for the weekly standings
-export const MONDAY_NIGHT_TOTAL: number = 50;
-export const PREV_MONDAY_NIGHT_TOTAL: number = 51;
+export const MONDAY_NIGHT_TOTAL: number = 0;
+export const PREV_MONDAY_NIGHT_TOTAL: number = 0;
 // This is to mark the different states that a week can be in
 // START: This means that this is a new week and no games have been played yet
 //          - Wednesday & Thursday
@@ -44,7 +44,7 @@ export const PREV_MONDAY_NIGHT_TOTAL: number = 51;
 //              - The weekly standings should signify the current weeks winner
 //          - The picksheet should still be unavailable
 type WeekStatus = 'START' | 'IN_PROGRESS' | 'COMPLETE';
-export const CURRENT_WEEK_STATUS: WeekStatus = 'COMPLETE';
+export const CURRENT_WEEK_STATUS: WeekStatus = 'START';
 // These are the team codes used throughout the codebase and should only be changed if a new team joins the league or a team relocates
 export const TEAM_CODES = [
   'ARI',
@@ -226,7 +226,7 @@ export type {
 
 // March Madness specific constants
 type MarchMadnessStates = 'INACTIVE' | 'PRE_SELECTION_SUNDAY' | 'READY_FOR_PICKS' | 'ACTIVE';
-export const MARCH_MADNESS_STATE: MarchMadnessStates = 'ACTIVE';
+export const MARCH_MADNESS_STATE: MarchMadnessStates = 'INACTIVE';
 export const MARCH_MADNESS_CUTOFF = new Date('2026-03-19T16:15:00.000Z');
 export const ROUND_VALUES = [1, 2, 4, 8, 16, 32];
 export const MARCH_MADNESS_CURRENT_ROUND = 6;

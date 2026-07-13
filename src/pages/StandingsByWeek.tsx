@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CURRENT_WEEK, CURRENT_YEAR, MatchupInfo } from '../constants';
+import { CURRENT_WEEK, CURRENT_YEAR, MatchupInfo, SEASON_READY } from '../constants';
 import ConfidenceByWeekTable from '../components/standings/ConfidenceByWeekTable';
 import seasonData from '../../data/2025/football/season.json';
 
@@ -33,6 +33,18 @@ const incorrectMessages = [
 ];
 
 function StandingsByWeek() {
+  if (!SEASON_READY) {
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            Sorry, the season hasn't started yet, please wait until the season has been loaded
+          </h3>
+        </div>
+      </section>
+    );
+  }
+
   const [activeChoice, setActiveChoice] = useState<number>(1);
   const [incorrectWeekClicks, setIncorrectWeekClicks] = useState<number>(-1);
 
