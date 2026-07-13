@@ -7,9 +7,22 @@ import {
   MONDAY_NIGHT_TOTAL,
   PREV_MONDAY_NIGHT_TOTAL,
   PREV_WEEK_FINAL_GAME,
+  SEASON_READY,
 } from '../constants';
 
 function WeeklyStandings() {
+  if (!SEASON_READY) {
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            Sorry, the season hasn't started yet, please wait until the season has been loaded
+          </h3>
+        </div>
+      </section>
+    );
+  }
+
   // If the current week is currently marked as START we don't want to show anything yet, so show the prior weeks data
   const weekToShow = CURRENT_WEEK_STATUS === 'START' && CURRENT_WEEK > 1 ? CURRENT_WEEK - 1 : CURRENT_WEEK;
   const gameToUse =

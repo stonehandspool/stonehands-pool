@@ -1,0 +1,3084 @@
+[
+  {
+    "weekId": "week_1",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "NE",
+        "homeTeam": "SEA",
+        "time": "2026-09-10T00:20:00.000Z",
+        "gameInfo": "Wed, Sep 9, 8:20 PM ET - Seattle, WA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "SF",
+        "homeTeam": "LA",
+        "time": "2026-09-11T00:35:00.000Z",
+        "gameInfo": "Thu, Sep 10, 8:35 PM ET - Melbourne, AUS",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "CHI",
+        "homeTeam": "CAR",
+        "time": "2026-09-13T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 13, 1:00 PM ET - Charlotte, NC",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "BAL",
+        "homeTeam": "IND",
+        "time": "2026-09-13T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 13, 1:00 PM ET - Indianapolis, IN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "ATL",
+        "homeTeam": "PIT",
+        "time": "2026-09-13T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 13, 1:00 PM ET - Pittsburgh, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "CLE",
+        "homeTeam": "JAC",
+        "time": "2026-09-13T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 13, 1:00 PM ET - Jacksonville, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "TB",
+        "homeTeam": "CIN",
+        "time": "2026-09-13T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 13, 1:00 PM ET - Cincinnati, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "NYJ",
+        "homeTeam": "TEN",
+        "time": "2026-09-13T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 13, 1:00 PM ET - Nashville, TN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "NO",
+        "homeTeam": "DET",
+        "time": "2026-09-13T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 13, 1:00 PM ET - Detroit, MI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "BUF",
+        "homeTeam": "HOU",
+        "time": "2026-09-13T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 13, 1:00 PM ET - Houston, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "ARI",
+        "homeTeam": "LAC",
+        "time": "2026-09-13T20:25:00.000Z",
+        "gameInfo": "Sun, Sep 13, 4:25 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "GB",
+        "homeTeam": "MIN",
+        "time": "2026-09-13T20:25:00.000Z",
+        "gameInfo": "Sun, Sep 13, 4:25 PM ET - Minneapolis, MN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "MIA",
+        "homeTeam": "LV",
+        "time": "2026-09-13T20:25:00.000Z",
+        "gameInfo": "Sun, Sep 13, 4:25 PM ET - Las Vegas, NV",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "WAS",
+        "homeTeam": "PHI",
+        "time": "2026-09-13T20:25:00.000Z",
+        "gameInfo": "Sun, Sep 13, 4:25 PM ET - Philadelphia, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "DAL",
+        "homeTeam": "NYG",
+        "time": "2026-09-14T00:20:00.000Z",
+        "gameInfo": "Sun, Sep 13, 8:20 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "DEN",
+        "homeTeam": "KC",
+        "time": "2026-09-15T00:15:00.000Z",
+        "gameInfo": "Mon, Sep 14, 8:15 PM ET - Kansas City, MO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_2",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "DET",
+        "homeTeam": "BUF",
+        "time": "2026-09-18T00:15:00.000Z",
+        "gameInfo": "Thu, Sep 17, 8:15 PM ET - Orchard Park, NY",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "PHI",
+        "homeTeam": "TEN",
+        "time": "2026-09-20T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 20, 1:00 PM ET - Nashville, TN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "PIT",
+        "homeTeam": "NE",
+        "time": "2026-09-20T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 20, 1:00 PM ET - Foxborough, MA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "MIN",
+        "homeTeam": "CHI",
+        "time": "2026-09-20T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 20, 1:00 PM ET - Chicago, IL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "CAR",
+        "homeTeam": "ATL",
+        "time": "2026-09-20T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 20, 1:00 PM ET - Atlanta, GA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "GB",
+        "homeTeam": "NYJ",
+        "time": "2026-09-20T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 20, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "NO",
+        "homeTeam": "BAL",
+        "time": "2026-09-20T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 20, 1:00 PM ET - Baltimore, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "CIN",
+        "homeTeam": "HOU",
+        "time": "2026-09-20T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 20, 1:00 PM ET - Houston, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "CLE",
+        "homeTeam": "TB",
+        "time": "2026-09-20T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 20, 1:00 PM ET - Tampa, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "JAC",
+        "homeTeam": "DEN",
+        "time": "2026-09-20T20:05:00.000Z",
+        "gameInfo": "Sun, Sep 20, 4:05 PM ET - Denver, CO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "LV",
+        "homeTeam": "LAC",
+        "time": "2026-09-20T20:05:00.000Z",
+        "gameInfo": "Sun, Sep 20, 4:05 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "SEA",
+        "homeTeam": "ARI",
+        "time": "2026-09-20T20:25:00.000Z",
+        "gameInfo": "Sun, Sep 20, 4:25 PM ET - Glendale, AZ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "MIA",
+        "homeTeam": "SF",
+        "time": "2026-09-20T20:25:00.000Z",
+        "gameInfo": "Sun, Sep 20, 4:25 PM ET - Santa Clara, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "WAS",
+        "homeTeam": "DAL",
+        "time": "2026-09-20T20:25:00.000Z",
+        "gameInfo": "Sun, Sep 20, 4:25 PM ET - Arlington, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "IND",
+        "homeTeam": "KC",
+        "time": "2026-09-21T00:20:00.000Z",
+        "gameInfo": "Sun, Sep 20, 8:20 PM ET - Kansas City, MO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "NYG",
+        "homeTeam": "LA",
+        "time": "2026-09-22T00:15:00.000Z",
+        "gameInfo": "Mon, Sep 21, 8:15 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_3",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "ATL",
+        "homeTeam": "GB",
+        "time": "2026-09-25T00:15:00.000Z",
+        "gameInfo": "Thu, Sep 24, 8:15 PM ET - Green Bay, WI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "KC",
+        "homeTeam": "MIA",
+        "time": "2026-09-27T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 27, 1:00 PM ET - Miami Gardens, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "CAR",
+        "homeTeam": "CLE",
+        "time": "2026-09-27T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 27, 1:00 PM ET - Cleveland, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "TEN",
+        "homeTeam": "NYG",
+        "time": "2026-09-27T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 27, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "NE",
+        "homeTeam": "JAC",
+        "time": "2026-09-27T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 27, 1:00 PM ET - Jacksonville, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "LAC",
+        "homeTeam": "BUF",
+        "time": "2026-09-27T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 27, 1:00 PM ET - Orchard Park, NY",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "NYJ",
+        "homeTeam": "DET",
+        "time": "2026-09-27T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 27, 1:00 PM ET - Detroit, MI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "HOU",
+        "homeTeam": "IND",
+        "time": "2026-09-27T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 27, 1:00 PM ET - Indianapolis, IN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "SEA",
+        "homeTeam": "WAS",
+        "time": "2026-09-27T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 27, 1:00 PM ET - Landover, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "CIN",
+        "homeTeam": "PIT",
+        "time": "2026-09-27T17:00:00.000Z",
+        "gameInfo": "Sun, Sep 27, 1:00 PM ET - Pittsburgh, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "ARI",
+        "homeTeam": "SF",
+        "time": "2026-09-27T20:05:00.000Z",
+        "gameInfo": "Sun, Sep 27, 4:05 PM ET - Santa Clara, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "MIN",
+        "homeTeam": "TB",
+        "time": "2026-09-27T20:05:00.000Z",
+        "gameInfo": "Sun, Sep 27, 4:05 PM ET - Tampa, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "LV",
+        "homeTeam": "NO",
+        "time": "2026-09-27T20:25:00.000Z",
+        "gameInfo": "Sun, Sep 27, 4:25 PM ET - New Orleans, LA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "BAL",
+        "homeTeam": "DAL",
+        "time": "2026-09-27T20:25:00.000Z",
+        "gameInfo": "Sun, Sep 27, 4:25 PM ET - Rio de Janeiro, BRA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "LA",
+        "homeTeam": "DEN",
+        "time": "2026-09-28T00:20:00.000Z",
+        "gameInfo": "Sun, Sep 27, 8:20 PM ET - Denver, CO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "PHI",
+        "homeTeam": "CHI",
+        "time": "2026-09-29T00:15:00.000Z",
+        "gameInfo": "Mon, Sep 28, 8:15 PM ET - Chicago, IL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_4",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "PIT",
+        "homeTeam": "CLE",
+        "time": "2026-10-02T00:15:00.000Z",
+        "gameInfo": "Thu, Oct 1, 8:15 PM ET - Cleveland, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "IND",
+        "homeTeam": "WAS",
+        "time": "2026-10-04T13:30:00.000Z",
+        "gameInfo": "Sun, Oct 4, 9:30 AM ET - London, GBR",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "ARI",
+        "homeTeam": "NYG",
+        "time": "2026-10-04T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 4, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "NE",
+        "homeTeam": "BUF",
+        "time": "2026-10-04T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 4, 1:00 PM ET - Orchard Park, NY",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "NYJ",
+        "homeTeam": "CHI",
+        "time": "2026-10-04T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 4, 1:00 PM ET - Chicago, IL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "DAL",
+        "homeTeam": "HOU",
+        "time": "2026-10-04T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 4, 1:00 PM ET - Houston, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "LA",
+        "homeTeam": "PHI",
+        "time": "2026-10-04T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 4, 1:00 PM ET - Philadelphia, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "GB",
+        "homeTeam": "TB",
+        "time": "2026-10-04T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 4, 1:00 PM ET - Tampa, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "TEN",
+        "homeTeam": "BAL",
+        "time": "2026-10-04T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 4, 1:00 PM ET - Baltimore, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "JAC",
+        "homeTeam": "CIN",
+        "time": "2026-10-04T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 4, 1:00 PM ET - Cincinnati, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "MIA",
+        "homeTeam": "MIN",
+        "time": "2026-10-04T20:05:00.000Z",
+        "gameInfo": "Sun, Oct 4, 4:05 PM ET - Minneapolis, MN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "KC",
+        "homeTeam": "LV",
+        "time": "2026-10-04T20:25:00.000Z",
+        "gameInfo": "Sun, Oct 4, 4:25 PM ET - Las Vegas, NV",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "LAC",
+        "homeTeam": "SEA",
+        "time": "2026-10-04T20:25:00.000Z",
+        "gameInfo": "Sun, Oct 4, 4:25 PM ET - Seattle, WA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "DEN",
+        "homeTeam": "SF",
+        "time": "2026-10-04T20:25:00.000Z",
+        "gameInfo": "Sun, Oct 4, 4:25 PM ET - Santa Clara, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "DET",
+        "homeTeam": "CAR",
+        "time": "2026-10-05T00:20:00.000Z",
+        "gameInfo": "Sun, Oct 4, 8:20 PM ET - Charlotte, NC",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "ATL",
+        "homeTeam": "NO",
+        "time": "2026-10-06T00:15:00.000Z",
+        "gameInfo": "Mon, Oct 5, 8:15 PM ET - New Orleans, LA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_5",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "TB",
+        "homeTeam": "DAL",
+        "time": "2026-10-09T00:15:00.000Z",
+        "gameInfo": "Thu, Oct 8, 8:15 PM ET - Arlington, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "PHI",
+        "homeTeam": "JAC",
+        "time": "2026-10-11T13:30:00.000Z",
+        "gameInfo": "Sun, Oct 11, 9:30 AM ET - London, GBR",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "CLE",
+        "homeTeam": "NYJ",
+        "time": "2026-10-11T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 11, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "CIN",
+        "homeTeam": "MIA",
+        "time": "2026-10-11T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 11, 1:00 PM ET - Miami Gardens, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "LV",
+        "homeTeam": "NE",
+        "time": "2026-10-11T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 11, 1:00 PM ET - Foxborough, MA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "MIN",
+        "homeTeam": "NO",
+        "time": "2026-10-11T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 11, 1:00 PM ET - New Orleans, LA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "HOU",
+        "homeTeam": "TEN",
+        "time": "2026-10-11T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 11, 1:00 PM ET - Nashville, TN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "NYG",
+        "homeTeam": "WAS",
+        "time": "2026-10-11T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 11, 1:00 PM ET - Landover, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "IND",
+        "homeTeam": "PIT",
+        "time": "2026-10-11T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 11, 1:00 PM ET - Pittsburgh, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "DEN",
+        "homeTeam": "LAC",
+        "time": "2026-10-11T20:05:00.000Z",
+        "gameInfo": "Sun, Oct 11, 4:05 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "CHI",
+        "homeTeam": "GB",
+        "time": "2026-10-11T20:25:00.000Z",
+        "gameInfo": "Sun, Oct 11, 4:25 PM ET - Green Bay, WI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "DET",
+        "homeTeam": "ARI",
+        "time": "2026-10-11T20:25:00.000Z",
+        "gameInfo": "Sun, Oct 11, 4:25 PM ET - Glendale, AZ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "SF",
+        "homeTeam": "SEA",
+        "time": "2026-10-11T20:25:00.000Z",
+        "gameInfo": "Sun, Oct 11, 4:25 PM ET - Seattle, WA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "BAL",
+        "homeTeam": "ATL",
+        "time": "2026-10-12T00:20:00.000Z",
+        "gameInfo": "Sun, Oct 11, 8:20 PM ET - Atlanta, GA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "BUF",
+        "homeTeam": "LA",
+        "time": "2026-10-13T00:15:00.000Z",
+        "gameInfo": "Mon, Oct 12, 8:15 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_6",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "SEA",
+        "homeTeam": "DEN",
+        "time": "2026-10-16T00:15:00.000Z",
+        "gameInfo": "Thu, Oct 15, 8:15 PM ET - Denver, CO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "HOU",
+        "homeTeam": "JAC",
+        "time": "2026-10-18T13:30:00.000Z",
+        "gameInfo": "Sun, Oct 18, 9:30 AM ET - London, GBR",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "TEN",
+        "homeTeam": "IND",
+        "time": "2026-10-18T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 18, 1:00 PM ET - Indianapolis, IN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "CAR",
+        "homeTeam": "PHI",
+        "time": "2026-10-18T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 18, 1:00 PM ET - Philadelphia, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "PIT",
+        "homeTeam": "TB",
+        "time": "2026-10-18T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 18, 1:00 PM ET - Tampa, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "BAL",
+        "homeTeam": "CLE",
+        "time": "2026-10-18T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 18, 1:00 PM ET - Cleveland, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "NO",
+        "homeTeam": "NYG",
+        "time": "2026-10-18T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 18, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "CHI",
+        "homeTeam": "ATL",
+        "time": "2026-10-18T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 18, 1:00 PM ET - Atlanta, GA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "NYJ",
+        "homeTeam": "NE",
+        "time": "2026-10-18T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 18, 1:00 PM ET - Foxborough, MA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "ARI",
+        "homeTeam": "LA",
+        "time": "2026-10-18T20:05:00.000Z",
+        "gameInfo": "Sun, Oct 18, 4:05 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "LAC",
+        "homeTeam": "KC",
+        "time": "2026-10-18T20:25:00.000Z",
+        "gameInfo": "Sun, Oct 18, 4:25 PM ET - Kansas City, MO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "BUF",
+        "homeTeam": "LV",
+        "time": "2026-10-18T20:25:00.000Z",
+        "gameInfo": "Sun, Oct 18, 4:25 PM ET - Las Vegas, NV",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "DAL",
+        "homeTeam": "GB",
+        "time": "2026-10-19T00:20:00.000Z",
+        "gameInfo": "Sun, Oct 18, 8:20 PM ET - Green Bay, WI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "WAS",
+        "homeTeam": "SF",
+        "time": "2026-10-20T00:15:00.000Z",
+        "gameInfo": "Mon, Oct 19, 8:15 PM ET - Santa Clara, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_7",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "NE",
+        "homeTeam": "CHI",
+        "time": "2026-10-23T00:15:00.000Z",
+        "gameInfo": "Thu, Oct 22, 8:15 PM ET - Chicago, IL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "PIT",
+        "homeTeam": "NO",
+        "time": "2026-10-25T13:30:00.000Z",
+        "gameInfo": "Sun, Oct 25, 9:30 AM ET - Saint-Denis, FRA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "IND",
+        "homeTeam": "MIN",
+        "time": "2026-10-25T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 25, 1:00 PM ET - Minneapolis, MN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "MIA",
+        "homeTeam": "NYJ",
+        "time": "2026-10-25T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 25, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "CIN",
+        "homeTeam": "BAL",
+        "time": "2026-10-25T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 25, 1:00 PM ET - Baltimore, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "CLE",
+        "homeTeam": "TEN",
+        "time": "2026-10-25T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 25, 1:00 PM ET - Nashville, TN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "TB",
+        "homeTeam": "CAR",
+        "time": "2026-10-25T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 25, 1:00 PM ET - Charlotte, NC",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "SF",
+        "homeTeam": "ATL",
+        "time": "2026-10-25T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 25, 1:00 PM ET - Atlanta, GA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "NYG",
+        "homeTeam": "HOU",
+        "time": "2026-10-25T17:00:00.000Z",
+        "gameInfo": "Sun, Oct 25, 1:00 PM ET - Houston, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "DEN",
+        "homeTeam": "ARI",
+        "time": "2026-10-25T20:05:00.000Z",
+        "gameInfo": "Sun, Oct 25, 4:05 PM ET - Glendale, AZ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "LA",
+        "homeTeam": "LV",
+        "time": "2026-10-25T20:25:00.000Z",
+        "gameInfo": "Sun, Oct 25, 4:25 PM ET - Las Vegas, NV",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "GB",
+        "homeTeam": "DET",
+        "time": "2026-10-25T20:25:00.000Z",
+        "gameInfo": "Sun, Oct 25, 4:25 PM ET - Detroit, MI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "KC",
+        "homeTeam": "SEA",
+        "time": "2026-10-26T00:20:00.000Z",
+        "gameInfo": "Sun, Oct 25, 8:20 PM ET - Seattle, WA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "DAL",
+        "homeTeam": "PHI",
+        "time": "2026-10-27T00:15:00.000Z",
+        "gameInfo": "Mon, Oct 26, 8:15 PM ET - Philadelphia, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_8",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "CAR",
+        "homeTeam": "GB",
+        "time": "2026-10-30T00:15:00.000Z",
+        "gameInfo": "Thu, Oct 29, 8:15 PM ET - Green Bay, WI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "IND",
+        "homeTeam": "JAC",
+        "time": "2026-11-01T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 1, 1:00 PM ET - Jacksonville, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "TEN",
+        "homeTeam": "CIN",
+        "time": "2026-11-01T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 1, 1:00 PM ET - Cincinnati, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "CLE",
+        "homeTeam": "PIT",
+        "time": "2026-11-01T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 1, 1:00 PM ET - Pittsburgh, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "MIN",
+        "homeTeam": "DET",
+        "time": "2026-11-01T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 1, 1:00 PM ET - Detroit, MI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "ATL",
+        "homeTeam": "TB",
+        "time": "2026-11-01T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 1, 1:00 PM ET - Tampa, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "ARI",
+        "homeTeam": "DAL",
+        "time": "2026-11-01T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 1, 1:00 PM ET - Arlington, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "LV",
+        "homeTeam": "NYJ",
+        "time": "2026-11-01T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 1, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "BAL",
+        "homeTeam": "BUF",
+        "time": "2026-11-01T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 1, 1:00 PM ET - Orchard Park, NY",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "LAC",
+        "homeTeam": "LA",
+        "time": "2026-11-01T21:05:00.000Z",
+        "gameInfo": "Sun, Nov 1, 4:05 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "NE",
+        "homeTeam": "MIA",
+        "time": "2026-11-01T21:25:00.000Z",
+        "gameInfo": "Sun, Nov 1, 4:25 PM ET - Miami Gardens, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "KC",
+        "homeTeam": "DEN",
+        "time": "2026-11-01T21:25:00.000Z",
+        "gameInfo": "Sun, Nov 1, 4:25 PM ET - Denver, CO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "PHI",
+        "homeTeam": "WAS",
+        "time": "2026-11-02T01:20:00.000Z",
+        "gameInfo": "Sun, Nov 1, 8:20 PM ET - Landover, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "CHI",
+        "homeTeam": "SEA",
+        "time": "2026-11-03T01:15:00.000Z",
+        "gameInfo": "Mon, Nov 2, 8:15 PM ET - Seattle, WA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_9",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "JAC",
+        "homeTeam": "BAL",
+        "time": "2026-11-06T01:15:00.000Z",
+        "gameInfo": "Thu, Nov 5, 8:15 PM ET - Baltimore, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "CIN",
+        "homeTeam": "ATL",
+        "time": "2026-11-08T14:30:00.000Z",
+        "gameInfo": "Sun, Nov 8, 9:30 AM ET - Madrid, ESP",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "DAL",
+        "homeTeam": "IND",
+        "time": "2026-11-08T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 8, 1:00 PM ET - Indianapolis, IN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "LA",
+        "homeTeam": "WAS",
+        "time": "2026-11-08T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 8, 1:00 PM ET - Landover, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "CLE",
+        "homeTeam": "NO",
+        "time": "2026-11-08T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 8, 1:00 PM ET - New Orleans, LA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "NYJ",
+        "homeTeam": "KC",
+        "time": "2026-11-08T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 8, 1:00 PM ET - Kansas City, MO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "DET",
+        "homeTeam": "MIA",
+        "time": "2026-11-08T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 8, 1:00 PM ET - Miami Gardens, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "DEN",
+        "homeTeam": "CAR",
+        "time": "2026-11-08T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 8, 1:00 PM ET - Charlotte, NC",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "NYG",
+        "homeTeam": "PHI",
+        "time": "2026-11-08T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 8, 1:00 PM ET - Philadelphia, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "LV",
+        "homeTeam": "SF",
+        "time": "2026-11-08T21:05:00.000Z",
+        "gameInfo": "Sun, Nov 8, 4:05 PM ET - Santa Clara, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "HOU",
+        "homeTeam": "LAC",
+        "time": "2026-11-08T21:05:00.000Z",
+        "gameInfo": "Sun, Nov 8, 4:05 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "GB",
+        "homeTeam": "NE",
+        "time": "2026-11-08T21:25:00.000Z",
+        "gameInfo": "Sun, Nov 8, 4:25 PM ET - Foxborough, MA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "ARI",
+        "homeTeam": "SEA",
+        "time": "2026-11-08T21:25:00.000Z",
+        "gameInfo": "Sun, Nov 8, 4:25 PM ET - Seattle, WA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "TB",
+        "homeTeam": "CHI",
+        "time": "2026-11-09T01:20:00.000Z",
+        "gameInfo": "Sun, Nov 8, 8:20 PM ET - Chicago, IL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "BUF",
+        "homeTeam": "MIN",
+        "time": "2026-11-10T01:15:00.000Z",
+        "gameInfo": "Mon, Nov 9, 8:15 PM ET - Minneapolis, MN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_10",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "WAS",
+        "homeTeam": "NYG",
+        "time": "2026-11-13T01:15:00.000Z",
+        "gameInfo": "Thu, Nov 12, 8:15 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "NE",
+        "homeTeam": "DET",
+        "time": "2026-11-15T14:30:00.000Z",
+        "gameInfo": "Sun, Nov 15, 9:30 AM ET - Munich, DEU",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "KC",
+        "homeTeam": "ATL",
+        "time": "2026-11-15T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 15, 1:00 PM ET - Atlanta, GA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "BUF",
+        "homeTeam": "NYJ",
+        "time": "2026-11-15T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 15, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "MIA",
+        "homeTeam": "IND",
+        "time": "2026-11-15T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 15, 1:00 PM ET - Indianapolis, IN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "MIN",
+        "homeTeam": "GB",
+        "time": "2026-11-15T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 15, 1:00 PM ET - Green Bay, WI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "CAR",
+        "homeTeam": "NO",
+        "time": "2026-11-15T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 15, 1:00 PM ET - New Orleans, LA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "JAC",
+        "homeTeam": "TEN",
+        "time": "2026-11-15T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 15, 1:00 PM ET - Nashville, TN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "HOU",
+        "homeTeam": "CLE",
+        "time": "2026-11-15T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 15, 1:00 PM ET - Cleveland, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "SEA",
+        "homeTeam": "LV",
+        "time": "2026-11-15T21:05:00.000Z",
+        "gameInfo": "Sun, Nov 15, 4:05 PM ET - Las Vegas, NV",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "LA",
+        "homeTeam": "ARI",
+        "time": "2026-11-15T21:05:00.000Z",
+        "gameInfo": "Sun, Nov 15, 4:05 PM ET - Glendale, AZ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "SF",
+        "homeTeam": "DAL",
+        "time": "2026-11-15T21:25:00.000Z",
+        "gameInfo": "Sun, Nov 15, 4:25 PM ET - Arlington, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "PIT",
+        "homeTeam": "CIN",
+        "time": "2026-11-16T01:20:00.000Z",
+        "gameInfo": "Sun, Nov 15, 8:20 PM ET - Cincinnati, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "LAC",
+        "homeTeam": "BAL",
+        "time": "2026-11-17T01:15:00.000Z",
+        "gameInfo": "Mon, Nov 16, 8:15 PM ET - Baltimore, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_11",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "IND",
+        "homeTeam": "HOU",
+        "time": "2026-11-20T01:15:00.000Z",
+        "gameInfo": "Thu, Nov 19, 8:15 PM ET - Houston, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "ARI",
+        "homeTeam": "KC",
+        "time": "2026-11-22T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 22, 1:00 PM ET - Kansas City, MO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "NO",
+        "homeTeam": "CHI",
+        "time": "2026-11-22T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 22, 1:00 PM ET - Chicago, IL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "TB",
+        "homeTeam": "DET",
+        "time": "2026-11-22T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 22, 1:00 PM ET - Detroit, MI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "TEN",
+        "homeTeam": "DAL",
+        "time": "2026-11-22T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 22, 1:00 PM ET - Arlington, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "BAL",
+        "homeTeam": "CAR",
+        "time": "2026-11-22T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 22, 1:00 PM ET - Charlotte, NC",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "JAC",
+        "homeTeam": "NYG",
+        "time": "2026-11-22T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 22, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "MIA",
+        "homeTeam": "BUF",
+        "time": "2026-11-22T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 22, 1:00 PM ET - Orchard Park, NY",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "NYJ",
+        "homeTeam": "LAC",
+        "time": "2026-11-22T21:05:00.000Z",
+        "gameInfo": "Sun, Nov 22, 4:05 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "LV",
+        "homeTeam": "DEN",
+        "time": "2026-11-22T21:25:00.000Z",
+        "gameInfo": "Sun, Nov 22, 4:25 PM ET - Denver, CO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "PIT",
+        "homeTeam": "PHI",
+        "time": "2026-11-22T21:25:00.000Z",
+        "gameInfo": "Sun, Nov 22, 4:25 PM ET - Philadelphia, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "MIN",
+        "homeTeam": "SF",
+        "time": "2026-11-23T01:20:00.000Z",
+        "gameInfo": "Sun, Nov 22, 8:20 PM ET - Mexico City, MEX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "CIN",
+        "homeTeam": "WAS",
+        "time": "2026-11-24T01:15:00.000Z",
+        "gameInfo": "Mon, Nov 23, 8:15 PM ET - Landover, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_12",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "GB",
+        "homeTeam": "LA",
+        "time": "2026-11-26T01:00:00.000Z",
+        "gameInfo": "Wed, Nov 25, 8:00 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "CHI",
+        "homeTeam": "DET",
+        "time": "2026-11-26T18:00:00.000Z",
+        "gameInfo": "Thu, Nov 26, 1:00 PM ET - Detroit, MI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "PHI",
+        "homeTeam": "DAL",
+        "time": "2026-11-26T21:30:00.000Z",
+        "gameInfo": "Thu, Nov 26, 4:30 PM ET - Arlington, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "KC",
+        "homeTeam": "BUF",
+        "time": "2026-11-27T01:20:00.000Z",
+        "gameInfo": "Thu, Nov 26, 8:20 PM ET - Orchard Park, NY",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "DEN",
+        "homeTeam": "PIT",
+        "time": "2026-11-27T20:00:00.000Z",
+        "gameInfo": "Fri, Nov 27, 3:00 PM ET - Pittsburgh, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "LV",
+        "homeTeam": "CLE",
+        "time": "2026-11-29T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 29, 1:00 PM ET - Cleveland, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "NYG",
+        "homeTeam": "IND",
+        "time": "2026-11-29T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 29, 1:00 PM ET - Indianapolis, IN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "ATL",
+        "homeTeam": "MIN",
+        "time": "2026-11-29T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 29, 1:00 PM ET - Minneapolis, MN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "BAL",
+        "homeTeam": "HOU",
+        "time": "2026-11-29T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 29, 1:00 PM ET - Houston, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "NO",
+        "homeTeam": "CIN",
+        "time": "2026-11-29T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 29, 1:00 PM ET - Cincinnati, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "NYJ",
+        "homeTeam": "MIA",
+        "time": "2026-11-29T18:00:00.000Z",
+        "gameInfo": "Sun, Nov 29, 1:00 PM ET - Miami Gardens, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "TEN",
+        "homeTeam": "JAC",
+        "time": "2026-11-29T21:05:00.000Z",
+        "gameInfo": "Sun, Nov 29, 4:05 PM ET - Jacksonville, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "SEA",
+        "homeTeam": "SF",
+        "time": "2026-11-29T21:25:00.000Z",
+        "gameInfo": "Sun, Nov 29, 4:25 PM ET - Santa Clara, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "WAS",
+        "homeTeam": "ARI",
+        "time": "2026-11-29T21:25:00.000Z",
+        "gameInfo": "Sun, Nov 29, 4:25 PM ET - Glendale, AZ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "NE",
+        "homeTeam": "LAC",
+        "time": "2026-11-30T01:20:00.000Z",
+        "gameInfo": "Sun, Nov 29, 8:20 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "CAR",
+        "homeTeam": "TB",
+        "time": "2026-12-01T01:15:00.000Z",
+        "gameInfo": "Mon, Nov 30, 8:15 PM ET - Tampa, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_13",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "KC",
+        "homeTeam": "LA",
+        "time": "2026-12-04T01:15:00.000Z",
+        "gameInfo": "Thu, Dec 3, 8:15 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "WAS",
+        "homeTeam": "TEN",
+        "time": "2026-12-06T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 6, 1:00 PM ET - Nashville, TN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "GB",
+        "homeTeam": "NO",
+        "time": "2026-12-06T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 6, 1:00 PM ET - New Orleans, LA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "SF",
+        "homeTeam": "NYG",
+        "time": "2026-12-06T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 6, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "JAC",
+        "homeTeam": "CHI",
+        "time": "2026-12-06T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 6, 1:00 PM ET - Chicago, IL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "LAC",
+        "homeTeam": "TB",
+        "time": "2026-12-06T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 6, 1:00 PM ET - Tampa, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "DET",
+        "homeTeam": "ATL",
+        "time": "2026-12-06T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 6, 1:00 PM ET - Atlanta, GA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "CIN",
+        "homeTeam": "CLE",
+        "time": "2026-12-06T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 6, 1:00 PM ET - Cleveland, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "PHI",
+        "homeTeam": "ARI",
+        "time": "2026-12-06T21:05:00.000Z",
+        "gameInfo": "Sun, Dec 6, 4:05 PM ET - Glendale, AZ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "MIA",
+        "homeTeam": "DEN",
+        "time": "2026-12-06T21:05:00.000Z",
+        "gameInfo": "Sun, Dec 6, 4:05 PM ET - Denver, CO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "BUF",
+        "homeTeam": "NE",
+        "time": "2026-12-06T21:25:00.000Z",
+        "gameInfo": "Sun, Dec 6, 4:25 PM ET - Foxborough, MA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "CAR",
+        "homeTeam": "MIN",
+        "time": "2026-12-06T21:25:00.000Z",
+        "gameInfo": "Sun, Dec 6, 4:25 PM ET - Minneapolis, MN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "HOU",
+        "homeTeam": "PIT",
+        "time": "2026-12-07T01:20:00.000Z",
+        "gameInfo": "Sun, Dec 6, 8:20 PM ET - Pittsburgh, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "DAL",
+        "homeTeam": "SEA",
+        "time": "2026-12-08T01:15:00.000Z",
+        "gameInfo": "Mon, Dec 7, 8:15 PM ET - Seattle, WA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_14",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "MIN",
+        "homeTeam": "NE",
+        "time": "2026-12-11T01:15:00.000Z",
+        "gameInfo": "Thu, Dec 10, 8:15 PM ET - Foxborough, MA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "TB",
+        "homeTeam": "BAL",
+        "time": "2026-12-13T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 13, 1:00 PM ET - Baltimore, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "HOU",
+        "homeTeam": "WAS",
+        "time": "2026-12-13T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 13, 1:00 PM ET - Landover, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "ATL",
+        "homeTeam": "CLE",
+        "time": "2026-12-13T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 13, 1:00 PM ET - Cleveland, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "DEN",
+        "homeTeam": "NYJ",
+        "time": "2026-12-13T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 13, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "CHI",
+        "homeTeam": "MIA",
+        "time": "2026-12-13T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 13, 1:00 PM ET - Miami Gardens, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "IND",
+        "homeTeam": "PHI",
+        "time": "2026-12-13T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 13, 1:00 PM ET - Philadelphia, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "NO",
+        "homeTeam": "CAR",
+        "time": "2026-12-13T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 13, 1:00 PM ET - Charlotte, NC",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "TEN",
+        "homeTeam": "DET",
+        "time": "2026-12-13T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 13, 1:00 PM ET - Detroit, MI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "LAC",
+        "homeTeam": "LV",
+        "time": "2026-12-13T21:05:00.000Z",
+        "gameInfo": "Sun, Dec 13, 4:05 PM ET - Las Vegas, NV",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "KC",
+        "homeTeam": "CIN",
+        "time": "2026-12-13T21:25:00.000Z",
+        "gameInfo": "Sun, Dec 13, 4:25 PM ET - Cincinnati, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "NYG",
+        "homeTeam": "SEA",
+        "time": "2026-12-13T21:25:00.000Z",
+        "gameInfo": "Sun, Dec 13, 4:25 PM ET - Seattle, WA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "LA",
+        "homeTeam": "SF",
+        "time": "2026-12-13T21:25:00.000Z",
+        "gameInfo": "Sun, Dec 13, 4:25 PM ET - Santa Clara, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "BUF",
+        "homeTeam": "GB",
+        "time": "2026-12-14T01:20:00.000Z",
+        "gameInfo": "Sun, Dec 13, 8:20 PM ET - Green Bay, WI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "PIT",
+        "homeTeam": "JAC",
+        "time": "2026-12-15T01:15:00.000Z",
+        "gameInfo": "Mon, Dec 14, 8:15 PM ET - Jacksonville, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_15",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "SF",
+        "homeTeam": "LAC",
+        "time": "2026-12-18T01:15:00.000Z",
+        "gameInfo": "Thu, Dec 17, 8:15 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "SEA",
+        "homeTeam": "PHI",
+        "time": "2026-12-19T22:00:00.000Z",
+        "gameInfo": "Sat, Dec 19, 5:00 PM ET - Philadelphia, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "CHI",
+        "homeTeam": "BUF",
+        "time": "2026-12-20T01:20:00.000Z",
+        "gameInfo": "Sat, Dec 19, 8:20 PM ET - Orchard Park, NY",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "MIA",
+        "homeTeam": "GB",
+        "time": "2026-12-20T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 20, 1:00 PM ET - Green Bay, WI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "NO",
+        "homeTeam": "TB",
+        "time": "2026-12-20T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 20, 1:00 PM ET - Tampa, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "IND",
+        "homeTeam": "TEN",
+        "time": "2026-12-20T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 20, 1:00 PM ET - Nashville, TN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "ATL",
+        "homeTeam": "WAS",
+        "time": "2026-12-20T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 20, 1:00 PM ET - Landover, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "CIN",
+        "homeTeam": "CAR",
+        "time": "2026-12-20T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 20, 1:00 PM ET - Charlotte, NC",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "CLE",
+        "homeTeam": "NYG",
+        "time": "2026-12-20T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 20, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "BAL",
+        "homeTeam": "PIT",
+        "time": "2026-12-20T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 20, 1:00 PM ET - Pittsburgh, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "JAC",
+        "homeTeam": "HOU",
+        "time": "2026-12-20T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 20, 1:00 PM ET - Houston, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "NYJ",
+        "homeTeam": "ARI",
+        "time": "2026-12-20T21:05:00.000Z",
+        "gameInfo": "Sun, Dec 20, 4:05 PM ET - Glendale, AZ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "DEN",
+        "homeTeam": "LV",
+        "time": "2026-12-20T21:25:00.000Z",
+        "gameInfo": "Sun, Dec 20, 4:25 PM ET - Las Vegas, NV",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "DAL",
+        "homeTeam": "LA",
+        "time": "2026-12-20T21:25:00.000Z",
+        "gameInfo": "Sun, Dec 20, 4:25 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "DET",
+        "homeTeam": "MIN",
+        "time": "2026-12-21T01:20:00.000Z",
+        "gameInfo": "Sun, Dec 20, 8:20 PM ET - Minneapolis, MN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "NE",
+        "homeTeam": "KC",
+        "time": "2026-12-22T01:15:00.000Z",
+        "gameInfo": "Mon, Dec 21, 8:15 PM ET - Kansas City, MO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_16",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "HOU",
+        "homeTeam": "PHI",
+        "time": "2026-12-25T01:15:00.000Z",
+        "gameInfo": "Thu, Dec 24, 8:15 PM ET - Philadelphia, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "GB",
+        "homeTeam": "CHI",
+        "time": "2026-12-25T18:00:00.000Z",
+        "gameInfo": "Fri, Dec 25, 1:00 PM ET - Chicago, IL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "BUF",
+        "homeTeam": "DEN",
+        "time": "2026-12-25T21:30:00.000Z",
+        "gameInfo": "Fri, Dec 25, 4:30 PM ET - Denver, CO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "LA",
+        "homeTeam": "SEA",
+        "time": "2026-12-26T01:15:00.000Z",
+        "gameInfo": "Fri, Dec 25, 8:15 PM ET - Seattle, WA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "CAR",
+        "homeTeam": "PIT",
+        "time": "2026-12-27T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 27, 1:00 PM ET - Pittsburgh, PA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "LAC",
+        "homeTeam": "MIA",
+        "time": "2026-12-27T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 27, 1:00 PM ET - Miami Gardens, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "CLE",
+        "homeTeam": "BAL",
+        "time": "2026-12-27T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 27, 1:00 PM ET - Baltimore, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "TB",
+        "homeTeam": "ATL",
+        "time": "2026-12-27T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 27, 1:00 PM ET - Atlanta, GA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "NE",
+        "homeTeam": "NYJ",
+        "time": "2026-12-27T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 27, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "ARI",
+        "homeTeam": "NO",
+        "time": "2026-12-27T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 27, 1:00 PM ET - New Orleans, LA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "WAS",
+        "homeTeam": "MIN",
+        "time": "2026-12-27T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 27, 1:00 PM ET - Minneapolis, MN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "CIN",
+        "homeTeam": "IND",
+        "time": "2026-12-27T18:00:00.000Z",
+        "gameInfo": "Sun, Dec 27, 1:00 PM ET - Indianapolis, IN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "TEN",
+        "homeTeam": "LV",
+        "time": "2026-12-27T21:05:00.000Z",
+        "gameInfo": "Sun, Dec 27, 4:05 PM ET - Las Vegas, NV",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "SF",
+        "homeTeam": "KC",
+        "time": "2026-12-27T21:25:00.000Z",
+        "gameInfo": "Sun, Dec 27, 4:25 PM ET - Kansas City, MO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "JAC",
+        "homeTeam": "DAL",
+        "time": "2026-12-28T01:20:00.000Z",
+        "gameInfo": "Sun, Dec 27, 8:20 PM ET - Arlington, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "NYG",
+        "homeTeam": "DET",
+        "time": "2026-12-29T01:15:00.000Z",
+        "gameInfo": "Mon, Dec 28, 8:15 PM ET - Detroit, MI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_17",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "BAL",
+        "homeTeam": "CIN",
+        "time": "2027-01-01T01:15:00.000Z",
+        "gameInfo": "Thu, Dec 31, 8:15 PM ET - Cincinnati, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "DEN",
+        "homeTeam": "NE",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - Foxborough, MA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "NYG",
+        "homeTeam": "DAL",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - Arlington, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "KC",
+        "homeTeam": "LAC",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "SEA",
+        "homeTeam": "CAR",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - Charlotte, NC",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "LA",
+        "homeTeam": "TB",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - Tampa, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "PIT",
+        "homeTeam": "TEN",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - Nashville, TN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "MIN",
+        "homeTeam": "NYJ",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "BUF",
+        "homeTeam": "MIA",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - Miami Gardens, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "NO",
+        "homeTeam": "ATL",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - Atlanta, GA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "IND",
+        "homeTeam": "CLE",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - Cleveland, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "WAS",
+        "homeTeam": "JAC",
+        "time": "2027-01-03T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 3, 1:00 PM ET - Jacksonville, FL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "LV",
+        "homeTeam": "ARI",
+        "time": "2027-01-03T21:05:00.000Z",
+        "gameInfo": "Sun, Jan 3, 4:05 PM ET - Glendale, AZ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "DET",
+        "homeTeam": "CHI",
+        "time": "2027-01-03T21:25:00.000Z",
+        "gameInfo": "Sun, Jan 3, 4:25 PM ET - Chicago, IL",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "PHI",
+        "homeTeam": "SF",
+        "time": "2027-01-04T01:20:00.000Z",
+        "gameInfo": "Sun, Jan 3, 8:20 PM ET - Santa Clara, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "HOU",
+        "homeTeam": "GB",
+        "time": "2027-01-05T01:15:00.000Z",
+        "gameInfo": "Mon, Jan 4, 8:15 PM ET - Green Bay, WI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  },
+  {
+    "weekId": "week_18",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "CLE",
+        "homeTeam": "CIN",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Cincinnati, OH",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "MIA",
+        "homeTeam": "NE",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Foxborough, MA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "JAC",
+        "homeTeam": "IND",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Indianapolis, IN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "LV",
+        "homeTeam": "KC",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Kansas City, MO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "TB",
+        "homeTeam": "NO",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - New Orleans, LA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "PIT",
+        "homeTeam": "BAL",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Baltimore, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "SEA",
+        "homeTeam": "LA",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Inglewood, CA",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "LAC",
+        "homeTeam": "DEN",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Denver, CO",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "DAL",
+        "homeTeam": "WAS",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Landover, MD",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "PHI",
+        "homeTeam": "NYG",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - East Rutherford, NJ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "DET",
+        "homeTeam": "GB",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Green Bay, WI",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "SF",
+        "homeTeam": "ARI",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Glendale, AZ",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "CHI",
+        "homeTeam": "MIN",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Minneapolis, MN",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "TEN",
+        "homeTeam": "HOU",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Houston, TX",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "ATL",
+        "homeTeam": "CAR",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Charlotte, NC",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      },
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "NYJ",
+        "homeTeam": "BUF",
+        "time": "2027-01-10T18:00:00.000Z",
+        "gameInfo": "Sun, Jan 10, 1:00 PM ET - Orchard Park, NY",
+        "awayScore": 0,
+        "homeScore": 0,
+        "winner": "",
+        "evaluated": false
+      }
+    ]
+  }
+]

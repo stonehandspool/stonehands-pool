@@ -211,7 +211,7 @@ function NavBar() {
                 >
                   2025 Awards
                 </Link>
-                <Link
+                {/* <Link
                   className="navbar-item"
                   to="/payouts"
                   onClick={() => {
@@ -219,7 +219,7 @@ function NavBar() {
                   }}
                 >
                   2025 Payouts
-                </Link>
+                </Link> */}
               </div>
             </div>
             {!SIGN_UPS_DISABLED && (

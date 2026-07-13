@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import playerData from '../../../data/2025/football/players.json';
+import playerData from '../../../data/2026/football/players.json';
 import { CURRENT_WEEK, FIRST_GAME_PLAYED, SEASON_READY } from '../../constants';
 import SecretGrahamModal from '../modals/SecretGrahamModal';
 import supabaseClient from '../../config/supabaseClient';
@@ -94,7 +94,15 @@ function SeasonStandingsTable() {
   }, []);
 
   if (!FIRST_GAME_PLAYED && currentlySignedUp.length === 0) {
-    return <></>;
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            Once the picksheet becomes available this will show everyone who has signed up for the upcoming season.
+          </h3>
+        </div>
+      </section>
+    );
   }
 
   // Calculate the standings
