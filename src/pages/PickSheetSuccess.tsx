@@ -4,7 +4,8 @@ import teamData from '../../data/2025/football/teams.json';
 
 function PickSheetSuccess() {
   // Get the users picks via the navigate hook
-  const { state: userPicks } = useLocation();
+  const location = useLocation();
+  const { userPicks, partialPicksheet } = location.state ?? {};
   const { firstName, lastName, confidencePicks, survivorPick, marginPick, highFivePicks, tiebreaker } = userPicks;
 
   return (
@@ -18,6 +19,11 @@ function PickSheetSuccess() {
           <p className="has-text-centered no-print">
             Feel free to either print this page or save it as a pdf for yourself. Good luck and thank you for playing!
           </p>
+          {partialPicksheet && (
+            <p className="has-text-centered has-text-danger no-print">
+              <b>Please remember to complete your picksheet prior to the cutoff! You will not get a reminder!</b>
+            </p>
+          )}
           <br />
           <table className="table is-bordered mx-auto">
             <thead>
@@ -35,7 +41,7 @@ function PickSheetSuccess() {
             <tbody>
               {confidencePicks.map((pickData: ConfidenceMatchupInfo, index: number) => {
                 const { team, confidence } = pickData;
-                const displayName = teamData.find(teamInfo => teamInfo.teamCode === team)!.teamName;
+                const displayName = teamData.find(teamInfo => teamInfo.teamCode === team)?.teamName;
                 return (
                   <tr key={`confidence-${index}`}>
                     <td className="has-text-centered">{index + 1}</td>
