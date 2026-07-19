@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 
 import * as TeamLogos from '../../assets/logos';
-import teamData from '../../../data/2025/football/teams.json';
+import teamData from '../../../data/2026/football/teams.json';
 import ConfidenceDropDown from './ConfidenceDropDown';
 import { MatchupInfo } from '../../constants';
 

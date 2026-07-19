@@ -1,13 +1,13 @@
 import { Session } from '@supabase/supabase-js';
-import { ChangeEvent, MouseEvent, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
 
-import seasonData from '../../../data/2025/football/season.json';
-import playerData from '../../../data/2025/football/players.json';
+import seasonData from '../../../data/2026/football/season.json';
+import playerData from '../../../data/2026/football/players.json';
 import {
   ConfidenceMatchupInfo,
   CURRENT_WEEK,
@@ -88,22 +88,48 @@ function PickSheetForm(props: PickSheetFormProps) {
     );
   }
 
-  const userInfo: UserInfo = playerData.find(playerInfo => playerInfo.id === session.user.id)!;
+  const { userInfo, userFound }: { userInfo: UserInfo; userFound: boolean } = useMemo(() => {
+    const foundPlayerInfo: UserInfo | undefined = playerData.find(playerInfo => playerInfo.id === session.user.id);
+    const backupPlayerInfo: UserInfo = {
+      id: session.user.id,
+      username: session.user.user_metadata.username,
+      firstName: session.user.user_metadata.first_name,
+      lastName: session.user.user_metadata.last_name,
+      wins: 0,
+      winsByWeek: [],
+      losses: 0,
+      lossesByWeek: [],
+      ties: 0,
+      tiesByWeek: [],
+      percent: 0,
+      points: 0,
+      pointsByWeek: [],
+      tbAvg: 0,
+      tiebreakerByWeek: [],
+      lastWeekRank: 0,
+      currentWeekRank: 0,
+      rankByWeek: [],
+      change: '',
+      survivorPicks: [],
+      aliveInSurvivor: true,
+      marginPicks: [],
+      marginTotal: 0,
+      highFiveThisWeek: [],
+      highFiveValues: [],
+      highFiveTotal: 0,
+      currentWeekWins: 0,
+      currentWeekLosses: 0,
+      currentWeekTies: 0,
+      currentWeekPoints: 0,
+      currentWeekTiebreaker: 0,
+    };
+    if (foundPlayerInfo !== undefined) {
+      return { userInfo: foundPlayerInfo, userFound: true };
+    }
+    return { userInfo: backupPlayerInfo, userFound: false };
+  }, [session, playerData]);
 
-  if (!userInfo && !FIRST_GAME_PLAYED) {
-    return (
-      <section className="section">
-        <div className="container">
-          <h3 className="title is-3 has-text-centered">
-            Thank you for signing up for the pool! Ryan needs to do something on his end to activate your account. It
-            should be activated shortly!
-          </h3>
-        </div>
-      </section>
-    );
-  }
-
-  if (!userInfo && FIRST_GAME_PLAYED) {
+  if (!userFound && FIRST_GAME_PLAYED) {
     return (
       <section className="section">
         <div className="container">
@@ -151,8 +177,9 @@ function PickSheetForm(props: PickSheetFormProps) {
   const [tiebreaker, setTiebreaker] = useState<string>('');
   const [validSubmission, setValidSubmission] = useState<boolean>(false);
   const [timesUpdated, setTimesUpdated] = useState<number>(0);
-  const submissionRef = useRef(false);
-  const pingedDatabaseRef = useRef(false);
+  const submissionRef = useRef<boolean>(false);
+  const pingedDatabaseRef = useRef<boolean>(false);
+  const partialPicksheetRef = useRef<boolean>(false);
 
   const [priorPicks, setPriorPicks] = useState<boolean>(false);
   const [formError, setFormError] = useState<string>('');
@@ -324,6 +351,19 @@ function PickSheetForm(props: PickSheetFormProps) {
 
     event.preventDefault();
 
+    if (!validSubmission) {
+      const confirm = window.confirm(
+        'You are about to submit an incomplete picksheet, are you sure you want to do that? You will still be able to update your picksheet prior to the cutoff but you will not get a reminder.'
+      );
+
+      if (confirm) {
+        partialPicksheetRef.current = true;
+      } else {
+        submissionRef.current = false;
+        return;
+      }
+    }
+
     const { id, username, firstName, lastName } = userInfo;
     const userSubmission: PicksheetData = {
       userId: id,
@@ -355,7 +395,9 @@ function PickSheetForm(props: PickSheetFormProps) {
 
       if (picksheetPicksheetData) {
         setFormError('');
-        navigate('/picksheet-success', { state: userSubmission });
+        navigate('/picksheet-success', {
+          state: { userPicks: userSubmission, partialPicksheet: partialPicksheetRef.current },
+        });
       }
     } else {
       const { data: picksheetPicksheetData, error: picksheetSubmissionError } = await supabaseClient
@@ -378,7 +420,9 @@ function PickSheetForm(props: PickSheetFormProps) {
 
       if (picksheetPicksheetData) {
         setFormError('');
-        navigate('/picksheet-success', { state: userSubmission });
+        navigate('/picksheet-success', {
+          state: { userPicks: userSubmission, partialPicksheet: partialPicksheetRef.current },
+        });
       }
     }
   };
@@ -455,7 +499,7 @@ function PickSheetForm(props: PickSheetFormProps) {
           </div>
           <div className="container">
             <div className="block">
-              <button className="button is-primary" disabled={!validSubmission} onClick={submitPicksheet}>
+              <button className="button is-primary" onClick={submitPicksheet}>
                 Submit Choices
               </button>
             </div>

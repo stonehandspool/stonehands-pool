@@ -130,9 +130,15 @@ const createRandomChoices = (playerId, username, firstName, lastName) => {
   return randomSubmission;
 };
 
-const getTeamWithOdds = (confPoints, matchupInfo, gamesInWeek) => {
+const getTeamWithOdds = (confPoints, matchupInfo, gamesInWeek, firstRun) => {
   const { winner, homeTeam, awayTeam } = matchupInfo;
   const loser = winner === homeTeam ? awayTeam : homeTeam;
+
+  if (firstRun) {
+    // Since we allow partial picksheets now, we don't allow any free points on the first run (i.e. Thursday game(s))
+    return loser;
+  }
+
   const pointDiff = gamesInWeek - confPoints;
   // A random number between 1 -> 100
   const randNum = Math.floor(Math.random() * 100) + 1;
@@ -234,7 +240,8 @@ for (; i < len; i++) {
             submissionInfo.confidencePicks.findIndex(pick => pick.matchupId === matchup.matchupId)
           ].confidence,
           matchup,
-          weekData.matchups.length
+          weekData.matchups.length,
+          isFirstRun
         );
       }
       const userChoice = submissionInfo.confidencePicks.find(match => match.matchupId === matchup.matchupId);
@@ -284,7 +291,7 @@ for (; i < len; i++) {
 
   // Now evaluate the survivor pool pick
   if (player.aliveInSurvivor) {
-    const survivorPick = submissionInfo.survivorPick;
+    const survivorPick = submissionInfo.survivorPick ?? '';
     if (isFirstRun) {
       player.survivorPicks.push(survivorPick);
     } else {

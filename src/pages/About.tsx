@@ -148,7 +148,8 @@ function About() {
                 <li>
                   <b>
                     If you forget to submit a picksheet, you will be assigned a random winner and confidence point value
-                    for every matchup
+                    for every matchup. **Any games played on the first match day of the week (usually Thursday) will
+                    always be marked as incorrect now that partial picksheets are allowed**
                   </b>
                 </li>
               </ul>
@@ -401,7 +402,10 @@ function About() {
                   Picksheets are due prior to kickoff of the first game of the week, an email will be sent out every
                   Thursday as a reminder
                 </li>
-                <li>You may not submit a partial picksheet, you must make a selection for every Pool</li>
+                <li>
+                  You may submit a partial picksheet any time prior to the cutoff, however, you are responsible for
+                  completing your picksheet
+                </li>
                 <li>
                   Picksheets may be updated up until 1 P.M. EST every Sunday unless otherwise notified
                   <ul>
