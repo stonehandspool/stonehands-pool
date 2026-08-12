@@ -21,6 +21,10 @@ function ConfidencePicks(props: ConfidencePickProps) {
   } = props;
   const currentTime = new Date();
 
+  const allConfidenceValues = currentChoices.map(choice => choice.confidence);
+  const filteredToJustNumbers = allConfidenceValues.filter(val => val !== null);
+  const numArray = Array.from({ length: currentChoices.length }, (_, i) => i + 1);
+
   return (
     <div className="container">
       <div className="block">
@@ -36,6 +40,24 @@ function ConfidencePicks(props: ConfidencePickProps) {
           Reset Confidence Picks
         </button>
       </div>
+      {isMobileOrTablet && (
+        <div className="block" style={{ position: 'sticky', top: 80, zIndex: 10 }}>
+          <div className="notification is-primary">
+            <div className="columns is-multiline is-mobile">
+              {numArray.map(num => {
+                const textVisibility = filteredToJustNumbers.includes(num) ? 'is-invisible' : undefined;
+                return (
+                  <div key={`conf-pick-value-holder-${num}`} className="column">
+                    <span key={`conf-pick-value-selected-${num}`} className={textVisibility}>
+                      {num}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
       <div className="columns is-multiline">
         {weekInfo.map(matchup => {
           const { matchupId, time } = matchup;
