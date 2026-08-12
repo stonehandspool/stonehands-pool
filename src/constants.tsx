@@ -1,6 +1,6 @@
 // This should be set to false prior to the release of the first weeks picksheet, and then true until the end of the regular season
 // This is used to check for each of the standings and stats pages to see if it should check for data, if false it will not display anything
-export const SEASON_READY: boolean = true;
+export const SEASON_READY: boolean = false;
 // This is to allow for the standings table to show who has submitted their picksheet prior to the first game of the season
 // It should be set to true after the first game of the season
 export const FIRST_GAME_PLAYED: boolean = false;
