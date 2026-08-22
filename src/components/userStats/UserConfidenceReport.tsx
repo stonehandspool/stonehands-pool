@@ -2,7 +2,7 @@ import { DatabaseData } from '../../constants';
 import UserConfidencePicksTable from './UserConfidencePicksTable';
 
 import * as TeamLogos from '../../assets/logos';
-import teamData from '../../../data/2025/football/teams.json';
+import teamData from '../../../data/2026/football/teams.json';
 
 type TeamInfo = {
   team: string;

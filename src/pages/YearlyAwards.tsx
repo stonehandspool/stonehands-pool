@@ -809,7 +809,7 @@ function YearlyAwards() {
               <tbody>
                 {teamsBestPicked.data.map((info: BestPickedData, index) => {
                   return (
-                    <tr key={`${info.firstName}-${info.lastName}-teamsBestPicked`}>
+                    <tr key={`${info.firstName}-${info.lastName}-teamsBestPicked-${index}`}>
                       <td>{index + 1}</td>
                       <td>{`${info.firstName} ${info.lastName}`}</td>
                       <td>

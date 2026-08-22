@@ -21,9 +21,16 @@ interface TableColumns {
 
 const correctOrder = [4, 22, 25];
 
+type SignedUpInfo = {
+  userId: string;
+  firstName: string;
+  lastName: string;
+  username: string;
+};
+
 function SeasonStandingsTable() {
   const [currentSequence, setCurrentSequence] = useState<number[]>([]);
-  const [currentlySignedUp, setCurrentlySignedUp] = useState<string[]>([]);
+  const [currentlySignedUp, setCurrentlySignedUp] = useState<SignedUpInfo[]>([]);
   const sequenceIsCorrect = useRef<boolean>(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const positionRefs = useRef<HTMLTableCellElement[]>([]);
@@ -84,7 +91,18 @@ function SeasonStandingsTable() {
 
       if (data && data.length > 0) {
         // Just create an array of all of the user ids that have made picks
-        setCurrentlySignedUp(data.map(d => d.user_id));
+        console.log(data);
+        setCurrentlySignedUp(
+          data.map(d => {
+            const info: SignedUpInfo = {
+              userId: d.user_id,
+              firstName: d.submission_data.firstName,
+              lastName: d.submission_data.lastName,
+              username: d.submission_data.username,
+            };
+            return info;
+          })
+        );
       }
     };
 
@@ -107,25 +125,45 @@ function SeasonStandingsTable() {
 
   // Calculate the standings
   const calculatedPicks: TableColumns[] = [];
-  for (let i = 0; i < playerData.length; i++) {
-    const playerInfo = playerData[i];
-    if (!FIRST_GAME_PLAYED && !currentlySignedUp.includes(playerInfo.id)) {
-      continue;
+
+  // Different flows for if the first game has played or not, if it hasn't we need to go via the sign ups
+  if (!FIRST_GAME_PLAYED) {
+    for (let i = 0; i < currentlySignedUp.length; i++) {
+      const playerInfo = currentlySignedUp[i];
+      const rowInfo: TableColumns = {
+        position: 0, // Doesn't matter, will get updated below
+        name: `${playerInfo.firstName} ${playerInfo.lastName}`,
+        points: 0,
+        wins: 0,
+        losses: 0,
+        ties: 0,
+        percent: '0.0%',
+        tiebreaker: 0,
+        lastWeek: 0,
+        change: '--',
+        username: `${playerInfo.username}`,
+      };
+      calculatedPicks.push(rowInfo);
     }
-    const rowInfo: TableColumns = {
-      position: playerInfo.currentWeekRank,
-      name: `${playerInfo.firstName} ${playerInfo.lastName}`,
-      points: playerInfo.points,
-      wins: playerInfo.wins,
-      losses: playerInfo.losses,
-      ties: playerInfo.ties,
-      percent: `${(playerInfo.percent * 100).toFixed(1)}%`,
-      tiebreaker: +playerInfo.tbAvg.toFixed(1),
-      lastWeek: playerInfo.lastWeekRank,
-      change: playerInfo.change,
-      username: playerInfo.username,
-    };
-    calculatedPicks.push(rowInfo);
+  } else {
+    // The normal flow during the season
+    for (let i = 0; i < playerData.length; i++) {
+      const playerInfo = playerData[i];
+      const rowInfo: TableColumns = {
+        position: playerInfo.currentWeekRank,
+        name: `${playerInfo.firstName} ${playerInfo.lastName}`,
+        points: playerInfo.points,
+        wins: playerInfo.wins,
+        losses: playerInfo.losses,
+        ties: playerInfo.ties,
+        percent: `${(playerInfo.percent * 100).toFixed(1)}%`,
+        tiebreaker: +playerInfo.tbAvg.toFixed(1),
+        lastWeek: playerInfo.lastWeekRank,
+        change: playerInfo.change,
+        username: playerInfo.username,
+      };
+      calculatedPicks.push(rowInfo);
+    }
   }
 
   if ((!SEASON_READY && CURRENT_WEEK === 1) || !FIRST_GAME_PLAYED) {

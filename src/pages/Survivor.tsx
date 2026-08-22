@@ -1,6 +1,6 @@
-import playerData from '../../data/2025/football/players.json';
+import playerData from '../../data/2026/football/players.json';
 import SurvivorTable from '../components/standings/SurvivorTable';
-import { CURRENT_YEAR, CURRENT_WEEK, SEASON_READY } from '../constants';
+import { CURRENT_YEAR, CURRENT_WEEK, SEASON_READY, FIRST_GAME_PLAYED } from '../constants';
 
 function Survivor() {
   if (!SEASON_READY) {
@@ -9,6 +9,19 @@ function Survivor() {
         <div className="container">
           <h3 className="title is-3 has-text-centered">
             Sorry, the season hasn't started yet, please wait until the season has been loaded
+          </h3>
+        </div>
+      </section>
+    );
+  }
+
+  if (!FIRST_GAME_PLAYED) {
+    // Don't want to show something is the season hasn't begun yet. Season standings will be the living list of submissions
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            This table will become available once the first game of the season has finished and the site is updated.
           </h3>
         </div>
       </section>
@@ -41,9 +54,6 @@ function Survivor() {
             </div>
           </div>
         </div>
-        <h2 className="title has-text-centered">
-          Congratulations to <b>Kwan Jun</b> and <b>Emily Yerkes</b> for winning the Pool this year!
-        </h2>
         <SurvivorTable />
       </div>
     </section>

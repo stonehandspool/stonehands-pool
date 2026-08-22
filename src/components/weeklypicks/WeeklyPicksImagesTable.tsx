@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './WeeklyPicksTable.css';
 
-import playerData from '../../../data/2025/football/players.json';
-import seasonData from '../../../data/2025/football/season.json';
+import playerData from '../../../data/2026/football/players.json';
+import seasonData from '../../../data/2026/football/season.json';
 
 import * as TeamLogos from '../../assets/logos';
 
@@ -13,6 +13,7 @@ import {
   MatchupInfo,
   SEASON_READY,
   DatabaseData,
+  FIRST_GAME_PLAYED,
 } from '../../constants';
 import { useWeeklyPick } from '../../utils/useWeeklyPicks';
 
@@ -36,6 +37,19 @@ function WeeklyPicksImagesTable() {
       <section className="section">
         <div className="container">
           <h3 className="title is-3 has-text-centered">Sorry, there are no picks to show yet</h3>
+        </div>
+      </section>
+    );
+  }
+
+  if (!FIRST_GAME_PLAYED) {
+    // Don't want to show something is the season hasn't begun yet. Season standings will be the living list of submissions
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            This table will become available once the first game of the season has finished and the site is updated.
+          </h3>
         </div>
       </section>
     );

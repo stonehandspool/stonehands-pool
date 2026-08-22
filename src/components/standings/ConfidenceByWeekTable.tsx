@@ -1,7 +1,7 @@
 import playerData from '../../../data/2026/football/players.json';
 import seasonData from '../../../data/2026/football/season.json';
 
-import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MatchupInfo } from '../../constants';
+import { CURRENT_WEEK, CURRENT_WEEK_STATUS, FIRST_GAME_PLAYED, MatchupInfo } from '../../constants';
 
 interface TableColumns {
   position: number;
@@ -26,6 +26,19 @@ function ConfidenceByWeekTable(props: ConfidenceByWeekTableProps) {
   // If we somehow get here, just don't return anything because that would break this
   if (week > CURRENT_WEEK) {
     return <></>;
+  }
+
+  if (!FIRST_GAME_PLAYED) {
+    // Don't want to show something is the season hasn't begun yet. Season standings will be the living list of submissions
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            This table will become available once the first game of the season has finished and the site is updated.
+          </h3>
+        </div>
+      </section>
+    );
   }
 
   const weekGames: MatchupInfo[] = seasonData.find(weekInfo => weekInfo.weekId === `week_${week}`)!.matchups;

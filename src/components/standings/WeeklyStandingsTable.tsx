@@ -1,6 +1,12 @@
 import playerData from '../../../data/2026/football/players.json';
 
-import { CURRENT_WEEK, CURRENT_WEEK_STATUS, MONDAY_NIGHT_TOTAL, PREV_MONDAY_NIGHT_TOTAL } from '../../constants';
+import {
+  CURRENT_WEEK,
+  CURRENT_WEEK_STATUS,
+  FIRST_GAME_PLAYED,
+  MONDAY_NIGHT_TOTAL,
+  PREV_MONDAY_NIGHT_TOTAL,
+} from '../../constants';
 
 interface TableColumns {
   position: number;
@@ -16,6 +22,19 @@ interface TableColumns {
 const headers: string[] = ['Position', 'Name', 'Points', 'Wins', 'Losses', 'Ties', 'Tiebreaker', 'Result'];
 
 function WeeklyStandingsTable() {
+  if (!FIRST_GAME_PLAYED) {
+    // Don't want to show something is the season hasn't begun yet. Season standings will be the living list of submissions
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            This table will become available once the first game of the season has finished and the site is updated.
+          </h3>
+        </div>
+      </section>
+    );
+  }
+
   // If the current week is currently marked as START we don't want to show anything yet, so show the prior weeks data
   const weekToShow = CURRENT_WEEK_STATUS === 'START' && CURRENT_WEEK > 1 ? CURRENT_WEEK - 2 : CURRENT_WEEK - 1;
   const tiebreakerToUse =

@@ -1,7 +1,20 @@
-import { CURRENT_YEAR } from '../constants';
-import playerData from '../../data/2025/football/players.json';
+import { CURRENT_YEAR, FIRST_GAME_PLAYED } from '../constants';
+import playerData from '../../data/2026/football/players.json';
 
 function AllUserStats() {
+  if (!FIRST_GAME_PLAYED) {
+    // Don't want to show something is the season hasn't begun yet. Season standings will be the living list of submissions
+    return (
+      <section className="section">
+        <div className="container">
+          <h3 className="title is-3 has-text-centered">
+            This table will become available once the first game of the season has finished and the site is updated.
+          </h3>
+        </div>
+      </section>
+    );
+  }
+
   // First, sort the names alphabetically
   playerData.sort((row1, row2) => {
     const firstName1 = row1.firstName.split(' ')[0];
