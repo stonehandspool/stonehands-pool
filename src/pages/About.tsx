@@ -28,40 +28,41 @@ const fakeMatchupInfo = {
 };
 
 function About() {
-  const numPlayers = 146;
+  const numPlayers = 150;
   const buyIn = 100;
   const totalPool = numPlayers * buyIn;
-  const totalSurv = 500;
+  const totalSurv = 1000;
   const totalMarg = 1000;
   const totalHF = 1000;
+  const totalBonusWeekly = 450; // 25 * 18
 
   // Confidence
-  const totalConf = totalPool - totalSurv - totalMarg - totalHF;
+  const totalConf = totalPool - totalSurv - totalMarg - totalHF - totalBonusWeekly;
+  const weeklyConf = 250 * 18;
+  const finalConf = totalConf - weeklyConf;
   // Confidence EOY
-  const finalConf = totalConf * 0.4;
-  const final1 = finalConf * 0.2;
-  const final2 = finalConf * 0.17;
-  const final3 = finalConf * 0.14;
-  const final4 = finalConf * 0.12;
-  const final5 = finalConf * 0.1;
-  const final6 = finalConf * 0.08;
-  const final7 = finalConf * 0.055;
-  const final8 = finalConf * 0.05;
-  const final9 = finalConf * 0.045;
-  const final10 = finalConf * 0.04;
+  const final1 = 1750;
+  const final2 = 1250;
+  const final3 = 1000;
+  const final4 = 850;
+  const final5 = 725;
+  const final6 = 500;
+  const final7 = 350;
+  const final8 = 275;
+  const final9 = 200;
+  const final10 = 150;
   // Confidence Weekly
-  const weeklyConf = totalConf * 0.6;
   const weeklyPot = weeklyConf / 18;
-  const weekly1 = weeklyPot * 0.2;
-  const weekly2 = weeklyPot * 0.17;
-  const weekly3 = weeklyPot * 0.14;
-  const weekly4 = weeklyPot * 0.12;
-  const weekly5 = weeklyPot * 0.1;
-  const weekly6 = weeklyPot * 0.08;
-  const weekly7 = weeklyPot * 0.055;
-  const weekly8 = weeklyPot * 0.05;
-  const weekly9 = weeklyPot * 0.045;
-  const weekly10 = weeklyPot * 0.04;
+  const weekly1 = 50;
+  const weekly2 = 40;
+  const weekly3 = 35;
+  const weekly4 = 30;
+  const weekly5 = 25;
+  const weekly6 = 20;
+  const weekly7 = 15;
+  const weekly8 = 13;
+  const weekly9 = 12;
+  const weekly10 = 10;
 
   // Others
   const other1 = totalMarg * 0.38;
@@ -488,6 +489,10 @@ function About() {
             <p>
               <b>Total High-Five Pot: </b> {toMoney(totalHF)}
             </p>
+            <p>
+              <b>Total Weekly Bonus: </b> {toMoney(totalBonusWeekly)} (New this year: $25 per week random draw as long
+              as you made your picks)
+            </p>
             <br />
             <p>
               <b>Note: </b> The top 10 in the confidence Pool each week earn money as well as the top 10 at the end of
@@ -512,61 +517,61 @@ function About() {
                   <b>
                     1<sup>st</sup>:{' '}
                   </b>
-                  {toMoney(final1)} (20%)
+                  {toMoney(final1)}
                 </p>
                 <p>
                   <b>
                     2<sup>nd</sup>:{' '}
                   </b>
-                  {toMoney(final2)} (17%)
+                  {toMoney(final2)}
                 </p>
                 <p>
                   <b>
                     3<sup>rd</sup>:{' '}
                   </b>
-                  {toMoney(final3)} (14%)
+                  {toMoney(final3)}
                 </p>
                 <p>
                   <b>
                     4<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(final4)} (12%)
+                  {toMoney(final4)}
                 </p>
                 <p>
                   <b>
                     5<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(final5)} (10%)
+                  {toMoney(final5)}
                 </p>
                 <p>
                   <b>
                     6<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(final6)} (8%)
+                  {toMoney(final6)}
                 </p>
                 <p>
                   <b>
                     7<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(final7)} (5.5%)
+                  {toMoney(final7)}
                 </p>
                 <p>
                   <b>
                     8<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(final8)} (5%)
+                  {toMoney(final8)}
                 </p>
                 <p>
                   <b>
                     9<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(final9)} (4.5%)
+                  {toMoney(final9)}
                 </p>
                 <p>
                   <b>
                     10<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(final10)} (4%)
+                  {toMoney(final10)}
                 </p>
               </div>
               <div className="column is-narrow">
@@ -585,61 +590,61 @@ function About() {
                   <b>
                     1<sup>st</sup>:{' '}
                   </b>
-                  {toMoney(weekly1)} (20%)
+                  {toMoney(weekly1)}
                 </p>
                 <p>
                   <b>
                     2<sup>nd</sup>:{' '}
                   </b>
-                  {toMoney(weekly2)} (17%)
+                  {toMoney(weekly2)}
                 </p>
                 <p>
                   <b>
                     3<sup>rd</sup>:{' '}
                   </b>
-                  {toMoney(weekly3)} (14%)
+                  {toMoney(weekly3)}
                 </p>
                 <p>
                   <b>
                     4<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(weekly4)} (12%)
+                  {toMoney(weekly4)}
                 </p>
                 <p>
                   <b>
                     5<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(weekly5)} (10%)
+                  {toMoney(weekly5)}
                 </p>
                 <p>
                   <b>
                     6<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(weekly6)} (8%)
+                  {toMoney(weekly6)}
                 </p>
                 <p>
                   <b>
                     7<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(weekly7)} (5.5%)
+                  {toMoney(weekly7)}
                 </p>
                 <p>
                   <b>
                     8<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(weekly8)} (5%)
+                  {toMoney(weekly8)}
                 </p>
                 <p>
                   <b>
                     9<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(weekly9)} (4.5%)
+                  {toMoney(weekly9)}
                 </p>
                 <p>
                   <b>
                     10<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(weekly10)} (4%)
+                  {toMoney(weekly10)}
                 </p>
               </div>
               <div className="column is-narrow">
@@ -655,31 +660,31 @@ function About() {
                   <b>
                     1<sup>st</sup>:{' '}
                   </b>
-                  {toMoney(other1)} (38%)
+                  {toMoney(other1)}
                 </p>
                 <p>
                   <b>
                     2<sup>nd</sup>:{' '}
                   </b>
-                  {toMoney(other2)} (25%)
+                  {toMoney(other2)}
                 </p>
                 <p>
                   <b>
                     3<sup>rd</sup>:{' '}
                   </b>
-                  {toMoney(other3)} (15%)
+                  {toMoney(other3)}
                 </p>
                 <p>
                   <b>
                     4<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(other4)} (12%)
+                  {toMoney(other4)}
                 </p>
                 <p>
                   <b>
                     5<sup>th</sup>:{' '}
                   </b>
-                  {toMoney(other5)} (10%)
+                  {toMoney(other5)}
                 </p>
               </div>
             </div>
