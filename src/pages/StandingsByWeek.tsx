@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CURRENT_WEEK, CURRENT_YEAR, FIRST_GAME_PLAYED, MatchupInfo, SEASON_READY } from '../constants';
 import ConfidenceByWeekTable from '../components/standings/ConfidenceByWeekTable';
-import seasonData from '../../data/2025/football/season.json';
+import seasonData from '../../data/2026/football/season.json';
 
 const incorrectMessages = [
   "Sorry, that week hasn't happened yet!",

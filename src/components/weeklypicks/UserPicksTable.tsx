@@ -4,7 +4,7 @@ import { Session } from '@supabase/supabase-js';
 import { ConfidenceMatchupInfo, CURRENT_WEEK, PicksheetData } from '../../constants';
 import { useWeeklyPick } from '../../utils/useWeeklyPicks';
 
-import teamData from '../../../data/2025/football/teams.json';
+import teamData from '../../../data/2026/football/teams.json';
 import supabaseClient from '../../config/supabaseClient';
 import { TABLE_NAMES } from '../../config/supabaseConfig';
 
