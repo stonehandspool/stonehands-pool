@@ -1,5 +1,5 @@
 import { CURRENT_YEAR } from '../constants';
-import accolades from '../../data/2026/football/accolades.json';
+import accolades from '../../data/2025/football/accolades.json';
 
 interface ForgetfulPeopleData {
   userId: string;
