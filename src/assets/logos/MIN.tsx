@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function MIN(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -42,10 +42,5 @@ function MIN(props: IconProps) {
     </svg>
   );
 }
-
-MIN.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default MIN;

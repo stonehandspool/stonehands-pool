@@ -63,7 +63,7 @@ node scripts/processWeek.js --year {year} --week {week} --firstRun false --submi
 ### Updating the Sass/CSS
 
 ```sh
-sass --no-source-map src/sass/index.scss:src/index.css --load-path=node_modules
+npx sass --no-source-map src/sass/index.scss:src/index.css --load-path=node_modules
 ```
 
 ### Removing old branches at end of season

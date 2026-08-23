@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function DEN(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -43,10 +43,5 @@ function DEN(props: IconProps) {
     </svg>
   );
 }
-
-DEN.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default DEN;

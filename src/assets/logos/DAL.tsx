@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function DAL(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -26,10 +26,5 @@ function DAL(props: IconProps) {
     </svg>
   );
 }
-
-DAL.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default DAL;

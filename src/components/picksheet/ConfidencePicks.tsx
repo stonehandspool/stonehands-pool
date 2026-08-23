@@ -1,4 +1,5 @@
 import { ConfidenceMatchupInfo, MatchupInfo } from '../../constants';
+import * as TeamLogos from '../../assets/logos';
 import ConfidenceCard from './ConfidenceCard';
 
 type ConfidencePickProps = {
@@ -9,6 +10,8 @@ type ConfidencePickProps = {
   onUpdateConfidenceValue: (matchupId: string, confidence: number) => void;
   onClearConfidencePicks: () => void;
 };
+
+type TeamLogoKey = keyof typeof TeamLogos;
 
 function ConfidencePicks(props: ConfidencePickProps) {
   const {
@@ -23,7 +26,7 @@ function ConfidencePicks(props: ConfidencePickProps) {
 
   const allConfidenceValues = currentChoices.map(choice => choice.confidence);
   const filteredToJustNumbers = allConfidenceValues.filter(val => val !== null);
-  const numArray = Array.from({ length: currentChoices.length }, (_, i) => i + 1);
+  const numArray = Array.from({ length: currentChoices.length }, (_, i) => currentChoices.length - i);
 
   return (
     <div className="container">
@@ -43,17 +46,28 @@ function ConfidencePicks(props: ConfidencePickProps) {
       {isMobileOrTablet && (
         <div className="block" style={{ position: 'sticky', top: 80, zIndex: 10 }}>
           <div className="notification is-primary">
-            <div className="columns is-multiline is-mobile">
-              {numArray.map(num => {
-                const textVisibility = filteredToJustNumbers.includes(num) ? 'is-invisible' : undefined;
-                return (
-                  <div key={`conf-pick-value-holder-${num}`} className="column">
-                    <span key={`conf-pick-value-selected-${num}`} className={textVisibility}>
-                      {num}
-                    </span>
-                  </div>
-                );
-              })}
+            <div className="fixed-grid has-8-cols-mobile">
+              <div className="grid">
+                {numArray.map(num => {
+                  const numUsed = filteredToJustNumbers.includes(num);
+                  if (numUsed) {
+                    const team = currentChoices.find(choice => choice.confidence === num)?.team;
+                    const TeamLogo = TeamLogos[team as TeamLogoKey];
+                    return (
+                      <div key={`conf-pick-value-holder-${num}`} className="cell has-text-centered">
+                        <span key={`conf-pick-value-selected-${num}`}>
+                          <TeamLogo size={24} />
+                        </span>
+                      </div>
+                    );
+                  }
+                  return (
+                    <div key={`conf-pick-value-holder-${num}`} className="cell has-text-centered">
+                      <span key={`conf-pick-value-selected-${num}`}>{num}</span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

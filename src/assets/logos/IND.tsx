@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function IND(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -27,10 +27,5 @@ function IND(props: IconProps) {
     </svg>
   );
 }
-
-IND.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default IND;

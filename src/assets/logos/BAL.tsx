@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function BAL(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -50,10 +50,5 @@ function BAL(props: IconProps) {
     </svg>
   );
 }
-
-BAL.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default BAL;

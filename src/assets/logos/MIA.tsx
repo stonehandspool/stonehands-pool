@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function MIA(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -35,10 +35,5 @@ function MIA(props: IconProps) {
     </svg>
   );
 }
-
-MIA.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default MIA;

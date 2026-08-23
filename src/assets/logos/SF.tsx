@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function SF(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -30,10 +30,5 @@ function SF(props: IconProps) {
     </svg>
   );
 }
-
-SF.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default SF;

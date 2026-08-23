@@ -1,14 +1,13 @@
 @charset 'utf-8';
 
+// Update Bulma's global variables
+@use 'bulma/sass' with (
+  $primary: #54188b // #0a7b3e,
+);
+@use 'bulma/sass/utilities/mixins';
+
 // Add fonts here
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-// Setting colors
-$purple: #54188b;
-$mm-green: #0a7b3e;
-
-// Update Bulma's global variables
-$primary: $purple; // $mm-green; // $purple;
 
 // Global CSS
 .is-vertical-center {
@@ -25,7 +24,7 @@ $primary: $purple; // $mm-green; // $purple;
   background-color: #fff;
   border-radius: 6px;
   color: #4a4a4a;
-  border: 1px solid $primary;
+  border: 1px solid sass.$primary;
   display: block;
   padding: 1.25rem;
 }
@@ -183,10 +182,9 @@ $primary: $purple; // $mm-green; // $purple;
   }
 }
 
-@import 'bulma/bulma.sass';
-@import '@cityssm/bulma-sticky-table/sticky-table';
-
-@include mobile {
+@import 'bulma/css/bulma.css';
+// @import '@cityssm/bulma-sticky-table/sticky-table';
+@include mixins.mobile {
   .navbar-item {
     &.has-dropdown {
       .navbar-dropdown {

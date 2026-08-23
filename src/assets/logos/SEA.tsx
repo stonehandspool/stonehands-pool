@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function SEA(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -39,10 +39,5 @@ function SEA(props: IconProps) {
     </svg>
   );
 }
-
-SEA.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default SEA;

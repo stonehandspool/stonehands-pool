@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function PHI(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -52,10 +52,5 @@ function PHI(props: IconProps) {
     </svg>
   );
 }
-
-PHI.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default PHI;

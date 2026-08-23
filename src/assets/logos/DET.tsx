@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function DET(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -31,10 +31,5 @@ function DET(props: IconProps) {
     </svg>
   );
 }
-
-DET.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default DET;
