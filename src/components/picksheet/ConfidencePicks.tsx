@@ -27,7 +27,6 @@ function ConfidencePicks(props: ConfidencePickProps) {
   const allConfidenceValues = currentChoices.map(choice => choice.confidence);
   const filteredToJustNumbers = allConfidenceValues.filter(val => val !== null);
   const numArray = Array.from({ length: currentChoices.length }, (_, i) => currentChoices.length - i);
-  console.log(currentChoices);
 
   return (
     <div className="container">
