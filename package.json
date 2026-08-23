@@ -13,11 +13,11 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@cityssm/bulma-sticky-table": "^2.1.0",
+    "@cityssm/bulma-sticky-table": "^3.0.2",
     "@supabase/supabase-js": "^2.55.0",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
-    "bulma": "^0.9.4",
+    "bulma": "^1.0.4",
     "email-validator": "^2.0.4",
     "fetch-retry": "^6.0.0",
     "minimist": "^1.2.8",
@@ -42,6 +42,7 @@
     "lint-staged": "^15.2.5",
     "lodash": "^4.17.21",
     "prettier": "3.9.4",
+    "sass": "^1.103.1",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.62.1",
     "vite": "^8.1.3"

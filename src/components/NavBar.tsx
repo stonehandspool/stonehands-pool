@@ -65,7 +65,7 @@ function NavBar() {
         </a>
         <a
           role="button"
-          className={`navbar-burger ${burgerState ? 'is-active' : ''}`}
+          className={`navbar-burger ${burgerState ? 'is-active' : ''} has-text-white`}
           aria-label="menu"
           aria-expanded="false"
           onClick={onBurgerClick}

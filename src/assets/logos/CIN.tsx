@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function CIN(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -28,10 +28,5 @@ function CIN(props: IconProps) {
     </svg>
   );
 }
-
-CIN.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default CIN;

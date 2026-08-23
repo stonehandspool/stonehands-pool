@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function LA(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -87,10 +87,5 @@ function LA(props: IconProps) {
     </svg>
   );
 }
-
-LA.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default LA;

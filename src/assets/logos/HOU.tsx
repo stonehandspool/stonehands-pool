@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function HOU(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -31,10 +31,5 @@ function HOU(props: IconProps) {
     </svg>
   );
 }
-
-HOU.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default HOU;

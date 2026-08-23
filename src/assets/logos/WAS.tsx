@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function WAS(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg width={size} height={size} opacity={opacity} viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg">
       <g transform="translate(20 -35)">
@@ -20,10 +20,5 @@ function WAS(props: IconProps) {
     </svg>
   );
 }
-
-WAS.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default WAS;

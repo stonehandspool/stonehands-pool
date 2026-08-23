@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function GB(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -31,10 +31,5 @@ function GB(props: IconProps) {
     </svg>
   );
 }
-
-GB.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default GB;

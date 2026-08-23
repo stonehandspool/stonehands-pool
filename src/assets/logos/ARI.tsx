@@ -4,7 +4,7 @@ interface IconProps {
 }
 
 function ARI(props: IconProps) {
-  const { size, opacity } = props;
+  const { size = 40, opacity = 1 } = props;
   return (
     <svg
       width={size}
@@ -32,10 +32,5 @@ function ARI(props: IconProps) {
     </svg>
   );
 }
-
-ARI.defaultProps = {
-  size: 40,
-  opacity: 1,
-};
 
 export default ARI;
