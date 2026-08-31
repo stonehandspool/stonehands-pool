@@ -78,19 +78,19 @@ function NavBar() {
       {MARCH_MADNESS_STATE === 'INACTIVE' ? (
         <div className={`navbar-menu mr-6 ${burgerState ? 'is-active' : ''}`}>
           <div className="navbar-end">
-            <Link className="navbar-item" to="/about" onClick={onBurgerClick}>
+            <Link className="navbar-item has-text-white" to="/about" onClick={onBurgerClick}>
               About
             </Link>
-            <Link className="navbar-item" to="/hall-of-fame" onClick={onBurgerClick}>
+            <Link className="navbar-item has-text-white" to="/hall-of-fame" onClick={onBurgerClick}>
               Hall of Fame
             </Link>
             {currentTime < CURRENT_WEEK_CUTOFF_TIME && (
-              <Link className="navbar-item" to="/picksheet" onClick={onBurgerClick}>
+              <Link className="navbar-item has-text-white" to="/picksheet" onClick={onBurgerClick}>
                 Picksheet
               </Link>
             )}
             {currentTime >= CURRENT_WEEK_CUTOFF_TIME && (
-              <Link className="navbar-item" to="/my-picks" onClick={onBurgerClick}>
+              <Link className="navbar-item has-text-white" to="/my-picks" onClick={onBurgerClick}>
                 My Picks
               </Link>
             )}
@@ -99,7 +99,7 @@ function NavBar() {
               key={`${location}-dd-1`}
               onClick={onStandingsClick}
             >
-              <a className="navbar-link">Standings</a>
+              <a className="navbar-link has-text-white">Standings</a>
               <div className="navbar-dropdown">
                 <Link
                   className="navbar-item"
@@ -153,7 +153,7 @@ function NavBar() {
               key={`${location}-dd-2`}
               onClick={onMoreClick}
             >
-              <a className="navbar-link">More</a>
+              <a className="navbar-link has-text-white">More</a>
               <div className="navbar-dropdown is-right">
                 <Link
                   className="navbar-item"
@@ -223,7 +223,7 @@ function NavBar() {
               </div>
             </div>
             {!SIGN_UPS_DISABLED && (
-              <Link className="navbar-item" to="/sign-up" onClick={onBurgerClick}>
+              <Link className="navbar-item has-text-white" to="/sign-up" onClick={onBurgerClick}>
                 Sign Up
               </Link>
             )}
@@ -232,36 +232,36 @@ function NavBar() {
       ) : (
         <div className={`navbar-menu mr-6 ${burgerState ? 'is-active' : ''}`}>
           <div className="navbar-end">
-            <Link className="navbar-item" to="/march-madness/about" onClick={onBurgerClick}>
+            <Link className="navbar-item has-text-white" to="/march-madness/about" onClick={onBurgerClick}>
               About
             </Link>
-            <Link className="navbar-item" to="/hall-of-fame" onClick={onBurgerClick}>
+            <Link className="navbar-item has-text-white" to="/hall-of-fame" onClick={onBurgerClick}>
               Hall of Fame
             </Link>
             {currentTime < MARCH_MADNESS_CUTOFF && (
-              <Link className="navbar-item" to="/march-madness/picksheet" onClick={onBurgerClick}>
+              <Link className="navbar-item has-text-white" to="/march-madness/picksheet" onClick={onBurgerClick}>
                 Picksheet
               </Link>
             )}
             {currentTime >= MARCH_MADNESS_CUTOFF && (
-              <Link className="navbar-item" to="/march-madness/my-bracket" onClick={onBurgerClick}>
+              <Link className="navbar-item has-text-white" to="/march-madness/my-bracket" onClick={onBurgerClick}>
                 My Bracket
               </Link>
             )}
-            <Link className="navbar-item" to="/march-madness/standings" onClick={onBurgerClick}>
+            <Link className="navbar-item has-text-white" to="/march-madness/standings" onClick={onBurgerClick}>
               Standings
             </Link>
-            <Link className="navbar-item" to="/march-madness/pool-consensus" onClick={onBurgerClick}>
+            <Link className="navbar-item has-text-white" to="/march-madness/pool-consensus" onClick={onBurgerClick}>
               Consensus
             </Link>
-            <Link className="navbar-item" to="/march-madness/teams-remaining" onClick={onBurgerClick}>
+            <Link className="navbar-item has-text-white" to="/march-madness/teams-remaining" onClick={onBurgerClick}>
               Teams Remaining
             </Link>
-            <Link className="navbar-item" to="/march-madness/awards" onClick={onBurgerClick}>
+            <Link className="navbar-item has-text-white" to="/march-madness/awards" onClick={onBurgerClick}>
               2026 Awards
             </Link>
             {!SIGN_UPS_DISABLED && (
-              <Link className="navbar-item" to="/sign-up" onClick={onBurgerClick}>
+              <Link className="navbar-item has-text-white" to="/sign-up" onClick={onBurgerClick}>
                 Sign Up
               </Link>
             )}
