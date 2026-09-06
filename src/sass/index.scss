@@ -15,6 +15,11 @@
   align-items: center;
 }
 
+.table td.is-nowrap,
+.table th.is-nowrap {
+  white-space: nowrap;
+}
+
 .stonehands-hero {
   font-family: 'Roboto Slab', serif;
 }

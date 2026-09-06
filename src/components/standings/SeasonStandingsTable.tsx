@@ -192,18 +192,20 @@ function SeasonStandingsTable() {
         <table className="table is-striped is-hoverable mx-auto">
           <thead>
             <tr>
-              <th className="is-vcentered">Position</th>
+              <th className="is-vcentered">
+                <abbr title="Position">Pos</abbr>
+              </th>
               <th className="is-vcentered">Name</th>
               <th className="is-vcentered">Points</th>
               <th className="is-vcentered">Wins</th>
               <th className="is-vcentered">Losses</th>
               <th className="is-vcentered">Ties</th>
               <th className="is-vcentered">Percent</th>
-              <th className="is-vcentered">
-                Tiebreaker <br /> Average
+              <th className="is-vcentered is-nowrap">
+                <abbr title="Tiebreaker Average">TBA</abbr>
               </th>
               <th className="is-vcentered">
-                Last <br /> Week
+                <abbr title="Position Last Week">Last</abbr>
               </th>
               <th className="is-vcentered">Change</th>
             </tr>
@@ -230,7 +232,11 @@ function SeasonStandingsTable() {
                           </td>
                         );
                       } else {
-                        return <td key={`${row.position}-${ind}`}>{row[key as keyof TableColumns]}</td>;
+                        return (
+                          <td key={`${row.position}-${ind}`} className="is-nowrap">
+                            {row[key as keyof TableColumns]}
+                          </td>
+                        );
                       }
                     } else {
                       return;
