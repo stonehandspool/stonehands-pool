@@ -130,7 +130,7 @@ const createRandomChoices = (playerId, username, firstName, lastName) => {
   return randomSubmission;
 };
 
-const getTeamWithOdds = (confPoints, matchupInfo, gamesInWeek, firstRun) => {
+const getTeamWithOdds = (matchIndex, matchupInfo, gamesInWeek, firstRun) => {
   const { winner, homeTeam, awayTeam } = matchupInfo;
   const loser = winner === homeTeam ? awayTeam : homeTeam;
 
@@ -139,7 +139,7 @@ const getTeamWithOdds = (confPoints, matchupInfo, gamesInWeek, firstRun) => {
     return loser;
   }
 
-  const pointDiff = gamesInWeek - confPoints;
+  const pointDiff = gamesInWeek - matchIndex; // Already passed in matchIndex + 1
   // A random number between 1 -> 100
   const randNum = Math.floor(Math.random() * 100) + 1;
   switch (pointDiff) {
@@ -175,10 +175,17 @@ const getTeamWithOdds = (confPoints, matchupInfo, gamesInWeek, firstRun) => {
         pointDiff,
         randNum,
         gamesInWeek,
-        confPoints
+        matchIndex
       );
       return loser;
   }
+};
+
+const getLowestRemainingConfPts = (submissionInfo, gamesInWeek) => {
+  const allValues = Array.from({ length: gamesInWeek }, (_, index) => index + 1);
+  const allUsedValues = submissionInfo.confidencePicks.map(pick => pick.confidence !== null);
+  const allUnusedValues = allValues.filter(val => !allUsedValues.includes(val));
+  return Math.min(...allUnusedValues);
 };
 
 // Now evaluate all of the responses and update the files
@@ -233,20 +240,32 @@ for (; i < len; i++) {
     if (!evaluated && winner !== '') {
       // Before we evaluate, we change any missed picksheets based off odds (high points have much lower odds)
       if (pickInfo.id === -1) {
-        submissionInfo.confidencePicks[
-          submissionInfo.confidencePicks.findIndex(pick => pick.matchupId === matchup.matchupId)
-        ].team = getTeamWithOdds(
-          submissionInfo.confidencePicks[
-            submissionInfo.confidencePicks.findIndex(pick => pick.matchupId === matchup.matchupId)
-          ].confidence,
+        const matchIndex = submissionInfo.confidencePicks.findIndex(pick => pick.matchupId === matchup.matchupId);
+        submissionInfo.confidencePicks[matchIndex].team = getTeamWithOdds(
+          matchIndex + 1,
           matchup,
           weekData.matchups.length,
           isFirstRun
         );
       }
+
       const userChoice = submissionInfo.confidencePicks.find(match => match.matchupId === matchup.matchupId);
       const { team, confidence } = userChoice;
-      if (confidence === null) {
+      if (team === null && confidence === null) {
+        // If the user submitted a partial picksheet but then never finished it, give them a random team and confidence value
+        const matchIndex = submissionInfo.confidencePicks.findIndex(pick => pick.matchupId === matchup.matchupId);
+        submissionInfo.confidencePicks[matchIndex].team = getTeamWithOdds(
+          matchIndex + 1,
+          matchup,
+          weekData.matchups.length,
+          isFirstRun
+        );
+        submissionInfo.confidencePicks[matchIndex].confidence = getLowestRemainingConfPts(
+          submissionInfo,
+          weekData.matchups.length
+        );
+      } else if (team !== null && confidence === null) {
+        // Something probably went wrong, so just flag it for now
         invalidSubmission = true;
       }
       if (winner === team) {
@@ -275,7 +294,7 @@ for (; i < len; i++) {
   player.tiesByWeek[player.tiesByWeek.length - 1] = player.currentWeekTies;
   player.currentWeekPoints += weeklyPoints;
   player.pointsByWeek[player.pointsByWeek.length - 1] = player.currentWeekPoints;
-  player.currentWeekTiebreaker = parseInt(submissionInfo.tiebreaker, 10);
+  player.currentWeekTiebreaker = parseInt(submissionInfo.tiebreaker ?? 0, 10);
   player.tiebreakerByWeek[player.tiebreakerByWeek.length - 1] = player.currentWeekTiebreaker;
   player.wins += weeklyWins;
   player.losses += weeklyLosses;
