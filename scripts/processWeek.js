@@ -183,7 +183,7 @@ const getTeamWithOdds = (matchIndex, matchupInfo, gamesInWeek, firstRun) => {
 
 const getLowestRemainingConfPts = (submissionInfo, gamesInWeek) => {
   const allValues = Array.from({ length: gamesInWeek }, (_, index) => index + 1);
-  const allUsedValues = submissionInfo.confidencePicks.map(pick => pick.confidence !== null);
+  const allUsedValues = submissionInfo.confidencePicks.map(pick => pick.confidence).filter(value => value !== null);
   const allUnusedValues = allValues.filter(val => !allUsedValues.includes(val));
   return Math.min(...allUnusedValues);
 };
@@ -250,10 +250,10 @@ for (; i < len; i++) {
       }
 
       const userChoice = submissionInfo.confidencePicks.find(match => match.matchupId === matchup.matchupId);
+      const matchIndex = submissionInfo.confidencePicks.findIndex(pick => pick.matchupId === matchup.matchupId);
       const { team, confidence } = userChoice;
       if (team === null && confidence === null) {
         // If the user submitted a partial picksheet but then never finished it, give them a random team and confidence value
-        const matchIndex = submissionInfo.confidencePicks.findIndex(pick => pick.matchupId === matchup.matchupId);
         submissionInfo.confidencePicks[matchIndex].team = getTeamWithOdds(
           matchIndex + 1,
           matchup,
@@ -265,8 +265,10 @@ for (; i < len; i++) {
           weekData.matchups.length
         );
       } else if (team !== null && confidence === null) {
-        // Something probably went wrong, so just flag it for now
-        invalidSubmission = true;
+        submissionInfo.confidencePicks[matchIndex].confidence = getLowestRemainingConfPts(
+          submissionInfo,
+          weekData.matchups.length
+        );
       }
       if (winner === team) {
         weeklyWins++;
