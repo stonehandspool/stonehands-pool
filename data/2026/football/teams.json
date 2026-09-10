@@ -319,15 +319,15 @@
     "teamName": "Patriots",
     "teamLocation": "New England",
     "wins": 0,
-    "losses": 0,
+    "losses": 1,
     "ties": 0,
-    "pointsFor": 0,
-    "pointsAgainst": 0,
+    "pointsFor": 10,
+    "pointsAgainst": 13,
     "homeWins": 0,
     "homeLosses": 0,
     "awayWins": 0,
-    "awayLosses": 0,
-    "streak": "W0"
+    "awayLosses": 1,
+    "streak": "L1"
   },
   {
     "teamCode": "NO",
@@ -408,16 +408,16 @@
     "teamCode": "SEA",
     "teamName": "Seahawks",
     "teamLocation": "Seattle",
-    "wins": 0,
+    "wins": 1,
     "losses": 0,
     "ties": 0,
-    "pointsFor": 0,
-    "pointsAgainst": 0,
-    "homeWins": 0,
+    "pointsFor": 13,
+    "pointsAgainst": 10,
+    "homeWins": 1,
     "homeLosses": 0,
     "awayWins": 0,
     "awayLosses": 0,
-    "streak": "W0"
+    "streak": "W1"
   },
   {
     "teamCode": "SF",
