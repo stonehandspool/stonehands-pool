@@ -123,7 +123,7 @@ function PersonalStats() {
   const weekToShow = showCurrentWeek ? CURRENT_WEEK : CURRENT_WEEK - 1;
 
   const [userPicks, setUserPicks] = useState<DatabaseData[]>([]);
-  const allPicks = useWeeklyPick(1, weekToShow > 1 ? weekToShow : undefined);
+  const allPicks = useWeeklyPick(weekToShow === 0 ? 0 : 1, weekToShow > 1 ? weekToShow : undefined);
 
   useEffect(() => {
     if (allPicks && allPicks.length > 0) {
