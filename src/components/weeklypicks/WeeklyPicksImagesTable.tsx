@@ -237,6 +237,7 @@ function WeeklyPicksImagesTable() {
         </tr>
         {currentWeekPicks.map((pickInfo, index) => {
           const { submission_data: picks } = pickInfo;
+          console.log('!!! pickInfo', pickInfo);
           const playerInfo = playerData.find(player => player.id === pickInfo.user_id)!;
           return (
             <tr key={`picks-${index}`}>
