@@ -1,5 +1,5 @@
 import { Session } from '@supabase/supabase-js';
-import { ChangeEvent, MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
+import { ChangeEvent, MouseEvent, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
@@ -88,48 +88,10 @@ function PickSheetForm(props: PickSheetFormProps) {
     );
   }
 
-  const { userInfo, userFound }: { userInfo: UserInfo; userFound: boolean } = useMemo(() => {
-    const foundPlayerInfo: UserInfo | undefined = playerData.find(playerInfo => playerInfo.id === session.user.id);
-    const backupPlayerInfo: UserInfo = {
-      id: session.user.id,
-      username: session.user.user_metadata.username,
-      firstName: session.user.user_metadata.first_name,
-      lastName: session.user.user_metadata.last_name,
-      wins: 0,
-      winsByWeek: [],
-      losses: 0,
-      lossesByWeek: [],
-      ties: 0,
-      tiesByWeek: [],
-      percent: 0,
-      points: 0,
-      pointsByWeek: [],
-      tbAvg: 0,
-      tiebreakerByWeek: [],
-      lastWeekRank: 0,
-      currentWeekRank: 0,
-      rankByWeek: [],
-      change: '',
-      survivorPicks: [],
-      aliveInSurvivor: true,
-      marginPicks: [],
-      marginTotal: 0,
-      highFiveThisWeek: [],
-      highFiveValues: [],
-      highFiveTotal: 0,
-      currentWeekWins: 0,
-      currentWeekLosses: 0,
-      currentWeekTies: 0,
-      currentWeekPoints: 0,
-      currentWeekTiebreaker: 0,
-    };
-    if (foundPlayerInfo !== undefined) {
-      return { userInfo: foundPlayerInfo, userFound: true };
-    }
-    return { userInfo: backupPlayerInfo, userFound: false };
-  }, [session, playerData]);
+  const userInfo: UserInfo = playerData.find(playerInfo => playerInfo.id === session.user.id)!;
 
-  if (!userFound && FIRST_GAME_PLAYED) {
+  // TODO: Add back in logic for first week new players
+  if (!userInfo && FIRST_GAME_PLAYED) {
     return (
       <section className="section">
         <div className="container">
@@ -176,13 +138,14 @@ function PickSheetForm(props: PickSheetFormProps) {
   const [highFiveTeams, setHighFiveTeams] = useState<string[]>([]);
   const [tiebreaker, setTiebreaker] = useState<string>('');
   const [validSubmission, setValidSubmission] = useState<boolean>(false);
-  const [timesUpdated, setTimesUpdated] = useState<number>(0);
+  const [formError, setFormError] = useState<string>('');
+
+  // Refs to keep track of things
   const submissionRef = useRef<boolean>(false);
   const pingedDatabaseRef = useRef<boolean>(false);
   const partialPicksheetRef = useRef<boolean>(false);
-
-  const [priorPicks, setPriorPicks] = useState<boolean>(false);
-  const [formError, setFormError] = useState<string>('');
+  const priorPicksRef = useRef<boolean>(false);
+  const timesUpdatedRef = useRef<number>(0);
 
   let validConfidencePicks = true;
   confidencePicks.forEach(confidencePick => {
@@ -289,21 +252,43 @@ function PickSheetForm(props: PickSheetFormProps) {
       }
 
       if (data && data.length > 0) {
-        const priorPicks = data[0].submission_data as PicksheetData;
+        const picksFromDB = data[0].submission_data as PicksheetData;
         const prevTimesUpdated = data[0].times_updated as number;
 
         // Set the prior picks and confidences
-        setConfidencePicks(priorPicks.confidencePicks);
+        setConfidencePicks(picksFromDB.confidencePicks);
 
         if (userInfo.aliveInSurvivor) {
-          setSurvivorTeam(priorPicks.survivorPick);
+          setSurvivorTeam(picksFromDB.survivorPick);
         }
 
-        setMarginTeam(priorPicks.marginPick);
-        setHighFiveTeams(priorPicks.highFivePicks);
-        setTiebreaker(priorPicks.tiebreaker.toString());
-        setTimesUpdated(prevTimesUpdated);
-        setPriorPicks(true);
+        setMarginTeam(picksFromDB.marginPick);
+        setHighFiveTeams(picksFromDB.highFivePicks);
+        setTiebreaker(picksFromDB.tiebreaker.toString());
+        timesUpdatedRef.current = prevTimesUpdated;
+        priorPicksRef.current = true;
+      } else if (jsonPickData.length > 0) {
+        // Backup in case the database search doesn't return anything
+        // This will really only happen if a user forgot to submit prior to Thu and has a forced Thu pick
+        const submission = jsonPickData.find(picks => picks.user_id === userInfo.id);
+        if (submission) {
+          const { submission_data: picksFromJSON } = submission;
+          // Set the prior picks and confidences
+          setConfidencePicks(picksFromJSON.confidencePicks);
+
+          if (userInfo.aliveInSurvivor) {
+            setSurvivorTeam(picksFromJSON.survivorPick);
+          }
+
+          setMarginTeam(picksFromJSON.marginPick);
+          setHighFiveTeams(picksFromJSON.highFivePicks);
+          setTiebreaker(picksFromJSON.tiebreaker.toString());
+          // If the submission id is -1 that means it was auto generated and we would actually want to
+          // do an initial submission to the database as opposed to an update
+          if (submission.id !== -1) {
+            priorPicksRef.current = true;
+          }
+        }
       }
 
       if (!pingedDatabaseRef.current) {
@@ -316,32 +301,6 @@ function PickSheetForm(props: PickSheetFormProps) {
       console.error(err);
     });
   }, []);
-
-  useEffect(() => {
-    if (pingedDatabaseRef.current && jsonPickData.length > 0 && !priorPicks) {
-      // Backup in case the database search doesn't return anything
-      // This will really only happen if a user forgot to submit prior to Thu and has a forced Thu pick
-      const submission = jsonPickData.find(picks => picks.user_id === userInfo.id);
-      if (submission) {
-        const { submission_data: priorPicks } = submission;
-        // Set the prior picks and confidences
-        setConfidencePicks(priorPicks.confidencePicks);
-
-        if (userInfo.aliveInSurvivor) {
-          setSurvivorTeam(priorPicks.survivorPick);
-        }
-
-        setMarginTeam(priorPicks.marginPick);
-        setHighFiveTeams(priorPicks.highFivePicks);
-        setTiebreaker(priorPicks.tiebreaker.toString());
-        // If the submission id is -1 that means it was auto generated and we would actually want to
-        // do an initial submission to the database as opposed to an update
-        if (submission.id !== -1) {
-          setPriorPicks(true);
-        }
-      }
-    }
-  }, [pingedDatabaseRef.current, jsonPickData, priorPicks]);
 
   const submitPicksheet = async (event: MouseEvent<HTMLButtonElement>) => {
     if (submissionRef.current) {
@@ -377,10 +336,10 @@ function PickSheetForm(props: PickSheetFormProps) {
       tiebreaker: parseInt(tiebreaker, 10),
     };
 
-    if (priorPicks) {
+    if (priorPicksRef.current) {
       const { data: picksheetPicksheetData, error: picksheetSubmissionError } = await supabaseClient
         .from(TABLE_NAMES.USER_PICKS)
-        .update({ submission_data: userSubmission, times_updated: timesUpdated + 1 })
+        .update({ submission_data: userSubmission, times_updated: timesUpdatedRef.current + 1 })
         .eq('week', CURRENT_WEEK)
         .eq('user_id', id)
         .select();
@@ -405,7 +364,7 @@ function PickSheetForm(props: PickSheetFormProps) {
         .insert({
           user_id: id,
           week: CURRENT_WEEK,
-          times_updated: timesUpdated,
+          times_updated: timesUpdatedRef.current,
           submission_data: userSubmission,
         })
         .select();
