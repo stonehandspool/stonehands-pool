@@ -254,6 +254,7 @@ function PickSheetForm(props: PickSheetFormProps) {
       if (data && data.length > 0) {
         const picksFromDB = data[0].submission_data as PicksheetData;
         const prevTimesUpdated = data[0].times_updated as number;
+        const prevTiebreaker = picksFromDB.tiebreaker?.toString() ?? '';
 
         // Set the prior picks and confidences
         setConfidencePicks(picksFromDB.confidencePicks);
@@ -264,7 +265,7 @@ function PickSheetForm(props: PickSheetFormProps) {
 
         setMarginTeam(picksFromDB.marginPick);
         setHighFiveTeams(picksFromDB.highFivePicks);
-        setTiebreaker(picksFromDB.tiebreaker.toString());
+        setTiebreaker(prevTiebreaker);
         timesUpdatedRef.current = prevTimesUpdated;
         priorPicksRef.current = true;
       } else if (jsonPickData.length > 0) {
