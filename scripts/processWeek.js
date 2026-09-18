@@ -251,7 +251,10 @@ for (; i < len; i++) {
 
       const userChoice = submissionInfo.confidencePicks.find(match => match.matchupId === matchup.matchupId);
       const matchIndex = submissionInfo.confidencePicks.findIndex(pick => pick.matchupId === matchup.matchupId);
-      const { team, confidence } = userChoice;
+      if (player.id === '1837f095-daa9-4ec3-985f-cf5fc74818f6') {
+        console.log('alissa pick', userChoice, matchIndex);
+      }
+      let { team, confidence } = userChoice;
       if (team === null && confidence === null) {
         // If the user submitted a partial picksheet but then never finished it, give them a random team and confidence value
         submissionInfo.confidencePicks[matchIndex].team = getTeamWithOdds(
@@ -269,6 +272,7 @@ for (; i < len; i++) {
           submissionInfo,
           weekData.matchups.length
         );
+        confidence = submissionInfo.confidencePicks[matchIndex].confidence;
       }
       if (winner === team) {
         weeklyWins++;
