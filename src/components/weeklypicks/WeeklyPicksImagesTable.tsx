@@ -249,7 +249,7 @@ function WeeklyPicksImagesTable() {
                 )!;
                 const correct = team === winner;
                 let Logo;
-                if (team === 'Tie' || team === undefined) {
+                if (team === 'Tie' || team === undefined || team === null) {
                   Logo = TeamLogos.NFL;
                 } else {
                   Logo = TeamLogos[team as TeamLogoKey];
