@@ -3596,7 +3596,7 @@
           {
             "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -10103,12 +10103,12 @@
             "confidence": 16
           },
           {
-            "team": "KC",
+            "team": "MIA",
             "matchupId": "matchup_2",
             "confidence": 1
           },
           {
-            "team": "CAR",
+            "team": "CLE",
             "matchupId": "matchup_3",
             "confidence": 2
           },
@@ -10118,12 +10118,12 @@
             "confidence": 3
           },
           {
-            "team": "NE",
+            "team": "JAC",
             "matchupId": "matchup_5",
             "confidence": 4
           },
           {
-            "team": "LAC",
+            "team": "BUF",
             "matchupId": "matchup_6",
             "confidence": 5
           },
@@ -10148,9 +10148,9 @@
             "confidence": 9
           },
           {
-            "team": null,
+            "team": "ARI",
             "matchupId": "matchup_11",
-            "confidence": null
+            "confidence": 10
           },
           {
             "team": null,
@@ -16083,9 +16083,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -16293,9 +16293,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -16398,9 +16398,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -16608,9 +16608,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 5
           },
           {
             "team": "KC",
@@ -16713,9 +16713,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -16818,9 +16818,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -16923,9 +16923,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -17028,9 +17028,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -17133,9 +17133,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -17238,9 +17238,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -17347,17 +17347,17 @@
           },
           {
             "matchupId": "matchup_3",
-            "team": "CAR",
+            "team": "CLE",
             "confidence": 3
           },
           {
             "matchupId": "matchup_4",
-            "team": "NYG",
+            "team": "TEN",
             "confidence": 4
           },
           {
             "matchupId": "matchup_5",
-            "team": "JAC",
+            "team": "NE",
             "confidence": 5
           },
           {
@@ -17372,7 +17372,7 @@
           },
           {
             "matchupId": "matchup_8",
-            "team": "IND",
+            "team": "HOU",
             "confidence": 8
           },
           {
@@ -17441,9 +17441,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -17546,9 +17546,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -17651,9 +17651,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -17760,7 +17760,7 @@
           },
           {
             "matchupId": "matchup_3",
-            "team": "CLE",
+            "team": "CAR",
             "confidence": 3
           },
           {
@@ -17770,17 +17770,17 @@
           },
           {
             "matchupId": "matchup_5",
-            "team": "JAC",
+            "team": "NE",
             "confidence": 5
           },
           {
             "matchupId": "matchup_6",
-            "team": "BUF",
+            "team": "LAC",
             "confidence": 6
           },
           {
             "matchupId": "matchup_7",
-            "team": "NYJ",
+            "team": "DET",
             "confidence": 7
           },
           {
@@ -17854,9 +17854,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -17959,9 +17959,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -18073,7 +18073,7 @@
           },
           {
             "matchupId": "matchup_4",
-            "team": "NYG",
+            "team": "TEN",
             "confidence": 4
           },
           {
@@ -18083,12 +18083,12 @@
           },
           {
             "matchupId": "matchup_6",
-            "team": "BUF",
+            "team": "LAC",
             "confidence": 6
           },
           {
             "matchupId": "matchup_7",
-            "team": "DET",
+            "team": "NYJ",
             "confidence": 7
           },
           {
@@ -18108,7 +18108,7 @@
           },
           {
             "matchupId": "matchup_11",
-            "team": "SF",
+            "team": "ARI",
             "confidence": 11
           },
           {
@@ -18162,9 +18162,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",
@@ -18266,7 +18266,7 @@
           },
           {
             "matchupId": "matchup_2",
-            "team": "KC",
+            "team": "MIA",
             "confidence": 2
           },
           {
@@ -18281,7 +18281,7 @@
           },
           {
             "matchupId": "matchup_5",
-            "team": "NE",
+            "team": "JAC",
             "confidence": 5
           },
           {
@@ -18301,7 +18301,7 @@
           },
           {
             "matchupId": "matchup_9",
-            "team": "WAS",
+            "team": "SEA",
             "confidence": 9
           },
           {
@@ -18365,9 +18365,9 @@
         ],
         "confidencePicks": [
           {
-            "team": null,
+            "team": "GB",
             "matchupId": "matchup_1",
-            "confidence": null
+            "confidence": 1
           },
           {
             "team": "KC",

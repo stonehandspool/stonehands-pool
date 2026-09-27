@@ -60,6 +60,24 @@ if (!isSubmissionsLocked) {
     const updatedWeeklyPicks = weeklyPicksData.picks.map(pickData => {
       const updatedPickIndex = data.findIndex(dbPicks => dbPicks.user_id === pickData.user_id);
       if (updatedPickIndex !== -1) {
+        // Users have been filling out their picksheet after the start of the thurs game, so we need to get that incorrect submission if it occurs
+        const originalPicks = pickData;
+        const databasePicks = data[updatedPickIndex];
+        databasePicks.submission_data.confidencePicks.map(dbPick => {
+          const { matchupId, team, confidence } = dbPick;
+          const originalPickForGame = originalPicks.submission_data.confidencePicks.find(
+            p => p.matchupId === matchupId
+          );
+          if (
+            team === null &&
+            confidence === null &&
+            originalPickForGame.team !== null &&
+            originalPickForGame.confidence !== null
+          ) {
+            dbPick.team = originalPickForGame.team;
+            dbPick.confidence = originalPickForGame.confidence;
+          }
+        });
         return data[updatedPickIndex];
       } else {
         return pickData;
@@ -260,10 +278,12 @@ for (; i < len; i++) {
           weekData.matchups.length,
           isFirstRun
         );
+        team = submissionInfo.confidencePicks[matchIndex].team;
         submissionInfo.confidencePicks[matchIndex].confidence = getLowestRemainingConfPts(
           submissionInfo,
           weekData.matchups.length
         );
+        confidence = submissionInfo.confidencePicks[matchIndex].confidence;
       } else if (team !== null && confidence === null) {
         submissionInfo.confidencePicks[matchIndex].confidence = getLowestRemainingConfPts(
           submissionInfo,
