@@ -172,6 +172,11 @@
   opacity: 1;
 }
 
+.tooltip-active .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 // To make sure printing the users picks all prints to one page
 @media print {
   .section {
