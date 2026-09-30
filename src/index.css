@@ -21721,6 +21721,11 @@ has-background-danger.is-hoverable:active {
   opacity: 1;
 }
 
+.tooltip-active .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media print {
   .section {
     padding: 0px !important;
