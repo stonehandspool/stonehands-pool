@@ -144,6 +144,9 @@ function About() {
                 </li>
                 <li>You may only use each confidence point once per week</li>
                 <li>If you get a game right, you are awarded that many points (1-16)</li>
+                <li>
+                  If a game ends in a tie, you are awarded <b>half</b> the points you assigned to that game
+                </li>
                 <li>There are no restrictions on which teams you can pick</li>
                 <li>The person with the highest confidence point total at the end of the season wins!</li>
                 <li>
@@ -190,6 +193,7 @@ function About() {
                 </li>
                 <li>If you pick correctly you are awarded their margin of victory to your margin total</li>
                 <li>If you pick wrong you lose their margin of defeat from your margin total</li>
+                <li>If your pick ends in a tie you are awarded no points on the week</li>
                 <li>The top 5 players at the end of the season will win!</li>
                 <li>
                   <b>
@@ -217,6 +221,7 @@ function About() {
                     <li>Five Wins = 8 Points</li>
                   </ul>
                 </li>
+                <li>If a team you choose ties in a week, that team as marked as incorrect for scoring purposes</li>
                 <li>There are no restrictions on which teams you can pick</li>
                 <li>The top 5 players at the end of the season will win!</li>
                 <li>
