@@ -155,6 +155,9 @@ const getTeamWithOdds = (matchIndex, matchupInfo, gamesInWeek, firstRun) => {
   if (firstRun) {
     // Since we allow partial picksheets now, we don't allow any free points on the first run (i.e. Thursday game(s))
     return loser;
+  } else if (winner === 'Tie') {
+    // If there was a tie, just return the home team so we ensure the user gets a tie as well
+    return homeTeam;
   }
 
   const pointDiff = gamesInWeek - matchIndex; // Already passed in matchIndex + 1
@@ -362,7 +365,7 @@ for (; i < len; i++) {
     player.marginPicks[player.marginPicks.length - 1].team = marginPick;
   }
 
-  if (pickInfo.id === -1 && !isFirstRun) {
+  if ((pickInfo.id === -1 && !isFirstRun) || marginPick === null) {
     // If the user never submitted a picksheet, ensure that they get the worst possible pick even if this is the last run
     const biggestLoser = findBiggestLoser();
     player.marginPicks[player.marginPicks.length - 1].team = biggestLoser;

@@ -26,8 +26,8 @@ const numGames = resultsFromWeek.length;
 const finalGame = resultsFromWeek.find(match => match.matchupId === `matchup_${numGames}`);
 const finalGameTotal = finalGame.homeScore + finalGame.awayScore;
 
-const highestRiser = { name: '', change: 0 };
-const lowestFaller = { name: '', change: 0 };
+const highestRiser = { name: '', change: 0, last: 0, now: 0 };
+const lowestFaller = { name: '', change: 0, last: 0, now: 0 };
 
 for (let i = 0; i < playerData.length; i++) {
   const player = playerData[i];
@@ -35,19 +35,28 @@ for (let i = 0; i < playerData.length; i++) {
   if (change > highestRiser.change) {
     highestRiser.name = `${player.firstName} ${player.lastName}`;
     highestRiser.change = change;
+    highestRiser.last = player.lastWeekRank;
+    highestRiser.now = player.currentWeekRank;
   }
   if (change < lowestFaller.change) {
     lowestFaller.name = `${player.firstName} ${player.lastName}`;
     lowestFaller.change = change;
+    lowestFaller.last = player.lastWeekRank;
+    lowestFaller.now = player.currentWeekRank;
   }
 }
 
-console.log(`Highest Riser: ${highestRiser.name} | +${highestRiser.change}`);
-console.log(`Lowest Faller: ${lowestFaller.name} | ${lowestFaller.change}`);
+console.log(
+  `Highest Riser: ${highestRiser.name} | +${highestRiser.change} | ${highestRiser.last} -> ${highestRiser.now}`
+);
+console.log(
+  `Lowest Faller: ${lowestFaller.name} | ${lowestFaller.change} | ${lowestFaller.last} -> ${lowestFaller.now}`
+);
 
 const weekAsNum = +week - 1;
 const weeklyResults = [];
 playerData.forEach(player => {
+  // Update the all time stats and then add weekly results for top finishes
   const playerData = {
     id: player.id,
     wins: player.winsByWeek[weekAsNum],
@@ -56,6 +65,16 @@ playerData.forEach(player => {
     points: player.pointsByWeek[weekAsNum],
     tiebreaker: player.tiebreakerByWeek[weekAsNum],
   };
+
+  const uData = allTimeData.find(p => p.id === player.id);
+  if (uData) {
+    uData.totalWins += player.winsByWeek[weekAsNum];
+    uData.totalLosses += player.lossesByWeek[weekAsNum];
+    uData.totalTies += player.tiesByWeek[weekAsNum];
+    uData.totalPoints += player.pointsByWeek[weekAsNum];
+    uData.percent = (uData.totalWins + uData.totalTies / 2) / (uData.totalWins + uData.totalLosses + uData.totalTies);
+  }
+
   weeklyResults.push(playerData);
 });
 
