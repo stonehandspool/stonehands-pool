@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { readFile } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 
 const years = [2023, 2024, 2025, 2026];
 
@@ -13,6 +13,7 @@ for (let i = 0; i < years.length; i++) {
     if (allPlayerInfo.some(p => p.id === player.id)) {
       // update user here
       const user = allPlayerInfo.find(p => p.id === player.id);
+      user.totalSeasons++;
       user.totalWins += player.wins;
       user.totalLosses += player.losses;
       user.totalTies += player.ties;
@@ -23,28 +24,30 @@ for (let i = 0; i < years.length; i++) {
       user.survivorTotalWeeks += player.survivorPicks.length;
       user.marginTotal += player.marginTotal;
       user.highFiveTotal += player.highFiveTotal;
+    } else {
+      // Otherwise, create new object and add to array
+      const newUserInfo = {
+        id: player.id,
+        firstName: player.firstName,
+        lastName: player.lastName,
+        username: player.username,
+        totalSeasons: 1,
+        totalWins: player.wins,
+        totalLosses: player.losses,
+        totalTies: player.ties,
+        percent: player.percent,
+        totalPoints: player.points,
+        bestFinish: player.currentWeekRank,
+        worstFinish: player.currentWeekRank,
+        survivorTotalWeeks: player.survivorPicks.length,
+        marginTotal: player.marginTotal,
+        highFiveTotal: player.highFiveTotal,
+        weeklyWins: 0,
+        weeklyTopFiveFinishes: 0,
+        weeklyTopTenFinishes: 0,
+      };
+      allPlayerInfo.push(newUserInfo);
     }
-
-    // Otherwise, create new object and add to array
-    const newUserInfo = {
-      id: player.id,
-      firstName: player.firstName,
-      lastName: player.lastName,
-      username: player.username,
-      totalWins: player.wins,
-      totalLosses: player.losses,
-      totalTies: player.ties,
-      percent: player.percent,
-      totalPoints: player.points,
-      bestFinish: player.currentWeekRank,
-      worstFinish: player.currentWeekRank,
-      survivorTotalWeeks: player.survivorPicks.length,
-      marginTotal: player.marginTotal,
-      highFiveTotal: player.highFiveTotal,
-      weeklyWins: 0,
-      weeklyTopTenFinishes: 0,
-    };
-    allPlayerInfo.push(newUserInfo);
   });
 
   // Now get the weekly wins and top 10 finishes
@@ -66,6 +69,10 @@ for (let i = 0; i < years.length; i++) {
     const resultsFromWeek = seasonResults.find(week => week.weekId === `week_${i + 1}`).matchups;
     const numGames = resultsFromWeek.length;
     const finalGame = resultsFromWeek.find(match => match.matchupId === `matchup_${numGames}`);
+    if (!finalGame.evaluated) {
+      continue;
+    }
+
     const finalGameTotal = finalGame.homeScore + finalGame.awayScore;
 
     // Now sort them
@@ -74,5 +81,27 @@ for (let i = 0; i < years.length; i++) {
       const row2Tb = Math.abs(finalGameTotal - row2.tiebreaker);
       return row2.points - row1.points || row2.wins - row1.wins || row1Tb - row2Tb;
     });
+
+    for (let j = 0; j < 10; j++) {
+      const player = weeklyResults[j];
+      const uData = allPlayerInfo.find(p => p.id === player.id);
+      if (uData) {
+        if (j === 0) {
+          uData.weeklyWins++;
+          uData.weeklyTopFiveFinishes++;
+          uData.weeklyTopTenFinishes++;
+        } else if (j < 5) {
+          uData.weeklyTopFiveFinishes++;
+          uData.weeklyTopTenFinishes++;
+        } else {
+          uData.weeklyTopTenFinishes++;
+        }
+      } else {
+        console.log('!!! Something went wrong finding a player with id: ', player.id);
+      }
+    }
   }
 }
+
+const asJson = JSON.stringify(allPlayerInfo, null, 2);
+await writeFile(path.resolve(`data/allTime/football/allTimeStats.json`), asJson);
