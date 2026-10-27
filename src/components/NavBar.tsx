@@ -204,6 +204,15 @@ function NavBar() {
                 )}
                 <Link
                   className="navbar-item"
+                  to="/all-time-standings"
+                  onClick={() => {
+                    onLinkClick('more');
+                  }}
+                >
+                  All Time Standings
+                </Link>
+                <Link
+                  className="navbar-item"
                   to="/yearly-awards"
                   onClick={() => {
                     onLinkClick('more');

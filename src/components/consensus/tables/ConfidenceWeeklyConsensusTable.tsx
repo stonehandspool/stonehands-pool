@@ -57,16 +57,18 @@ function ConfidenceWeeklyConsensusTable(props: ConfidenceWeeklyConsensusTablePro
 
   // Now go through every players response and update the consensus info
   weeklyPicks.forEach(pickInfo => {
-    const { submission_data: picks } = pickInfo;
-    for (let i = 0; i < weeksGames.length; i++) {
-      const consensusInfo = weeklyConsensusArr[i];
-      const { team, confidence } = picks.confidencePicks.find(p => p.matchupId === `matchup_${i + 1}`)!;
-      if (team === consensusInfo.homeTeam) {
-        consensusInfo.homeNumPicks++;
-        consensusInfo.homePoints += confidence as number;
-      } else {
-        consensusInfo.awayNumPicks++;
-        consensusInfo.awayPoints += confidence as number;
+    const { id, submission_data: picks } = pickInfo;
+    if (id !== -1) {
+      for (let i = 0; i < weeksGames.length; i++) {
+        const consensusInfo = weeklyConsensusArr[i];
+        const { team, confidence } = picks.confidencePicks.find(p => p.matchupId === `matchup_${i + 1}`)!;
+        if (team === consensusInfo.homeTeam) {
+          consensusInfo.homeNumPicks++;
+          consensusInfo.homePoints += confidence as number;
+        } else {
+          consensusInfo.awayNumPicks++;
+          consensusInfo.awayPoints += confidence as number;
+        }
       }
     }
   });

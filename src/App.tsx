@@ -39,6 +39,7 @@ const Payouts = lazy(() => import('./pages/Payouts'));
 const HallOfFame = lazy(() => import('./pages/HallOfFame'));
 const UserPicks = lazy(() => import('./pages/UserPicks'));
 const AllUserStats = lazy(() => import('./pages/AllUserStats'));
+const AllTimeStandings = lazy(() => import('./pages/AllTimeStandings'));
 
 function App() {
   return (
@@ -80,6 +81,7 @@ function App() {
           <Route path="/payouts" element={<Payouts />} />
           <Route path="/hall-of-fame" element={<HallOfFame />} />
           <Route path="/all-user-stats" element={<AllUserStats />} />
+          <Route path="/all-time-standings" element={<AllTimeStandings />} />
           <Route path="/404" element={<PageNotFound />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

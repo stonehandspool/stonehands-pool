@@ -1,2760 +1,3084 @@
-{
-  "weeks": {
-    "week_1": {
-      "matchup_1": {
-        "home_team": "KC",
-        "away_team": "DET",
+[
+  {
+    "weekId": "week_1",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "DET",
+        "homeTeam": "KC",
         "time": "2023-09-08T00:20:00.000Z",
         "gameInfo": "Thu, Sep 7, 8:20 PM ET - Kansas City, MO",
-        "home_score": 20,
-        "away_score": 21,
+        "awayScore": 21,
+        "homeScore": 20,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "NO",
-        "away_team": "TEN",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "TEN",
+        "homeTeam": "NO",
         "time": "2023-09-10T17:00:00.000Z",
         "gameInfo": "Sun, Sep 10, 1:00 PM ET - New Orleans, LA",
-        "home_score": 16,
-        "away_score": 15,
+        "awayScore": 15,
+        "homeScore": 16,
         "winner": "NO",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "IND",
-        "away_team": "JAC",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "JAC",
+        "homeTeam": "IND",
         "time": "2023-09-10T17:00:00.000Z",
         "gameInfo": "Sun, Sep 10, 1:00 PM ET - Indianapolis, IN",
-        "home_score": 21,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 21,
         "winner": "JAC",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "MIN",
-        "away_team": "TB",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "TB",
+        "homeTeam": "MIN",
         "time": "2023-09-10T17:00:00.000Z",
         "gameInfo": "Sun, Sep 10, 1:00 PM ET - Minneapolis, MN",
-        "home_score": 17,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 17,
         "winner": "TB",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "WAS",
-        "away_team": "ARI",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "ARI",
+        "homeTeam": "WAS",
         "time": "2023-09-10T17:00:00.000Z",
         "gameInfo": "Sun, Sep 10, 1:00 PM ET - Landover, MD",
-        "home_score": 20,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 20,
         "winner": "WAS",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "PIT",
-        "away_team": "SF",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "SF",
+        "homeTeam": "PIT",
         "time": "2023-09-10T17:00:00.000Z",
         "gameInfo": "Sun, Sep 10, 1:00 PM ET - Pittsburgh, PA",
-        "home_score": 7,
-        "away_score": 30,
+        "awayScore": 30,
+        "homeScore": 7,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "CLE",
-        "away_team": "CIN",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "CIN",
+        "homeTeam": "CLE",
         "time": "2023-09-10T17:00:00.000Z",
         "gameInfo": "Sun, Sep 10, 1:00 PM ET - Cleveland, OH",
-        "home_score": 24,
-        "away_score": 3,
+        "awayScore": 3,
+        "homeScore": 24,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "ATL",
-        "away_team": "CAR",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "CAR",
+        "homeTeam": "ATL",
         "time": "2023-09-10T17:00:00.000Z",
         "gameInfo": "Sun, Sep 10, 1:00 PM ET - Atlanta, GA",
-        "home_score": 24,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 24,
         "winner": "ATL",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "BAL",
-        "away_team": "HOU",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "HOU",
+        "homeTeam": "BAL",
         "time": "2023-09-10T17:00:00.000Z",
         "gameInfo": "Sun, Sep 10, 1:00 PM ET - Baltimore, MD",
-        "home_score": 25,
-        "away_score": 9,
+        "awayScore": 9,
+        "homeScore": 25,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "CHI",
-        "away_team": "GB",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "GB",
+        "homeTeam": "CHI",
         "time": "2023-09-10T20:25:00.000Z",
         "gameInfo": "Sun, Sep 10, 4:25 PM ET - Chicago, IL",
-        "home_score": 20,
-        "away_score": 38,
+        "awayScore": 38,
+        "homeScore": 20,
         "winner": "GB",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "NE",
-        "away_team": "PHI",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "PHI",
+        "homeTeam": "NE",
         "time": "2023-09-10T20:25:00.000Z",
         "gameInfo": "Sun, Sep 10, 4:25 PM ET - Foxborough, MA",
-        "home_score": 20,
-        "away_score": 25,
+        "awayScore": 25,
+        "homeScore": 20,
         "winner": "PHI",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "SEA",
-        "away_team": "LA",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "LA",
+        "homeTeam": "SEA",
         "time": "2023-09-10T20:25:00.000Z",
         "gameInfo": "Sun, Sep 10, 4:25 PM ET - Seattle, WA",
-        "home_score": 13,
-        "away_score": 30,
+        "awayScore": 30,
+        "homeScore": 13,
         "winner": "LA",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "LAC",
-        "away_team": "MIA",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "MIA",
+        "homeTeam": "LAC",
         "time": "2023-09-10T20:25:00.000Z",
         "gameInfo": "Sun, Sep 10, 4:25 PM ET - Inglewood, CA",
-        "home_score": 34,
-        "away_score": 36,
+        "awayScore": 36,
+        "homeScore": 34,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "DEN",
-        "away_team": "LV",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "LV",
+        "homeTeam": "DEN",
         "time": "2023-09-10T20:25:00.000Z",
         "gameInfo": "Sun, Sep 10, 4:25 PM ET - Denver, CO",
-        "home_score": 16,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 16,
         "winner": "LV",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "NYG",
-        "away_team": "DAL",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "DAL",
+        "homeTeam": "NYG",
         "time": "2023-09-11T00:20:00.000Z",
         "gameInfo": "Sun, Sep 10, 8:20 PM ET - East Rutherford, NJ",
-        "home_score": 0,
-        "away_score": 40,
+        "awayScore": 40,
+        "homeScore": 0,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_16": {
-        "home_team": "NYJ",
-        "away_team": "BUF",
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "BUF",
+        "homeTeam": "NYJ",
         "time": "2023-09-12T00:15:00.000Z",
         "gameInfo": "Mon, Sep 11, 8:15 PM ET - East Rutherford, NJ",
-        "home_score": 22,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 22,
         "winner": "NYJ",
         "evaluated": true
       }
-    },
-    "week_2": {
-      "matchup_1": {
-        "home_team": "PHI",
-        "away_team": "MIN",
+    ]
+  },
+  {
+    "weekId": "week_2",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "MIN",
+        "homeTeam": "PHI",
         "time": "2023-09-15T00:15:00.000Z",
         "gameInfo": "Thu, Sep 14, 8:15 PM ET - Philadelphia, PA",
-        "home_score": 34,
-        "away_score": 28,
+        "awayScore": 28,
+        "homeScore": 34,
         "winner": "PHI",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "TB",
-        "away_team": "CHI",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "CHI",
+        "homeTeam": "TB",
         "time": "2023-09-17T17:00:00.000Z",
         "gameInfo": "Sun, Sep 17, 1:00 PM ET - Tampa, FL",
-        "home_score": 27,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 27,
         "winner": "TB",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "ATL",
-        "away_team": "GB",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "GB",
+        "homeTeam": "ATL",
         "time": "2023-09-17T17:00:00.000Z",
         "gameInfo": "Sun, Sep 17, 1:00 PM ET - Atlanta, GA",
-        "home_score": 25,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 25,
         "winner": "ATL",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "HOU",
-        "away_team": "IND",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "IND",
+        "homeTeam": "HOU",
         "time": "2023-09-17T17:00:00.000Z",
         "gameInfo": "Sun, Sep 17, 1:00 PM ET - Houston, TX",
-        "home_score": 20,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 20,
         "winner": "IND",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "DET",
-        "away_team": "SEA",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "SEA",
+        "homeTeam": "DET",
         "time": "2023-09-17T17:00:00.000Z",
         "gameInfo": "Sun, Sep 17, 1:00 PM ET - Detroit, MI",
-        "home_score": 31,
-        "away_score": 37,
+        "awayScore": 37,
+        "homeScore": 31,
         "winner": "SEA",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "TEN",
-        "away_team": "LAC",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "LAC",
+        "homeTeam": "TEN",
         "time": "2023-09-17T17:00:00.000Z",
         "gameInfo": "Sun, Sep 17, 1:00 PM ET - Nashville, TN",
-        "home_score": 27,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 27,
         "winner": "TEN",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "CIN",
-        "away_team": "BAL",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "BAL",
+        "homeTeam": "CIN",
         "time": "2023-09-17T17:00:00.000Z",
         "gameInfo": "Sun, Sep 17, 1:00 PM ET - Cincinnati, OH",
-        "home_score": 24,
-        "away_score": 27,
+        "awayScore": 27,
+        "homeScore": 24,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "BUF",
-        "away_team": "LV",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "LV",
+        "homeTeam": "BUF",
         "time": "2023-09-17T17:00:00.000Z",
         "gameInfo": "Sun, Sep 17, 1:00 PM ET - Orchard Park, NY",
-        "home_score": 38,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 38,
         "winner": "BUF",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "JAC",
-        "away_team": "KC",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "KC",
+        "homeTeam": "JAC",
         "time": "2023-09-17T17:00:00.000Z",
         "gameInfo": "Sun, Sep 17, 1:00 PM ET - Jacksonville, FL",
-        "home_score": 9,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 9,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "LA",
-        "away_team": "SF",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "SF",
+        "homeTeam": "LA",
         "time": "2023-09-17T20:05:00.000Z",
         "gameInfo": "Sun, Sep 17, 4:05 PM ET - Inglewood, CA",
-        "home_score": 23,
-        "away_score": 30,
+        "awayScore": 30,
+        "homeScore": 23,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "ARI",
-        "away_team": "NYG",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "NYG",
+        "homeTeam": "ARI",
         "time": "2023-09-17T20:05:00.000Z",
         "gameInfo": "Sun, Sep 17, 4:05 PM ET - Glendale, AZ",
-        "home_score": 28,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 28,
         "winner": "NYG",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "DAL",
-        "away_team": "NYJ",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "NYJ",
+        "homeTeam": "DAL",
         "time": "2023-09-17T20:25:00.000Z",
         "gameInfo": "Sun, Sep 17, 4:25 PM ET - Arlington, TX",
-        "home_score": 30,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 30,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "DEN",
-        "away_team": "WAS",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "WAS",
+        "homeTeam": "DEN",
         "time": "2023-09-17T20:25:00.000Z",
         "gameInfo": "Sun, Sep 17, 4:25 PM ET - Denver, CO",
-        "home_score": 33,
-        "away_score": 35,
+        "awayScore": 35,
+        "homeScore": 33,
         "winner": "WAS",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "NE",
-        "away_team": "MIA",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "MIA",
+        "homeTeam": "NE",
         "time": "2023-09-18T00:20:00.000Z",
         "gameInfo": "Sun, Sep 17, 8:20 PM ET - Foxborough, MA",
-        "home_score": 17,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 17,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "CAR",
-        "away_team": "NO",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "NO",
+        "homeTeam": "CAR",
         "time": "2023-09-18T23:15:00.000Z",
         "gameInfo": "Mon, Sep 18, 7:15 PM ET - Charlotte, NC",
-        "home_score": 17,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 17,
         "winner": "NO",
         "evaluated": true
       },
-      "matchup_16": {
-        "home_team": "PIT",
-        "away_team": "CLE",
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "CLE",
+        "homeTeam": "PIT",
         "time": "2023-09-19T00:15:00.000Z",
         "gameInfo": "Mon, Sep 18, 8:15 PM ET - Pittsburgh, PA",
-        "home_score": 26,
-        "away_score": 22,
+        "awayScore": 22,
+        "homeScore": 26,
         "winner": "PIT",
         "evaluated": true
       }
-    },
-    "week_3": {
-      "matchup_1": {
-        "home_team": "SF",
-        "away_team": "NYG",
+    ]
+  },
+  {
+    "weekId": "week_3",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "NYG",
+        "homeTeam": "SF",
         "time": "2023-09-22T00:15:00.000Z",
         "gameInfo": "Thu, Sep 21, 8:15 PM ET - Santa Clara, CA",
-        "home_score": 30,
-        "away_score": 12,
+        "awayScore": 12,
+        "homeScore": 30,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "BAL",
-        "away_team": "IND",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "IND",
+        "homeTeam": "BAL",
         "time": "2023-09-24T17:00:00.000Z",
         "gameInfo": "Sun, Sep 24, 1:00 PM ET - Baltimore, MD",
-        "home_score": 19,
-        "away_score": 22,
+        "awayScore": 22,
+        "homeScore": 19,
         "winner": "IND",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "MIA",
-        "away_team": "DEN",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "DEN",
+        "homeTeam": "MIA",
         "time": "2023-09-24T17:00:00.000Z",
         "gameInfo": "Sun, Sep 24, 1:00 PM ET - Miami Gardens, FL",
-        "home_score": 70,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 70,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "NYJ",
-        "away_team": "NE",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "NE",
+        "homeTeam": "NYJ",
         "time": "2023-09-24T17:00:00.000Z",
         "gameInfo": "Sun, Sep 24, 1:00 PM ET - East Rutherford, NJ",
-        "home_score": 10,
-        "away_score": 15,
+        "awayScore": 15,
+        "homeScore": 10,
         "winner": "NE",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "JAC",
-        "away_team": "HOU",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "HOU",
+        "homeTeam": "JAC",
         "time": "2023-09-24T17:00:00.000Z",
         "gameInfo": "Sun, Sep 24, 1:00 PM ET - Jacksonville, FL",
-        "home_score": 17,
-        "away_score": 37,
+        "awayScore": 37,
+        "homeScore": 17,
         "winner": "HOU",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "CLE",
-        "away_team": "TEN",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "TEN",
+        "homeTeam": "CLE",
         "time": "2023-09-24T17:00:00.000Z",
         "gameInfo": "Sun, Sep 24, 1:00 PM ET - Cleveland, OH",
-        "home_score": 27,
-        "away_score": 3,
+        "awayScore": 3,
+        "homeScore": 27,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "DET",
-        "away_team": "ATL",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "ATL",
+        "homeTeam": "DET",
         "time": "2023-09-24T17:00:00.000Z",
         "gameInfo": "Sun, Sep 24, 1:00 PM ET - Detroit, MI",
-        "home_score": 20,
-        "away_score": 6,
+        "awayScore": 6,
+        "homeScore": 20,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "GB",
-        "away_team": "NO",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "NO",
+        "homeTeam": "GB",
         "time": "2023-09-24T17:00:00.000Z",
         "gameInfo": "Sun, Sep 24, 1:00 PM ET - Green Bay, WI",
-        "home_score": 18,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 18,
         "winner": "GB",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "WAS",
-        "away_team": "BUF",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "BUF",
+        "homeTeam": "WAS",
         "time": "2023-09-24T17:00:00.000Z",
         "gameInfo": "Sun, Sep 24, 1:00 PM ET - Landover, MD",
-        "home_score": 3,
-        "away_score": 37,
+        "awayScore": 37,
+        "homeScore": 3,
         "winner": "BUF",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "MIN",
-        "away_team": "LAC",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "LAC",
+        "homeTeam": "MIN",
         "time": "2023-09-24T17:00:00.000Z",
         "gameInfo": "Sun, Sep 24, 1:00 PM ET - Minneapolis, MN",
-        "home_score": 24,
-        "away_score": 28,
+        "awayScore": 28,
+        "homeScore": 24,
         "winner": "LAC",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "SEA",
-        "away_team": "CAR",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "CAR",
+        "homeTeam": "SEA",
         "time": "2023-09-24T20:05:00.000Z",
         "gameInfo": "Sun, Sep 24, 4:05 PM ET - Seattle, WA",
-        "home_score": 37,
-        "away_score": 27,
+        "awayScore": 27,
+        "homeScore": 37,
         "winner": "SEA",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "KC",
-        "away_team": "CHI",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "CHI",
+        "homeTeam": "KC",
         "time": "2023-09-24T20:25:00.000Z",
         "gameInfo": "Sun, Sep 24, 4:25 PM ET - Kansas City, MO",
-        "home_score": 41,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 41,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "ARI",
-        "away_team": "DAL",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "DAL",
+        "homeTeam": "ARI",
         "time": "2023-09-24T20:25:00.000Z",
         "gameInfo": "Sun, Sep 24, 4:25 PM ET - Glendale, AZ",
-        "home_score": 28,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 28,
         "winner": "ARI",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "LV",
-        "away_team": "PIT",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "PIT",
+        "homeTeam": "LV",
         "time": "2023-09-25T00:20:00.000Z",
         "gameInfo": "Sun, Sep 24, 8:20 PM ET - Las Vegas, NV",
-        "home_score": 18,
-        "away_score": 23,
+        "awayScore": 23,
+        "homeScore": 18,
         "winner": "PIT",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "TB",
-        "away_team": "PHI",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "PHI",
+        "homeTeam": "TB",
         "time": "2023-09-25T23:15:00.000Z",
         "gameInfo": "Mon, Sep 25, 7:15 PM ET - Tampa, FL",
-        "home_score": 11,
-        "away_score": 25,
+        "awayScore": 25,
+        "homeScore": 11,
         "winner": "PHI",
         "evaluated": true
       },
-      "matchup_16": {
-        "home_team": "CIN",
-        "away_team": "LA",
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "LA",
+        "homeTeam": "CIN",
         "time": "2023-09-26T00:15:00.000Z",
         "gameInfo": "Mon, Sep 25, 8:15 PM ET - Cincinnati, OH",
-        "home_score": 19,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 19,
         "winner": "CIN",
         "evaluated": true
       }
-    },
-    "week_4": {
-      "matchup_1": {
-        "home_team": "GB",
-        "away_team": "DET",
+    ]
+  },
+  {
+    "weekId": "week_4",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "DET",
+        "homeTeam": "GB",
         "time": "2023-09-29T00:15:00.000Z",
         "gameInfo": "Thu, Sep 28, 8:15 PM ET - Green Bay, WI",
-        "home_score": 20,
-        "away_score": 34,
+        "awayScore": 34,
+        "homeScore": 20,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "JAC",
-        "away_team": "ATL",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "ATL",
+        "homeTeam": "JAC",
         "time": "2023-10-01T13:30:00.000Z",
         "gameInfo": "Sun, Oct 1, 9:30 AM ET - London, UK",
-        "home_score": 23,
-        "away_score": 7,
+        "awayScore": 7,
+        "homeScore": 23,
         "winner": "JAC",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "HOU",
-        "away_team": "PIT",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "PIT",
+        "homeTeam": "HOU",
         "time": "2023-10-01T17:00:00.000Z",
         "gameInfo": "Sun, Oct 1, 1:00 PM ET - Houston, TX",
-        "home_score": 30,
-        "away_score": 6,
+        "awayScore": 6,
+        "homeScore": 30,
         "winner": "HOU",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "IND",
-        "away_team": "LA",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "LA",
+        "homeTeam": "IND",
         "time": "2023-10-01T17:00:00.000Z",
         "gameInfo": "Sun, Oct 1, 1:00 PM ET - Indianapolis, IN",
-        "home_score": 23,
-        "away_score": 29,
+        "awayScore": 29,
+        "homeScore": 23,
         "winner": "LA",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "CAR",
-        "away_team": "MIN",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "MIN",
+        "homeTeam": "CAR",
         "time": "2023-10-01T17:00:00.000Z",
         "gameInfo": "Sun, Oct 1, 1:00 PM ET - Charlotte, NC",
-        "home_score": 13,
-        "away_score": 21,
+        "awayScore": 21,
+        "homeScore": 13,
         "winner": "MIN",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "NO",
-        "away_team": "TB",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "TB",
+        "homeTeam": "NO",
         "time": "2023-10-01T17:00:00.000Z",
         "gameInfo": "Sun, Oct 1, 1:00 PM ET - New Orleans, LA",
-        "home_score": 9,
-        "away_score": 26,
+        "awayScore": 26,
+        "homeScore": 9,
         "winner": "TB",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "PHI",
-        "away_team": "WAS",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "WAS",
+        "homeTeam": "PHI",
         "time": "2023-10-01T17:00:00.000Z",
         "gameInfo": "Sun, Oct 1, 1:00 PM ET - Philadelphia, PA",
-        "home_score": 34,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 34,
         "winner": "PHI",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "BUF",
-        "away_team": "MIA",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "MIA",
+        "homeTeam": "BUF",
         "time": "2023-10-01T17:00:00.000Z",
         "gameInfo": "Sun, Oct 1, 1:00 PM ET - Orchard Park, NY",
-        "home_score": 48,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 48,
         "winner": "BUF",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "TEN",
-        "away_team": "CIN",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "CIN",
+        "homeTeam": "TEN",
         "time": "2023-10-01T17:00:00.000Z",
         "gameInfo": "Sun, Oct 1, 1:00 PM ET - Nashville, TN",
-        "home_score": 27,
-        "away_score": 3,
+        "awayScore": 3,
+        "homeScore": 27,
         "winner": "TEN",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "CLE",
-        "away_team": "BAL",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "BAL",
+        "homeTeam": "CLE",
         "time": "2023-10-01T17:00:00.000Z",
         "gameInfo": "Sun, Oct 1, 1:00 PM ET - Cleveland, OH",
-        "home_score": 3,
-        "away_score": 28,
+        "awayScore": 28,
+        "homeScore": 3,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "CHI",
-        "away_team": "DEN",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "DEN",
+        "homeTeam": "CHI",
         "time": "2023-10-01T17:00:00.000Z",
         "gameInfo": "Sun, Oct 1, 1:00 PM ET - Chicago, IL",
-        "home_score": 28,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 28,
         "winner": "DEN",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "LAC",
-        "away_team": "LV",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "LV",
+        "homeTeam": "LAC",
         "time": "2023-10-01T20:05:00.000Z",
         "gameInfo": "Sun, Oct 1, 4:05 PM ET - Inglewood, CA",
-        "home_score": 24,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 24,
         "winner": "LAC",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "DAL",
-        "away_team": "NE",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "NE",
+        "homeTeam": "DAL",
         "time": "2023-10-01T20:25:00.000Z",
         "gameInfo": "Sun, Oct 1, 4:25 PM ET - Arlington, TX",
-        "home_score": 38,
-        "away_score": 3,
+        "awayScore": 3,
+        "homeScore": 38,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "SF",
-        "away_team": "ARI",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "ARI",
+        "homeTeam": "SF",
         "time": "2023-10-01T20:25:00.000Z",
         "gameInfo": "Sun, Oct 1, 4:25 PM ET - Santa Clara, CA",
-        "home_score": 35,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 35,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "NYJ",
-        "away_team": "KC",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "KC",
+        "homeTeam": "NYJ",
         "time": "2023-10-02T00:20:00.000Z",
         "gameInfo": "Sun, Oct 1, 8:20 PM ET - East Rutherford, NJ",
-        "home_score": 20,
-        "away_score": 23,
+        "awayScore": 23,
+        "homeScore": 20,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_16": {
-        "home_team": "NYG",
-        "away_team": "SEA",
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "SEA",
+        "homeTeam": "NYG",
         "time": "2023-10-03T00:15:00.000Z",
         "gameInfo": "Mon, Oct 2, 8:15 PM ET - East Rutherford, NJ",
-        "home_score": 3,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 3,
         "winner": "SEA",
         "evaluated": true
       }
-    },
-    "week_5": {
-      "matchup_1": {
-        "home_team": "WAS",
-        "away_team": "CHI",
+    ]
+  },
+  {
+    "weekId": "week_5",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "CHI",
+        "homeTeam": "WAS",
         "time": "2023-10-06T00:15:00.000Z",
         "gameInfo": "Thu, Oct 5, 8:15 PM ET - Landover, MD",
-        "home_score": 20,
-        "away_score": 40,
+        "awayScore": 40,
+        "homeScore": 20,
         "winner": "CHI",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "BUF",
-        "away_team": "JAC",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "JAC",
+        "homeTeam": "BUF",
         "time": "2023-10-08T13:30:00.000Z",
         "gameInfo": "Sun, Oct 8, 9:30 AM ET - London, UK",
-        "home_score": 20,
-        "away_score": 25,
+        "awayScore": 25,
+        "homeScore": 20,
         "winner": "JAC",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "IND",
-        "away_team": "TEN",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "TEN",
+        "homeTeam": "IND",
         "time": "2023-10-08T17:00:00.000Z",
         "gameInfo": "Sun, Oct 8, 1:00 PM ET - Indianapolis, IN",
-        "home_score": 23,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 23,
         "winner": "IND",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "ATL",
-        "away_team": "HOU",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "HOU",
+        "homeTeam": "ATL",
         "time": "2023-10-08T17:00:00.000Z",
         "gameInfo": "Sun, Oct 8, 1:00 PM ET - Atlanta, GA",
-        "home_score": 21,
-        "away_score": 19,
+        "awayScore": 19,
+        "homeScore": 21,
         "winner": "ATL",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "DET",
-        "away_team": "CAR",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "CAR",
+        "homeTeam": "DET",
         "time": "2023-10-08T17:00:00.000Z",
         "gameInfo": "Sun, Oct 8, 1:00 PM ET - Detroit, MI",
-        "home_score": 42,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 42,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "PIT",
-        "away_team": "BAL",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "BAL",
+        "homeTeam": "PIT",
         "time": "2023-10-08T17:00:00.000Z",
         "gameInfo": "Sun, Oct 8, 1:00 PM ET - Pittsburgh, PA",
-        "home_score": 17,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 17,
         "winner": "PIT",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "NE",
-        "away_team": "NO",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "NO",
+        "homeTeam": "NE",
         "time": "2023-10-08T17:00:00.000Z",
         "gameInfo": "Sun, Oct 8, 1:00 PM ET - Foxborough, MA",
-        "home_score": 0,
-        "away_score": 34,
+        "awayScore": 34,
+        "homeScore": 0,
         "winner": "NO",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "MIA",
-        "away_team": "NYG",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "NYG",
+        "homeTeam": "MIA",
         "time": "2023-10-08T17:00:00.000Z",
         "gameInfo": "Sun, Oct 8, 1:00 PM ET - Miami Gardens, FL",
-        "home_score": 31,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 31,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "LA",
-        "away_team": "PHI",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "PHI",
+        "homeTeam": "LA",
         "time": "2023-10-08T20:05:00.000Z",
         "gameInfo": "Sun, Oct 8, 4:05 PM ET - Inglewood, CA",
-        "home_score": 14,
-        "away_score": 23,
+        "awayScore": 23,
+        "homeScore": 14,
         "winner": "PHI",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "ARI",
-        "away_team": "CIN",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "CIN",
+        "homeTeam": "ARI",
         "time": "2023-10-08T20:05:00.000Z",
         "gameInfo": "Sun, Oct 8, 4:05 PM ET - Glendale, AZ",
-        "home_score": 20,
-        "away_score": 34,
+        "awayScore": 34,
+        "homeScore": 20,
         "winner": "CIN",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "DEN",
-        "away_team": "NYJ",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "NYJ",
+        "homeTeam": "DEN",
         "time": "2023-10-08T20:25:00.000Z",
         "gameInfo": "Sun, Oct 8, 4:25 PM ET - Denver, CO",
-        "home_score": 21,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 21,
         "winner": "NYJ",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "MIN",
-        "away_team": "KC",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "KC",
+        "homeTeam": "MIN",
         "time": "2023-10-08T20:25:00.000Z",
         "gameInfo": "Sun, Oct 8, 4:25 PM ET - Minneapolis, MN",
-        "home_score": 20,
-        "away_score": 27,
+        "awayScore": 27,
+        "homeScore": 20,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "SF",
-        "away_team": "DAL",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "DAL",
+        "homeTeam": "SF",
         "time": "2023-10-09T00:20:00.000Z",
         "gameInfo": "Sun, Oct 8, 8:20 PM ET - Santa Clara, CA",
-        "home_score": 42,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 42,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "LV",
-        "away_team": "GB",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "GB",
+        "homeTeam": "LV",
         "time": "2023-10-10T00:15:00.000Z",
         "gameInfo": "Mon, Oct 9, 8:15 PM ET - Las Vegas, NV",
-        "home_score": 17,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 17,
         "winner": "LV",
         "evaluated": true
       }
-    },
-    "week_6": {
-      "matchup_1": {
-        "home_team": "KC",
-        "away_team": "DEN",
+    ]
+  },
+  {
+    "weekId": "week_6",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "DEN",
+        "homeTeam": "KC",
         "time": "2023-10-13T00:15:00.000Z",
         "gameInfo": "Thu, Oct 12, 8:15 PM ET - Kansas City, MO",
-        "home_score": 19,
-        "away_score": 8,
+        "awayScore": 8,
+        "homeScore": 19,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "TEN",
-        "away_team": "BAL",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "BAL",
+        "homeTeam": "TEN",
         "time": "2023-10-15T13:30:00.000Z",
         "gameInfo": "Sun, Oct 15, 9:30 AM ET - London, UK",
-        "home_score": 16,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 16,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "ATL",
-        "away_team": "WAS",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "WAS",
+        "homeTeam": "ATL",
         "time": "2023-10-15T17:00:00.000Z",
         "gameInfo": "Sun, Oct 15, 1:00 PM ET - Atlanta, GA",
-        "home_score": 16,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 16,
         "winner": "WAS",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "TB",
-        "away_team": "DET",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "DET",
+        "homeTeam": "TB",
         "time": "2023-10-15T17:00:00.000Z",
         "gameInfo": "Sun, Oct 15, 1:00 PM ET - Tampa, FL",
-        "home_score": 6,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 6,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "CLE",
-        "away_team": "SF",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "SF",
+        "homeTeam": "CLE",
         "time": "2023-10-15T17:00:00.000Z",
         "gameInfo": "Sun, Oct 15, 1:00 PM ET - Cleveland, OH",
-        "home_score": 19,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 19,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "HOU",
-        "away_team": "NO",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "NO",
+        "homeTeam": "HOU",
         "time": "2023-10-15T17:00:00.000Z",
         "gameInfo": "Sun, Oct 15, 1:00 PM ET - Houston, TX",
-        "home_score": 20,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 20,
         "winner": "HOU",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "MIA",
-        "away_team": "CAR",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "CAR",
+        "homeTeam": "MIA",
         "time": "2023-10-15T17:00:00.000Z",
         "gameInfo": "Sun, Oct 15, 1:00 PM ET - Miami Gardens, FL",
-        "home_score": 42,
-        "away_score": 21,
+        "awayScore": 21,
+        "homeScore": 42,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "CIN",
-        "away_team": "SEA",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "SEA",
+        "homeTeam": "CIN",
         "time": "2023-10-15T17:00:00.000Z",
         "gameInfo": "Sun, Oct 15, 1:00 PM ET - Cincinnati, OH",
-        "home_score": 17,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 17,
         "winner": "CIN",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "JAC",
-        "away_team": "IND",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "IND",
+        "homeTeam": "JAC",
         "time": "2023-10-15T17:00:00.000Z",
         "gameInfo": "Sun, Oct 15, 1:00 PM ET - Jacksonville, FL",
-        "home_score": 37,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 37,
         "winner": "JAC",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "CHI",
-        "away_team": "MIN",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "MIN",
+        "homeTeam": "CHI",
         "time": "2023-10-15T17:00:00.000Z",
         "gameInfo": "Sun, Oct 15, 1:00 PM ET - Chicago, IL",
-        "home_score": 13,
-        "away_score": 19,
+        "awayScore": 19,
+        "homeScore": 13,
         "winner": "MIN",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "LV",
-        "away_team": "NE",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "NE",
+        "homeTeam": "LV",
         "time": "2023-10-15T20:05:00.000Z",
         "gameInfo": "Sun, Oct 15, 4:05 PM ET - Las Vegas, NV",
-        "home_score": 21,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 21,
         "winner": "LV",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "LA",
-        "away_team": "ARI",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "ARI",
+        "homeTeam": "LA",
         "time": "2023-10-15T20:25:00.000Z",
         "gameInfo": "Sun, Oct 15, 4:25 PM ET - Inglewood, CA",
-        "home_score": 26,
-        "away_score": 9,
+        "awayScore": 9,
+        "homeScore": 26,
         "winner": "LA",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "NYJ",
-        "away_team": "PHI",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "PHI",
+        "homeTeam": "NYJ",
         "time": "2023-10-15T20:25:00.000Z",
         "gameInfo": "Sun, Oct 15, 4:25 PM ET - East Rutherford, NJ",
-        "home_score": 20,
-        "away_score": 14,
+        "awayScore": 14,
+        "homeScore": 20,
         "winner": "NYJ",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "BUF",
-        "away_team": "NYG",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "NYG",
+        "homeTeam": "BUF",
         "time": "2023-10-16T00:20:00.000Z",
         "gameInfo": "Sun, Oct 15, 8:20 PM ET - Orchard Park, NY",
-        "home_score": 14,
-        "away_score": 9,
+        "awayScore": 9,
+        "homeScore": 14,
         "winner": "BUF",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "LAC",
-        "away_team": "DAL",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "DAL",
+        "homeTeam": "LAC",
         "time": "2023-10-17T00:15:00.000Z",
         "gameInfo": "Mon, Oct 16, 8:15 PM ET - Inglewood, CA",
-        "home_score": 17,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 17,
         "winner": "DAL",
         "evaluated": true
       }
-    },
-    "week_7": {
-      "matchup_1": {
-        "home_team": "NO",
-        "away_team": "JAC",
+    ]
+  },
+  {
+    "weekId": "week_7",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "JAC",
+        "homeTeam": "NO",
         "time": "2023-10-20T00:15:00.000Z",
         "gameInfo": "Thu, Oct 19, 8:15 PM ET - New Orleans, LA",
-        "home_score": 24,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 24,
         "winner": "JAC",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "BAL",
-        "away_team": "DET",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "DET",
+        "homeTeam": "BAL",
         "time": "2023-10-22T17:00:00.000Z",
         "gameInfo": "Sun, Oct 22, 1:00 PM ET - Baltimore, MD",
-        "home_score": 38,
-        "away_score": 6,
+        "awayScore": 6,
+        "homeScore": 38,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "TB",
-        "away_team": "ATL",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "ATL",
+        "homeTeam": "TB",
         "time": "2023-10-22T17:00:00.000Z",
         "gameInfo": "Sun, Oct 22, 1:00 PM ET - Tampa, FL",
-        "home_score": 13,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 13,
         "winner": "ATL",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "NYG",
-        "away_team": "WAS",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "WAS",
+        "homeTeam": "NYG",
         "time": "2023-10-22T17:00:00.000Z",
         "gameInfo": "Sun, Oct 22, 1:00 PM ET - East Rutherford, NJ",
-        "home_score": 14,
-        "away_score": 7,
+        "awayScore": 7,
+        "homeScore": 14,
         "winner": "NYG",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "CHI",
-        "away_team": "LV",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "LV",
+        "homeTeam": "CHI",
         "time": "2023-10-22T17:00:00.000Z",
         "gameInfo": "Sun, Oct 22, 1:00 PM ET - Chicago, IL",
-        "home_score": 30,
-        "away_score": 12,
+        "awayScore": 12,
+        "homeScore": 30,
         "winner": "CHI",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "NE",
-        "away_team": "BUF",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "BUF",
+        "homeTeam": "NE",
         "time": "2023-10-22T17:00:00.000Z",
         "gameInfo": "Sun, Oct 22, 1:00 PM ET - Foxborough, MA",
-        "home_score": 29,
-        "away_score": 25,
+        "awayScore": 25,
+        "homeScore": 29,
         "winner": "NE",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "IND",
-        "away_team": "CLE",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "CLE",
+        "homeTeam": "IND",
         "time": "2023-10-22T17:00:00.000Z",
         "gameInfo": "Sun, Oct 22, 1:00 PM ET - Indianapolis, IN",
-        "home_score": 38,
-        "away_score": 39,
+        "awayScore": 39,
+        "homeScore": 38,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "LA",
-        "away_team": "PIT",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "PIT",
+        "homeTeam": "LA",
         "time": "2023-10-22T20:05:00.000Z",
         "gameInfo": "Sun, Oct 22, 4:05 PM ET - Inglewood, CA",
-        "home_score": 17,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 17,
         "winner": "PIT",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "SEA",
-        "away_team": "ARI",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "ARI",
+        "homeTeam": "SEA",
         "time": "2023-10-22T20:05:00.000Z",
         "gameInfo": "Sun, Oct 22, 4:05 PM ET - Seattle, WA",
-        "home_score": 20,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 20,
         "winner": "SEA",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "KC",
-        "away_team": "LAC",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "LAC",
+        "homeTeam": "KC",
         "time": "2023-10-22T20:25:00.000Z",
         "gameInfo": "Sun, Oct 22, 4:25 PM ET - Kansas City, MO",
-        "home_score": 31,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 31,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "DEN",
-        "away_team": "GB",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "GB",
+        "homeTeam": "DEN",
         "time": "2023-10-22T20:25:00.000Z",
         "gameInfo": "Sun, Oct 22, 4:25 PM ET - Denver, CO",
-        "home_score": 19,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 19,
         "winner": "DEN",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "PHI",
-        "away_team": "MIA",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "MIA",
+        "homeTeam": "PHI",
         "time": "2023-10-23T00:20:00.000Z",
         "gameInfo": "Sun, Oct 22, 8:20 PM ET - Philadelphia, PA",
-        "home_score": 31,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 31,
         "winner": "PHI",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "MIN",
-        "away_team": "SF",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "SF",
+        "homeTeam": "MIN",
         "time": "2023-10-24T00:15:00.000Z",
         "gameInfo": "Mon, Oct 23, 8:15 PM ET - Minneapolis, MN",
-        "home_score": 22,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 22,
         "winner": "MIN",
         "evaluated": true
       }
-    },
-    "week_8": {
-      "matchup_1": {
-        "home_team": "BUF",
-        "away_team": "TB",
+    ]
+  },
+  {
+    "weekId": "week_8",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "TB",
+        "homeTeam": "BUF",
         "time": "2023-10-27T00:15:00.000Z",
         "gameInfo": "Thu, Oct 26, 8:15 PM ET - Orchard Park, NY",
-        "home_score": 24,
-        "away_score": 18,
+        "awayScore": 18,
+        "homeScore": 24,
         "winner": "BUF",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "WAS",
-        "away_team": "PHI",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "PHI",
+        "homeTeam": "WAS",
         "time": "2023-10-29T17:00:00.000Z",
         "gameInfo": "Sun, Oct 29, 1:00 PM ET - Landover, MD",
-        "home_score": 31,
-        "away_score": 38,
+        "awayScore": 38,
+        "homeScore": 31,
         "winner": "PHI",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "IND",
-        "away_team": "NO",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "NO",
+        "homeTeam": "IND",
         "time": "2023-10-29T17:00:00.000Z",
         "gameInfo": "Sun, Oct 29, 1:00 PM ET - Indianapolis, IN",
-        "home_score": 27,
-        "away_score": 38,
+        "awayScore": 38,
+        "homeScore": 27,
         "winner": "NO",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "PIT",
-        "away_team": "JAC",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "JAC",
+        "homeTeam": "PIT",
         "time": "2023-10-29T17:00:00.000Z",
         "gameInfo": "Sun, Oct 29, 1:00 PM ET - Pittsburgh, PA",
-        "home_score": 10,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 10,
         "winner": "JAC",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "NYG",
-        "away_team": "NYJ",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "NYJ",
+        "homeTeam": "NYG",
         "time": "2023-10-29T17:00:00.000Z",
         "gameInfo": "Sun, Oct 29, 1:00 PM ET - East Rutherford, NJ",
-        "home_score": 10,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 10,
         "winner": "NYJ",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "CAR",
-        "away_team": "HOU",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "HOU",
+        "homeTeam": "CAR",
         "time": "2023-10-29T17:00:00.000Z",
         "gameInfo": "Sun, Oct 29, 1:00 PM ET - Charlotte, NC",
-        "home_score": 15,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 15,
         "winner": "CAR",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "MIA",
-        "away_team": "NE",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "NE",
+        "homeTeam": "MIA",
         "time": "2023-10-29T17:00:00.000Z",
         "gameInfo": "Sun, Oct 29, 1:00 PM ET - Miami Gardens, FL",
-        "home_score": 31,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 31,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "TEN",
-        "away_team": "ATL",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "ATL",
+        "homeTeam": "TEN",
         "time": "2023-10-29T17:00:00.000Z",
         "gameInfo": "Sun, Oct 29, 1:00 PM ET - Nashville, TN",
-        "home_score": 28,
-        "away_score": 23,
+        "awayScore": 23,
+        "homeScore": 28,
         "winner": "TEN",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "GB",
-        "away_team": "MIN",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "MIN",
+        "homeTeam": "GB",
         "time": "2023-10-29T17:00:00.000Z",
         "gameInfo": "Sun, Oct 29, 1:00 PM ET - Green Bay, WI",
-        "home_score": 10,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 10,
         "winner": "MIN",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "DAL",
-        "away_team": "LA",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "LA",
+        "homeTeam": "DAL",
         "time": "2023-10-29T17:00:00.000Z",
         "gameInfo": "Sun, Oct 29, 1:00 PM ET - Arlington, TX",
-        "home_score": 43,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 43,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "SEA",
-        "away_team": "CLE",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "CLE",
+        "homeTeam": "SEA",
         "time": "2023-10-29T20:05:00.000Z",
         "gameInfo": "Sun, Oct 29, 4:05 PM ET - Seattle, WA",
-        "home_score": 24,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 24,
         "winner": "SEA",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "DEN",
-        "away_team": "KC",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "KC",
+        "homeTeam": "DEN",
         "time": "2023-10-29T20:25:00.000Z",
         "gameInfo": "Sun, Oct 29, 4:25 PM ET - Denver, CO",
-        "home_score": 24,
-        "away_score": 9,
+        "awayScore": 9,
+        "homeScore": 24,
         "winner": "DEN",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "SF",
-        "away_team": "CIN",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "CIN",
+        "homeTeam": "SF",
         "time": "2023-10-29T20:25:00.000Z",
         "gameInfo": "Sun, Oct 29, 4:25 PM ET - Santa Clara, CA",
-        "home_score": 17,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 17,
         "winner": "CIN",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "ARI",
-        "away_team": "BAL",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "BAL",
+        "homeTeam": "ARI",
         "time": "2023-10-29T20:25:00.000Z",
         "gameInfo": "Sun, Oct 29, 4:25 PM ET - Glendale, AZ",
-        "home_score": 24,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 24,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "LAC",
-        "away_team": "CHI",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "CHI",
+        "homeTeam": "LAC",
         "time": "2023-10-30T00:20:00.000Z",
         "gameInfo": "Sun, Oct 29, 8:20 PM ET - Inglewood, CA",
-        "home_score": 30,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 30,
         "winner": "LAC",
         "evaluated": true
       },
-      "matchup_16": {
-        "home_team": "DET",
-        "away_team": "LV",
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "LV",
+        "homeTeam": "DET",
         "time": "2023-10-31T00:15:00.000Z",
         "gameInfo": "Mon, Oct 30, 8:15 PM ET - Detroit, MI",
-        "home_score": 26,
-        "away_score": 14,
+        "awayScore": 14,
+        "homeScore": 26,
         "winner": "DET",
         "evaluated": true
       }
-    },
-    "week_9": {
-      "matchup_1": {
-        "home_team": "PIT",
-        "away_team": "TEN",
+    ]
+  },
+  {
+    "weekId": "week_9",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "TEN",
+        "homeTeam": "PIT",
         "time": "2023-11-03T00:15:00.000Z",
         "gameInfo": "Thu, Nov 2, 8:15 PM ET - Pittsburgh, PA",
-        "home_score": 20,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 20,
         "winner": "PIT",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "KC",
-        "away_team": "MIA",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "MIA",
+        "homeTeam": "KC",
         "time": "2023-11-05T14:30:00.000Z",
         "gameInfo": "Sun, Nov 5, 9:30 AM ET - Frankfurt, DE",
-        "home_score": 21,
-        "away_score": 14,
+        "awayScore": 14,
+        "homeScore": 21,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "ATL",
-        "away_team": "MIN",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "MIN",
+        "homeTeam": "ATL",
         "time": "2023-11-05T18:00:00.000Z",
         "gameInfo": "Sun, Nov 5, 1:00 PM ET - Atlanta, GA",
-        "home_score": 28,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 28,
         "winner": "MIN",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "BAL",
-        "away_team": "SEA",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "SEA",
+        "homeTeam": "BAL",
         "time": "2023-11-05T18:00:00.000Z",
         "gameInfo": "Sun, Nov 5, 1:00 PM ET - Baltimore, MD",
-        "home_score": 37,
-        "away_score": 3,
+        "awayScore": 3,
+        "homeScore": 37,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "NO",
-        "away_team": "CHI",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "CHI",
+        "homeTeam": "NO",
         "time": "2023-11-05T18:00:00.000Z",
         "gameInfo": "Sun, Nov 5, 1:00 PM ET - New Orleans, LA",
-        "home_score": 24,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 24,
         "winner": "NO",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "CLE",
-        "away_team": "ARI",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "ARI",
+        "homeTeam": "CLE",
         "time": "2023-11-05T18:00:00.000Z",
         "gameInfo": "Sun, Nov 5, 1:00 PM ET - Cleveland, OH",
-        "home_score": 27,
-        "away_score": 0,
+        "awayScore": 0,
+        "homeScore": 27,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "HOU",
-        "away_team": "TB",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "TB",
+        "homeTeam": "HOU",
         "time": "2023-11-05T18:00:00.000Z",
         "gameInfo": "Sun, Nov 5, 1:00 PM ET - Houston, TX",
-        "home_score": 39,
-        "away_score": 37,
+        "awayScore": 37,
+        "homeScore": 39,
         "winner": "HOU",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "NE",
-        "away_team": "WAS",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "WAS",
+        "homeTeam": "NE",
         "time": "2023-11-05T18:00:00.000Z",
         "gameInfo": "Sun, Nov 5, 1:00 PM ET - Foxborough, MA",
-        "home_score": 17,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 17,
         "winner": "WAS",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "GB",
-        "away_team": "LA",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "LA",
+        "homeTeam": "GB",
         "time": "2023-11-05T18:00:00.000Z",
         "gameInfo": "Sun, Nov 5, 1:00 PM ET - Green Bay, WI",
-        "home_score": 20,
-        "away_score": 3,
+        "awayScore": 3,
+        "homeScore": 20,
         "winner": "GB",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "CAR",
-        "away_team": "IND",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "IND",
+        "homeTeam": "CAR",
         "time": "2023-11-05T21:05:00.000Z",
         "gameInfo": "Sun, Nov 5, 4:05 PM ET - Charlotte, NC",
-        "home_score": 13,
-        "away_score": 27,
+        "awayScore": 27,
+        "homeScore": 13,
         "winner": "IND",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "PHI",
-        "away_team": "DAL",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "DAL",
+        "homeTeam": "PHI",
         "time": "2023-11-05T21:25:00.000Z",
         "gameInfo": "Sun, Nov 5, 4:25 PM ET - Philadelphia, PA",
-        "home_score": 28,
-        "away_score": 23,
+        "awayScore": 23,
+        "homeScore": 28,
         "winner": "PHI",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "LV",
-        "away_team": "NYG",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "NYG",
+        "homeTeam": "LV",
         "time": "2023-11-05T21:25:00.000Z",
         "gameInfo": "Sun, Nov 5, 4:25 PM ET - Las Vegas, NV",
-        "home_score": 30,
-        "away_score": 6,
+        "awayScore": 6,
+        "homeScore": 30,
         "winner": "LV",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "CIN",
-        "away_team": "BUF",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "BUF",
+        "homeTeam": "CIN",
         "time": "2023-11-06T01:20:00.000Z",
         "gameInfo": "Sun, Nov 5, 8:20 PM ET - Cincinnati, OH",
-        "home_score": 24,
-        "away_score": 18,
+        "awayScore": 18,
+        "homeScore": 24,
         "winner": "CIN",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "NYJ",
-        "away_team": "LAC",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "LAC",
+        "homeTeam": "NYJ",
         "time": "2023-11-07T01:15:00.000Z",
         "gameInfo": "Mon, Nov 6, 8:15 PM ET - East Rutherford, NJ",
-        "home_score": 6,
-        "away_score": 27,
+        "awayScore": 27,
+        "homeScore": 6,
         "winner": "LAC",
         "evaluated": true
       }
-    },
-    "week_10": {
-      "matchup_1": {
-        "home_team": "CHI",
-        "away_team": "CAR",
+    ]
+  },
+  {
+    "weekId": "week_10",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "CAR",
+        "homeTeam": "CHI",
         "time": "2023-11-10T01:15:00.000Z",
         "gameInfo": "Thu, Nov 9, 8:15 PM ET - Chicago, IL",
-        "home_score": 16,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 16,
         "winner": "CHI",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "NE",
-        "away_team": "IND",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "IND",
+        "homeTeam": "NE",
         "time": "2023-11-12T14:30:00.000Z",
         "gameInfo": "Sun, Nov 12, 9:30 AM ET - Frankfurt, DE",
-        "home_score": 6,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 6,
         "winner": "IND",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "PIT",
-        "away_team": "GB",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "GB",
+        "homeTeam": "PIT",
         "time": "2023-11-12T18:00:00.000Z",
         "gameInfo": "Sun, Nov 12, 1:00 PM ET - Pittsburgh, PA",
-        "home_score": 23,
-        "away_score": 19,
+        "awayScore": 19,
+        "homeScore": 23,
         "winner": "PIT",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "MIN",
-        "away_team": "NO",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "NO",
+        "homeTeam": "MIN",
         "time": "2023-11-12T18:00:00.000Z",
         "gameInfo": "Sun, Nov 12, 1:00 PM ET - Minneapolis, MN",
-        "home_score": 27,
-        "away_score": 19,
+        "awayScore": 19,
+        "homeScore": 27,
         "winner": "MIN",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "CIN",
-        "away_team": "HOU",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "HOU",
+        "homeTeam": "CIN",
         "time": "2023-11-12T18:00:00.000Z",
         "gameInfo": "Sun, Nov 12, 1:00 PM ET - Cincinnati, OH",
-        "home_score": 27,
-        "away_score": 30,
+        "awayScore": 30,
+        "homeScore": 27,
         "winner": "HOU",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "BAL",
-        "away_team": "CLE",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "CLE",
+        "homeTeam": "BAL",
         "time": "2023-11-12T18:00:00.000Z",
         "gameInfo": "Sun, Nov 12, 1:00 PM ET - Baltimore, MD",
-        "home_score": 31,
-        "away_score": 33,
+        "awayScore": 33,
+        "homeScore": 31,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "TB",
-        "away_team": "TEN",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "TEN",
+        "homeTeam": "TB",
         "time": "2023-11-12T18:00:00.000Z",
         "gameInfo": "Sun, Nov 12, 1:00 PM ET - Tampa, FL",
-        "home_score": 20,
-        "away_score": 6,
+        "awayScore": 6,
+        "homeScore": 20,
         "winner": "TB",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "JAC",
-        "away_team": "SF",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "SF",
+        "homeTeam": "JAC",
         "time": "2023-11-12T18:00:00.000Z",
         "gameInfo": "Sun, Nov 12, 1:00 PM ET - Jacksonville, FL",
-        "home_score": 3,
-        "away_score": 34,
+        "awayScore": 34,
+        "homeScore": 3,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "LAC",
-        "away_team": "DET",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "DET",
+        "homeTeam": "LAC",
         "time": "2023-11-12T21:05:00.000Z",
         "gameInfo": "Sun, Nov 12, 4:05 PM ET - Inglewood, CA",
-        "home_score": 38,
-        "away_score": 41,
+        "awayScore": 41,
+        "homeScore": 38,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "ARI",
-        "away_team": "ATL",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "ATL",
+        "homeTeam": "ARI",
         "time": "2023-11-12T21:05:00.000Z",
         "gameInfo": "Sun, Nov 12, 4:05 PM ET - Glendale, AZ",
-        "home_score": 25,
-        "away_score": 23,
+        "awayScore": 23,
+        "homeScore": 25,
         "winner": "ARI",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "SEA",
-        "away_team": "WAS",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "WAS",
+        "homeTeam": "SEA",
         "time": "2023-11-12T21:25:00.000Z",
         "gameInfo": "Sun, Nov 12, 4:25 PM ET - Seattle, WA",
-        "home_score": 29,
-        "away_score": 26,
+        "awayScore": 26,
+        "homeScore": 29,
         "winner": "SEA",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "DAL",
-        "away_team": "NYG",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "NYG",
+        "homeTeam": "DAL",
         "time": "2023-11-12T21:25:00.000Z",
         "gameInfo": "Sun, Nov 12, 4:25 PM ET - Arlington, TX",
-        "home_score": 49,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 49,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "LV",
-        "away_team": "NYJ",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "NYJ",
+        "homeTeam": "LV",
         "time": "2023-11-13T01:20:00.000Z",
         "gameInfo": "Sun, Nov 12, 8:20 PM ET - Las Vegas, NV",
-        "home_score": 16,
-        "away_score": 12,
+        "awayScore": 12,
+        "homeScore": 16,
         "winner": "LV",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "BUF",
-        "away_team": "DEN",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "DEN",
+        "homeTeam": "BUF",
         "time": "2023-11-14T01:15:00.000Z",
         "gameInfo": "Mon, Nov 13, 8:15 PM ET - Orchard Park, NY",
-        "home_score": 22,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 22,
         "winner": "DEN",
         "evaluated": true
       }
-    },
-    "week_11": {
-      "matchup_1": {
-        "home_team": "BAL",
-        "away_team": "CIN",
+    ]
+  },
+  {
+    "weekId": "week_11",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "CIN",
+        "homeTeam": "BAL",
         "time": "2023-11-17T01:15:00.000Z",
         "gameInfo": "Thu, Nov 16, 8:15 PM ET - Baltimore, MD",
-        "home_score": 34,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 34,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "CAR",
-        "away_team": "DAL",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "DAL",
+        "homeTeam": "CAR",
         "time": "2023-11-19T18:00:00.000Z",
         "gameInfo": "Sun, Nov 19, 1:00 PM ET - Charlotte, NC",
-        "home_score": 10,
-        "away_score": 33,
+        "awayScore": 33,
+        "homeScore": 10,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "CLE",
-        "away_team": "PIT",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "PIT",
+        "homeTeam": "CLE",
         "time": "2023-11-19T18:00:00.000Z",
         "gameInfo": "Sun, Nov 19, 1:00 PM ET - Cleveland, OH",
-        "home_score": 13,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 13,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "DET",
-        "away_team": "CHI",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "CHI",
+        "homeTeam": "DET",
         "time": "2023-11-19T18:00:00.000Z",
         "gameInfo": "Sun, Nov 19, 1:00 PM ET - Detroit, MI",
-        "home_score": 31,
-        "away_score": 26,
+        "awayScore": 26,
+        "homeScore": 31,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "HOU",
-        "away_team": "ARI",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "ARI",
+        "homeTeam": "HOU",
         "time": "2023-11-19T18:00:00.000Z",
         "gameInfo": "Sun, Nov 19, 1:00 PM ET - Houston, TX",
-        "home_score": 21,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 21,
         "winner": "HOU",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "MIA",
-        "away_team": "LV",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "LV",
+        "homeTeam": "MIA",
         "time": "2023-11-19T18:00:00.000Z",
         "gameInfo": "Sun, Nov 19, 1:00 PM ET - Miami Gardens, FL",
-        "home_score": 20,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 20,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "WAS",
-        "away_team": "NYG",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "NYG",
+        "homeTeam": "WAS",
         "time": "2023-11-19T18:00:00.000Z",
         "gameInfo": "Sun, Nov 19, 1:00 PM ET - Landover, MD",
-        "home_score": 19,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 19,
         "winner": "NYG",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "GB",
-        "away_team": "LAC",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "LAC",
+        "homeTeam": "GB",
         "time": "2023-11-19T18:00:00.000Z",
         "gameInfo": "Sun, Nov 19, 1:00 PM ET - Green Bay, WI",
-        "home_score": 23,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 23,
         "winner": "GB",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "JAC",
-        "away_team": "TEN",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "TEN",
+        "homeTeam": "JAC",
         "time": "2023-11-19T18:00:00.000Z",
         "gameInfo": "Sun, Nov 19, 1:00 PM ET - Jacksonville, FL",
-        "home_score": 34,
-        "away_score": 14,
+        "awayScore": 14,
+        "homeScore": 34,
         "winner": "JAC",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "SF",
-        "away_team": "TB",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "TB",
+        "homeTeam": "SF",
         "time": "2023-11-19T21:05:00.000Z",
         "gameInfo": "Sun, Nov 19, 4:05 PM ET - Santa Clara, CA",
-        "home_score": 27,
-        "away_score": 14,
+        "awayScore": 14,
+        "homeScore": 27,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "BUF",
-        "away_team": "NYJ",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "NYJ",
+        "homeTeam": "BUF",
         "time": "2023-11-19T21:25:00.000Z",
         "gameInfo": "Sun, Nov 19, 4:25 PM ET - Orchard Park, NY",
-        "home_score": 32,
-        "away_score": 6,
+        "awayScore": 6,
+        "homeScore": 32,
         "winner": "BUF",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "LA",
-        "away_team": "SEA",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "SEA",
+        "homeTeam": "LA",
         "time": "2023-11-19T21:25:00.000Z",
         "gameInfo": "Sun, Nov 19, 4:25 PM ET - Inglewood, CA",
-        "home_score": 17,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 17,
         "winner": "LA",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "DEN",
-        "away_team": "MIN",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "MIN",
+        "homeTeam": "DEN",
         "time": "2023-11-20T01:20:00.000Z",
         "gameInfo": "Sun, Nov 19, 8:20 PM ET - Denver, CO",
-        "home_score": 21,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 21,
         "winner": "DEN",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "KC",
-        "away_team": "PHI",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "PHI",
+        "homeTeam": "KC",
         "time": "2023-11-21T01:15:00.000Z",
         "gameInfo": "Mon, Nov 20, 8:15 PM ET - Kansas City, MO",
-        "home_score": 17,
-        "away_score": 21,
+        "awayScore": 21,
+        "homeScore": 17,
         "winner": "PHI",
         "evaluated": true
       }
-    },
-    "week_12": {
-      "matchup_1": {
-        "home_team": "DET",
-        "away_team": "GB",
+    ]
+  },
+  {
+    "weekId": "week_12",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "GB",
+        "homeTeam": "DET",
         "time": "2023-11-23T17:30:00.000Z",
         "gameInfo": "Thu, Nov 23, 12:30 PM ET - Detroit, MI",
-        "home_score": 22,
-        "away_score": 29,
+        "awayScore": 29,
+        "homeScore": 22,
         "winner": "GB",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "DAL",
-        "away_team": "WAS",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "WAS",
+        "homeTeam": "DAL",
         "time": "2023-11-23T21:30:00.000Z",
         "gameInfo": "Thu, Nov 23, 4:30 PM ET - Arlington, TX",
-        "home_score": 45,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 45,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "SEA",
-        "away_team": "SF",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "SF",
+        "homeTeam": "SEA",
         "time": "2023-11-24T01:20:00.000Z",
         "gameInfo": "Thu, Nov 23, 8:20 PM ET - Seattle, WA",
-        "home_score": 13,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 13,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "NYJ",
-        "away_team": "MIA",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "MIA",
+        "homeTeam": "NYJ",
         "time": "2023-11-24T20:00:00.000Z",
         "gameInfo": "Fri, Nov 24, 3:00 PM ET - East Rutherford, NJ",
-        "home_score": 13,
-        "away_score": 34,
+        "awayScore": 34,
+        "homeScore": 13,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "HOU",
-        "away_team": "JAC",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "JAC",
+        "homeTeam": "HOU",
         "time": "2023-11-26T18:00:00.000Z",
         "gameInfo": "Sun, Nov 26, 1:00 PM ET - Houston, TX",
-        "home_score": 21,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 21,
         "winner": "JAC",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "CIN",
-        "away_team": "PIT",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "PIT",
+        "homeTeam": "CIN",
         "time": "2023-11-26T18:00:00.000Z",
         "gameInfo": "Sun, Nov 26, 1:00 PM ET - Cincinnati, OH",
-        "home_score": 10,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 10,
         "winner": "PIT",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "TEN",
-        "away_team": "CAR",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "CAR",
+        "homeTeam": "TEN",
         "time": "2023-11-26T18:00:00.000Z",
         "gameInfo": "Sun, Nov 26, 1:00 PM ET - Nashville, TN",
-        "home_score": 17,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 17,
         "winner": "TEN",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "ATL",
-        "away_team": "NO",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "NO",
+        "homeTeam": "ATL",
         "time": "2023-11-26T18:00:00.000Z",
         "gameInfo": "Sun, Nov 26, 1:00 PM ET - Atlanta, GA",
-        "home_score": 24,
-        "away_score": 15,
+        "awayScore": 15,
+        "homeScore": 24,
         "winner": "ATL",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "IND",
-        "away_team": "TB",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "TB",
+        "homeTeam": "IND",
         "time": "2023-11-26T18:00:00.000Z",
         "gameInfo": "Sun, Nov 26, 1:00 PM ET - Indianapolis, IN",
-        "home_score": 27,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 27,
         "winner": "IND",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "NYG",
-        "away_team": "NE",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "NE",
+        "homeTeam": "NYG",
         "time": "2023-11-26T18:00:00.000Z",
         "gameInfo": "Sun, Nov 26, 1:00 PM ET - East Rutherford, NJ",
-        "home_score": 10,
-        "away_score": 7,
+        "awayScore": 7,
+        "homeScore": 10,
         "winner": "NYG",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "DEN",
-        "away_team": "CLE",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "CLE",
+        "homeTeam": "DEN",
         "time": "2023-11-26T21:05:00.000Z",
         "gameInfo": "Sun, Nov 26, 4:05 PM ET - Denver, CO",
-        "home_score": 29,
-        "away_score": 12,
+        "awayScore": 12,
+        "homeScore": 29,
         "winner": "DEN",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "ARI",
-        "away_team": "LA",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "LA",
+        "homeTeam": "ARI",
         "time": "2023-11-26T21:05:00.000Z",
         "gameInfo": "Sun, Nov 26, 4:05 PM ET - Glendale, AZ",
-        "home_score": 14,
-        "away_score": 37,
+        "awayScore": 37,
+        "homeScore": 14,
         "winner": "LA",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "PHI",
-        "away_team": "BUF",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "BUF",
+        "homeTeam": "PHI",
         "time": "2023-11-26T21:25:00.000Z",
         "gameInfo": "Sun, Nov 26, 4:25 PM ET - Philadelphia, PA",
-        "home_score": 37,
-        "away_score": 34,
+        "awayScore": 34,
+        "homeScore": 37,
         "winner": "PHI",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "LV",
-        "away_team": "KC",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "KC",
+        "homeTeam": "LV",
         "time": "2023-11-26T21:25:00.000Z",
         "gameInfo": "Sun, Nov 26, 4:25 PM ET - Las Vegas, NV",
-        "home_score": 17,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 17,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "LAC",
-        "away_team": "BAL",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "BAL",
+        "homeTeam": "LAC",
         "time": "2023-11-27T01:20:00.000Z",
         "gameInfo": "Sun, Nov 26, 8:20 PM ET - Inglewood, CA",
-        "home_score": 10,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 10,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_16": {
-        "home_team": "MIN",
-        "away_team": "CHI",
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "CHI",
+        "homeTeam": "MIN",
         "time": "2023-11-28T01:15:00.000Z",
         "gameInfo": "Mon, Nov 27, 8:15 PM ET - Minneapolis, MN",
-        "home_score": 10,
-        "away_score": 12,
+        "awayScore": 12,
+        "homeScore": 10,
         "winner": "CHI",
         "evaluated": true
       }
-    },
-    "week_13": {
-      "matchup_1": {
-        "home_team": "DAL",
-        "away_team": "SEA",
+    ]
+  },
+  {
+    "weekId": "week_13",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "SEA",
+        "homeTeam": "DAL",
         "time": "2023-12-01T01:15:00.000Z",
         "gameInfo": "Thu, Nov 30, 8:15 PM ET - Arlington, TX",
-        "home_score": 41,
-        "away_score": 35,
+        "awayScore": 35,
+        "homeScore": 41,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "WAS",
-        "away_team": "MIA",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "MIA",
+        "homeTeam": "WAS",
         "time": "2023-12-03T18:00:00.000Z",
         "gameInfo": "Sun, Dec 3, 1:00 PM ET - Landover, MD",
-        "home_score": 15,
-        "away_score": 45,
+        "awayScore": 45,
+        "homeScore": 15,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "TEN",
-        "away_team": "IND",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "IND",
+        "homeTeam": "TEN",
         "time": "2023-12-03T18:00:00.000Z",
         "gameInfo": "Sun, Dec 3, 1:00 PM ET - Nashville, TN",
-        "home_score": 28,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 28,
         "winner": "IND",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "TB",
-        "away_team": "CAR",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "CAR",
+        "homeTeam": "TB",
         "time": "2023-12-03T21:05:00.000Z",
         "gameInfo": "Sun, Dec 3, 4:05 PM ET - Tampa, FL",
-        "home_score": 21,
-        "away_score": 18,
+        "awayScore": 18,
+        "homeScore": 21,
         "winner": "TB",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "NYJ",
-        "away_team": "ATL",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "ATL",
+        "homeTeam": "NYJ",
         "time": "2023-12-03T18:00:00.000Z",
         "gameInfo": "Sun, Dec 3, 1:00 PM ET - East Rutherford, NJ",
-        "home_score": 8,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 8,
         "winner": "ATL",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "PIT",
-        "away_team": "ARI",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "ARI",
+        "homeTeam": "PIT",
         "time": "2023-12-03T18:00:00.000Z",
         "gameInfo": "Sun, Dec 3, 1:00 PM ET - Pittsburgh, PA",
-        "home_score": 10,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 10,
         "winner": "ARI",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "NO",
-        "away_team": "DET",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "DET",
+        "homeTeam": "NO",
         "time": "2023-12-03T18:00:00.000Z",
         "gameInfo": "Sun, Dec 3, 1:00 PM ET - New Orleans, LA",
-        "home_score": 28,
-        "away_score": 33,
+        "awayScore": 33,
+        "homeScore": 28,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "NE",
-        "away_team": "LAC",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "LAC",
+        "homeTeam": "NE",
         "time": "2023-12-03T18:00:00.000Z",
         "gameInfo": "Sun, Dec 3, 1:00 PM ET - Foxborough, MA",
-        "home_score": 0,
-        "away_score": 6,
+        "awayScore": 6,
+        "homeScore": 0,
         "winner": "LAC",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "HOU",
-        "away_team": "DEN",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "DEN",
+        "homeTeam": "HOU",
         "time": "2023-12-03T18:00:00.000Z",
         "gameInfo": "Sun, Dec 3, 1:00 PM ET - Houston, TX",
-        "home_score": 22,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 22,
         "winner": "HOU",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "PHI",
-        "away_team": "SF",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "SF",
+        "homeTeam": "PHI",
         "time": "2023-12-03T21:25:00.000Z",
         "gameInfo": "Sun, Dec 3, 4:25 PM ET - Philadelphia, PA",
-        "home_score": 19,
-        "away_score": 42,
+        "awayScore": 42,
+        "homeScore": 19,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "LA",
-        "away_team": "CLE",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "CLE",
+        "homeTeam": "LA",
         "time": "2023-12-03T21:25:00.000Z",
         "gameInfo": "Sun, Dec 3, 4:25 PM ET - Inglewood, CA",
-        "home_score": 36,
-        "away_score": 19,
+        "awayScore": 19,
+        "homeScore": 36,
         "winner": "LA",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "GB",
-        "away_team": "KC",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "KC",
+        "homeTeam": "GB",
         "time": "2023-12-04T01:20:00.000Z",
         "gameInfo": "Sun, Dec 3, 8:20 PM ET - Green Bay, WI",
-        "home_score": 27,
-        "away_score": 19,
+        "awayScore": 19,
+        "homeScore": 27,
         "winner": "GB",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "JAC",
-        "away_team": "CIN",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "CIN",
+        "homeTeam": "JAC",
         "time": "2023-12-05T01:15:00.000Z",
         "gameInfo": "Mon, Dec 4, 8:15 PM ET - Jacksonville, FL",
-        "home_score": 31,
-        "away_score": 34,
+        "awayScore": 34,
+        "homeScore": 31,
         "winner": "CIN",
         "evaluated": true
       }
-    },
-    "week_14": {
-      "matchup_1": {
-        "home_team": "PIT",
-        "away_team": "NE",
+    ]
+  },
+  {
+    "weekId": "week_14",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "NE",
+        "homeTeam": "PIT",
         "time": "2023-12-08T01:15:00.000Z",
         "gameInfo": "Thu, Dec 7, 8:15 PM ET - Pittsburgh, PA",
-        "home_score": 18,
-        "away_score": 21,
+        "awayScore": 21,
+        "homeScore": 18,
         "winner": "NE",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "NO",
-        "away_team": "CAR",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "CAR",
+        "homeTeam": "NO",
         "time": "2023-12-10T18:00:00.000Z",
         "gameInfo": "Sun, Dec 10, 1:00 PM ET - New Orleans, LA",
-        "home_score": 28,
-        "away_score": 6,
+        "awayScore": 6,
+        "homeScore": 28,
         "winner": "NO",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "BAL",
-        "away_team": "LA",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "LA",
+        "homeTeam": "BAL",
         "time": "2023-12-10T18:00:00.000Z",
         "gameInfo": "Sun, Dec 10, 1:00 PM ET - Baltimore, MD",
-        "home_score": 37,
-        "away_score": 31,
+        "awayScore": 31,
+        "homeScore": 37,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "CIN",
-        "away_team": "IND",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "IND",
+        "homeTeam": "CIN",
         "time": "2023-12-10T18:00:00.000Z",
         "gameInfo": "Sun, Dec 10, 1:00 PM ET - Cincinnati, OH",
-        "home_score": 34,
-        "away_score": 14,
+        "awayScore": 14,
+        "homeScore": 34,
         "winner": "CIN",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "CLE",
-        "away_team": "JAC",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "JAC",
+        "homeTeam": "CLE",
         "time": "2023-12-10T18:00:00.000Z",
         "gameInfo": "Sun, Dec 10, 1:00 PM ET - Cleveland, OH",
-        "home_score": 31,
-        "away_score": 27,
+        "awayScore": 27,
+        "homeScore": 31,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "CHI",
-        "away_team": "DET",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "DET",
+        "homeTeam": "CHI",
         "time": "2023-12-10T18:00:00.000Z",
         "gameInfo": "Sun, Dec 10, 1:00 PM ET - Chicago, IL",
-        "home_score": 28,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 28,
         "winner": "CHI",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "ATL",
-        "away_team": "TB",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "TB",
+        "homeTeam": "ATL",
         "time": "2023-12-10T18:00:00.000Z",
         "gameInfo": "Sun, Dec 10, 1:00 PM ET - Atlanta, GA",
-        "home_score": 25,
-        "away_score": 29,
+        "awayScore": 29,
+        "homeScore": 25,
         "winner": "TB",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "NYJ",
-        "away_team": "HOU",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "HOU",
+        "homeTeam": "NYJ",
         "time": "2023-12-10T18:00:00.000Z",
         "gameInfo": "Sun, Dec 10, 1:00 PM ET - East Rutherford, NJ",
-        "home_score": 30,
-        "away_score": 6,
+        "awayScore": 6,
+        "homeScore": 30,
         "winner": "NYJ",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "SF",
-        "away_team": "SEA",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "SEA",
+        "homeTeam": "SF",
         "time": "2023-12-10T21:05:00.000Z",
         "gameInfo": "Sun, Dec 10, 4:05 PM ET - Santa Clara, CA",
-        "home_score": 28,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 28,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "LV",
-        "away_team": "MIN",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "MIN",
+        "homeTeam": "LV",
         "time": "2023-12-10T21:05:00.000Z",
         "gameInfo": "Sun, Dec 10, 4:05 PM ET - Las Vegas, NV",
-        "home_score": 0,
-        "away_score": 3,
+        "awayScore": 3,
+        "homeScore": 0,
         "winner": "MIN",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "KC",
-        "away_team": "BUF",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "BUF",
+        "homeTeam": "KC",
         "time": "2023-12-10T21:25:00.000Z",
         "gameInfo": "Sun, Dec 10, 4:25 PM ET - Kansas City, MO",
-        "home_score": 17,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 17,
         "winner": "BUF",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "LAC",
-        "away_team": "DEN",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "DEN",
+        "homeTeam": "LAC",
         "time": "2023-12-10T21:25:00.000Z",
         "gameInfo": "Sun, Dec 10, 4:25 PM ET - Inglewood, CA",
-        "home_score": 7,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 7,
         "winner": "DEN",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "DAL",
-        "away_team": "PHI",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "PHI",
+        "homeTeam": "DAL",
         "time": "2023-12-11T01:20:00.000Z",
         "gameInfo": "Sun, Dec 10, 8:20 PM ET - Arlington, TX",
-        "home_score": 33,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 33,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "NYG",
-        "away_team": "GB",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "GB",
+        "homeTeam": "NYG",
         "time": "2023-12-12T01:15:00.000Z",
         "gameInfo": "Mon, Dec 11, 8:15 PM ET - East Rutherford, NJ",
-        "home_score": 24,
-        "away_score": 22,
+        "awayScore": 22,
+        "homeScore": 24,
         "winner": "NYG",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "MIA",
-        "away_team": "TEN",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "TEN",
+        "homeTeam": "MIA",
         "time": "2023-12-12T01:15:00.000Z",
         "gameInfo": "Mon, Dec 11, 8:15 PM ET - Miami Gardens, FL",
-        "home_score": 27,
-        "away_score": 28,
+        "awayScore": 28,
+        "homeScore": 27,
         "winner": "TEN",
         "evaluated": true
       }
-    },
-    "week_15": {
-      "matchup_1": {
-        "home_team": "LV",
-        "away_team": "LAC",
+    ]
+  },
+  {
+    "weekId": "week_15",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "LAC",
+        "homeTeam": "LV",
         "time": "2023-12-15T01:15:00.000Z",
         "gameInfo": "Thu, Dec 14, 8:15 PM ET - Las Vegas, NV",
-        "home_score": 63,
-        "away_score": 21,
+        "awayScore": 21,
+        "homeScore": 63,
         "winner": "LV",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "CIN",
-        "away_team": "MIN",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "MIN",
+        "homeTeam": "CIN",
         "time": "2023-12-16T18:00:00.000Z",
         "gameInfo": "Sat, Dec 16, 1:00 PM ET - Cincinnati, OH",
-        "home_score": 27,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 27,
         "winner": "CIN",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "IND",
-        "away_team": "PIT",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "PIT",
+        "homeTeam": "IND",
         "time": "2023-12-16T21:30:00.000Z",
         "gameInfo": "Sat, Dec 16, 4:30 PM ET - Indianapolis, IN",
-        "home_score": 30,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 30,
         "winner": "IND",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "DET",
-        "away_team": "DEN",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "DEN",
+        "homeTeam": "DET",
         "time": "2023-12-17T01:15:00.000Z",
         "gameInfo": "Sat, Dec 16, 8:15 PM ET - Detroit, MI",
-        "home_score": 42,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 42,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "GB",
-        "away_team": "TB",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "TB",
+        "homeTeam": "GB",
         "time": "2023-12-17T18:00:00.000Z",
         "gameInfo": "Sun, Dec 17, 1:00 PM ET - Green Bay, WI",
-        "home_score": 20,
-        "away_score": 34,
+        "awayScore": 34,
+        "homeScore": 20,
         "winner": "TB",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "CAR",
-        "away_team": "ATL",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "ATL",
+        "homeTeam": "CAR",
         "time": "2023-12-17T18:00:00.000Z",
         "gameInfo": "Sun, Dec 17, 1:00 PM ET - Charlotte, NC",
-        "home_score": 9,
-        "away_score": 7,
+        "awayScore": 7,
+        "homeScore": 9,
         "winner": "CAR",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "NO",
-        "away_team": "NYG",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "NYG",
+        "homeTeam": "NO",
         "time": "2023-12-17T18:00:00.000Z",
         "gameInfo": "Sun, Dec 17, 1:00 PM ET - New Orleans, LA",
-        "home_score": 24,
-        "away_score": 6,
+        "awayScore": 6,
+        "homeScore": 24,
         "winner": "NO",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "TEN",
-        "away_team": "HOU",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "HOU",
+        "homeTeam": "TEN",
         "time": "2023-12-17T18:00:00.000Z",
         "gameInfo": "Sun, Dec 17, 1:00 PM ET - Nashville, TN",
-        "home_score": 16,
-        "away_score": 19,
+        "awayScore": 19,
+        "homeScore": 16,
         "winner": "HOU",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "CLE",
-        "away_team": "CHI",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "CHI",
+        "homeTeam": "CLE",
         "time": "2023-12-17T18:00:00.000Z",
         "gameInfo": "Sun, Dec 17, 1:00 PM ET - Cleveland, OH",
-        "home_score": 20,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 20,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "MIA",
-        "away_team": "NYJ",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "NYJ",
+        "homeTeam": "MIA",
         "time": "2023-12-17T18:00:00.000Z",
         "gameInfo": "Sun, Dec 17, 1:00 PM ET - Miami Gardens, FL",
-        "home_score": 30,
-        "away_score": 0,
+        "awayScore": 0,
+        "homeScore": 30,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "NE",
-        "away_team": "KC",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "KC",
+        "homeTeam": "NE",
         "time": "2023-12-17T18:00:00.000Z",
         "gameInfo": "Sun, Dec 17, 1:00 PM ET - Foxborough, MA",
-        "home_score": 17,
-        "away_score": 27,
+        "awayScore": 27,
+        "homeScore": 17,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "LA",
-        "away_team": "WAS",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "WAS",
+        "homeTeam": "LA",
         "time": "2023-12-17T21:05:00.000Z",
         "gameInfo": "Sun, Dec 17, 4:05 PM ET - Inglewood, CA",
-        "home_score": 28,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 28,
         "winner": "LA",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "ARI",
-        "away_team": "SF",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "SF",
+        "homeTeam": "ARI",
         "time": "2023-12-17T21:05:00.000Z",
         "gameInfo": "Sun, Dec 17, 4:05 PM ET - Glendale, AZ",
-        "home_score": 29,
-        "away_score": 45,
+        "awayScore": 45,
+        "homeScore": 29,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "BUF",
-        "away_team": "DAL",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "DAL",
+        "homeTeam": "BUF",
         "time": "2023-12-17T21:25:00.000Z",
         "gameInfo": "Sun, Dec 17, 4:25 PM ET - Orchard Park, NY",
-        "home_score": 31,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 31,
         "winner": "BUF",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "JAC",
-        "away_team": "BAL",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "BAL",
+        "homeTeam": "JAC",
         "time": "2023-12-18T01:20:00.000Z",
         "gameInfo": "Sun, Dec 17, 8:20 PM ET - Jacksonville, FL",
-        "home_score": 7,
-        "away_score": 23,
+        "awayScore": 23,
+        "homeScore": 7,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_16": {
-        "home_team": "SEA",
-        "away_team": "PHI",
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "PHI",
+        "homeTeam": "SEA",
         "time": "2023-12-19T01:15:00.000Z",
         "gameInfo": "Mon, Dec 18, 8:15 PM ET - Seattle, WA",
-        "home_score": 20,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 20,
         "winner": "SEA",
         "evaluated": true
       }
-    },
-    "week_16": {
-      "matchup_1": {
-        "home_team": "LA",
-        "away_team": "NO",
+    ]
+  },
+  {
+    "weekId": "week_16",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "NO",
+        "homeTeam": "LA",
         "time": "2023-12-22T01:15:00.000Z",
         "gameInfo": "Thu, Dec 21, 8:15 PM ET - Inglewood, CA",
-        "home_score": 30,
-        "away_score": 22,
+        "awayScore": 22,
+        "homeScore": 30,
         "winner": "LA",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "PIT",
-        "away_team": "CIN",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "CIN",
+        "homeTeam": "PIT",
         "time": "2023-12-23T21:30:00.000Z",
         "gameInfo": "Sat, Dec 23, 4:30 PM ET - Pittsburgh, PA",
-        "home_score": 34,
-        "away_score": 11,
+        "awayScore": 11,
+        "homeScore": 34,
         "winner": "PIT",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "LAC",
-        "away_team": "BUF",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "BUF",
+        "homeTeam": "LAC",
         "time": "2023-12-24T01:00:00.000Z",
         "gameInfo": "Sat, Dec 23, 8:00 PM ET - Inglewood, CA",
-        "home_score": 22,
-        "away_score": 24,
+        "awayScore": 24,
+        "homeScore": 22,
         "winner": "BUF",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "TEN",
-        "away_team": "SEA",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "SEA",
+        "homeTeam": "TEN",
         "time": "2023-12-24T18:00:00.000Z",
         "gameInfo": "Sun, Dec 24, 1:00 PM ET - Nashville, TN",
-        "home_score": 17,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 17,
         "winner": "SEA",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "ATL",
-        "away_team": "IND",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "IND",
+        "homeTeam": "ATL",
         "time": "2023-12-24T18:00:00.000Z",
         "gameInfo": "Sun, Dec 24, 1:00 PM ET - Atlanta, GA",
-        "home_score": 29,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 29,
         "winner": "ATL",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "HOU",
-        "away_team": "CLE",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "CLE",
+        "homeTeam": "HOU",
         "time": "2023-12-24T18:00:00.000Z",
         "gameInfo": "Sun, Dec 24, 1:00 PM ET - Houston, TX",
-        "home_score": 22,
-        "away_score": 36,
+        "awayScore": 36,
+        "homeScore": 22,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "CAR",
-        "away_team": "GB",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "GB",
+        "homeTeam": "CAR",
         "time": "2023-12-24T18:00:00.000Z",
         "gameInfo": "Sun, Dec 24, 1:00 PM ET - Charlotte, NC",
-        "home_score": 30,
-        "away_score": 33,
+        "awayScore": 33,
+        "homeScore": 30,
         "winner": "GB",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "NYJ",
-        "away_team": "WAS",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "WAS",
+        "homeTeam": "NYJ",
         "time": "2023-12-24T18:00:00.000Z",
         "gameInfo": "Sun, Dec 24, 1:00 PM ET - East Rutherford, NJ",
-        "home_score": 30,
-        "away_score": 28,
+        "awayScore": 28,
+        "homeScore": 30,
         "winner": "NYJ",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "MIN",
-        "away_team": "DET",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "DET",
+        "homeTeam": "MIN",
         "time": "2023-12-24T18:00:00.000Z",
         "gameInfo": "Sun, Dec 24, 1:00 PM ET - Minneapolis, MN",
-        "home_score": 24,
-        "away_score": 30,
+        "awayScore": 30,
+        "homeScore": 24,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "TB",
-        "away_team": "JAC",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "JAC",
+        "homeTeam": "TB",
         "time": "2023-12-24T21:05:00.000Z",
         "gameInfo": "Sun, Dec 24, 4:05 PM ET - Tampa, FL",
-        "home_score": 30,
-        "away_score": 12,
+        "awayScore": 12,
+        "homeScore": 30,
         "winner": "TB",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "CHI",
-        "away_team": "ARI",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "ARI",
+        "homeTeam": "CHI",
         "time": "2023-12-24T21:25:00.000Z",
         "gameInfo": "Sun, Dec 24, 4:25 PM ET - Chicago, IL",
-        "home_score": 27,
-        "away_score": 16,
+        "awayScore": 16,
+        "homeScore": 27,
         "winner": "CHI",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "MIA",
-        "away_team": "DAL",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "DAL",
+        "homeTeam": "MIA",
         "time": "2023-12-24T21:25:00.000Z",
         "gameInfo": "Sun, Dec 24, 4:25 PM ET - Miami Gardens, FL",
-        "home_score": 22,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 22,
         "winner": "MIA",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "DEN",
-        "away_team": "NE",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "NE",
+        "homeTeam": "DEN",
         "time": "2023-12-25T01:15:00.000Z",
         "gameInfo": "Sun, Dec 24, 8:15 PM ET - Denver, CO",
-        "home_score": 23,
-        "away_score": 26,
+        "awayScore": 26,
+        "homeScore": 23,
         "winner": "NE",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "KC",
-        "away_team": "LV",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "LV",
+        "homeTeam": "KC",
         "time": "2023-12-25T18:00:00.000Z",
         "gameInfo": "Mon, Dec 25, 1:00 PM ET - Kansas City, MO",
-        "home_score": 14,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 14,
         "winner": "LV",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "PHI",
-        "away_team": "NYG",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "NYG",
+        "homeTeam": "PHI",
         "time": "2023-12-25T21:30:00.000Z",
         "gameInfo": "Mon, Dec 25, 4:30 PM ET - Philadelphia, PA",
-        "home_score": 33,
-        "away_score": 25,
+        "awayScore": 25,
+        "homeScore": 33,
         "winner": "PHI",
         "evaluated": true
       },
-      "matchup_16": {
-        "home_team": "SF",
-        "away_team": "BAL",
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "BAL",
+        "homeTeam": "SF",
         "time": "2023-12-26T01:15:00.000Z",
         "gameInfo": "Mon, Dec 25, 8:15 PM ET - Santa Clara, CA",
-        "home_score": 19,
-        "away_score": 33,
+        "awayScore": 33,
+        "homeScore": 19,
         "winner": "BAL",
         "evaluated": true
       }
-    },
-    "week_17": {
-      "matchup_1": {
-        "home_team": "CLE",
-        "away_team": "NYJ",
+    ]
+  },
+  {
+    "weekId": "week_17",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "NYJ",
+        "homeTeam": "CLE",
         "time": "2023-12-29T01:15:00.000Z",
         "gameInfo": "Thu, Dec 28, 8:15 PM ET - Cleveland, OH",
-        "home_score": 37,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 37,
         "winner": "CLE",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "DAL",
-        "away_team": "DET",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "DET",
+        "homeTeam": "DAL",
         "time": "2023-12-31T01:15:00.000Z",
         "gameInfo": "Sat, Dec 30, 8:15 PM ET - Arlington, TX",
-        "home_score": 20,
-        "away_score": 19,
+        "awayScore": 19,
+        "homeScore": 20,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "IND",
-        "away_team": "LV",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "LV",
+        "homeTeam": "IND",
         "time": "2023-12-31T18:00:00.000Z",
         "gameInfo": "Sun, Dec 31, 1:00 PM ET - Indianapolis, IN",
-        "home_score": 23,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 23,
         "winner": "IND",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "CHI",
-        "away_team": "ATL",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "ATL",
+        "homeTeam": "CHI",
         "time": "2023-12-31T18:00:00.000Z",
         "gameInfo": "Sun, Dec 31, 1:00 PM ET - Chicago, IL",
-        "home_score": 37,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 37,
         "winner": "CHI",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "JAC",
-        "away_team": "CAR",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "CAR",
+        "homeTeam": "JAC",
         "time": "2023-12-31T18:00:00.000Z",
         "gameInfo": "Sun, Dec 31, 1:00 PM ET - Jacksonville, FL",
-        "home_score": 26,
-        "away_score": 0,
+        "awayScore": 0,
+        "homeScore": 26,
         "winner": "JAC",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "TB",
-        "away_team": "NO",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "NO",
+        "homeTeam": "TB",
         "time": "2023-12-31T18:00:00.000Z",
         "gameInfo": "Sun, Dec 31, 1:00 PM ET - Tampa, FL",
-        "home_score": 13,
-        "away_score": 23,
+        "awayScore": 23,
+        "homeScore": 13,
         "winner": "NO",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "PHI",
-        "away_team": "ARI",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "ARI",
+        "homeTeam": "PHI",
         "time": "2023-12-31T18:00:00.000Z",
         "gameInfo": "Sun, Dec 31, 1:00 PM ET - Philadelphia, PA",
-        "home_score": 31,
-        "away_score": 35,
+        "awayScore": 35,
+        "homeScore": 31,
         "winner": "ARI",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "WAS",
-        "away_team": "SF",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "SF",
+        "homeTeam": "WAS",
         "time": "2023-12-31T18:00:00.000Z",
         "gameInfo": "Sun, Dec 31, 1:00 PM ET - Landover, MD",
-        "home_score": 10,
-        "away_score": 27,
+        "awayScore": 27,
+        "homeScore": 10,
         "winner": "SF",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "NYG",
-        "away_team": "LA",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "LA",
+        "homeTeam": "NYG",
         "time": "2023-12-31T18:00:00.000Z",
         "gameInfo": "Sun, Dec 31, 1:00 PM ET - East Rutherford, NJ",
-        "home_score": 25,
-        "away_score": 26,
+        "awayScore": 26,
+        "homeScore": 25,
         "winner": "LA",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "BUF",
-        "away_team": "NE",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "NE",
+        "homeTeam": "BUF",
         "time": "2023-12-31T18:00:00.000Z",
         "gameInfo": "Sun, Dec 31, 1:00 PM ET - Orchard Park, NY",
-        "home_score": 27,
-        "away_score": 21,
+        "awayScore": 21,
+        "homeScore": 27,
         "winner": "BUF",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "HOU",
-        "away_team": "TEN",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "TEN",
+        "homeTeam": "HOU",
         "time": "2023-12-31T18:00:00.000Z",
         "gameInfo": "Sun, Dec 31, 1:00 PM ET - Houston, TX",
-        "home_score": 26,
-        "away_score": 3,
+        "awayScore": 3,
+        "homeScore": 26,
         "winner": "HOU",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "BAL",
-        "away_team": "MIA",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "MIA",
+        "homeTeam": "BAL",
         "time": "2023-12-31T18:00:00.000Z",
         "gameInfo": "Sun, Dec 31, 1:00 PM ET - Baltimore, MD",
-        "home_score": 56,
-        "away_score": 19,
+        "awayScore": 19,
+        "homeScore": 56,
         "winner": "BAL",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "SEA",
-        "away_team": "PIT",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "PIT",
+        "homeTeam": "SEA",
         "time": "2023-12-31T21:05:00.000Z",
         "gameInfo": "Sun, Dec 31, 4:05 PM ET - Seattle, WA",
-        "home_score": 23,
-        "away_score": 30,
+        "awayScore": 30,
+        "homeScore": 23,
         "winner": "PIT",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "KC",
-        "away_team": "CIN",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "CIN",
+        "homeTeam": "KC",
         "time": "2023-12-31T21:25:00.000Z",
         "gameInfo": "Sun, Dec 31, 4:25 PM ET - Kansas City, MO",
-        "home_score": 25,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 25,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "DEN",
-        "away_team": "LAC",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "LAC",
+        "homeTeam": "DEN",
         "time": "2023-12-31T21:25:00.000Z",
         "gameInfo": "Sun, Dec 31, 4:25 PM ET - Denver, CO",
-        "home_score": 16,
-        "away_score": 9,
+        "awayScore": 9,
+        "homeScore": 16,
         "winner": "DEN",
         "evaluated": true
       },
-      "matchup_16": {
-        "home_team": "MIN",
-        "away_team": "GB",
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "GB",
+        "homeTeam": "MIN",
         "time": "2024-01-01T01:20:00.000Z",
         "gameInfo": "Sun, Dec 31, 8:20 PM ET - Minneapolis, MN",
-        "home_score": 10,
-        "away_score": 33,
+        "awayScore": 33,
+        "homeScore": 10,
         "winner": "GB",
         "evaluated": true
       }
-    },
-    "week_18": {
-      "matchup_1": {
-        "home_team": "BAL",
-        "away_team": "PIT",
+    ]
+  },
+  {
+    "weekId": "week_18",
+    "matchups": [
+      {
+        "matchupId": "matchup_1",
+        "awayTeam": "PIT",
+        "homeTeam": "BAL",
         "time": "2024-01-06T21:30:00.000Z",
         "gameInfo": "Sat, Jan 6, 4:30 PM ET - Baltimore, MD",
-        "home_score": 10,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 10,
         "winner": "PIT",
         "evaluated": true
       },
-      "matchup_2": {
-        "home_team": "IND",
-        "away_team": "HOU",
+      {
+        "matchupId": "matchup_2",
+        "awayTeam": "HOU",
+        "homeTeam": "IND",
         "time": "2024-01-07T00:15:00.000Z",
         "gameInfo": "Sat, Jan 6, 8:15 PM ET - Indianapolis, IN",
-        "home_score": 19,
-        "away_score": 23,
+        "awayScore": 23,
+        "homeScore": 19,
         "winner": "HOU",
         "evaluated": true
       },
-      "matchup_3": {
-        "home_team": "TEN",
-        "away_team": "JAC",
+      {
+        "matchupId": "matchup_3",
+        "awayTeam": "JAC",
+        "homeTeam": "TEN",
         "time": "2024-01-07T18:00:00.000Z",
         "gameInfo": "Sun, Jan 7, 1:00 PM ET - Nashville, TN",
-        "home_score": 28,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 28,
         "winner": "TEN",
         "evaluated": true
       },
-      "matchup_4": {
-        "home_team": "DET",
-        "away_team": "MIN",
+      {
+        "matchupId": "matchup_4",
+        "awayTeam": "MIN",
+        "homeTeam": "DET",
         "time": "2024-01-07T18:00:00.000Z",
         "gameInfo": "Sun, Jan 7, 1:00 PM ET - Detroit, MI",
-        "home_score": 30,
-        "away_score": 20,
+        "awayScore": 20,
+        "homeScore": 30,
         "winner": "DET",
         "evaluated": true
       },
-      "matchup_5": {
-        "home_team": "NO",
-        "away_team": "ATL",
+      {
+        "matchupId": "matchup_5",
+        "awayTeam": "ATL",
+        "homeTeam": "NO",
         "time": "2024-01-07T18:00:00.000Z",
         "gameInfo": "Sun, Jan 7, 1:00 PM ET - New Orleans, LA",
-        "home_score": 48,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 48,
         "winner": "NO",
         "evaluated": true
       },
-      "matchup_6": {
-        "home_team": "NE",
-        "away_team": "NYJ",
+      {
+        "matchupId": "matchup_6",
+        "awayTeam": "NYJ",
+        "homeTeam": "NE",
         "time": "2024-01-07T18:00:00.000Z",
         "gameInfo": "Sun, Jan 7, 1:00 PM ET - Foxborough, MA",
-        "home_score": 3,
-        "away_score": 17,
+        "awayScore": 17,
+        "homeScore": 3,
         "winner": "NYJ",
         "evaluated": true
       },
-      "matchup_7": {
-        "home_team": "CAR",
-        "away_team": "TB",
+      {
+        "matchupId": "matchup_7",
+        "awayTeam": "TB",
+        "homeTeam": "CAR",
         "time": "2024-01-07T18:00:00.000Z",
         "gameInfo": "Sun, Jan 7, 1:00 PM ET - Charlotte, NC",
-        "home_score": 0,
-        "away_score": 9,
+        "awayScore": 9,
+        "homeScore": 0,
         "winner": "TB",
         "evaluated": true
       },
-      "matchup_8": {
-        "home_team": "CIN",
-        "away_team": "CLE",
+      {
+        "matchupId": "matchup_8",
+        "awayTeam": "CLE",
+        "homeTeam": "CIN",
         "time": "2024-01-07T18:00:00.000Z",
         "gameInfo": "Sun, Jan 7, 1:00 PM ET - Cincinnati, OH",
-        "home_score": 31,
-        "away_score": 14,
+        "awayScore": 14,
+        "homeScore": 31,
         "winner": "CIN",
         "evaluated": true
       },
-      "matchup_9": {
-        "home_team": "GB",
-        "away_team": "CHI",
+      {
+        "matchupId": "matchup_9",
+        "awayTeam": "CHI",
+        "homeTeam": "GB",
         "time": "2024-01-07T21:25:00.000Z",
         "gameInfo": "Sun, Jan 7, 4:25 PM ET - Green Bay, WI",
-        "home_score": 17,
-        "away_score": 9,
+        "awayScore": 9,
+        "homeScore": 17,
         "winner": "GB",
         "evaluated": true
       },
-      "matchup_10": {
-        "home_team": "WAS",
-        "away_team": "DAL",
+      {
+        "matchupId": "matchup_10",
+        "awayTeam": "DAL",
+        "homeTeam": "WAS",
         "time": "2024-01-07T21:25:00.000Z",
         "gameInfo": "Sun, Jan 7, 4:25 PM ET - Landover, MD",
-        "home_score": 10,
-        "away_score": 38,
+        "awayScore": 38,
+        "homeScore": 10,
         "winner": "DAL",
         "evaluated": true
       },
-      "matchup_11": {
-        "home_team": "LV",
-        "away_team": "DEN",
+      {
+        "matchupId": "matchup_11",
+        "awayTeam": "DEN",
+        "homeTeam": "LV",
         "time": "2024-01-07T21:25:00.000Z",
         "gameInfo": "Sun, Jan 7, 4:25 PM ET - Las Vegas, NV",
-        "home_score": 27,
-        "away_score": 14,
+        "awayScore": 14,
+        "homeScore": 27,
         "winner": "LV",
         "evaluated": true
       },
-      "matchup_12": {
-        "home_team": "NYG",
-        "away_team": "PHI",
+      {
+        "matchupId": "matchup_12",
+        "awayTeam": "PHI",
+        "homeTeam": "NYG",
         "time": "2024-01-07T21:25:00.000Z",
         "gameInfo": "Sun, Jan 7, 4:25 PM ET - East Rutherford, NJ",
-        "home_score": 27,
-        "away_score": 10,
+        "awayScore": 10,
+        "homeScore": 27,
         "winner": "NYG",
         "evaluated": true
       },
-      "matchup_13": {
-        "home_team": "ARI",
-        "away_team": "SEA",
+      {
+        "matchupId": "matchup_13",
+        "awayTeam": "SEA",
+        "homeTeam": "ARI",
         "time": "2024-01-07T21:25:00.000Z",
         "gameInfo": "Sun, Jan 7, 4:25 PM ET - Glendale, AZ",
-        "home_score": 20,
-        "away_score": 21,
+        "awayScore": 21,
+        "homeScore": 20,
         "winner": "SEA",
         "evaluated": true
       },
-      "matchup_14": {
-        "home_team": "SF",
-        "away_team": "LA",
+      {
+        "matchupId": "matchup_14",
+        "awayTeam": "LA",
+        "homeTeam": "SF",
         "time": "2024-01-07T21:25:00.000Z",
         "gameInfo": "Sun, Jan 7, 4:25 PM ET - Santa Clara, CA",
-        "home_score": 20,
-        "away_score": 21,
+        "awayScore": 21,
+        "homeScore": 20,
         "winner": "LA",
         "evaluated": true
       },
-      "matchup_15": {
-        "home_team": "LAC",
-        "away_team": "KC",
+      {
+        "matchupId": "matchup_15",
+        "awayTeam": "KC",
+        "homeTeam": "LAC",
         "time": "2024-01-07T21:25:00.000Z",
         "gameInfo": "Sun, Jan 7, 4:25 PM ET - Inglewood, CA",
-        "home_score": 12,
-        "away_score": 13,
+        "awayScore": 13,
+        "homeScore": 12,
         "winner": "KC",
         "evaluated": true
       },
-      "matchup_16": {
-        "home_team": "MIA",
-        "away_team": "BUF",
+      {
+        "matchupId": "matchup_16",
+        "awayTeam": "BUF",
+        "homeTeam": "MIA",
         "time": "2024-01-08T00:20:00.000Z",
         "gameInfo": "Sun, Jan 7, 8:20 PM ET - Miami Gardens, FL",
-        "home_score": 14,
-        "away_score": 21,
+        "awayScore": 21,
+        "homeScore": 14,
         "winner": "BUF",
         "evaluated": true
       }
-    }
+    ]
   }
-}
+]
