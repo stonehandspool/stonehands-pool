@@ -197,8 +197,8 @@ function About() {
                 <li>The top 5 players at the end of the season will win!</li>
                 <li>
                   <b>
-                    If you forget to submit a picksheet, you will receive the largest margin of defeat taken from your
-                    margin total for that week
+                    If you forget to submit a picksheet OR forget to complete your picksheet, you will receive the
+                    largest margin of defeat taken from your margin total for that week
                   </b>
                 </li>
               </ul>
