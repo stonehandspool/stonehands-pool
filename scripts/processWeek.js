@@ -384,6 +384,17 @@ for (; i < len; i++) {
     player.marginTotal += margin;
   }
 
+  // Sometimes the total in the margin pool can get messed up from people forgetting Thurs games so double check that everything matches up
+  const actualMarginTotal = player.marginPicks.reduce((acc, cur) => acc + cur.margin, 0);
+  if (actualMarginTotal !== player.marginTotal) {
+    console.log(
+      `Incorrect margin value found for ${player.firstName} ${player.lastName}`,
+      actualMarginTotal,
+      player.marginTotal
+    );
+    player.marginTotal = actualMarginTotal;
+  }
+
   // Now evluate the high five pool picks
   if (isFirstRun) {
     player.highFiveValues.push(0);
